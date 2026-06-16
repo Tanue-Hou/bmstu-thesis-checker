@@ -15,11 +15,11 @@ if hasattr(sys.stdin, "reconfigure"):
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
-from check_document import check_file, load_rule_guidance, load_rule_registry
+from check_document import check_file, load_rule_guidance, load_rule_registry, write_report_bundle
 
 
 SERVER_NAME = "BMSTU Thesis Checker"
-SERVER_VERSION = "0.1.0"
+SERVER_VERSION = "0.1.2"
 METHOD_NOT_FOUND = -32601
 INVALID_PARAMS = -32602
 INTERNAL_ERROR = -32603
@@ -62,6 +62,8 @@ def check_document_tool(args):
     if not path.exists():
         raise ValueError(f"File does not exist: {path}")
     result = check_file(path, make_args(args))
+    if args.get("report_dir"):
+        result["report_paths"] = write_report_bundle(result, args["report_dir"])
     return {
         "content": [{"type": "text", "text": f"Checked {path.name}: {result['summary']['total']} findings."}],
         "structuredContent": result,
@@ -80,6 +82,9 @@ def check_folder_tool(args):
     files = list_document_files(args.get("folder_path"), args.get("recursive", True) is not False)
     checker_args = make_args(args)
     results = [check_file(path, checker_args) for path in files]
+    if args.get("report_dir"):
+        for result in results:
+            result["report_paths"] = write_report_bundle(result, args["report_dir"])
     summary = {
         "files": len(results),
         "findings": sum(item["summary"]["total"] for item in results),
@@ -125,6 +130,7 @@ def tool_list_result():
                         "skip_pictures": {"type": "boolean", "default": False},
                         "skip_word_format": {"type": "boolean", "default": False},
                         "skip_dictionary": {"type": "boolean", "default": False},
+                        "report_dir": {"type": "string", "description": "Optional output folder for JSON, Markdown, and DOCX report files."},
                     },
                     "required": ["file_path"],
                 },
@@ -144,6 +150,7 @@ def tool_list_result():
                         "skip_pictures": {"type": "boolean", "default": False},
                         "skip_word_format": {"type": "boolean", "default": False},
                         "skip_dictionary": {"type": "boolean", "default": False},
+                        "report_dir": {"type": "string", "description": "Optional output folder for per-file JSON, Markdown, and DOCX report files."},
                     },
                     "required": ["folder_path"],
                 },

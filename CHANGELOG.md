@@ -1,5 +1,18 @@
 # BMSTU Thesis Checker Changelog
 
+## 0.1.2 - High-quality review reports
+
+- Added review-level conclusion data in `review_summary`.
+- Added grouping by location in addition to severity, module, fix priority, and anti-plagiarism impact.
+- Improved Markdown report layout with review conclusion, grouped summary, fix checklist, and detailed bilingual findings.
+- Added DOCX report generation through `--format docx --out <path>`.
+- Added report bundle generation through `--report-dir <path>`, producing:
+  - `*_report.json`
+  - `*_report.md`
+  - `*_report.docx`
+- Added MCP `report_dir` support for `check_thesis_document` and `check_thesis_folder`.
+- Updated skill documentation for JSON/Markdown/DOCX report workflows.
+
 ## 0.1.1 - Chinese report layer and MCP tools
 
 - Added Chinese rule guidance metadata in `scripts/testvkr-service/rules/rule_guidance_zh.json`.

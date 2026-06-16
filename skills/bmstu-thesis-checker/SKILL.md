@@ -37,6 +37,14 @@ For a Markdown report:
 py "$env:USERPROFILE\plugins\bmstu-thesis-checker\scripts\check_document.py" "C:\path\to\document.docx" --format markdown --out "C:\path\to\report.md"
 ```
 
+For a complete report bundle:
+
+```powershell
+py "$env:USERPROFILE\plugins\bmstu-thesis-checker\scripts\check_document.py" "C:\path\to\document.docx" --report-dir "C:\path\to\reports"
+```
+
+This writes `*_report.json`, `*_report.md`, and `*_report.docx`.
+
 Supported options:
 
 - `--work-type bachelor|specialist|master|phd`
@@ -44,13 +52,14 @@ Supported options:
 - `--skip-pictures`
 - `--skip-word-format`
 - `--skip-dictionary`
-- `--format json|markdown`
+- `--format json|markdown|docx`
 - `--out <path>`
+- `--report-dir <path>`
 
 ## Workflow
 
 1. If the user provides a document path, run `scripts/check_document.py` on that file.
-2. Prefer JSON output for machine inspection, Markdown output for a user-facing report.
+2. Prefer JSON output for machine inspection, Markdown output for quick review, and DOCX output for sharing with students or supervisors.
 3. Summarize by severity first: critical, major, warning, info.
 4. Include the rule id, confidence, Russian observed message, Chinese explanation, trigger reason, fix suggestion, Word operation path, threshold, and location when present.
 5. Use the fix checklist groups when the user wants an actionable review: must fix, should fix, manual review, optional.
