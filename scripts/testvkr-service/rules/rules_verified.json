@@ -1,0 +1,246 @@
+{
+  "rules": [
+    {
+      "rule_id": "Word.LineSpacingInvalid",
+      "threshold": 1.5,
+      "comparator": "!=",
+      "observed_message": "Междустрочный интервал в абзацах должен быть равен 1,5 строки (в таблицах одинарный):",
+      "confidence": "high",
+      "source_va": "0x0041AE88 / RVA 0x2cd190",
+      "sample_trigger": [
+        "01_line_spacing_body/body_line_spacing_1.0.docx",
+        "01_line_spacing_body/body_line_spacing_1.49.docx",
+        "01_line_spacing_body/body_line_spacing_1.51.docx",
+        "01_line_spacing_body/body_line_spacing_2.0.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "threshold": 12.01,
+      "comparator": "<",
+      "observed_message": "В документе много символов, размер которых меньше 12 пт",
+      "confidence": "high",
+      "source_va": "0x0041AE88 / RVA 0x2cd2a0",
+      "sample_trigger": [
+        "03_font_size/font_size_11.docx",
+        "03_font_size/font_size_12.01.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.FontScaleTooSmall",
+      "threshold": 70,
+      "comparator": "<",
+      "observed_message": "В документе много символов, у которых масштаб шрифта меньше 70%:",
+      "confidence": "high",
+      "source_va": "0x0041AEBE / RVA 0x2cd3e0",
+      "sample_trigger": [
+        "04_font_scale/font_scale_69.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.FontScaleTooLarge",
+      "threshold": 130,
+      "comparator": ">",
+      "observed_message": "В документе много символов, у которых масштаб шрифта больше 130%:",
+      "confidence": "high",
+      "source_va": "0x0041AEBE / RVA 0x2cd3e8",
+      "sample_trigger": [
+        "04_font_scale/font_scale_131.docx",
+        "04_font_scale/font_scale_139.docx",
+        "04_font_scale/font_scale_140.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.TableRowHeightTooSmall",
+      "threshold": 8.0,
+      "comparator": "<",
+      "observed_message": "Высота строк в таблицах должна быть не менее 8 мм.:",
+      "confidence": "high",
+      "source_va": "0x0041AEBE / RVA 0x2d8d4c",
+      "sample_trigger": [
+        "05_table_row_height/table_row_height_7.9mm.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.TableSuspiciousHeightRule",
+      "threshold": "exact",
+      "comparator": "==",
+      "observed_message": "Замечена подозрительная высота строк в таблицах документа. Переключите указание высоты строк из режима \"Точно\" на \"Минимум\":",
+      "confidence": "high",
+      "source_va": "0x004af82c control flow branch",
+      "sample_trigger": [
+        "05_table_row_height/table_row_height_8.0mm.docx",
+        "05_table_row_height/table_row_height_8.03mm.docx",
+        "05_table_row_height/table_row_height_8.1mm.docx"
+      ]
+    },
+    {
+      "rule_id": "Pic.FileSizeTooLarge",
+      "threshold": 40,
+      "comparator": ">",
+      "observed_message": "Документ содержит рисунки большого размера (больше 40 Mb):",
+      "confidence": "high",
+      "source_va": "string '40 Mb'",
+      "sample_trigger": [
+        "06_image_byte_size/image_byte_size_above_40mb.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.HeaderFooterDistanceInvalid",
+      "threshold": 1.25,
+      "comparator": "!=",
+      "observed_message": "Размеры колонтитулов должны быть 1,25 см.",
+      "confidence": "high",
+      "source_va": "string '1,25'",
+      "sample_trigger": [
+        "13_header_footer/header_footer_invalid.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.FirstLineIndentInvalid",
+      "threshold": 1.25,
+      "comparator": "!=",
+      "observed_message": "Отступ первой строки в абзаце должен быть 1,25 см.",
+      "confidence": "high",
+      "source_va": "string '1,25'",
+      "sample_trigger": [
+        "12_first_line_indent/indent_missing.docx",
+        "12_first_line_indent/indent_invalid.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.PageSizeNotA4",
+      "threshold": "210x297mm",
+      "comparator": "!=",
+      "observed_message": "Документ содержит страницы, размеры которых не соответствуют формату А4.",
+      "confidence": "high",
+      "source_va": "strings + int refs in code",
+      "sample_trigger": [
+        "11_page_size/page_size_not_a4.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.LeftMarginInvalid",
+      "threshold": 30.0,
+      "comparator": "!=",
+      "observed_message": "Документ содержит страницы, размеры левого поля на которых не соответствуют требованиям",
+      "confidence": "medium",
+      "source_va": "standard GOST 7.32",
+      "sample_trigger": [
+        "10_margins/margin_left_20mm.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.RightMarginInvalid",
+      "threshold": 10.0,
+      "comparator": "!=",
+      "observed_message": "Документ содержит страницы, размеры правого поля на которых не соответствуют требованиям",
+      "confidence": "medium",
+      "source_va": "standard GOST 7.32",
+      "sample_trigger": [
+        "10_margins/margin_right_20mm.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.TopMarginInvalid",
+      "threshold": 20.0,
+      "comparator": "!=",
+      "observed_message": "Документ содержит страницы, размеры верхнего поля на которых не соответствуют требованиям:",
+      "confidence": "medium",
+      "source_va": "standard GOST 7.32",
+      "sample_trigger": [
+        "10_margins/margin_top_15mm.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.BottomMarginInvalid",
+      "threshold": 20.0,
+      "comparator": "!=",
+      "observed_message": "Документ содержит страницы, размеры нижнего поля на которых не соответствуют требованиям:",
+      "confidence": "medium",
+      "source_va": "standard GOST 7.32",
+      "sample_trigger": [
+        "10_margins/margin_bottom_15mm.docx"
+      ]
+    },
+    {
+      "rule_id": "Dict.MixedScriptHomoglyphs",
+      "threshold": 0,
+      "comparator": ">",
+      "observed_message": "В документе много незнакомых слов. Возможно они написаны с ошибками:",
+      "confidence": "medium",
+      "source_va": "plagiarism homoglyph swap heuristics",
+      "sample_trigger": [
+        "15_dictionary/mixed_script_homoglyphs.docx"
+      ]
+    },
+    {
+      "rule_id": "Dict.SuspiciousRussianWords",
+      "threshold": 5,
+      "comparator": ">",
+      "observed_message": "В документе замечены слова с подозрительными сочетаниями букв",
+      "confidence": "low",
+      "source_va": "phonotactics heuristics",
+      "sample_trigger": [
+        "15_dictionary/suspicious_russian_words.docx"
+      ]
+    },
+    {
+      "rule_id": "Struct.ThesisSizeTooSmall",
+      "threshold": 40000,
+      "comparator": "<",
+      "observed_message": "Маленький объем ВКР:",
+      "confidence": "low",
+      "source_va": "thesis size heuristic",
+      "sample_trigger": [
+        "14_structure/thesis_size_too_small.docx"
+      ]
+    },
+    {
+      "rule_id": "Struct.EmptyStructuralElement",
+      "threshold": 0,
+      "comparator": "==",
+      "observed_message": "Обнаружены пустые структурные элементы:",
+      "confidence": "high",
+      "source_va": "0x004af82c control flow branch",
+      "sample_trigger": [
+        "14_structure/empty_structural_element.docx"
+      ]
+    },
+    {
+      "rule_id": "Struct.SmallStructuralElement",
+      "threshold": 300,
+      "comparator": "<",
+      "observed_message": "Обнаружены небольшие структурные элементы",
+      "confidence": "low",
+      "source_va": "structure size heuristic",
+      "sample_trigger": [
+        "14_structure/small_structural_element.docx"
+      ]
+    },
+    {
+      "rule_id": "Pic.FloatingImages",
+      "threshold": 0,
+      "comparator": ">",
+      "observed_message": "Документ содержит плавающие рисунки. Встройте рисунки в текст:",
+      "confidence": "high",
+      "source_va": "string 'floating'",
+      "sample_trigger": [
+        "08_floating_image/floating_image_anchor.docx"
+      ]
+    },
+    {
+      "rule_id": "Pic.PixelSizeTooLarge",
+      "threshold": 540,
+      "comparator": ">",
+      "observed_message": "Документ содержит рисунки большого размера (больше 540 пикселей):",
+      "confidence": "high",
+      "source_va": "0x0041AEBE / RVA 0x2cd3e0",
+      "sample_trigger": [
+        "07_image_pixel_size/image_pixel_1000.docx",
+        "07_image_pixel_size/image_pixel_4000.docx",
+        "07_image_pixel_size/image_pixel_557.docx"
+      ]
+    }
+  ]
+}

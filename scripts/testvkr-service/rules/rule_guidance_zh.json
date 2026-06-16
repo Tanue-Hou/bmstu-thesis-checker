@@ -1,0 +1,218 @@
+{
+  "default": {
+    "title_zh": "规则命中",
+    "explanation_zh": "文档中存在与 BMSTU/TestVkr 风格检查不一致的位置。",
+    "trigger_reason_zh": "检查器根据当前规则阈值、格式属性或结构特征判定该项异常。",
+    "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+    "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Word.LineSpacingInvalid": {
+    "title_zh": "行距不符合要求",
+    "explanation_zh": "正文段落应使用 1.5 倍行距，表格内文字通常应使用单倍行距。",
+    "trigger_reason_zh": "检测到段落或表格单元格的行距与目标值不一致。",
+    "fix_suggestion_zh": "正文统一设为 1.5 倍行距；表格内文字统一设为单倍行距。",
+    "word_path_zh": "开始 -> 段落 -> 行和段落间距；或右键段落 -> 段落 -> 行距。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.FontSizeTooSmall": {
+    "title_zh": "字号过小",
+    "explanation_zh": "文档中存在大量小于 12pt 的字符，可能被认为是规避审查或格式不合格。",
+    "trigger_reason_zh": "字符字号低于规则下限并超过数量阈值。",
+    "fix_suggestion_zh": "将正文、表格或标注中的异常小字号调整到 12pt 或学校要求字号。",
+    "word_path_zh": "开始 -> 字体 -> 字号。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": true
+  },
+  "Word.FontSizeTooLarge": {
+    "title_zh": "字号过大",
+    "explanation_zh": "文档中存在大量明显大于常规正文要求的字符。",
+    "trigger_reason_zh": "字符字号超过规则上限并超过数量阈值。",
+    "fix_suggestion_zh": "检查标题、正文和表格字号，保留必要标题层级，其余恢复为规范字号。",
+    "word_path_zh": "开始 -> 字体 -> 字号；必要时检查样式窗格。",
+    "fix_priority": "should_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.FontScaleTooSmall": {
+    "title_zh": "字体缩放过小",
+    "explanation_zh": "字符被横向压缩，可能影响可读性并触发反抄袭适配问题。",
+    "trigger_reason_zh": "检测到字体缩放比例低于 70%。",
+    "fix_suggestion_zh": "将字符缩放恢复为 100%，避免通过压缩字符节省篇幅。",
+    "word_path_zh": "开始 -> 字体右下角设置 -> 高级 -> 缩放 100%。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": true
+  },
+  "Word.FontScaleTooLarge": {
+    "title_zh": "字体缩放过大",
+    "explanation_zh": "字符被横向拉伸，和正常排版不一致。",
+    "trigger_reason_zh": "检测到字体缩放比例高于 130%。",
+    "fix_suggestion_zh": "将字符缩放恢复为 100%，并用标准字号控制视觉大小。",
+    "word_path_zh": "开始 -> 字体右下角设置 -> 高级 -> 缩放 100%。",
+    "fix_priority": "should_fix",
+    "affects_antiplagiarism": true
+  },
+  "Word.TableRowHeightTooSmall": {
+    "title_zh": "表格行高过小",
+    "explanation_zh": "表格行高小于 8mm，可能导致文字拥挤或隐藏。",
+    "trigger_reason_zh": "检测到一个或多个表格行的行高低于 8mm。",
+    "fix_suggestion_zh": "将表格行高调整为至少 8mm，或取消过小固定行高。",
+    "word_path_zh": "选中表格行 -> 表格工具布局 -> 单元格大小 -> 高度；或表格属性 -> 行。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.TableSuspiciousHeightRule": {
+    "title_zh": "表格行高使用固定值",
+    "explanation_zh": "表格行高设置为“固定值/Exactly”可能造成文字被裁切。",
+    "trigger_reason_zh": "检测到表格行高规则为 exact。",
+    "fix_suggestion_zh": "将行高规则从“固定值”改为“最小值”，并确保高度不小于 8mm。",
+    "word_path_zh": "表格属性 -> 行 -> 指定高度 -> 行高值是：最小值。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Pic.FileSizeTooLarge": {
+    "title_zh": "图片文件体积过大",
+    "explanation_zh": "文档中图片总量或图片资源体积过大，TestVkr 原程序会作为严重图片问题提示。",
+    "trigger_reason_zh": "图片资源大小超过 40MB 阈值。",
+    "fix_suggestion_zh": "压缩图片、裁剪无关区域，使用适当分辨率重新插入。",
+    "word_path_zh": "图片格式 -> 压缩图片；或删除后插入压缩后的图片。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": true
+  },
+  "Pic.PixelSizeTooLarge": {
+    "title_zh": "图片像素尺寸过大",
+    "explanation_zh": "图片像素宽度超过规则阈值，可能导致文件过大或版面异常。",
+    "trigger_reason_zh": "检测到图片宽度像素值超过当前阈值。",
+    "fix_suggestion_zh": "将图片缩放、裁剪或重新导出为适合论文页面宽度的分辨率。",
+    "word_path_zh": "图片格式 -> 大小；必要时在图片编辑器中重新导出后替换。",
+    "fix_priority": "should_fix",
+    "affects_antiplagiarism": false
+  },
+  "Pic.FloatingImages": {
+    "title_zh": "存在浮动图片",
+    "explanation_zh": "图片没有嵌入文本流，可能在不同环境中移动位置或遮挡正文。",
+    "trigger_reason_zh": "检测到图片版式不是嵌入型，而是浮动/锚定对象。",
+    "fix_suggestion_zh": "将图片环绕方式改为“嵌入型”，并重新检查题注位置。",
+    "word_path_zh": "选中图片 -> 布局选项 -> 嵌入型。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Pic.SmallLabels": {
+    "title_zh": "图片或标注文字过小",
+    "explanation_zh": "图内标注、题注或相关文字字号太小，影响阅读。",
+    "trigger_reason_zh": "检测到图片附近或文档中小字号标注字符数量超过阈值。",
+    "fix_suggestion_zh": "放大图中文字，或将说明文字改为正文题注形式。",
+    "word_path_zh": "选中文字 -> 开始 -> 字号；图内文字需在原图编辑后重新插入。",
+    "fix_priority": "should_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.HeaderFooterDistanceInvalid": {
+    "title_zh": "页眉页脚距离不正确",
+    "explanation_zh": "页眉/页脚距边界应为 1.25cm。",
+    "trigger_reason_zh": "检测到 section 的页眉或页脚距离与 1.25cm 不一致。",
+    "fix_suggestion_zh": "统一所有节的页眉距顶端和页脚距底端为 1.25cm。",
+    "word_path_zh": "布局 -> 页面设置右下角 -> 版式 -> 页眉/页脚距边界 1.25cm。",
+    "fix_priority": "should_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.FirstLineIndentInvalid": {
+    "title_zh": "首行缩进不正确",
+    "explanation_zh": "正文段落首行缩进应为 1.25cm，居中段落通常不需要首行缩进。",
+    "trigger_reason_zh": "检测到正文段落首行缩进缺失或不在 1.20-1.30cm 容差范围内。",
+    "fix_suggestion_zh": "将正文段落特殊格式设为首行缩进 1.25cm。",
+    "word_path_zh": "段落设置 -> 缩进和间距 -> 特殊格式 -> 首行缩进 1.25cm。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.PageSizeNotA4": {
+    "title_zh": "页面不是 A4",
+    "explanation_zh": "论文页面尺寸应为 A4，即 210mm x 297mm。",
+    "trigger_reason_zh": "检测到 section 或 PDF 页面尺寸与 A4 相差超过容差。",
+    "fix_suggestion_zh": "将页面纸张大小统一设置为 A4，并检查所有分节。",
+    "word_path_zh": "布局 -> 大小 -> A4；多节文档需在每个节中确认。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.LeftMarginInvalid": {
+    "title_zh": "左页边距不正确",
+    "explanation_zh": "左页边距通常应为 30mm，用于装订侧留白。",
+    "trigger_reason_zh": "检测到 section 左页边距与 30mm 不一致。",
+    "fix_suggestion_zh": "将左页边距设置为 3.0cm。",
+    "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 左 3.0cm。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.RightMarginInvalid": {
+    "title_zh": "右页边距不正确",
+    "explanation_zh": "右页边距通常应为 10mm。",
+    "trigger_reason_zh": "检测到 section 右页边距与 10mm 不一致。",
+    "fix_suggestion_zh": "将右页边距设置为 1.0cm。",
+    "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 右 1.0cm。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.TopMarginInvalid": {
+    "title_zh": "上页边距不正确",
+    "explanation_zh": "上页边距通常应为 20mm。",
+    "trigger_reason_zh": "检测到 section 上页边距与 20mm 不一致。",
+    "fix_suggestion_zh": "将上页边距设置为 2.0cm。",
+    "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 上 2.0cm。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.BottomMarginInvalid": {
+    "title_zh": "下页边距不正确",
+    "explanation_zh": "下页边距通常应为 20mm。",
+    "trigger_reason_zh": "检测到 section 下页边距与 20mm 不一致。",
+    "fix_suggestion_zh": "将下页边距设置为 2.0cm。",
+    "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 下 2.0cm。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Dict.MixedScriptHomoglyphs": {
+    "title_zh": "疑似混用相似字母",
+    "explanation_zh": "俄文字词中混入拉丁相似字母，常见于规避查重或复制粘贴错误。",
+    "trigger_reason_zh": "检测到西里尔字母和拉丁相似字母混排。",
+    "fix_suggestion_zh": "逐处替换为正确俄文字母，避免使用外观相似的拉丁字符。",
+    "word_path_zh": "开始 -> 替换；也可复制问题片段到纯文本编辑器检查字符集。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": true
+  },
+  "Dict.SuspiciousRussianWords": {
+    "title_zh": "疑似拼写异常词",
+    "explanation_zh": "文档中存在不符合常见俄语拼写模式的词。",
+    "trigger_reason_zh": "词形或字母组合触发了未知词/异常词启发式规则。",
+    "fix_suggestion_zh": "人工核对术语、缩写和专有名词；普通拼写错误应修正。",
+    "word_path_zh": "审阅 -> 拼写和语法；或右键问题单词查看建议。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": true
+  },
+  "Struct.ThesisSizeTooSmall": {
+    "title_zh": "论文体量过小",
+    "explanation_zh": "正文总体字符数/体量低于预期，可能不符合 VKR/论文要求。",
+    "trigger_reason_zh": "解析出的文本量低于当前作品类型的体量阈值。",
+    "fix_suggestion_zh": "确认解析是否完整；如内容确实不足，应补充章节、说明、实验或参考分析。",
+    "word_path_zh": "审阅 -> 字数统计；同时检查目录和正文是否完整。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Struct.EmptyStructuralElement": {
+    "title_zh": "存在空结构章节",
+    "explanation_zh": "某些章节标题下没有有效正文内容。",
+    "trigger_reason_zh": "结构解析后发现标题对应区块为空。",
+    "fix_suggestion_zh": "补充该章节内容，或删除空标题并调整目录。",
+    "word_path_zh": "导航窗格 -> 按标题定位；引用 -> 更新目录。",
+    "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Struct.SmallStructuralElement": {
+    "title_zh": "章节内容过少",
+    "explanation_zh": "某些结构章节内容过短，可能只是占位标题。",
+    "trigger_reason_zh": "章节文本长度低于结构检查的最小阈值。",
+    "fix_suggestion_zh": "补充该章节的说明、论证、公式解释、图表说明或删除不必要的小节。",
+    "word_path_zh": "导航窗格 -> 定位对应标题；引用 -> 更新目录。",
+    "fix_priority": "should_fix",
+    "affects_antiplagiarism": false
+  }
+}

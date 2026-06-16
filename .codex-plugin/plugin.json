@@ -1,0 +1,37 @@
+{
+  "name": "bmstu-thesis-checker",
+  "version": "0.1.1+codex.20260616170314",
+  "description": "Local BMSTU VKR thesis checker for DOCX/PDF formatting, structure, images, and dictionary issues.",
+  "author": {
+    "name": "Tanue Hou"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "bmstu",
+    "thesis",
+    "vkr",
+    "docx",
+    "pdf",
+    "format-check"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "BMSTU Thesis Checker",
+    "shortDescription": "Check thesis DOCX/PDF files for BMSTU-style issues.",
+    "longDescription": "Runs a local clean-room rules engine derived from TestVkr reverse-engineering signals and BMSTU/GOST-style formatting requirements. It checks structure, Word/PDF formatting, images, dictionary and homoglyph issues, and returns severity, confidence, thresholds, and locations when available.",
+    "developerName": "Tanue Hou",
+    "category": "Productivity",
+    "capabilities": [
+      "Local file analysis",
+      "Document review",
+      "Structured reports"
+    ],
+    "defaultPrompt": [
+      "Check this thesis DOCX for BMSTU issues.",
+      "Generate a thesis formatting report.",
+      "Explain the highest severity findings."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

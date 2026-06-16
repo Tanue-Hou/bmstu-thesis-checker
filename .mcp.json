@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "bmstu-thesis-checker": {
+      "command": "py",
+      "args": [
+        "./mcp/server.py"
+      ]
+    }
+  }
+}

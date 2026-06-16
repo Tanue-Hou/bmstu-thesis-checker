@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+python-docx
+pydantic
+pydantic-settings
+pymupdf
+python-multipart
+lxml
