@@ -1,0 +1,137 @@
+{
+  "work_type_policy": {
+    "native_mode": "НКР аспиранта",
+    "toc_heading": "ОГЛАВЛЕНИЕ",
+    "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied.",
+    "manual_review": [
+      "Doctoral DOCX margins left/right/top/bottom 25/10/20/20 mm, tolerance 0.2 mm; finite single-section native probes",
+      "Not a general dissertation standard or original-program certification"
+    ]
+  },
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\multipage-phd-repair\\structure_no_abstract.pdf",
+  "file_type": "pdf",
+  "work_type": "phd",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {},
+  "native_comparison_limits": {
+    "format_profile_supported": false,
+    "structure_profile_supported": true,
+    "unimplemented_native_checks": [
+      "PDF text-derived margins and text in page margins",
+      "PDF page-number and header/footer placement",
+      "TOC correspondence and entry counts",
+      "cover/title-page predicates and bibliography completeness"
+    ],
+    "upper_font_limit": "No native warning in tested 18.5/19/24/36/72 pt PDF probes; no universal upper-limit claim"
+  },
+  "summary": {
+    "total": 1,
+    "critical": 0,
+    "major": 0,
+    "warning": 0,
+    "info": 1
+  },
+  "review_summary": {
+    "status_zh": "发现本地策略提示，请先复核适用要求；这些提示尚不代表原版 TestVkr 的检查结论。",
+    "must_fix_count": 0,
+    "should_fix_count": 0,
+    "manual_review_count": 1,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 0,
+    "critical_or_major_count": 0
+  },
+  "groups": {
+    "by_severity": {
+      "info": [
+        "Struct.RequiredHeadingsMissing"
+      ]
+    },
+    "by_module": {
+      "structure": [
+        "Struct.RequiredHeadingsMissing"
+      ]
+    },
+    "by_fix_priority": {
+      "manual_review": [
+        "Struct.RequiredHeadingsMissing"
+      ]
+    },
+    "by_location": {
+      "未定位": [
+        "Struct.RequiredHeadingsMissing"
+      ]
+    },
+    "antiplagiarism_related": []
+  },
+  "fix_checklist": {
+    "must_fix": [],
+    "should_fix": [],
+    "manual_review": [
+      {
+        "rule_id": "Struct.RequiredHeadingsMissing",
+        "label_zh": "需要人工确认",
+        "title_zh": "规则命中",
+        "severity": "info",
+        "module": "structure",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+        "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Struct.RequiredHeadingsMissing",
+      "module": "structure",
+      "severity": "info",
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\"",
+      "russian_message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\"",
+      "title_zh": "规则命中",
+      "explanation_zh": "文档中存在与 BMSTU/TestVkr 风格检查不一致的位置。",
+      "trigger_reason_zh": "检查器根据当前规则阈值、格式属性或结构特征判定该项异常。",
+      "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+      "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_evidence_intact": true,
+      "verification_scope": {
+        "format": "pdf",
+        "work_type": "phd",
+        "build": 230,
+        "limits": "PDF exact normalized abstract and ОГЛАВЛЕНИЕ heading predicates; 3/13/14-page probes, not cover/TOC correspondence/pagination."
+      },
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [
+        "evidence/multipage-phd-repair/comparison.json"
+      ],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "missing": [
+          "abstract"
+        ],
+        "native_predicate_supported": true
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    }
+  ]
+}

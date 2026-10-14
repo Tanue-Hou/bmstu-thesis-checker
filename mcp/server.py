@@ -16,10 +16,11 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 from check_document import check_file, load_rule_guidance, load_rule_registry, write_report_bundle
+from repair_document import repair_copy
 
 
 SERVER_NAME = "BMSTU Thesis Checker"
-SERVER_VERSION = "0.1.2"
+SERVER_VERSION = "0.2.4"
 METHOD_NOT_FOUND = -32601
 INVALID_PARAMS = -32602
 INTERNAL_ERROR = -32603
@@ -114,9 +115,38 @@ def merged_rules():
     return sorted(rules, key=lambda item: item["rule_id"])
 
 
+def repair_tool(args, dry_run=False):
+    result = repair_copy(require_string(args.get('file_path'),'file_path'),
+                         output_dir=args.get('output_dir'), actions=args.get('actions'),
+                         body_font_pt=args.get('body_font_pt'),
+                         work_type=args.get('work_type','bachelor'), dry_run=dry_run)
+    return {'content':[{'type':'text','text':f"{'Planned' if dry_run else 'Applied'} {len(result['changes'])} formatting changes; source unchanged: {result['source_unchanged']}."}],
+            'structuredContent':result}
+
+
 def tool_list_result():
     return {
         "tools": [
+            {
+                'name':'preview_thesis_fixes',
+                'description':'Preview conservative DOCX fixes using dynamically validated rules. Writes no document.',
+                'inputSchema':{'type':'object','properties':{
+                    'file_path':{'type':'string'},
+                    'actions':{'type':'array','items':{'type':'string','enum':['page_size_a4','font_size_anomalies','text_color_black']}},
+                    'body_font_pt':{'type':'number'},
+                    'work_type':{'type':'string','enum':['bachelor','master','phd'],'default':'bachelor'}},'required':['file_path']},
+                'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}
+            },
+            {
+                'name':'fix_thesis_copy',
+                'description':'Create a new repaired DOCX copy and JSON change log. Never overwrite the original. PDF, images, equations, tables and headers are not edited.',
+                'inputSchema':{'type':'object','properties':{
+                    'file_path':{'type':'string'},'output_dir':{'type':'string'},
+                    'actions':{'type':'array','items':{'type':'string','enum':['page_size_a4','font_size_anomalies','text_color_black']}},
+                    'body_font_pt':{'type':'number'},
+                    'work_type':{'type':'string','enum':['bachelor','master','phd'],'default':'bachelor'}},'required':['file_path']},
+                'annotations':{'readOnlyHint':False,'destructiveHint':False,'idempotentHint':False,'openWorldHint':False}
+            },
             {
                 "name": "check_thesis_document",
                 "title": "Check Thesis Document",
@@ -181,6 +211,10 @@ def tool_list_result():
 def handle_tool_call(params):
     name = params.get("name")
     args = params.get("arguments") or {}
+    if name == 'preview_thesis_fixes':
+        return repair_tool(args, dry_run=True)
+    if name == 'fix_thesis_copy':
+        return repair_tool(args, dry_run=False)
     if name == "check_thesis_document":
         return check_document_tool(args)
     if name == "check_thesis_folder":

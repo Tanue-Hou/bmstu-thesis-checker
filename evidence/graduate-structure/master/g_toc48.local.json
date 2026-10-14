@@ -1,0 +1,56 @@
+{
+  "work_type_policy": {
+    "native_mode": "ВКР магистра",
+    "docx_size_measure": "48 equivalent pages; 900 trimmed UTF-16 characters per page; appendix A TOC page also checked",
+    "manual_review": [
+      "Use actual school template and real pagination; do not fabricate cover data, TOC rows or text"
+    ]
+  },
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\graduate-structure\\g_toc48.docx",
+  "file_type": "docx",
+  "work_type": "master",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {
+    "resolved": [
+      "docDefaults",
+      "paragraph_basedOn",
+      "character_basedOn",
+      "direct"
+    ],
+    "unresolved": [
+      "conditional_table_styles",
+      "numbering_properties",
+      "theme_font_and_color"
+    ]
+  },
+  "summary": {
+    "total": 0,
+    "critical": 0,
+    "major": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "review_summary": {
+    "status_zh": "未发现当前规则可识别的问题。",
+    "must_fix_count": 0,
+    "should_fix_count": 0,
+    "manual_review_count": 0,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 0,
+    "critical_or_major_count": 0
+  },
+  "groups": {
+    "by_severity": {},
+    "by_module": {},
+    "by_fix_priority": {},
+    "by_location": {},
+    "antiplagiarism_related": []
+  },
+  "fix_checklist": {
+    "must_fix": [],
+    "should_fix": [],
+    "manual_review": [],
+    "optional": []
+  },
+  "findings": []
+}

@@ -41,7 +41,7 @@ class StructureChecker(BaseChecker):
             "bachelor": settings.THESIS_SIZE_MIN_BACHELOR,
             "specialist": settings.THESIS_SIZE_MIN_SPECIALIST,
             "master": settings.THESIS_SIZE_MIN_MASTER,
-            "phd": settings.THESIS_SIZE_MIN_PHD,
+            "phd": 0,  # Build 230 work code 5 selects no numeric character floor.
         }
         return thresholds.get(self.work_type.lower(), settings.THESIS_SIZE_MIN_DEFAULT)
 
@@ -49,6 +49,11 @@ class StructureChecker(BaseChecker):
         findings: List[Finding] = []
         if self.file_type == "docx":
             self._check_docx_structure(findings)
+            if self.work_type in ('master','phd'):
+                from .graduate_structure import check_graduate
+                replaced={'Struct.RequiredHeadingsMissing','Struct.EmptyStructuralElement','Struct.SmallStructuralElement','Struct.ThesisSizeTooSmall'}
+                findings=[f for f in findings if f.code not in replaced]
+                findings.extend(check_graduate(self.doc_data,self.work_type))
         elif self.file_type == "pdf":
             self._check_pdf_structure(findings)
         return findings
@@ -77,19 +82,19 @@ class StructureChecker(BaseChecker):
 
             is_structural = False
             heading_type = None
-            if any(kw in text_lower for kw in self.ABSTRACT_KEYWORDS) and len(text_lower) < 30:
+            if text_lower in self.ABSTRACT_KEYWORDS:
                 is_structural = True
                 heading_type = "abstract"
-            elif any(kw in text_lower for kw in self.TOC_KEYWORDS) and len(text_lower) < 30:
+            elif text_lower in self.TOC_KEYWORDS:
                 is_structural = True
                 heading_type = "toc"
-            elif any(kw in text_lower for kw in self.INTRO_KEYWORDS) and len(text_lower) < 30:
+            elif text_lower in self.INTRO_KEYWORDS:
                 is_structural = True
                 heading_type = "introduction"
-            elif any(kw in text_lower for kw in self.OUTRO_KEYWORDS) and len(text_lower) < 30:
+            elif text_lower in self.OUTRO_KEYWORDS:
                 is_structural = True
                 heading_type = "conclusion"
-            elif any(kw in text_lower for kw in self.BIB_KEYWORDS) and len(text_lower) < 50:
+            elif text_lower in self.BIB_KEYWORDS:
                 is_structural = True
                 heading_type = "bibliography"
 
@@ -137,16 +142,20 @@ class StructureChecker(BaseChecker):
 
     def _check_pdf_structure(self, findings: List[Finding]):
         spans = self.doc_data.get("spans", [])
-        text_full = " ".join([s.get("text", "") for s in spans]).lower()
-        missing = []
-        if not any(kw in text_full for kw in self.INTRO_KEYWORDS):
-            missing.append("introduction")
-        if not any(kw in text_full for kw in self.OUTRO_KEYWORDS):
-            missing.append("conclusion")
-        if not any(kw in text_full for kw in self.BIB_KEYWORDS):
-            missing.append("bibliography")
+        text_full = re.sub(r"\s+", " ", " ".join([s.get("text", "") for s in spans])).lower()
+        # PDF extraction may contain NBSP; require an actual heading, not a TOC/body mention.
+        lines=[re.sub(r"\s+", " ", span.get('text','')).strip().lower() for span in spans]
+        missing=[]
+        names={'introduction':self.INTRO_KEYWORDS,'conclusion':self.OUTRO_KEYWORDS,'bibliography':self.BIB_KEYWORDS}
+        if self.work_type=='phd':
+            names.update({'abstract':['реферат','аннотация','реферат (аннотация)'],'toc':['оглавление']})
+        for key,aliases in names.items():
+            if not any(line in aliases for line in lines):missing.append(key)
         if missing:
-            findings.append(Finding(code="Struct.RequiredHeadingsMissing", module=ModuleType.STRUCTURE, severity=Severity.INFO, message=self.MSG_REQUIRED, threshold={"missing": missing}, skip_switch="SkipTestStruct"))
+            labels={'introduction':'ВВЕДЕНИЕ','conclusion':'ЗАКЛЮЧЕНИЕ','bibliography':'СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ','abstract':'РЕФЕРАТ (АННОТАЦИЯ)','toc':'ОГЛАВЛЕНИЕ'}
+            findings.append(Finding(code="Struct.RequiredHeadingsMissing", module=ModuleType.STRUCTURE, severity=Severity.INFO,
+                message=self.MSG_REQUIRED+' '+', '.join('"'+labels[k]+'"' for k in missing),
+                threshold={"missing":missing,"native_predicate_supported":self.work_type=='phd' and set(missing)<= {'abstract','toc'}}, skip_switch="SkipTestStruct"))
 
         latex_count = 0
         for span in spans:

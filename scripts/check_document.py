@@ -1,4 +1,5 @@
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -15,6 +16,7 @@ from checkers.structure import StructureChecker
 from checkers.word_format import WordFormatChecker
 from parsers.docx_parser import DocxParser
 from parsers.pdf_parser import PdfParser
+from config import settings
 
 
 SEVERITY_ORDER = {"critical": 0, "major": 1, "warning": 2, "info": 3}
@@ -46,7 +48,44 @@ def load_rule_registry():
         return {}
     with rules_path.open("r", encoding="utf-8-sig") as f:
         data = json.load(f)
-    return {rule["rule_id"]: rule for rule in data.get("rules", [])}
+    registry = {rule["rule_id"]: rule for rule in data.get("rules", [])}
+    # The runtime policy is authoritative; registry descriptions must not drift
+    # when users supply environment overrides through BaseSettings.
+    bindings = {
+        "Word.LineSpacingInvalid": "LINE_SPACING_BODY",
+        "Word.FontSizeTooSmall": "FONT_SIZE_MIN_PT",
+        "Word.FontSizeTooLarge": "FONT_SIZE_MAX_PT",
+        "Word.FontScaleTooSmall": "FONT_SCALE_MIN_PCT",
+        "Word.FontScaleTooLarge": "FONT_SCALE_MAX_PCT",
+        "Word.TableRowHeightTooSmall": "TABLE_ROW_HEIGHT_MIN_MM",
+        "Word.HeaderFooterDistanceInvalid": "HEADER_FOOTER_DISTANCE_CM",
+        "Word.FirstLineIndentInvalid": "FIRST_LINE_INDENT_CM",
+        "Word.LeftMarginInvalid": "MARGIN_LEFT_MM",
+        "Word.RightMarginInvalid": "MARGIN_RIGHT_MM",
+        "Word.TopMarginInvalid": "MARGIN_TOP_MM",
+        "Word.BottomMarginInvalid": "MARGIN_BOTTOM_MM",
+        "Pic.FileSizeTooLarge": "IMAGE_FILE_SIZE_MAX_MB",
+        "Pic.PixelSizeTooLarge": "IMAGE_PIXEL_AREA_MAX",
+        "Struct.ThesisSizeTooSmall": "THESIS_SIZE_MIN_BACHELOR",
+    }
+    for rule_id, key in bindings.items():
+        if rule_id in registry:
+            registry[rule_id]["threshold"] = getattr(settings, key)
+            registry[rule_id]["policy_setting"] = key
+    if "Pic.PixelSizeTooLarge" in registry:
+        registry["Pic.PixelSizeTooLarge"]["enabled_by_default"] = True
+    for rule in registry.values():
+        rule["comparison_policy"] = {
+            "status": "local_policy_not_original_program_proof",
+            "line_spacing_tolerance": settings.LINE_SPACING_TOLERANCE,
+            "table_line_spacing": settings.LINE_SPACING_TABLE,
+            "font_violation_min_chars_exclusive": settings.FONT_VIOLATION_MIN_CHARS,
+            "page_size_tolerance_mm": settings.PAGE_SIZE_TOLERANCE_MM,
+            "margin_tolerance_mm": settings.MARGIN_TOLERANCE_MM,
+            "header_footer_tolerance_cm": settings.HEADER_FOOTER_TOLERANCE_CM,
+            "first_line_indent_tolerance_cm": settings.FIRST_LINE_INDENT_TOLERANCE_CM,
+        }
+    return registry
 
 
 def load_rule_guidance():
@@ -75,6 +114,8 @@ def describe_location(location):
         parts.append(f"section {location['section']}")
     if "page" in location:
         parts.append(f"PDF/页面 {location['page']}")
+    if "pages" in location:
+        parts.append("PDF/页面 "+", ".join(str(p) for p in location["pages"]))
     if "paragraph" in location:
         parts.append(f"段落 {location['paragraph']}")
     if "paragraphs" in location:
@@ -120,6 +161,8 @@ def location_group_key(location):
         return "未定位"
     if "page" in location:
         return f"页面 {location['page']}"
+    if "pages" in location:
+        return "页面 "+", ".join(str(p) for p in location["pages"])
     if "section" in location:
         return f"section {location['section']}"
     if "paragraph" in location or "paragraphs" in location:
@@ -131,24 +174,66 @@ def location_group_key(location):
     return "其他位置"
 
 
-def finding_to_dict(finding, rule_registry, rule_guidance):
+def verification_context(rule,file_type,work_type):
+    if 'verification_by_context' in rule:
+        return rule['verification_by_context'].get(file_type+':'+work_type) if file_type and work_type else None
+    if file_type not in rule.get('verified_formats',[]) or work_type not in rule.get('verified_work_types',[]):return None
+    return rule.get('verification_by_work_type',{}).get(work_type,rule)
+
+def context_evidence_valid(context):
+    if not context:return False
+    refs=context.get('evidence_refs',[])
+    if not refs:return False
+    try:
+        root=Path(__file__).resolve().parents[1]
+        if hashlib.sha256((root/refs[0]).read_bytes()).hexdigest()!=context.get('verification_evidence_sha256'):return False
+        return all(hashlib.sha256((root/ref).read_bytes()).hexdigest()==context.get('evidence_hashes',{}).get(ref,context.get('verification_evidence_sha256')) for ref in refs)
+    except OSError:return False
+
+
+def finding_to_dict(finding, rule_registry, rule_guidance, file_type=None, work_type=None, doc_data=None):
     rule = rule_registry.get(finding.code, {})
+    selected_context=verification_context(rule,file_type,work_type)
+    context = selected_context or {}
+    verified = (rule.get('verification_status') == 'verified_against_original'
+                and selected_context is not None
+                and context_evidence_valid(selected_context)
+                and (file_type!='pdf' or bool((doc_data or {}).get('pdf_structure_profile_supported' if finding.code=='Struct.RequiredHeadingsMissing' else 'pdf_verification_profile_supported')))
+                and (finding.code!='Struct.RequiredHeadingsMissing' or bool((finding.threshold or {}).get('native_predicate_supported')))
+                and (finding.code not in {'Word.LeftMarginInvalid','Word.RightMarginInvalid','Word.TopMarginInvalid','Word.BottomMarginInvalid'} or work_type!='phd' or bool((finding.threshold or {}).get('native_margin_probe_supported')))
+                and (not finding.code.startswith('Graduate.') or (bool((finding.threshold or {}).get('native_scope_supported')) and bool((finding.threshold or {}).get('native_predicate_supported'))))
+                and file_type in rule.get('verified_formats', [])
+                and work_type in rule.get('verified_work_types', [])
+                and all(getattr(settings, key, None) == value
+                        for key, value in context.get('verified_policy',rule.get('verified_policy', {})).items()))
+    verification_status = ('verified_against_original' if verified else
+                           'pending_original_program_comparison')
     guidance = {**rule_guidance.get("default", {}), **rule_guidance.get(finding.code, {})}
     location = finding.location
     return {
         "rule_id": finding.code,
         "module": finding.module.value,
         "severity": finding.severity.value,
-        "message": rule.get("observed_message") or finding.message,
-        "russian_message": rule.get("observed_message") or finding.message,
+        "message": finding.message,
+        "russian_message": finding.message,
         "title_zh": guidance.get("title_zh"),
         "explanation_zh": guidance.get("explanation_zh"),
         "trigger_reason_zh": guidance.get("trigger_reason_zh"),
         "fix_suggestion_zh": guidance.get("fix_suggestion_zh"),
         "word_path_zh": guidance.get("word_path_zh"),
-        "fix_priority": guidance.get("fix_priority", "manual_review"),
+        "fix_priority": (guidance.get("fix_priority", "manual_review")
+                         if verified
+                         else "manual_review"),
+        "suggested_fix_priority": guidance.get("fix_priority", "manual_review"),
         "affects_antiplagiarism": bool(guidance.get("affects_antiplagiarism")),
-        "confidence": rule.get("confidence") or finding.confidence or "medium",
+        "confidence": rule.get("confidence", "low") if verified else "low",
+        "verification_status": verification_status,
+        "verification_evidence_intact": context_evidence_valid(selected_context),
+        "verification_scope": context.get('scope', rule.get("verification_scope", {})) if selected_context is not None else {},
+        "threshold_origin": rule.get("threshold_origin", "local_heuristic"),
+        "evidence_refs": context.get('evidence_refs', rule.get("evidence_refs", [])) if selected_context is not None else [],
+        "static_evidence_refs": rule.get("static_evidence_refs", []),
+        "comparison_policy": {**rule.get("comparison_policy", {}), **({"margin_tolerance_mm": settings.MARGIN_TOLERANCE_PHD_MM} if work_type=="phd" and finding.code in {"Word.LeftMarginInvalid","Word.RightMarginInvalid","Word.TopMarginInvalid","Word.BottomMarginInvalid"} else {})},
         "threshold": finding.threshold,
         "location": location,
         "location_summary_zh": describe_location(location),
@@ -198,11 +283,12 @@ def build_fix_checklist(findings):
 def build_review_summary(findings):
     must_fix = [f for f in findings if f.get("fix_priority") == "must_fix"]
     antiplagiarism = [f for f in findings if f.get("affects_antiplagiarism")]
-    critical_or_major = [f for f in findings if f.get("severity") in {"critical", "major"}]
+    critical_or_major = [f for f in findings if f.get("severity") in {"critical", "major"}
+                         and f.get("verification_status") == "verified_against_original"]
     if must_fix or critical_or_major:
         status = "不建议直接提交，需要先处理必改项和较高严重度问题。"
     elif findings:
-        status = "可以进入人工复核，但建议先处理报告中的建议项。"
+        status = "发现本地策略提示，请先复核适用要求；这些提示尚不代表原版 TestVkr 的检查结论。"
     else:
         status = "未发现当前规则可识别的问题。"
     return {
@@ -250,11 +336,15 @@ def check_file(path: Path, args):
         if not args.skip_dictionary:
             findings.extend(DictionaryChecker(doc_data, file_type, args.work_type).check())
 
-    finding_dicts = [finding_to_dict(f, rule_registry, rule_guidance) for f in findings]
+    finding_dicts = [finding_to_dict(f, rule_registry, rule_guidance, file_type, args.work_type,doc_data) for f in findings]
     result = {
+        "work_type_policy": ({"native_mode": "НКР аспиранта", "toc_heading": "ОГЛАВЛЕНИЕ", "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied.", "manual_review": ["Doctoral DOCX margins left/right/top/bottom 25/10/20/20 mm, tolerance 0.2 mm; finite single-section native probes", "Not a general dissertation standard or original-program certification"]} if args.work_type == 'phd' else {"native_mode": "ВКР магистра", "docx_size_measure": "48 equivalent pages; 900 trimmed UTF-16 characters per page; appendix A TOC page also checked", "manual_review": ["Use actual school template and real pagination; do not fabricate cover data, TOC rows or text"]} if args.work_type == 'master' else {}),
         "file": str(path),
         "file_type": file_type,
         "work_type": args.work_type,
+        "verification_status": "local_policy_check_not_original_program_certification",
+        "formatting_coverage": doc_data.get("formatting_coverage", {}),
+        "native_comparison_limits": ({"format_profile_supported":doc_data.get("pdf_verification_profile_supported",False),"structure_profile_supported":doc_data.get("pdf_structure_profile_supported",False),"unimplemented_native_checks":["PDF text-derived margins and text in page margins","PDF page-number and header/footer placement","TOC correspondence and entry counts","cover/title-page predicates and bibliography completeness"],"upper_font_limit":"No native warning in tested 18.5/19/24/36/72 pt PDF probes; no universal upper-limit claim"} if file_type=="pdf" else {}),
         "summary": {
             "total": len(findings),
             "critical": sum(1 for f in findings if f.severity.value == "critical"),
@@ -277,6 +367,8 @@ def render_markdown(result):
 
     add(f"# BMSTU 论文预审报告: {Path(result['file']).name}")
     add()
+    add("本报告依据本地规则进行预审。未完成原程序对照的项目仅供复核，不作为已确认违规。")
+    add()
     summary = result["summary"]
     review = result.get("review_summary", {})
     add(
@@ -285,6 +377,9 @@ def render_markdown(result):
         f"warning {summary['warning']}，info {summary['info']}）"
     )
     add()
+    if result.get("native_comparison_limits"):
+        add("PDF 原程序检查覆盖仍不完整：边距、页眉页脚、页码位置和目录对应关系需要人工复核；零条本地问题不表示原程序通过。")
+        add()
     add("## 审阅结论")
     add(f"- 结论：{review.get('status_zh', '')}")
     add(f"- 必改项：{review.get('must_fix_count', 0)}")
@@ -334,6 +429,8 @@ def render_markdown(result):
         add(f"- 位置：{item.get('location_summary_zh') or ''}")
         add(f"- 是否影响查重/反抄袭：{'是' if item.get('affects_antiplagiarism') else '否'}")
         add(f"- 置信度：{item['confidence']}")
+        add(f"- 验证状态：{item.get('verification_status', 'unverified')}")
+        add(f"- 阈值来源：{item.get('threshold_origin', 'unknown')}")
         add(f"- 俄文原提示：{item['russian_message']}")
         if item.get("threshold") is not None:
             add(f"- 阈值：`{json.dumps(item['threshold'], ensure_ascii=False)}`")
@@ -359,6 +456,7 @@ def write_docx_report(result, out_path):
     styles["Normal"].font.size = Pt(10)
 
     document.add_heading(f"BMSTU 论文预审报告：{Path(result['file']).name}", level=1)
+    document.add_paragraph("本报告依据本地规则进行预审。未完成原程序对照的项目仅供复核，不作为已确认违规。")
     summary = result["summary"]
     review = result.get("review_summary", {})
     document.add_paragraph(
@@ -406,7 +504,9 @@ def write_docx_report(result, out_path):
             ("位置", item.get("location_summary_zh") or ""),
             ("是否影响查重/反抄袭", "是" if item.get("affects_antiplagiarism") else "否"),
             ("置信度", item.get("confidence") or ""),
-            ("俄文原提示", item.get("russian_message") or ""),
+            ("验证状态", item.get("verification_status") or "unverified"),
+            ("阈值来源", item.get("threshold_origin") or "unknown"),
+            ("俄文检查消息", item.get("russian_message") or ""),
         ]
         if item.get("threshold") is not None:
             details.append(("阈值", json.dumps(item["threshold"], ensure_ascii=False)))

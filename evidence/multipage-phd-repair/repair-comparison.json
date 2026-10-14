@@ -1,0 +1,30 @@
+{
+  "source_sha256": "24873a6b4bbe1f219f3d7cc7d9e9010bef369725c3153fb0c9b9ca2acea3df31",
+  "output_sha256": "8e5d53e3ce4dca2eaa8e86543ebc909d5a437af533b98dac9af961a758ef6355",
+  "native_before_after": {
+    "phd_combined": {
+      "sha256": "3d18e8782778933e9ece988805677fc5c8a946503aa23a747ea404932feb5896",
+      "native_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\phd_combined.docx 1. ** В документе много символов, размер которых меньше 8 пт: \"Методы обработки данных и анализа результатов иссл\". 2. В документе много символов, размер которых превышает 18 пт: \"Методы обработки данных и анализа результатов иссл\". 3. В документе много символов, цвет которых отличается от черного: \"ОГЛАВЛЕНИЕ\", \"Методы обработки данных и анализа результатов иссл\". 4. Документ содержит страницы, размеры которых не соответствуют формату А4.",
+      "diagnostics": 4
+    },
+    "phd_combined_after": {
+      "sha256": "fbb899efaedc2b58f43ea08272e3ccba8772f5070540a6d67ae5b28fa8102ae7",
+      "native_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\phd_combined_after.docx Проверка закончена. Замечаний нет.",
+      "diagnostics": 0
+    }
+  },
+  "changes": 5,
+  "changed_zip_parts": [
+    "word/document.xml"
+  ],
+  "all_text_table_drawing_margin_parts_preserved": true,
+  "all_xml_changes_reversible_from_log": true,
+  "source_unchanged": true,
+  "repaired_rules": [
+    "Word.FontSizeTooLarge",
+    "Word.FontSizeTooSmall",
+    "Word.PageSizeNotA4",
+    "Word.TextColorNotBlack"
+  ],
+  "scope": "Single portrait doctoral DOCX, ordinary body text, ordinary tables and one inline PNG; no margin or special-content repair."
+}

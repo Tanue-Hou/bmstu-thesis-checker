@@ -1,0 +1,10 @@
+{
+  "candidate_version": "0.2.4",
+  "validation": "Fresh checkout of the Git index, no original EXE needed for these tests",
+  "checkout_directory": "C:\\Users\\TANUEH~1\\AppData\\Local\\Temp\\bmstu-v024-checkout-5k1py0sv",
+  "exit_code": 0,
+  "tests": 52,
+  "staged_source_hashes_checked": 62,
+  "staged_evidence_hashes_checked": 590,
+  "candidate_code_identical_to_validated_source": true
+}

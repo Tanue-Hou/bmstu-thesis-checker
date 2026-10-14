@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-10-14T17:35:55.461Z",
+  "window": {
+    "app": "process:C:\\Users\\Tanue Hou\\Downloads\\TestVkr (1).exe",
+    "id": 44632766,
+    "title": "Предварительная проверка ВКР, НКР, НИР, КуП, КуР МГТУ им. Н. Э. Баумана [сборка 230]"
+  },
+  "accessibility": {
+    "focused_element": "6 单选按钮 (selectable) НКР аспиранта ID: 1249850",
+    "tree": "Window: \"Предварительная проверка ВКР, НКР, НИР, КуП, КуР МГТУ им. Н. Э. Баумана [сборка 230]\", App: TestVkr (1).exe.\n\t0 窗口 Предварительная проверка ВКР, НКР, НИР, КуП, КуР МГТУ им. Н. Э. Баумана [сборка 230] Secondary Actions: Raise\n\t\t1 窗格 ID: 22548250\n\t\t\t2 单选按钮 (selectable) Пр ID: 1642898\n\t\t\t3 单选按钮 (selectable) КуР ID: 5116456\n\t\t\t4 单选按钮 (selectable) КуП ID: 7079976\n\t\t\t5 单选按钮 (selectable) НИР ID: 4330058\n\t\t\t6 单选按钮 (selectable) НКР аспиранта ID: 1249850\n\t\t\t7 单选按钮 (selectable) ВКР специалиста ID: 3017900\n\t\t\t8 单选按钮 (selectable) ВКР магистра ID: 6949008\n\t\t\t9 单选按钮 (selectable) ВКР бакалавра ID: 1446420\n\t\t10 编辑 Value: Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_twips1405.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям. ID: 1052914\n\t\t\t11 滚动条 (disabled, settable, float) 垂直滚动条 Value: 0 ID: NonClientVerticalScrollBar\n\t\t\t\t12 按钮 (disabled) 上一行 ID: UpButton\n\t\t\t\t13 按钮 (disabled) 下一行 ID: DownButton\n\t\t14 标题栏 (settable, string) Value: Предварительная проверка ВКР, НКР, НИР, КуП, КуР МГТУ им. Н. Э. Баумана [сборка 230]\n\t\t\t15 菜单栏 系统 ID: MenuBar\n\t\t\t\t16 菜单项 系统\n\t\t\t17 按钮 最小化\n\t\t\t18 按钮 最大化\n\t\t\t19 按钮 关闭\n\nThe focused UI element is 6 单选按钮 (selectable) НКР аспиранта ID: 1249850."
+  }
+}

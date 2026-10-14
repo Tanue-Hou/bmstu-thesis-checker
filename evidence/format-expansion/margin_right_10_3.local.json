@@ -1,0 +1,141 @@
+{
+  "work_type_policy": {
+    "native_mode": "НКР аспиранта",
+    "toc_heading": "ОГЛАВЛЕНИЕ",
+    "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied.",
+    "manual_review": [
+      "Doctoral DOCX margins left/right/top/bottom 25/10/20/20 mm, tolerance 0.2 mm; finite single-section native probes",
+      "Not a general dissertation standard or original-program certification"
+    ]
+  },
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\format-expansion\\margin_right_10_3.docx",
+  "file_type": "docx",
+  "work_type": "phd",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {
+    "resolved": [
+      "docDefaults",
+      "paragraph_basedOn",
+      "character_basedOn",
+      "direct"
+    ],
+    "unresolved": [
+      "conditional_table_styles",
+      "numbering_properties",
+      "theme_font_and_color"
+    ]
+  },
+  "summary": {
+    "total": 1,
+    "critical": 0,
+    "major": 0,
+    "warning": 0,
+    "info": 1
+  },
+  "review_summary": {
+    "status_zh": "不建议直接提交，需要先处理必改项和较高严重度问题。",
+    "must_fix_count": 1,
+    "should_fix_count": 0,
+    "manual_review_count": 0,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 0,
+    "critical_or_major_count": 0
+  },
+  "groups": {
+    "by_severity": {
+      "info": [
+        "Word.RightMarginInvalid"
+      ]
+    },
+    "by_module": {
+      "word_format": [
+        "Word.RightMarginInvalid"
+      ]
+    },
+    "by_fix_priority": {
+      "must_fix": [
+        "Word.RightMarginInvalid"
+      ]
+    },
+    "by_location": {
+      "section 1": [
+        "Word.RightMarginInvalid"
+      ]
+    },
+    "antiplagiarism_related": []
+  },
+  "fix_checklist": {
+    "must_fix": [
+      {
+        "rule_id": "Word.RightMarginInvalid",
+        "label_zh": "必改",
+        "title_zh": "右页边距不正确",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "section 1",
+        "fix_suggestion_zh": "将右页边距设置为 1.0cm。",
+        "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 右 1.0cm。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "should_fix": [],
+    "manual_review": [],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Word.RightMarginInvalid",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Документ содержит страницы, размеры правого поля на которых не соответствуют требованиям, или нет знаков препинаний в конце коротких строк, или не используется выравнивание текста по ширине:",
+      "russian_message": "Документ содержит страницы, размеры правого поля на которых не соответствуют требованиям, или нет знаков препинаний в конце коротких строк, или не используется выравнивание текста по ширине:",
+      "title_zh": "右页边距不正确",
+      "explanation_zh": "右页边距通常应为 10mm。",
+      "trigger_reason_zh": "检测到 section 右页边距与 10mm 不一致。",
+      "fix_suggestion_zh": "将右页边距设置为 1.0cm。",
+      "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 右 1.0cm。",
+      "fix_priority": "must_fix",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "phd",
+        "build": 230,
+        "limits": "Single ordinary-text DOCX section; four independent margin axes; left boundary at adjacent twips; no landscape/section/gutter equivalence."
+      },
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [
+        "evidence/format-expansion/comparison.json"
+      ],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 0.2,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 10.0,
+        "unit": "mm",
+        "actual": 10.301111111111112,
+        "native_margin_probe_supported": true
+      },
+      "location": {
+        "section": 1
+      },
+      "location_summary_zh": "section 1",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "10_margins/margin_right_20mm.docx"
+      ]
+    }
+  ]
+}

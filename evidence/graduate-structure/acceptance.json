@@ -1,0 +1,27 @@
+{
+  "native_cases_including_reused_baseline": 17,
+  "native_cases_by_mode": {
+    "master": 12,
+    "phd": 5
+  },
+  "promoted_rule_ids": [
+    "Graduate.UniversityNameInvalid",
+    "Graduate.TitlePageMismatch",
+    "Graduate.WorkNameInvalid",
+    "Graduate.RequiredHeadingsMissing",
+    "Graduate.TocEmpty",
+    "Graduate.TocSmall",
+    "Graduate.AbstractTooShort",
+    "Graduate.ThesisSizeTooSmall",
+    "Word.LeftMarginInvalid"
+  ],
+  "verified_predicates_by_mode": {
+    "master": 7,
+    "phd": 6
+  },
+  "reproduced_extended_inputs": 10,
+  "tests_passed": 35,
+  "test_exit_code": 0,
+  "matrix_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+  "static_provenance_sha256": "46b10025cc54f579f7d32483580e3afbce02e4258d9e28f20a55572eb4cef925"
+}

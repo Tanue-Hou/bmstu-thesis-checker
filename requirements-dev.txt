@@ -1,0 +1,4 @@
+-r scripts/testvkr-service/requirements.txt
+Pillow
+pefile
+capstone

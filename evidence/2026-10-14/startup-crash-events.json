@@ -1,0 +1,32 @@
+[
+  {
+    "TimeCreated": "2026-10-14T15:24:57.4768205+03:00",
+    "Id": 1000,
+    "Message": "出错应用程序名称： TestVkr.exe，版本： 1.0.0.230，时间戳： 0x00000000\r\n出错模块名称： TestVkr.exe， 版本： 1.0.0.230，时间戳： 0x00000000\r\n异常代码： 0xc0000005\r\n错误偏移： 0x000d094e\r\n出错进程 ID： 0x11E8\r\n出错应用程序开始时间： 0x1DD5BD7053FC7E0\r\nFaulting 应用程序路径： C:\\Users\\Tanue Hou\\Downloads\\TestVkr.exe\r\nFaulting 模块路径： C:\\Users\\Tanue Hou\\Downloads\\TestVkr.exe\r\nReport ID： 8926068e-70ac-4856-be3c-7ba8a10645e1\r\nFaulting 包全名： \r\nFaulting 程序包相对应用程序 ID：  个"
+  },
+  {
+    "TimeCreated": "2026-10-14T15:24:56.4125957+03:00",
+    "Id": 1000,
+    "Message": "出错应用程序名称： TestVkr.exe，版本： 1.0.0.230，时间戳： 0x00000000\r\n出错模块名称： TestVkr.exe， 版本： 1.0.0.230，时间戳： 0x00000000\r\n异常代码： 0xc0000005\r\n错误偏移： 0x000d094e\r\n出错进程 ID： 0x11E8\r\n出错应用程序开始时间： 0x1DD5BD7053FC7E0\r\nFaulting 应用程序路径： C:\\Users\\Tanue Hou\\Downloads\\TestVkr.exe\r\nFaulting 模块路径： C:\\Users\\Tanue Hou\\Downloads\\TestVkr.exe\r\nReport ID： bb253e19-57c8-4bcd-a70e-17b7219854a5\r\nFaulting 包全名： \r\nFaulting 程序包相对应用程序 ID：  个"
+  },
+  {
+    "TimeCreated": "2026-10-14T15:24:40.8756351+03:00",
+    "Id": 1000,
+    "Message": "出错应用程序名称： TestVkr (1).exe，版本： 1.0.0.230，时间戳： 0x00000000\r\n出错模块名称： TestVkr (1).exe， 版本： 1.0.0.230，时间戳： 0x00000000\r\n异常代码： 0xc0000005\r\n错误偏移： 0x000d094e\r\n出错进程 ID： 0x14BF4\r\n出错应用程序开始时间： 0x1DD5BD6FB2FF33B\r\nFaulting 应用程序路径： C:\\Users\\Tanue Hou\\Downloads\\TestVkr (1).exe\r\nFaulting 模块路径： C:\\Users\\Tanue Hou\\Downloads\\TestVkr (1).exe\r\nReport ID： 425625e8-ac25-41a1-b533-a49759eeb3e4\r\nFaulting 包全名： \r\nFaulting 程序包相对应用程序 ID：  个"
+  },
+  {
+    "TimeCreated": "2026-10-14T15:24:39.5868666+03:00",
+    "Id": 1000,
+    "Message": "出错应用程序名称： TestVkr (1).exe，版本： 1.0.0.230，时间戳： 0x00000000\r\n出错模块名称： TestVkr (1).exe， 版本： 1.0.0.230，时间戳： 0x00000000\r\n异常代码： 0xc0000005\r\n错误偏移： 0x000d094e\r\n出错进程 ID： 0x14BF4\r\n出错应用程序开始时间： 0x1DD5BD6FB2FF33B\r\nFaulting 应用程序路径： C:\\Users\\Tanue Hou\\Downloads\\TestVkr (1).exe\r\nFaulting 模块路径： C:\\Users\\Tanue Hou\\Downloads\\TestVkr (1).exe\r\nReport ID： 0df0a948-1530-4649-9936-e40002a6ecc1\r\nFaulting 包全名： \r\nFaulting 程序包相对应用程序 ID：  个"
+  },
+  {
+    "TimeCreated": "2026-10-14T15:23:08.5291169+03:00",
+    "Id": 1000,
+    "Message": "出错应用程序名称： testvkr (1).exe，版本： 1.0.0.230，时间戳： 0x00000000\r\n出错模块名称： testvkr (1).exe， 版本： 1.0.0.230，时间戳： 0x00000000\r\n异常代码： 0xc0000005\r\n错误偏移： 0x000d094e\r\n出错进程 ID： 0xC584\r\n出错应用程序开始时间： 0x1DD5BD6C430E889\r\nFaulting 应用程序路径： C:\\Users\\Tanue Hou\\Downloads\\testvkr (1).exe\r\nFaulting 模块路径： C:\\Users\\Tanue Hou\\Downloads\\testvkr (1).exe\r\nReport ID： e13d0d36-aec2-414b-bf48-85d97f21bc16\r\nFaulting 包全名： \r\nFaulting 程序包相对应用程序 ID：  个"
+  },
+  {
+    "TimeCreated": "2026-10-14T15:23:07.3768784+03:00",
+    "Id": 1000,
+    "Message": "出错应用程序名称： testvkr (1).exe，版本： 1.0.0.230，时间戳： 0x00000000\r\n出错模块名称： testvkr (1).exe， 版本： 1.0.0.230，时间戳： 0x00000000\r\n异常代码： 0xc0000005\r\n错误偏移： 0x000d094e\r\n出错进程 ID： 0xC584\r\n出错应用程序开始时间： 0x1DD5BD6C430E889\r\nFaulting 应用程序路径： C:\\Users\\Tanue Hou\\Downloads\\testvkr (1).exe\r\nFaulting 模块路径： C:\\Users\\Tanue Hou\\Downloads\\testvkr (1).exe\r\nReport ID： 2b6ae176-81af-41d6-941a-f726cd723983\r\nFaulting 包全名： \r\nFaulting 程序包相对应用程序 ID：  个"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "case": "g_chars43199",
+    "all_zip_member_contents_equal": true,
+    "original_sha256": "986be5f8d97ee9e786b9232a0db8a2c1e1f96212c642d64b547f8910b41c0c16",
+    "reproduction_sha256": "524b265b38af9a30a989b37fcbfc3f4abccbae9ad0c7c01537b9cc8a04278eff",
+    "note": "ZIP timestamps may differ; byte identity is asserted for every uncompressed member."
+  },
+  {
+    "case": "g_chars43200",
+    "all_zip_member_contents_equal": true,
+    "original_sha256": "ea4ff3262f38bed993ed4871a9a7122bee92a38bb7e3e00faca87a063a8d101f",
+    "reproduction_sha256": "ff503b5a02916a6d5bbf812bfc8432481a98059e1a82e05f02a8d3f775df9627",
+    "note": "ZIP timestamps may differ; byte identity is asserted for every uncompressed member."
+  },
+  {
+    "case": "g_phd_correct_heading",
+    "all_zip_member_contents_equal": true,
+    "original_sha256": "8fda3cfaa9eb55ec11206421334a1af52b4138d076eefc2bf5fc041f4d669f90",
+    "reproduction_sha256": "cf1eb42c65e6ae0fd9bb79b6315a1390b81e2e51700fce863ca65aa818ae0a93",
+    "note": "ZIP timestamps may differ; byte identity is asserted for every uncompressed member."
+  },
+  {
+    "case": "g_phd_left25",
+    "all_zip_member_contents_equal": true,
+    "original_sha256": "7e6016fe36f8dac353fab0885fa65a948cd694106bd30ae976104f69e23738f9",
+    "reproduction_sha256": "65e8612cffc5715c34d47780a88d54ad5699b214fc7e9d0ff352c7ad7b73c329",
+    "note": "ZIP timestamps may differ; byte identity is asserted for every uncompressed member."
+  },
+  {
+    "case": "g_phd_margin15",
+    "all_zip_member_contents_equal": true,
+    "original_sha256": "526c2f0c1bfac4b2dd51a6596de016f1b1d571b9cf9e227cb1366f7710a411b8",
+    "reproduction_sha256": "b1568dcddd3bee93545026e22c929e64bfcb69b24beedd8a03810cb40f893656",
+    "note": "ZIP timestamps may differ; byte identity is asserted for every uncompressed member."
+  },
+  {
+    "case": "g_toc47",
+    "all_zip_member_contents_equal": true,
+    "original_sha256": "1235001169fe895df337d6e38cf0bad3c959f437127c7ed3599cff2f1262c864",
+    "reproduction_sha256": "69ba8e240af8ddede72493849ed9d82bf102d697254c30c61f869f77fd3ff5a0",
+    "note": "ZIP timestamps may differ; byte identity is asserted for every uncompressed member."
+  },
+  {
+    "case": "g_toc48",
+    "all_zip_member_contents_equal": true,
+    "original_sha256": "da7426b2db56775f92c4dc55be4b9ab8d80575268d53a57602ab781f671fd403",
+    "reproduction_sha256": "9cff65d6f63b3f9a78df5c45bb50f00537f4ff3de11c7e15dd9e6c01cf31403f",
+    "note": "ZIP timestamps may differ; byte identity is asserted for every uncompressed member."
+  },
+  {
+    "case": "g_toc_entries10",
+    "all_zip_member_contents_equal": true,
+    "original_sha256": "f250eb7b67a9fcbc863630411beab0fcd29009bd67b3aad3a92e21019ddbd483",
+    "reproduction_sha256": "053463d393acbaa9be1f317736941f04fd1607d4a6c9391b8260017c33d962f4",
+    "note": "ZIP timestamps may differ; byte identity is asserted for every uncompressed member."
+  },
+  {
+    "case": "g_toc_entries11",
+    "all_zip_member_contents_equal": true,
+    "original_sha256": "e34d25b13a5e219c40fb33420b472d05f8e7c7a4958e5d7f1689d3605410d9e9",
+    "reproduction_sha256": "affdb81339c68265fd5e49ca072df94ef2497135cd11d975b9c81d9b1cc355e5",
+    "note": "ZIP timestamps may differ; byte identity is asserted for every uncompressed member."
+  },
+  {
+    "case": "g_toc_entries5",
+    "all_zip_member_contents_equal": true,
+    "original_sha256": "5ff7a6a85ed5040ccf99ddce7914f2592d3e264e27aaccbd9c530cf15eae903d",
+    "reproduction_sha256": "3d86e52a096c03c1725b8f69e4d0b9a011f283bb98cc2c98eaaa47e24c71e697",
+    "note": "ZIP timestamps may differ; byte identity is asserted for every uncompressed member."
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "generator_sha256": "0323a7d42003cf73d9d126e968755693a4e7cda45108bf85b12a1c6813a3a07f",
+  "cases": [
+    {
+      "case": "baseline",
+      "different_package_parts": [],
+      "pass": true
+    },
+    {
+      "case": "spacing_1",
+      "different_package_parts": [],
+      "pass": true
+    },
+    {
+      "case": "indent_0",
+      "different_package_parts": [],
+      "pass": true
+    },
+    {
+      "case": "font_7",
+      "different_package_parts": [],
+      "pass": true
+    },
+    {
+      "case": "page_letter",
+      "different_package_parts": [],
+      "pass": true
+    },
+    {
+      "case": "font_7_5",
+      "different_package_parts": [],
+      "pass": true
+    },
+    {
+      "case": "font_8",
+      "different_package_parts": [],
+      "pass": true
+    },
+    {
+      "case": "font_18",
+      "different_package_parts": [],
+      "pass": true
+    },
+    {
+      "case": "font_18_5",
+      "different_package_parts": [],
+      "pass": true
+    },
+    {
+      "case": "image_16m",
+      "different_package_parts": [],
+      "pass": true
+    },
+    {
+      "case": "image_above_16m",
+      "different_package_parts": [],
+      "pass": true
+    },
+    {
+      "case": "color_black",
+      "different_package_parts": [],
+      "pass": true
+    }
+  ],
+  "pass": true
+}

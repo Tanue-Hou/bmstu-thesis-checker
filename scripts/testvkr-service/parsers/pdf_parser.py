@@ -15,7 +15,7 @@ class PdfParser:
     def parse_basic_metadata(self):
         self.metadata['file_size_mb'] = os.path.getsize(self.file_path) / (1024 * 1024)
         self.metadata['page_count'] = len(self.doc)
-        
+
         # Check page sizes of all pages
         self.metadata['pages'] = []
         for i, page in enumerate(self.doc):
@@ -46,7 +46,7 @@ class PdfParser:
                             g = (color_int >> 8) & 255
                             b = color_int & 255
                             color_hex = f"{r:02X}{g:02X}{b:02X}"
-                            
+
                             elements.append({
                                 'page_index': page_idx,
                                 'text': span.get("text", ""),
@@ -69,7 +69,7 @@ class PdfParser:
                 width = base_image["width"]
                 height = base_image["height"]
                 byte_size = len(image_bytes)
-                
+
                 images_info.append({
                     'page_index': page_idx,
                     'xref': xref,
@@ -81,7 +81,13 @@ class PdfParser:
         return images_info
 
     def parse_all(self) -> Dict[str, Any]:
+        fonts=[f for page in self.doc for f in page.get_fonts(full=True)]
+        text_profile=(bool(fonts) and all('TimesNewRoman' in f[3].replace(' ','') and self.doc.xref_get_key(f[0],'ToUnicode')[0]=='xref' for f in fonts)
+                 and all(page.rotation==0 and len(page.get_images())<=1 and all(self.doc.extract_image(i[0])['ext']=='png' for i in page.get_images()) for page in self.doc))
         return {
+            'pdf_text_profile_supported':text_profile,
+            'pdf_verification_profile_supported':text_profile and 1<=len(self.doc)<=3,
+            'pdf_structure_profile_supported':text_profile and 1<=len(self.doc)<=14,
             'file_size_mb': self.metadata['file_size_mb'],
             'page_count': self.metadata['page_count'],
             'pages': self.metadata['pages'],

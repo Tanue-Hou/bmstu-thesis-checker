@@ -1,0 +1,58 @@
+{
+  "work_type_policy": {
+    "native_mode": "НКР аспиранта",
+    "toc_heading": "ОГЛАВЛЕНИЕ",
+    "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied.",
+    "manual_review": [
+      "Doctoral DOCX margins left/right/top/bottom 25/10/20/20 mm, tolerance 0.2 mm; finite single-section native probes",
+      "Not a general dissertation standard or original-program certification"
+    ]
+  },
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\format-expansion\\margin_top_20_1.docx",
+  "file_type": "docx",
+  "work_type": "phd",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {
+    "resolved": [
+      "docDefaults",
+      "paragraph_basedOn",
+      "character_basedOn",
+      "direct"
+    ],
+    "unresolved": [
+      "conditional_table_styles",
+      "numbering_properties",
+      "theme_font_and_color"
+    ]
+  },
+  "summary": {
+    "total": 0,
+    "critical": 0,
+    "major": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "review_summary": {
+    "status_zh": "未发现当前规则可识别的问题。",
+    "must_fix_count": 0,
+    "should_fix_count": 0,
+    "manual_review_count": 0,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 0,
+    "critical_or_major_count": 0
+  },
+  "groups": {
+    "by_severity": {},
+    "by_module": {},
+    "by_fix_priority": {},
+    "by_location": {},
+    "antiplagiarism_related": []
+  },
+  "fix_checklist": {
+    "must_fix": [],
+    "should_fix": [],
+    "manual_review": [],
+    "optional": []
+  },
+  "findings": []
+}

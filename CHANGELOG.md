@@ -1,4 +1,32 @@
+# 0.2.4 - Multipage PDF and doctoral copy repair (2026-10-14)
+
+- Native later-page table/font, color, page-size and image probes; exact page locations and bounded proof profiles.
+- PDF upper-font probes through 72pt and recovered PDF span path; do not apply DOCX maximum to PDF.
+- Normalize PDF NBSP, recognize exact doctoral abstract/TOC headings, report unimplemented native layout/structure checks.
+- Doctoral one-portrait-section copy repair with hashed native before/after evidence and reversible XML modification log; preserve tables, drawings and special content.
+
+# 0.2.3 - Doctoral margins and complex format evidence (2026-10-14)
+
+- Native ±0.2 mm doctoral DOCX margins, adjacent-twip boundary probes, table font counting and merged-cell deduplication.
+- Separate PhD PDF small-font, A4, color and image-area pairs, including ordinary tables/charts; unsupported PDF upper-font behavior remains pending.
+- Exact format:mode proof binding, copy-repair preservation receipt, source hashes and native screenshots.
+
 # BMSTU Thesis Checker Changelog
+
+## 0.2.0 - Original-output verification and copy repair (2026-10-14)
+
+- Retained 12 original-program controlled outputs; five DOCX/bachelor predicates agree with local checks. Line-spacing and first-line-indent differences remain unresolved.
+- Added verification context/policy guards and evidence hash checks.
+- Added MCP preview/copy-repair tools and CLI, unique output copies, JSON change logs, source integrity checks and local rechecks.
+- Repair preserves other ZIP parts, special text, tables, headers/footers and images; supported fixes were rechecked in the original program on a combined fixture.
+
+## 0.1.3 - Evidence and style inheritance repair (2026-10-14)
+
+- Rejected old DWT-table threshold guesses using a byte-exact upstream OpenJPEG comparison.
+- Recovered shipped font anomaly defaults of 8pt/18pt and a 16,000,000-pixel native image area limit. Original formatting comparison remains pending.
+- Kept legacy claims separate from current evidence; unverified findings now require manual review.
+- Resolved document defaults, paragraph/character basedOn styles and direct formatting; preserved table spacing units, explicit hidden=false and zero margins.
+- Added reproducible regression fixtures, source hashes, original startup/result captures and recovered pseudocode exports.
 
 ## 0.1.2 - High-quality review reports
 

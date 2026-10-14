@@ -1,0 +1,221 @@
+{
+  "work_type_policy": {
+    "native_mode": "НКР аспиранта",
+    "toc_heading": "ОГЛАВЛЕНИЕ",
+    "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied.",
+    "manual_review": [
+      "Doctoral DOCX margins left/right/top/bottom 25/10/20/20 mm, tolerance 0.2 mm; finite single-section native probes",
+      "Not a general dissertation standard or original-program certification"
+    ]
+  },
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\format-expansion\\pdf_red.pdf",
+  "file_type": "pdf",
+  "work_type": "phd",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {},
+  "summary": {
+    "total": 3,
+    "critical": 0,
+    "major": 0,
+    "warning": 1,
+    "info": 2
+  },
+  "review_summary": {
+    "status_zh": "发现本地策略提示，请先复核适用要求；这些提示尚不代表原版 TestVkr 的检查结论。",
+    "must_fix_count": 0,
+    "should_fix_count": 1,
+    "manual_review_count": 2,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 0,
+    "critical_or_major_count": 0
+  },
+  "groups": {
+    "by_severity": {
+      "info": [
+        "Struct.RequiredHeadingsMissing",
+        "Word.TextColorNotBlack"
+      ],
+      "warning": [
+        "Struct.MissingCitations"
+      ]
+    },
+    "by_module": {
+      "structure": [
+        "Struct.RequiredHeadingsMissing",
+        "Struct.MissingCitations"
+      ],
+      "word_format": [
+        "Word.TextColorNotBlack"
+      ]
+    },
+    "by_fix_priority": {
+      "manual_review": [
+        "Struct.RequiredHeadingsMissing",
+        "Struct.MissingCitations"
+      ],
+      "should_fix": [
+        "Word.TextColorNotBlack"
+      ]
+    },
+    "by_location": {
+      "未定位": [
+        "Struct.RequiredHeadingsMissing",
+        "Struct.MissingCitations",
+        "Word.TextColorNotBlack"
+      ]
+    },
+    "antiplagiarism_related": []
+  },
+  "fix_checklist": {
+    "must_fix": [],
+    "should_fix": [
+      {
+        "rule_id": "Word.TextColorNotBlack",
+        "label_zh": "建议改",
+        "title_zh": "文字颜色不是黑色",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "可预览后将普通文字设为黑色；副本修复会跳过超链接和特殊对象。",
+        "word_path_zh": "开始 → 字体 → 字体颜色 → 黑色。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "manual_review": [
+      {
+        "rule_id": "Struct.RequiredHeadingsMissing",
+        "label_zh": "需要人工确认",
+        "title_zh": "规则命中",
+        "severity": "info",
+        "module": "structure",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+        "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Struct.MissingCitations",
+        "label_zh": "需要人工确认",
+        "title_zh": "规则命中",
+        "severity": "warning",
+        "module": "structure",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+        "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Struct.MissingCitations",
+      "module": "structure",
+      "severity": "warning",
+      "message": "* Укажите ссылки на использованные источники:",
+      "russian_message": "* Укажите ссылки на использованные источники:",
+      "title_zh": "规则命中",
+      "explanation_zh": "文档中存在与 BMSTU/TestVkr 风格检查不一致的位置。",
+      "trigger_reason_zh": "检查器根据当前规则阈值、格式属性或结构特征判定该项异常。",
+      "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+      "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_scope": {},
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {},
+      "threshold": null,
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "module": "word_format",
+      "severity": "info",
+      "message": "В документе много символов, цвет которых отличается от черного:",
+      "russian_message": "В документе много символов, цвет которых отличается от черного:",
+      "title_zh": "文字颜色不是黑色",
+      "explanation_zh": "主文档中存在非黑色文字；需核对学校模板及有意保留的强调或链接。",
+      "trigger_reason_zh": "非黑色文字达到当前规则的字符数条件，已在 DOCX 本科模式完成正负样本对照。",
+      "fix_suggestion_zh": "可预览后将普通文字设为黑色；副本修复会跳过超链接和特殊对象。",
+      "word_path_zh": "开始 → 字体 → 字体颜色 → 黑色。",
+      "fix_priority": "should_fix",
+      "suggested_fix_priority": "should_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_scope": {
+        "format": "pdf",
+        "work_type": "phd",
+        "build": 230,
+        "limits": "Embedded Times New Roman, one unrotated PDF page, ordinary table text and at most one inline PNG/chart; tested finite properties only; PDF structures and font upper limit unvalidated."
+      },
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [
+        "evidence/format-expansion/comparison.json"
+      ],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "count_chars": 161
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    },
+    {
+      "rule_id": "Struct.RequiredHeadingsMissing",
+      "module": "structure",
+      "severity": "info",
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов:",
+      "russian_message": "Отсутствуют или неправильно оформлены заголовки структурных элементов:",
+      "title_zh": "规则命中",
+      "explanation_zh": "文档中存在与 BMSTU/TestVkr 风格检查不一致的位置。",
+      "trigger_reason_zh": "检查器根据当前规则阈值、格式属性或结构特征判定该项异常。",
+      "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+      "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_scope": {},
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {},
+      "threshold": {
+        "missing": [
+          "bibliography"
+        ]
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    }
+  ]
+}

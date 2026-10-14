@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-14T15:14:36.743988+00:00",
+  "input_file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\repair_combined_before.docx",
+  "input_sha256": "7a7443e3f5f918aa7dacdc2eb2a894844e7ba53d366e3850adfd87cbb0ebaf52",
+  "dry_run": false,
+  "actions": [
+    "page_size_a4",
+    "font_size_anomalies",
+    "text_color_black"
+  ],
+  "body_font_pt": 14.0,
+  "changes": [
+    {
+      "rule_id": "Word.PageSizeNotA4",
+      "section": 1,
+      "property": "page_size",
+      "before": {
+        "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}w": "12246",
+        "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}h": "15817"
+      },
+      "after": {
+        "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}w": "11906",
+        "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}h": "16838"
+      }
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "paragraph": 1,
+      "run": 1,
+      "text_excerpt": "МГТУ им. Н. Э. Баумана",
+      "property": "color",
+      "before_direct_xml": null,
+      "before_effective": "17365D",
+      "after": "000000"
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "paragraph": 2,
+      "run": 1,
+      "text_excerpt": "ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА БАКАЛАВРА",
+      "property": "color",
+      "before_direct_xml": null,
+      "before_effective": "17365D",
+      "after": "000000"
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "paragraph": 6,
+      "run": 1,
+      "text_excerpt": "РЕФЕРАТ",
+      "property": "color",
+      "before_direct_xml": null,
+      "before_effective": "365F91",
+      "after": "000000"
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "paragraph": 9,
+      "run": 1,
+      "text_excerpt": "СОДЕРЖАНИЕ",
+      "property": "color",
+      "before_direct_xml": null,
+      "before_effective": "365F91",
+      "after": "000000"
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "paragraph": 15,
+      "run": 1,
+      "text_excerpt": "ВВЕДЕНИЕ",
+      "property": "color",
+      "before_direct_xml": null,
+      "before_effective": "365F91",
+      "after": "000000"
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 16,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 17,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 18,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 19,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 20,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 21,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "paragraph": 23,
+      "run": 1,
+      "text_excerpt": "1 ОСНОВНАЯ ЧАСТЬ",
+      "property": "color",
+      "before_direct_xml": null,
+      "before_effective": "365F91",
+      "after": "000000"
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 24,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 25,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 26,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 27,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 28,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 29,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "paragraph": 31,
+      "run": 1,
+      "text_excerpt": "ЗАКЛЮЧЕНИЕ",
+      "property": "color",
+      "before_direct_xml": null,
+      "before_effective": "365F91",
+      "after": "000000"
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 32,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 33,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 34,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 35,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 36,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 37,
+      "run": 1,
+      "text_excerpt": "В работе рассматриваются методы обработки данных и анализа результатов исследования. В работе рассма",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "paragraph": 39,
+      "run": 1,
+      "text_excerpt": "СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ",
+      "property": "color",
+      "before_direct_xml": null,
+      "before_effective": "365F91",
+      "after": "000000"
+    }
+  ],
+  "skipped": [],
+  "scope": "Main document text and portrait sections only; no table/header/footer/image repair; original-program pass is not guaranteed.",
+  "output_file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\repair_outputs\\repair_combined_before.repaired-391001d061.docx",
+  "output_sha256": "bfa155a4c04291d19606dfc3ee7203b7e25876ba09277acab370fb197ad9c8e5",
+  "source_unchanged": true,
+  "before_rule_ids": [
+    "Word.FontSizeTooSmall",
+    "Struct.SmallStructuralElement",
+    "Struct.SmallStructuralElement",
+    "Struct.ThesisSizeTooSmall",
+    "Word.PageSizeNotA4",
+    "Pic.SmallLabels",
+    "Word.LineSpacingInvalid",
+    "Word.TextColorNotBlack"
+  ],
+  "after_rule_ids": [
+    "Struct.SmallStructuralElement",
+    "Struct.SmallStructuralElement",
+    "Struct.ThesisSizeTooSmall",
+    "Word.LineSpacingInvalid"
+  ],
+  "change_log": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\repair_outputs\\repair_combined_before.repaired-391001d061.changes.json"
+}

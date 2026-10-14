@@ -36,7 +36,7 @@ def load_confidence_map():
 def run_checks_on_file(file_path, confidence_map, skip_structure=False, skip_pictures=False, skip_word_format=False, skip_dictionary=False, work_type="bachelor"):
     ext = os.path.splitext(file_path)[1].lower()
     file_type = 'docx' if ext == '.docx' else 'pdf'
-    
+
     # 1. Parse
     try:
         if file_type == 'docx':
@@ -57,29 +57,29 @@ def run_checks_on_file(file_path, confidence_map, skip_structure=False, skip_pic
 
     # 2. Run checkers
     findings = []
-    
+
     # Entry Checker
     entry_checker = EntryDocumentChecker(doc_data, file_type, work_type)
     findings.extend(entry_checker.check())
-    
+
     is_empty_or_protected = any(f.code in ["Entry.DocumentEmpty", "Entry.DocumentProtected"] for f in findings)
-    
+
     if not is_empty_or_protected:
         # Structure Checker
         if not skip_structure:
             structure_checker = StructureChecker(doc_data, file_type, work_type)
             findings.extend(structure_checker.check())
-        
+
         # Pictures Checker
         if not skip_pictures:
             pictures_checker = PicturesChecker(doc_data, file_type, work_type)
             findings.extend(pictures_checker.check())
-        
+
         # Word Format Checker
         if not skip_word_format:
             word_checker = WordFormatChecker(doc_data, file_type, work_type)
             findings.extend(word_checker.check())
-        
+
         # Dictionary Checker
         if not skip_dictionary:
             dict_checker = DictionaryChecker(doc_data, file_type, work_type)
@@ -97,7 +97,7 @@ def run_checks_on_file(file_path, confidence_map, skip_structure=False, skip_pic
             "threshold": f.threshold,
             "location": f.location
         })
-        
+
     return formatted_findings
 
 def main():
@@ -116,16 +116,16 @@ def main():
     if not samples_dir:
         codex_dir = find_codex_dir()
         samples_dir = os.path.join(codex_dir, "analysis_TestVkr", "p1_dynamic_samples")
-        
+
     if not os.path.exists(samples_dir):
         print(f"Error: Samples directory not found at {samples_dir}")
         sys.exit(1)
 
     print(f"Scanning samples in: {samples_dir}")
     confidence_map = load_confidence_map()
-    
+
     results = {}
-    
+
     # Walk through the directories and find all docx/pdf files
     for root, dirs, files in os.walk(samples_dir):
         for file in files:
@@ -134,9 +134,9 @@ def main():
                 # Get relative path for cleaner output keys
                 rel_path = os.path.relpath(file_path, samples_dir)
                 print(f"Processing: {rel_path}...")
-                
+
                 findings = run_checks_on_file(
-                    file_path, 
+                    file_path,
                     confidence_map,
                     skip_structure=args.skip_structure,
                     skip_pictures=args.skip_pictures,
@@ -154,7 +154,7 @@ def main():
     out_path = args.out
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
-        
+
     print(f"\nDone! Processed {len(results)} files. Results written to {out_path}")
 
 if __name__ == "__main__":

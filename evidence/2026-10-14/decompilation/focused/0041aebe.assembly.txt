@@ -1,0 +1,10 @@
+0041aebe PUSH EBP
+0041aebf MOV EBP,ESP
+0041aec1 MOV EAX,dword ptr [EBP + 0xc]
+0041aec4 ADD EAX,EAX
+0041aec6 LEA EAX,[EAX + EAX*0x4]
+0041aec9 LEA EDX,[EAX*0x8 + 0x6cd2c8]
+0041aed0 MOV ECX,dword ptr [EBP + 0x8]
+0041aed3 FLD double ptr [EDX + ECX*0x8]
+0041aed6 POP EBP
+0041aed7 RET

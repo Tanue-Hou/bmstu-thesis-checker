@@ -1,0 +1,21 @@
+{
+  "generated_at_utc": "2026-10-14T12:58:04.195779+00:00",
+  "identified_functions": 10187,
+  "functions_with_recovered_pseudocode": 10187,
+  "focused_functions": 6,
+  "original_dynamic_samples_with_saved_output": 1,
+  "rules_verified_against_original": 0,
+  "status": "implementation_repaired_static_analysis_exported_dynamic_rule_verification_incomplete",
+  "limitations": [
+    "Recovered pseudocode is not original source",
+    "Compiler/library functions are included",
+    "Indirect calls and all document-role gates are not fully recovered",
+    "Complete original-program boundary matrix remains pending",
+    "Automatic thesis editing is not implemented in this revision"
+  ],
+  "next_steps": [
+    "Create structurally valid positive/negative document pairs",
+    "Trace formatting classification and document-role gates",
+    "Capture original outputs for thresholds and counting semantics before promoting rules"
+  ]
+}

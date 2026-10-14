@@ -1,0 +1,380 @@
+{
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-master\\baseline.docx",
+  "file_type": "docx",
+  "work_type": "master",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {
+    "resolved": [
+      "docDefaults",
+      "paragraph_basedOn",
+      "character_basedOn",
+      "direct"
+    ],
+    "unresolved": [
+      "conditional_table_styles",
+      "numbering_properties",
+      "theme_font_and_color"
+    ]
+  },
+  "summary": {
+    "total": 5,
+    "critical": 0,
+    "major": 0,
+    "warning": 3,
+    "info": 2
+  },
+  "review_summary": {
+    "status_zh": "发现本地策略提示，请先复核适用要求；这些提示尚不代表原版 TestVkr 的检查结论。",
+    "must_fix_count": 0,
+    "should_fix_count": 1,
+    "manual_review_count": 4,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 0,
+    "critical_or_major_count": 0
+  },
+  "groups": {
+    "by_severity": {
+      "warning": [
+        "Struct.SmallStructuralElement",
+        "Struct.SmallStructuralElement",
+        "Struct.ThesisSizeTooSmall"
+      ],
+      "info": [
+        "Word.TextColorNotBlack",
+        "Word.LineSpacingInvalid"
+      ]
+    },
+    "by_module": {
+      "structure": [
+        "Struct.SmallStructuralElement",
+        "Struct.SmallStructuralElement",
+        "Struct.ThesisSizeTooSmall"
+      ],
+      "word_format": [
+        "Word.TextColorNotBlack",
+        "Word.LineSpacingInvalid"
+      ]
+    },
+    "by_fix_priority": {
+      "manual_review": [
+        "Struct.SmallStructuralElement",
+        "Struct.SmallStructuralElement",
+        "Struct.ThesisSizeTooSmall",
+        "Word.LineSpacingInvalid"
+      ],
+      "should_fix": [
+        "Word.TextColorNotBlack"
+      ]
+    },
+    "by_location": {
+      "其他位置": [
+        "Struct.SmallStructuralElement",
+        "Struct.SmallStructuralElement"
+      ],
+      "未定位": [
+        "Struct.ThesisSizeTooSmall",
+        "Word.TextColorNotBlack"
+      ],
+      "段落": [
+        "Word.LineSpacingInvalid"
+      ]
+    },
+    "antiplagiarism_related": []
+  },
+  "fix_checklist": {
+    "must_fix": [],
+    "should_fix": [
+      {
+        "rule_id": "Word.TextColorNotBlack",
+        "label_zh": "建议改",
+        "title_zh": "文字颜色不是黑色",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "可预览后将普通文字设为黑色；副本修复会跳过超链接和特殊对象。",
+        "word_path_zh": "开始 → 字体 → 字体颜色 → 黑色。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "manual_review": [
+      {
+        "rule_id": "Struct.SmallStructuralElement",
+        "label_zh": "需要人工确认",
+        "title_zh": "章节内容过少",
+        "severity": "warning",
+        "module": "structure",
+        "location_summary_zh": "{\"paragraph_idx\": 8}",
+        "fix_suggestion_zh": "补充该章节的说明、论证、公式解释、图表说明或删除不必要的小节。",
+        "word_path_zh": "导航窗格 -> 定位对应标题；引用 -> 更新目录。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Struct.SmallStructuralElement",
+        "label_zh": "需要人工确认",
+        "title_zh": "章节内容过少",
+        "severity": "warning",
+        "module": "structure",
+        "location_summary_zh": "{\"paragraph_idx\": 38}",
+        "fix_suggestion_zh": "补充该章节的说明、论证、公式解释、图表说明或删除不必要的小节。",
+        "word_path_zh": "导航窗格 -> 定位对应标题；引用 -> 更新目录。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Struct.ThesisSizeTooSmall",
+        "label_zh": "需要人工确认",
+        "title_zh": "论文体量过小",
+        "severity": "warning",
+        "module": "structure",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "确认解析是否完整；如内容确实不足，应补充章节、说明、实验或参考分析。",
+        "word_path_zh": "审阅 -> 字数统计；同时检查目录和正文是否完整。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Word.LineSpacingInvalid",
+        "label_zh": "需要人工确认",
+        "title_zh": "行距不符合要求",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "段落 2",
+        "fix_suggestion_zh": "正文统一设为 1.5 倍行距；表格内文字统一设为单倍行距。",
+        "word_path_zh": "开始 -> 段落 -> 行和段落间距；或右键段落 -> 段落 -> 行距。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Struct.SmallStructuralElement",
+      "module": "structure",
+      "severity": "warning",
+      "message": "* Обнаружены небольшие структурные элементы: СОДЕРЖАНИЕ",
+      "russian_message": "* Обнаружены небольшие структурные элементы: СОДЕРЖАНИЕ",
+      "title_zh": "章节内容过少",
+      "explanation_zh": "某些结构章节内容过短，可能只是占位标题。",
+      "trigger_reason_zh": "章节文本长度低于结构检查的最小阈值。",
+      "fix_suggestion_zh": "补充该章节的说明、论证、公式解释、图表说明或删除不必要的小节。",
+      "word_path_zh": "导航窗格 -> 定位对应标题；引用 -> 更新目录。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "should_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_scope": {},
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "min_chars": 300,
+        "actual": 201
+      },
+      "location": {
+        "paragraph_idx": 8
+      },
+      "location_summary_zh": "{\"paragraph_idx\": 8}",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": "<",
+      "sample_trigger": [
+        "14_structure/small_structural_element.docx"
+      ]
+    },
+    {
+      "rule_id": "Struct.SmallStructuralElement",
+      "module": "structure",
+      "severity": "warning",
+      "message": "* Обнаружены небольшие структурные элементы: СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ",
+      "russian_message": "* Обнаружены небольшие структурные элементы: СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ",
+      "title_zh": "章节内容过少",
+      "explanation_zh": "某些结构章节内容过短，可能只是占位标题。",
+      "trigger_reason_zh": "章节文本长度低于结构检查的最小阈值。",
+      "fix_suggestion_zh": "补充该章节的说明、论证、公式解释、图表说明或删除不必要的小节。",
+      "word_path_zh": "导航窗格 -> 定位对应标题；引用 -> 更新目录。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "should_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_scope": {},
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "min_chars": 300,
+        "actual": 61
+      },
+      "location": {
+        "paragraph_idx": 38
+      },
+      "location_summary_zh": "{\"paragraph_idx\": 38}",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": "<",
+      "sample_trigger": [
+        "14_structure/small_structural_element.docx"
+      ]
+    },
+    {
+      "rule_id": "Struct.ThesisSizeTooSmall",
+      "module": "structure",
+      "severity": "warning",
+      "message": "* Маленький объем ВКР:",
+      "russian_message": "* Маленький объем ВКР:",
+      "title_zh": "论文体量过小",
+      "explanation_zh": "正文总体字符数/体量低于预期，可能不符合 VKR/论文要求。",
+      "trigger_reason_zh": "解析出的文本量低于当前作品类型的体量阈值。",
+      "fix_suggestion_zh": "确认解析是否完整；如内容确实不足，应补充章节、说明、实验或参考分析。",
+      "word_path_zh": "审阅 -> 字数统计；同时检查目录和正文是否完整。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_scope": {},
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "min_chars": 60000,
+        "actual": 13799
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": "<",
+      "sample_trigger": [
+        "14_structure/thesis_size_too_small.docx"
+      ]
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "module": "word_format",
+      "severity": "info",
+      "message": "В документе много символов, цвет которых отличается от черного:",
+      "russian_message": "В документе много символов, цвет которых отличается от черного:",
+      "title_zh": "文字颜色不是黑色",
+      "explanation_zh": "主文档中存在非黑色文字；需核对学校模板及有意保留的强调或链接。",
+      "trigger_reason_zh": "非黑色文字达到当前规则的字符数条件，已在 DOCX 本科模式完成正负样本对照。",
+      "fix_suggestion_zh": "可预览后将普通文字设为黑色；副本修复会跳过超链接和特殊对象。",
+      "word_path_zh": "开始 → 字体 → 字体颜色 → 黑色。",
+      "fix_priority": "should_fix",
+      "suggested_fix_priority": "should_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "master",
+        "build": 230,
+        "limits": "Formatting fixture predicates only; bachelor title text retained to isolate mode. No master structural or full-program equivalence."
+      },
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [
+        "evidence/dynamic-master/comparison.json"
+      ],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "count_chars": 148
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    },
+    {
+      "rule_id": "Word.LineSpacingInvalid",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Междустрочный интервал в абзацах должен быть равен 1.5 строки (в таблицах одинарный):",
+      "russian_message": "Междустрочный интервал в абзацах должен быть равен 1.5 строки (в таблицах одинарный):",
+      "title_zh": "行距不符合要求",
+      "explanation_zh": "正文段落应使用 1.5 倍行距，表格内文字通常应使用单倍行距。",
+      "trigger_reason_zh": "检测到段落或表格单元格的行距与目标值不一致。",
+      "fix_suggestion_zh": "正文统一设为 1.5 倍行距；表格内文字统一设为单倍行距。",
+      "word_path_zh": "开始 -> 段落 -> 行和段落间距；或右键段落 -> 段落 -> 行距。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_scope": {},
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 1.5,
+        "unit": "multiplier",
+        "count_paragraphs": 1
+      },
+      "location": {
+        "paragraphs": [
+          2
+        ]
+      },
+      "location_summary_zh": "段落 2",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "01_line_spacing_body/body_line_spacing_1.0.docx",
+        "01_line_spacing_body/body_line_spacing_1.49.docx",
+        "01_line_spacing_body/body_line_spacing_1.51.docx",
+        "01_line_spacing_body/body_line_spacing_2.0.docx"
+      ]
+    }
+  ]
+}

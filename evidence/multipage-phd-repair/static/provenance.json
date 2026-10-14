@@ -1,0 +1,31 @@
+{
+  "original_exe_sha256": "0bb43cebc4c7ee196913d2ea2240f7bc53aaac1e6b8f6394e6201024a108b8cb",
+  "pseudocode_sha256": "0691ffdddaab86c60f111312735d960ee70ad9c5e5922d1b31eb23f761dd6506",
+  "functions": [
+    {
+      "entry": "00477f50",
+      "sha256": "b16cba3d6a1613146f36f0b53f2e326a2192bb73c784e309b24db2da73b2b2ef"
+    },
+    {
+      "entry": "0048f730",
+      "sha256": "e5c3c05ea122bf2edbc8b792f3d7635486d33c03101785bce4f948d39cb573e0"
+    },
+    {
+      "entry": "0049cfd8",
+      "sha256": "30d82fd92cffbdfda0c6efc9497309b8f3411fe2b1a77510e64b4c91e2378369"
+    },
+    {
+      "entry": "0049c3ec",
+      "sha256": "ffccb9bda6ae0b25673cd12cc1a749107407d8a4bd6b47ba58afcb55c87c6b33"
+    },
+    {
+      "entry": "0048fc4c",
+      "sha256": "9a76f53f3bca3ab5d909c05898f077c858ab3b1f9b7d382a91a1a13fcd6f7c85"
+    }
+  ],
+  "pdf_span_parser_entry": "00477f50",
+  "small_font_setting_references": 4,
+  "upper_font_setting_references": 0,
+  "interpretation": "PDF span path checks minimum size and scale but contains no reference to DOCX maximum-size setting; finite runtime probes determine observed absence, not an unlimited-font guarantee.",
+  "limits": "Recovered pseudocode, not original source; no proof of all reachable PDF parser paths."
+}

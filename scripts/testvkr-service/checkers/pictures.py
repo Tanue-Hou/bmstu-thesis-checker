@@ -38,14 +38,17 @@ class PicturesChecker(BaseChecker):
         small_labels_count = 0
         floating_image_locations = []
         large_pixel_image_locations = []
+        large_pixel_pages=set()
         for img_idx, img in enumerate(images):
             if img.get("placement", "inline") == "floating":
                 floating_images_count += 1
                 floating_image_locations.append(img.get("index", img_idx) + 1)
             w = img.get("width_px")
-            if w and w > settings.IMAGE_PIXEL_THRESHOLD:
+            h = img.get("height_px")
+            if w is not None and h is not None and w * h > settings.IMAGE_PIXEL_AREA_MAX:
                 large_pixel_images_count += 1
                 large_pixel_image_locations.append(img.get("index", img_idx) + 1)
+                if "page_index" in img:large_pixel_pages.add(img["page_index"]+1)
 
         if self.file_type == "docx":
             for p in self.doc_data.get("paragraphs", []):
@@ -70,9 +73,9 @@ class PicturesChecker(BaseChecker):
                 code="Pic.PixelSizeTooLarge",
                 module=ModuleType.PICTURES,
                 severity=Severity.CRITICAL,
-                message=self.MSG_PIXEL.format(value=int(settings.IMAGE_PIXEL_THRESHOLD)),
-                location={"images": large_pixel_image_locations},
-                threshold={"value": settings.IMAGE_PIXEL_THRESHOLD, "unit": "px", "count_images": large_pixel_images_count},
+                message=self.MSG_PIXEL.format(value=settings.IMAGE_PIXEL_AREA_MAX),
+                location={"images": large_pixel_image_locations, **({"pages":sorted(large_pixel_pages)} if large_pixel_pages else {})},
+                threshold={"value": settings.IMAGE_PIXEL_AREA_MAX, "unit": "pixels_total", "measurement": "width_px * height_px", "count_images": large_pixel_images_count},
                 skip_switch="SkipTestPic",
             ))
 

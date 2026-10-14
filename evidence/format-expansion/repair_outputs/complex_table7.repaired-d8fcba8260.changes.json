@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-14T18:03:17.838649+00:00",
+  "input_file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\format-expansion\\complex_table7.docx",
+  "input_sha256": "400b9eaee892031be4ec0c8595066a215bf426755727748b0ef330da70e7cb9e",
+  "dry_run": false,
+  "work_type": "master",
+  "actions": [
+    "font_size_anomalies"
+  ],
+  "body_font_pt": 14.0,
+  "changes": [],
+  "skipped": [
+    {
+      "paragraph": 87,
+      "run": 1,
+      "reason": "Hyperlink or drawing"
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "reason": "Table text is preserved; manual correction required."
+    }
+  ],
+  "manual_only_rule_ids": [
+    "Graduate.RequiredHeadingsMissing",
+    "Graduate.ThesisSizeTooSmall",
+    "Graduate.TocEmpty",
+    "Graduate.WorkNameInvalid",
+    "Word.FontSizeTooSmall",
+    "Word.LeftMarginInvalid"
+  ],
+  "scope": "Main document text and portrait sections only; no table/header/footer/image repair; original-program pass is not guaranteed.",
+  "output_file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\format-expansion\\repair_outputs\\complex_table7.repaired-d8fcba8260.docx",
+  "output_sha256": "400b9eaee892031be4ec0c8595066a215bf426755727748b0ef330da70e7cb9e",
+  "source_unchanged": true,
+  "before_rule_ids": [
+    "Graduate.WorkNameInvalid",
+    "Word.FontSizeTooSmall",
+    "Graduate.TocEmpty",
+    "Graduate.ThesisSizeTooSmall",
+    "Graduate.RequiredHeadingsMissing",
+    "Word.LeftMarginInvalid"
+  ],
+  "after_rule_ids": [
+    "Graduate.WorkNameInvalid",
+    "Word.FontSizeTooSmall",
+    "Graduate.TocEmpty",
+    "Graduate.ThesisSizeTooSmall",
+    "Graduate.RequiredHeadingsMissing",
+    "Word.LeftMarginInvalid"
+  ]
+}

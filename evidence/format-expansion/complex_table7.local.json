@@ -1,0 +1,144 @@
+{
+  "work_type_policy": {
+    "native_mode": "НКР аспиранта",
+    "toc_heading": "ОГЛАВЛЕНИЕ",
+    "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied.",
+    "manual_review": [
+      "Doctoral DOCX margins left/right/top/bottom 25/10/20/20 mm, tolerance 0.2 mm; finite single-section native probes",
+      "Not a general dissertation standard or original-program certification"
+    ]
+  },
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\format-expansion\\complex_table7.docx",
+  "file_type": "docx",
+  "work_type": "phd",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {
+    "resolved": [
+      "docDefaults",
+      "paragraph_basedOn",
+      "character_basedOn",
+      "direct"
+    ],
+    "unresolved": [
+      "conditional_table_styles",
+      "numbering_properties",
+      "theme_font_and_color"
+    ]
+  },
+  "summary": {
+    "total": 1,
+    "critical": 0,
+    "major": 1,
+    "warning": 0,
+    "info": 0
+  },
+  "review_summary": {
+    "status_zh": "不建议直接提交，需要先处理必改项和较高严重度问题。",
+    "must_fix_count": 1,
+    "should_fix_count": 0,
+    "manual_review_count": 0,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 1,
+    "critical_or_major_count": 1
+  },
+  "groups": {
+    "by_severity": {
+      "major": [
+        "Word.FontSizeTooSmall"
+      ]
+    },
+    "by_module": {
+      "word_format": [
+        "Word.FontSizeTooSmall"
+      ]
+    },
+    "by_fix_priority": {
+      "must_fix": [
+        "Word.FontSizeTooSmall"
+      ]
+    },
+    "by_location": {
+      "未定位": [
+        "Word.FontSizeTooSmall"
+      ]
+    },
+    "antiplagiarism_related": [
+      "Word.FontSizeTooSmall"
+    ]
+  },
+  "fix_checklist": {
+    "must_fix": [
+      {
+        "rule_id": "Word.FontSizeTooSmall",
+        "label_zh": "必改",
+        "title_zh": "字号过小",
+        "severity": "major",
+        "module": "word_format",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "先核对学校模板及文字用途，再处理异常小字；不要把全文统一改成检查下限。",
+        "word_path_zh": "开始 -> 字体 -> 字号。",
+        "affects_antiplagiarism": true
+      }
+    ],
+    "should_fix": [],
+    "manual_review": [],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "module": "word_format",
+      "severity": "major",
+      "message": "В документе много символов, размер которых меньше 8.0 пт",
+      "russian_message": "В документе много символов, размер которых меньше 8.0 пт",
+      "title_zh": "字号过小",
+      "explanation_zh": "字符字号低于当前检查下限。程序的异常字号下限不等于学校要求的正文字号。",
+      "trigger_reason_zh": "字符字号低于规则下限并超过数量阈值。",
+      "fix_suggestion_zh": "先核对学校模板及文字用途，再处理异常小字；不要把全文统一改成检查下限。",
+      "word_path_zh": "开始 -> 字体 -> 字号。",
+      "fix_priority": "must_fix",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": true,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "phd",
+        "build": 230,
+        "limits": "Ordinary table cells and one inline PNG/chart; tested size predicates, not full complex-document structure or drawing support."
+      },
+      "threshold_origin": "static_shipped_default_with_font_predicate_references",
+      "evidence_refs": [
+        "evidence/format-expansion/comparison.json"
+      ],
+      "static_evidence_refs": [
+        "evidence/2026-10-14/static-findings.json"
+      ],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 8.0,
+        "unit": "pt",
+        "count_chars": 306,
+        "table_count_chars": 306
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestWord",
+      "source_va": "0x6ee118",
+      "comparator": "<",
+      "sample_trigger": [
+        "03_font_size/font_size_11.docx",
+        "03_font_size/font_size_12.01.docx"
+      ]
+    }
+  ]
+}

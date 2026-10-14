@@ -1,0 +1,550 @@
+{
+  "target_sha256": "0bb43cebc4c7ee196913d2ea2240f7bc53aaac1e6b8f6394e6201024a108b8cb",
+  "scope": "Heuristic UTF-16 literal decoding at explicit data addresses; no inferred execution.",
+  "literals": {
+    "DAT_006e438c": {
+      "va": "0x6e438c",
+      "file_offset": "0x2e2d8c",
+      "text": "выпускной;квалификационной;работе",
+      "functions": [
+        "00496fc4"
+      ]
+    },
+    "DAT_006e43d0": {
+      "va": "0x6e43d0",
+      "file_offset": "0x2e2dd0",
+      "text": "выпускная;квалификационная;работа",
+      "functions": [
+        "00496fc4"
+      ]
+    },
+    "DAT_006e434e": {
+      "va": "0x6e434e",
+      "file_offset": "0x2e2d4e",
+      "text": "научно;квалификационная;работа",
+      "functions": [
+        "00496fc4"
+      ]
+    },
+    "DAT_006e4240": {
+      "va": "0x6e4240",
+      "file_offset": "0x2e2c40",
+      "text": "курсовому;проекту",
+      "functions": [
+        "00496fc4"
+      ]
+    },
+    "DAT_006e426c": {
+      "va": "0x6e426c",
+      "file_offset": "0x2e2c6c",
+      "text": "курсовой;работе",
+      "functions": [
+        "00496fc4"
+      ]
+    },
+    "DAT_006e4294": {
+      "va": "0x6e4294",
+      "file_offset": "0x2e2c94",
+      "text": "отчет;учебной;практике",
+      "functions": [
+        "00496fc4"
+      ]
+    },
+    "DAT_006e42c2": {
+      "va": "0x6e42c2",
+      "file_offset": "0x2e2cc2",
+      "text": "отчет;производственной;практике",
+      "functions": [
+        "00496fc4"
+      ]
+    },
+    "DAT_006e430a": {
+      "va": "0x6e430a",
+      "file_offset": "0x2e2d0a",
+      "text": "научно;исследовательской;работе",
+      "functions": [
+        "00496fc4"
+      ]
+    },
+    "DAT_006e44b2": {
+      "va": "0x6e44b2",
+      "file_offset": "0x2e2eb2",
+      "text": "<font color=\"maroon\"/>*** Ошибка в наименовании работы.<font color=\"black\"/>",
+      "functions": [
+        "00496fc4"
+      ]
+    },
+    "DAT_006e441e": {
+      "va": "0x6e441e",
+      "file_offset": "0x2e2e1e",
+      "text": "<font color=\"green\"/>* Ошибка в наименовании работы.<font color=\"black\"/>",
+      "functions": [
+        "00496fc4"
+      ]
+    },
+    "DAT_006e454c": {
+      "va": "0x6e454c",
+      "file_offset": "0x2e2f4c",
+      "text": "факультет",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e4560": {
+      "va": "0x6e4560",
+      "file_offset": "0x2e2f60",
+      "text": "кафедра",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e4574": {
+      "va": "0x6e4574",
+      "file_offset": "0x2e2f74",
+      "text": "министерство",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e458e": {
+      "va": "0x6e458e",
+      "file_offset": "0x2e2f8e",
+      "text": "науки",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e459a": {
+      "va": "0x6e459a",
+      "file_offset": "0x2e2f9a",
+      "text": "российской",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e45b0": {
+      "va": "0x6e45b0",
+      "file_offset": "0x2e2fb0",
+      "text": "федерации",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e45c4": {
+      "va": "0x6e45c4",
+      "file_offset": "0x2e2fc4",
+      "text": "тему",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e45ce": {
+      "va": "0x6e45ce",
+      "file_offset": "0x2e2fce",
+      "text": "нормоконтролер",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e45ec": {
+      "va": "0x6e45ec",
+      "file_offset": "0x2e2fec",
+      "text": "факультет",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e4600": {
+      "va": "0x6e4600",
+      "file_offset": "0x2e3000",
+      "text": "кафедра",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e462e": {
+      "va": "0x6e462e",
+      "file_offset": "0x2e302e",
+      "text": "руководитель",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e465e": {
+      "va": "0x6e465e",
+      "file_offset": "0x2e305e",
+      "text": "студент",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e464c": {
+      "va": "0x6e464c",
+      "file_offset": "0x2e304c",
+      "text": "аспирант",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e4672": {
+      "va": "0x6e4672",
+      "file_offset": "0x2e3072",
+      "text": "кафедра",
+      "functions": [
+        "0049771c"
+      ]
+    },
+    "DAT_006e4760": {
+      "va": "0x6e4760",
+      "file_offset": "0x2e3160",
+      "text": "глава",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e4770": {
+      "va": "0x6e4770",
+      "file_offset": "0x2e3170",
+      "text": "РЕФЕРАТ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e4780": {
+      "va": "0x6e4780",
+      "file_offset": "0x2e3180",
+      "text": "РЕФЕРАТ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e4790": {
+      "va": "0x6e4790",
+      "file_offset": "0x2e3190",
+      "text": "РЕФЕРАТ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e47d6": {
+      "va": "0x6e47d6",
+      "file_offset": "0x2e31d6",
+      "text": "АННОТАЦИЯ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e47ea": {
+      "va": "0x6e47ea",
+      "file_offset": "0x2e31ea",
+      "text": "АННОТАЦИЯ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e47fe": {
+      "va": "0x6e47fe",
+      "file_offset": "0x2e31fe",
+      "text": "АННОТАЦИЯ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e4848": {
+      "va": "0x6e4848",
+      "file_offset": "0x2e3248",
+      "text": "СОДЕРЖАНИЕ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e4862": {
+      "va": "0x6e4862",
+      "file_offset": "0x2e3262",
+      "text": "ОГЛАВЛЕНИЕ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e4878": {
+      "va": "0x6e4878",
+      "file_offset": "0x2e3278",
+      "text": "ВВЕДЕНИЕ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e488a": {
+      "va": "0x6e488a",
+      "file_offset": "0x2e328a",
+      "text": "ВВЕДЕНИЕ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e489c": {
+      "va": "0x6e489c",
+      "file_offset": "0x2e329c",
+      "text": "ЗАКЛЮЧЕНИЕ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e48b2": {
+      "va": "0x6e48b2",
+      "file_offset": "0x2e32b2",
+      "text": "ЗАКЛЮЧЕНИЕ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e48c8": {
+      "va": "0x6e48c8",
+      "file_offset": "0x2e32c8",
+      "text": "глава",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e48d8": {
+      "va": "0x6e48d8",
+      "file_offset": "0x2e32d8",
+      "text": "выводы",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e48e6": {
+      "va": "0x6e48e6",
+      "file_offset": "0x2e32e6",
+      "text": "выво",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e48f0": {
+      "va": "0x6e48f0",
+      "file_offset": "0x2e32f0",
+      "text": "введ",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e48fa": {
+      "va": "0x6e48fa",
+      "file_offset": "0x2e32fa",
+      "text": "закл",
+      "functions": [
+        "00499268"
+      ]
+    },
+    "DAT_006e495c": {
+      "va": "0x6e495c",
+      "file_offset": "0x2e335c",
+      "text": "содержание",
+      "functions": [
+        "0049c3ec"
+      ]
+    },
+    "DAT_006e4972": {
+      "va": "0x6e4972",
+      "file_offset": "0x2e3372",
+      "text": "реферат",
+      "functions": [
+        "0049c3ec"
+      ]
+    },
+    "DAT_006e4982": {
+      "va": "0x6e4982",
+      "file_offset": "0x2e3382",
+      "text": "аннотация",
+      "functions": [
+        "0049c3ec"
+      ]
+    },
+    "DAT_006e4996": {
+      "va": "0x6e4996",
+      "file_offset": "0x2e3396",
+      "text": "введение",
+      "functions": [
+        "0049c3ec"
+      ]
+    },
+    "DAT_006e49be": {
+      "va": "0x6e49be",
+      "file_offset": "0x2e33be",
+      "text": "студент",
+      "functions": [
+        "0049c3ec"
+      ]
+    },
+    "DAT_006e49ac": {
+      "va": "0x6e49ac",
+      "file_offset": "0x2e33ac",
+      "text": "аспирант",
+      "functions": [
+        "0049c3ec"
+      ]
+    },
+    "DAT_006e49ce": {
+      "va": "0x6e49ce",
+      "file_offset": "0x2e33ce",
+      "text": "руководитель",
+      "functions": [
+        "0049c3ec"
+      ]
+    },
+    "DAT_006e49e8": {
+      "va": "0x6e49e8",
+      "file_offset": "0x2e33e8",
+      "text": "консультант",
+      "functions": [
+        "0049c3ec"
+      ]
+    },
+    "DAT_006e4a00": {
+      "va": "0x6e4a00",
+      "file_offset": "0x2e3400",
+      "text": "нормоконтролер",
+      "functions": [
+        "0049c3ec"
+      ]
+    },
+    "DAT_006e4a1e": {
+      "va": "0x6e4a1e",
+      "file_offset": "0x2e341e",
+      "text": "преподаватель",
+      "functions": [
+        "0049c3ec"
+      ]
+    },
+    "DAT_006e4bb4": {
+      "va": "0x6e4bb4",
+      "file_offset": "0x2e35b4",
+      "text": "реферат",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4bc4": {
+      "va": "0x6e4bc4",
+      "file_offset": "0x2e35c4",
+      "text": "аннотация",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4bfc": {
+      "va": "0x6e4bfc",
+      "file_offset": "0x2e35fc",
+      "text": "РЕФЕРАТ (АННОТАЦИЯ)",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4c3e": {
+      "va": "0x6e4c3e",
+      "file_offset": "0x2e363e",
+      "text": "содержание",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4c28": {
+      "va": "0x6e4c28",
+      "file_offset": "0x2e3628",
+      "text": "оглавление",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4c6e": {
+      "va": "0x6e4c6e",
+      "file_offset": "0x2e366e",
+      "text": "СОДЕРЖАНИЕ",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4c58": {
+      "va": "0x6e4c58",
+      "file_offset": "0x2e3658",
+      "text": "ОГЛАВЛЕНИЕ",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4c84": {
+      "va": "0x6e4c84",
+      "file_offset": "0x2e3684",
+      "text": "нормативные ссылки",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4caa": {
+      "va": "0x6e4caa",
+      "file_offset": "0x2e36aa",
+      "text": "определения",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4cc2": {
+      "va": "0x6e4cc2",
+      "file_offset": "0x2e36c2",
+      "text": "обозначения и сокращения",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4cf4": {
+      "va": "0x6e4cf4",
+      "file_offset": "0x2e36f4",
+      "text": "введение",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4d06": {
+      "va": "0x6e4d06",
+      "file_offset": "0x2e3706",
+      "text": "ВВЕДЕНИЕ",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4d18": {
+      "va": "0x6e4d18",
+      "file_offset": "0x2e3718",
+      "text": "заключение",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4d2e": {
+      "va": "0x6e4d2e",
+      "file_offset": "0x2e372e",
+      "text": "ЗАКЛЮЧЕНИЕ",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4d50": {
+      "va": "0x6e4d50",
+      "file_offset": "0x2e3750",
+      "text": "Не хватает ",
+      "functions": [
+        "0049e6d0"
+      ]
+    },
+    "DAT_006e4d68": {
+      "va": "0x6e4d68",
+      "file_offset": "0x2e3768",
+      "text": " стр. (сначала исправьте остальные замечания, если они есть)",
+      "functions": [
+        "0049e6d0"
+      ]
+    }
+  }
+}

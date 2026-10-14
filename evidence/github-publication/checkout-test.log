@@ -1,0 +1,57 @@
+test_complex_pdf_and_no_invented_phd_floor (test_format_expansion.FormatExpansionTests.test_complex_pdf_and_no_invented_phd_floor) ... ok
+test_copy_repair_records_table_preservation (test_format_expansion.FormatExpansionTests.test_copy_repair_records_table_preservation) ... ok
+test_mcp_pdf_runtime_context (test_format_expansion.FormatExpansionTests.test_mcp_pdf_runtime_context) ... ok
+test_merged_cell_not_counted_twice_and_body_table_aggregate (test_format_expansion.FormatExpansionTests.test_merged_cell_not_counted_twice_and_body_table_aggregate) ... ok
+test_native_left_margin_adjacent_twips (test_format_expansion.FormatExpansionTests.test_native_left_margin_adjacent_twips) ... ok
+test_other_margin_axes (test_format_expansion.FormatExpansionTests.test_other_margin_axes) ... ok
+test_pdf_proof_is_not_a_format_work_type_cross_product (test_format_expansion.FormatExpansionTests.test_pdf_proof_is_not_a_format_work_type_cross_product) ... ok
+test_pdf_upper_font_not_promoted (test_format_expansion.FormatExpansionTests.test_pdf_upper_font_not_promoted) ... ok
+test_table_font_counter_and_image_counter (test_format_expansion.FormatExpansionTests.test_table_font_counter_and_image_counter) ... ok
+test_complex_document_does_not_inherit_text_only_verification (test_graduate_structure.GraduateTests.test_complex_document_does_not_inherit_text_only_verification) ... ok
+test_evidence_bound_to_each_context (test_graduate_structure.GraduateTests.test_evidence_bound_to_each_context) ... ok
+test_master_native_boundary_fixtures (test_graduate_structure.GraduateTests.test_master_native_boundary_fixtures) ... ok
+test_mcp_check_routes_master_and_phd (test_graduate_structure.GraduateTests.test_mcp_check_routes_master_and_phd) ... ok
+test_phd_is_a_distinct_mode (test_graduate_structure.GraduateTests.test_phd_is_a_distinct_mode) ... ok
+test_toc_boundaries_and_synthetic_cover (test_graduate_structure.GraduateTests.test_toc_boundaries_and_synthetic_cover) ... ok
+test_untested_heading_and_abstract_predicates_remain_pending (test_graduate_structure.GraduateTests.test_untested_heading_and_abstract_predicates_remain_pending) ... ok
+test_damaged_check_evidence_is_downgraded (test_multipage_phd.MultipagePhdTests.test_damaged_check_evidence_is_downgraded) ... ok
+test_doctoral_copy_guards_and_protected_content (test_multipage_phd.MultipagePhdTests.test_doctoral_copy_guards_and_protected_content) ... ok
+test_doctoral_repair_evidence_is_required (test_multipage_phd.MultipagePhdTests.test_doctoral_repair_evidence_is_required) ... ok
+test_mcp_doctoral_preview_and_copy (test_multipage_phd.MultipagePhdTests.test_mcp_doctoral_preview_and_copy) ... ok
+test_nonfirst_page_detection_and_locations (test_multipage_phd.MultipagePhdTests.test_nonfirst_page_detection_and_locations) ... ok
+test_pdf_structural_heading_pairs_and_nbsp (test_multipage_phd.MultipagePhdTests.test_pdf_structural_heading_pairs_and_nbsp) ... ok
+test_pdf_upper_probes_have_real_large_text_and_no_native_warning (test_multipage_phd.MultipagePhdTests.test_pdf_upper_probes_have_real_large_text_and_no_native_warning) ... ok
+test_unsupported_pdf_profile_downgrades_evidence (test_multipage_phd.MultipagePhdTests.test_unsupported_pdf_profile_downgrades_evidence) ... ok
+test_character_based_on (test_regression.RegressionTests.test_character_based_on) ... ok
+test_direct_override_triggers (test_regression.RegressionTests.test_direct_override_triggers) ... ok
+test_doc_defaults (test_regression.RegressionTests.test_doc_defaults) ... ok
+test_exact_spacing_keeps_units (test_regression.RegressionTests.test_exact_spacing_keeps_units) ... ok
+test_explicit_hidden_false (test_regression.RegressionTests.test_explicit_hidden_false) ... ok
+test_font_size_boundaries (test_regression.RegressionTests.test_font_size_boundaries) ... ok
+test_font_upper_boundary (test_regression.RegressionTests.test_font_upper_boundary) ... ok
+test_image_area_not_width (test_regression.RegressionTests.test_image_area_not_width) ... ok
+test_image_guess_disabled (test_regression.RegressionTests.test_image_guess_disabled) ... ok
+test_inherited_matches_direct (test_regression.RegressionTests.test_inherited_matches_direct) ... ok
+test_mcp_rule_metadata_matches_runtime (test_regression.RegressionTests.test_mcp_rule_metadata_matches_runtime) ... ok
+test_mcp_stdio_protocol (test_regression.RegressionTests.test_mcp_stdio_protocol) ... ok
+test_partial_spacing_attributes_inherit (test_regression.RegressionTests.test_partial_spacing_attributes_inherit) ... ok
+test_registry_does_not_claim_original_verification (test_regression.RegressionTests.test_registry_does_not_claim_original_verification) ... ok
+test_report_preserves_runtime_message_and_evidence_status (test_regression.RegressionTests.test_report_preserves_runtime_message_and_evidence_status) ... ok
+test_table_inherits (test_regression.RegressionTests.test_table_inherits) ... ok
+test_verification_does_not_transfer_to_pdf_or_other_work_type (test_regression.RegressionTests.test_verification_does_not_transfer_to_pdf_or_other_work_type) ... ok
+test_zero_margin_is_not_missing (test_regression.RegressionTests.test_zero_margin_is_not_missing) ... ok
+test_copy_preserves_source_text_and_other_zip_parts (test_repair.RepairTests.test_copy_preserves_source_text_and_other_zip_parts) ... ok
+test_dry_run_writes_nothing (test_repair.RepairTests.test_dry_run_writes_nothing) ... ok
+test_each_run_creates_new_copy (test_repair.RepairTests.test_each_run_creates_new_copy) ... ok
+test_large_body_font_is_repaired_to_normal_style (test_repair.RepairTests.test_large_body_font_is_repaired_to_normal_style) ... ok
+test_master_copy_and_context_evidence (test_repair.RepairTests.test_master_copy_and_context_evidence) ... ok
+test_mcp_preview_and_copy_tools (test_repair.RepairTests.test_mcp_preview_and_copy_tools) ... ok
+test_missing_body_target_does_not_guess (test_repair.RepairTests.test_missing_body_target_does_not_guess) ... ok
+test_pdf_refused (test_repair.RepairTests.test_pdf_refused) ... ok
+test_unknown_action_refused (test_repair.RepairTests.test_unknown_action_refused) ... ok
+test_unvalidated_context_refused (test_repair.RepairTests.test_unvalidated_context_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 52 tests in 20.709s
+
+OK

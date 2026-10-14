@@ -1,0 +1,16 @@
+{
+  "system_locale": "zh-CN",
+  "user_culture": "zh-CN",
+  "system_ansi_code_page": "936",
+  "locale_profile": "ru-RU",
+  "profile_file": "D:\\Codex项目\\analysis_TestVkr\\runtime\\locale-emulator-2.5.0.1\\LEConfig.xml",
+  "portable_archive_sha256": "808FF584426D52CC775AD6406DA00622F454BE95BD4C8FBCA42EEF4B7235AD5C",
+  "successful_processes": [
+    {
+      "Id": 80124,
+      "ProcessName": "TestVkr (1)",
+      "MainWindowTitle": "Предварительная проверка ВКР, НКР, НИР, КуП, КуР МГТУ им. Н. Э. Баумана [сборка 230]"
+    }
+  ],
+  "finding": "Russian locale profile starts the unchanged target while native Chinese startup produced access violation; exact offending runtime character was not captured."
+}

@@ -1,0 +1,49 @@
+{
+  "target_sha256": "0bb43cebc4c7ee196913d2ea2240f7bc53aaac1e6b8f6394e6201024a108b8cb",
+  "recovered_pseudocode_sha256": "0691ffdddaab86c60f111312735d960ee70ad9c5e5922d1b31eb23f761dd6506",
+  "functions": [
+    "0049e6d0",
+    "0049cfd8",
+    "0049c3ec",
+    "0049771c",
+    "00499268",
+    "00495ee8",
+    "00494dd0",
+    "00495584",
+    "00496fc4",
+    "00498dfc",
+    "0049fa04"
+  ],
+  "resource": {
+    "name": "TITUL",
+    "rva": "0x5ed800",
+    "file_offset": "0x5d9600",
+    "compressed_sha256": "993d0b7136fb6e1a169deb9601aa66f60c7896eb5cac0ea55e95bd82f230833f",
+    "decoded_sha256": "d037d47069ebed352c2835b60a14d70944d2f1e953760a9974e8d79558beea41",
+    "encoding": "cp1251",
+    "compression": "zlib"
+  },
+  "work_codes": {
+    "0x6e4d44": {
+      "file_offset": "0x2e3744",
+      "utf16_first_character": "0"
+    },
+    "0x6e4d48": {
+      "file_offset": "0x2e3748",
+      "utf16_first_character": "1"
+    },
+    "0x6e4d4c": {
+      "file_offset": "0x2e374c",
+      "utf16_first_character": "2"
+    },
+    "0x6e4648": {
+      "file_offset": "0x2e3048",
+      "utf16_first_character": "5"
+    },
+    "0x6e4c24": {
+      "file_offset": "0x2e3624",
+      "utf16_first_character": "5"
+    }
+  },
+  "limits": "Static recovered pseudocode and raw resource bytes; not original source code. Execution is evidenced separately by native captures."
+}

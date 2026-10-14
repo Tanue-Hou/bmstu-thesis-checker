@@ -1,0 +1,139 @@
+{
+  "work_type_policy": {
+    "native_mode": "ВКР магистра",
+    "docx_size_measure": "48 equivalent pages; 900 trimmed UTF-16 characters per page; appendix A TOC page also checked",
+    "manual_review": [
+      "Use actual school template and real pagination; do not fabricate cover data, TOC rows or text"
+    ]
+  },
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\graduate-structure\\g_chars43199.docx",
+  "file_type": "docx",
+  "work_type": "master",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {
+    "resolved": [
+      "docDefaults",
+      "paragraph_basedOn",
+      "character_basedOn",
+      "direct"
+    ],
+    "unresolved": [
+      "conditional_table_styles",
+      "numbering_properties",
+      "theme_font_and_color"
+    ]
+  },
+  "summary": {
+    "total": 1,
+    "critical": 0,
+    "major": 0,
+    "warning": 1,
+    "info": 0
+  },
+  "review_summary": {
+    "status_zh": "发现本地策略提示，请先复核适用要求；这些提示尚不代表原版 TestVkr 的检查结论。",
+    "must_fix_count": 0,
+    "should_fix_count": 0,
+    "manual_review_count": 1,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 0,
+    "critical_or_major_count": 0
+  },
+  "groups": {
+    "by_severity": {
+      "warning": [
+        "Graduate.ThesisSizeTooSmall"
+      ]
+    },
+    "by_module": {
+      "structure": [
+        "Graduate.ThesisSizeTooSmall"
+      ]
+    },
+    "by_fix_priority": {
+      "manual_review": [
+        "Graduate.ThesisSizeTooSmall"
+      ]
+    },
+    "by_location": {
+      "未定位": [
+        "Graduate.ThesisSizeTooSmall"
+      ]
+    },
+    "antiplagiarism_related": []
+  },
+  "fix_checklist": {
+    "must_fix": [],
+    "should_fix": [],
+    "manual_review": [
+      {
+        "rule_id": "Graduate.ThesisSizeTooSmall",
+        "label_zh": "需要人工确认",
+        "title_zh": "硕士折算篇幅不足",
+        "severity": "warning",
+        "module": "structure",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "检查真实正文内容、实际分页及最新目录。阈值按48折算页和900字符计算，并检查附录A目录页码；这不是实际页数。",
+        "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Graduate.ThesisSizeTooSmall",
+      "module": "structure",
+      "severity": "warning",
+      "message": "* Маленький объем ВКР: Не хватает 1 стр. (сначала исправьте остальные замечания, если они есть).",
+      "russian_message": "* Маленький объем ВКР: Не хватает 1 стр. (сначала исправьте остальные замечания, если они есть).",
+      "title_zh": "硕士折算篇幅不足",
+      "explanation_zh": "原程序 build 230 的普通正文 DOCX 样例判据；适用模式和验证边界见 verification_scope。",
+      "trigger_reason_zh": "见原始诊断及 threshold 中的实测计数；静态候选边界不等于完整动态验证。",
+      "fix_suggestion_zh": "检查真实正文内容、实际分页及最新目录。阈值按48折算页和900字符计算，并检查附录A目录页码；这不是实际页数。",
+      "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+        "work_type": "master"
+      },
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "native_scope_supported": true,
+        "native_predicate_supported": true,
+        "minimum_equivalent_pages": 48,
+        "characters_per_equivalent_page": 900,
+        "trimmed_utf16_characters": 43199,
+        "appendix_a_toc_page": 48,
+        "estimated_equivalent_pages": 47,
+        "missing_equivalent_pages": 1
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    }
+  ]
+}

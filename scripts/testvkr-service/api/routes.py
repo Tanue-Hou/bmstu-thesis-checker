@@ -35,7 +35,7 @@ async def check_document(
     os.makedirs(temp_dir, exist_ok=True)
     import uuid
     temp_file_path = os.path.join(temp_dir, f"{uuid.uuid4()}{ext}")
-    
+
     try:
         with open(temp_file_path, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
@@ -45,7 +45,7 @@ async def check_document(
     findings: List[Finding] = []
     doc_data = {}
     is_protected = False
-    
+
     # 1. Parse content
     try:
         if ext == '.docx':
@@ -85,30 +85,30 @@ async def check_document(
 
     # 2. Run checkers
     file_type = 'docx' if ext == '.docx' else 'pdf'
-    
+
     # Always run entry document check
     entry_checker = EntryDocumentChecker(doc_data, file_type, work_type)
     findings.extend(entry_checker.check())
-    
+
     # If document is empty or protected, skip other checkers
     is_empty_or_protected = any(f.code in ["Entry.DocumentEmpty", "Entry.DocumentProtected"] for f in findings)
-    
+
     if not is_empty_or_protected:
         # Structure Checker
         if not skip_structure:
             structure_checker = StructureChecker(doc_data, file_type, work_type)
             findings.extend(structure_checker.check())
-            
+
         # Pictures Checker
         if not skip_pictures:
             pictures_checker = PicturesChecker(doc_data, file_type, work_type)
             findings.extend(pictures_checker.check())
-            
+
         # Word Format Checker
         if not skip_word_format:
             word_checker = WordFormatChecker(doc_data, file_type, work_type)
             findings.extend(word_checker.check())
-            
+
         # Dictionary Checker
         if not skip_dictionary:
             dict_checker = DictionaryChecker(doc_data, file_type, work_type)
@@ -129,14 +129,14 @@ async def check_document(
 
     # Enrich findings with confidence levels
     for f in findings:
-        f.confidence = confidence_map.get(f.code, "medium")
+        f.confidence = confidence_map.get(f.code, "low")
 
     # 3. Calculate summary statistics
     critical = sum(1 for f in findings if f.severity == Severity.CRITICAL)
     major = sum(1 for f in findings if f.severity == Severity.MAJOR)
     warning = sum(1 for f in findings if f.severity == Severity.WARNING)
     info = sum(1 for f in findings if f.severity == Severity.INFO)
-    
+
     summary = DocumentSummary(
         total_findings=len(findings),
         critical=critical,
@@ -144,7 +144,7 @@ async def check_document(
         warning=warning,
         info=info
     )
-    
+
     return CheckResponse(
         status="completed",
         summary=summary,
@@ -172,5 +172,8 @@ async def list_rules():
             "word_format": "Междустрочные интервалы, поля, шрифты, таблицы, переплет",
             "dictionary": "Орфография, смесь латиницы и кириллицы (хомоглифы)"
         },
-        "verified_rules": rules_data.get("rules", [])
+        "verification_status": rules_data.get("verification_status", "unverified"),
+        "rules": rules_data.get("rules", []),
+        "verified_rules": [r for r in rules_data.get("rules", [])
+                           if r.get("verification_status") == "verified_against_original"]
     }

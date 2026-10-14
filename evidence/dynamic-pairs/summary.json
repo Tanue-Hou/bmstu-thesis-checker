@@ -1,0 +1,42 @@
+{
+  "original_controlled_cases": 12,
+  "original_repair_recheck_cases": 2,
+  "rules_verified_in_tested_scope": 5,
+  "scope": "TestVkr build 230, DOCX, bachelor mode; tested predicates and fixtures only",
+  "repair_original_diagnostics_cleared": {
+    "font_size": true,
+    "text_color": true,
+    "page_size": true
+  },
+  "repair_original_diagnostics_count_before": 9,
+  "repair_original_diagnostics_count_after": 6,
+  "repair_changes": 27,
+  "source_unchanged": true,
+  "main_document_text_unchanged": true,
+  "modified_zip_parts": [
+    "word/document.xml"
+  ],
+  "other_zip_parts_unchanged": true,
+  "unresolved": [
+    {
+      "rule_id": "Word.LineSpacingInvalid",
+      "case": "spacing_1",
+      "original": false,
+      "local": true,
+      "status": "not_promoted"
+    },
+    {
+      "rule_id": "Word.FirstLineIndentInvalid",
+      "case": "indent_0",
+      "original": false,
+      "local": true,
+      "status": "not_promoted"
+    }
+  ],
+  "repair_log": "evidence\\dynamic-pairs\\repair_outputs\\repair_combined_before.repaired-391001d061.changes.json",
+  "limits": [
+    "No full-program equivalence claim",
+    "PDF and other work types are not dynamically validated",
+    "Images, table text, headers/footers, fields, hyperlinks and special typography are not automatically repaired"
+  ]
+}

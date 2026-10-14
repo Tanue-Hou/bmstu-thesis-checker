@@ -1,0 +1,141 @@
+{
+  "work_type_policy": {
+    "native_mode": "НКР аспиранта",
+    "toc_heading": "ОГЛАВЛЕНИЕ",
+    "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied.",
+    "manual_review": [
+      "Doctoral DOCX margins left/right/top/bottom 25/10/20/20 mm, tolerance 0.2 mm; finite single-section native probes",
+      "Not a general dissertation standard or original-program certification"
+    ]
+  },
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\multipage-phd-repair\\phd_letter.docx",
+  "file_type": "docx",
+  "work_type": "phd",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {
+    "resolved": [
+      "docDefaults",
+      "paragraph_basedOn",
+      "character_basedOn",
+      "direct"
+    ],
+    "unresolved": [
+      "conditional_table_styles",
+      "numbering_properties",
+      "theme_font_and_color"
+    ]
+  },
+  "native_comparison_limits": {},
+  "summary": {
+    "total": 1,
+    "critical": 0,
+    "major": 0,
+    "warning": 0,
+    "info": 1
+  },
+  "review_summary": {
+    "status_zh": "不建议直接提交，需要先处理必改项和较高严重度问题。",
+    "must_fix_count": 1,
+    "should_fix_count": 0,
+    "manual_review_count": 0,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 0,
+    "critical_or_major_count": 0
+  },
+  "groups": {
+    "by_severity": {
+      "info": [
+        "Word.PageSizeNotA4"
+      ]
+    },
+    "by_module": {
+      "word_format": [
+        "Word.PageSizeNotA4"
+      ]
+    },
+    "by_fix_priority": {
+      "must_fix": [
+        "Word.PageSizeNotA4"
+      ]
+    },
+    "by_location": {
+      "section 1": [
+        "Word.PageSizeNotA4"
+      ]
+    },
+    "antiplagiarism_related": []
+  },
+  "fix_checklist": {
+    "must_fix": [
+      {
+        "rule_id": "Word.PageSizeNotA4",
+        "label_zh": "必改",
+        "title_zh": "页面不是 A4",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "section 1",
+        "fix_suggestion_zh": "将页面纸张大小统一设置为 A4，并检查所有分节。",
+        "word_path_zh": "布局 -> 大小 -> A4；多节文档需在每个节中确认。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "should_fix": [],
+    "manual_review": [],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Word.PageSizeNotA4",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Документ содержит страницы, размеры которых не соответствуют формату А4.",
+      "russian_message": "Документ содержит страницы, размеры которых не соответствуют формату А4.",
+      "title_zh": "页面不是 A4",
+      "explanation_zh": "论文页面尺寸应为 A4，即 210mm x 297mm。",
+      "trigger_reason_zh": "检测到 section 或 PDF 页面尺寸与 A4 相差超过容差。",
+      "fix_suggestion_zh": "将页面纸张大小统一设置为 A4，并检查所有分节。",
+      "word_path_zh": "布局 -> 大小 -> A4；多节文档需在每个节中确认。",
+      "fix_priority": "must_fix",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_evidence_intact": true,
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "phd",
+        "build": 230,
+        "limits": "Single portrait DOCX section, ordinary body text and tables/one inline PNG; formatting predicates only; special content preserved, no margin repair."
+      },
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [
+        "evidence/multipage-phd-repair/comparison.json"
+      ],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "expected": "210x297mm",
+        "actual": "216.0x279.0mm"
+      },
+      "location": {
+        "section": 1
+      },
+      "location_summary_zh": "section 1",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "11_page_size/page_size_not_a4.docx"
+      ]
+    }
+  ]
+}

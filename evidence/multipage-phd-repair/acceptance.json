@@ -1,0 +1,51 @@
+{
+  "native_input_cases": 20,
+  "native_pdf_cases": 13,
+  "native_docx_cases_including_repair": 7,
+  "rule_context_pairs": 9,
+  "local_tests_passed": 52,
+  "source_files_hashed": 62,
+  "all_registry_context_hashes_checked": 35,
+  "pdf_upper_probes": [
+    {
+      "case": "mp_font18_5",
+      "font_pt": 18.5,
+      "native_upper_warning": false
+    },
+    {
+      "case": "mp_font19",
+      "font_pt": 19,
+      "native_upper_warning": false
+    },
+    {
+      "case": "mp_font24",
+      "font_pt": 24,
+      "native_upper_warning": false
+    },
+    {
+      "case": "mp_font36",
+      "font_pt": 36,
+      "native_upper_warning": false
+    },
+    {
+      "case": "mp_font72",
+      "font_pt": 72,
+      "native_upper_warning": false
+    }
+  ],
+  "pdf_structure_native_diagnostic_counts": {
+    "structure_clean": 3,
+    "structure_no_abstract": 4,
+    "structure_wrong_toc": 9
+  },
+  "doctoral_repair_native_before_after": [
+    4,
+    0
+  ],
+  "doctoral_copy_property_changes": 5,
+  "all_xml_changes_reversible_from_log": true,
+  "source_unchanged": true,
+  "mcp_version": "0.2.4",
+  "mcp_copy_identical_to_native_checked_copy": true,
+  "git_push_performed": false
+}

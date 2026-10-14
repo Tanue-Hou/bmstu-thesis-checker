@@ -1,0 +1,127 @@
+[
+  {
+    "case": "baseline",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\baseline.docx",
+    "sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+    "parameters": {
+      "spacing": 1.5,
+      "indent_cm": 1.25,
+      "font_pt": 14,
+      "a4": true
+    }
+  },
+  {
+    "case": "spacing_1",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\spacing_1.docx",
+    "sha256": "14db0ccf7d685ec4f1ef86740bba436e7e611ed4906ef2c0dbb8bf79cfba5f83",
+    "parameters": {
+      "spacing": 1,
+      "indent_cm": 1.25,
+      "font_pt": 14,
+      "a4": true
+    }
+  },
+  {
+    "case": "indent_0",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\indent_0.docx",
+    "sha256": "eeda8c9e8f960d81688be054e17ae987ce20dfc333a2303867f8e0c5575b723c",
+    "parameters": {
+      "spacing": 1.5,
+      "indent_cm": 0,
+      "font_pt": 14,
+      "a4": true
+    }
+  },
+  {
+    "case": "font_7",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\font_7.docx",
+    "sha256": "08e89d982018c10d9414e1b737c0c2a1554364110cbda702014ac81a603290d9",
+    "parameters": {
+      "spacing": 1.5,
+      "indent_cm": 1.25,
+      "font_pt": 7,
+      "a4": true
+    }
+  },
+  {
+    "case": "page_letter",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\page_letter.docx",
+    "sha256": "e262a44772ec3ee6fc4be68cec08e6734726cdba0b2c7aeb8bc0ab31ae6aed95",
+    "parameters": {
+      "spacing": 1.5,
+      "indent_cm": 1.25,
+      "font_pt": 14,
+      "a4": false
+    }
+  },
+  {
+    "case": "font_7_5",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\font_7_5.docx",
+    "sha256": "bf767441450a68b62fbb74aae9f2e8978f71ac9ae1ccfcfb304a831f4bb32abc",
+    "parameters": {
+      "spacing": 1.5,
+      "indent_cm": 1.25,
+      "font_pt": 7.5,
+      "a4": true
+    }
+  },
+  {
+    "case": "font_8",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\font_8.docx",
+    "sha256": "1b9b00e7f37c0eaca3781e4dfa0081882f6e1e30aa63227f832f600f2431e482",
+    "parameters": {
+      "spacing": 1.5,
+      "indent_cm": 1.25,
+      "font_pt": 8,
+      "a4": true
+    }
+  },
+  {
+    "case": "font_18",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\font_18.docx",
+    "sha256": "5b0f0b5728895ed43e7fd2b0a798c403651d3cd5c5d540a41d8eaee4ef12df34",
+    "parameters": {
+      "spacing": 1.5,
+      "indent_cm": 1.25,
+      "font_pt": 18,
+      "a4": true
+    }
+  },
+  {
+    "case": "font_18_5",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\font_18_5.docx",
+    "sha256": "921c9e00d07e8bf6a4f8e3a7da06737de127b7736afc2ff63bca940a7e6c23c2",
+    "parameters": {
+      "spacing": 1.5,
+      "indent_cm": 1.25,
+      "font_pt": 18.5,
+      "a4": true
+    }
+  },
+  {
+    "case": "image_16m",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\image_16m.docx",
+    "sha256": "565acfa02398fb01aabdd9c0f9197292597e1ba415b05083e42fb42b0ffd9b1c",
+    "parameters": {
+      "width_px": 4000,
+      "height_px": 4000
+    }
+  },
+  {
+    "case": "image_above_16m",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\image_above_16m.docx",
+    "sha256": "6b7dc48df7db4b5bcc02d45ba875a171233e048266910260906296a985841028",
+    "parameters": {
+      "width_px": 4001,
+      "height_px": 4000
+    }
+  },
+  {
+    "case": "color_black",
+    "path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\dynamic-pairs\\color_black.docx",
+    "sha256": "ba4a90fdae3dbcb6be6951d4be0e3bea80787e365f5131b6e4bf5a9f33c207b7",
+    "parameters": {
+      "text_color": "000000"
+    }
+  }
+]

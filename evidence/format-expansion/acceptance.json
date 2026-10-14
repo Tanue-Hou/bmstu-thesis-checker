@@ -1,0 +1,13 @@
+{
+  "native_cases": 29,
+  "rule_context_pairs": 10,
+  "tests_passed": 44,
+  "source_hashes_verified": 54,
+  "native_capture_hashes_verified": 29,
+  "copy_source_unchanged": true,
+  "all_copy_zip_members_unchanged": true,
+  "copy_changes": 0,
+  "copy_manual_table_record": true,
+  "copy_scope": "master mode preservation test on a synthetic PhD-origin complex fixture; no PhD repair certification",
+  "repair_log": "evidence\\format-expansion\\repair_outputs\\complex_table7.repaired-d8fcba8260.changes.json"
+}

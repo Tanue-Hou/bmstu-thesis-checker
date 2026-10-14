@@ -1,0 +1,10 @@
+{
+  "modified_zip_parts": [
+    "word/document.xml"
+  ],
+  "only_xml_attribute_changed": "w:pgMar/@w:left",
+  "before_twips": "1701",
+  "after_twips": "1417",
+  "before_sha256": "8fda3cfaa9eb55ec11206421334a1af52b4138d076eefc2bf5fc041f4d669f90",
+  "after_sha256": "7e6016fe36f8dac353fab0885fa65a948cd694106bd30ae976104f69e23738f9"
+}

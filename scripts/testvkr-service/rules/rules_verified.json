@@ -4,243 +4,1759 @@
       "rule_id": "Word.LineSpacingInvalid",
       "threshold": 1.5,
       "comparator": "!=",
-      "observed_message": "Междустрочный интервал в абзацах должен быть равен 1,5 строки (в таблицах одинарный):",
-      "confidence": "high",
-      "source_va": "0x0041AE88 / RVA 0x2cd190",
+      "confidence": "low",
+      "source_va": null,
       "sample_trigger": [
         "01_line_spacing_body/body_line_spacing_1.0.docx",
         "01_line_spacing_body/body_line_spacing_1.49.docx",
         "01_line_spacing_body/body_line_spacing_1.51.docx",
         "01_line_spacing_body/body_line_spacing_2.0.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "Междустрочный интервал в абзацах должен быть равен 1,5 строки (в таблицах одинарный):",
+        "threshold": 1.5,
+        "source_va": "0x0041AE88 / RVA 0x2cd190",
+        "comparator": "!="
+      },
+      "message_template": "Междустрочный интервал в абзацах должен быть равен 1,5 строки (в таблицах одинарный):",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Word.FontSizeTooSmall",
-      "threshold": 12.01,
+      "threshold": 8,
       "comparator": "<",
-      "observed_message": "В документе много символов, размер которых меньше 12 пт",
       "confidence": "high",
-      "source_va": "0x0041AE88 / RVA 0x2cd2a0",
+      "source_va": "0x6ee118",
       "sample_trigger": [
         "03_font_size/font_size_11.docx",
         "03_font_size/font_size_12.01.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "В документе много символов, размер которых меньше 12 пт",
+        "threshold": 12.01,
+        "source_va": "0x0041AE88 / RVA 0x2cd2a0",
+        "comparator": "<"
+      },
+      "message_template": "В документе много символов, размер которых меньше 12 пт",
+      "observed_message": "размер которых меньше 8 пт",
+      "verification_status": "verified_against_original",
+      "evidence_refs": [
+        "evidence/dynamic-pairs/comparison.json"
+      ],
+      "threshold_origin": "static_shipped_default_with_font_predicate_references",
+      "enabled_by_default": true,
+      "rejected_reverse_engineering_candidate": 12.01,
+      "rejection_reason": "Exact upstream OpenJPEG table match; not a font threshold",
+      "rejection_evidence": "evidence/2026-10-14/openjpeg-table-verification.json",
+      "static_evidence_refs": [
+        "evidence/2026-10-14/static-findings.json"
+      ],
+      "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+      "verified_formats": [
+        "docx",
+        "pdf"
+      ],
+      "verified_work_types": [
+        "bachelor",
+        "master",
+        "phd"
+      ],
+      "verified_policy": {
+        "FONT_SIZE_MIN_PT": 8.0,
+        "FONT_VIOLATION_MIN_CHARS": 10
+      },
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "bachelor",
+        "build": 230,
+        "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+      },
+      "verification_by_work_type": {
+        "bachelor": {
+          "evidence_refs": [
+            "evidence/dynamic-pairs/comparison.json"
+          ],
+          "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+          "scope": {
+            "format": "docx",
+            "work_type": "bachelor",
+            "build": 230,
+            "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+          }
+        },
+        "master": {
+          "evidence_refs": [
+            "evidence/dynamic-master/comparison.json"
+          ],
+          "verification_evidence_sha256": "b7e9aec9b1ff3c24518f2eacfa4bfa2981459b34696abb2d362978482bb21858",
+          "scope": {
+            "format": "docx",
+            "work_type": "master",
+            "build": 230,
+            "limits": "Formatting fixture predicates only; bachelor title text retained to isolate mode. No master structural or full-program equivalence."
+          }
+        }
+      },
+      "verification_by_context": {
+        "docx:bachelor": {
+          "evidence_refs": [
+            "evidence/dynamic-pairs/comparison.json"
+          ],
+          "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+          "scope": {
+            "format": "docx",
+            "work_type": "bachelor",
+            "build": 230,
+            "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+          }
+        },
+        "docx:master": {
+          "evidence_refs": [
+            "evidence/dynamic-master/comparison.json"
+          ],
+          "verification_evidence_sha256": "b7e9aec9b1ff3c24518f2eacfa4bfa2981459b34696abb2d362978482bb21858",
+          "scope": {
+            "format": "docx",
+            "work_type": "master",
+            "build": 230,
+            "limits": "Formatting fixture predicates only; bachelor title text retained to isolate mode. No master structural or full-program equivalence."
+          }
+        },
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/multipage-phd-repair/comparison.json",
+            "evidence/format-expansion/comparison.json"
+          ],
+          "verification_evidence_sha256": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+          "evidence_hashes": {
+            "evidence/multipage-phd-repair/comparison.json": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+            "evidence/format-expansion/comparison.json": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d"
+          },
+          "scope": {
+            "format": "docx",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "Single portrait DOCX section, ordinary body text and tables/one inline PNG; formatting predicates only; special content preserved, no margin repair."
+          },
+          "verified_policy": {
+            "FONT_SIZE_MIN_PT": 8.0,
+            "FONT_VIOLATION_MIN_CHARS": 10
+          },
+          "repair_evidence_ref": "evidence/multipage-phd-repair/repair-comparison.json",
+          "repair_evidence_sha256": "798da885a9114f0d3638826bfa6719780bd7e668352cf008aba8fa26a4f4a227"
+        },
+        "pdf:phd": {
+          "evidence_refs": [
+            "evidence/multipage-phd-repair/comparison.json",
+            "evidence/format-expansion/comparison.json"
+          ],
+          "verification_evidence_sha256": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+          "evidence_hashes": {
+            "evidence/multipage-phd-repair/comparison.json": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+            "evidence/format-expansion/comparison.json": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d"
+          },
+          "scope": {
+            "format": "pdf",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "PDF embedded Times New Roman+ToUnicode, unrotated 1–3 pages, ordinary table text and <=1 PNG per page; finite size/color/page/image predicates."
+          },
+          "verified_policy": {
+            "FONT_SIZE_MIN_PT": 8.0,
+            "FONT_VIOLATION_MIN_CHARS": 10
+          }
+        }
+      }
     },
     {
       "rule_id": "Word.FontScaleTooSmall",
       "threshold": 70,
       "comparator": "<",
-      "observed_message": "В документе много символов, у которых масштаб шрифта меньше 70%:",
-      "confidence": "high",
-      "source_va": "0x0041AEBE / RVA 0x2cd3e0",
+      "confidence": "low",
+      "source_va": null,
       "sample_trigger": [
         "04_font_scale/font_scale_69.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "В документе много символов, у которых масштаб шрифта меньше 70%:",
+        "threshold": 70,
+        "source_va": "0x0041AEBE / RVA 0x2cd3e0",
+        "comparator": "<"
+      },
+      "message_template": "В документе много символов, у которых масштаб шрифта меньше 70%:",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Word.FontScaleTooLarge",
       "threshold": 130,
       "comparator": ">",
-      "observed_message": "В документе много символов, у которых масштаб шрифта больше 130%:",
-      "confidence": "high",
-      "source_va": "0x0041AEBE / RVA 0x2cd3e8",
+      "confidence": "low",
+      "source_va": null,
       "sample_trigger": [
         "04_font_scale/font_scale_131.docx",
         "04_font_scale/font_scale_139.docx",
         "04_font_scale/font_scale_140.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "В документе много символов, у которых масштаб шрифта больше 130%:",
+        "threshold": 130,
+        "source_va": "0x0041AEBE / RVA 0x2cd3e8",
+        "comparator": ">"
+      },
+      "message_template": "В документе много символов, у которых масштаб шрифта больше 130%:",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Word.TableRowHeightTooSmall",
       "threshold": 8.0,
       "comparator": "<",
-      "observed_message": "Высота строк в таблицах должна быть не менее 8 мм.:",
-      "confidence": "high",
-      "source_va": "0x0041AEBE / RVA 0x2d8d4c",
+      "confidence": "low",
+      "source_va": null,
       "sample_trigger": [
         "05_table_row_height/table_row_height_7.9mm.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "Высота строк в таблицах должна быть не менее 8 мм.:",
+        "threshold": 8.0,
+        "source_va": "0x0041AEBE / RVA 0x2d8d4c",
+        "comparator": "<"
+      },
+      "message_template": "Высота строк в таблицах должна быть не менее 8 мм.:",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Word.TableSuspiciousHeightRule",
       "threshold": "exact",
       "comparator": "==",
-      "observed_message": "Замечена подозрительная высота строк в таблицах документа. Переключите указание высоты строк из режима \"Точно\" на \"Минимум\":",
-      "confidence": "high",
-      "source_va": "0x004af82c control flow branch",
+      "confidence": "low",
+      "source_va": null,
       "sample_trigger": [
         "05_table_row_height/table_row_height_8.0mm.docx",
         "05_table_row_height/table_row_height_8.03mm.docx",
         "05_table_row_height/table_row_height_8.1mm.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "Замечена подозрительная высота строк в таблицах документа. Переключите указание высоты строк из режима \"Точно\" на \"Минимум\":",
+        "threshold": "exact",
+        "source_va": "0x004af82c control flow branch",
+        "comparator": "=="
+      },
+      "message_template": "Замечена подозрительная высота строк в таблицах документа. Переключите указание высоты строк из режима \"Точно\" на \"Минимум\":",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Pic.FileSizeTooLarge",
       "threshold": 40,
       "comparator": ">",
-      "observed_message": "Документ содержит рисунки большого размера (больше 40 Mb):",
-      "confidence": "high",
-      "source_va": "string '40 Mb'",
+      "confidence": "low",
+      "source_va": null,
       "sample_trigger": [
         "06_image_byte_size/image_byte_size_above_40mb.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "Документ содержит рисунки большого размера (больше 40 Mb):",
+        "threshold": 40,
+        "source_va": "string '40 Mb'",
+        "comparator": ">"
+      },
+      "message_template": "Документ содержит рисунки большого размера (больше 40 Mb):",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Word.HeaderFooterDistanceInvalid",
       "threshold": 1.25,
       "comparator": "!=",
-      "observed_message": "Размеры колонтитулов должны быть 1,25 см.",
-      "confidence": "high",
-      "source_va": "string '1,25'",
+      "confidence": "low",
+      "source_va": null,
       "sample_trigger": [
         "13_header_footer/header_footer_invalid.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "Размеры колонтитулов должны быть 1,25 см.",
+        "threshold": 1.25,
+        "source_va": "string '1,25'",
+        "comparator": "!="
+      },
+      "message_template": "Размеры колонтитулов должны быть 1,25 см.",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Word.FirstLineIndentInvalid",
       "threshold": 1.25,
       "comparator": "!=",
-      "observed_message": "Отступ первой строки в абзаце должен быть 1,25 см.",
-      "confidence": "high",
-      "source_va": "string '1,25'",
+      "confidence": "low",
+      "source_va": null,
       "sample_trigger": [
         "12_first_line_indent/indent_missing.docx",
         "12_first_line_indent/indent_invalid.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "Отступ первой строки в абзаце должен быть 1,25 см.",
+        "threshold": 1.25,
+        "source_va": "string '1,25'",
+        "comparator": "!="
+      },
+      "message_template": "Отступ первой строки в абзаце должен быть 1,25 см.",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Word.PageSizeNotA4",
       "threshold": "210x297mm",
       "comparator": "!=",
-      "observed_message": "Документ содержит страницы, размеры которых не соответствуют формату А4.",
       "confidence": "high",
-      "source_va": "strings + int refs in code",
+      "source_va": null,
       "sample_trigger": [
         "11_page_size/page_size_not_a4.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "Документ содержит страницы, размеры которых не соответствуют формату А4.",
+        "threshold": "210x297mm",
+        "source_va": "strings + int refs in code",
+        "comparator": "!="
+      },
+      "message_template": "Документ содержит страницы, размеры которых не соответствуют формату А4.",
+      "observed_message": "не соответствуют формату А4",
+      "verification_status": "verified_against_original",
+      "evidence_refs": [
+        "evidence/dynamic-pairs/comparison.json"
+      ],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true,
+      "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+      "verified_formats": [
+        "docx",
+        "pdf"
+      ],
+      "verified_work_types": [
+        "bachelor",
+        "master",
+        "phd"
+      ],
+      "verified_policy": {
+        "PAGE_WIDTH_MM": 210.0,
+        "PAGE_HEIGHT_MM": 297.0,
+        "PAGE_SIZE_TOLERANCE_MM": 2.0
+      },
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "bachelor",
+        "build": 230,
+        "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+      },
+      "verification_by_work_type": {
+        "bachelor": {
+          "evidence_refs": [
+            "evidence/dynamic-pairs/comparison.json"
+          ],
+          "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+          "scope": {
+            "format": "docx",
+            "work_type": "bachelor",
+            "build": 230,
+            "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+          }
+        },
+        "master": {
+          "evidence_refs": [
+            "evidence/dynamic-master/comparison.json"
+          ],
+          "verification_evidence_sha256": "b7e9aec9b1ff3c24518f2eacfa4bfa2981459b34696abb2d362978482bb21858",
+          "scope": {
+            "format": "docx",
+            "work_type": "master",
+            "build": 230,
+            "limits": "Formatting fixture predicates only; bachelor title text retained to isolate mode. No master structural or full-program equivalence."
+          }
+        }
+      },
+      "verification_by_context": {
+        "docx:bachelor": {
+          "evidence_refs": [
+            "evidence/dynamic-pairs/comparison.json"
+          ],
+          "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+          "scope": {
+            "format": "docx",
+            "work_type": "bachelor",
+            "build": 230,
+            "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+          }
+        },
+        "docx:master": {
+          "evidence_refs": [
+            "evidence/dynamic-master/comparison.json"
+          ],
+          "verification_evidence_sha256": "b7e9aec9b1ff3c24518f2eacfa4bfa2981459b34696abb2d362978482bb21858",
+          "scope": {
+            "format": "docx",
+            "work_type": "master",
+            "build": 230,
+            "limits": "Formatting fixture predicates only; bachelor title text retained to isolate mode. No master structural or full-program equivalence."
+          }
+        },
+        "pdf:phd": {
+          "evidence_refs": [
+            "evidence/multipage-phd-repair/comparison.json",
+            "evidence/format-expansion/comparison.json"
+          ],
+          "verification_evidence_sha256": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+          "evidence_hashes": {
+            "evidence/multipage-phd-repair/comparison.json": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+            "evidence/format-expansion/comparison.json": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d"
+          },
+          "scope": {
+            "format": "pdf",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "PDF embedded Times New Roman+ToUnicode, unrotated 1–3 pages, ordinary table text and <=1 PNG per page; finite size/color/page/image predicates."
+          },
+          "verified_policy": {
+            "PAGE_WIDTH_MM": 210.0,
+            "PAGE_HEIGHT_MM": 297.0,
+            "PAGE_SIZE_TOLERANCE_MM": 2.0
+          }
+        },
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/multipage-phd-repair/comparison.json"
+          ],
+          "verification_evidence_sha256": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+          "evidence_hashes": {
+            "evidence/multipage-phd-repair/comparison.json": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f"
+          },
+          "scope": {
+            "format": "docx",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "Single portrait DOCX section, ordinary body text and tables/one inline PNG; formatting predicates only; special content preserved, no margin repair."
+          },
+          "verified_policy": {
+            "PAGE_WIDTH_MM": 210.0,
+            "PAGE_HEIGHT_MM": 297.0,
+            "PAGE_SIZE_TOLERANCE_MM": 2.0
+          },
+          "repair_evidence_ref": "evidence/multipage-phd-repair/repair-comparison.json",
+          "repair_evidence_sha256": "798da885a9114f0d3638826bfa6719780bd7e668352cf008aba8fa26a4f4a227"
+        }
+      }
     },
     {
       "rule_id": "Word.LeftMarginInvalid",
       "threshold": 30.0,
       "comparator": "!=",
-      "observed_message": "Документ содержит страницы, размеры левого поля на которых не соответствуют требованиям",
-      "confidence": "medium",
-      "source_va": "standard GOST 7.32",
+      "confidence": "high",
+      "source_va": null,
       "sample_trigger": [
         "10_margins/margin_left_20mm.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "medium",
+        "observed_message": "Документ содержит страницы, размеры левого поля на которых не соответствуют требованиям",
+        "threshold": 30.0,
+        "source_va": "standard GOST 7.32",
+        "comparator": "!="
+      },
+      "message_template": "Документ содержит страницы, размеры левого поля на которых не соответствуют требованиям",
+      "observed_message": "Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+      "verification_status": "verified_against_original",
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true,
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "phd"
+      ],
+      "verified_policy": {
+        "MARGIN_LEFT_PHD_MM": 25.0,
+        "MARGIN_TOLERANCE_MM": 1.0
+      },
+      "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee."
+      },
+      "verification_by_work_type": {
+        "phd": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Only paired 30 mm failure versus 25 mm pass, one ordinary-text DOCX section with right/top/bottom 10/20/20 mm. Native tolerance is unmeasured.",
+            "work_type": "phd"
+          }
+        }
+      },
+      "automatic_repair": false,
+      "threshold_by_work_type": {
+        "phd": 25.0
+      },
+      "verification_by_context": {
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/format-expansion/comparison.json"
+          ],
+          "verification_evidence_sha256": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d",
+          "scope": {
+            "format": "docx",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "Single ordinary-text DOCX section; four independent margin axes; left boundary at adjacent twips; no landscape/section/gutter equivalence."
+          },
+          "verified_policy": {
+            "MARGIN_LEFT_PHD_MM": 25.0,
+            "MARGIN_TOLERANCE_PHD_MM": 0.2
+          }
+        }
+      }
     },
     {
       "rule_id": "Word.RightMarginInvalid",
       "threshold": 10.0,
       "comparator": "!=",
-      "observed_message": "Документ содержит страницы, размеры правого поля на которых не соответствуют требованиям",
-      "confidence": "medium",
-      "source_va": "standard GOST 7.32",
+      "confidence": "high",
+      "source_va": null,
       "sample_trigger": [
         "10_margins/margin_right_20mm.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "medium",
+        "observed_message": "Документ содержит страницы, размеры правого поля на которых не соответствуют требованиям",
+        "threshold": 10.0,
+        "source_va": "standard GOST 7.32",
+        "comparator": "!="
+      },
+      "message_template": "Документ содержит страницы, размеры правого поля на которых не соответствуют требованиям",
+      "observed_message": "размеры полей",
+      "verification_status": "verified_against_original",
+      "evidence_refs": [
+        "evidence/format-expansion/comparison.json"
+      ],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true,
+      "verification_evidence_sha256": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d",
+      "verification_scope": {
+        "limits": "Finite format-expansion fixtures, build 230"
+      },
+      "verified_policy": {
+        "MARGIN_RIGHT_MM": 10.0,
+        "MARGIN_TOLERANCE_PHD_MM": 0.2
+      },
+      "verification_by_context": {
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/format-expansion/comparison.json"
+          ],
+          "verification_evidence_sha256": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d",
+          "scope": {
+            "format": "docx",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "Single ordinary-text DOCX section; four independent margin axes; left boundary at adjacent twips; no landscape/section/gutter equivalence."
+          },
+          "verified_policy": {
+            "MARGIN_RIGHT_MM": 10.0,
+            "MARGIN_TOLERANCE_PHD_MM": 0.2
+          }
+        }
+      },
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "phd"
+      ],
+      "threshold_by_work_type": {
+        "phd": 10.0
+      }
     },
     {
       "rule_id": "Word.TopMarginInvalid",
       "threshold": 20.0,
       "comparator": "!=",
-      "observed_message": "Документ содержит страницы, размеры верхнего поля на которых не соответствуют требованиям:",
-      "confidence": "medium",
-      "source_va": "standard GOST 7.32",
+      "confidence": "high",
+      "source_va": null,
       "sample_trigger": [
         "10_margins/margin_top_15mm.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "medium",
+        "observed_message": "Документ содержит страницы, размеры верхнего поля на которых не соответствуют требованиям:",
+        "threshold": 20.0,
+        "source_va": "standard GOST 7.32",
+        "comparator": "!="
+      },
+      "message_template": "Документ содержит страницы, размеры верхнего поля на которых не соответствуют требованиям:",
+      "observed_message": "размеры полей",
+      "verification_status": "verified_against_original",
+      "evidence_refs": [
+        "evidence/format-expansion/comparison.json"
+      ],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true,
+      "verification_evidence_sha256": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d",
+      "verification_scope": {
+        "limits": "Finite format-expansion fixtures, build 230"
+      },
+      "verified_policy": {
+        "MARGIN_TOP_MM": 20.0,
+        "MARGIN_TOLERANCE_PHD_MM": 0.2
+      },
+      "verification_by_context": {
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/format-expansion/comparison.json"
+          ],
+          "verification_evidence_sha256": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d",
+          "scope": {
+            "format": "docx",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "Single ordinary-text DOCX section; four independent margin axes; left boundary at adjacent twips; no landscape/section/gutter equivalence."
+          },
+          "verified_policy": {
+            "MARGIN_TOP_MM": 20.0,
+            "MARGIN_TOLERANCE_PHD_MM": 0.2
+          }
+        }
+      },
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "phd"
+      ],
+      "threshold_by_work_type": {
+        "phd": 20.0
+      }
     },
     {
       "rule_id": "Word.BottomMarginInvalid",
       "threshold": 20.0,
       "comparator": "!=",
-      "observed_message": "Документ содержит страницы, размеры нижнего поля на которых не соответствуют требованиям:",
-      "confidence": "medium",
-      "source_va": "standard GOST 7.32",
+      "confidence": "high",
+      "source_va": null,
       "sample_trigger": [
         "10_margins/margin_bottom_15mm.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "medium",
+        "observed_message": "Документ содержит страницы, размеры нижнего поля на которых не соответствуют требованиям:",
+        "threshold": 20.0,
+        "source_va": "standard GOST 7.32",
+        "comparator": "!="
+      },
+      "message_template": "Документ содержит страницы, размеры нижнего поля на которых не соответствуют требованиям:",
+      "observed_message": "размеры полей",
+      "verification_status": "verified_against_original",
+      "evidence_refs": [
+        "evidence/format-expansion/comparison.json"
+      ],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true,
+      "verification_evidence_sha256": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d",
+      "verification_scope": {
+        "limits": "Finite format-expansion fixtures, build 230"
+      },
+      "verified_policy": {
+        "MARGIN_BOTTOM_MM": 20.0,
+        "MARGIN_TOLERANCE_PHD_MM": 0.2
+      },
+      "verification_by_context": {
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/format-expansion/comparison.json"
+          ],
+          "verification_evidence_sha256": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d",
+          "scope": {
+            "format": "docx",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "Single ordinary-text DOCX section; four independent margin axes; left boundary at adjacent twips; no landscape/section/gutter equivalence."
+          },
+          "verified_policy": {
+            "MARGIN_BOTTOM_MM": 20.0,
+            "MARGIN_TOLERANCE_PHD_MM": 0.2
+          }
+        }
+      },
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "phd"
+      ],
+      "threshold_by_work_type": {
+        "phd": 20.0
+      }
     },
     {
       "rule_id": "Dict.MixedScriptHomoglyphs",
       "threshold": 0,
       "comparator": ">",
-      "observed_message": "В документе много незнакомых слов. Возможно они написаны с ошибками:",
-      "confidence": "medium",
-      "source_va": "plagiarism homoglyph swap heuristics",
+      "confidence": "low",
+      "source_va": null,
       "sample_trigger": [
         "15_dictionary/mixed_script_homoglyphs.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "medium",
+        "observed_message": "В документе много незнакомых слов. Возможно они написаны с ошибками:",
+        "threshold": 0,
+        "source_va": "plagiarism homoglyph swap heuristics",
+        "comparator": ">"
+      },
+      "message_template": "В документе много незнакомых слов. Возможно они написаны с ошибками:",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Dict.SuspiciousRussianWords",
       "threshold": 5,
       "comparator": ">",
-      "observed_message": "В документе замечены слова с подозрительными сочетаниями букв",
       "confidence": "low",
-      "source_va": "phonotactics heuristics",
+      "source_va": null,
       "sample_trigger": [
         "15_dictionary/suspicious_russian_words.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "low",
+        "observed_message": "В документе замечены слова с подозрительными сочетаниями букв",
+        "threshold": 5,
+        "source_va": "phonotactics heuristics",
+        "comparator": ">"
+      },
+      "message_template": "В документе замечены слова с подозрительными сочетаниями букв",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Struct.ThesisSizeTooSmall",
       "threshold": 40000,
       "comparator": "<",
-      "observed_message": "Маленький объем ВКР:",
       "confidence": "low",
-      "source_va": "thesis size heuristic",
+      "source_va": null,
       "sample_trigger": [
         "14_structure/thesis_size_too_small.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "low",
+        "observed_message": "Маленький объем ВКР:",
+        "threshold": 40000,
+        "source_va": "thesis size heuristic",
+        "comparator": "<"
+      },
+      "message_template": "Маленький объем ВКР:",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Struct.EmptyStructuralElement",
       "threshold": 0,
       "comparator": "==",
-      "observed_message": "Обнаружены пустые структурные элементы:",
-      "confidence": "high",
-      "source_va": "0x004af82c control flow branch",
+      "confidence": "low",
+      "source_va": null,
       "sample_trigger": [
         "14_structure/empty_structural_element.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "Обнаружены пустые структурные элементы:",
+        "threshold": 0,
+        "source_va": "0x004af82c control flow branch",
+        "comparator": "=="
+      },
+      "message_template": "Обнаружены пустые структурные элементы:",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Struct.SmallStructuralElement",
       "threshold": 300,
       "comparator": "<",
-      "observed_message": "Обнаружены небольшие структурные элементы",
       "confidence": "low",
-      "source_va": "structure size heuristic",
+      "source_va": null,
       "sample_trigger": [
         "14_structure/small_structural_element.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "low",
+        "observed_message": "Обнаружены небольшие структурные элементы",
+        "threshold": 300,
+        "source_va": "structure size heuristic",
+        "comparator": "<"
+      },
+      "message_template": "Обнаружены небольшие структурные элементы",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Pic.FloatingImages",
       "threshold": 0,
       "comparator": ">",
-      "observed_message": "Документ содержит плавающие рисунки. Встройте рисунки в текст:",
-      "confidence": "high",
-      "source_va": "string 'floating'",
+      "confidence": "low",
+      "source_va": null,
       "sample_trigger": [
         "08_floating_image/floating_image_anchor.docx"
-      ]
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "Документ содержит плавающие рисунки. Встройте рисунки в текст:",
+        "threshold": 0,
+        "source_va": "string 'floating'",
+        "comparator": ">"
+      },
+      "message_template": "Документ содержит плавающие рисунки. Встройте рисунки в текст:",
+      "observed_message": null,
+      "verification_status": "pending_original_program_comparison",
+      "evidence_refs": [],
+      "threshold_origin": "local_policy_unverified_against_original",
+      "enabled_by_default": true
     },
     {
       "rule_id": "Pic.PixelSizeTooLarge",
-      "threshold": 540,
+      "threshold": 16000000,
       "comparator": ">",
-      "observed_message": "Документ содержит рисунки большого размера (больше 540 пикселей):",
       "confidence": "high",
-      "source_va": "0x0041AEBE / RVA 0x2cd3e0",
+      "source_va": null,
       "sample_trigger": [
         "07_image_pixel_size/image_pixel_1000.docx",
         "07_image_pixel_size/image_pixel_4000.docx",
         "07_image_pixel_size/image_pixel_557.docx"
+      ],
+      "legacy_claim": {
+        "confidence": "high",
+        "observed_message": "Документ содержит рисунки большого размера (больше 540 пикселей):",
+        "threshold": 540,
+        "source_va": "0x0041AEBE / RVA 0x2cd3e0",
+        "comparator": ">"
+      },
+      "message_template": "Документ содержит рисунки большого размера (больше 540 пикселей):",
+      "observed_message": "больше 16000000 пикселей",
+      "verification_status": "verified_against_original",
+      "evidence_refs": [
+        "evidence/dynamic-pairs/comparison.json"
+      ],
+      "threshold_origin": "static_decoder_area_comparison_and_message_constant",
+      "enabled_by_default": true,
+      "rejected_reverse_engineering_candidate": 540,
+      "rejection_reason": "Wavelet normalization coefficient misidentified as image limit",
+      "rejection_evidence": "evidence/2026-10-14/openjpeg-table-verification.json",
+      "unit": "pixels_total",
+      "measurement": "native_width_px * native_height_px",
+      "static_evidence_refs": [
+        "evidence/2026-10-14/static-findings.json"
+      ],
+      "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+      "verified_formats": [
+        "docx",
+        "pdf"
+      ],
+      "verified_work_types": [
+        "bachelor",
+        "phd"
+      ],
+      "verified_policy": {
+        "IMAGE_PIXEL_AREA_MAX": 16000000
+      },
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "bachelor",
+        "build": 230,
+        "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+      },
+      "verification_by_context": {
+        "docx:bachelor": {
+          "evidence_refs": [
+            "evidence/dynamic-pairs/comparison.json"
+          ],
+          "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+          "scope": {
+            "format": "docx",
+            "work_type": "bachelor",
+            "build": 230,
+            "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+          }
+        },
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/format-expansion/comparison.json"
+          ],
+          "verification_evidence_sha256": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d",
+          "scope": {
+            "format": "docx",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "Ordinary table cells and one inline PNG/chart; tested size predicates, not full complex-document structure or drawing support."
+          },
+          "verified_policy": {
+            "IMAGE_PIXEL_AREA_MAX": 16000000
+          }
+        },
+        "pdf:phd": {
+          "evidence_refs": [
+            "evidence/multipage-phd-repair/comparison.json",
+            "evidence/format-expansion/comparison.json"
+          ],
+          "verification_evidence_sha256": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+          "evidence_hashes": {
+            "evidence/multipage-phd-repair/comparison.json": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+            "evidence/format-expansion/comparison.json": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d"
+          },
+          "scope": {
+            "format": "pdf",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "PDF embedded Times New Roman+ToUnicode, unrotated 1–3 pages, ordinary table text and <=1 PNG per page; finite size/color/page/image predicates."
+          },
+          "verified_policy": {
+            "IMAGE_PIXEL_AREA_MAX": 16000000
+          }
+        }
+      }
+    },
+    {
+      "rule_id": "Word.FontSizeTooLarge",
+      "threshold": 18,
+      "comparator": ">",
+      "confidence": "high",
+      "observed_message": "размер которых превышает 18 пт",
+      "source_va": "0x6ee11c",
+      "verification_status": "verified_against_original",
+      "threshold_origin": "static_shipped_default_with_font_predicate_references",
+      "static_evidence_refs": [
+        "evidence/2026-10-14/static-findings.json"
+      ],
+      "evidence_refs": [
+        "evidence/dynamic-pairs/comparison.json"
+      ],
+      "enabled_by_default": true,
+      "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "bachelor",
+        "master",
+        "phd"
+      ],
+      "verified_policy": {
+        "FONT_SIZE_MAX_PT": 18.0,
+        "FONT_VIOLATION_MIN_CHARS": 10
+      },
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "bachelor",
+        "build": 230,
+        "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+      },
+      "verification_by_work_type": {
+        "bachelor": {
+          "evidence_refs": [
+            "evidence/dynamic-pairs/comparison.json"
+          ],
+          "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+          "scope": {
+            "format": "docx",
+            "work_type": "bachelor",
+            "build": 230,
+            "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+          }
+        },
+        "master": {
+          "evidence_refs": [
+            "evidence/dynamic-master/comparison.json"
+          ],
+          "verification_evidence_sha256": "b7e9aec9b1ff3c24518f2eacfa4bfa2981459b34696abb2d362978482bb21858",
+          "scope": {
+            "format": "docx",
+            "work_type": "master",
+            "build": 230,
+            "limits": "Formatting fixture predicates only; bachelor title text retained to isolate mode. No master structural or full-program equivalence."
+          }
+        }
+      },
+      "verification_by_context": {
+        "docx:bachelor": {
+          "evidence_refs": [
+            "evidence/dynamic-pairs/comparison.json"
+          ],
+          "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+          "scope": {
+            "format": "docx",
+            "work_type": "bachelor",
+            "build": 230,
+            "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+          }
+        },
+        "docx:master": {
+          "evidence_refs": [
+            "evidence/dynamic-master/comparison.json"
+          ],
+          "verification_evidence_sha256": "b7e9aec9b1ff3c24518f2eacfa4bfa2981459b34696abb2d362978482bb21858",
+          "scope": {
+            "format": "docx",
+            "work_type": "master",
+            "build": 230,
+            "limits": "Formatting fixture predicates only; bachelor title text retained to isolate mode. No master structural or full-program equivalence."
+          }
+        },
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/multipage-phd-repair/comparison.json"
+          ],
+          "verification_evidence_sha256": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+          "evidence_hashes": {
+            "evidence/multipage-phd-repair/comparison.json": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f"
+          },
+          "scope": {
+            "format": "docx",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "Single portrait DOCX section, ordinary body text and tables/one inline PNG; formatting predicates only; special content preserved, no margin repair."
+          },
+          "verified_policy": {
+            "FONT_SIZE_MAX_PT": 18.0,
+            "FONT_VIOLATION_MIN_CHARS": 10
+          },
+          "repair_evidence_ref": "evidence/multipage-phd-repair/repair-comparison.json",
+          "repair_evidence_sha256": "798da885a9114f0d3638826bfa6719780bd7e668352cf008aba8fa26a4f4a227"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "verification_status": "verified_against_original",
+      "confidence": "high",
+      "evidence_refs": [
+        "evidence/dynamic-pairs/comparison.json"
+      ],
+      "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+      "verified_formats": [
+        "docx",
+        "pdf"
+      ],
+      "verified_work_types": [
+        "bachelor",
+        "master",
+        "phd"
+      ],
+      "verified_policy": {
+        "FONT_VIOLATION_MIN_CHARS": 10
+      },
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "bachelor",
+        "build": 230,
+        "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+      },
+      "observed_message": "цвет которых отличается от черного",
+      "verification_by_work_type": {
+        "bachelor": {
+          "evidence_refs": [
+            "evidence/dynamic-pairs/comparison.json"
+          ],
+          "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+          "scope": {
+            "format": "docx",
+            "work_type": "bachelor",
+            "build": 230,
+            "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+          }
+        },
+        "master": {
+          "evidence_refs": [
+            "evidence/dynamic-master/comparison.json"
+          ],
+          "verification_evidence_sha256": "b7e9aec9b1ff3c24518f2eacfa4bfa2981459b34696abb2d362978482bb21858",
+          "scope": {
+            "format": "docx",
+            "work_type": "master",
+            "build": 230,
+            "limits": "Formatting fixture predicates only; bachelor title text retained to isolate mode. No master structural or full-program equivalence."
+          }
+        }
+      },
+      "verification_by_context": {
+        "docx:bachelor": {
+          "evidence_refs": [
+            "evidence/dynamic-pairs/comparison.json"
+          ],
+          "verification_evidence_sha256": "db2eae98f5b6704337b203f2ee2b2cce3e27e69e673e351d49545b571372dc58",
+          "scope": {
+            "format": "docx",
+            "work_type": "bachelor",
+            "build": 230,
+            "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+          }
+        },
+        "docx:master": {
+          "evidence_refs": [
+            "evidence/dynamic-master/comparison.json"
+          ],
+          "verification_evidence_sha256": "b7e9aec9b1ff3c24518f2eacfa4bfa2981459b34696abb2d362978482bb21858",
+          "scope": {
+            "format": "docx",
+            "work_type": "master",
+            "build": 230,
+            "limits": "Formatting fixture predicates only; bachelor title text retained to isolate mode. No master structural or full-program equivalence."
+          }
+        },
+        "pdf:phd": {
+          "evidence_refs": [
+            "evidence/multipage-phd-repair/comparison.json",
+            "evidence/format-expansion/comparison.json"
+          ],
+          "verification_evidence_sha256": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+          "evidence_hashes": {
+            "evidence/multipage-phd-repair/comparison.json": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+            "evidence/format-expansion/comparison.json": "041d26585ca3667ca732fb1a88370dbd6a0cfdb9bab1315f9103bf976289b98d"
+          },
+          "scope": {
+            "format": "pdf",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "PDF embedded Times New Roman+ToUnicode, unrotated 1–3 pages, ordinary table text and <=1 PNG per page; finite size/color/page/image predicates."
+          },
+          "verified_policy": {
+            "FONT_VIOLATION_MIN_CHARS": 10
+          }
+        },
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/multipage-phd-repair/comparison.json"
+          ],
+          "verification_evidence_sha256": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+          "evidence_hashes": {
+            "evidence/multipage-phd-repair/comparison.json": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f"
+          },
+          "scope": {
+            "format": "docx",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "Single portrait DOCX section, ordinary body text and tables/one inline PNG; formatting predicates only; special content preserved, no margin repair."
+          },
+          "verified_policy": {
+            "FONT_VIOLATION_MIN_CHARS": 10
+          },
+          "repair_evidence_ref": "evidence/multipage-phd-repair/repair-comparison.json",
+          "repair_evidence_sha256": "798da885a9114f0d3638826bfa6719780bd7e668352cf008aba8fa26a4f4a227"
+        }
+      }
+    },
+    {
+      "rule_id": "Graduate.UniversityNameInvalid",
+      "verification_status": "verified_against_original",
+      "confidence": "high",
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "master",
+        "phd"
+      ],
+      "verified_policy": {},
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee."
+      },
+      "verification_by_work_type": {
+        "master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        },
+        "phd": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "phd"
+          }
+        }
+      },
+      "automatic_repair": false,
+      "observed_message": "ошибки в названии университета",
+      "verification_by_context": {
+        "docx:master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        },
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "phd"
+          }
+        }
+      }
+    },
+    {
+      "rule_id": "Graduate.TitlePageMismatch",
+      "verification_status": "verified_against_original",
+      "confidence": "high",
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "master",
+        "phd"
+      ],
+      "verified_policy": {},
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee."
+      },
+      "verification_by_work_type": {
+        "master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        },
+        "phd": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "phd"
+          }
+        }
+      },
+      "automatic_repair": false,
+      "observed_message": "титульный лист (много несоответствий)",
+      "verification_by_context": {
+        "docx:master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        },
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "phd"
+          }
+        }
+      }
+    },
+    {
+      "rule_id": "Graduate.WorkNameInvalid",
+      "verification_status": "verified_against_original",
+      "confidence": "high",
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "phd"
+      ],
+      "verified_policy": {},
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee."
+      },
+      "verification_by_work_type": {
+        "phd": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "phd"
+          }
+        }
+      },
+      "automatic_repair": false,
+      "observed_message": "Ошибка в наименовании работы",
+      "verification_by_context": {
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "phd"
+          }
+        }
+      }
+    },
+    {
+      "rule_id": "Graduate.RequiredHeadingsMissing",
+      "verification_status": "verified_against_original",
+      "confidence": "high",
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "master",
+        "phd"
+      ],
+      "verified_policy": {},
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee."
+      },
+      "verification_by_work_type": {
+        "master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        },
+        "phd": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "phd"
+          }
+        }
+      },
+      "automatic_repair": false,
+      "observed_message": "Отсутствуют или неправильно оформлены заголовки структурных элементов",
+      "verification_by_context": {
+        "docx:master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        },
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "phd"
+          }
+        }
+      }
+    },
+    {
+      "rule_id": "Graduate.TocEmpty",
+      "verification_status": "verified_against_original",
+      "confidence": "high",
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "master",
+        "phd"
+      ],
+      "verified_policy": {},
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee."
+      },
+      "verification_by_work_type": {
+        "master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        },
+        "phd": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "phd"
+          }
+        }
+      },
+      "automatic_repair": false,
+      "observed_message": "пустые структурные элементы",
+      "verification_by_context": {
+        "docx:master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        },
+        "docx:phd": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "phd"
+          }
+        }
+      }
+    },
+    {
+      "rule_id": "Graduate.TocSmall",
+      "verification_status": "verified_against_original",
+      "confidence": "high",
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "master"
+      ],
+      "verified_policy": {},
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee."
+      },
+      "verification_by_work_type": {
+        "master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        }
+      },
+      "automatic_repair": false,
+      "observed_message": "небольшие структурные элементы",
+      "verification_by_context": {
+        "docx:master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        }
+      }
+    },
+    {
+      "rule_id": "Graduate.AbstractTooShort",
+      "verification_status": "verified_against_original",
+      "confidence": "high",
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "master"
+      ],
+      "verified_policy": {},
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee."
+      },
+      "verification_by_work_type": {
+        "master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        }
+      },
+      "automatic_repair": false,
+      "observed_message": "небольшие структурные элементы",
+      "verification_by_context": {
+        "docx:master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        }
+      }
+    },
+    {
+      "rule_id": "Graduate.ThesisSizeTooSmall",
+      "verification_status": "verified_against_original",
+      "confidence": "high",
+      "verified_formats": [
+        "docx"
+      ],
+      "verified_work_types": [
+        "master"
+      ],
+      "verified_policy": {},
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee."
+      },
+      "verification_by_work_type": {
+        "master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        }
+      },
+      "automatic_repair": false,
+      "observed_message": "Маленький объем ВКР",
+      "verification_by_context": {
+        "docx:master": {
+          "evidence_refs": [
+            "evidence/graduate-structure/comparison.json"
+          ],
+          "verification_evidence_sha256": "ced2fcc0c34a7323ad6bb735ee3a072530cee69c827ec477ab9b373f917456aa",
+          "scope": {
+            "build": 230,
+            "format": "docx",
+            "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+            "work_type": "master"
+          }
+        }
+      }
+    },
+    {
+      "rule_id": "Struct.RequiredHeadingsMissing",
+      "evidence_refs": [
+        "evidence/multipage-phd-repair/comparison.json"
+      ],
+      "verification_evidence_sha256": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+      "verification_scope": {
+        "limits": "Finite PDF abstract/PhD TOC heading predicates only"
+      },
+      "observed_message": "Отсутствуют или неправильно оформлены заголовки структурных элементов",
+      "verified_policy": {},
+      "verification_status": "verified_against_original",
+      "confidence": "high",
+      "verification_by_context": {
+        "pdf:phd": {
+          "evidence_refs": [
+            "evidence/multipage-phd-repair/comparison.json"
+          ],
+          "verification_evidence_sha256": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f",
+          "evidence_hashes": {
+            "evidence/multipage-phd-repair/comparison.json": "6e61ab264d9a1851fbe4ef789ae75472fa17826bfc69d63fc699d4ad62ea261f"
+          },
+          "scope": {
+            "format": "pdf",
+            "work_type": "phd",
+            "build": 230,
+            "limits": "PDF exact normalized abstract and ОГЛАВЛЕНИЕ heading predicates; 3/13/14-page probes, not cover/TOC correspondence/pagination."
+          },
+          "verified_policy": {}
+        }
+      },
+      "verified_formats": [
+        "pdf"
+      ],
+      "verified_work_types": [
+        "phd"
       ]
     }
-  ]
+  ],
+  "verification_status": "partially_verified_against_original",
+  "target_sha256": "0bb43cebc4c7ee196913d2ea2240f7bc53aaac1e6b8f6394e6201024a108b8cb",
+  "superseding_evidence": "evidence/2026-10-14/openjpeg-table-verification.json",
+  "correction": "The eight rows previously labeled threshold tables are byte-exact OpenJPEG DWT normalization tables. No thesis threshold follows from them."
 }

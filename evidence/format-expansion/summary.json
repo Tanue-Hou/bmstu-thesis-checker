@@ -1,0 +1,29 @@
+{
+  "native_cases": 29,
+  "formats": {
+    "docx": 19,
+    "pdf": 10
+  },
+  "verified_rule_context_pairs": 10,
+  "margin_targets_mm": {
+    "left": 25,
+    "right": 10,
+    "top": 20,
+    "bottom": 20
+  },
+  "margin_tolerance_mm": 0.2,
+  "left_margin_allowed_twips": [
+    1406,
+    1428
+  ],
+  "single_attribute_modification_records": 16,
+  "pdf_upper_font_rule": {
+    "case": "pdf_font18_5",
+    "original_upper_font_warning": false,
+    "status": "not_promoted",
+    "reason": "DOCX upper font predicate did not transfer to this PDF"
+  },
+  "complex_clean_native_pass": true,
+  "pdf_is_not_a_full_thesis_fixture": true,
+  "automatic_pdf_or_table_repair": false
+}

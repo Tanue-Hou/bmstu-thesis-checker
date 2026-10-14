@@ -1,0 +1,337 @@
+{
+  "native_cases_by_mode": {
+    "master": 12,
+    "phd": 5
+  },
+  "promoted_predicates": {
+    "Graduate.UniversityNameInvalid": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "repair_combined_after",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_cover",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_baseline",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_correct_heading",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      }
+    },
+    "Graduate.TitlePageMismatch": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "repair_combined_after",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_cover",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_baseline",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_correct_heading",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      }
+    },
+    "Graduate.WorkNameInvalid": {
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_baseline",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_phd_correct_heading",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      }
+    },
+    "Graduate.RequiredHeadingsMissing": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_cover",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_phd_structure",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_correct_heading",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      }
+    },
+    "Graduate.TocEmpty": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_cover",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_toc_entries5",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_phd_structure",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_correct_heading",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      }
+    },
+    "Graduate.TocSmall": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_toc_entries5",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_toc_entries10",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_toc_entries11",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      }
+    },
+    "Graduate.AbstractTooShort": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_cover",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      }
+    },
+    "Graduate.ThesisSizeTooSmall": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_toc47",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_chars43199",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_pages47",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_pages48",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_toc48",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_chars43200",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      }
+    },
+    "Word.LeftMarginInvalid": {
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_phd_correct_heading",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_left25",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      }
+    }
+  },
+  "master_diagnostic_progression": {
+    "baseline": 6,
+    "cover_corrected": 4,
+    "structure_corrected": 1,
+    "volume_corrected": 0
+  },
+  "master_size": {
+    "minimum_equivalent_pages": 48,
+    "characters_per_page": 900,
+    "exact_text_boundary": 43200,
+    "counting_range": "abstract heading inclusive to first appendix heading exclusive; each paragraph trimmed; UTF-16 units",
+    "cached_docx_page_count_used": false,
+    "toc_appendix_a_page_checked": true
+  },
+  "phd": {
+    "ui_mode": "НКР аспиранта",
+    "required_toc_heading": "ОГЛАВЛЕНИЕ",
+    "work_name": "НАУЧНО-КВАЛИФИКАЦИОННАЯ РАБОТА",
+    "characters_100000_floor_rejected_for_docx": true,
+    "left_margin_mm_passed": 25,
+    "left_margin_mm_failed": 30,
+    "margin_tolerance": "unmeasured",
+    "diagnostic_progression": [
+      9,
+      1,
+      0
+    ]
+  },
+  "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+  "automatic_content_repair": false
+}

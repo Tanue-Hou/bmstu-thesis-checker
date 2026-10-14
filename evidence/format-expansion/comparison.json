@@ -1,0 +1,773 @@
+{
+  "cases": {
+    "margin_24": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "162fc155c93a85b419af28b50d8b999ed7ee371428064d67ca554ef2f64a449d",
+      "capture_sha256": "765e3cbe37b521f49d896cd76b1d455c2ffa50a1d0bd9625d383136abafe49f4",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_24.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+      "local_rules": [
+        "Word.LeftMarginInvalid"
+      ],
+      "parameters": {
+        "left_margin_mm_requested": 24,
+        "left_margin_twips": 1361
+      }
+    },
+    "margin_24_9": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "2b823b2d06f6f57f8f923b614356a7710bb11fa1d4ed1a720165eaa5db0a061e",
+      "capture_sha256": "e45576aad178deddc323a0d565d31bffcec1ae0eb67403fa9517752893a48e01",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_24_9.docx Проверка закончена. Замечаний нет.",
+      "local_rules": [],
+      "parameters": {
+        "left_margin_mm_requested": 24.9,
+        "left_margin_twips": 1412
+      }
+    },
+    "margin_25_1": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "e8519ebdce468f473334dc1ca3b02c7cac20db84211d19d36a7a23f150178b80",
+      "capture_sha256": "3fa556b6333f9965f924d39943af591f37c78a90361d68439f27b10b3ac29382",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_25_1.docx Проверка закончена. Замечаний нет.",
+      "local_rules": [],
+      "parameters": {
+        "left_margin_mm_requested": 25.1,
+        "left_margin_twips": 1423
+      }
+    },
+    "margin_26": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "e8c93084398d54935d5bf33a73a71eee07c039fe59161645ccd6d7879251fbaf",
+      "capture_sha256": "36b978dc4a38f876b7a65e623814c1f6fc21fe3f3461ef5dbad6e915a7af91ae",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_26.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+      "local_rules": [
+        "Word.LeftMarginInvalid"
+      ],
+      "parameters": {
+        "left_margin_mm_requested": 26,
+        "left_margin_twips": 1474
+      }
+    },
+    "complex_clean": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+      "capture_sha256": "740720a698b54e99055d97347a3b38e4c8faf8e70b4df596e6b9944f400b3df7",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\complex_clean.docx Проверка закончена. Замечаний нет.",
+      "local_rules": [],
+      "parameters": {
+        "table_font_pt": 14,
+        "image_dimensions": [
+          1600,
+          800
+        ]
+      }
+    },
+    "complex_table7": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "400b9eaee892031be4ec0c8595066a215bf426755727748b0ef330da70e7cb9e",
+      "capture_sha256": "32b2601843f363cedcd7d4516d4a1ccea73cbc3eca6d9ec4d2fe1323b126773b",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\complex_table7.docx 1. ** В документе много символов, размер которых меньше 8 пт: \"Результаты обработки данных и анализа исследования\", \"Результаты обработки данных и анализа исследования\", \"Результаты обработки данных и анализа исследования\", \"Результаты обработки данных и анализа исследования\", \"Результаты обработки данных и анализа исследования\", \"Результаты обработки данных и анализа исследования\".",
+      "local_rules": [
+        "Word.FontSizeTooSmall"
+      ],
+      "parameters": {
+        "table_font_pt": 7,
+        "image_dimensions": [
+          1600,
+          800
+        ]
+      }
+    },
+    "complex_image_above": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "fbfd3d29faf4ac2b22abf41d2254ebe1364f828019f5acb8b59f3fc83193d4a7",
+      "capture_sha256": "e5d6d949838828dc89bdb6e02b0853fb4b6cdc6e81d36533d00ec38796f4247e",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\complex_image_above.docx 1. *** Документ содержит рисунки большого размера (больше 16000000 пикселей): \"ультаты обработки данных и анализа исследования.||\".",
+      "local_rules": [
+        "Pic.PixelSizeTooLarge"
+      ],
+      "parameters": {
+        "table_font_pt": 14,
+        "image_dimensions": [
+          4001,
+          4000
+        ]
+      }
+    },
+    "pdf_clean": {
+      "format": "pdf",
+      "work_type": "phd",
+      "input_sha256": "227148cc44f4575b65e7b7027f2d32dcb8539f3349986feab04a2d475da74251",
+      "capture_sha256": "a49ffa544e31da6455e02f233b73e1e493853fb62b191ab8d356c304d20702b1",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\pdf_clean.pdf 1. *** Допущены ошибки в названии университета на титульном листе. 2. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 3. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 4. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 5. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\". 6. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\". 7. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\".",
+      "local_rules": [
+        "Struct.MissingCitations",
+        "Struct.RequiredHeadingsMissing"
+      ],
+      "parameters": {
+        "font_pt": 14,
+        "page_mm": [
+          210,
+          297
+        ],
+        "text_color_rgb": [
+          0,
+          0,
+          0
+        ],
+        "embedded_font": "Windows Times New Roman"
+      }
+    },
+    "pdf_font7": {
+      "format": "pdf",
+      "work_type": "phd",
+      "input_sha256": "031e1edcbe627a2d8c31aafdd5803d01ac3b8c34087e7a76f673ba4fb9476309",
+      "capture_sha256": "091276a0eb6e29c443f61fde6d83425e0cdfd235a60ada2fc2309e91d61d9d03",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\pdf_font7.pdf 1. *** Допущены ошибки в названии университета на титульном листе. 2. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 3. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 4. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 5. ** В документе много символов, размер которых меньше 8 пт: Стр. 1 \"НАУЧНО­КВАЛИФИКАЦИОННАЯ РАБОТА|ОГЛАВЛЕНИЕ|ВВЕДЕНИЕ\". 6. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\". 7. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\". 8. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\".",
+      "local_rules": [
+        "Word.FontSizeTooSmall",
+        "Struct.MissingCitations",
+        "Struct.RequiredHeadingsMissing"
+      ],
+      "parameters": {
+        "font_pt": 7,
+        "page_mm": [
+          210,
+          297
+        ],
+        "text_color_rgb": [
+          0,
+          0,
+          0
+        ],
+        "embedded_font": "Windows Times New Roman"
+      }
+    },
+    "pdf_font8": {
+      "format": "pdf",
+      "work_type": "phd",
+      "input_sha256": "da3668fd3b05553395b8fd72030259a8199d3f4c32bbb75b1c194d64438fb92e",
+      "capture_sha256": "5627f935c9f0e5dd79a3c032fc947caf0ad89fdf721aaa3f7236b40aabd883a9",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\pdf_font8.pdf 1. *** Допущены ошибки в названии университета на титульном листе. 2. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 3. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 4. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 5. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\". 6. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\". 7. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\".",
+      "local_rules": [
+        "Struct.MissingCitations",
+        "Struct.RequiredHeadingsMissing"
+      ],
+      "parameters": {
+        "font_pt": 8,
+        "page_mm": [
+          210,
+          297
+        ],
+        "text_color_rgb": [
+          0,
+          0,
+          0
+        ],
+        "embedded_font": "Windows Times New Roman"
+      }
+    },
+    "pdf_font18": {
+      "format": "pdf",
+      "work_type": "phd",
+      "input_sha256": "10dccfb0752fcf0f6d2778837ae4e6c56550617f2f7bb810e15c2b5a7c2d1d15",
+      "capture_sha256": "37c0ed796eff182e36eb01fc6c54a0e7ef5272b65027e785cc9aac30ff344268",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\pdf_font18.pdf 1. *** Допущены ошибки в названии университета на титульном листе. 2. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 3. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 4. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 5. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\". 6. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\". 7. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\".",
+      "local_rules": [
+        "Struct.MissingCitations",
+        "Struct.RequiredHeadingsMissing"
+      ],
+      "parameters": {
+        "font_pt": 18,
+        "page_mm": [
+          210,
+          297
+        ],
+        "text_color_rgb": [
+          0,
+          0,
+          0
+        ],
+        "embedded_font": "Windows Times New Roman"
+      }
+    },
+    "pdf_font18_5": {
+      "format": "pdf",
+      "work_type": "phd",
+      "input_sha256": "3ba262dfbd3f390013b5bb54db5de0d65f6f131624fcd70a3f5e8c071274627f",
+      "capture_sha256": "19f7f3b4e739c50a90c16eb325d5eb7ebcab2a9989523204e3e8f91348e4a546",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\pdf_font18_5.pdf 1. *** Допущены ошибки в названии университета на титульном листе. 2. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 3. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 4. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 5. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\". 6. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\". 7. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\".",
+      "local_rules": [
+        "Struct.MissingCitations",
+        "Struct.RequiredHeadingsMissing"
+      ],
+      "parameters": {
+        "font_pt": 18.5,
+        "page_mm": [
+          210,
+          297
+        ],
+        "text_color_rgb": [
+          0,
+          0,
+          0
+        ],
+        "embedded_font": "Windows Times New Roman"
+      }
+    },
+    "pdf_letter": {
+      "format": "pdf",
+      "work_type": "phd",
+      "input_sha256": "9fd17b662a376808041fc60fb35f40f3b7104eabda77730f8546e5af58b1d490",
+      "capture_sha256": "31caae5d29cb261565fc0dd2f92fcb6bce20a8385d9f715564534d0d5ba35cbd",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\pdf_letter.pdf 1. *** Допущены ошибки в названии университета на титульном листе. 2. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 3. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 4. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 5. Документ содержит страницы, размеры которых не соответствуют формату А4: Стр. 1. 6. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\". 7. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\". 8. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\".",
+      "local_rules": [
+        "Struct.MissingCitations",
+        "Word.PageSizeNotA4",
+        "Struct.RequiredHeadingsMissing"
+      ],
+      "parameters": {
+        "font_pt": 14,
+        "page_mm": [
+          216,
+          279
+        ],
+        "text_color_rgb": [
+          0,
+          0,
+          0
+        ],
+        "embedded_font": "Windows Times New Roman"
+      }
+    },
+    "pdf_red": {
+      "format": "pdf",
+      "work_type": "phd",
+      "input_sha256": "54be818561862e6dbca43ddce5d4ff166f564bdd87b4ca2b4b570e613a586b28",
+      "capture_sha256": "e7f7da32c168628fc4e7ef155edd278dfe92f865636574ad2f4392100b4c0513",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\pdf_red.pdf 1. *** Допущены ошибки в названии университета на титульном листе. 2. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 3. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 4. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 5. В документе много символов, цвет которых отличается от черного: Стр. 1 \"НАУЧНО­КВАЛИФИКАЦИОННАЯ РАБОТА|ОГЛАВЛЕНИЕ|ВВЕДЕНИЕ\". 6. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\". 7. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\". 8. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\".",
+      "local_rules": [
+        "Struct.MissingCitations",
+        "Word.TextColorNotBlack",
+        "Struct.RequiredHeadingsMissing"
+      ],
+      "parameters": {
+        "font_pt": 14,
+        "page_mm": [
+          210,
+          297
+        ],
+        "text_color_rgb": [
+          1,
+          0,
+          0
+        ],
+        "embedded_font": "Windows Times New Roman"
+      }
+    },
+    "margin_24_5": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "5257f1542ecd7bddde9dba7a2a0376c934289dd1416dc4ee20b67c906fb21d17",
+      "capture_sha256": "fc8cb1077f70b9c0220875896151675faae4dfb4509c7b5933d4564002e81b29",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_24_5.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+      "local_rules": [
+        "Word.LeftMarginInvalid"
+      ],
+      "parameters": {
+        "left_margin_mm_requested": 24.5,
+        "left_margin_twips": 1389
+      }
+    },
+    "margin_25_5": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "52c466ab8e5ef20dd6b771e9f0a28f7e47d6607ed05b25572a2ae8aa4684f3aa",
+      "capture_sha256": "7f4b90570dd3b3ea0ab784397bb4589976dcaed314dd0f19f0348de39286746d",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_25_5.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+      "local_rules": [
+        "Word.LeftMarginInvalid"
+      ],
+      "parameters": {
+        "left_margin_mm_requested": 25.5,
+        "left_margin_twips": 1446
+      }
+    },
+    "margin_twips1405": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "8c0d9593f77704eb6430cbfc630d58820976fdf3ef7e1940625cefc62b24eea3",
+      "capture_sha256": "7352f6985bcf61c9197a1126db386f14ad3759dd8a819e19f1687049f02c51cb",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_twips1405.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+      "local_rules": [
+        "Word.LeftMarginInvalid"
+      ],
+      "parameters": {
+        "axis": "left",
+        "left_margin_twips_requested": 1405,
+        "left_margin_twips": 1405
+      }
+    },
+    "margin_twips1406": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "7fd28360e33c1fb2d4ec339abdf03a6b3742898fadeed25a1eb0aba74fabb667",
+      "capture_sha256": "ad9b0a813b7195b8c84c247c181ed68538894c4f50470fb16d33bfc1707e88a2",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_twips1406.docx Проверка закончена. Замечаний нет.",
+      "local_rules": [],
+      "parameters": {
+        "axis": "left",
+        "left_margin_twips_requested": 1406,
+        "left_margin_twips": 1406
+      }
+    },
+    "margin_twips1428": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "75d769a9647c378b0275d7a19852940fe360d87c2f1fbcc2478b5b7fce48d749",
+      "capture_sha256": "9d556e63b5464190fa04c1b707366f1fb0b54a14b2d0af06b8831db4d4171a15",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_twips1428.docx Проверка закончена. Замечаний нет.",
+      "local_rules": [],
+      "parameters": {
+        "axis": "left",
+        "left_margin_twips_requested": 1428,
+        "left_margin_twips": 1428
+      }
+    },
+    "margin_twips1429": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "19162ecc75471d5931b8396915039dd837e720a6d538a2722246f97e8c0b1d34",
+      "capture_sha256": "dcc1688dfcdc211ca749cdcd7a19f41e4788eb95df1f971f034907962d21c27e",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_twips1429.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+      "local_rules": [
+        "Word.LeftMarginInvalid"
+      ],
+      "parameters": {
+        "axis": "left",
+        "left_margin_twips_requested": 1429,
+        "left_margin_twips": 1429
+      }
+    },
+    "margin_right_10_1": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "af3bcdf8014cfa35062f1f0b5ab8ec55c4ac1322a0463947aee14805697673c2",
+      "capture_sha256": "6d3d34e43886c5f71b8a0351634021720eb61b04958f2cf281759c528184eaf6",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_right_10_1.docx Проверка закончена. Замечаний нет.",
+      "local_rules": [],
+      "parameters": {
+        "axis": "right",
+        "right_margin_mm_requested": 10.1,
+        "right_margin_twips": 573
+      }
+    },
+    "margin_right_10_3": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "e29e5355237ce9438a803ad17ca003c45a5dd01371840f6913a200f62d24c3cd",
+      "capture_sha256": "b3a2aef2b8d7d7e4513351fb925ca6b59bb56a9d9b956f63a093bccddef4f933",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_right_10_3.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+      "local_rules": [
+        "Word.RightMarginInvalid"
+      ],
+      "parameters": {
+        "axis": "right",
+        "right_margin_mm_requested": 10.3,
+        "right_margin_twips": 584
+      }
+    },
+    "margin_top_20_1": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "714931141c0e3e5f8b39d73252ad5c3d822f2e41d31d45c0d1b1cd807133620b",
+      "capture_sha256": "99c81463e9556d18b6011bfe1cfe3edaa6e51b1c46dc0bb8c07ac92e4fa36891",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_top_20_1.docx Проверка закончена. Замечаний нет.",
+      "local_rules": [],
+      "parameters": {
+        "axis": "top",
+        "top_margin_mm_requested": 20.1,
+        "top_margin_twips": 1140
+      }
+    },
+    "margin_top_20_3": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "c521b703baa9de8a8da81179e4567a62038d112247988a772ebb76e1492ec327",
+      "capture_sha256": "25fa16241b170cf203bc195c8fff6af92fa20711663669c99357040da8bbe3e4",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_top_20_3.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+      "local_rules": [
+        "Word.TopMarginInvalid"
+      ],
+      "parameters": {
+        "axis": "top",
+        "top_margin_mm_requested": 20.3,
+        "top_margin_twips": 1151
+      }
+    },
+    "margin_bottom_20_1": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "332c6210818bdb33e75327d660e2d0f1d4f958ed3e4bfe147b8a950c4e22fde7",
+      "capture_sha256": "0d97c0e1b729fcee7bb1451166b83557be0866d6893d1368e7a6ce3713d4b411",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_bottom_20_1.docx Проверка закончена. Замечаний нет.",
+      "local_rules": [],
+      "parameters": {
+        "axis": "bottom",
+        "bottom_margin_mm_requested": 20.1,
+        "bottom_margin_twips": 1140
+      }
+    },
+    "margin_bottom_20_3": {
+      "format": "docx",
+      "work_type": "phd",
+      "input_sha256": "294aaa043399dc4d982fe8d533b9f17e3e90a84bb3b37e7aabc657448f379a18",
+      "capture_sha256": "0a742b97acf297008a073f3286ab615c722d38fa94d954c57ef61d5784b05181",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\margin_bottom_20_3.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+      "local_rules": [
+        "Word.BottomMarginInvalid"
+      ],
+      "parameters": {
+        "axis": "bottom",
+        "bottom_margin_mm_requested": 20.3,
+        "bottom_margin_twips": 1151
+      }
+    },
+    "pdf_complex_clean": {
+      "format": "pdf",
+      "work_type": "phd",
+      "input_sha256": "29e324be397565051efa305ee794df67d0dcdd1dd34a981670af75df592a031c",
+      "capture_sha256": "79c183b3bf9d8e7e4dfaae2f4ec8f13527955fb2cd33d4694e0cfa93f687414b",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\pdf_complex_clean.pdf 1. *** Допущены ошибки в названии университета на титульном листе. 2. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 3. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 4. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 5. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\". 6. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\". 7. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\". 8. * Разберитесь с источником (возможно, чего-то не хватает): \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\".",
+      "local_rules": [
+        "Struct.MissingCitations",
+        "Struct.RequiredHeadingsMissing"
+      ],
+      "parameters": {
+        "table_font_pt": 14,
+        "image_dimensions": [
+          1600,
+          800
+        ],
+        "embedded_font": "Windows Times New Roman"
+      }
+    },
+    "pdf_complex_table7": {
+      "format": "pdf",
+      "work_type": "phd",
+      "input_sha256": "5e4196e50e4f5e5a02a074710a337518e3a5642673fe286106f8a39403ea4a02",
+      "capture_sha256": "03172d363d3583d9ec60b6dcdcebf0c92820350195d69064c2bbb62680297c6e",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\pdf_complex_table7.pdf 1. *** Допущены ошибки в названии университета на титульном листе. 2. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 3. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 4. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 5. ** В документе много символов, размер которых меньше 8 пт: Стр. 1 \"Метод анализа данных Метод анализа данных|Метод ан\". 6. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\". 7. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\". 8. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\". 9. * Разберитесь с источником (возможно, чего-то не хватает): \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\".",
+      "local_rules": [
+        "Word.FontSizeTooSmall",
+        "Struct.MissingCitations",
+        "Struct.RequiredHeadingsMissing"
+      ],
+      "parameters": {
+        "table_font_pt": 7,
+        "image_dimensions": [
+          1600,
+          800
+        ],
+        "embedded_font": "Windows Times New Roman"
+      }
+    },
+    "pdf_complex_image_above": {
+      "format": "pdf",
+      "work_type": "phd",
+      "input_sha256": "3f6e2acd82d2725035016122f70e87ed08a1420e400e785c1d08f24fe5561724",
+      "capture_sha256": "c7314afc14c3fbe092d970a27906ab8c0600202ad28ddabb42ab5dd7e40a7f92",
+      "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\pdf_complex_image_above.pdf 1. *** Допущены ошибки в названии университета на титульном листе. 2. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 3. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 4. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 5. *** Документ содержит рисунки большого размера (больше 40 Mb): Стр. 1 \"а данных|Метод анализа данных Метод анализа данных\". 6. *** Документ содержит рисунки большого размера (больше 16000000 пикселей): Стр. 1 \"а данных|Метод анализа данных Метод анализа данных\". 7. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\". 8. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\". 9. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\". 10. * Разберитесь с источником (возможно, чего-то не хватает): \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\".",
+      "local_rules": [
+        "Pic.PixelSizeTooLarge",
+        "Struct.MissingCitations",
+        "Struct.RequiredHeadingsMissing"
+      ],
+      "parameters": {
+        "table_font_pt": 14,
+        "image_dimensions": [
+          4001,
+          4000
+        ],
+        "embedded_font": "Windows Times New Roman"
+      }
+    }
+  },
+  "checks": {
+    "Word.LeftMarginInvalid": {
+      "docx:phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "margin_24",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "margin_26",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "margin_24_5",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "margin_25_5",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "margin_twips1405",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "margin_twips1429",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "margin_24_9",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "margin_25_1",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "margin_twips1406",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "margin_twips1428",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Word.RightMarginInvalid": {
+      "docx:phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "margin_right_10_3",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "margin_right_10_1",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Word.TopMarginInvalid": {
+      "docx:phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "margin_top_20_3",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "margin_top_20_1",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Word.BottomMarginInvalid": {
+      "docx:phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "margin_bottom_20_3",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "margin_bottom_20_1",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Word.FontSizeTooSmall": {
+      "docx:phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "complex_table7",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "complex_clean",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pdf:phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "pdf_font7",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "pdf_complex_table7",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "pdf_font8",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "pdf_clean",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "pdf_complex_clean",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Pic.PixelSizeTooLarge": {
+      "docx:phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "complex_image_above",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "complex_clean",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pdf:phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "pdf_complex_image_above",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "pdf_complex_clean",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Word.PageSizeNotA4": {
+      "pdf:phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "pdf_letter",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "pdf_clean",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Word.TextColorNotBlack": {
+      "pdf:phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "pdf_red",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "pdf_clean",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    }
+  },
+  "unresolved": [
+    {
+      "case": "pdf_font18_5",
+      "original_upper_font_warning": false,
+      "status": "not_promoted",
+      "reason": "DOCX upper font predicate did not transfer to this PDF"
+    }
+  ]
+}

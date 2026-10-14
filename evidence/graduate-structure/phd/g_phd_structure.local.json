@@ -1,0 +1,271 @@
+{
+  "work_type_policy": {
+    "native_mode": "НКР аспиранта",
+    "toc_heading": "ОГЛАВЛЕНИЕ",
+    "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied to DOCX.",
+    "manual_review": [
+      "Doctoral left margin: paired 25 mm pass versus 30 mm failure; other margins 10/20/20 mm; tolerance unmeasured",
+      "Not a general dissertation standard or original-program certification"
+    ]
+  },
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\graduate-structure\\g_phd_structure.docx",
+  "file_type": "docx",
+  "work_type": "phd",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {
+    "resolved": [
+      "docDefaults",
+      "paragraph_basedOn",
+      "character_basedOn",
+      "direct"
+    ],
+    "unresolved": [
+      "conditional_table_styles",
+      "numbering_properties",
+      "theme_font_and_color"
+    ]
+  },
+  "summary": {
+    "total": 3,
+    "critical": 0,
+    "major": 1,
+    "warning": 0,
+    "info": 2
+  },
+  "review_summary": {
+    "status_zh": "不建议直接提交，需要先处理必改项和较高严重度问题。",
+    "must_fix_count": 0,
+    "should_fix_count": 0,
+    "manual_review_count": 3,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 0,
+    "critical_or_major_count": 1
+  },
+  "groups": {
+    "by_severity": {
+      "info": [
+        "Graduate.RequiredHeadingsMissing",
+        "Word.LeftMarginInvalid"
+      ],
+      "major": [
+        "Graduate.TocEmpty"
+      ]
+    },
+    "by_module": {
+      "structure": [
+        "Graduate.RequiredHeadingsMissing",
+        "Graduate.TocEmpty"
+      ],
+      "word_format": [
+        "Word.LeftMarginInvalid"
+      ]
+    },
+    "by_fix_priority": {
+      "manual_review": [
+        "Graduate.RequiredHeadingsMissing",
+        "Graduate.TocEmpty",
+        "Word.LeftMarginInvalid"
+      ]
+    },
+    "by_location": {
+      "未定位": [
+        "Graduate.RequiredHeadingsMissing",
+        "Graduate.TocEmpty"
+      ],
+      "section 1": [
+        "Word.LeftMarginInvalid"
+      ]
+    },
+    "antiplagiarism_related": []
+  },
+  "fix_checklist": {
+    "must_fix": [],
+    "should_fix": [],
+    "manual_review": [
+      {
+        "rule_id": "Graduate.RequiredHeadingsMissing",
+        "label_zh": "需要人工确认",
+        "title_zh": "缺少可识别的结构标题",
+        "severity": "info",
+        "module": "structure",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "根据 missing 字段核对正文标题；博士目录为 ОГЛАВЛЕНИЕ，硕士为 СОДЕРЖАНИЕ。附录应有真实内容。",
+        "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Graduate.TocEmpty",
+        "label_zh": "需要人工确认",
+        "title_zh": "目录可识别条目不足5条",
+        "severity": "major",
+        "module": "structure",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "更新真实目录及页码。原程序会把不足5条的目录归入空结构，不一定表示文件完全没有目录。",
+        "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Word.LeftMarginInvalid",
+        "label_zh": "需要人工确认",
+        "title_zh": "左页边距不正确",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "section 1",
+        "fix_suggestion_zh": "博士按真实学校模板人工核对左边距；本轮25毫米通过，但尚未测定容差。不使用副本自动修复修改边距。",
+        "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 左 3.0cm。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Graduate.TocEmpty",
+      "module": "structure",
+      "severity": "major",
+      "message": "** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\".",
+      "russian_message": "** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\".",
+      "title_zh": "目录可识别条目不足5条",
+      "explanation_zh": "原程序 build 230 的普通正文 DOCX 样例判据；适用模式和验证边界见 verification_scope。",
+      "trigger_reason_zh": "见原始诊断及 threshold 中的实测计数；静态候选边界不等于完整动态验证。",
+      "fix_suggestion_zh": "更新真实目录及页码。原程序会把不足5条的目录归入空结构，不一定表示文件完全没有目录。",
+      "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+        "work_type": "phd"
+      },
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "native_scope_supported": true,
+        "native_predicate_supported": true,
+        "recognized_entries": 0,
+        "minimum": 5
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    },
+    {
+      "rule_id": "Graduate.RequiredHeadingsMissing",
+      "module": "structure",
+      "severity": "info",
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"ОГЛАВЛЕНИЕ\".",
+      "russian_message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"ОГЛАВЛЕНИЕ\".",
+      "title_zh": "缺少可识别的结构标题",
+      "explanation_zh": "原程序 build 230 的普通正文 DOCX 样例判据；适用模式和验证边界见 verification_scope。",
+      "trigger_reason_zh": "见原始诊断及 threshold 中的实测计数；静态候选边界不等于完整动态验证。",
+      "fix_suggestion_zh": "根据 missing 字段核对正文标题；博士目录为 ОГЛАВЛЕНИЕ，硕士为 СОДЕРЖАНИЕ。附录应有真实内容。",
+      "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_scope": {
+        "build": 230,
+        "format": "docx",
+        "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee.",
+        "work_type": "phd"
+      },
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [
+        "evidence/graduate-structure/comparison.json"
+      ],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "native_scope_supported": true,
+        "native_predicate_supported": true,
+        "missing": [
+          "ОГЛАВЛЕНИЕ"
+        ]
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    },
+    {
+      "rule_id": "Word.LeftMarginInvalid",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Документ содержит страницы, размеры левого поля на которых не соответствуют требованиям или отступ первой строки абзаца не равен 1.25…1.27 см:",
+      "russian_message": "Документ содержит страницы, размеры левого поля на которых не соответствуют требованиям или отступ первой строки абзаца не равен 1.25…1.27 см:",
+      "title_zh": "左页边距不正确",
+      "explanation_zh": "博士科研资格论文的单变量样例中，左边距30毫米报警、25毫米通过；右／上／下保持10／20／20毫米。其他模式和偏差需看验证状态。",
+      "trigger_reason_zh": "本地测量与当前模式边距策略不符。仅已实测的博士30毫米反例可标为已验证，其他情况为本地策略提示。",
+      "fix_suggestion_zh": "博士按真实学校模板人工核对左边距；本轮25毫米通过，但尚未测定容差。不使用副本自动修复修改边距。",
+      "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 左 3.0cm。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_scope": {},
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 25.0,
+        "unit": "mm",
+        "actual": 30.00375,
+        "native_margin_probe_supported": true
+      },
+      "location": {
+        "section": 1
+      },
+      "location_summary_zh": "section 1",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "10_margins/margin_left_20mm.docx"
+      ]
+    }
+  ]
+}

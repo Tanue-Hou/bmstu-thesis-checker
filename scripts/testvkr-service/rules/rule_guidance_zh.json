@@ -19,9 +19,9 @@
   },
   "Word.FontSizeTooSmall": {
     "title_zh": "字号过小",
-    "explanation_zh": "文档中存在大量小于 12pt 的字符，可能被认为是规避审查或格式不合格。",
+    "explanation_zh": "字符字号低于当前检查下限。程序的异常字号下限不等于学校要求的正文字号。",
     "trigger_reason_zh": "字符字号低于规则下限并超过数量阈值。",
-    "fix_suggestion_zh": "将正文、表格或标注中的异常小字号调整到 12pt 或学校要求字号。",
+    "fix_suggestion_zh": "先核对学校模板及文字用途，再处理异常小字；不要把全文统一改成检查下限。",
     "word_path_zh": "开始 -> 字体 -> 字号。",
     "fix_priority": "must_fix",
     "affects_antiplagiarism": true
@@ -81,10 +81,10 @@
     "affects_antiplagiarism": true
   },
   "Pic.PixelSizeTooLarge": {
-    "title_zh": "图片像素尺寸过大",
-    "explanation_zh": "图片像素宽度超过规则阈值，可能导致文件过大或版面异常。",
-    "trigger_reason_zh": "检测到图片宽度像素值超过当前阈值。",
-    "fix_suggestion_zh": "将图片缩放、裁剪或重新导出为适合论文页面宽度的分辨率。",
+    "title_zh": "图片总像素数过大",
+    "explanation_zh": "图片原始宽度乘以高度超过总像素数限制；与论文中显示的厘米宽度不同。",
+    "trigger_reason_zh": "原始宽度乘以高度超过当前总像素数阈值；阈值来自静态代码，对照验证仍待完成。",
+    "fix_suggestion_zh": "根据打印尺寸与清晰度需求重新导出或压缩原图；仅在 Word 中缩小显示尺寸不会降低原图像素数。",
     "word_path_zh": "图片格式 -> 大小；必要时在图片编辑器中重新导出后替换。",
     "fix_priority": "should_fix",
     "affects_antiplagiarism": false
@@ -136,11 +136,11 @@
   },
   "Word.LeftMarginInvalid": {
     "title_zh": "左页边距不正确",
-    "explanation_zh": "左页边距通常应为 30mm，用于装订侧留白。",
-    "trigger_reason_zh": "检测到 section 左页边距与 30mm 不一致。",
-    "fix_suggestion_zh": "将左页边距设置为 3.0cm。",
+    "explanation_zh": "博士科研资格论文的单变量样例中，左边距30毫米报警、25毫米通过；右／上／下保持10／20／20毫米。其他模式和偏差需看验证状态。",
+    "trigger_reason_zh": "本地测量与当前模式边距策略不符。仅已实测的博士30毫米反例可标为已验证，其他情况为本地策略提示。",
+    "fix_suggestion_zh": "博士按真实学校模板人工核对左边距；本轮25毫米通过，但尚未测定容差。不使用副本自动修复修改边距。",
     "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 左 3.0cm。",
-    "fix_priority": "must_fix",
+    "fix_priority": "manual_review",
     "affects_antiplagiarism": false
   },
   "Word.RightMarginInvalid": {
@@ -213,6 +213,96 @@
     "fix_suggestion_zh": "补充该章节的说明、论证、公式解释、图表说明或删除不必要的小节。",
     "word_path_zh": "导航窗格 -> 定位对应标题；引用 -> 更新目录。",
     "fix_priority": "should_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.TextColorNotBlack": {
+    "title_zh": "文字颜色不是黑色",
+    "explanation_zh": "主文档中存在非黑色文字；需核对学校模板及有意保留的强调或链接。",
+    "trigger_reason_zh": "非黑色文字达到当前规则的字符数条件，已在 DOCX 本科模式完成正负样本对照。",
+    "fix_suggestion_zh": "可预览后将普通文字设为黑色；副本修复会跳过超链接和特殊对象。",
+    "word_path_zh": "开始 → 字体 → 字体颜色 → 黑色。",
+    "fix_priority": "should_fix",
+    "affects_antiplagiarism": false
+  },
+  "Graduate.UniversityNameInvalid": {
+    "title_zh": "封面校名不匹配",
+    "explanation_zh": "原程序 build 230 的普通正文 DOCX 样例判据；适用模式和验证边界见 verification_scope。",
+    "trigger_reason_zh": "见原始诊断及 threshold 中的实测计数；静态候选边界不等于完整动态验证。",
+    "fix_suggestion_zh": "根据真实学校模板填写完整校名、主管机构和单位名称；简写不一定能通过原程序。",
+    "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Graduate.TitlePageMismatch": {
+    "title_zh": "封面缺项或多处不匹配",
+    "explanation_zh": "原程序 build 230 的普通正文 DOCX 样例判据；适用模式和验证边界见 verification_scope。",
+    "trigger_reason_zh": "见原始诊断及 threshold 中的实测计数；静态候选边界不等于完整动态验证。",
+    "fix_suggestion_zh": "核对主管机构、学院、系、工作名称、题目、作者、导师和规范审核；保留真实信息和签字要求。",
+    "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Graduate.WorkNameInvalid": {
+    "title_zh": "工作名称与论文模式不符",
+    "explanation_zh": "原程序 build 230 的普通正文 DOCX 样例判据；适用模式和验证边界见 verification_scope。",
+    "trigger_reason_zh": "见原始诊断及 threshold 中的实测计数；静态候选边界不等于完整动态验证。",
+    "fix_suggestion_zh": "博士科研资格论文按 НАУЧНО-КВАЛИФИКАЦИОННАЯ РАБОТА 核对；硕士按实际学校模板填写。",
+    "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Graduate.RequiredHeadingsMissing": {
+    "title_zh": "缺少可识别的结构标题",
+    "explanation_zh": "原程序 build 230 的普通正文 DOCX 样例判据；适用模式和验证边界见 verification_scope。",
+    "trigger_reason_zh": "见原始诊断及 threshold 中的实测计数；静态候选边界不等于完整动态验证。",
+    "fix_suggestion_zh": "根据 missing 字段核对正文标题；博士目录为 ОГЛАВЛЕНИЕ，硕士为 СОДЕРЖАНИЕ。附录应有真实内容。",
+    "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Graduate.TocEmpty": {
+    "title_zh": "目录可识别条目不足5条",
+    "explanation_zh": "原程序 build 230 的普通正文 DOCX 样例判据；适用模式和验证边界见 verification_scope。",
+    "trigger_reason_zh": "见原始诊断及 threshold 中的实测计数；静态候选边界不等于完整动态验证。",
+    "fix_suggestion_zh": "更新真实目录及页码。原程序会把不足5条的目录归入空结构，不一定表示文件完全没有目录。",
+    "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Graduate.TocSmall": {
+    "title_zh": "目录可识别条目少于11条",
+    "explanation_zh": "原程序 build 230 的普通正文 DOCX 样例判据；适用模式和验证边界见 verification_scope。",
+    "trigger_reason_zh": "见原始诊断及 threshold 中的实测计数；静态候选边界不等于完整动态验证。",
+    "fix_suggestion_zh": "核对目录是否完整更新；不要为凑条目进行无意义拆分。",
+    "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Graduate.AbstractTooShort": {
+    "title_zh": "摘要段落或俄语内容不足",
+    "explanation_zh": "原程序 build 230 的普通正文 DOCX 样例判据；适用模式和验证边界见 verification_scope。",
+    "trigger_reason_zh": "见原始诊断及 threshold 中的实测计数；静态候选边界不等于完整动态验证。",
+    "fix_suggestion_zh": "核对摘要的目的、方法、结果与结论，并按学校要求组织段落。不要机械填充内容。",
+    "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Graduate.ThesisSizeTooSmall": {
+    "title_zh": "硕士折算篇幅不足",
+    "explanation_zh": "原程序 build 230 的普通正文 DOCX 样例判据；适用模式和验证边界见 verification_scope。",
+    "trigger_reason_zh": "见原始诊断及 threshold 中的实测计数；静态候选边界不等于完整动态验证。",
+    "fix_suggestion_zh": "检查真实正文内容、实际分页及最新目录。阈值按48折算页和900字符计算，并检查附录A目录页码；这不是实际页数。",
+    "word_path_zh": "Word：封面、导航窗格、引用 → 更新目录；按真实学校模板人工核对。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Struct.RequiredHeadingsMissing": {
+    "title_zh": "结构标题缺失或名称错误",
+    "explanation_zh": "按文件格式和论文类型识别独立结构标题；博士PDF已对照摘要和ОГЛАВЛЕНИЕ目录标题缺失。",
+    "trigger_reason_zh": "独立标题未识别；PDF中的不换行空格会先规范化。正文提及和目录条目不代替实际结构标题。",
+    "fix_suggestion_zh": "在论文源文件核对摘要与目录标题及学校模板；不要只凭本地零诊断判断原程序通过。",
+    "word_path_zh": "在源文档定位结构标题后检查文本和标题样式，再重新导出PDF。",
+    "fix_priority": "manual_review",
     "affects_antiplagiarism": false
   }
 }

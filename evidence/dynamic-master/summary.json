@@ -1,0 +1,37 @@
+{
+  "scope": {
+    "format": "docx",
+    "work_type": "master",
+    "build": 230,
+    "limits": "Formatting fixture predicates only; bachelor title text retained to isolate mode. No master structural or full-program equivalence."
+  },
+  "controlled_cases": 7,
+  "repair_recheck_cases": 2,
+  "verified_rules": [
+    "Word.FontSizeTooSmall",
+    "Word.FontSizeTooLarge",
+    "Word.PageSizeNotA4",
+    "Word.TextColorNotBlack"
+  ],
+  "repair_cleared": {
+    "Word.FontSizeTooSmall": true,
+    "Word.PageSizeNotA4": true,
+    "Word.TextColorNotBlack": true
+  },
+  "diagnostics_before": 9,
+  "diagnostics_after": 6,
+  "repair_input_sha256": "7a7443e3f5f918aa7dacdc2eb2a894844e7ba53d366e3850adfd87cbb0ebaf52",
+  "repair_output_sha256": "bfa155a4c04291d19606dfc3ee7203b7e25876ba09277acab370fb197ad9c8e5",
+  "text_unchanged": true,
+  "modified_zip_parts": [
+    "word/document.xml"
+  ],
+  "unvalidated": [
+    "Master title page and structure",
+    "Page-count threshold",
+    "Line spacing and indent",
+    "Image limits in master mode",
+    "PDF",
+    "PhD mode"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "target_sha256": "0bb43cebc4c7ee196913d2ea2240f7bc53aaac1e6b8f6394e6201024a108b8cb",
+  "pseudocode_source_sha256": "0691ffdddaab86c60f111312735d960ee70ad9c5e5922d1b31eb23f761dd6506",
+  "work_code_test": "cmp [object+0x154],5 at VA 004dc221",
+  "targets_mm": {
+    "left": 25,
+    "right": 10,
+    "top": 20,
+    "bottom": 20
+  },
+  "constants": {
+    "0x4db64c": {
+      "file_offset": "0xdac4c",
+      "raw_hex": "cdcc4c3e",
+      "float32": 0.20000000298023224
+    },
+    "0x4dc720": {
+      "file_offset": "0xdbd20",
+      "raw_hex": "6e7f903c",
+      "float32": 0.017638888210058212
+    }
+  },
+  "comparator": "target - float32_tolerance <= actual <= target + float32_tolerance",
+  "limits": "Static bytes and pseudocode; runtime evidence retained separately."
+}

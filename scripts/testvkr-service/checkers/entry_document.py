@@ -6,7 +6,7 @@ from models.enums import Severity, ModuleType
 class EntryDocumentChecker(BaseChecker):
     def check(self) -> List[Finding]:
         findings = []
-        
+
         # 1. Check if empty
         has_content = False
         if self.file_type == 'docx':
@@ -15,7 +15,7 @@ class EntryDocumentChecker(BaseChecker):
         elif self.file_type == 'pdf':
             spans = self.doc_data.get('spans', [])
             has_content = any(s.get('text', '').strip() for s in spans)
-            
+
         if not has_content:
             findings.append(Finding(
                 code="Entry.DocumentEmpty",
@@ -24,7 +24,7 @@ class EntryDocumentChecker(BaseChecker):
                 message="Документ пустой.",
                 skip_switch=None
             ))
-            
+
         # 2. Check for protection (if passed from parser error)
         if self.doc_data.get('is_protected', False):
             findings.append(Finding(
@@ -34,5 +34,5 @@ class EntryDocumentChecker(BaseChecker):
                 message="Снимите защиту с документа.",
                 skip_switch=None
             ))
-            
+
         return findings

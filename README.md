@@ -1,4 +1,55 @@
+# BMSTU 论文检查器 · v0.2.4
+
+当前版本：插件 **0.2.4+codex.20261014** / MCP **0.2.4**。
+
+[版本迭代](docs/VERSION_HISTORY.zh.md) · [规则执行与证据链](docs/RULE_CHAIN.zh.md) · [v0.2.4发布说明](releases/v0.2.4.md) · [Skill入口](skills/bmstu-thesis-checker/SKILL.md)
+
+规则是否可靠以精确格式/论文类型、样本范围和证据哈希为准；本地检查零诊断不代表原程序通过。仓库保留原程序对照、合成样本、截图和副本修改记录。
+
+## 0.2.4 多页PDF与博士副本修复
+
+新增3页图表PDF后续页反例、13/14页结构对照与博士DOCX修复前后原程序复查。PDF的18.5/19/24/36/72磅均未产生大字号警告，不能套用DOCX的18磅上限。修复NBSP参考文献标题误报、博士摘要与目录标题漏检；PDF几何/页码/目录对应等未覆盖检查显式列出。
+
+博士单节纵向DOCX现在支持A4、异常正文大小和非黑文字的副本修复，实测原程序4条诊断降至0条，5项修改全部有可逆日志，正文/表格/图表/其他ZIP成员保持不变。博士边距及PDF仍不自动修改。详见 [本轮验收报告](evidence/multipage-phd-repair/REPORT.zh.md) 和 [使用范围](skills/bmstu-thesis-checker/references/multipage-phd-repair.md)。以下版本记录以各自轮次为限。
+
+## 0.2.3 本轮验证
+
+博士DOCX边距25/10/20/20毫米、容差±0.2毫米已通过原程序与相邻twip边界对照。修复表格字号漏检和跨格式验证状态串用；博士PDF小字号、A4、颜色、图像面积有独立证据。原程序29个输入与10个规则上下文配对，详见 [证据报告](evidence/format-expansion/REPORT.zh.md)。PDF结构、大字号上限和自动修复仍未验证；DOCX修复保留表格图像并记录跳过原因。
+
+# 0.2.2 硕士／博士封面、结构和篇幅验证
+
+硕士原样例6条诊断经封面、结构、篇幅逐步对照后降至0条。硕士48折算页、900字符每页、43200字符边界及附录A目录页码47／48已实测。博士对应 НКР аспиранта，要求 ОГЛАВЛЕНИЕ 和科研资格论文名称；DOCX不再使用10万字符猜测。博士剩余边距警告也已定位：左边距30毫米报警，单独改为25毫米后样例无意见（其他边距10／20／20毫米）；容差未测定。
+
+新增9项有适用模式和独立证据的诊断判据，现有MCP检查入口直接提供结果；结构及篇幅只给人工修订建议。副本修复仍限本科／硕士已验证的格式操作。证据入口：`evidence/graduate-structure/summary.json`；详细边界：`skills/bmstu-thesis-checker/references/graduate-modes.md`。
+
+以下为历史版本记录，其未验证声明以对应版本为限。
+
+# 0.2.1 硕士模式补充验证
+
+硕士（master）模式新增7个格式对照样本和2个修复前后复查样本。字号下限/上限、A4纸张、文字颜色四条规则与原程序一致；修复后相关三类警告消失，诊断从9条降为6条。正文文字及其他DOCX部件保持不变。证据：`evidence/dynamic-master/summary.json`。
+
+MCP修复工具支持 `work_type: "master"`；命令行修复支持 `--work-type master`。只修改新副本并保留修改记录。硕士封面、结构、篇幅阈值、图片规则及PDF尚未得到本轮验证。样例保留原本科封面文字以隔离模式变化，因此不能据此证明硕士封面合规。
+
 # BMSTU 论文格式检查器 🎓
+
+0.2.0：已完成 12 个原程序对照样本，五项规则通过这批正例/负例及边界检查（DOCX、本科模式）；另有修复前后两个样本复查。
+新增 `preview_thesis_fixes` 和 `fix_thesis_copy`，支持在新副本上修正 A4 页面、异常正文字号、非黑文字，并生成逐项 JSON 修改记录。
+原文件、公式、域、超链接、表格文字、页眉页脚及图片保留。图片不自动压缩；行距和首行缩进因对照差异继续人工复核。
+最新证据入口：`evidence/dynamic-pairs/summary.json`。
+
+```powershell
+py scripts/repair_document.py thesis.docx --dry-run
+py scripts/repair_document.py thesis.docx --output-dir repaired --body-font-pt 14
+```
+
+2026-10-14 复核：旧分析中的八行“阈值表”已被逐字节证实为 OpenJPEG 小波归一化系数。
+12.01pt、139.3% 和 540px 不能由这些表推导为论文格式阈值。
+目前使用的原程序静态默认字号界限为 8pt/18pt；图片检查改为原始宽度乘高度超过 16,000,000 像素。
+这些是异常检查界限，不是正文排版建议；正文应遵循学校模板。
+下面保留 0.1.3 的静态复核背景；当前动态验证范围以 0.2.0 说明和规则表中的 scope 为准。
+DOCX 已支持文档默认值、段落/字符样式及 basedOn 继承；条件表格样式、编号和主题属性仍有限制。
+
+本地验证：`py scripts/run_revision_validation.py`。证据保存在 `evidence/2026-10-14/`。
 
 ---
 
@@ -17,13 +68,13 @@
 - **格式检查**：
   - 页面尺寸（A4）、页边距、页眉页脚距离
   - 首行缩进 1.25cm、行距 1.5、表格行距单倍
-  - 字号 12pt 以上、字体缩放正常范围
+  - 异常字号界限 8pt/18pt（不作为正文字号建议）、字体缩放范围提示
   - 文字颜色/背景符合要求
 - **图片检查**：图片总大小超限、像素尺寸过大、浮动图片、标注过小
 - **词典检查**：拉丁/西里尔混用眼形符替换、可疑俄文拼写组合（规避查重识别）
-- **BMSTU/GOST 标准兼容**：所有规则经过验证匹配官方要求
+- **BMSTU/GOST 标准兼容**：规则包含本地策略与启发式；尚未完成与原版 TestVkr 的逐条动态对照
 - **结构化输出**：JSON 原始数据 + Markdown 中文报告
-- **MCP 工具集成**：Codex 原生支持 4 个工具接口
+- **MCP 工具集成**：提供 6 个工具接口，包含修复预览和副本修复
 
 ## 每条检查结果包含
 
@@ -67,7 +118,7 @@ git clone https://github.com/Tanue-Hou/bmstu-thesis-checker.git
 
 ```bash
 # 检查单个文档输出 Markdown 报告
-python scripts/check_document.py path/to/thesis.docx --output report.md
+python scripts/check_document.py path/to/thesis.docx --format markdown --out report.md
 
 # 检查单个文档输出 JSON
 python scripts/check_document.py path/to/thesis.pdf --output result.json
@@ -113,7 +164,7 @@ Python 依赖请见 `scripts/testvkr-service/requirements.txt`
 
 ## 许可证
 
-MIT - 仅供个人学术使用。
+当前插件元数据标记为 UNLICENSED，仓库尚未附独立许可证；本次发布不变更该元数据。
 
 ## 版本日志
 

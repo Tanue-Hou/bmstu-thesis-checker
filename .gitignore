@@ -45,3 +45,8 @@ output/
 
 # Codex plugin
 .codex-plugin/*.log
+
+# Frozen synthetic fixtures and native evidence required for reproducible releases
+!evidence/**/*.docx
+!evidence/**/*.pdf
+!evidence/**/*.log

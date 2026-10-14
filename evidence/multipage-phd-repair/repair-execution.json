@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-14T18:32:06.273777+00:00",
+  "input_file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\multipage-phd-repair\\phd_combined.docx",
+  "input_sha256": "24873a6b4bbe1f219f3d7cc7d9e9010bef369725c3153fb0c9b9ca2acea3df31",
+  "dry_run": false,
+  "work_type": "phd",
+  "actions": [
+    "page_size_a4",
+    "font_size_anomalies",
+    "text_color_black"
+  ],
+  "body_font_pt": 14.0,
+  "changes": [
+    {
+      "rule_id": "Word.PageSizeNotA4",
+      "section": 1,
+      "property": "page_size",
+      "before": {
+        "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}w": "12246",
+        "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}h": "15817"
+      },
+      "after": {
+        "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}w": "11906",
+        "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}h": "16838"
+      }
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "paragraph": 17,
+      "run": 1,
+      "text_excerpt": "ОГЛАВЛЕНИЕ",
+      "property": "color",
+      "before_direct_xml": null,
+      "before_effective": "365F91",
+      "after": "000000"
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "paragraph": 87,
+      "run": 1,
+      "text_excerpt": "Методы обработки данных и анализа результатов исследования позволяют проверить форматирование текста",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"14\"/>",
+      "before_effective": 7.0,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.FontSizeTooLarge",
+      "paragraph": 88,
+      "run": 1,
+      "text_excerpt": "Методы обработки данных и анализа результатов исследования позволяют проверить форматирование текста",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"37\"/>",
+      "before_effective": 18.5,
+      "after": 14.0
+    },
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "paragraph": 89,
+      "run": 1,
+      "text_excerpt": "Методы обработки данных и анализа результатов исследования позволяют проверить форматирование текста",
+      "property": "color",
+      "before_direct_xml": "<w:color xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"FF0000\"/>",
+      "before_effective": "FF0000",
+      "after": "000000"
+    }
+  ],
+  "skipped": [
+    {
+      "paragraph": 90,
+      "run": 1,
+      "reason": "Hyperlink or drawing"
+    }
+  ],
+  "manual_only_rule_ids": [
+    "Pic.SmallLabels"
+  ],
+  "scope": "Main document text and portrait sections only; no table/header/footer/image repair; original-program pass is not guaranteed.",
+  "output_file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\multipage-phd-repair\\repair_outputs\\phd_combined.repaired-78952abd69.docx",
+  "output_sha256": "8e5d53e3ce4dca2eaa8e86543ebc909d5a437af533b98dac9af961a758ef6355",
+  "source_unchanged": true,
+  "before_rule_ids": [
+    "Word.FontSizeTooSmall",
+    "Word.PageSizeNotA4",
+    "Word.FontSizeTooLarge",
+    "Word.TextColorNotBlack",
+    "Pic.SmallLabels"
+  ],
+  "after_rule_ids": [],
+  "change_log": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\multipage-phd-repair\\repair_outputs\\phd_combined.repaired-78952abd69.changes.json"
+}

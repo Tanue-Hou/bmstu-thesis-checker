@@ -1,0 +1,329 @@
+2026-10-14 15:37:13 INFO  (LoggingInitialization) Using log config file: jar:file:/D:/TestVkrTools-20261014/ghidra_12.1.4_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-10-14 15:37:13 INFO  (LoggingInitialization) Using log file: C:\Users\Tanue Hou\AppData\Local\TestVkrLab-20261014\ghidra-analysis.log  
+2026-10-14 15:37:13 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-10-14 15:37:13 INFO  (Preferences) Loading user preferences: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\preferences  
+2026-10-14 15:37:13 INFO  (Preferences) Loading previous preferences: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.2_PUBLIC\preferences  
+2026-10-14 15:37:13 INFO  (ClassSearcher) Searching for classes...  
+2026-10-14 15:37:14 INFO  (ClassSearcher) Class search complete (1202 ms)  
+2026-10-14 15:37:15 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-10-14 15:37:15 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-10-14 15:37:15 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-10-14 15:37:15 INFO  (DefaultTrustManagerFactory) Trust manager disabled, cacerts have not been set  
+2026-10-14 15:37:15 INFO  (AnalyzeHeadless) Headless startup complete (4835 ms)  
+2026-10-14 15:37:15 INFO  (ClassSearcher) Class searcher loaded 59 extension points (20 false positives)  
+2026-10-14 15:37:16 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\BSim\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    C:\Users\Tanue Hou\AppData\Local\TestVkrLab-20261014\scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\SwiftDemangler\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts  
+2026-10-14 15:37:16 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-10-14 15:37:16 INFO  (HeadlessAnalyzer) Creating project: C:\Users\Tanue Hou\AppData\Local\TestVkrLab-20261014\ghidra-project\TestVkr  
+2026-10-14 15:37:16 INFO  (DefaultProject) Creating project: C:\Users\Tanue Hou\AppData\Local\TestVkrLab-20261014\ghidra-project\TestVkr  
+2026-10-14 15:37:16 INFO  (HeadlessAnalyzer) REPORT: Processing input files:   
+2026-10-14 15:37:16 INFO  (HeadlessAnalyzer)      project: C:\Users\Tanue Hou\AppData\Local\TestVkrLab-20261014\ghidra-project\TestVkr  
+2026-10-14 15:37:16 INFO  (HeadlessAnalyzer) IMPORTING: file:///C:/Users/Tanue Hou/AppData/Local/TestVkrLab-20261014/TestVkr.exe  
+2026-10-14 15:37:20 INFO  (ProgramLoader) Using Loader: Portable Executable (PE)  
+2026-10-14 15:37:20 INFO  (ProgramLoader) Using Language/Compiler: x86:LE:32:default:borlandcpp  
+2026-10-14 15:37:20 INFO  (ProgramLoader) Using Library Search Path: [., C:\WINDOWS\SysWOW64, D:\TestVkrTools-20261014\jdk21\bin, C:\WINDOWS\Sun\Java\bin, C:\WINDOWS\system32, C:\WINDOWS, C:\Users\Tanue Hou\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell, C:\Users\Tanue Hou\.codex\tmp\arg0\codex-arg0OtMZ3Y, C:\Users\Tanue Hou\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\libheif\libheif\bin, C:\Users\Tanue Hou\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\jxrlib\jxrlib\bin, C:\Users\Tanue Hou\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\poppler\Library\bin, C:\Users\Tanue Hou\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\override, C:\Program Files\Eclipse Adoptium\jdk-17.0.19.10-hotspot\bin, F:\Software2\bin\, C:\WINDOWS\System32\Wbem, C:\WINDOWS\System32\WindowsPowerShell\v1.0\, C:\WINDOWS\System32\OpenSSH\, C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR, C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common, C:\Program Files\Bandizip\, D:\Matlab2025\runtime\win64, D:\Matlab2025\bin, C:\Program Files (x86)\HP\Common\HPDestPlgIn\, C:\Users\Tanue Hou\AppData\Local\agy\bin, C:\Users\Tanue Hou\AppData\Local\Programs\Python\Launcher\, C:\Users\Tanue Hou\AppData\Local\Microsoft\WindowsApps, F:\Software2\Microsoft VS Code\bin, C:\Users\Tanue Hou\AppData\Local\Programs\Ollama, C:\Users\Tanue Hou\.local\bin, C:\Users\Tanue Hou\AppData\Local\Programs\npm, C:\Users\Tanue Hou\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\fallback, C:\Users\Tanue Hou\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin, C:\Users\Tanue Hou\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\git\cmd, C:\Users\Tanue Hou\AppData\Local\OpenAI\Codex\bin\77fbd4d52e601e0a, C:\Users\Tanue Hou\AppData\Local\OpenAI\Codex\bin\9614f1d9b40d9c4f]  
+2026-10-14 15:37:21 INFO  (TLSDirectory) TLS callbacks at 745010  
+2026-10-14 15:37:24 WARN  (ExportDataDirectory) Invalid or missing function at 100754dc  
+2026-10-14 15:37:24 INFO  (TLSDirectory) TLS callbacks at 10003764  
+2026-10-14 15:37:25 DEBUG (WEVTResourceDataType) Error processing Provider Element.  
+2026-10-14 15:37:27 INFO  (TLSDirectory) TLS callbacks at 100057bc  
+2026-10-14 15:37:27 DEBUG (WEVTResourceDataType) Error processing Provider Element.  
+2026-10-14 15:37:27 INFO  (TLSDirectory) TLS callbacks at 10006fe4  
+2026-10-14 15:37:27 WARN  (ExportDataDirectory) Invalid or missing function at 1008ea38  
+2026-10-14 15:37:28 INFO  (TLSDirectory) TLS callbacks at 100295f8  
+2026-10-14 15:37:28 WARN  (ExportDataDirectory) Invalid or missing function at 105ebbac  
+2026-10-14 15:37:30 INFO  (TLSDirectory) TLS callbacks at 10002160  
+2026-10-14 15:37:31 WARN  (ExportDataDirectory) Invalid or missing function at 100d76bc  
+2026-10-14 15:37:31 DEBUG (WEVTResourceDataType) Error processing Provider Element.  
+2026-10-14 15:37:32 INFO  (TLSDirectory) TLS callbacks at 100100f0  
+2026-10-14 15:37:32 INFO  (TLSDirectory) TLS callbacks at 10002504  
+2026-10-14 15:37:32 WARN  (ExportDataDirectory) Invalid or missing function at 10065e54  
+2026-10-14 15:37:32 DEBUG (WEVTResourceDataType) Error processing Provider Element.  
+2026-10-14 15:37:33 INFO  (ProgramLoader) Additional info:
+Loading file:///C:/Users/Tanue Hou/AppData/Local/TestVkrLab-20261014/TestVkr.exe?MD5=f7ab08aa37158f1309316b39c6a691a9...
+[TestVkr.exe]: failed to create TerminatedCString at 00a06eac: Failed to resolve data length for TerminatedCString
+------------------------------------------------
+
+Searching 34 paths for library ADVAPI32.DLL...
+Loading file:///C:/Windows/SysWOW64/advapi32.dll?MD5=bd14154cf16da806a109b60c14e4b712...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\advapi32.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library COMCTL32.DLL...
+Loading file:///C:/Windows/SysWOW64/comctl32.dll?MD5=a19d57953ec5f48772f24bad3b51dcac...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\comctl32.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library COMDLG32.DLL...
+Loading file:///C:/Windows/SysWOW64/comdlg32.dll?MD5=658759c9de6a0fe4a420d83e2c16a205...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\comdlg32.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library DWMAPI.DLL...
+Loading file:///C:/Windows/SysWOW64/dwmapi.dll?MD5=5b07039b95eedd3e61623b6404ab4242...
+[dwmapi.dll]: failed to create WEVTResource at 1001f998: Failed to resolve data length for WEVTResource
+[dwmapi.dll]: failed to create TerminatedCString at 1001f160: Conflicting data exists at address 1001f5e0 to 1001f63b
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\dwmapi.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library GDI32.DLL...
+Loading file:///C:/Windows/SysWOW64/gdi32.dll?MD5=37002dbb23f87dae9ebd7dd7b5051995...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\gdi32.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library KERNEL32.DLL...
+Loading file:///C:/Windows/SysWOW64/kernel32.dll?MD5=7180141a89985451fec9e096fc1e64a9...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\kernel32.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library MSIMG32.DLL...
+Loading file:///C:/Windows/SysWOW64/msimg32.dll?MD5=7981d80c4c1aa3a0adfe3abd068dc89f...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\msimg32.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library OLE32.DLL...
+Loading file:///C:/Windows/SysWOW64/ole32.dll?MD5=f7d0fee5e134a50a125c3e41a68bf646...
+[ole32.dll]: failed to create WEVTResource at 10139740: Failed to resolve data length for WEVTResource
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\ole32.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library OLEAUT32.DLL...
+Loading file:///C:/Windows/SysWOW64/oleaut32.dll?MD5=e6bbb4eefacdda667ee95436a6e49d58...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\oleaut32.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library SHELL32.DLL...
+Loading file:///C:/Windows/SysWOW64/shell32.dll?MD5=347ac97d43e76943fd2c880017b39051...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\shell32.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library SHLWAPI.DLL...
+Loading file:///C:/Windows/SysWOW64/shlwapi.dll?MD5=3e7fd15e679d902061701550fe7e24e0...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\shlwapi.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library USER32.DLL...
+Loading file:///C:/Windows/SysWOW64/user32.dll?MD5=f6c0cb8b1debf964a0ab5330cca718e6...
+[user32.dll]: failed to create WEVTResource at 100f5a70: Failed to resolve data length for WEVTResource
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\user32.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library UXTHEME.DLL...
+Loading file:///C:/Windows/SysWOW64/uxtheme.dll?MD5=f812ab20a881325605ee65b8b2837948...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\uxtheme.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library VERSION.DLL...
+Loading file:///C:/Windows/SysWOW64/version.dll?MD5=e540ee5a5c515d5c3005f0cd6d133124...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\version.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library WINDOWSCODECS.DLL...
+Loading file:///C:/Windows/SysWOW64/WindowsCodecs.dll?MD5=452a3a510ac9b443c9e582d023fd065a...
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\windowscodecs.exports
+Library not saved to project.
+------------------------------------------------
+
+Searching 34 paths for library WINSPOOL.DRV...
+Loading file:///C:/Windows/SysWOW64/winspool.drv?MD5=9735b58f7ede64686c9e05d1d531e931...
+[winspool.drv]: failed to create WEVTResource at 1006e4b8: Failed to resolve data length for WEVTResource
+Using existing exports file: C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\winspool.exports
+Library not saved to project.
+------------------------------------------------
+
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\advapi32.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\kernel32.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\version.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\winspool.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\comctl32.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\comdlg32.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\gdi32.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\msimg32.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\shell32.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\user32.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\ole32.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\oleaut32.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\shlwapi.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\windowscodecs.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\dwmapi.exports
+Applying C:\Users\Tanue Hou\AppData\Roaming\ghidra\ghidra_12.1.4_PUBLIC\symbols\win32\uxtheme.exports
+Linking the External Programs of 'TestVkr.exe' to imported libraries...
+  [ADVAPI32.DLL] -> not found in project
+  [KERNEL32.DLL] -> not found in project
+  [VERSION.DLL] -> not found in project
+  [WINSPOOL.DRV] -> not found in project
+  [COMCTL32.DLL] -> not found in project
+  [COMDLG32.DLL] -> not found in project
+  [GDI32.DLL] -> not found in project
+  [MSIMG32.DLL] -> not found in project
+  [SHELL32.DLL] -> not found in project
+  [USER32.DLL] -> not found in project
+  [OLE32.DLL] -> not found in project
+  [OLEAUT32.DLL] -> not found in project
+  [SHLWAPI.DLL] -> not found in project
+  [WINDOWSCODECS.DLL] -> not found in project
+  [DWMAPI.DLL] -> not found in project
+  [UXTHEME.DLL] -> not found in project
+------------------------------------------------
+
+  
+2026-10-14 15:37:33 INFO  (HeadlessAnalyzer) IMPORTING: Loaded 0 additional files  
+2026-10-14 15:37:34 INFO  (HeadlessAnalyzer) ANALYZING all memory and code: file:///C:/Users/Tanue Hou/AppData/Local/TestVkrLab-20261014/TestVkr.exe  
+2026-10-14 15:37:34 WARN  (NoReturnFunctionAnalyzer) Ignoring leading '_' chars on no-return name '___raise_securityfailure' specified in file: D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\Base\data\PEFunctionsThatDoNotReturn  
+2026-10-14 15:37:34 WARN  (NoReturnFunctionAnalyzer) Ignoring leading '_' chars on no-return name '___report_rangecheckfailure' specified in file: D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\Base\data\PEFunctionsThatDoNotReturn  
+2026-10-14 15:37:34 INFO  (PdbUniversalAnalyzer) Skipping PDB processing: missing PDB information in program metadata  
+2026-10-14 15:37:35 INFO  (DecompilerSwitchAnalyzer) hit non-returning function, restarting decompiler switch analyzer later  
+2026-10-14 15:37:36 WARN  (DecompileCallback) Decompiling 00559b91: Unable to read bytes at ram:11e8c031  
+2026-10-14 15:37:36 WARN  (DecompileCallback) Decompiling 006acd44: Unable to read bytes at ram:8d28df52  
+2026-10-14 15:37:36 WARN  (DecompileCallback) Decompiling 00572818: Unable to read bytes at ram:8d28df52  
+2026-10-14 15:37:53 INFO  (DecompilerSwitchAnalyzer) hit non-returning function, restarting decompiler switch analyzer later  
+2026-10-14 15:37:54 WARN  (DecompileCallback) Decompiling 00559f75: Unable to read bytes at ram:15e8c031  
+2026-10-14 15:38:39 INFO  (PackedDatabaseCache) Packed database cache: C:\Users\Tanue Hou\AppData\Local\ghidra\packed-db-cache  
+2026-10-14 15:38:39 DEBUG (PackedDatabaseCache) Caching packed database: D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\Base\data\typeinfo\win32\windows_vs12_32.gdt  
+2026-10-14 15:38:39 DEBUG (PackedDatabase) Unpacking database D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\Base\data\typeinfo\win32\windows_vs12_32.gdt -> C:\Users\Tanue Hou\AppData\Local\ghidra\packed-db-cache\pdbF2A0BF53\db.1.gbf  
+2026-10-14 15:38:39 DEBUG (PackedDatabaseCache) Cache update completed: D:\TestVkrTools-20261014\ghidra_12.1.4_PUBLIC\Ghidra\Features\Base\data\typeinfo\win32\windows_vs12_32.gdt  
+2026-10-14 15:38:40 INFO  (ApplyDataArchiveAnalyzer) Applied data type archive: windows_vs12_32  
+2026-10-14 15:39:32 INFO  (AutoAnalysisManager) -----------------------------------------------------
+    ASCII Strings                              1.003 secs
+    Apply Data Archives                        1.072 secs
+    Call Convention ID                         0.077 secs
+    Call-Fixup Installer                       0.250 secs
+    Create Address Tables                      0.692 secs
+    Create Address Tables - One Time           2.964 secs
+    Create Function                            3.399 secs
+    Data Reference                             2.715 secs
+    Decompiler Switch Analysis                13.163 secs
+    Decompiler Switch Analysis - One Time      6.705 secs
+    Demangler GNU                              0.207 secs
+    Demangler Microsoft                        0.045 secs
+    Disassemble                                9.838 secs
+    Disassemble Entry Points                   0.659 secs
+    Disassemble Entry Points - One Time        0.003 secs
+    Embedded Media                             0.118 secs
+    External Entry References                  0.002 secs
+    Function ID                                3.952 secs
+    Function Start Pre Search                  0.067 secs
+    Function Start Search                      0.660 secs
+    Function Start Search After Code           0.251 secs
+    Function Start Search After Data           0.204 secs
+    Non-Returning Functions - Discovered       1.324 secs
+    Non-Returning Functions - Known            0.014 secs
+    PDB Universal                              0.002 secs
+    Reference                                  3.034 secs
+    Scalar Operand References                  4.223 secs
+    Shared Return Calls                        1.194 secs
+    Stack                                     29.165 secs
+    Subroutine References                      1.815 secs
+    Subroutine References - One Time           0.002 secs
+    WindowsResourceReference                   7.009 secs
+    X86 Function Callee Purge                  0.719 secs
+    x86 Constant Reference Analyzer           21.321 secs
+-----------------------------------------------------
+     Total Time   117 secs
+-----------------------------------------------------
+  
+2026-10-14 15:39:32 INFO  (HeadlessAnalyzer) REPORT: Analysis succeeded for file: file:///C:/Users/Tanue Hou/AppData/Local/TestVkrLab-20261014/TestVkr.exe  
+2026-10-14 15:39:32 INFO  (HeadlessAnalyzer) REPORT: Execute script: ExportTestVkr.java 'C:\Users\Tanue Hou\AppData\Local\TestVkrLab-20261014\decompilation'   
+2026-10-14 15:39:33 INFO  (HeadlessAnalyzer) SCRIPT: C:\Users\Tanue Hou\AppData\Local\TestVkrLab-20261014\scripts\ExportTestVkr.java  
+2026-10-14 15:39:35 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 200 success=200  
+2026-10-14 15:39:38 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 400 success=400  
+2026-10-14 15:39:44 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 600 success=600  
+2026-10-14 15:39:46 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 800 success=800  
+2026-10-14 15:39:48 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 1000 success=1000  
+2026-10-14 15:39:51 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 1200 success=1200  
+2026-10-14 15:39:52 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 1400 success=1400  
+2026-10-14 15:39:55 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 1600 success=1600  
+2026-10-14 15:39:58 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 1800 success=1800  
+2026-10-14 15:40:11 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 2000 success=2000  
+2026-10-14 15:40:18 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 2200 success=2199  
+2026-10-14 15:40:22 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 2400 success=2399  
+2026-10-14 15:40:31 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 2600 success=2599  
+2026-10-14 15:40:33 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 2800 success=2799  
+2026-10-14 15:40:36 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 3000 success=2999  
+2026-10-14 15:40:40 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 3200 success=3199  
+2026-10-14 15:40:41 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 3400 success=3399  
+2026-10-14 15:40:42 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 3600 success=3599  
+2026-10-14 15:40:44 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 3800 success=3799  
+2026-10-14 15:40:45 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 4000 success=3999  
+2026-10-14 15:40:45 WARN  (DecompileCallback) Decompiling 00551c10: Unable to read bytes at ram:082444d9  
+2026-10-14 15:40:45 WARN  (DecompileCallback) Decompiling 00559b91: Unable to read bytes at ram:11e8c031  
+2026-10-14 15:40:46 WARN  (DecompileCallback) Decompiling 00559f75: Unable to read bytes at ram:15e8c031  
+2026-10-14 15:40:46 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 4200 success=4199  
+2026-10-14 15:40:47 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 4400 success=4399  
+2026-10-14 15:40:49 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 4600 success=4599  
+2026-10-14 15:40:50 WARN  (DecompileCallback) Decompiling 00572818: Unable to read bytes at ram:8d28df52  
+2026-10-14 15:40:50 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 4800 success=4799  
+2026-10-14 15:40:51 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 5000 success=4999  
+2026-10-14 15:40:52 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 5200 success=5199  
+2026-10-14 15:40:55 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 5400 success=5399  
+2026-10-14 15:40:56 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 5600 success=5599  
+2026-10-14 15:40:57 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 5800 success=5799  
+2026-10-14 15:40:59 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 6000 success=5999  
+2026-10-14 15:41:00 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 6200 success=6199  
+2026-10-14 15:41:01 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 6400 success=6399  
+2026-10-14 15:41:02 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 6600 success=6599  
+2026-10-14 15:41:04 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 6800 success=6799  
+2026-10-14 15:41:05 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 7000 success=6999  
+2026-10-14 15:41:06 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 7200 success=7199  
+2026-10-14 15:41:07 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 7400 success=7399  
+2026-10-14 15:41:08 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 7600 success=7599  
+2026-10-14 15:41:09 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 7800 success=7799  
+2026-10-14 15:41:11 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 8000 success=7999  
+2026-10-14 15:41:13 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 8200 success=8199  
+2026-10-14 15:41:15 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 8400 success=8399  
+2026-10-14 15:41:17 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 8600 success=8599  
+2026-10-14 15:41:21 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 8800 success=8799  
+2026-10-14 15:41:25 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 9000 success=8999  
+2026-10-14 15:41:29 WARN  (DecompileCallback) Decompiling 006acd44: Unable to read bytes at ram:8d28df52  
+2026-10-14 15:41:29 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 9200 success=9199  
+2026-10-14 15:41:31 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 9400 success=9399  
+2026-10-14 15:41:32 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 9600 success=9599  
+2026-10-14 15:41:33 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 9800 success=9799  
+2026-10-14 15:41:33 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_PROGRESS 10000 success=9999  
+2026-10-14 15:41:33 INFO  (GhidraScript) ExportTestVkr.java> EXPORT_COMPLETE target_sha256=0bb43cebc4c7ee196913d2ea2240f7bc53aaac1e6b8f6394e6201024a108b8cb
+functions=10187
+decompiled=10186
+failed=1
+limitations=Recovered C-like pseudocode; compiler runtime included; function discovery and indirect calls incomplete; per-function timeout 5 seconds; export deadline 600 seconds.
+  
+2026-10-14 15:41:33 INFO  (HeadlessAnalyzer) ANALYZING changes made by post scripts: file:///C:/Users/Tanue Hou/AppData/Local/TestVkrLab-20261014/TestVkr.exe  
+2026-10-14 15:41:33 INFO  (HeadlessAnalyzer) REPORT: Post-analysis succeeded for file: file:///C:/Users/Tanue Hou/AppData/Local/TestVkrLab-20261014/TestVkr.exe  
+2026-10-14 15:41:33 INFO  (LocalFileSystem) /TestVkr.exe: file created (TanueHou)  
+2026-10-14 15:41:34 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for: /TestVkr.exe (TestVkr:/TestVkr.exe)  
+2026-10-14 15:41:34 INFO  (HeadlessAnalyzer) REPORT: Import succeeded  

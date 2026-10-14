@@ -1,0 +1,6 @@
+* text=auto eol=lf
+evidence/** -text -whitespace
+*.docx binary
+*.pdf binary
+*.png binary
+evidence/**/recovered_pseudocode.c -diff

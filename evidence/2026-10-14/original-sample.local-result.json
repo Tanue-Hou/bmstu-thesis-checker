@@ -1,0 +1,247 @@
+{
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\2026-10-14\\regression_inputs\\original-body-line-spacing-1.0.docx",
+  "file_type": "docx",
+  "work_type": "bachelor",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {
+    "resolved": [
+      "docDefaults",
+      "paragraph_basedOn",
+      "character_basedOn",
+      "direct"
+    ],
+    "unresolved": [
+      "conditional_table_styles",
+      "numbering_properties",
+      "theme_font_and_color"
+    ]
+  },
+  "summary": {
+    "total": 3,
+    "critical": 0,
+    "major": 0,
+    "warning": 1,
+    "info": 2
+  },
+  "review_summary": {
+    "status_zh": "发现本地策略提示，请先复核适用要求；这些提示尚不代表原版 TestVkr 的检查结论。",
+    "must_fix_count": 0,
+    "should_fix_count": 0,
+    "manual_review_count": 3,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 0,
+    "critical_or_major_count": 0
+  },
+  "groups": {
+    "by_severity": {
+      "info": [
+        "Struct.RequiredHeadingsMissing",
+        "Word.LineSpacingInvalid"
+      ],
+      "warning": [
+        "Struct.ThesisSizeTooSmall"
+      ]
+    },
+    "by_module": {
+      "structure": [
+        "Struct.RequiredHeadingsMissing",
+        "Struct.ThesisSizeTooSmall"
+      ],
+      "word_format": [
+        "Word.LineSpacingInvalid"
+      ]
+    },
+    "by_fix_priority": {
+      "manual_review": [
+        "Struct.RequiredHeadingsMissing",
+        "Struct.ThesisSizeTooSmall",
+        "Word.LineSpacingInvalid"
+      ]
+    },
+    "by_location": {
+      "未定位": [
+        "Struct.RequiredHeadingsMissing",
+        "Struct.ThesisSizeTooSmall"
+      ],
+      "段落": [
+        "Word.LineSpacingInvalid"
+      ]
+    },
+    "antiplagiarism_related": []
+  },
+  "fix_checklist": {
+    "must_fix": [],
+    "should_fix": [],
+    "manual_review": [
+      {
+        "rule_id": "Struct.RequiredHeadingsMissing",
+        "label_zh": "需要人工确认",
+        "title_zh": "规则命中",
+        "severity": "info",
+        "module": "structure",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+        "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Struct.ThesisSizeTooSmall",
+        "label_zh": "需要人工确认",
+        "title_zh": "论文体量过小",
+        "severity": "warning",
+        "module": "structure",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "确认解析是否完整；如内容确实不足，应补充章节、说明、实验或参考分析。",
+        "word_path_zh": "审阅 -> 字数统计；同时检查目录和正文是否完整。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Word.LineSpacingInvalid",
+        "label_zh": "需要人工确认",
+        "title_zh": "行距不符合要求",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "段落 2, 3, 4, 5, 6, 7, 8, 9",
+        "fix_suggestion_zh": "正文统一设为 1.5 倍行距；表格内文字统一设为单倍行距。",
+        "word_path_zh": "开始 -> 段落 -> 行和段落间距；或右键段落 -> 段落 -> 行距。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Struct.ThesisSizeTooSmall",
+      "module": "structure",
+      "severity": "warning",
+      "message": "* Маленький объем ВКР:",
+      "russian_message": "* Маленький объем ВКР:",
+      "title_zh": "论文体量过小",
+      "explanation_zh": "正文总体字符数/体量低于预期，可能不符合 VKR/论文要求。",
+      "trigger_reason_zh": "解析出的文本量低于当前作品类型的体量阈值。",
+      "fix_suggestion_zh": "确认解析是否完整；如内容确实不足，应补充章节、说明、实验或参考分析。",
+      "word_path_zh": "审阅 -> 字数统计；同时检查目录和正文是否完整。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "min_chars": 40000,
+        "actual": 3541
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": "<",
+      "sample_trigger": [
+        "14_structure/thesis_size_too_small.docx"
+      ]
+    },
+    {
+      "rule_id": "Struct.RequiredHeadingsMissing",
+      "module": "structure",
+      "severity": "info",
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов:",
+      "russian_message": "Отсутствуют или неправильно оформлены заголовки структурных элементов:",
+      "title_zh": "规则命中",
+      "explanation_zh": "文档中存在与 BMSTU/TestVkr 风格检查不一致的位置。",
+      "trigger_reason_zh": "检查器根据当前规则阈值、格式属性或结构特征判定该项异常。",
+      "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+      "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "unverified_local_heuristic",
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {},
+      "threshold": {
+        "missing": [
+          "introduction",
+          "conclusion",
+          "bibliography"
+        ]
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    },
+    {
+      "rule_id": "Word.LineSpacingInvalid",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Междустрочный интервал в абзацах должен быть равен 1.5 строки (в таблицах одинарный):",
+      "russian_message": "Междустрочный интервал в абзацах должен быть равен 1.5 строки (в таблицах одинарный):",
+      "title_zh": "行距不符合要求",
+      "explanation_zh": "正文段落应使用 1.5 倍行距，表格内文字通常应使用单倍行距。",
+      "trigger_reason_zh": "检测到段落或表格单元格的行距与目标值不一致。",
+      "fix_suggestion_zh": "正文统一设为 1.5 倍行距；表格内文字统一设为单倍行距。",
+      "word_path_zh": "开始 -> 段落 -> 行和段落间距；或右键段落 -> 段落 -> 行距。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 1.5,
+        "unit": "multiplier",
+        "count_paragraphs": 8
+      },
+      "location": {
+        "paragraphs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "location_summary_zh": "段落 2, 3, 4, 5, 6, 7, 8, 9",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "01_line_spacing_body/body_line_spacing_1.0.docx",
+        "01_line_spacing_body/body_line_spacing_1.49.docx",
+        "01_line_spacing_body/body_line_spacing_1.51.docx",
+        "01_line_spacing_body/body_line_spacing_2.0.docx"
+      ]
+    }
+  ]
+}

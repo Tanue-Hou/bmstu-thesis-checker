@@ -1,0 +1,38 @@
+{
+  "target_sha256": "0bb43cebc4c7ee196913d2ea2240f7bc53aaac1e6b8f6394e6201024a108b8cb",
+  "evidence_type": "static_file_bytes_and_recovered_control_flow",
+  "font_defaults": {
+    "font_size_min_pt": {
+      "va": "0x6ee118",
+      "file_offset": "0x2ecb18",
+      "value": 8
+    },
+    "font_size_max_pt": {
+      "va": "0x6ee11c",
+      "file_offset": "0x2ecb1c",
+      "value": 18
+    }
+  },
+  "image_pixel_area_limit": 16000000,
+  "image_comparison_sites": [
+    {
+      "function_va": "0x0047c6ac",
+      "constant": 16000000,
+      "expression": "*(int *)(local_d8 + 0x1c0) * *(int *)(local_d8 + 0x1bc)",
+      "pseudocode_line": 73127
+    },
+    {
+      "function_va": "0x004f8f18",
+      "constant": 16000000,
+      "expression": "iVar5 * iVar9",
+      "pseudocode_line": 137121
+    }
+  ],
+  "limits": [
+    "No runtime register capture",
+    "Original dynamic formatting comparison pending",
+    "Shipped defaults may differ from runtime configuration",
+    "DOCX and PDF predicates have different context gates and tolerances"
+  ],
+  "pseudocode_sha256": "0691ffdddaab86c60f111312735d960ee70ad9c5e5922d1b31eb23f761dd6506"
+}

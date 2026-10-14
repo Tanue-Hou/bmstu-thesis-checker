@@ -1,0 +1,270 @@
+{
+  "work_type_policy": {
+    "native_mode": "НКР аспиранта",
+    "toc_heading": "ОГЛАВЛЕНИЕ",
+    "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied.",
+    "manual_review": [
+      "Doctoral DOCX margins left/right/top/bottom 25/10/20/20 mm, tolerance 0.2 mm; finite single-section native probes",
+      "Not a general dissertation standard or original-program certification"
+    ]
+  },
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\multipage-phd-repair\\mp_small.pdf",
+  "file_type": "pdf",
+  "work_type": "phd",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {},
+  "native_comparison_limits": {
+    "format_profile_supported": true,
+    "structure_profile_supported": true,
+    "unimplemented_native_checks": [
+      "PDF text-derived margins and text in page margins",
+      "PDF page-number and header/footer placement",
+      "TOC correspondence and entry counts",
+      "cover/title-page predicates and bibliography completeness"
+    ],
+    "upper_font_limit": "No native warning in tested 18.5/19/24/36/72 pt PDF probes; no universal upper-limit claim"
+  },
+  "summary": {
+    "total": 3,
+    "critical": 0,
+    "major": 1,
+    "warning": 1,
+    "info": 1
+  },
+  "review_summary": {
+    "status_zh": "不建议直接提交，需要先处理必改项和较高严重度问题。",
+    "must_fix_count": 1,
+    "should_fix_count": 0,
+    "manual_review_count": 2,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 1,
+    "critical_or_major_count": 1
+  },
+  "groups": {
+    "by_severity": {
+      "info": [
+        "Struct.RequiredHeadingsMissing"
+      ],
+      "warning": [
+        "Struct.MissingCitations"
+      ],
+      "major": [
+        "Word.FontSizeTooSmall"
+      ]
+    },
+    "by_module": {
+      "structure": [
+        "Struct.RequiredHeadingsMissing",
+        "Struct.MissingCitations"
+      ],
+      "word_format": [
+        "Word.FontSizeTooSmall"
+      ]
+    },
+    "by_fix_priority": {
+      "manual_review": [
+        "Struct.RequiredHeadingsMissing",
+        "Struct.MissingCitations"
+      ],
+      "must_fix": [
+        "Word.FontSizeTooSmall"
+      ]
+    },
+    "by_location": {
+      "未定位": [
+        "Struct.RequiredHeadingsMissing",
+        "Struct.MissingCitations"
+      ],
+      "页面 2": [
+        "Word.FontSizeTooSmall"
+      ]
+    },
+    "antiplagiarism_related": [
+      "Word.FontSizeTooSmall"
+    ]
+  },
+  "fix_checklist": {
+    "must_fix": [
+      {
+        "rule_id": "Word.FontSizeTooSmall",
+        "label_zh": "必改",
+        "title_zh": "字号过小",
+        "severity": "major",
+        "module": "word_format",
+        "location_summary_zh": "PDF/页面 2",
+        "fix_suggestion_zh": "先核对学校模板及文字用途，再处理异常小字；不要把全文统一改成检查下限。",
+        "word_path_zh": "开始 -> 字体 -> 字号。",
+        "affects_antiplagiarism": true
+      }
+    ],
+    "should_fix": [],
+    "manual_review": [
+      {
+        "rule_id": "Struct.RequiredHeadingsMissing",
+        "label_zh": "需要人工确认",
+        "title_zh": "规则命中",
+        "severity": "info",
+        "module": "structure",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+        "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Struct.MissingCitations",
+        "label_zh": "需要人工确认",
+        "title_zh": "规则命中",
+        "severity": "warning",
+        "module": "structure",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+        "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "module": "word_format",
+      "severity": "major",
+      "message": "В документе много символов, размер которых меньше 8.0 пт",
+      "russian_message": "В документе много символов, размер которых меньше 8.0 пт",
+      "title_zh": "字号过小",
+      "explanation_zh": "字符字号低于当前检查下限。程序的异常字号下限不等于学校要求的正文字号。",
+      "trigger_reason_zh": "字符字号低于规则下限并超过数量阈值。",
+      "fix_suggestion_zh": "先核对学校模板及文字用途，再处理异常小字；不要把全文统一改成检查下限。",
+      "word_path_zh": "开始 -> 字体 -> 字号。",
+      "fix_priority": "must_fix",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": true,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_evidence_intact": true,
+      "verification_scope": {
+        "format": "pdf",
+        "work_type": "phd",
+        "build": 230,
+        "limits": "PDF embedded Times New Roman+ToUnicode, unrotated 1–3 pages, ordinary table text and <=1 PNG per page; finite size/color/page/image predicates."
+      },
+      "threshold_origin": "static_shipped_default_with_font_predicate_references",
+      "evidence_refs": [
+        "evidence/multipage-phd-repair/comparison.json",
+        "evidence/format-expansion/comparison.json"
+      ],
+      "static_evidence_refs": [
+        "evidence/2026-10-14/static-findings.json"
+      ],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 8.0,
+        "unit": "pt",
+        "count_chars": 120
+      },
+      "location": {
+        "pages": [
+          2
+        ]
+      },
+      "location_summary_zh": "PDF/页面 2",
+      "skip_switch": "SkipTestWord",
+      "source_va": "0x6ee118",
+      "comparator": "<",
+      "sample_trigger": [
+        "03_font_size/font_size_11.docx",
+        "03_font_size/font_size_12.01.docx"
+      ]
+    },
+    {
+      "rule_id": "Struct.MissingCitations",
+      "module": "structure",
+      "severity": "warning",
+      "message": "* Укажите ссылки на использованные источники:",
+      "russian_message": "* Укажите ссылки на использованные источники:",
+      "title_zh": "规则命中",
+      "explanation_zh": "文档中存在与 BMSTU/TestVkr 风格检查不一致的位置。",
+      "trigger_reason_zh": "检查器根据当前规则阈值、格式属性或结构特征判定该项异常。",
+      "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+      "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_evidence_intact": false,
+      "verification_scope": {},
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {},
+      "threshold": null,
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    },
+    {
+      "rule_id": "Struct.RequiredHeadingsMissing",
+      "module": "structure",
+      "severity": "info",
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\"",
+      "russian_message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\"",
+      "title_zh": "规则命中",
+      "explanation_zh": "文档中存在与 BMSTU/TestVkr 风格检查不一致的位置。",
+      "trigger_reason_zh": "检查器根据当前规则阈值、格式属性或结构特征判定该项异常。",
+      "fix_suggestion_zh": "按规则要求检查对应位置，并在 Word 或 PDF 源文件中统一修正。",
+      "word_path_zh": "Word 中定位到对应段落、表格、图片或节后，通过开始/布局/引用等相关功能区修正。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_evidence_intact": true,
+      "verification_scope": {
+        "format": "pdf",
+        "work_type": "phd",
+        "build": 230,
+        "limits": "PDF exact normalized abstract and ОГЛАВЛЕНИЕ heading predicates; 3/13/14-page probes, not cover/TOC correspondence/pagination."
+      },
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [
+        "evidence/multipage-phd-repair/comparison.json"
+      ],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "missing": [
+          "abstract"
+        ],
+        "native_predicate_supported": true
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestStruct",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    }
+  ]
+}

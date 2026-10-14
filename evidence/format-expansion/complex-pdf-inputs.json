@@ -1,0 +1,41 @@
+[
+  {
+    "case": "pdf_complex_clean",
+    "format": "pdf",
+    "sha256": "29e324be397565051efa305ee794df67d0dcdd1dd34a981670af75df592a031c",
+    "parameters": {
+      "table_font_pt": 14,
+      "image_dimensions": [
+        1600,
+        800
+      ],
+      "embedded_font": "Windows Times New Roman"
+    }
+  },
+  {
+    "case": "pdf_complex_table7",
+    "format": "pdf",
+    "sha256": "5e4196e50e4f5e5a02a074710a337518e3a5642673fe286106f8a39403ea4a02",
+    "parameters": {
+      "table_font_pt": 7,
+      "image_dimensions": [
+        1600,
+        800
+      ],
+      "embedded_font": "Windows Times New Roman"
+    }
+  },
+  {
+    "case": "pdf_complex_image_above",
+    "format": "pdf",
+    "sha256": "3f6e2acd82d2725035016122f70e87ed08a1420e400e785c1d08f24fe5561724",
+    "parameters": {
+      "table_font_pt": 14,
+      "image_dimensions": [
+        4001,
+        4000
+      ],
+      "embedded_font": "Windows Times New Roman"
+    }
+  }
+]

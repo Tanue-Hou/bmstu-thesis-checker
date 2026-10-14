@@ -1,0 +1,524 @@
+{
+  "scope": {
+    "build": 230,
+    "format": "docx",
+    "limits": "Finite native fixture predicates, ordinary text paragraphs only. No full cover/layout or arbitrary DOCX equivalence. No physical-page guarantee."
+  },
+  "cases": {
+    "master": {
+      "g_chars43199": {
+        "input": "evidence\\graduate-structure\\g_chars43199.docx",
+        "input_sha256": "986be5f8d97ee9e786b9232a0db8a2c1e1f96212c642d64b547f8910b41c0c16",
+        "original_capture": "evidence\\graduate-structure\\master\\g_chars43199.original.json",
+        "capture_sha256": "b4af907b241b68cc628ceb285041d04b1de45ee4cefec1e275a8bd535bd81314",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_chars43199.docx 1. * Маленький объем ВКР: Не хватает 1 стр. (сначала исправьте остальные замечания, если они есть).",
+        "local_rules": [
+          "Graduate.ThesisSizeTooSmall"
+        ],
+        "native_diagnostics": 1
+      },
+      "g_chars43200": {
+        "input": "evidence\\graduate-structure\\g_chars43200.docx",
+        "input_sha256": "ea4ff3262f38bed993ed4871a9a7122bee92a38bb7e3e00faca87a063a8d101f",
+        "original_capture": "evidence\\graduate-structure\\master\\g_chars43200.original.json",
+        "capture_sha256": "d96cdd1a8fd28e42e33a0496968ff3985f03f6423bfc231435a06a7a36fef8f3",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_chars43200.docx Проверка закончена. Замечаний нет.",
+        "local_rules": [],
+        "native_diagnostics": 0
+      },
+      "g_cover": {
+        "input": "evidence\\graduate-structure\\g_cover.docx",
+        "input_sha256": "caab57769b7a515fe0b78dff2379367d3aec70dc707238683452f2496c062c3e",
+        "original_capture": "evidence\\graduate-structure\\master\\g_cover.original.json",
+        "capture_sha256": "29a8d8a40fd7f65c9f82e002d548ecde440b62d729427c39b215c8bed18b7f7d",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_cover.docx 1. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"ПРИЛОЖЕНИЕ А\". 2. ** Обнаружены пустые структурные элементы: \"СОДЕРЖАНИЕ\". 3. * Обнаружены небольшие структурные элементы (проверяется кол-во символов и кол-во абзацев (кол-во источников)): \"РЕФЕРАТ\". 4. * Маленький объем ВКР: Не хватает 33 стр. (сначала исправьте остальные замечания, если они есть).",
+        "local_rules": [
+          "Graduate.TocEmpty",
+          "Graduate.AbstractTooShort",
+          "Graduate.ThesisSizeTooSmall",
+          "Graduate.RequiredHeadingsMissing"
+        ],
+        "native_diagnostics": 4
+      },
+      "g_pages47": {
+        "input": "evidence\\graduate-structure\\g_pages47.docx",
+        "input_sha256": "0adb9b84be775b07b14dd10bbc61258e3116fa3eb987b90c4be52d0df53d653d",
+        "original_capture": "evidence\\graduate-structure\\master\\g_pages47.original.json",
+        "capture_sha256": "b32e3a90c0a0e4817afd4a077ee58b2516660dae0a9fb3292a171ff039afc37b",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_pages47.docx 1. * Маленький объем ВКР: Не хватает 33 стр. (сначала исправьте остальные замечания, если они есть).",
+        "local_rules": [
+          "Graduate.ThesisSizeTooSmall"
+        ],
+        "native_diagnostics": 1
+      },
+      "g_pages48": {
+        "input": "evidence\\graduate-structure\\g_pages48.docx",
+        "input_sha256": "c62ac6133382454578e1d46c327401732fe8340cb0ed48ea293fb533d8e5c3a9",
+        "original_capture": "evidence\\graduate-structure\\master\\g_pages48.original.json",
+        "capture_sha256": "fcea3f4f367f1049aba664be5d42c2a41fd086de87ca7d7d9464ac14b087a1c0",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_pages48.docx 1. * Маленький объем ВКР: Не хватает 33 стр. (сначала исправьте остальные замечания, если они есть).",
+        "local_rules": [
+          "Graduate.ThesisSizeTooSmall"
+        ],
+        "native_diagnostics": 1
+      },
+      "g_structure": {
+        "input": "evidence\\graduate-structure\\g_structure.docx",
+        "input_sha256": "221e8a0556861e9d4679662976fc4c4bab09e377762a27fd47544b5f2d1dabcc",
+        "original_capture": "evidence\\graduate-structure\\master\\g_structure.original.json",
+        "capture_sha256": "77b2333b30f03e2f39dfad3edb6397b18537b467896c0d33e8afc90e2aa1736f",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_structure.docx 1. * Маленький объем ВКР: Не хватает 33 стр. (сначала исправьте остальные замечания, если они есть).",
+        "local_rules": [
+          "Graduate.ThesisSizeTooSmall"
+        ],
+        "native_diagnostics": 1
+      },
+      "g_toc47": {
+        "input": "evidence\\graduate-structure\\g_toc47.docx",
+        "input_sha256": "1235001169fe895df337d6e38cf0bad3c959f437127c7ed3599cff2f1262c864",
+        "original_capture": "evidence\\graduate-structure\\master\\g_toc47.original.json",
+        "capture_sha256": "4c9c73c99151366f3c9f4c1ae58c705785422649b7bb943d443ce99fd63ca77c",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_toc47.docx 1. * Маленький объем ВКР: Не хватает 1 стр. (сначала исправьте остальные замечания, если они есть).",
+        "local_rules": [
+          "Graduate.ThesisSizeTooSmall"
+        ],
+        "native_diagnostics": 1
+      },
+      "g_toc48": {
+        "input": "evidence\\graduate-structure\\g_toc48.docx",
+        "input_sha256": "da7426b2db56775f92c4dc55be4b9ab8d80575268d53a57602ab781f671fd403",
+        "original_capture": "evidence\\graduate-structure\\master\\g_toc48.original.json",
+        "capture_sha256": "590ebf3e095540d3b8b1a52d928f0b2073d5976ccace9848ba2c3a9a4f4d4adb",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_toc48.docx Проверка закончена. Замечаний нет.",
+        "local_rules": [],
+        "native_diagnostics": 0
+      },
+      "g_toc_entries10": {
+        "input": "evidence\\graduate-structure\\g_toc_entries10.docx",
+        "input_sha256": "f250eb7b67a9fcbc863630411beab0fcd29009bd67b3aad3a92e21019ddbd483",
+        "original_capture": "evidence\\graduate-structure\\master\\g_toc_entries10.original.json",
+        "capture_sha256": "a9839688d342ca4bb1aa292f9688ab6bb9c04001e89d9a14b8385f5f258c456b",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_toc_entries10.docx 1. * Обнаружены небольшие структурные элементы (проверяется кол-во символов и кол-во абзацев (кол-во источников)): \"СОДЕРЖАНИЕ\". 2. * В содержании отсутствуют структурные заголовки: \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\", \"ПРИЛОЖЕНИЕ\". 3. * Маленький объем ВКР: Не хватает 27 стр. (сначала исправьте остальные замечания, если они есть).",
+        "local_rules": [
+          "Graduate.ThesisSizeTooSmall",
+          "Graduate.TocSmall"
+        ],
+        "native_diagnostics": 3
+      },
+      "g_toc_entries11": {
+        "input": "evidence\\graduate-structure\\g_toc_entries11.docx",
+        "input_sha256": "e34d25b13a5e219c40fb33420b472d05f8e7c7a4958e5d7f1689d3605410d9e9",
+        "original_capture": "evidence\\graduate-structure\\master\\g_toc_entries11.original.json",
+        "capture_sha256": "a705585747f20ceb0e956da2a12a1e06e6537f7d40cd48b62e26f59c042c1a7a",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_toc_entries11.docx 1. * В содержании отсутствуют структурные заголовки: \"ПРИЛОЖЕНИЕ\". 2. * Маленький объем ВКР: Не хватает 27 стр. (сначала исправьте остальные замечания, если они есть).",
+        "local_rules": [
+          "Graduate.ThesisSizeTooSmall"
+        ],
+        "native_diagnostics": 2
+      },
+      "g_toc_entries5": {
+        "input": "evidence\\graduate-structure\\g_toc_entries5.docx",
+        "input_sha256": "5ff7a6a85ed5040ccf99ddce7914f2592d3e264e27aaccbd9c530cf15eae903d",
+        "original_capture": "evidence\\graduate-structure\\master\\g_toc_entries5.original.json",
+        "capture_sha256": "416b5b8e1d6489934e6b847083e41429415ab931ebbc59cabd64cfa402ecc491",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_toc_entries5.docx 1. * Обнаружены небольшие структурные элементы (проверяется кол-во символов и кол-во абзацев (кол-во источников)): \"СОДЕРЖАНИЕ\". 2. * В содержании отсутствуют структурные заголовки: \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\", \"ПРИЛОЖЕНИЕ\". 3. * Приведите в соответствие заголовки в основной части и содержании: \"1.4 методы исследования 4\", \"1.5 методы исследования 5\", \"1.6 методы исследования 6\", \"1.7 методы исследования 7\". 4. * Маленький объем ВКР: Не хватает 27 стр. (сначала исправьте остальные замечания, если они есть).",
+        "local_rules": [
+          "Graduate.ThesisSizeTooSmall",
+          "Graduate.TocSmall"
+        ],
+        "native_diagnostics": 4
+      },
+      "repair_combined_after": {
+        "input": "evidence\\dynamic-master\\repair_combined_after.docx",
+        "input_sha256": "bfa155a4c04291d19606dfc3ee7203b7e25876ba09277acab370fb197ad9c8e5",
+        "original_capture": "evidence\\dynamic-master\\repair_combined_after.original.json",
+        "capture_sha256": "1ce814f0224836667fee8eea132a2cb015ec4e6dd0315b99f1c387371467abff",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\repair_combined_after.docx 1. *** Допущены ошибки в названии университета на титульном листе. 2. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 3. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"ПРИЛОЖЕНИЕ А\". 4. ** Обнаружены пустые структурные элементы: \"СОДЕРЖАНИЕ\". 5. * Обнаружены небольшие структурные элементы (проверяется кол-во символов и кол-во абзацев (кол-во источников)): \"РЕФЕРАТ\". 6. * Маленький объем ВКР: Не хватает 33 стр. (сначала исправьте остальные замечания, если они есть).",
+        "local_rules": [
+          "Graduate.TitlePageMismatch",
+          "Graduate.UniversityNameInvalid",
+          "Graduate.TocEmpty",
+          "Graduate.AbstractTooShort",
+          "Graduate.ThesisSizeTooSmall",
+          "Graduate.RequiredHeadingsMissing",
+          "Word.LineSpacingInvalid"
+        ],
+        "native_diagnostics": 6
+      }
+    },
+    "phd": {
+      "g_baseline": {
+        "input": "evidence\\graduate-structure\\g_baseline.docx",
+        "input_sha256": "e3433d6293446ab889271df00b720631c9400389390fd9e6950a0ef96d91500a",
+        "original_capture": "evidence\\graduate-structure\\phd\\g_baseline.original.json",
+        "capture_sha256": "900bbaa98484e3657981fc6e84280d16de486ae4d5a4d82092378034de40a47a",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_baseline.docx 1. *** Ошибка в наименовании работы. 2. *** Допущены ошибки в названии университета на титульном листе. 3. *** Отсутствует или неправильно введен титульный лист (много несоответствий). 4. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 5. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 6. Документ содержит страницы, размеры полей на которых не соответствуют требованиям. 7. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"ОГЛАВЛЕНИЕ\". 8. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\". 9. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\".",
+        "local_rules": [
+          "Graduate.TitlePageMismatch",
+          "Graduate.UniversityNameInvalid",
+          "Graduate.WorkNameInvalid",
+          "Graduate.TocEmpty",
+          "Graduate.RequiredHeadingsMissing",
+          "Word.LeftMarginInvalid",
+          "Word.LineSpacingInvalid"
+        ],
+        "native_diagnostics": 9
+      },
+      "g_phd_correct_heading": {
+        "input": "evidence\\graduate-structure\\g_phd_correct_heading.docx",
+        "input_sha256": "8fda3cfaa9eb55ec11206421334a1af52b4138d076eefc2bf5fc041f4d669f90",
+        "original_capture": "evidence\\graduate-structure\\phd\\g_phd_correct_heading.original.json",
+        "capture_sha256": "f4d7f059e968c8b1171ed23a4fa04f67e124bc0009aff5c6cadee379b0afa192",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_phd_correct_heading.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+        "local_rules": [
+          "Word.LeftMarginInvalid"
+        ],
+        "native_diagnostics": 1
+      },
+      "g_phd_left25": {
+        "input": "evidence\\graduate-structure\\g_phd_left25.docx",
+        "input_sha256": "7e6016fe36f8dac353fab0885fa65a948cd694106bd30ae976104f69e23738f9",
+        "original_capture": "evidence\\graduate-structure\\phd\\g_phd_left25.original.json",
+        "capture_sha256": "a6aff4368aa591c879c145adb88cf683bb4f23d191b4f5cfd259a462f04acf89",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_phd_left25.docx Проверка закончена. Замечаний нет.",
+        "local_rules": [],
+        "native_diagnostics": 0
+      },
+      "g_phd_margin15": {
+        "input": "evidence\\graduate-structure\\g_phd_margin15.docx",
+        "input_sha256": "526c2f0c1bfac4b2dd51a6596de016f1b1d571b9cf9e227cb1366f7710a411b8",
+        "original_capture": "evidence\\graduate-structure\\phd\\g_phd_margin15.original.json",
+        "capture_sha256": "fa665971d77dd8d30df6ade6c0105f9d648fdd4ce48e6b3acd85ef3d0159d57d",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_phd_margin15.docx 1. Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+        "local_rules": [
+          "Word.LeftMarginInvalid",
+          "Word.RightMarginInvalid"
+        ],
+        "native_diagnostics": 1
+      },
+      "g_phd_structure": {
+        "input": "evidence\\graduate-structure\\g_phd_structure.docx",
+        "input_sha256": "9bf54dfab747025bcaeb1ef020987ab42772c8d2bddd5dfc08c76d152ede0bf4",
+        "original_capture": "evidence\\graduate-structure\\phd\\g_phd_structure.original.json",
+        "capture_sha256": "082d67e062c6a7a202ff03d756a1ef76b8b2bb73eed99c53cb3a44e7b3a37c3a",
+        "original_text": "Файл: C:\\Users\\Tanue Hou\\AppData\\Local\\TestVkrLab-20261014\\g_phd_structure.docx 1. * В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок). 2. * Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании). 3. Документ содержит страницы, размеры полей на которых не соответствуют требованиям. 4. Отсутствуют или неправильно оформлены заголовки структурных элементов: \"ОГЛАВЛЕНИЕ\". 5. ** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\". 6. * В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\", \"ПРИЛОЖЕНИЕ\". 7. * Приведите в соответствие заголовки в основной части и содержании: \"1.1 методы исследования 1\", \"1.2 методы исследования 2\", \"1.3 методы исследования 3\", \"1.4 методы исследования 4\", \"1.5 методы исследования 5\", \"1.6 методы исследования 6\", \"1.7 методы исследования 7\".",
+        "local_rules": [
+          "Graduate.TocEmpty",
+          "Graduate.RequiredHeadingsMissing",
+          "Word.LeftMarginInvalid"
+        ],
+        "native_diagnostics": 7
+      }
+    }
+  },
+  "checks": {
+    "Graduate.UniversityNameInvalid": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "repair_combined_after",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_cover",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_baseline",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_correct_heading",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Graduate.TitlePageMismatch": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "repair_combined_after",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_cover",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_baseline",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_correct_heading",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Graduate.WorkNameInvalid": {
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_baseline",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_phd_correct_heading",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Graduate.RequiredHeadingsMissing": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_cover",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_phd_structure",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_correct_heading",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Graduate.TocEmpty": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_cover",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_toc_entries5",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_phd_structure",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_correct_heading",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Graduate.TocSmall": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_toc_entries5",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_toc_entries10",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_toc_entries11",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Graduate.AbstractTooShort": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_cover",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_structure",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Graduate.ThesisSizeTooSmall": {
+      "master": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_toc47",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_chars43199",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_pages47",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_pages48",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_toc48",
+            "expected": false,
+            "original": false,
+            "local": false
+          },
+          {
+            "case": "g_chars43200",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    },
+    "Word.LeftMarginInvalid": {
+      "phd": {
+        "pass": true,
+        "results": [
+          {
+            "case": "g_phd_correct_heading",
+            "expected": true,
+            "original": true,
+            "local": true
+          },
+          {
+            "case": "g_phd_left25",
+            "expected": false,
+            "original": false,
+            "local": false
+          }
+        ]
+      },
+      "pass": true
+    }
+  }
+}

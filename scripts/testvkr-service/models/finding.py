@@ -11,6 +11,7 @@ class Finding(BaseModel):
     threshold: Optional[Dict[str, Any]] = None # e.g., {"value": 12, "unit": "pt", "actual": 11.5}
     skip_switch: Optional[str] = None          # e.g., "SkipTestWord"
     confidence: Optional[str] = None           # e.g., "high", "medium", "low"
+    verification_status: str = "unverified_local_heuristic"
 
 class DocumentSummary(BaseModel):
     total_findings: int
@@ -21,5 +22,6 @@ class DocumentSummary(BaseModel):
 
 class CheckResponse(BaseModel):
     status: str
+    verification_status: str = "local_policy_check_not_original_program_certification"
     summary: DocumentSummary
     findings: List[Finding]

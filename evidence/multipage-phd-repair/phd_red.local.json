@@ -1,0 +1,136 @@
+{
+  "work_type_policy": {
+    "native_mode": "НКР аспиранта",
+    "toc_heading": "ОГЛАВЛЕНИЕ",
+    "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied.",
+    "manual_review": [
+      "Doctoral DOCX margins left/right/top/bottom 25/10/20/20 mm, tolerance 0.2 mm; finite single-section native probes",
+      "Not a general dissertation standard or original-program certification"
+    ]
+  },
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\multipage-phd-repair\\phd_red.docx",
+  "file_type": "docx",
+  "work_type": "phd",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {
+    "resolved": [
+      "docDefaults",
+      "paragraph_basedOn",
+      "character_basedOn",
+      "direct"
+    ],
+    "unresolved": [
+      "conditional_table_styles",
+      "numbering_properties",
+      "theme_font_and_color"
+    ]
+  },
+  "native_comparison_limits": {},
+  "summary": {
+    "total": 1,
+    "critical": 0,
+    "major": 0,
+    "warning": 0,
+    "info": 1
+  },
+  "review_summary": {
+    "status_zh": "发现本地策略提示，请先复核适用要求；这些提示尚不代表原版 TestVkr 的检查结论。",
+    "must_fix_count": 0,
+    "should_fix_count": 1,
+    "manual_review_count": 0,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 0,
+    "critical_or_major_count": 0
+  },
+  "groups": {
+    "by_severity": {
+      "info": [
+        "Word.TextColorNotBlack"
+      ]
+    },
+    "by_module": {
+      "word_format": [
+        "Word.TextColorNotBlack"
+      ]
+    },
+    "by_fix_priority": {
+      "should_fix": [
+        "Word.TextColorNotBlack"
+      ]
+    },
+    "by_location": {
+      "未定位": [
+        "Word.TextColorNotBlack"
+      ]
+    },
+    "antiplagiarism_related": []
+  },
+  "fix_checklist": {
+    "must_fix": [],
+    "should_fix": [
+      {
+        "rule_id": "Word.TextColorNotBlack",
+        "label_zh": "建议改",
+        "title_zh": "文字颜色不是黑色",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "可预览后将普通文字设为黑色；副本修复会跳过超链接和特殊对象。",
+        "word_path_zh": "开始 → 字体 → 字体颜色 → 黑色。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "manual_review": [],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Word.TextColorNotBlack",
+      "module": "word_format",
+      "severity": "info",
+      "message": "В документе много символов, цвет которых отличается от черного:",
+      "russian_message": "В документе много символов, цвет которых отличается от черного:",
+      "title_zh": "文字颜色不是黑色",
+      "explanation_zh": "主文档中存在非黑色文字；需核对学校模板及有意保留的强调或链接。",
+      "trigger_reason_zh": "非黑色文字达到当前规则的字符数条件，已在 DOCX 本科模式完成正负样本对照。",
+      "fix_suggestion_zh": "可预览后将普通文字设为黑色；副本修复会跳过超链接和特殊对象。",
+      "word_path_zh": "开始 → 字体 → 字体颜色 → 黑色。",
+      "fix_priority": "should_fix",
+      "suggested_fix_priority": "should_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_evidence_intact": true,
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "phd",
+        "build": 230,
+        "limits": "Single portrait DOCX section, ordinary body text and tables/one inline PNG; formatting predicates only; special content preserved, no margin repair."
+      },
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [
+        "evidence/multipage-phd-repair/comparison.json"
+      ],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "count_chars": 111
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": []
+    }
+  ]
+}

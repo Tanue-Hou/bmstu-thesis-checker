@@ -1,0 +1,30 @@
+[
+  {
+    "case": "margin_24_5",
+    "format": "docx",
+    "sha256": "5257f1542ecd7bddde9dba7a2a0376c934289dd1416dc4ee20b67c906fb21d17",
+    "parameters": {
+      "left_margin_mm_requested": 24.5,
+      "left_margin_twips": 1389
+    },
+    "parent_input": "evidence\\graduate-structure\\g_phd_left25.docx",
+    "parent_sha256": "7e6016fe36f8dac353fab0885fa65a948cd694106bd30ae976104f69e23738f9",
+    "modified_zip_parts": [
+      "word/document.xml"
+    ]
+  },
+  {
+    "case": "margin_25_5",
+    "format": "docx",
+    "sha256": "52c466ab8e5ef20dd6b771e9f0a28f7e47d6607ed05b25572a2ae8aa4684f3aa",
+    "parameters": {
+      "left_margin_mm_requested": 25.5,
+      "left_margin_twips": 1446
+    },
+    "parent_input": "evidence\\graduate-structure\\g_phd_left25.docx",
+    "parent_sha256": "7e6016fe36f8dac353fab0885fa65a948cd694106bd30ae976104f69e23738f9",
+    "modified_zip_parts": [
+      "word/document.xml"
+    ]
+  }
+]
