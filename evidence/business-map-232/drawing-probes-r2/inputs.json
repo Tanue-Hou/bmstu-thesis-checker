@@ -1,0 +1,123 @@
+{
+  "parent_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+  "cases": [
+    {
+      "case": "inline501",
+      "input": "evidence/business-map-232/drawing-probes-r2/inline501.docx",
+      "sha256": "b1fcf72c36228b0dd333bd02f18a907c80782a493cb8ffd14c51634aefce89da",
+      "kind": "inline",
+      "width_mm": 25,
+      "height_mm": 20.04,
+      "label_count": 0
+    },
+    {
+      "case": "anchor499",
+      "input": "evidence/business-map-232/drawing-probes-r2/anchor499.docx",
+      "sha256": "2c76447730e60ed0b43a636089301fb9f36a11bc0eae3817ce960d85dde65e23",
+      "kind": "anchor",
+      "width_mm": 25,
+      "height_mm": 19.96,
+      "label_count": 0
+    },
+    {
+      "case": "anchor500",
+      "input": "evidence/business-map-232/drawing-probes-r2/anchor500.docx",
+      "sha256": "f54bf2a4ab16c177402bdda66adf5a244023ff6801c9b24b14538992cebcc3fe",
+      "kind": "anchor",
+      "width_mm": 25,
+      "height_mm": 20,
+      "label_count": 0
+    },
+    {
+      "case": "anchor501",
+      "input": "evidence/business-map-232/drawing-probes-r2/anchor501.docx",
+      "sha256": "cd224e9cba0b8b23c329a5346a44ff0446dd6641df48c4271a40038f927eddf3",
+      "kind": "anchor",
+      "width_mm": 25,
+      "height_mm": 20.04,
+      "label_count": 0
+    },
+    {
+      "case": "body7",
+      "input": "evidence/business-map-232/drawing-probes-r2/body7.docx",
+      "sha256": "bf8be2ef8c951557659766f7a067ce55f38f22b1618948b869ff3c1c26944562",
+      "kind": "body",
+      "width_mm": 0,
+      "height_mm": 0,
+      "label_count": 0
+    },
+    {
+      "case": "labels1",
+      "input": "evidence/business-map-232/drawing-probes-r2/labels1.docx",
+      "sha256": "df92c813b28fd843df6e4e27e1757ea72b149caf438394fb587b7d2b075ebed2",
+      "kind": "label",
+      "width_mm": 1,
+      "height_mm": 5,
+      "label_count": 1
+    },
+    {
+      "case": "labels10",
+      "input": "evidence/business-map-232/drawing-probes-r2/labels10.docx",
+      "sha256": "cb2df97d196fb2aeb68d623eacdf7d2d91b566fa7740b4f5e7902afd7df069f1",
+      "kind": "label",
+      "width_mm": 1,
+      "height_mm": 5,
+      "label_count": 10
+    },
+    {
+      "case": "labels11",
+      "input": "evidence/business-map-232/drawing-probes-r2/labels11.docx",
+      "sha256": "ac064b607bc0b15bed620e9a5ecfb9de527f4b4af0433ef515ee0774f39f0c40",
+      "kind": "label",
+      "width_mm": 1,
+      "height_mm": 5,
+      "label_count": 11
+    },
+    {
+      "case": "labels2mm",
+      "input": "evidence/business-map-232/drawing-probes-r2/labels2mm.docx",
+      "sha256": "9bbec40b9d29ab3212c50cc658539a005009fd84bda8df54073892e9abac5a56",
+      "kind": "label",
+      "width_mm": 2,
+      "height_mm": 5,
+      "label_count": 11
+    },
+    {
+      "case": "labelsHeight1",
+      "input": "evidence/business-map-232/drawing-probes-r2/labelsHeight1.docx",
+      "sha256": "54a8b90180ca1e577710bd076591e0854370526414849d322f79a4503fd42c8e",
+      "kind": "label",
+      "width_mm": 5,
+      "height_mm": 1,
+      "label_count": 11
+    },
+    {
+      "case": "labelsHeight2",
+      "input": "evidence/business-map-232/drawing-probes-r2/labelsHeight2.docx",
+      "sha256": "618a14907142dbc0e057c4368b609abd661d2497b2d2a7784cb58a0883d8cde8",
+      "kind": "label",
+      "width_mm": 5,
+      "height_mm": 2,
+      "label_count": 11
+    },
+    {
+      "case": "anchors2Equal",
+      "input": "evidence/business-map-232/drawing-probes-r2/anchors2Equal.docx",
+      "sha256": "04edb646ecb54670107b22c4a81cd21e98648b389accbec7271507b3568cdf23",
+      "kind": "anchor",
+      "width_mm": 25,
+      "height_mm": 10,
+      "label_count": 2
+    },
+    {
+      "case": "anchors2Above",
+      "input": "evidence/business-map-232/drawing-probes-r2/anchors2Above.docx",
+      "sha256": "4134ab3ecc249bacef4cbc1d1f473fbd37923c267b8730fce78e7e636f712b4c",
+      "kind": "anchor",
+      "width_mm": 25,
+      "height_mm": 10.02,
+      "label_count": 2
+    }
+  ],
+  "limits": "Synthetic OpenXML probes; validity and native classification require actual checks."
+}

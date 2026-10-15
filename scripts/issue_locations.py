@@ -36,6 +36,18 @@ def locate_finding(f,data,file_type,limit=100):
                 if rule!='Dict.MixedScriptHomoglyphs' and not any(k in match.group().lower() for k in ['ьь','ъъ','ьъ','ъь','щч','шч','жш','чщ']):continue
                 total+=1
                 if len(out)<limit:out.append({**loc,'text_excerpt':match.group(),'character_start':match.start(),'character_end':match.end(),'classification':'candidate_spelling_or_mixed_script_not_intent'})
+    elif rule in {'Pic.SmallLabels','Pic.FloatingShapes','Pic.FloatingLabels'} and (f.get('location') or {}).get('labels'):
+        selected=set(f['location']['labels'])
+        for label in data.get('labels',[]):
+            if label['index']+1 not in selected:continue
+            total+=1
+            if len(out)<limit:out.append({'kind':'docx_textbox','shape_id':label.get('shape_id'),'xml_path':label.get('xml_path'),'width_mm':label.get('width_mm'),'height_mm':label.get('height_mm'),'position':label.get('position'),'text_excerpt':label.get('text','')[:140]})
+    elif rule=='Pic.FloatingImages' and (f.get('location') or {}).get('images'):
+        selected=set(f['location']['images'])
+        for index,image in enumerate(data.get('images',[]),1):
+            if index not in selected:continue
+            total+=1
+            if len(out)<limit:out.append({'kind':'docx_drawing','image':index,'xml_path':image.get('xml_path'),'relationship_id':image.get('relationship_id'),'display_width_mm':image.get('native_display_width_mm'),'display_height_mm':image.get('native_display_height_mm'),'wrap_mode':image.get('wrap_mode')})
     elif rule=='Pic.PixelSizeTooLarge' or (rule=='Pic.FileSizeTooLarge' and f.get('threshold',{}).get('unit')=='bytes'):
         for i,im in enumerate(data.get('images',[]),1):
             measured=(im.get('width_px') or 0)*(im.get('height_px') or 0) if rule=='Pic.PixelSizeTooLarge' else im.get('zip_local_uncompressed_size',0)

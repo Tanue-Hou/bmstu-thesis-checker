@@ -1,0 +1,29 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "cd224e9cba0b8b23c329a5346a44ff0446dd6641df48c4271a40038f927eddf3",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 1,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "** Документ содержит плавающие рисунки. Встройте рисунки в текст: \"ультаты обработки данных и анализа исследования.||\"; ."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/drawing-boundaries-r2/anchor501",
+  "trace_sha256": "ef369c01b71a928237773077ae82b8313233c285a9820713fc0fcd38b4b4361f",
+  "native_text_sha256": "8cf1d12016c122b9da78bfad18cca9889d08ebf15d83101d9d52fd1fd0733751",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "2e7135e0bcb2bc2102f10e3aec14743355c526e3c1246eb02d4be07279003e40",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

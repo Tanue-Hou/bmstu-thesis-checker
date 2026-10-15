@@ -1,0 +1,24 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "897d0b3ab72e712802ba28c86e3671c5f3c014a36c2645b76f65900679509856",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 0,
+  "diagnostics": [],
+  "evidence_directory": "evidence/business-map-232/drawing-boundaries-r3/anchorSquare499",
+  "trace_sha256": "424562e182ac4b793ada9ae2c3c78c3cdd7da7fcdacbb76df82c7f33e0e6563c",
+  "native_text_sha256": "0caf45b534065fe6b08fa14963312827af55b11fa96a418c26fe59c8a6a40c22",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "70e7aada6b303ccdd010c0528f1cf5f4e68145049ec8ba764abb1e781257115b",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

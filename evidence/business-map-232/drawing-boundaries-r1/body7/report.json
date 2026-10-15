@@ -1,0 +1,29 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "bf8be2ef8c951557659766f7a067ce55f38f22b1618948b869ff3c1c26944562",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 1,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "** В документе много символов, размер которых меньше 8 пт: \"small body text with enough characters for the old\"."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/drawing-boundaries-r1/body7",
+  "trace_sha256": "4fd796852b4d4151dea0262d42080edf372cdf7b30a25a00c84cf30d936ea9a6",
+  "native_text_sha256": "e981f55d5c5b69066cca0ee3d4dc96795e980b91f4799150077a4c7127967cd5",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "f3d708ce1f3108fab21dc089130813ecc637e70263f428ac4ce4226607b93a6c",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "status": "passed_actual_mcp_with_retained_same_input_native",
+  "server_version": "0.2.13",
+  "cases": [
+    {
+      "case": "anchor501",
+      "source_sha256": "cd224e9cba0b8b23c329a5346a44ff0446dd6641df48c4271a40038f927eddf3",
+      "native_capture": "evidence/business-map-232/drawing-boundaries-r2/anchor501",
+      "matched_families": [
+        "Pic.FloatingImages"
+      ],
+      "all_four_families_agree": true,
+      "drawing_repair_allowed": false
+    },
+    {
+      "case": "labels11",
+      "source_sha256": "ac064b607bc0b15bed620e9a5ecfb9de527f4b4af0433ef515ee0774f39f0c40",
+      "native_capture": "evidence/business-map-232/drawing-boundaries-r2/labels11",
+      "matched_families": [
+        "Pic.SmallLabels",
+        "Pic.FloatingShapes",
+        "Pic.FloatingLabels"
+      ],
+      "all_four_families_agree": true,
+      "drawing_repair_allowed": false
+    },
+    {
+      "case": "anchorSquare501",
+      "source_sha256": "dea83f7db95d15fc01622fbda3222f96d86b7b14b552543b409330cbe50d94c5",
+      "native_capture": "evidence/business-map-232/drawing-boundaries-r3/anchorSquare501",
+      "matched_families": [],
+      "all_four_families_agree": true,
+      "drawing_repair_allowed": false
+    }
+  ],
+  "raw_response_sha256": "7b09fbd4dd8a029295ad2f31fcf8765956f45c83d373e82122884cb621f29a9c",
+  "limits": "Actual local MCP calls; original runs retained by identical source hash, not rerun here. Four drawing families only, not full report or school equivalence."
+}

@@ -10,6 +10,7 @@ from lxml import etree
 from copy import deepcopy
 from docx.text.paragraph import Paragraph
 from .style_resolver import StyleResolver
+from .drawing_geometry import native_extent,vml_textboxes
 
 # OpenXML Namespaces
 NS = {
@@ -376,11 +377,16 @@ class DocxParser:
 
             width_px = None
             height_px = None
+            native_width=native_height=native_area=None
+            wrap_mode=None
+            if anchor is not None:
+                wrap_mode=next((etree.QName(node).localname for node in anchor if etree.QName(node).localname.startswith('wrap')),None)
             if extent is not None:
                 # Size is in EMUs (English Metric Units). 1 inch = 914400 EMUs, 1 px ≈ 9525 EMUs (at 96 dpi)
                 cx = extent.get('cx')
                 cy = extent.get('cy')
                 if cx and cy:
+                    native_width,native_height,native_area=native_extent(cx,cy)
                     width_px = float(cx) / 9525.0
                     height_px = float(cy) / 9525.0
 
@@ -423,6 +429,8 @@ class DocxParser:
                 'xml_path':d.getroottree().getpath(d),
                 'relationship_id':blip.get(qn('r:embed')) if blip is not None else None,
                 'placement': placement,
+                'native_display_width_mm':native_width,'native_display_height_mm':native_height,'native_display_area_mm2':native_area,'wrap_mode':wrap_mode,
+                'ordinary_drawing_geometry_supported':extent is not None and len(d.findall('.//a:xfrm',NS))==1 and not d.find('.//a:xfrm',NS).attrib and len(d.findall('.//a:xfrm/a:ext',NS))==1 and d.find('.//a:xfrm/a:ext',NS).get('cx')==extent.get('cx') and d.find('.//a:xfrm/a:ext',NS).get('cy')==extent.get('cy') and d.find('.//a:srcRect',NS) is None,
                 'extension': image_extension,
                 'png_bit_depth':png_bit_depth,'png_color_type':png_color_type,
                 'png_structure_verified':png_structure_verified,
@@ -452,6 +460,9 @@ class DocxParser:
 
     def parse_all(self) -> Dict[str, Any]:
         images=self.parse_drawings_and_images()
+        labels=vml_textboxes(self.doc.element.body)
+        labels_profile=(len(labels)==len(self.doc.element.body.findall('.//{urn:schemas-microsoft-com:vml}shape')) and all(l['geometry_supported'] for l in labels) and not bool(self.doc.element.xpath('.//*[local-name()="txbx"] | .//*[local-name()="group"]')))
+        floating_profile=(1<=len(images)<=2 and not labels and all(im['placement'] in {'inline','floating'} and (im['placement']=='inline' or im['wrap_mode'] in {'wrapNone','wrapSquare'}) and im['extension']=='png' and im['png_structure_verified'] and im['png_bit_depth']==8 and im['png_color_type']==2 and im['blip_count']==1 and im['native_display_area_mm2'] is not None and im['ordinary_drawing_geometry_supported'] for im in images) and not bool(self.doc.element.xpath('.//w:pict | .//*[local-name()="AlternateContent"]')))
         bytes_profile=(1<=len(images)<=2 and all(im.get('placement')=='inline' and im.get('extension')=='png' and im.get('png_bit_depth')==8 and im.get('png_color_type')==2 and im.get('png_structure_verified') and im.get('blip_count')==1 and im.get('zip_local_flags') in {0,8} and im.get('zip_compression_method')==8 and not im.get('zip_uses_zip64',True) and not im.get('zip_entry_ambiguous',True) and (im.get('zip_local_uncompressed_size')==im.get('zip_central_uncompressed_size') if im.get('zip_local_flags')==0 else im.get('zip_local_uncompressed_size')==0) for im in images)
                        and not bool(self.doc.element.xpath('.//w:pict | .//w:txbxContent | .//w:object | .//*[local-name()="AlternateContent"]')))
         pixel_profile=(len(images)==1 and images[0]['placement']=='inline' and images[0]['extension']=='png' and images[0]['png_bit_depth']==8 and images[0]['png_color_type']==2 and images[0]['png_structure_verified'] and images[0]['blip_count']==1
@@ -459,10 +470,11 @@ class DocxParser:
                        and images[0]['width_px']*images[0]['height_px']<2**31
                        and not bool(self.doc.element.xpath('.//w:pict | .//w:txbxContent | .//w:object | .//*[local-name()="AlternateContent"]')))
         return {
+            'labels':labels,'native232_vml_label_profile_supported':labels_profile,'native232_floating_profile_supported':floating_profile,
             'native232_image_bytes_profile_supported':bytes_profile,
             'native232_single_inline_png_profile_supported':pixel_profile,
             'native_graduate_scope_supported': not bool(self.doc.element.xpath('.//w:tbl | .//w:drawing | .//w:pict | .//w:txbxContent | .//w:fldSimple | .//w:instrText | .//w:del | .//w:ins | .//w:altChunk | .//w:sdt')),
-            'formatting_coverage': {'resolved': ['docDefaults', 'paragraph_basedOn', 'character_basedOn', 'direct'], 'unresolved': ['conditional_table_styles', 'numbering_properties', 'theme_font_and_color']},
+            'formatting_coverage': {'resolved': ['docDefaults', 'paragraph_basedOn', 'character_basedOn', 'direct'], 'unresolved': ['conditional_table_styles', 'numbering_properties', 'theme_font_and_color'], 'drawing_geometry':{'measured_vml_textboxes':sum(label['geometry_supported'] for label in labels),'unmeasured_vml_textboxes':sum(not label['geometry_supported'] for label in labels),'floating_png_profile_supported':floating_profile,'vml_label_profile_supported':labels_profile,'limits':'Simple explicit geometry only; general shapes, DrawingML textboxes, fit/crop/rotation and other units require separate proof.'}},
             'file_size_mb': self.metadata['file_size_mb'],
             'sections': self.metadata['sections'],
             'paragraphs': self.parse_paragraphs(),

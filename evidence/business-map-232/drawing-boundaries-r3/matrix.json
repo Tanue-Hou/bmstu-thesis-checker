@@ -1,0 +1,47 @@
+{
+  "native_build": 232,
+  "work_type": "phd",
+  "cases": [
+    {
+      "case": "anchorSquare499",
+      "input": "evidence/business-map-232/drawing-probes-r3/anchorSquare499.docx",
+      "sha256": "897d0b3ab72e712802ba28c86e3671c5f3c014a36c2645b76f65900679509856",
+      "kind": "anchorSquare",
+      "width_mm": 25,
+      "height_mm": 19.96,
+      "label_count": 0,
+      "drawing_state": {
+        "floating_raster_count": 0,
+        "floating_shape_count": 1,
+        "floating_area_float": 0.0,
+        "small_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 0,
+      "evidence_directory": "evidence/business-map-232/drawing-boundaries-r3/anchorSquare499"
+    },
+    {
+      "case": "anchorSquare501",
+      "input": "evidence/business-map-232/drawing-probes-r3/anchorSquare501.docx",
+      "sha256": "dea83f7db95d15fc01622fbda3222f96d86b7b14b552543b409330cbe50d94c5",
+      "kind": "anchorSquare",
+      "width_mm": 25,
+      "height_mm": 20.04,
+      "label_count": 0,
+      "drawing_state": {
+        "floating_raster_count": 0,
+        "floating_shape_count": 1,
+        "floating_area_float": 0.0,
+        "small_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 0,
+      "evidence_directory": "evidence/business-map-232/drawing-boundaries-r3/anchorSquare501"
+    }
+  ],
+  "limits": [
+    "Synthetic VML label and DrawingML anchor cases; no general-shape or PDF equivalence claim."
+  ]
+}

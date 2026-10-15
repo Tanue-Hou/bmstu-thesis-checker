@@ -1,0 +1,37 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "ac064b607bc0b15bed620e9a5ecfb9de527f4b4af0433ef515ee0774f39f0c40",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 3,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "** Документ содержит плавающие графические фигуры. Встройте фигуры в текст: \"а исследования.|||Рисунок 1 — Результаты анализа|X\", \"исследования.|||Рисунок 1 — Результаты анализа|X|X\", \"следования.|||Рисунок 1 — Результаты анализа|X|X|X\", \"едования.|||Рисунок 1 — Результаты анализа|X|X|X|X\", \"ования.|||Рисунок 1 — Результаты анализа|X|X|X|X|X\", \"ания.|||Рисунок 1 — Результаты анализа|X|X|X|X|X|X\", \"ия.|||Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X\", \".|||Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X|X\", \"||Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X|X|X\", \"Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X|X|X|X\", \"сунок 1 — Результаты анализа|X|X|X|X|X|X|X|X|X|X|X\"; ."
+    },
+    {
+      "number": 2,
+      "message": "Документ содержит мелкие надписи. Увеличьте их размер или удалите: \"а исследования.|||Рисунок 1 — Результаты анализа|X\", \"исследования.|||Рисунок 1 — Результаты анализа|X|X\", \"следования.|||Рисунок 1 — Результаты анализа|X|X|X\", \"едования.|||Рисунок 1 — Результаты анализа|X|X|X|X\", \"ования.|||Рисунок 1 — Результаты анализа|X|X|X|X|X\", \"ания.|||Рисунок 1 — Результаты анализа|X|X|X|X|X|X\", \"ия.|||Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X\", \".|||Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X|X\", \"||Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X|X|X\", \"Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X|X|X|X\", \"сунок 1 — Результаты анализа|X|X|X|X|X|X|X|X|X|X|X\"."
+    },
+    {
+      "number": 3,
+      "message": "** Документ содержит плавающие надписи. Встройте надписи в текст:\"а исследования.|||Рисунок 1 — Результаты анализа|X\", \"исследования.|||Рисунок 1 — Результаты анализа|X|X\", \"следования.|||Рисунок 1 — Результаты анализа|X|X|X\", \"едования.|||Рисунок 1 — Результаты анализа|X|X|X|X\", \"ования.|||Рисунок 1 — Результаты анализа|X|X|X|X|X\", \"ания.|||Рисунок 1 — Результаты анализа|X|X|X|X|X|X\", \"ия.|||Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X\", \".|||Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X|X\", \"||Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X|X|X\", \"Рисунок 1 — Результаты анализа|X|X|X|X|X|X|X|X|X|X\", \"сунок 1 — Результаты анализа|X|X|X|X|X|X|X|X|X|X|X\"; ."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/drawing-boundaries-r2/labels11",
+  "trace_sha256": "8d41679abd5fb12a9cca1f637f34c44a820a94d45ad524375b6d7826d1f3564c",
+  "native_text_sha256": "849eba14b978dcbda1c8ffa5c56f665e98cfc392c3bee01cbb96502f6d23b3e1",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "c39d6a4e2b9170713e12f1e7a4aef6d6719e8f0f2d456a390252085c195bd701",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

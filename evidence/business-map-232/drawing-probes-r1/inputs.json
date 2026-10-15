@@ -1,0 +1,87 @@
+{
+  "parent_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+  "cases": [
+    {
+      "case": "inline501",
+      "input": "evidence/business-map-232/drawing-probes-r1/inline501.docx",
+      "sha256": "b1fcf72c36228b0dd333bd02f18a907c80782a493cb8ffd14c51634aefce89da",
+      "kind": "inline",
+      "width_mm": 25,
+      "height_mm": 20.04,
+      "label_count": 0
+    },
+    {
+      "case": "anchor499",
+      "input": "evidence/business-map-232/drawing-probes-r1/anchor499.docx",
+      "sha256": "2c76447730e60ed0b43a636089301fb9f36a11bc0eae3817ce960d85dde65e23",
+      "kind": "anchor",
+      "width_mm": 25,
+      "height_mm": 19.96,
+      "label_count": 0
+    },
+    {
+      "case": "anchor500",
+      "input": "evidence/business-map-232/drawing-probes-r1/anchor500.docx",
+      "sha256": "f54bf2a4ab16c177402bdda66adf5a244023ff6801c9b24b14538992cebcc3fe",
+      "kind": "anchor",
+      "width_mm": 25,
+      "height_mm": 20,
+      "label_count": 0
+    },
+    {
+      "case": "anchor501",
+      "input": "evidence/business-map-232/drawing-probes-r1/anchor501.docx",
+      "sha256": "cd224e9cba0b8b23c329a5346a44ff0446dd6641df48c4271a40038f927eddf3",
+      "kind": "anchor",
+      "width_mm": 25,
+      "height_mm": 20.04,
+      "label_count": 0
+    },
+    {
+      "case": "body7",
+      "input": "evidence/business-map-232/drawing-probes-r1/body7.docx",
+      "sha256": "bf8be2ef8c951557659766f7a067ce55f38f22b1618948b869ff3c1c26944562",
+      "kind": "body",
+      "width_mm": 0,
+      "height_mm": 0,
+      "label_count": 0
+    },
+    {
+      "case": "labels1",
+      "input": "evidence/business-map-232/drawing-probes-r1/labels1.docx",
+      "sha256": "df92c813b28fd843df6e4e27e1757ea72b149caf438394fb587b7d2b075ebed2",
+      "kind": "label",
+      "width_mm": 1,
+      "height_mm": 5,
+      "label_count": 1
+    },
+    {
+      "case": "labels10",
+      "input": "evidence/business-map-232/drawing-probes-r1/labels10.docx",
+      "sha256": "cb2df97d196fb2aeb68d623eacdf7d2d91b566fa7740b4f5e7902afd7df069f1",
+      "kind": "label",
+      "width_mm": 1,
+      "height_mm": 5,
+      "label_count": 10
+    },
+    {
+      "case": "labels11",
+      "input": "evidence/business-map-232/drawing-probes-r1/labels11.docx",
+      "sha256": "ac064b607bc0b15bed620e9a5ecfb9de527f4b4af0433ef515ee0774f39f0c40",
+      "kind": "label",
+      "width_mm": 1,
+      "height_mm": 5,
+      "label_count": 11
+    },
+    {
+      "case": "labels2mm",
+      "input": "evidence/business-map-232/drawing-probes-r1/labels2mm.docx",
+      "sha256": "9bbec40b9d29ab3212c50cc658539a005009fd84bda8df54073892e9abac5a56",
+      "kind": "label",
+      "width_mm": 2,
+      "height_mm": 5,
+      "label_count": 11
+    }
+  ],
+  "limits": "Synthetic OpenXML probes; validity and native classification require actual checks."
+}

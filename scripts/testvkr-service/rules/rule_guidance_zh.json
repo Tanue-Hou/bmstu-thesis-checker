@@ -83,7 +83,7 @@
   "Pic.PixelSizeTooLarge": {
     "title_zh": "图片总像素数过大",
     "explanation_zh": "图片原始宽度乘以高度超过总像素数限制；与论文中显示的厘米宽度不同。",
-    "trigger_reason_zh": "原始宽度乘以高度超过当前总像素数阈值；阈值来自静态代码，对照验证仍待完成。",
+    "trigger_reason_zh": "原始宽度乘以高度超过当前总像素数阈值；232特定PNG配置已完成动态边界验证，其他配置仍待复核，以JSON验证范围为准。",
     "fix_suggestion_zh": "根据打印尺寸与清晰度需求重新导出或压缩原图；仅在 Word 中缩小显示尺寸不会降低原图像素数。",
     "word_path_zh": "图片格式 -> 大小；必要时在图片编辑器中重新导出后替换。",
     "fix_priority": "should_fix",
@@ -92,19 +92,35 @@
   "Pic.FloatingImages": {
     "title_zh": "存在浮动图片",
     "explanation_zh": "图片没有嵌入文本流，可能在不同环境中移动位置或遮挡正文。",
-    "trigger_reason_zh": "检测到图片版式不是嵌入型，而是浮动/锚定对象。",
+    "trigger_reason_zh": "232 DOCX还要求原生float32累计面积严格大于500平方毫米；wrapNone累加显示面积，wrapSquare贡献0。其他版本和配置待复核。",
     "fix_suggestion_zh": "将图片环绕方式改为“嵌入型”，并重新检查题注位置。",
     "word_path_zh": "选中图片 -> 布局选项 -> 嵌入型。",
-    "fix_priority": "must_fix",
+    "fix_priority": "manual_review",
     "affects_antiplagiarism": false
   },
   "Pic.SmallLabels": {
-    "title_zh": "图片或标注文字过小",
-    "explanation_zh": "图内标注、题注或相关文字字号太小，影响阅读。",
-    "trigger_reason_zh": "检测到图片附近或文档中小字号标注字符数量超过阈值。",
-    "fix_suggestion_zh": "放大图中文字，或将说明文字改为正文题注形式。",
-    "word_path_zh": "选中文字 -> 开始 -> 字号；图内文字需在原图编辑后重新插入。",
-    "fix_priority": "should_fix",
+    "title_zh": "小尺寸文本框数量异常",
+    "explanation_zh": "232已验证简单VML文本框的几何尺寸计数，不是正文小字号或图片OCR。其他版本与形状类型待复核。",
+    "trigger_reason_zh": "在已验证232 DOCX/NKR配置中，宽或高严格小于2mm的文本框超过10个。",
+    "fix_suggestion_zh": "按XML/对象定位复核文本框的尺寸和用途，必要时手工调整并复查布局；不要因此批量放大正文字号。",
+    "word_path_zh": "Word选择窗格 -> 对应文本框 -> 形状格式 -> 大小。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Pic.FloatingShapes": {
+    "title_zh": "存在浮动图形",
+    "explanation_zh": "当前232已验证范围为简单绝对定位VML文本框，不能推广到所有图形。",
+    "trigger_reason_zh": "原生图形计数槽0x28+0x29大于0；其他几何配置仍待验证。",
+    "fix_suggestion_zh": "按XML和对象ID复核锚点与版式，手工调整后检查分页和图文位置。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Pic.FloatingLabels": {
+    "title_zh": "存在浮动文字框",
+    "explanation_zh": "浮动文字与浮动图形、小尺寸文本框是独立诊断；当前仅验证简单绝对定位VML框。",
+    "trigger_reason_zh": "原生文字框计数槽0x30+0x32大于0；其他几何配置仍待验证。",
+    "fix_suggestion_zh": "复核文字框用途和锚点，手工调整后检查文字与周围图表关系。",
+    "fix_priority": "manual_review",
     "affects_antiplagiarism": false
   },
   "Word.HeaderFooterDistanceInvalid": {

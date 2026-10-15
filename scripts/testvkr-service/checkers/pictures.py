@@ -3,6 +3,7 @@ from .base import BaseChecker
 from models.finding import Finding
 from models.enums import Severity, ModuleType
 from config import settings
+from parsers.drawing_geometry import f32
 
 
 def U(text: str) -> str:
@@ -42,10 +43,15 @@ class PicturesChecker(BaseChecker):
         floating_image_locations = []
         large_pixel_image_locations = []
         large_pixel_pages=set()
+        floating_area=0.0;floating_area_supported=True
         for img_idx, img in enumerate(images):
             if img.get("placement", "inline") == "floating":
                 floating_images_count += 1
                 floating_image_locations.append(img.get("index", img_idx) + 1)
+                area=img.get('native_display_area_mm2')
+                if area is None:floating_area_supported=False
+                elif img.get('wrap_mode')=='wrapNone':floating_area=f32(floating_area+area)
+                elif img.get('wrap_mode')!='wrapSquare':floating_area_supported=False
             w = img.get("width_px")
             h = img.get("height_px")
             if w is not None and h is not None and w * h > settings.IMAGE_PIXEL_AREA_MAX:
@@ -53,21 +59,23 @@ class PicturesChecker(BaseChecker):
                 large_pixel_image_locations.append(img.get("index", img_idx) + 1)
                 if "page_index" in img:large_pixel_pages.add(img["page_index"]+1)
 
-        if self.file_type == "docx":
+        if native232_docx:
+            small_labels_count=sum(l.get('small_geometry_candidate',False) for l in self.doc_data.get('labels',[]))
+        elif self.file_type == "docx":
             for p in self.doc_data.get("paragraphs", []):
                 for run in p.get("runs", []):
                     fs = run.get("font_size_pt")
                     if fs and fs < 9.0:
                         small_labels_count += len(run.get("text", ""))
 
-        if floating_images_count > 0:
+        if floating_images_count > 0 and (not native232_docx or (floating_area_supported and floating_area>500)):
             findings.append(Finding(
                 code="Pic.FloatingImages",
                 module=ModuleType.PICTURES,
                 severity=Severity.MAJOR,
                 message=self.MSG_FLOATING,
                 location={"images": floating_image_locations},
-                threshold={"count_drawings": floating_images_count},
+                threshold={"count_drawings": floating_images_count,**({'area_mm2':floating_area,'area_threshold_mm2':500,'area_measurement_supported':floating_area_supported,'measurement':'float32 aggregate wrapNone anchor area; wrapSquare contributes zero'} if native232_docx else {})},
                 skip_switch="SkipTestPic",
             ))
 
@@ -88,8 +96,13 @@ class PicturesChecker(BaseChecker):
                 module=ModuleType.PICTURES,
                 severity=Severity.INFO,
                 message=self.MSG_SMALL_LABELS,
-                threshold={"count_chars": small_labels_count},
+                location={'labels':[l['index']+1 for l in self.doc_data.get('labels',[]) if l.get('small_geometry_candidate')]} if native232_docx else None,
+                threshold=({'count_labels':small_labels_count,'minimum_count_exclusive':10,'dimension_threshold_mm':2,'measurement':'textbox width or height strictly below2mm'} if native232_docx else {"count_chars": small_labels_count}),
                 skip_switch="SkipTestPic",
             ))
 
+        if native232_docx:
+            floating_labels=[l for l in self.doc_data.get('labels',[]) if l.get('position')=='absolute']
+            for code,message in [('Pic.FloatingShapes','** Документ содержит плавающие графические фигуры. Встройте фигуры в текст:'),('Pic.FloatingLabels','** Документ содержит плавающие надписи. Встройте надписи в текст:')]:
+                if floating_labels:findings.append(Finding(code=code,module=ModuleType.PICTURES,severity=Severity.MAJOR,message=message,location={'labels':[l['index']+1 for l in floating_labels]},threshold={'count_labels':len(floating_labels),'measurement':'simple absolute VML textboxes; general shapes unimplemented'},skip_switch='SkipTestPic'))
         return findings

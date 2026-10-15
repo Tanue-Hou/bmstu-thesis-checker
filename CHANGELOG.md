@@ -1,3 +1,10 @@
+# v0.2.13
+
+- Recover four drawing families using15 actual native synthetic inputs, geometry/counter observations and report branches.
+- Correct floating-image area/wrap semantics and replace the build232 body-small-font label heuristic with measured textbox geometry/counts.
+- Add precise VML/image locations and four bounded evidence/hash-bound DOCX/NKR contexts; unknown wrap stays unassessed.
+- Preserve raw traces and legacy slot-label correction. Keep all drawing repair closed.
+
 # v0.2.12
 
 - Trace per-image ZIP local-header size lookup, unsigned30000000-byte comparison, branch and report counter; preserve the native40Mb text mismatch.

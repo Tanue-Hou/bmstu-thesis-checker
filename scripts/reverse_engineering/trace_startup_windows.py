@@ -33,12 +33,13 @@ class THREAD_ENTRY(C.Structure):
     _fields_=[('size',D),('usage',D),('tid',D),('pid',D),('base_priority',W.LONG),('delta_priority',W.LONG),('flags',D)]
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--drawing-trace',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
     if a.direct_file_entry and not a.probe_document:raise ValueError('Direct entry requires a synthetic document probe')
     if a.probe_document and not a.direct_file_entry:raise ValueError('Only controlled direct-entry probes are supported; natural cross-process HDROP is not validated')
     if a.dictionary_cp1251:a.trace_codepage=True
     if a.russian_suspended:a.russian=True
     if not 0<a.seconds<=30:raise ValueError('Trace duration must be <=30 seconds')
+    drawing_trace=a.drawing_trace
     image_bytes_trace=a.image_bytes_trace
     probe_raw=None
     # Opt-in business tracing is kept separate from the default wrapper.
@@ -194,6 +195,9 @@ def main():
                         if image_bytes_trace:
                             for va,label in [(0x00438dd3,'image_bytes_zip_lookup'),(0x0044405a,'image_bytes_zip_header_read'),(0x00438dd8,'image_bytes_compare'),(0x00438ddf,'image_bytes_emit'),(0x0047c5e7,'image_bytes_report_gate')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
+                        if drawing_trace:
+                            for va,label in [(0x0047c8fe,'drawing_report_state'),(0x0047c939,'floating_image_emit'),(0x0047d051,'small_labels_report_gate'),(0x0047d05e,'small_labels_emit'),(0x0041d672,'small_label_geometry'),(0x00438805,'drawing_area_geometry')]:
+                                addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                     if event.u.create.file:k.CloseHandle(event.u.create.file)
                 elif event.code==6:
                     if event.u.load.file:k.CloseHandle(event.u.load.file)
@@ -224,6 +228,15 @@ def main():
                                     pending_steps[int(event.tid)]=(addr,original,label)
                                     context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
                             hit={'label':label,'address':hex(addr),'registers':{n:hex(getattr(context,n)) for n in ['Eip','Esp','Eax','Edx','Ecx']},'stack_dwords':list(struct.unpack('<4I',read(context.Esp,16))),'one_shot':label!='MultiByteToWideChar_thunk'};hits.append(hit);entry['hit']=label
+                            if label=='drawing_report_state':hit['drawing_state']={'count_slot_26':signed(context.Ecx+0x98),'count_slot_27':signed(context.Ecx+0x9c),'count_slot_28':signed(context.Ecx+0xa0),'count_slot_29':signed(context.Ecx+0xa4),'count_slot_30':signed(context.Ecx+0xc0),'count_slot_32':signed(context.Ecx+0xc8),'floating_area_float':struct.unpack('<f',read(context.Ecx+0x1cc,4))[0],'small_label_count':signed(context.Ecx+0xb8)}
+                            if label=='small_labels_report_gate':hit['small_label_count']=signed(context.Ecx+0xb8)
+                            if label in ['small_label_geometry','drawing_area_geometry']:
+                                if label=='small_label_geometry':
+                                    state=unsigned(context.Ebp-0xbc);hit['label_geometry']={'width_candidate':struct.unpack('<f',read(state+0x100,4))[0],'height_candidate':struct.unpack('<f',read(state+0x104,4))[0],'counter_before':signed(state+0x210)}
+                                else:hit['area_geometry']={'width_mm_candidate':struct.unpack('<f',read(context.Eax+0x38,4))[0],'height_mm_candidate':struct.unpack('<f',read(context.Eax+0x3c,4))[0],'native_type':signed(context.Ebp-0x78)}
+                                pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
+                                if pixel_hit_counts[label]<128:
+                                    pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False
                             if label.startswith('image_bytes_'):
                                 if label=='image_bytes_zip_lookup':hit['zip_entry_path']=unicode_object(context.Edx)
                                 if label=='image_bytes_zip_header_read':
