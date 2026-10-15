@@ -6,9 +6,11 @@ description: Check Russian BMSTU VKR/thesis DOCX and PDF files using a local cle
 # BMSTU Thesis Checker
 
 Use this skill to check `.docx` and `.pdf` thesis-style documents with the bundled local rules engine.
-The plugin exposes `check_thesis_document`, `check_thesis_folder`, `list_rules`, `explain_rule`, `preview_thesis_fixes`, `fix_thesis_copy`, `list_school_templates`, `list_native_builds`, and `compare_thesis_results`.
+The plugin exposes `check_thesis_document`, `check_thesis_folder`, `list_rules`, `explain_rule`, `preview_thesis_fixes`, `fix_thesis_copy`, `list_school_templates`, `list_native_builds`, `compare_thesis_results`, and `check_native_reference_experimental`.
 
 ## Scope
+
+For a requested live original-program comparison, read [experimental native reference CLI](../../docs/NATIVE_REFERENCE_CLI.zh.md). It supports Windows master DOCX and an explicitly supplied hash-matching TestVkr232 only. Preserve its private evidence and instrumentation labels; it uses a hidden owned process, eight resource codepage argument changes and a controlled native entry. Do not call it an unmodified native run, a built-in CLI, a standalone clone, or permission to repair. Default checks remain the reconstructed local engine. PDF/other native modes are not enabled in this experimental tool.
 
 For build232 copy repair, read [accepted narrow repair scope](../../docs/BUILD232_REPAIR.zh.md) first. Only explicit master `font_size_anomalies` to14pt is independently accepted, subject to implementation/evidence hashes and paragraph guards. Use preview then copy with `native_build=232`. A4/color/other modes remain closed. This supersedes historical build232-closed statements below. Prefer CLI for batch checking, rendering, source review and repairs; use retained native captures by input hash before starting new UI runs. Never treat a whole finding group as blanket edit eligibility.
 

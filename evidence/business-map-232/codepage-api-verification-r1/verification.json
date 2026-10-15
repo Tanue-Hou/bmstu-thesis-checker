@@ -1,0 +1,65 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "status": "verified_bounded_startup_codepage_cause_and_intervention",
+  "runs": [
+    {
+      "trace": "evidence/business-map-232/codepage-api-control-r3/trace.json",
+      "trace_sha256": "6dd0b4b5a4af0c34ba0492c4ec35bacfc59a1327935b2e801c258ecc05bd0115",
+      "tracer_sha256": "d9221fa8e3830ec75d214f45e5836dec16b10204b1572b76938299dc1eef07f4",
+      "owned_pid": 86752,
+      "treatment": false,
+      "verified_dictionary_conversions": 6,
+      "changed_calls": 0,
+      "access_violations": 8,
+      "main_form_pointer_nonzero": false,
+      "startup_argument": " - 镱 |",
+      "command_parameter_reader_n": null,
+      "elapsed_observation_ms": 490
+    },
+    {
+      "trace": "evidence/business-map-232/codepage-api-intervention-r1/trace.json",
+      "trace_sha256": "f2218bb88e000e099af76fea10e36474226d23e89ce77ea998ebd551cfb0b132",
+      "tracer_sha256": "d9221fa8e3830ec75d214f45e5836dec16b10204b1572b76938299dc1eef07f4",
+      "owned_pid": 91636,
+      "treatment": true,
+      "verified_dictionary_conversions": 6,
+      "changed_calls": 6,
+      "access_violations": 0,
+      "main_form_pointer_nonzero": true,
+      "startup_argument": " - по |",
+      "command_parameter_reader_n": 0,
+      "elapsed_observation_ms": 3719
+    },
+    {
+      "trace": "evidence/business-map-232/codepage-api-intervention-r2/trace.json",
+      "trace_sha256": "60aba99a861d36ed29b13b9c81c065a75a12e31a89a29571cccd4c27770646eb",
+      "tracer_sha256": "d9221fa8e3830ec75d214f45e5836dec16b10204b1572b76938299dc1eef07f4",
+      "owned_pid": 85244,
+      "treatment": true,
+      "verified_dictionary_conversions": 6,
+      "changed_calls": 6,
+      "access_violations": 0,
+      "main_form_pointer_nonzero": true,
+      "startup_argument": " - по |",
+      "command_parameter_reader_n": 0,
+      "elapsed_observation_ms": 3632
+    }
+  ],
+  "same_decompressed_dictionary_hashes": {
+    "RU_FORMS": "8686a80fd04d201dedbc56f160bef6e1789e68805678c37b2edba705b07854ca",
+    "RU_PREFS": "8821ddbb86a9a36bd08e37974929c2b6d76642b64aeb165eee9028a50cb36551",
+    "RU_ENDS": "c303c5ba16b749d7532fb45f54326f462ceb7d144595049abcae912d710a4c89"
+  },
+  "observation": "The untreated original selects CP_ACP at six matched dictionary conversion calls and crashes with corrupted input. Two independent treated owned processes select CP1251 for those exact calls, preserve correct input, reach main-form creation, and have no access violation in the observation windows.",
+  "reference": {
+    "title": "Microsoft MultiByteToWideChar documentation",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar",
+    "meaning": "CP_ACP uses the system default Windows ANSI code page."
+  },
+  "limits": [
+    "Six process-local API argument changes constitute an instrumented run, not unmodified native behavior.",
+    "Main-form creation and absence of observed AV do not prove complete UI readiness or correct thesis checking.",
+    "No production launcher, native checking CLI, or additional repair action is accepted by this verification.",
+    "Existing commandline observation only saw n=0; this is not proof of absence of other consumers."
+  ]
+}

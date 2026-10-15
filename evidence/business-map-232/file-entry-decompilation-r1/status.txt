@@ -1,0 +1,7 @@
+target_sha256=5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0
+entry=0047a528
+body_bytes=25659
+success=true
+elapsed_ms=9191
+error=
+limits=Recovered pseudocode, not original source; indirect calls and inferred types remain incomplete.

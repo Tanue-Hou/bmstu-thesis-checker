@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "analysis_type": "static_thesis_function_candidates",
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_hashes": {
+    "recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "diagnostic-map-r2/diagnostic-map.json": "a325300fb719105bca7b494ffddc5a9f2579846e3950e6cac24f2444a26ad863",
+    "function-index-r2/function-index.json": "1b52fad3b26bd8b39976408366284bcbfd808b8ae1d5995273be52c81db863ca",
+    "provenance.json": "3608d1961f95f3ca6ce5c5f7e69d5a08e84b56b5dc2ab7b3531dfa608eae5733"
+  },
+  "candidate_count": 4,
+  "candidates": [
+    {
+      "function_address": "00451e54",
+      "function_name": "FUN_00451e54",
+      "role_candidate": "结构要素检查与缺页数汇总候选",
+      "confidence": "high",
+      "direct_string_evidence": [
+        {
+          "va": "006d748c",
+          "text": "Не хватает ",
+          "direct_function_refs": [
+            "00451e54"
+          ]
+        },
+        {
+          "va": "006d74a4",
+          "text": " стр. (сначала исправьте остальные замечания, если они есть)",
+          "direct_function_refs": [
+            "00451e54"
+          ]
+        },
+        {
+          "va": "006d73c0",
+          "text": "нормативные ссылки",
+          "direct_function_refs": [
+            "00451e54"
+          ]
+        },
+        {
+          "va": "006d73e6",
+          "text": "определения",
+          "direct_function_refs": [
+            "00451e54"
+          ]
+        },
+        {
+          "va": "006d73fe",
+          "text": "обозначения и сокращения",
+          "direct_function_refs": [
+            "00451e54"
+          ]
+        },
+        {
+          "va": "006d7430",
+          "text": "введение",
+          "direct_function_refs": [
+            "00451e54"
+          ]
+        },
+        {
+          "va": "006d7454",
+          "text": "заключение",
+          "direct_function_refs": [
+            "00451e54"
+          ]
+        }
+      ],
+      "callers": [
+        "0047a528"
+      ],
+      "pseudocode_lines": {
+        "start": 42306,
+        "end": 42791
+      },
+      "nearby_constants_and_limits": "伪代码 42743–42751 拼接“Не хватает ”与“ стр.”，并以 local_e0-local_e4 计算显示值；此前 local_e0 赋值 0x28/0x30/0x38，local_d4/local_d8 初始化为 1000，local_dc=900。它们是反编译中的常量/运算输入，语义阈值未由此索引证实。"
+    },
+    {
+      "function_address": "0044c9ec",
+      "function_name": "FUN_0044c9ec",
+      "role_candidate": "文档结构标题与分段检查候选",
+      "confidence": "medium",
+      "direct_string_evidence": [
+        {
+          "va": "006d6eac",
+          "text": "РЕФЕРАТ",
+          "direct_function_refs": [
+            "0044c9ec"
+          ]
+        },
+        {
+          "va": "006d6f84",
+          "text": "СОДЕРЖАНИЕ",
+          "direct_function_refs": [
+            "0044c9ec"
+          ]
+        },
+        {
+          "va": "006d6f9e",
+          "text": "ОГЛАВЛЕНИЕ",
+          "direct_function_refs": [
+            "0044c9ec"
+          ]
+        },
+        {
+          "va": "006d6fb4",
+          "text": "ВВЕДЕНИЕ",
+          "direct_function_refs": [
+            "0044c9ec"
+          ]
+        },
+        {
+          "va": "006d6fd8",
+          "text": "ЗАКЛЮЧЕНИЕ",
+          "direct_function_refs": [
+            "0044c9ec"
+          ]
+        },
+        {
+          "va": "006d7004",
+          "text": "глава",
+          "direct_function_refs": [
+            "0044c9ec"
+          ]
+        },
+        {
+          "va": "006d7014",
+          "text": "выводы",
+          "direct_function_refs": [
+            "0044c9ec"
+          ]
+        }
+      ],
+      "callers": [
+        "00451e54"
+      ],
+      "pseudocode_lines": {
+        "start": 39949,
+        "end": 41289
+      },
+      "nearby_constants_and_limits": "伪代码 40674 起见集合计数比较 0x0b、5；段位置相关分支比较 100、0x15e，并调用 0044c64c。仅记为比较常量，不能据此命名为页数/格式阈值。"
+    },
+    {
+      "function_address": "00437374",
+      "function_name": "FUN_00437374",
+      "role_candidate": "章节文本提取/版面计算候选",
+      "confidence": "low",
+      "direct_string_evidence": [
+        {
+          "va": "006cef9e",
+          "text": "реферат",
+          "direct_function_refs": [
+            "00437374"
+          ]
+        },
+        {
+          "va": "006cefae",
+          "text": "аннотация",
+          "direct_function_refs": [
+            "00437374"
+          ]
+        },
+        {
+          "va": "006cefc2",
+          "text": "введение",
+          "direct_function_refs": [
+            "00437374"
+          ]
+        },
+        {
+          "va": "006cefd4",
+          "text": "содержание",
+          "direct_function_refs": [
+            "00437374"
+          ]
+        }
+      ],
+      "callers": [
+        "00405e58",
+        "004064e0",
+        "004078c0",
+        "00408a08",
+        "0040e9a8",
+        "004120b8",
+        "00412214",
+        "00415824"
+      ],
+      "pseudocode_lines": {
+        "start": 27695,
+        "end": 28069
+      },
+      "nearby_constants_and_limits": "伪代码 27755 起有长度比较 500；多处浮点计算使用全局常量 _DAT_00438024 至 _DAT_00438048。当前反编译标签不足以解释其单位与规范含义。"
+    },
+    {
+      "function_address": "00479830",
+      "function_name": "FUN_00479830",
+      "role_candidate": "标题页加载与检查路径候选",
+      "confidence": "medium",
+      "direct_string_evidence": [
+        {
+          "va": "006e5286",
+          "text": "Ошибка при загрузке титульного листа!\r\nПроверка титульного листа производится не будет...",
+          "direct_function_refs": [
+            "00479830"
+          ]
+        }
+      ],
+      "callers": [],
+      "pseudocode_lines": {
+        "start": 65789,
+        "end": 66055
+      },
+      "nearby_constants_and_limits": "伪代码 65868 检查标题页解析调用返回值，失败分支将 0x10 作为参数传入 00401cec；该立即数含义未确认。函数清单未记录直接调用者。"
+    }
+  ],
+  "unmapped_diagnostic_strings": [
+    {
+      "va": "006e58e0",
+      "text": "** В документе много символов, у которых масштаб шрифта меньше 70%: ",
+      "direct_function_refs": []
+    },
+    {
+      "va": "006e596e",
+      "text": "В документе много символов, у которых масштаб шрифта больше 130%: ",
+      "direct_function_refs": []
+    },
+    {
+      "va": "006e6c78",
+      "text": "Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+      "direct_function_refs": []
+    },
+    {
+      "va": "006e6d1e",
+      "text": "Документ содержит страницы, размеры левого поля на которых не соответствуют требованиям или отступ первой строки абзаца не равен 1.25…1.27 см: ",
+      "direct_function_refs": []
+    },
+    {
+      "va": "006e6e42",
+      "text": "Документ содержит страницы, размеры правого поля на которых не соответствуют требованиям, или нет знаков препинаний в конце коротких строк, или не используется выравнивание текста по ширине: ",
+      "direct_function_refs": []
+    },
+    {
+      "va": "006e6fc6",
+      "text": "Документ содержит страницы, размеры верхнего поля на которых не соответствуют требованиям: ",
+      "direct_function_refs": []
+    },
+    {
+      "va": "006e7082",
+      "text": "Документ содержит страницы, размеры нижнего поля на которых не соответствуют требованиям: ",
+      "direct_function_refs": []
+    },
+    {
+      "va": "006e82ee",
+      "text": "* Маленький объем ВКР: ",
+      "direct_function_refs": []
+    }
+  ],
+  "limits": [
+    "函数角色是基于伪代码、直接字符串地址引用及调用关系形成的候选解释，不是原始源码语义。",
+    "页面边距、字体缩放与篇幅提示在已解码字符串中存在，但当前伪代码索引未给这些提示找到直接函数地址引用，因此未归属到函数。",
+    "附近常量只按伪代码字面值记录；除“缺少页数”字符串拼接这一可见行为外，不把数字称作规范阈值。",
+    "静态引用不证明分支被执行、诊断被触发或某个输入实际被拒绝。"
+  ]
+}

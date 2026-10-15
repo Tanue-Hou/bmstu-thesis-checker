@@ -1,0 +1,4480 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "argument": "--help",
+  "owned_pid": 88480,
+  "debug_event_size": 176,
+  "wow64_context_size": 716,
+  "events": [
+    {
+      "event": 3,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 0,
+      "image_base": "0xca0000"
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 4
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 4
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 5,
+      "exception_code": "0x80000003",
+      "address": "0x7ffaa9242239",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 5
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 11
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 11
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 2,
+      "pid": 88480,
+      "tid": 9984,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 2,
+      "pid": 88480,
+      "tid": 92892,
+      "elapsed_ms": 23
+    },
+    {
+      "event": 2,
+      "pid": 88480,
+      "tid": 76948,
+      "elapsed_ms": 23
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 24
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 9984,
+      "elapsed_ms": 24
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 9984,
+      "elapsed_ms": 25
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 25
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 76948,
+      "elapsed_ms": 25
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 92892,
+      "elapsed_ms": 25
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 26
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 9984,
+      "elapsed_ms": 26
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 76948,
+      "elapsed_ms": 26
+    },
+    {
+      "event": 7,
+      "pid": 88480,
+      "tid": 76948,
+      "elapsed_ms": 26
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 27
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 76948,
+      "elapsed_ms": 27
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 9984,
+      "elapsed_ms": 27
+    },
+    {
+      "event": 7,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 27
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 92892,
+      "elapsed_ms": 28
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 9984,
+      "elapsed_ms": 28
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 28
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 76948,
+      "elapsed_ms": 28
+    },
+    {
+      "event": 7,
+      "pid": 88480,
+      "tid": 76948,
+      "elapsed_ms": 28
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 29
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 30
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 31
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 32
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 92892,
+      "elapsed_ms": 32
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 37,
+      "exception_code": "0x4000001f",
+      "address": "0x77798b88",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 41
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 49
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 53
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 54
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 56
+    },
+    {
+      "event": 6,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 57
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 491,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 494,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 494,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 494,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 494,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 494,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 494,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 494,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 494,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 494,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 494,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 494,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 495,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 496,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 497,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 498,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 499,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 500,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 501,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 502,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 503,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 504,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 505,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 506,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 507,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 508,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 509,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 510,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 511,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 512,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 513,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 514,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 515,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 515,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 515,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 515,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 515,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 515,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 515,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 515,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 515,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 515,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 515,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 516,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 517,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 518,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 519,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 520,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 520,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 520,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 520,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 520,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 520,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 520,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 520,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 88480,
+      "tid": 81380,
+      "elapsed_ms": 520,
+      "exception_code": "0xc0000005",
+      "address": "0xccdb4a",
+      "first_chance": true
+    }
+  ],
+  "breakpoint_hits": [],
+  "last_main_form_pointer": "0x0",
+  "exited_before_timeout": false,
+  "error": null,
+  "binary_unchanged": true,
+  "limits": "Actual owned Windows process execution; one-shot observed entries only, not full call counts. No UI input or forced business-function invocation. Absence of a hit is bounded to this startup/argument run; Chinese-locale initialization may differ from Russian execution."
+}

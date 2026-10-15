@@ -1,0 +1,186 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "argument": "--help",
+  "owned_pid": 78164,
+  "debug_event_size": 176,
+  "wow64_context_size": 716,
+  "events": [
+    {
+      "event": "owned_suspended_attach",
+      "pid": 17212,
+      "parent_pid": 78164,
+      "primary_tid": 61344,
+      "previous_suspend_count": 2,
+      "image_name": "D:\\Codex\u9879\u76ee\\analysis_TestVkr\\runtime\\TestVkr232.exe"
+    },
+    {
+      "event": 3,
+      "pid": 17212,
+      "tid": 61344,
+      "elapsed_ms": 522,
+      "image_name": "D:\\Codex\u9879\u76ee\\analysis_TestVkr\\runtime\\TestVkr232.exe",
+      "image_base": "0xd50000"
+    },
+    {
+      "event": 6,
+      "pid": 17212,
+      "tid": 61344,
+      "elapsed_ms": 525
+    },
+    {
+      "event": 6,
+      "pid": 17212,
+      "tid": 61344,
+      "elapsed_ms": 525
+    },
+    {
+      "event": 2,
+      "pid": 17212,
+      "tid": 77500,
+      "elapsed_ms": 525
+    },
+    {
+      "event": 6,
+      "pid": 17212,
+      "tid": 61344,
+      "elapsed_ms": 526
+    },
+    {
+      "event": 6,
+      "pid": 17212,
+      "tid": 61344,
+      "elapsed_ms": 527
+    },
+    {
+      "event": 6,
+      "pid": 17212,
+      "tid": 61344,
+      "elapsed_ms": 527
+    },
+    {
+      "event": 6,
+      "pid": 17212,
+      "tid": 61344,
+      "elapsed_ms": 528
+    },
+    {
+      "event": 1,
+      "pid": 17212,
+      "tid": 61344,
+      "elapsed_ms": 528,
+      "exception_code": "0x80000003",
+      "address": "0x7ffaa9242239",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 17212,
+      "tid": 61344,
+      "elapsed_ms": 529
+    },
+    {
+      "event": 1,
+      "pid": 17212,
+      "tid": 77500,
+      "elapsed_ms": 568,
+      "exception_code": "0xc0000005",
+      "address": "0x7ffaa9209d30",
+      "first_chance": true,
+      "registers": {
+        "Eip": "0x776fbe40",
+        "Esp": "0x18bf640",
+        "Ebp": "0x0",
+        "Eax": "0xa9255b90",
+        "Ebx": "0x0",
+        "Ecx": "0x0",
+        "Edx": "0x0",
+        "Esi": "0x0",
+        "Edi": "0x0"
+      },
+      "access_information": [
+        "0x0",
+        "0x208"
+      ],
+      "instruction_bytes": "8d842410030000648b0d00000000ba20be6f778908895004",
+      "preferred_va": "0x76dabe40"
+    },
+    {
+      "event": 1,
+      "pid": 17212,
+      "tid": 77500,
+      "elapsed_ms": 568,
+      "exception_code": "0xc0000005",
+      "address": "0x7ffaa9209d30",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 17212,
+      "tid": 77500,
+      "elapsed_ms": 568,
+      "exception_code": "0xc0000005",
+      "address": "0x776ef5fa",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 17212,
+      "tid": 77500,
+      "elapsed_ms": 568,
+      "exception_code": "0xc0000005",
+      "address": "0x7ffaa9209d30",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 17212,
+      "tid": 77500,
+      "elapsed_ms": 568,
+      "exception_code": "0xc0000005",
+      "address": "0x776ef5fa",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 17212,
+      "tid": 77500,
+      "elapsed_ms": 568,
+      "exception_code": "0xc0000005",
+      "address": "0x7ffaa9209d30",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 17212,
+      "tid": 77500,
+      "elapsed_ms": 568,
+      "exception_code": "0xc0000005",
+      "address": "0x776ef5fa",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 17212,
+      "tid": 77500,
+      "elapsed_ms": 568,
+      "exception_code": "0xc0000005",
+      "address": "0x7ffaa9209d30",
+      "first_chance": true
+    }
+  ],
+  "breakpoint_hits": [],
+  "last_main_form_pointer": "0x0",
+  "exited_before_timeout": false,
+  "error": null,
+  "binary_unchanged": true,
+  "limits": "Own helper and observed descendants only. LoaderWrapper uses process-local Russian settings, no registry redirection. Target creation is not proof of successful initialization; no checking interface or business predicate established by this run.",
+  "stop_reason": "repeated_access_violation_limit",
+  "locale_mode": "ru-RU LoaderWrapper (no registry redirection)",
+  "target_pid": 17212,
+  "owned_pids": [
+    78164,
+    17212
+  ],
+  "cleanup_errors": [],
+  "tracer_sha256": "9013ee7ee145ad402aecd99c4c461cb17dd700c7496b64664d411ca21a114712"
+}

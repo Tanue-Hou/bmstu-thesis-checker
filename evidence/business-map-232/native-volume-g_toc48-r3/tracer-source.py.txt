@@ -1,0 +1,308 @@
+"""Bounded Windows CLI debugger for an OWNED hash-bound TestVkr232 process.
+
+No attachment to existing processes, UI input, disk patching or locale changes.
+One-shot software breakpoints record actual registers, then restore the byte.
+"""
+import argparse,ctypes as C,hashlib,json,struct,time,zlib,subprocess
+from ctypes import wintypes as W
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2]
+IDENTITY='5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0'
+D=W.DWORD;P=C.c_void_p;H=W.HANDLE
+class STARTUPINFO(C.Structure):
+    _fields_=[('cb',D),('lpReserved',W.LPWSTR),('lpDesktop',W.LPWSTR),('lpTitle',W.LPWSTR),('dwX',D),('dwY',D),('dwXSize',D),('dwYSize',D),('dwXCountChars',D),('dwYCountChars',D),('dwFillAttribute',D),('dwFlags',D),('wShowWindow',W.WORD),('cbReserved2',W.WORD),('lpReserved2',P),('hStdInput',H),('hStdOutput',H),('hStdError',H)]
+class PROCESS_INFORMATION(C.Structure):
+    _fields_=[('hProcess',H),('hThread',H),('dwProcessId',D),('dwThreadId',D)]
+class EXCEPTION_RECORD(C.Structure):
+    _fields_=[('code',D),('flags',D),('record',P),('address',P),('parameter_count',D),('information',C.c_size_t*15)]
+class EXCEPTION_INFO(C.Structure):_fields_=[('record',EXCEPTION_RECORD),('first_chance',D)]
+class CREATE_INFO(C.Structure):
+    _fields_=[('file',H),('process',H),('thread',H),('base',P),('debug_offset',D),('debug_size',D),('tls',P),('start',P),('name',P),('unicode',W.WORD)]
+class LOAD_INFO(C.Structure):
+    _fields_=[('file',H),('base',P),('debug_offset',D),('debug_size',D),('name',P),('unicode',W.WORD)]
+class EVENT_UNION(C.Union):_fields_=[('exception',EXCEPTION_INFO),('create',CREATE_INFO),('load',LOAD_INFO),('raw',C.c_byte*160)]
+class DEBUG_EVENT(C.Structure):_fields_=[('code',D),('pid',D),('tid',D),('u',EVENT_UNION)]
+class FLOAT_SAVE(C.Structure):
+    _fields_=[(n,D) for n in ['ControlWord','StatusWord','TagWord','ErrorOffset','ErrorSelector','DataOffset','DataSelector']]+[('RegisterArea',C.c_byte*80),('Cr0NpxState',D)]
+class WOW64_CONTEXT(C.Structure):
+    _pack_=4
+    _fields_=[('ContextFlags',D)]+[(n,D) for n in ['Dr0','Dr1','Dr2','Dr3','Dr6','Dr7']]+[('FloatSave',FLOAT_SAVE)]+[(n,D) for n in ['SegGs','SegFs','SegEs','SegDs','Edi','Esi','Ebx','Edx','Ecx','Eax','Ebp','Eip','SegCs','EFlags','Esp','SegSs']]+[('ExtendedRegisters',C.c_byte*512)]
+class PROCESS_ENTRY(C.Structure):
+    _fields_=[('size',D),('usage',D),('pid',D),('heap',C.c_size_t),('module',D),('threads',D),('parent',D),('priority',W.LONG),('flags',D),('exe',W.WCHAR*260)]
+class THREAD_ENTRY(C.Structure):
+    _fields_=[('size',D),('usage',D),('tid',D),('pid',D),('base_priority',W.LONG),('delta_priority',W.LONG),('flags',D)]
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
+    if a.direct_file_entry and not a.probe_document:raise ValueError('Direct entry requires a synthetic document probe')
+    if a.probe_document and not a.direct_file_entry:raise ValueError('Only controlled direct-entry probes are supported; natural cross-process HDROP is not validated')
+    if a.dictionary_cp1251:a.trace_codepage=True
+    if a.russian_suspended:a.russian=True
+    if not 0<a.seconds<=30:raise ValueError('Trace duration must be <=30 seconds')
+    probe_raw=None
+    if a.probe_document:
+        a.probe_document=a.probe_document.resolve()
+        if not a.dictionary_cp1251 or not any(a.probe_document.is_relative_to(root) for root in [ROOT/'evidence',ROOT.parent/'private_trials']) or a.probe_document.suffix.lower()!='.docx':raise ValueError('Probe requires dictionary intervention and a controlled evidence/private-trials DOCX')
+        probe_raw=a.probe_document.read_bytes()
+    binary=a.binary.resolve();raw=binary.read_bytes()
+    if hashlib.sha256(raw).hexdigest()!=IDENTITY:raise ValueError('Target identity mismatch')
+    dictionary_buffers={}
+    if a.trace_codepage:
+        inventory=json.loads((ROOT/'evidence/business-map-232/pe-resources-REA.json').read_text(encoding='utf-8'))
+        if inventory['normalized_result']['artifact']['sha256']!=IDENTITY:raise ValueError('Resource evidence identity mismatch')
+        for resource in inventory['normalized_result']['resources']:
+            name=resource['name'].get('name')
+            if resource['type'].get('name')!='TESTDATA' or name not in ['RU_FORMS','RU_PREFS','RU_ENDS','TITUL']:continue
+            location=resource['payload']['location'];data=raw[location['offset']:location['offset']+location['bytes']]
+            if hashlib.sha256(data).hexdigest()!=resource['payload']['sha256']:raise ValueError('Resource payload mismatch')
+            decoder=zlib.decompressobj();decoded=decoder.decompress(data,16*1024*1024)
+            if not decoder.eof or decoder.unconsumed_tail or decoder.unused_data:raise ValueError('Incomplete/budget-exceeded dictionary')
+            dictionary_buffers[(len(decoded),hashlib.sha256(decoded).hexdigest())]=name
+    out=a.out.resolve()
+    if not any(out.is_relative_to(root) for root in [ROOT/'evidence',ROOT.parent/'private_trials']):raise ValueError('Trace output must stay inside evidence/private_trials')
+    out.mkdir(parents=True,exist_ok=False)
+    (out/'tracer-source.py.txt').write_bytes(Path(__file__).read_bytes())
+    k=C.WinDLL('kernel32',use_last_error=True)
+    prototypes={
+      'CreateProcessW':([W.LPCWSTR,W.LPWSTR,P,P,W.BOOL,D,P,W.LPCWSTR,C.POINTER(STARTUPINFO),C.POINTER(PROCESS_INFORMATION)],W.BOOL),
+      'WaitForDebugEvent':([C.POINTER(DEBUG_EVENT),D],W.BOOL),'ContinueDebugEvent':([D,D,D],W.BOOL),
+      'ReadProcessMemory':([H,P,P,C.c_size_t,C.POINTER(C.c_size_t)],W.BOOL),'WriteProcessMemory':([H,P,P,C.c_size_t,C.POINTER(C.c_size_t)],W.BOOL),
+      'VirtualAllocEx':([H,P,C.c_size_t,D,D],P),
+      'Wow64GetThreadContext':([H,C.POINTER(WOW64_CONTEXT)],W.BOOL),'Wow64SetThreadContext':([H,C.POINTER(WOW64_CONTEXT)],W.BOOL),
+      'OpenThread':([D,W.BOOL,D],H),'OpenProcess':([D,W.BOOL,D],H),'CloseHandle':([H],W.BOOL),'TerminateProcess':([H,W.UINT],W.BOOL),'WaitForSingleObject':([H,D],D),'FlushInstructionCache':([H,P,C.c_size_t],W.BOOL),'QueryFullProcessImageNameW':([H,D,W.LPWSTR,C.POINTER(D)],W.BOOL)}
+    for name,(args,result) in prototypes.items():getattr(k,name).argtypes=args;getattr(k,name).restype=result
+    extra={'CreateToolhelp32Snapshot':([D,D],H),'Process32FirstW':([H,C.POINTER(PROCESS_ENTRY)],W.BOOL),'Process32NextW':([H,C.POINTER(PROCESS_ENTRY)],W.BOOL),'Thread32First':([H,C.POINTER(THREAD_ENTRY)],W.BOOL),'Thread32Next':([H,C.POINTER(THREAD_ENTRY)],W.BOOL),'DebugActiveProcess':([D],W.BOOL),'ResumeThread':([H],D)}
+    for name,(args,result) in extra.items():getattr(k,name).argtypes=args;getattr(k,name).restype=result
+    def checked(ok):
+        if not ok:raise C.WinError(C.get_last_error())
+    pi=PROCESS_INFORMATION();si=STARTUPINFO();si.cb=C.sizeof(si);si.dwFlags=1;si.wShowWindow=0
+    application=binary
+    command='"'+str(binary)+'" '+a.argument
+    if a.russian:
+        if a.argument!='--help':raise ValueError('Russian probe currently accepts only --help')
+        folder=ROOT.parent/'runtime/locale-emulator-2.5.0.1'
+        application=folder/'RussianLocaleProbe.exe'
+        command=' '.join('"'+str(part)+'"' for part in [application,folder,binary,out])
+        if a.russian_suspended:command+=' suspended'
+    cmd=C.create_unicode_buffer(command)
+    checked(k.CreateProcessW(str(application),cmd,None,None,False,(0 if a.russian_suspended else 1 if a.russian else 2)|0x08000000,None,str(out),C.byref(si),C.byref(pi)))
+    target_handle=pi.hProcess;target_pid=None if a.russian else pi.dwProcessId;owned={int(pi.dwProcessId):pi.hProcess}
+    def read(addr,size):
+        buf=C.create_string_buffer(size);done=C.c_size_t();checked(k.ReadProcessMemory(target_handle,addr,buf,size,C.byref(done)));return buf.raw[:done.value]
+    def write(addr,data):
+        buf=C.create_string_buffer(data);done=C.c_size_t();checked(k.WriteProcessMemory(target_handle,addr,buf,len(data),C.byref(done)));checked(k.FlushInstructionCache(target_handle,addr,len(data)))
+    def signed(addr):return int.from_bytes(read(addr,4),'little',signed=True)
+    def unsigned(addr):return int.from_bytes(read(addr,4),'little')
+    def unicode_object(addr):
+        pointer=unsigned(addr);length=signed(pointer-4)
+        if not 0<=length<=1000000:raise ValueError('String budget')
+        return {'length':length,'prefix':read(pointer,min(length,256)*2).decode('utf-16le',errors='replace')}
+    events=[];hits=[];breakpoints={};base=None;exited=False;error=None;started=time.monotonic();form_pointer=None;fault_count=0;stop_reason='duration_limit';cleanup_errors=[];pending_steps={};codepage_calls=[];api_calls=0;sender=None;sender_status=None
+    event_limit=4096 if a.trace_codepage else 512
+    try:
+        if a.russian_suspended:
+            candidates=[]
+            while time.monotonic()-started<min(a.seconds,8):
+                snap=k.CreateToolhelp32Snapshot(2,0)
+                if snap==C.c_void_p(-1).value:raise C.WinError(C.get_last_error())
+                try:
+                    item=PROCESS_ENTRY();item.size=C.sizeof(item);ok=k.Process32FirstW(snap,C.byref(item));candidates=[]
+                    while ok:
+                        if item.parent==pi.dwProcessId and item.exe.lower()==binary.name.lower():candidates.append(int(item.pid))
+                        ok=k.Process32NextW(snap,C.byref(item))
+                finally:k.CloseHandle(snap)
+                if candidates:break
+                time.sleep(.05)
+            if len(candidates)!=1:raise RuntimeError('Expected exactly one owned launcher child: '+repr(candidates))
+            # Allow the loader's own initialization to settle before attaching.
+            # This delay alone is not proof that its injected initialization completed.
+            time.sleep(1)
+            child=candidates[0];handle=k.OpenProcess(0x1fffff,False,child);checked(handle);owned[child]=handle
+            name=C.create_unicode_buffer(32768);length=D(len(name));checked(k.QueryFullProcessImageNameW(handle,0,name,C.byref(length)))
+            if Path(name.value).resolve()!=binary or hashlib.sha256(Path(name.value).read_bytes()).hexdigest()!=IDENTITY:raise RuntimeError('Owned child identity mismatch')
+            snap=k.CreateToolhelp32Snapshot(4,0)
+            if snap==C.c_void_p(-1).value:raise C.WinError(C.get_last_error())
+            tids=[]
+            try:
+                item=THREAD_ENTRY();item.size=C.sizeof(item);ok=k.Thread32First(snap,C.byref(item))
+                while ok:
+                    if item.pid==child:tids.append(int(item.tid))
+                    ok=k.Thread32Next(snap,C.byref(item))
+            finally:k.CloseHandle(snap)
+            if len(tids)!=1:raise RuntimeError('Ambiguous initial target thread set: '+repr(tids))
+            checked(k.DebugActiveProcess(child));target_pid=child;target_handle=handle
+            thread=k.OpenThread(0x1fffff,False,tids[0]);checked(thread)
+            try:previous=int(k.ResumeThread(thread))
+            finally:k.CloseHandle(thread)
+            events.append({'event':'owned_suspended_attach','pid':child,'parent_pid':int(pi.dwProcessId),'primary_tid':tids[0],'previous_suspend_count':previous,'image_name':name.value})
+            if previous not in [1,2]:raise RuntimeError('Unexpected initial suspend count: '+str(previous))
+        while time.monotonic()-started<a.seconds and len(events)<event_limit:
+            event=DEBUG_EVENT()
+            if not k.WaitForDebugEvent(C.byref(event),200):
+                if a.probe_document and sender is None and form_pointer and int(form_pointer,16)>0:
+                    sender=subprocess.Popen([str(a.sender_executable),str(target_pid),str(binary),str(a.probe_document),str(out),'instrumented-entry-v1'],stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                    events.append({'event':'owned_file_drop_sender','pid':sender.pid,'target_pid':int(target_pid),'elapsed_ms':round((time.monotonic()-started)*1000)})
+                if sender and sender.poll() is not None:
+                    sender_status=sender.returncode;stop_reason='drop_sender_finished';break
+                continue
+            status=0x00010002;entry={'event':int(event.code),'pid':int(event.pid),'tid':int(event.tid),'elapsed_ms':round((time.monotonic()-started)*1000)}
+            if event.code==3:
+                if int(event.pid) not in owned:
+                    retained=k.OpenProcess(0x1fffff,False,event.pid);checked(retained);owned[int(event.pid)]=retained
+                if a.russian:
+                    name=C.create_unicode_buffer(32768);length=D(len(name));checked(k.QueryFullProcessImageNameW(event.u.create.process,0,name,C.byref(length)))
+                    entry['image_name']=name.value
+                    if Path(name.value).resolve()==binary:
+                        target_pid=event.pid;target_handle=event.u.create.process
+            if int(event.pid) not in owned:raise RuntimeError('Unexpected non-owned process debug event')
+            if event.pid!=target_pid:
+                if event.code==3 and event.u.create.file:k.CloseHandle(event.u.create.file)
+                if event.code==6 and event.u.load.file:k.CloseHandle(event.u.load.file)
+                if event.code==1:
+                    entry['exception_code']=hex(event.u.exception.record.code)
+                    entry['first_chance']=bool(event.u.exception.first_chance)
+                    if event.u.exception.record.code not in [0x80000003,0x4000001f]:status=0x80010001
+                if event.code==5:entry['exit_code']=int.from_bytes(bytes(event.u.raw[:4]),'little')
+                events.append(entry);checked(k.ContinueDebugEvent(event.pid,event.tid,status))
+                if event.code==5 and event.pid==pi.dwProcessId and target_pid is None:
+                    exited=True;stop_reason='launcher_exit_without_observed_target';break
+                continue
+            try:
+                if event.code==3:
+                    base=int(event.u.create.base);entry['image_base']=hex(base)
+                    for va,label in [(0x00572a38,'parameter_reader'),(0x0044a748,'work_name_check'),(0x00449eec,'token_matcher'),(0x0042d890,'startup_bucket_candidate')]:
+                        addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
+                    if a.trace_codepage:
+                        addr=base+0x2bf90c;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,'MultiByteToWideChar_thunk')
+                    if a.probe_document:
+                        for va,label in [(0x00481794,'single_file_drop_handler'),(0x0047a528,'file_check_entry'),(0x0043dd1c,'docx_load'),(0x00451e54,'structure_volume_check'),(0x00452ac5,'volume_selected_threshold'),(0x00452b94,'volume_decision'),(0x00452bb3,'volume_insufficient_emit')]:
+                            addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
+                    if event.u.create.file:k.CloseHandle(event.u.create.file)
+                elif event.code==6:
+                    if event.u.load.file:k.CloseHandle(event.u.load.file)
+                elif event.code==1:
+                    ex=event.u.exception;addr=int(ex.record.address or 0);entry.update(exception_code=hex(ex.record.code),address=hex(addr),first_chance=bool(ex.first_chance))
+                    if ex.record.code in [0x80000003,0x4000001f] and addr in breakpoints:
+                        thread=k.OpenThread(0x1fffff,False,event.tid);checked(thread)
+                        try:
+                            context=WOW64_CONTEXT();context.ContextFlags=0x10007;checked(k.Wow64GetThreadContext(thread,C.byref(context)))
+                            original,label=breakpoints.pop(addr);write(addr,original);context.Eip=addr;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
+                            if label=='MultiByteToWideChar_thunk':
+                                api_calls+=1
+                                values=struct.unpack('<7I',read(context.Esp,28));ret,cp,flags,source,length,destination,capacity=values
+                                if 0<length<=16*1024*1024:
+                                    prefix=read(source,min(length,64))
+                                    if length>5000 or any(key[0]==length for key in dictionary_buffers):
+                                        input_sha=hashlib.sha256(read(source,length)).hexdigest()
+                                        resource_name=dictionary_buffers.get((length,input_sha))
+                                        call={'call_number':api_calls,'return_address':hex(ret),'return_preferred_va':hex(ret-base+0x400000),'codepage':cp,'flags':flags,'input_length':length,'input_prefix_hex':prefix.hex(),'input_sha256':input_sha,'matched_resource':resource_name,'output_pointer':hex(destination),'output_capacity':capacity}
+                                        if a.dictionary_cp1251 and resource_name and cp==0:
+                                            write(context.Esp+4,struct.pack('<I',1251));call['intervention_codepage']=1251
+                                        codepage_calls.append(call)
+                                if api_calls<1000:
+                                    pending_steps[int(event.tid)]=(addr,original,label)
+                                    context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
+                            hit={'label':label,'address':hex(addr),'registers':{n:hex(getattr(context,n)) for n in ['Eip','Esp','Eax','Edx','Ecx']},'stack_dwords':list(struct.unpack('<4I',read(context.Esp,16))),'one_shot':label!='MultiByteToWideChar_thunk'};hits.append(hit);entry['hit']=label
+                            if label=='file_check_entry':
+                                ret=hit['stack_dwords'][0]
+                                if ret not in breakpoints:
+                                    retbyte=read(ret,1);write(ret,b'\xcc');breakpoints[ret]=(retbyte,'file_check_return')
+                            if label=='single_file_drop_handler' and a.direct_file_entry:
+                                utf16=str(a.probe_document).encode('utf-16le');length=len(utf16)//2
+                                static_string=struct.pack('<HHiI',1200,2,-1,length)+utf16+b'\0\0'
+                                object_offset=(len(static_string)+3)&~3
+                                allocation=k.VirtualAllocEx(target_handle,None,object_offset+4,0x3000,4);checked(allocation)
+                                write(allocation,static_string);write(allocation+object_offset,struct.pack('<I',allocation+12))
+                                context.Eip=base+0x7a528;context.Edx=allocation+object_offset
+                                checked(k.Wow64SetThreadContext(thread,C.byref(context)))
+                                hit['direct_entry_intervention']={'function_preferred_va':'0047a528','eax_form':hex(context.Eax),'edx_unicode_string_object':hex(context.Edx),'unicode_string_data':hex(allocation+12),'utf16_units':length,'header_hex':static_string[:12].hex(),'stack_return_preserved':True,'scope':'Owned main thread: replace drop-handler entry with the shared native file-processing entry; no disk patch'}
+                            if label in ['startup_bucket_candidate','file_check_entry','docx_load']:
+                                try:
+                                    pointer=int.from_bytes(read(context.Edx,4),'little');length=int.from_bytes(read(pointer-4,4),'little',signed=True)
+                                    hit['candidate_input_string_length']=length
+                                    if 0<length<1000000:hit['candidate_input_utf16_prefix']=read(pointer,min(length,256)*2).decode('utf-16le',errors='replace')
+                                except OSError as exc:hit['candidate_input_read_error']=str(exc)
+                            if label in ['volume_selected_threshold','volume_decision','volume_insufficient_emit']:
+                                state=unsigned(context.Ebp-0xb4);root=unsigned(state)
+                                hit['volume_state']={'state_pointer':hex(state),'work_code':unicode_object(state+0x80),'minimum':signed(context.Ebp-0xdc),'divisor':signed(context.Ebp-0xd8),'toc_page_candidate':signed(state+0xe0),'text_units_candidate':signed(state+0xe4),'supplement_candidate':signed(root+0x1b0),'candidate_after_sentinel':signed(context.Ebp-0xe0) if label!='volume_selected_threshold' else None}
+                            if label=='token_matcher':
+                                try:hit['string_arguments']={'Eax':unicode_object(context.Eax),'Edx':unicode_object(context.Edx)}
+                                except (OSError,ValueError) as exc:hit['string_argument_read_error']=str(exc)
+                        finally:k.CloseHandle(thread)
+                    elif ex.record.code in [0x80000004,0x4000001e] and int(event.tid) in pending_steps:
+                        bp,original,label=pending_steps.pop(int(event.tid));write(bp,b'\xcc');breakpoints[bp]=(original,label)
+                        thread=k.OpenThread(0x1fffff,False,event.tid);checked(thread)
+                        try:
+                            context=WOW64_CONTEXT();context.ContextFlags=0x10007;checked(k.Wow64GetThreadContext(thread,C.byref(context)));context.EFlags&=~0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
+                        finally:k.CloseHandle(thread)
+                        entry['single_step_rearmed']=label
+                    elif ex.record.code not in [0x80000003,0x4000001f]:
+                        status=0x80010001
+                        if ex.record.code==0xc0000005:
+                            fault_count+=1
+                            if fault_count==1:
+                                thread=k.OpenThread(0x1fffff,False,event.tid);checked(thread)
+                                try:
+                                    context=WOW64_CONTEXT();context.ContextFlags=0x10007;checked(k.Wow64GetThreadContext(thread,C.byref(context)))
+                                    entry['registers']={n:hex(getattr(context,n)) for n in ['Eip','Esp','Ebp','Eax','Ebx','Ecx','Edx','Esi','Edi']}
+                                    entry['access_information']=[hex(ex.record.information[i]) for i in range(min(ex.record.parameter_count,15))]
+                                    entry['instruction_bytes']=read(context.Eip,24).hex()
+                                    entry['preferred_va']=hex(context.Eip-base+0x400000)
+                                    if addr!=context.Eip:
+                                        entry['register_scope']='WOW64 context does not match fault address; not the faulting architecture context'
+                                        entry['preferred_va']=None
+                                    if entry['preferred_va']=='0x42db4a':
+                                        entry['bucket_index']=context.Ecx
+                                        entry['inferred_first_utf16_unit']=hex(context.Ecx+0x430)
+                                        entry['locals_hex']=read(context.Ebp-0x80,128).hex()
+                                        try:
+                                            data=read(context.Edx,128)
+                                            entry['candidate_item_utf16_prefix']=data.decode('utf-16le',errors='replace').split('\0',1)[0]
+                                            entry['candidate_item_bytes']=data.hex()
+                                        except OSError as exc:entry['candidate_item_read_error']=str(exc)
+                                finally:k.CloseHandle(thread)
+                elif event.code==5:exited=True;entry['exit_code']=int.from_bytes(bytes(event.u.raw[:4]),'little')
+                if base:
+                    try:form_pointer=hex(int.from_bytes(read(base+0x338e1c,4),'little'))
+                    except OSError:pass
+                events.append(entry)
+            finally:checked(k.ContinueDebugEvent(event.pid,event.tid,status))
+            if exited:stop_reason='process_exit';break
+            if fault_count>=8:stop_reason='repeated_access_violation_limit';break
+        if len(events)>=event_limit:stop_reason='event_limit'
+    except Exception as e:error=repr(e)
+    finally:
+        for handle in owned.values():
+            try:k.TerminateProcess(handle,0xdead)
+            except OSError as exc:cleanup_errors.append(str(exc))
+        for handle in set(owned.values()):
+            if handle!=pi.hProcess:
+                try:k.CloseHandle(handle)
+                except OSError as exc:cleanup_errors.append(str(exc))
+        if not exited:k.WaitForSingleObject(pi.hProcess,2000)
+        k.CloseHandle(pi.hThread);k.CloseHandle(pi.hProcess)
+        if sender:
+            if sender.poll() is None:sender.terminate()
+            try:
+                sender_stdout,sender_stderr=sender.communicate(timeout=2);sender_status=sender.returncode
+                (out/'sender-stdout.log').write_bytes(sender_stdout);(out/'sender-stderr.log').write_bytes(sender_stderr)
+            except subprocess.TimeoutExpired:sender.kill();sender.communicate()
+    result={'target_sha256':IDENTITY,'argument':a.argument,'owned_pid':int(pi.dwProcessId),'debug_event_size':C.sizeof(DEBUG_EVENT),'wow64_context_size':C.sizeof(WOW64_CONTEXT),'events':events,'breakpoint_hits':hits,'last_main_form_pointer':form_pointer,'exited_before_timeout':exited,'error':error,'binary_unchanged':binary.read_bytes()==raw,'limits':'Actual owned Windows process execution; one-shot observed entries only, not full call counts. No UI input or forced business-function invocation. Absence of a hit is bounded to this startup/argument run; Chinese-locale initialization may differ from Russian execution.'}
+    result['stop_reason']=stop_reason
+    result['locale_mode']='ru-RU LoaderWrapper (no registry redirection)' if a.russian else 'system'
+    result['target_pid']=int(target_pid) if target_pid else None
+    result['owned_pids']=list(owned)
+    result['cleanup_errors']=cleanup_errors
+    result['codepage_api_calls_observed']=api_calls
+    result['large_buffer_codepage_calls']=codepage_calls
+    result['intervention_mode']='Hash-matched dictionary conversion calls only: CP_ACP to CP1251 in owned process stack; no disk patch' if a.dictionary_cp1251 else 'none'
+    if a.probe_document:
+        result['probe_document']={'path':str(a.probe_document),'sha256':hashlib.sha256(probe_raw).hexdigest(),'unchanged':a.probe_document.read_bytes()==probe_raw,'sender_exit_code':sender_status,'sender_source_sha256':hashlib.sha256((Path(__file__).parent/'SendOwnedDrop.cs').read_bytes()).hexdigest()}
+        length_path=out/'collection-length.txt'
+        if length_path.exists():
+            expected,actual=map(int,length_path.read_text().splitlines())
+            result['probe_document'].update(report_utf16_units_expected=expected,report_utf16_units_collected=actual)
+    if a.russian:result['limits']='Own helper and observed descendants only. LoaderWrapper uses process-local Russian settings, no registry redirection. Target creation is not proof of successful initialization; no checking interface or business predicate established by this run.'
+    result['tracer_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+    (out/'trace.json').write_text(json.dumps(result,indent=2),encoding='utf-8');summary={k:result[k] for k in ['owned_pid','debug_event_size','wow64_context_size','last_main_form_pointer','exited_before_timeout','error','binary_unchanged','stop_reason']};summary['business_breakpoint_labels']=[h['label'] for h in hits if h['label']!='MultiByteToWideChar_thunk'];summary['volume_states']=[h['volume_state'] for h in hits if h['label']=='volume_decision'];summary['codepage_api_calls']=api_calls;summary['interventions']=sum('intervention_codepage' in c for c in codepage_calls);print(json.dumps(summary))
+if __name__=='__main__':main()

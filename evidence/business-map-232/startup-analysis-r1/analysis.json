@@ -1,0 +1,542 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "sources": {
+    "evidence/agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d"
+  },
+  "current_ansi_codepage": 936,
+  "exports": [
+    {
+      "name": "@@Commonstruct@Finalize",
+      "va": "0x475264",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Commonstruct@Initialize",
+      "va": "0x475254",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Dgm@Finalize",
+      "va": "0x4312d0",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Dgm@Initialize",
+      "va": "0x4312c0",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Encoders@Finalize",
+      "va": "0x457414",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Encoders@Initialize",
+      "va": "0x457404",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Imagebitstream@Finalize",
+      "va": "0x47541c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Imagebitstream@Initialize",
+      "va": "0x47540c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Mydezip@Finalize",
+      "va": "0x44463c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Mydezip@Initialize",
+      "va": "0x444624",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfcharnames@Finalize",
+      "va": "0x4904f0",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfcharnames@Initialize",
+      "va": "0x4904d8",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfcmap@Finalize",
+      "va": "0x4abc90",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfcmap@Initialize",
+      "va": "0x4abc80",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfcolorspace@Finalize",
+      "va": "0x514580",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfcolorspace@Initialize",
+      "va": "0x514570",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfdocument2@Finalize",
+      "va": "0x475244",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfdocument2@Initialize",
+      "va": "0x475234",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfdocument3@Finalize",
+      "va": "0x494214",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfdocument3@Initialize",
+      "va": "0x494204",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfdocument@Finalize",
+      "va": "0x46d708",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfdocument@Initialize",
+      "va": "0x46d6f0",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdffont@Finalize",
+      "va": "0x45b1b8",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdffont@Initialize",
+      "va": "0x45b1a0",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdffunctions@Finalize",
+      "va": "0x485264",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdffunctions@Initialize",
+      "va": "0x485254",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfgraphstate@Finalize",
+      "va": "0x488a7c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfgraphstate@Initialize",
+      "va": "0x488a6c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdflistxobject@Finalize",
+      "va": "0x476534",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdflistxobject@Initialize",
+      "va": "0x476524",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfobject@Finalize",
+      "va": "0x4797a0",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfobject@Initialize",
+      "va": "0x479790",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfpagedata@Finalize",
+      "va": "0x493f3c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfpagedata@Initialize",
+      "va": "0x493f2c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfpath@Finalize",
+      "va": "0x48a280",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfpath@Initialize",
+      "va": "0x48a270",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfstringparcer@Finalize",
+      "va": "0x47543c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfstringparcer@Initialize",
+      "va": "0x47542c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfstruct@Finalize",
+      "va": "0x457728",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfstruct@Initialize",
+      "va": "0x457718",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfxobject@Finalize",
+      "va": "0x487e40",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfxobject@Initialize",
+      "va": "0x487e30",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfxobjectform@Finalize",
+      "va": "0x488474",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfxobjectform@Initialize",
+      "va": "0x488464",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfxref@Finalize",
+      "va": "0x441fa4",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pdfxref@Initialize",
+      "va": "0x441f94",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pictext@Finalize",
+      "va": "0x42b728",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Pictext@Initialize",
+      "va": "0x42b710",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Progprefs@Finalize",
+      "va": "0x42beb0",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Progprefs@Initialize",
+      "va": "0x42be98",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Rudict@Finalize",
+      "va": "0x42ff0c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Rudict@Initialize",
+      "va": "0x42fef4",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Testfuncs@Finalize",
+      "va": "0x454330",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Testfuncs@Initialize",
+      "va": "0x454320",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Testfunctions@Finalize",
+      "va": "0x401e3c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Testfunctions@Initialize",
+      "va": "0x401e2c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Tstwindowmain@Finalize",
+      "va": "0x483fd4",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Tstwindowmain@Initialize",
+      "va": "0x483fbc",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Wofdfunc@Finalize",
+      "va": "0x426cac",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Wofdfunc@Initialize",
+      "va": "0x426c9c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Worddocument@Finalize",
+      "va": "0x43f8ac",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Worddocument@Initialize",
+      "va": "0x43f894",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Wordstructs@Finalize",
+      "va": "0x441f50",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Wordstructs@Initialize",
+      "va": "0x441f40",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Xmlparcer@Finalize",
+      "va": "0x44858c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "@@Xmlparcer@Initialize",
+      "va": "0x44857c",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "_TstWndMain",
+      "va": "0x738e1c",
+      "section": ".data",
+      "executable_section": false
+    },
+    {
+      "name": "__GetExceptDLLinfo",
+      "va": "0x401aed",
+      "section": ".text",
+      "executable_section": true
+    },
+    {
+      "name": "___CPPdebugHook",
+      "va": "0x6c10ac",
+      "section": ".data",
+      "executable_section": false
+    }
+  ],
+  "GetCommandLineW_referencing_functions": [
+    "00401c14",
+    "00572a38",
+    "00578a50",
+    "006bb0f8",
+    "006bf756"
+  ],
+  "fault_instruction_sequence": [
+    {
+      "va": "0x42db41",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [ebp - 0x64]"
+    },
+    {
+      "va": "0x42db44",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [ebp - 0x7c]"
+    },
+    {
+      "va": "0x42db47",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [eax + ecx*4]"
+    },
+    {
+      "va": "0x42db4a",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [eax]"
+    },
+    {
+      "va": "0x42db4c",
+      "mnemonic": "call",
+      "operands": "dword ptr [ecx + 0x54]"
+    }
+  ],
+  "traces": [
+    {
+      "path": "evidence/business-map-232/startup-fault-r2/trace.json",
+      "sha256": "0cf7c0d41c91a50b9075d917ad6d1e0a59255823f2c09b3cde1224b5b6a56b8a",
+      "owned_pid": 67900,
+      "fault": {
+        "event": 1,
+        "pid": 67900,
+        "tid": 77268,
+        "elapsed_ms": 489,
+        "exception_code": "0xc0000005",
+        "address": "0x9db4a",
+        "first_chance": true,
+        "registers": {
+          "Eip": "0x9db4a",
+          "Esp": "0xaffa58",
+          "Ebp": "0xaffad8",
+          "Eax": "0x5e54c4f",
+          "Ebx": "0x1a43e0",
+          "Ecx": "0x9141",
+          "Edx": "0x3f513b4",
+          "Esi": "0x1e",
+          "Edi": "0x71000"
+        },
+        "access_information": [
+          "0x0",
+          "0x5e54c4f"
+        ],
+        "instruction_bytes": "8b08ff5154400f94c283e20152ff4dbc8d45d0ba02000000",
+        "preferred_va": "0x42db4a"
+      },
+      "stop_reason": "repeated_access_violation_limit"
+    },
+    {
+      "path": "evidence/business-map-232/startup-fault-r3/trace.json",
+      "sha256": "9822a68b93bc7558820c01a45374e82ddaa2a3f94247035e32839c9b1108f16a",
+      "owned_pid": 86028,
+      "fault": {
+        "event": 1,
+        "pid": 86028,
+        "tid": 612,
+        "elapsed_ms": 484,
+        "exception_code": "0xc0000005",
+        "address": "0x81db4a",
+        "first_chance": true,
+        "registers": {
+          "Eip": "0x81db4a",
+          "Esp": "0xfcf868",
+          "Ebp": "0xfcf8e8",
+          "Eax": "0x5e54c4f",
+          "Ebx": "0x9243e0",
+          "Ecx": "0x9141",
+          "Edx": "0x46713b4",
+          "Esi": "0x1e",
+          "Edi": "0x7f1000"
+        },
+        "access_information": [
+          "0x0",
+          "0x5e54c4f"
+        ],
+        "instruction_bytes": "8b08ff5154400f94c283e20152ff4dbc8d45d0ba02000000",
+        "preferred_va": "0x42db4a",
+        "bucket_index": 37185,
+        "inferred_first_utf16_unit": "0x9571",
+        "locals_hex": "e04392004191000000000000010000002cf9fc01e0577e0428f9fc00804bb20004f9fc00d3d6a9008cd3ab0068f8fc003c000000622696005d3296000100000021389600c11393001e000000804bb200b41367040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "candidate_item_utf16_prefix": "镱",
+        "candidate_item_bytes": "7195000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "stop_reason": "repeated_access_violation_limit"
+    }
+  ],
+  "encoding_candidate": {
+    "observed_unit": "0x9571",
+    "cp936_bytes": "efee",
+    "same_bytes_cp1251": "по",
+    "correct_first_letter_bucket": 15,
+    "status": "Consistent mathematical encoding explanation, not a captured source-byte conversion path"
+  },
+  "confirmed": "Two owned startup executions reached a character-derived object-table lookup with index37185 and faulted while dereferencing its result.",
+  "unknown": [
+    "Original ANSI source bytes and exact decoding API not captured.",
+    "Russian-locale branch comparison remains required.",
+    "No existing callable headless checking interface established."
+  ],
+  "ABI_correction": "Observed EAX/EDX register arguments do not justify labeling the native routines MSVC thiscall."
+}

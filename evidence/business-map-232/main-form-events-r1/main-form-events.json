@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "analysis_type": "delphi_main_form_published_event_map",
+  "target": {
+    "path": "runtime/TestVkr232.exe",
+    "sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0"
+  },
+  "dfm_resource": {
+    "name": "TTSTWNDMAIN",
+    "dfm_class": "TTstWndMain",
+    "root_component": "TstWndMain",
+    "resource_type_id": 10,
+    "payload_file_offset": 6229840,
+    "payload_bytes": 6567,
+    "payload_sha256": "02009268d287046afa6426436683b4819db1195dc55fae17b2ec3914a2558a18",
+    "method_table_file_offset": 3054492,
+    "method_table_count": 6,
+    "method_table_header_hex": "0600",
+    "method_table_records_end": 3054597,
+    "records": [
+      {
+        "method_name": "FormDestroy",
+        "record_file_offset": 3054494,
+        "record_length": 18,
+        "record_hex": "12009ca147000b466f726d44657374726f79",
+        "code_va": "0047a19c",
+        "shortstring_length": 11,
+        "strict_functions_tsv_match": {
+          "address": "0047a19c",
+          "name": "FUN_0047a19c",
+          "body_bytes": 136,
+          "status": "decompiled",
+          "error": ""
+        },
+        "callers": [],
+        "callees": [
+          "005df8fc",
+          "006ad68c",
+          "006bf6f6",
+          "006bfd9c"
+        ]
+      },
+      {
+        "method_name": "FormCreate",
+        "record_file_offset": 3054512,
+        "record_length": 17,
+        "record_hex": "1100741848000a466f726d437265617465",
+        "code_va": "00481874",
+        "shortstring_length": 10,
+        "strict_functions_tsv_match": {
+          "address": "00481874",
+          "name": "FUN_00481874",
+          "body_bytes": 32,
+          "status": "decompiled",
+          "error": ""
+        },
+        "callers": [],
+        "callees": [
+          "005df8fc",
+          "006bfd9c"
+        ]
+      },
+      {
+        "method_name": "MemoClick",
+        "record_file_offset": 3054529,
+        "record_length": 16,
+        "record_hex": "100094184800094d656d6f436c69636b",
+        "code_va": "00481894",
+        "shortstring_length": 9,
+        "strict_functions_tsv_match": {
+          "address": "00481894",
+          "name": "FUN_00481894",
+          "body_bytes": 16,
+          "status": "decompiled",
+          "error": ""
+        },
+        "callers": [],
+        "callees": []
+      },
+      {
+        "method_name": "TimerTimer",
+        "record_file_offset": 3054545,
+        "record_length": 17,
+        "record_hex": "1100a41848000a54696d657254696d6572",
+        "code_va": "004818a4",
+        "shortstring_length": 10,
+        "strict_functions_tsv_match": {
+          "address": "004818a4",
+          "name": "FUN_004818a4",
+          "body_bytes": 535,
+          "status": "decompiled",
+          "error": ""
+        },
+        "callers": [],
+        "callees": [
+          "00402a1c",
+          "0040947c",
+          "00481ac8",
+          "00540724",
+          "0055e74c",
+          "005c1158",
+          "005df8fc",
+          "006334d0",
+          "00679450",
+          "0067c1e8",
+          "006ad68c",
+          "006bd510",
+          "006bf0b0",
+          "006bf114",
+          "006bfdae",
+          "006c007e"
+        ]
+      },
+      {
+        "method_name": "sbOpenClick",
+        "record_file_offset": 3054562,
+        "record_length": 18,
+        "record_hex": "1200401b48000b73624f70656e436c69636b",
+        "code_va": "00481b40",
+        "shortstring_length": 11,
+        "strict_functions_tsv_match": {
+          "address": "00481b40",
+          "name": "FUN_00481b40",
+          "body_bytes": 114,
+          "status": "decompiled",
+          "error": ""
+        },
+        "callers": [],
+        "callees": [
+          "00401d8c",
+          "0047a528",
+          "005c5d18",
+          "006ad68c",
+          "006bf114"
+        ]
+      },
+      {
+        "method_name": "rbBakClick",
+        "record_file_offset": 3054580,
+        "record_length": 17,
+        "record_hex": "1100b41b48000a726242616b436c69636b",
+        "code_va": "00481bb4",
+        "shortstring_length": 10,
+        "strict_functions_tsv_match": {
+          "address": "00481bb4",
+          "name": "FUN_00481bb4",
+          "body_bytes": 32,
+          "status": "decompiled",
+          "error": ""
+        },
+        "callers": [],
+        "callees": []
+      }
+    ]
+  },
+  "dfm_event_assignments": {
+    "FormCreate": [
+      {
+        "component_name": "TstWndMain",
+        "component_class": "TTstWndMain",
+        "event_property": "OnCreate",
+        "file_offset": 6230217,
+        "payload_offset": 377,
+        "raw_property_value_hex": "0a466f726d437265617465"
+      }
+    ],
+    "FormDestroy": [
+      {
+        "component_name": "TstWndMain",
+        "component_class": "TTstWndMain",
+        "event_property": "OnDestroy",
+        "file_offset": 6230239,
+        "payload_offset": 399,
+        "raw_property_value_hex": "0b466f726d44657374726f79"
+      }
+    ],
+    "MemoClick": [
+      {
+        "component_name": "Memo",
+        "component_class": "TMemo",
+        "event_property": "OnClick",
+        "file_offset": 6231538,
+        "payload_offset": 1698,
+        "raw_property_value_hex": "094d656d6f436c69636b"
+      }
+    ],
+    "TimerTimer": [
+      {
+        "component_name": "Timer",
+        "component_class": "TTimer",
+        "event_property": "OnTimer",
+        "file_offset": 6236207,
+        "payload_offset": 6367,
+        "raw_property_value_hex": "0a54696d657254696d6572"
+      }
+    ],
+    "sbOpenClick": [
+      {
+        "component_name": "sbOpen",
+        "component_class": "TSpeedButton",
+        "event_property": "OnClick",
+        "file_offset": 6235258,
+        "payload_offset": 5418,
+        "raw_property_value_hex": "0b73624f70656e436c69636b"
+      }
+    ],
+    "rbBakClick": [
+      {
+        "component_name": "rbBak",
+        "component_class": "TRadioButton",
+        "event_property": "OnClick",
+        "file_offset": 6235379,
+        "payload_offset": 5539,
+        "raw_property_value_hex": "0a726242616b436c69636b"
+      },
+      {
+        "component_name": "rbMag",
+        "component_class": "TRadioButton",
+        "event_property": "OnClick",
+        "file_offset": 6235498,
+        "payload_offset": 5658,
+        "raw_property_value_hex": "0a726242616b436c69636b"
+      },
+      {
+        "component_name": "rbSpec",
+        "component_class": "TRadioButton",
+        "event_property": "OnClick",
+        "file_offset": 6235624,
+        "payload_offset": 5784,
+        "raw_property_value_hex": "0a726242616b436c69636b"
+      },
+      {
+        "component_name": "rbAsp",
+        "component_class": "TRadioButton",
+        "event_property": "OnClick",
+        "file_offset": 6235745,
+        "payload_offset": 5905,
+        "raw_property_value_hex": "0a726242616b436c69636b"
+      },
+      {
+        "component_name": "rbNir",
+        "component_class": "TRadioButton",
+        "event_property": "OnClick",
+        "file_offset": 6235847,
+        "payload_offset": 6007,
+        "raw_property_value_hex": "0a726242616b436c69636b"
+      },
+      {
+        "component_name": "rbKyp",
+        "component_class": "TRadioButton",
+        "event_property": "OnClick",
+        "file_offset": 6235949,
+        "payload_offset": 6109,
+        "raw_property_value_hex": "0a726242616b436c69636b"
+      },
+      {
+        "component_name": "rbKyr",
+        "component_class": "TRadioButton",
+        "event_property": "OnClick",
+        "file_offset": 6236051,
+        "payload_offset": 6211,
+        "raw_property_value_hex": "0a726242616b436c69636b"
+      },
+      {
+        "component_name": "rbPr",
+        "component_class": "TRadioButton",
+        "event_property": "OnClick",
+        "file_offset": 6236150,
+        "payload_offset": 6310,
+        "raw_property_value_hex": "0a726242616b436c69636b"
+      }
+    ]
+  },
+  "file_ingress": {
+    "open_dialog_route": {
+      "event": "sbOpenClick",
+      "function": "00481b40",
+      "pseudocode_observation": "checks TOpenDialog component vtable method at +0x40; on true, obtains selected path through FUN_005c5d18 then calls FUN_0047a528."
+    },
+    "drag_drop_route": {
+      "form_create": "00481874",
+      "message_dispatcher": "00482f10",
+      "wm_dropfiles_message": "0x233",
+      "drop_handler": "00481794",
+      "observation": "FormCreate calls DragAcceptFiles(TRUE). Dispatcher routes message 0x233 to 00481794. Handler calls DragQueryFileW for count; exactly one path is fetched and passed directly to 0047a528; multiple files go to a message branch and DragFinish."
+    },
+    "shared_processing_entry": "0047a528",
+    "shared_entry_status": "failed_or_timeout",
+    "shared_entry_error": "Exception while decompiling 0047a528: process: timeout ",
+    "addresses": [
+      {
+        "address": "00482f10",
+        "name": "FUN_00482f10",
+        "body_bytes": 55,
+        "status": "decompiled",
+        "error": "",
+        "pseudocode_lines": {
+          "start": 67139,
+          "end": 67153
+        },
+        "callers": [],
+        "callees": [
+          "00481794",
+          "00573598"
+        ]
+      },
+      {
+        "address": "00481794",
+        "name": "FUN_00481794",
+        "body_bytes": 222,
+        "status": "decompiled",
+        "error": "",
+        "pseudocode_lines": {
+          "start": 66525,
+          "end": 66571
+        },
+        "callers": [
+          "00482f10"
+        ],
+        "callees": [
+          "00401cec",
+          "0047a528",
+          "006ad68c",
+          "006bf0b0",
+          "006bf114",
+          "006bfda2",
+          "006bfda8"
+        ]
+      },
+      {
+        "address": "0047a528",
+        "name": "FUN_0047a528",
+        "body_bytes": 25659,
+        "status": "failed_or_timeout",
+        "error": "Exception while decompiling 0047a528: process: timeout ",
+        "pseudocode_lines": null,
+        "callers": [
+          "00481794",
+          "00481b40"
+        ],
+        "callees": [
+          "00401cec",
+          "00401d6c",
+          "00401d8c",
+          "00401e4c",
+          "00402ca8",
+          "004032dc",
+          "004032f4",
+          "0042b024",
+          "0042c798",
+          "00431c88",
+          "00432358",
+          "0043dd1c",
+          "0043e09c",
+          "0045075c",
+          "00451e54",
+          "004533c0",
+          "0046ba90",
+          "0046cf68",
+          "0047a298",
+          "0047a2f4",
+          "0047a47c",
+          "00480d1c",
+          "0048151c",
+          "00540660",
+          "00558ea4",
+          "00558ee4",
+          "0055e74c",
+          "0058be7c",
+          "005d6c04",
+          "006a340c",
+          "006ad68c",
+          "006b8b94",
+          "006bd510",
+          "006bef94",
+          "006befd4",
+          "006bf0b0",
+          "006bf114",
+          "006bf13c",
+          "006bf150",
+          "006bf164",
+          "006bf1e8",
+          "006bf1f4",
+          "006bf2f8",
+          "006bf30c",
+          "006bf318",
+          "006bf4bc"
+        ]
+      }
+    ],
+    "assessment": "Static evidence shows a drag/drop ingress bypassing the open dialog. It accepts exactly one dropped file in this handler and calls the same processing entry as sbOpenClick. The central entry decompilation timed out, so its full processing behavior remains unknown."
+  },
+  "source_hashes": {
+    "runtime/TestVkr232.exe": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+    "implementation/evidence/business-map-232/pe-resources-REA.json": "8f9e9babbf975520bec8b6c407b5a591ead19225db35a217a3a02d1eb45cd984",
+    "implementation/evidence/agent-v027/decompilation/functions.tsv": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0",
+    "implementation/evidence/agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "implementation/evidence/agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d"
+  },
+  "limits": [
+    "Method-table code VAs were accepted only when exact addresses appeared in functions.tsv; names were not inferred from nearby values.",
+    "Published-method callbacks may have no direct static caller because Delphi dispatch is indirect.",
+    "WM_DROPFILES is observed statically; runtime reachability is not established.",
+    "0047a528 is marked failed_or_timeout in functions.tsv; its callee list is call-export evidence, not a complete recovered body."
+  ]
+}

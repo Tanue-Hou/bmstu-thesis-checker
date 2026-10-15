@@ -1,0 +1,6 @@
+pid=85864
+main=5050614
+master=13501104
+memo=29624996
+send_success=True
+win32_error=0

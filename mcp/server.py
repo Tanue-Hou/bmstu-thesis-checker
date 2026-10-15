@@ -1,5 +1,6 @@
 import json
 import sys
+import subprocess
 from argparse import Namespace
 from pathlib import Path
 
@@ -23,7 +24,7 @@ from school_templates import BUILTINS, load_template
 
 
 SERVER_NAME = "BMSTU Thesis Checker"
-SERVER_VERSION = "0.2.8"
+SERVER_VERSION = "0.2.9"
 METHOD_NOT_FOUND = -32601
 INVALID_PARAMS = -32602
 INTERNAL_ERROR = -32603
@@ -132,6 +133,7 @@ def repair_tool(args, dry_run=False):
 def tool_list_result():
     return {
         "tools": [
+            {"name":"check_native_reference_experimental","description":"Windows-only master DOCX reference check using an explicitly supplied original TestVkr232 EXE. Hidden owned process; hash-matched codepage and native file-entry interventions. Writes private input copy, raw native report and trace. Not a standalone clone or repair authorization.","inputSchema":{"type":"object","properties":{"file_path":{"type":"string"},"native_executable_path":{"type":"string"},"work_type":{"type":"string","enum":["master"],"default":"master"},"timeout_seconds":{"type":"number","minimum":5,"maximum":30,"default":25}},"required":["file_path","native_executable_path"],"additionalProperties":False},"annotations":{"readOnlyHint":False,"destructiveHint":False,"idempotentHint":False,"openWorldHint":True}},
             {"name":"list_native_builds","description":"Known TestVkr identities and validation boundaries; no cross-build evidence transfer.","inputSchema":{"type":"object","properties":{}},"annotations":{"readOnlyHint":True,"destructiveHint":False}},
             {"name":"compare_thesis_results","description":"Compare retained native diagnostics with a local report, verify hashes, retain every diagnostic/finding; no ground-truth or accuracy claim.","inputSchema":{"type":"object","properties":{"local_report_path":{"type":"string"},"native_capture_path":{"type":"string"}},"required":["local_report_path","native_capture_path"]},"annotations":{"readOnlyHint":True,"destructiveHint":False}},
             {"name":"list_school_templates","description":"List sourced school reference profiles and unconfirmed applicability; no native-proof promotion.","inputSchema":{"type":"object","properties":{}},"annotations":{"readOnlyHint":True,"destructiveHint":False}},
@@ -231,6 +233,15 @@ def tool_list_result():
 def handle_tool_call(params):
     name = params.get("name")
     args = params.get("arguments") or {}
+    if name == 'check_native_reference_experimental':
+        if args.get('work_type','master')!='master':raise ValueError('Native harness currently validated for master DOCX only')
+        seconds=args.get('timeout_seconds',25)
+        if isinstance(seconds,bool) or not isinstance(seconds,(int,float)) or not 5<=seconds<=30:raise ValueError('timeout_seconds must be between5 and30')
+        command=[sys.executable,str(SCRIPTS_ROOT/'native_reference_cli.py'),'--input',require_string(args.get('file_path'),'file_path'),'--native-exe',require_string(args.get('native_executable_path'),'native_executable_path'),'--timeout',str(seconds)]
+        run=subprocess.run(command,capture_output=True,text=True,encoding='utf-8',timeout=seconds+25)
+        result=json.loads(run.stdout)
+        if run.returncode or result.get('status')!='completed_instrumented_native_reference':raise ValueError(result.get('error','Native reference incomplete'))
+        return {'content':[{'type':'text','text':f"Experimental native reference: {result['diagnostic_count']} diagnostics; evidence retained locally."}],'structuredContent':result}
     if name == "list_native_builds":
         from repair_build232 import capability
         return {"content":[{"type":"text","text":"Build-specific repair scope is independent from whole-rule detection proof."}],"structuredContent":{"builds":BUILDS,"rule_evidence_build":230,"current_build":232,"repair_evidence_build":230,"build232_repair_capability":capability()}}

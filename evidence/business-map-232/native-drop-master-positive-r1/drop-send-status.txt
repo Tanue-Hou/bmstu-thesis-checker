@@ -1,0 +1,6 @@
+pid=43908
+main=3083528
+master=1380768
+memo=13895974
+send_success=False
+win32_error=1460

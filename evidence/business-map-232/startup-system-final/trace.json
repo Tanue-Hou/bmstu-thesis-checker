@@ -1,0 +1,453 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "argument": "--help",
+  "owned_pid": 90848,
+  "debug_event_size": 176,
+  "wow64_context_size": 716,
+  "events": [
+    {
+      "event": 3,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 0,
+      "image_base": "0xd60000"
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 4
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 4
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 4
+    },
+    {
+      "event": 1,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 4,
+      "exception_code": "0x80000003",
+      "address": "0x7ffaa9242239",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 5
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 9
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 10
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 12
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 13
+    },
+    {
+      "event": 2,
+      "pid": 90848,
+      "tid": 70024,
+      "elapsed_ms": 13
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 13
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 2,
+      "pid": 90848,
+      "tid": 86436,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 2,
+      "pid": 90848,
+      "tid": 15888,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 70024,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 86436,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 70024,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 15888,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 15888,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 70024,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 7,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 70024,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 86436,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 15888,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 7,
+      "pid": 90848,
+      "tid": 15888,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 70024,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 7,
+      "pid": 90848,
+      "tid": 70024,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 86436,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 1,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 22,
+      "exception_code": "0x4000001f",
+      "address": "0x77798b88",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 26
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 33
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 36
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 37
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 39
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 39
+    },
+    {
+      "event": 6,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 40
+    },
+    {
+      "event": 1,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 478,
+      "exception_code": "0x4000001f",
+      "address": "0xd8d890",
+      "first_chance": true,
+      "hit": "startup_bucket_candidate"
+    },
+    {
+      "event": 1,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 479,
+      "exception_code": "0xc0000005",
+      "address": "0xd8db4a",
+      "first_chance": true,
+      "registers": {
+        "Eip": "0xd8db4a",
+        "Esp": "0x173fcc4",
+        "Ebp": "0x173fd44",
+        "Eax": "0x5e54c4f",
+        "Ebx": "0xe943e0",
+        "Ecx": "0x9141",
+        "Edx": "0x4bb13b4",
+        "Esi": "0x1e",
+        "Edi": "0xd61000"
+      },
+      "access_information": [
+        "0x0",
+        "0x5e54c4f"
+      ],
+      "instruction_bytes": "8b08ff5154400f94c283e20152ff4dbc8d45d0ba02000000",
+      "preferred_va": "0x42db4a",
+      "bucket_index": 37185,
+      "inferred_first_utf16_unit": "0x9571",
+      "locals_hex": "e043e90041910000000000000100000088fd7301e057d20484fd7301804b090160fd7301d3d600018cd30201c4fc73013c0000006226ed005d32ed00010000002138ed00c113ea001e000000804b0901b413bb040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "candidate_item_utf16_prefix": "\u9571",
+      "candidate_item_bytes": "7195000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "event": 1,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 482,
+      "exception_code": "0xc0000005",
+      "address": "0xd8db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 482,
+      "exception_code": "0xc0000005",
+      "address": "0xd8db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 483,
+      "exception_code": "0xc0000005",
+      "address": "0xd8db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 483,
+      "exception_code": "0xc0000005",
+      "address": "0xd8db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 483,
+      "exception_code": "0xc0000005",
+      "address": "0xd8db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 483,
+      "exception_code": "0xc0000005",
+      "address": "0xd8db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 90848,
+      "tid": 78068,
+      "elapsed_ms": 483,
+      "exception_code": "0xc0000005",
+      "address": "0xd8db4a",
+      "first_chance": true
+    }
+  ],
+  "breakpoint_hits": [
+    {
+      "label": "startup_bucket_candidate",
+      "address": "0xd8d890",
+      "registers": {
+        "Eip": "0xd8d890",
+        "Esp": "0x173fd48",
+        "Eax": "0x1094b80",
+        "Edx": "0x173fd84",
+        "Ecx": "0x2"
+      },
+      "stack_dwords": [
+        14213370,
+        14029502,
+        24378740,
+        0
+      ],
+      "one_shot": true
+    }
+  ],
+  "last_main_form_pointer": "0x0",
+  "exited_before_timeout": false,
+  "error": null,
+  "binary_unchanged": true,
+  "limits": "Actual owned Windows process execution; one-shot observed entries only, not full call counts. No UI input or forced business-function invocation. Absence of a hit is bounded to this startup/argument run; Chinese-locale initialization may differ from Russian execution.",
+  "stop_reason": "repeated_access_violation_limit",
+  "locale_mode": "system",
+  "target_pid": 90848,
+  "owned_pids": [
+    90848
+  ],
+  "cleanup_errors": [],
+  "tracer_sha256": "19500b001533f557bb6d5c469bee8c79a1d3686e30aaa51abc4f5520fe9ba292"
+}

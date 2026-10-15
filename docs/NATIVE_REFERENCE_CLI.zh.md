@@ -1,0 +1,31 @@
+# 原程序后台对照 CLI（实验功能，v0.2.9）
+
+本地重建检查仍使用 `scripts/thesis_cli.py`。新增 `scripts/native_reference_cli.py` 调用用户提供的原 TestVkr232，返回其实际诊断 JSON，供定位重建引擎与原程序的差异。
+
+目前支持64位 Windows、64位 Python、硕士 VKR、DOCX。需要 Python 3、Windows 自带 .NET Framework 编译器和对应原 EXE；不需要操作文件对话框、安装俄语系统或修改系统语言。仓库不附带原程序。
+
+```powershell
+python scripts/native_reference_cli.py --input "D:\论文\硕士论文.docx" --native-exe "C:\Users\你的用户名\Downloads\TestVkr (2).exe"
+```
+
+EXE 必须匹配 build232 的已分析 SHA-256。程序会建立私有输入及 EXE 副本，在新建且隐藏的进程中运行检查，输出 `status`、`diagnostics`、`source_sha256` 和 `evidence_directory`。这些副本、原文诊断、调试记录和辅助程序只保存在项目旁的 `private_trials/native-reference/`，不提交 Git。退出码 0 才表示已观察到解析、结构检查和检查返回，且完整报告采集通过；其余情况返回失败 JSON，不能当作“无问题”。报告按 UTF-16 长度核对读取前后与实际字符数，缺失或截断即失败。
+
+MCP 对应工具为 `check_native_reference_experimental`，参数：
+
+```json
+{
+  "file_path": "D:\\论文\\硕士论文.docx",
+  "native_executable_path": "C:\\Users\\你的用户名\\Downloads\\TestVkr (2).exe",
+  "work_type": "master"
+}
+```
+
+## 实际调用方式与边界
+
+原程序以系统默认代码页解码三份俄语词库和封面模板，在中文系统上产生乱码。工具只对输入完整哈希与这些资源一致的八次转换，把代码页实参从 0 改为 1251；原 EXE 和系统设置不变。随后在已初始化窗体的主线程中，把一次受控拖放接收转到原有共享文件检查入口 `0047a528`，传入有效的 UTF-16 路径对象，保留正常返回位置。
+
+这是带明确干预记录的原程序包装器，仍借用隐藏窗体和原始检查引擎。它不是发现了原程序自带命令行接口，也不是完全独立的开源复刻。无须用户操作桌面；运行期间不能把该进程当作日常交互窗口使用。用户已有 TestVkr、Word 或其他进程不会被附加或关闭。
+
+已验证硕士字符阈值 43199／43200、附录目录页码 47／48 的实际分支；复杂 DOCX 的 13 条诊断与保留的俄语环境结果逐条匹配。完整验证入口在 `evidence/business-map-232/`。这些有限样例不证明任意论文全规则等价，博士／PDF 尚未向此工具开放。原程序诊断也不等于学校标准答案。
+
+输出必须标记 `experimental` 与 `completed_instrumented_native_reference`。不要将其伪装为未干预的原程序运行，不用它自动提升本地规则或允许修改论文。已有副本修复继续服从原来的独立验收门槛。

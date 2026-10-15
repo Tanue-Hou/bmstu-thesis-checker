@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "analysis": "static review of recovered file-processing entry; no target execution",
+  "target": {
+    "path": "runtime/TestVkr232.exe",
+    "sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+    "entry_va": "0047a528",
+    "recovery_status": "success=true; recovered pseudocode, not source; indirect calls and inferred types incomplete"
+  },
+  "sources": {
+    "function_c": {
+      "path": "evidence/business-map-232/file-entry-decompilation-r1/function.c",
+      "sha256": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4"
+    },
+    "status_txt": {
+      "path": "evidence/business-map-232/file-entry-decompilation-r1/status.txt",
+      "sha256": "98409f9996cec54c5d56482d557c233b22d11acef676d1c451f6322cdf2fb1e5"
+    },
+    "diagnostic_map": {
+      "path": "evidence/business-map-232/diagnostic-map-r2/diagnostic-map.json",
+      "sha256": "a325300fb719105bca7b494ffddc5a9f2579846e3950e6cac24f2444a26ad863"
+    },
+    "functions_tsv": {
+      "path": "evidence/agent-v027/decompilation/functions.tsv",
+      "sha256": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0"
+    },
+    "calls_tsv": {
+      "path": "evidence/agent-v027/decompilation/calls.tsv",
+      "sha256": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd"
+    },
+    "main_form_events": {
+      "path": "evidence/business-map-232/main-form-events-r1/main-form-events.json",
+      "sha256": "91bb5a4219b84dcd2bbaf4b54a0200a249cd8c0acab103aa473d5ca52aeddb8c"
+    }
+  },
+  "dispatch": {
+    "input_path": {
+      "observation": "param_2 is copied into form field +0x424; a second path-derived string is stored at +0x428, then +0x424 is shortened by the length difference. This suggests path/name and suffix split, but field semantics are inferred.",
+      "function_lines": [
+        379,
+        397,
+        389,
+        392,
+        518,
+        527,
+        534,
+        536
+      ]
+    },
+    "accepted_suffixes": [
+      {
+        "suffix": ".docx",
+        "literal_va": "006e53f4",
+        "validation_line": 540,
+        "branch_line": 583,
+        "parser_setup": "0048151c",
+        "processing_entry": "0046ba90",
+        "lines": [
+          538,
+          540,
+          568,
+          583,
+          590,
+          597
+        ]
+      },
+      {
+        "suffix": ".pdf",
+        "literal_va": "006e5400",
+        "validation_line": 548,
+        "parser_setup": "00431c88",
+        "processing_entry": "0043dd1c",
+        "lines": [
+          546,
+          548,
+          600,
+          604,
+          611
+        ]
+      }
+    ],
+    "unsupported_suffix": {
+      "message_va": "006e540a",
+      "message": "Укажите (перетащите) файл формата docx или pdf",
+      "lines": [
+        538,
+        540,
+        546,
+        548,
+        557,
+        561
+      ]
+    },
+    "parse_error": {
+      "message_va": "006e8516",
+      "message": "Ошибка при разборе содержимого документа.",
+      "line": 617,
+      "condition": "parser result flag at offset +0x71 is nonzero"
+    },
+    "entry_callers": [
+      "00481794 (WM_DROPFILES path)",
+      "00481b40 (open-dialog path); each passes a selected single path to 0047a528"
+    ]
+  },
+  "mode_state": {
+    "source": "Eight indirect checked-state calls are made on form subobjects at offsets +0x394,+0x398,+0x39c,+0x3a0,+0x3a4,+0x3a8,+0x3ac,+0x3b4. If all report unchecked, the function shows the work-type prompt and returns.",
+    "no_selection_message": {
+      "va": "006e53ce",
+      "text": "Укажите вид работы",
+      "lines": [
+        403,
+        417,
+        420,
+        422
+      ]
+    },
+    "selected_value_destinations": [
+      "+0x434",
+      "+0x440"
+    ],
+    "observed_literals": {
+      "006e539c": "0",
+      "006e53a0": "1",
+      "006e53a4": "2",
+      "006e53a8": "5",
+      "006e53ac": "3",
+      "006e53b0": "0",
+      "006e53b4": "1",
+      "006e53b8": "0",
+      "006e53bc": "2",
+      "006e53c0": "0",
+      "006e53c4": "14",
+      "006e53ca": "0"
+    },
+    "limits": "The code maps selected-state branches to scalar fields, but this review does not assign each offset to a named radio button or infer the business meaning of each scalar. UI DFM evidence lists rbBak/rbMag/rbSpec/rbAsp/rbNir/rbKyp/rbKyr/rbPr, without proving their order matches these object offsets. The wrapper must reproduce form initialization and a valid selected state; exact object layout/ABI is not established here."
+  },
+  "checks": {
+    "skip_tokens": [
+      {
+        "token": "SkipTestStruct",
+        "literal_va": "006e5496",
+        "checked_in": "+0x454",
+        "when_absent_calls": "00451e54",
+        "lines": [
+          687,
+          689,
+          693,
+          695
+        ]
+      },
+      {
+        "token": "SkipTestPic",
+        "literal_va": "006e5568",
+        "checked_in": "+0x454",
+        "when_absent_conditionally_checks": "image/document predicate; if it fails, appends a warning",
+        "lines": [
+          699,
+          701,
+          705,
+          715
+        ]
+      },
+      {
+        "token": "SkipTestWord",
+        "literal_va": "006e5616",
+        "checked_in": "+0x454",
+        "when_absent_runs": "Word-related embedded-content and formatting checks",
+        "lines": [
+          724,
+          726,
+          730
+        ]
+      },
+      {
+        "token": "SkipTestDict",
+        "literal_va": "006e8322",
+        "checked_in": "+0x454",
+        "when_absent_calls": "0042c798 spelling/dictionary check",
+        "lines": [
+          2450,
+          2452,
+          2456,
+          2459
+        ]
+      }
+    ],
+    "direct_string_evidence": [
+      {
+        "va": "006e6c78",
+        "text": "Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+        "category": "page margins",
+        "function_line": 1774
+      },
+      {
+        "va": "006e6d1e",
+        "text": "Документ содержит страницы, размеры левого поля на которых не соответствуют требованиям или отступ первой строки абзаца не равен 1.25…1.27 см: ",
+        "category": "left margin/first-line indent",
+        "function_line": 1677
+      },
+      {
+        "va": "006e7c24",
+        "text": "Отсутствуют или неправильно оформлены заголовки структурных элементов: ",
+        "category": "structure",
+        "function_line": 2120
+      },
+      {
+        "va": "006e7cb8",
+        "text": "** Обнаружены пустые структурные элементы: ",
+        "category": "structure",
+        "function_line": 2145
+      },
+      {
+        "va": "006e82ee",
+        "text": "* Маленький объем ВКР: ",
+        "category": "document volume",
+        "function_line": 2428
+      },
+      {
+        "va": "006e83fe",
+        "text": "*** Ошибка при проверке орфографии в документе.",
+        "category": "spelling",
+        "function_line": 2465
+      }
+    ],
+    "default_policy": "The recovered body checks each SkipTest token and runs that module when the token is absent. Therefore it does not show a built-in default that enables every check: the supplied +0x454 option string determines which modules are skipped. Whether the normal GUI initializes this string empty, and whether other checks have additional state gates, is unknown. The wrapper should omit SkipTestStruct/Pic/Word/Dict to request these modules, subject to each check's own predicates."
+  },
+  "result_and_completion": {
+    "carrier": "An allocated result collection (piVar6) receives warning/error strings; the function then writes a no-remarks row or sends the collection to a form result control at +0x388/+0x2a0.",
+    "zero_items": {
+      "message_va": "006e858c",
+      "text": "Проверка закончена. Замечаний нет.",
+      "lines": [
+        2586,
+        2587,
+        2603,
+        2606
+      ]
+    },
+    "nonzero_items": {
+      "behavior": "enumerates collection rows, prefixes each with a 1-based index, appends the input file label, then passes collection to the result control",
+      "lines": [
+        2612,
+        2617,
+        2624,
+        2646,
+        2649,
+        2655
+      ]
+    },
+    "completion_signal": "No explicit machine-readable completion flag was identified in the recovered body; normal return after UI result population is the observable completion point. Parse-error path also reaches shared result rendering after displaying the error."
+  },
+  "file_writes": {
+    "observed": "No direct file creation, write, rename, or save operation is present in this recovered body. The visible output is a UI result collection/control.",
+    "limits": "Subroutines are only partially characterized and indirect calls remain, so absence of a write in this function does not prove downstream parser/helper routines never write files. No output file path is formed in the visible body."
+  },
+  "wrapper_requirements": [
+    "Provide a live/form-equivalent object with the parser state at +0x3c0, result control at +0x388, selected work-type controls, input path at +0x424, derived suffix state at +0x428, mode strings at +0x434/+0x440, and options at +0x454.",
+    "Select a valid work-type radio state or the function returns after the work-type prompt.",
+    "Use a .docx or .pdf input path or the function returns after the format prompt.",
+    "For the four identified optional modules, omit their SkipTest tokens to request checks; do not assume all other validators are unconditional or that a blank option string is the normal GUI default."
+  ],
+  "unknowns": [
+    "Exact struct/class types, ownership and initialization sequence required to safely instantiate the GUI state.",
+    "Which work-type offset corresponds to each named radio control and the semantics of scalar codes.",
+    "Normal GUI default contents of the +0x454 options field and whether every check is enabled by default.",
+    "Whether deeper parser/helpers perform incidental writes or other side effects.",
+    "Precise machine-readable completion/error return convention; this body renders results through UI controls."
+  ],
+  "static_only": true
+}

@@ -1,0 +1,2 @@
+System.Exception: Memo length read failed
+   在 SendOwnedDrop.Main(String[] args)

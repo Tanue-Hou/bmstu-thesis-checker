@@ -1,0 +1,34 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "REA_evidence_id": "ev_916f0183d8507c430bbbf49f7955dffead192748e34de0462665b6db91fa2734",
+  "sources": {
+    "evidence/business-map-232/pe-resources-REA.json": "8f9e9babbf975520bec8b6c407b5a591ead19225db35a217a3a02d1eb45cd984",
+    "evidence/business-map-232/startup-system-input/trace.json": "a5bcc17516718c604eac8d6113ee5eecf208d79fc73fcaf30c8d344961321bc4"
+  },
+  "resource": {
+    "type": "TESTDATA",
+    "name": "RU_PREFS",
+    "compressed_file_offset": 3972988,
+    "compressed_bytes": 188580,
+    "compressed_sha256": "ed6b4147c25455ef84eec928f0f9037eff0d7e5e7bd26e9cfa8052f6430a966f",
+    "decoded_bytes": 661921,
+    "decoded_sha256": "8821ddbb86a9a36bd08e37974929c2b6d76642b64aeb165eee9028a50cb36551",
+    "first_record_hex": "202d20efee207c"
+  },
+  "comparison": {
+    "cp1251_first_record": " - по |",
+    "cp936_first_record": " - 镱 |",
+    "captured_argument": " - 镱 |",
+    "exact_cp936_match": true,
+    "system_ACP": 936,
+    "observed_index": 37185,
+    "cp1251_index": 15,
+    "initialized_buckets_static": 32
+  },
+  "finding": "The compressed resource first record, decoded with CP936, exactly reproduces the captured corrupted argument and out-of-range index. CP1251 produces a valid Cyrillic index.",
+  "limits": [
+    "The exact native conversion API/codepage argument is not yet captured.",
+    "Russian-locale debugger run has not reached business initialization successfully.",
+    "No original binary patch or system locale change was made; this is not a production fix."
+  ]
+}

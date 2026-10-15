@@ -1,0 +1,442 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "argument": "--help",
+  "owned_pid": 67900,
+  "debug_event_size": 176,
+  "wow64_context_size": 716,
+  "events": [
+    {
+      "event": 3,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 0,
+      "image_base": "0x70000"
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 4
+    },
+    {
+      "event": 1,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 4,
+      "exception_code": "0x80000003",
+      "address": "0x7ffaa9242239",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 5
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 10
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 10
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 12
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 13
+    },
+    {
+      "event": 2,
+      "pid": 67900,
+      "tid": 57468,
+      "elapsed_ms": 13
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 13
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 2,
+      "pid": 67900,
+      "tid": 26580,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 2,
+      "pid": 67900,
+      "tid": 89600,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 57468,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 26580,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 57468,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 89600,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 57468,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 89600,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 7,
+      "pid": 67900,
+      "tid": 89600,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 57468,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 89600,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 7,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 26580,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 57468,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 7,
+      "pid": 67900,
+      "tid": 57468,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 89600,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 1,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 23,
+      "exception_code": "0x4000001f",
+      "address": "0x77798b88",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 27
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 35
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 38
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 39
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 40
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 41
+    },
+    {
+      "event": 6,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 42
+    },
+    {
+      "event": 1,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 488,
+      "exception_code": "0x4000001f",
+      "address": "0x9d890",
+      "first_chance": true,
+      "hit": "startup_bucket_candidate"
+    },
+    {
+      "event": 1,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x9db4a",
+      "first_chance": true,
+      "registers": {
+        "Eip": "0x9db4a",
+        "Esp": "0xaffa58",
+        "Ebp": "0xaffad8",
+        "Eax": "0x5e54c4f",
+        "Ebx": "0x1a43e0",
+        "Ecx": "0x9141",
+        "Edx": "0x3f513b4",
+        "Esi": "0x1e",
+        "Edi": "0x71000"
+      },
+      "access_information": [
+        "0x0",
+        "0x5e54c4f"
+      ],
+      "instruction_bytes": "8b08ff5154400f94c283e20152ff4dbc8d45d0ba02000000",
+      "preferred_va": "0x42db4a"
+    },
+    {
+      "event": 1,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x9db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x9db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x9db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x9db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x9db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x9db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 67900,
+      "tid": 77268,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x9db4a",
+      "first_chance": true
+    }
+  ],
+  "breakpoint_hits": [
+    {
+      "label": "startup_bucket_candidate",
+      "address": "0x9d890",
+      "registers": {
+        "Eip": "0x9d890",
+        "Esp": "0xaffadc",
+        "Eax": "0x3a4b80",
+        "Edx": "0xaffb18",
+        "Ecx": "0x2"
+      },
+      "stack_dwords": [
+        647418,
+        463550,
+        11533064,
+        0
+      ],
+      "one_shot": true
+    }
+  ],
+  "last_main_form_pointer": "0x0",
+  "exited_before_timeout": false,
+  "error": null,
+  "binary_unchanged": true,
+  "limits": "Actual owned Windows process execution; one-shot observed entries only, not full call counts. No UI input or forced business-function invocation. Absence of a hit is bounded to this startup/argument run; Chinese-locale initialization may differ from Russian execution.",
+  "stop_reason": "repeated_access_violation_limit",
+  "tracer_sha256": "b2c48584cc4bb700ef60d4d9198ae169af9f9ca2cb766d952f17647612669b3a"
+}

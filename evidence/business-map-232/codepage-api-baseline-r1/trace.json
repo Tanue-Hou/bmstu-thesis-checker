@@ -1,0 +1,494 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "argument": "--help",
+  "owned_pid": 44124,
+  "debug_event_size": 176,
+  "wow64_context_size": 716,
+  "events": [
+    {
+      "event": 3,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 0,
+      "image_base": "0x330000"
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 2
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 4
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 4,
+      "exception_code": "0x80000003",
+      "address": "0x7ffaa9242239",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 5
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 10
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 11
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 13
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 13
+    },
+    {
+      "event": 2,
+      "pid": 44124,
+      "tid": 15052,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 2,
+      "pid": 44124,
+      "tid": 27552,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 2,
+      "pid": 44124,
+      "tid": 21800,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 15052,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 15052,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 21800,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 27552,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 15052,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 21800,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 7,
+      "pid": 44124,
+      "tid": 21800,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 21800,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 15052,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 7,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 27552,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 15052,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 7,
+      "pid": 44124,
+      "tid": 15052,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 23
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 21800,
+      "elapsed_ms": 23
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 24,
+      "exception_code": "0x4000001f",
+      "address": "0x77798b88",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 27
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 34,
+      "exception_code": "0x4000001f",
+      "address": "0x5ef90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 35,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 36
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 39
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 40
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 41
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 42
+    },
+    {
+      "event": 6,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 43
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 488,
+      "exception_code": "0x4000001f",
+      "address": "0x35d890",
+      "first_chance": true,
+      "hit": "startup_bucket_candidate"
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 492,
+      "exception_code": "0xc0000005",
+      "address": "0x35db4a",
+      "first_chance": true,
+      "registers": {
+        "Eip": "0x35db4a",
+        "Esp": "0xd3fc50",
+        "Ebp": "0xd3fcd0",
+        "Eax": "0x5e54c4f",
+        "Ebx": "0x4643e0",
+        "Ecx": "0x9141",
+        "Edx": "0x41d13b4",
+        "Esi": "0x1e",
+        "Edi": "0x331000"
+      },
+      "access_information": [
+        "0x0",
+        "0x5e54c4f"
+      ],
+      "instruction_bytes": "8b08ff5154400f94c283e20152ff4dbc8d45d0ba02000000",
+      "preferred_va": "0x42db4a",
+      "bucket_index": 37185,
+      "inferred_first_utf16_unit": "0x9571",
+      "locals_hex": "e043460041910000000000000100000014fdd301e057340410fdd300804b6600ecfcd300d3d65d008cd35f0050fcd3003c00000062264a005d324a000100000021384a00c11347001e000000804b6600b4131d040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "candidate_item_utf16_prefix": "\u9571",
+      "candidate_item_bytes": "7195000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0x35db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0x35db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0x35db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0x35db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0x35db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0x35db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 44124,
+      "tid": 94240,
+      "elapsed_ms": 493,
+      "exception_code": "0xc0000005",
+      "address": "0x35db4a",
+      "first_chance": true
+    }
+  ],
+  "breakpoint_hits": [
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x5ef90c",
+      "registers": {
+        "Eip": "0x5ef90c",
+        "Esp": "0xd3fccc",
+        "Eax": "0x9",
+        "Edx": "0xa",
+        "Ecx": "0x4c01eb"
+      },
+      "stack_dwords": [
+        4883633,
+        65001,
+        0,
+        4981227
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "startup_bucket_candidate",
+      "address": "0x35d890",
+      "registers": {
+        "Eip": "0x35d890",
+        "Esp": "0xd3fcd4",
+        "Eax": "0x664b80",
+        "Edx": "0xd3fd10",
+        "Ecx": "0x2"
+      },
+      "stack_dwords": [
+        3531002,
+        3347134,
+        13892864,
+        0
+      ],
+      "one_shot": true,
+      "candidate_input_string_length": 6,
+      "candidate_input_utf16_prefix": " - \u9571 |"
+    }
+  ],
+  "last_main_form_pointer": "0x0",
+  "exited_before_timeout": false,
+  "error": null,
+  "binary_unchanged": true,
+  "limits": "Actual owned Windows process execution; one-shot observed entries only, not full call counts. No UI input or forced business-function invocation. Absence of a hit is bounded to this startup/argument run; Chinese-locale initialization may differ from Russian execution.",
+  "stop_reason": "repeated_access_violation_limit",
+  "locale_mode": "system",
+  "target_pid": 44124,
+  "owned_pids": [
+    44124
+  ],
+  "cleanup_errors": [],
+  "codepage_api_calls_observed": 1,
+  "large_buffer_codepage_calls": [],
+  "tracer_sha256": "dc0883a498c665c2675fb5d564dda69e212a067042c9054e496b4268feba168a"
+}

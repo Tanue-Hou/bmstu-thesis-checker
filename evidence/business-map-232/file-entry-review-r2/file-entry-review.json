@@ -1,0 +1,411 @@
+{
+  "schema_version": 2,
+  "analysis": "static review reconciled with owned-process trace; no new target execution in this review",
+  "target": {
+    "path": "runtime/TestVkr232.exe",
+    "sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+    "entry_va": "0047a528",
+    "recovery_status": "success=true; recovered pseudocode, not source; indirect calls and inferred types incomplete"
+  },
+  "sources": {
+    "function_c": {
+      "path": "evidence/business-map-232/file-entry-decompilation-r1/function.c",
+      "sha256": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4"
+    },
+    "status_txt": {
+      "path": "evidence/business-map-232/file-entry-decompilation-r1/status.txt",
+      "sha256": "98409f9996cec54c5d56482d557c233b22d11acef676d1c451f6322cdf2fb1e5"
+    },
+    "diagnostic_map": {
+      "path": "evidence/business-map-232/diagnostic-map-r2/diagnostic-map.json",
+      "sha256": "a325300fb719105bca7b494ffddc5a9f2579846e3950e6cac24f2444a26ad863"
+    },
+    "functions_tsv": {
+      "path": "evidence/agent-v027/decompilation/functions.tsv",
+      "sha256": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0"
+    },
+    "calls_tsv": {
+      "path": "evidence/agent-v027/decompilation/calls.tsv",
+      "sha256": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd"
+    },
+    "main_form_events": {
+      "path": "evidence/business-map-232/main-form-events-r1/main-form-events.json",
+      "sha256": "91bb5a4219b84dcd2bbaf4b54a0200a249cd8c0acab103aa473d5ca52aeddb8c"
+    },
+    "native_trace": {
+      "path": "evidence/business-map-232/native-direct-master-positive-r1/trace.json",
+      "sha256": "0b9f4f397acdc40f6586110e0f6e2b459ccd18c6c6c9758fb6fbc4eb9c7fd243",
+      "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+      "probe_document_sha256": "ea4ff3262f38bed993ed4871a9a7122bee92a38bb7e3e00faca87a063a8d101f"
+    }
+  },
+  "dispatch": {
+    "input_path": {
+      "observation": "param_2 is copied into form field +0x424; a second path-derived string is stored at +0x428, then +0x424 is shortened by the length difference. This suggests path/name and suffix split, but field semantics are inferred.",
+      "function_lines": [
+        379,
+        397,
+        389,
+        392,
+        518,
+        527,
+        534,
+        536
+      ]
+    },
+    "accepted_suffixes": [
+      {
+        "suffix": ".docx",
+        "literal_va": "006e53f4",
+        "parser_setup": "00431c88",
+        "processing_entry": "0043dd1c",
+        "mapping_status": "observed at runtime for the supplied DOCX; the trace hit label docx_load at runtime address 0x35dd1c, corresponding to preferred VA 0043dd1c",
+        "pseudocode_lines": [
+          600,
+          604,
+          607,
+          611
+        ]
+      },
+      {
+        "suffix": ".pdf",
+        "literal_va": "006e5400",
+        "parser_setup": "0048151c",
+        "processing_entry": "0046ba90",
+        "mapping_status": "complementary suffix branch in recovered pseudocode; no PDF run in the cited native trace",
+        "pseudocode_lines": [
+          587,
+          590,
+          593,
+          597
+        ]
+      }
+    ],
+    "unsupported_suffix": {
+      "message_va": "006e540a",
+      "message": "Укажите (перетащите) файл формата docx или pdf",
+      "lines": [
+        538,
+        540,
+        546,
+        548,
+        557,
+        561
+      ]
+    },
+    "parse_error": {
+      "message_va": "006e8516",
+      "message": "Ошибка при разборе содержимого документа.",
+      "line": 617,
+      "condition": "parser result flag at offset +0x71 is nonzero"
+    },
+    "entry_callers": [
+      "00481794 (WM_DROPFILES path); native trace directly intervened at this owned drop handler and entered 0047a528 with the supplied path.",
+      "00481b40 (open-dialog path) is a separate statically mapped caller in main-form-events-r1."
+    ],
+    "comparison_semantics": {
+      "warning": "Do not infer suffix equality from cVar1 == 0/nonzero in the recovered function.c.",
+      "evidence": [
+        "FUN_006bf1e8 is recovered as void/no return in recovered_pseudocode.c (ENTRY 006bf1e8).",
+        "FUN_006bf1f4 returns the inverted byte from an opaque helper (ENTRY 006bf1f4), whose lower-level comparator uses undefined ZF in recovered pseudocode.",
+        "Therefore the if/else shape at lines 540-583 cannot alone establish which suffix reaches which parser. The DOCX trace directly resolves the .docx case; PDF remains the complementary static mapping."
+      ],
+      "lines": [
+        540,
+        548,
+        552,
+        557,
+        568,
+        583
+      ]
+    }
+  },
+  "mode_state": {
+    "source": "Eight indirect checked-state calls are made on form subobjects at offsets +0x394,+0x398,+0x39c,+0x3a0,+0x3a4,+0x3a8,+0x3ac,+0x3b4. If all report unchecked, the function shows the work-type prompt and returns.",
+    "no_selection_message": {
+      "va": "006e53ce",
+      "text": "Укажите вид работы",
+      "lines": [
+        403,
+        417,
+        420,
+        422
+      ]
+    },
+    "selected_value_destinations": [
+      "+0x434",
+      "+0x440"
+    ],
+    "observed_literals": {
+      "006e539c": "0",
+      "006e53a0": "1",
+      "006e53a4": "2",
+      "006e53a8": "5",
+      "006e53ac": "3",
+      "006e53b0": "0",
+      "006e53b4": "1",
+      "006e53b8": "0",
+      "006e53bc": "2",
+      "006e53c0": "0",
+      "006e53c4": "14",
+      "006e53ca": "0"
+    },
+    "limits": "The code maps selected-state branches to scalar fields, but this review does not assign each offset to a named radio button or infer the business meaning of each scalar. UI DFM evidence lists rbBak/rbMag/rbSpec/rbAsp/rbNir/rbKyp/rbKyr/rbPr, without proving their order matches these object offsets. The wrapper must reproduce form initialization and a valid selected state; exact object layout/ABI is not established here."
+  },
+  "checks": {
+    "skip_tokens": [
+      {
+        "token": "SkipTestStruct",
+        "literal_va": "006e5496",
+        "checked_in": "+0x454",
+        "when_absent_calls": "00451e54",
+        "lines": [
+          687,
+          689,
+          693,
+          695
+        ]
+      },
+      {
+        "token": "SkipTestPic",
+        "literal_va": "006e5568",
+        "checked_in": "+0x454",
+        "when_absent_conditionally_checks": "image/document predicate; if it fails, appends a warning",
+        "lines": [
+          699,
+          701,
+          705,
+          715
+        ]
+      },
+      {
+        "token": "SkipTestWord",
+        "literal_va": "006e5616",
+        "checked_in": "+0x454",
+        "when_absent_runs": "Word-related embedded-content and formatting checks",
+        "lines": [
+          724,
+          726,
+          730
+        ]
+      },
+      {
+        "token": "SkipTestDict",
+        "literal_va": "006e8322",
+        "checked_in": "+0x454",
+        "when_absent_calls": "0042c798 spelling/dictionary check",
+        "lines": [
+          2450,
+          2452,
+          2456,
+          2459
+        ]
+      }
+    ],
+    "direct_string_evidence": [
+      {
+        "va": "006e6c78",
+        "text": "Документ содержит страницы, размеры полей на которых не соответствуют требованиям.",
+        "category": "page margins",
+        "function_line": 1774
+      },
+      {
+        "va": "006e6d1e",
+        "text": "Документ содержит страницы, размеры левого поля на которых не соответствуют требованиям или отступ первой строки абзаца не равен 1.25…1.27 см: ",
+        "category": "left margin/first-line indent",
+        "function_line": 1677
+      },
+      {
+        "va": "006e7c24",
+        "text": "Отсутствуют или неправильно оформлены заголовки структурных элементов: ",
+        "category": "structure",
+        "function_line": 2120
+      },
+      {
+        "va": "006e7cb8",
+        "text": "** Обнаружены пустые структурные элементы: ",
+        "category": "structure",
+        "function_line": 2145
+      },
+      {
+        "va": "006e82ee",
+        "text": "* Маленький объем ВКР: ",
+        "category": "document volume",
+        "function_line": 2428
+      },
+      {
+        "va": "006e83fe",
+        "text": "*** Ошибка при проверке орфографии в документе.",
+        "category": "spelling",
+        "function_line": 2465
+      }
+    ],
+    "default_policy": "The recovered body checks each SkipTest token and runs that module when the token is absent. Therefore it does not show a built-in default that enables every check: the supplied +0x454 option string determines which modules are skipped. Whether the normal GUI initializes this string empty, and whether other checks have additional state gates, is unknown. The wrapper should omit SkipTestStruct/Pic/Word/Dict to request these modules, subject to each check's own predicates. The native trace confirms that in this actual run the DOCX path reached the structure check and work-name check, but does not establish all optional checks or GUI defaults."
+  },
+  "result_and_completion": {
+    "carrier": "An allocated result collection (piVar6) receives warning/error strings; the function then writes a no-remarks row or sends the collection to a form result control at +0x388/+0x2a0.",
+    "zero_items": {
+      "message_va": "006e858c",
+      "text": "Проверка закончена. Замечаний нет.",
+      "lines": [
+        2586,
+        2587,
+        2603,
+        2606
+      ]
+    },
+    "nonzero_items": {
+      "behavior": "enumerates collection rows, prefixes each with a 1-based index, appends the input file label, then passes collection to the result control",
+      "lines": [
+        2612,
+        2617,
+        2624,
+        2646,
+        2649,
+        2655
+      ]
+    },
+    "completion_signal": "No explicit machine-readable completion flag was identified in the recovered body; normal return after UI result population is the observable completion point. Parse-error path also reaches shared result rendering after displaying the error. In the cited trace the one-shot return breakpoint at 0047a528 was reached (EAX=0); sender-side report retrieval failed, so this does not establish that a complete report was received."
+  },
+  "file_writes": {
+    "observed": "No direct file creation, write, rename, or save operation is present in this recovered body. The visible output is a UI result collection/control.",
+    "limits": "Subroutines are only partially characterized and indirect calls remain, so absence of a write in this function does not prove downstream parser/helper routines never write files. No output file path is formed in the visible body."
+  },
+  "wrapper_requirements": [
+    "Provide a live/form-equivalent object with the parser state at +0x3c0, result control at +0x388, selected work-type controls, input path at +0x424, derived suffix state at +0x428, mode strings at +0x434/+0x440, and options at +0x454.",
+    "Select a valid work-type radio state or the function returns after the work-type prompt.",
+    "Use a .docx or .pdf input path or the function returns after the format prompt.",
+    "For the four identified optional modules, omit their SkipTest tokens to request checks; do not assume all other validators are unconditional or that a blank option string is the normal GUI default."
+  ],
+  "unknowns": [
+    "Exact struct/class types, ownership and initialization sequence required to safely instantiate the GUI state.",
+    "Which work-type offset corresponds to each named radio control and the semantics of scalar codes.",
+    "Normal GUI default contents of the +0x454 options field and whether every check is enabled by default.",
+    "Whether deeper parser/helpers perform incidental writes or other side effects.",
+    "Precise machine-readable completion/error return convention; this body renders results through UI controls."
+  ],
+  "static_only": false,
+  "native_trace_observation": {
+    "source": "native-direct-master-positive-r1/trace.json",
+    "probe_path": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\graduate-structure\\g_chars43200.docx",
+    "probe_sha256": "ea4ff3262f38bed993ed4871a9a7122bee92a38bb7e3e00faca87a063a8d101f",
+    "probe_unchanged": true,
+    "process_argument": "--help",
+    "owned_pid": 84244,
+    "hits": [
+      {
+        "label": "single_file_drop_handler",
+        "address": "0x3a1794",
+        "registers": {
+          "Eip": "0x3a1794",
+          "Esp": "0xcff71c",
+          "Eax": "0x43ec6d0",
+          "Edx": "0xcff908",
+          "Ecx": "0x60afe0"
+        },
+        "one_shot": true,
+        "preferred_va": "00481794"
+      },
+      {
+        "label": "file_check_entry",
+        "address": "0x39a528",
+        "candidate_input_string_length": 88,
+        "candidate_input_utf16_prefix": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\graduate-structure\\g_chars43200.docx",
+        "registers": {
+          "Eip": "0x39a528",
+          "Esp": "0xcff71c",
+          "Eax": "0x43ec6d0",
+          "Edx": "0x32f00c0",
+          "Ecx": "0x60afe0"
+        },
+        "one_shot": true,
+        "preferred_va": "0047a528"
+      },
+      {
+        "label": "docx_load",
+        "address": "0x35dd1c",
+        "candidate_input_string_length": 88,
+        "candidate_input_utf16_prefix": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\graduate-structure\\g_chars43200.docx",
+        "registers": {
+          "Eip": "0x35dd1c",
+          "Esp": "0xcff0f8",
+          "Eax": "0x43ec170",
+          "Edx": "0x32f00c0",
+          "Ecx": "0x43ec6d0"
+        },
+        "one_shot": true,
+        "preferred_va": "0043dd1c"
+      },
+      {
+        "label": "structure_volume_check",
+        "address": "0x371e54",
+        "registers": {
+          "Eip": "0x371e54",
+          "Esp": "0xcff0f8",
+          "Eax": "0x455ee70",
+          "Edx": "0x43eca90",
+          "Ecx": "0x455ed80"
+        },
+        "one_shot": true,
+        "preferred_va": "00451e54"
+      },
+      {
+        "label": "work_name_check",
+        "address": "0x36a748",
+        "registers": {
+          "Eip": "0x36a748",
+          "Esp": "0xcfee80",
+          "Eax": "0x455efb0",
+          "Edx": "0x43eca90",
+          "Ecx": "0x455ed80"
+        },
+        "one_shot": true,
+        "preferred_va": "0044a748"
+      },
+      {
+        "label": "token_matcher",
+        "address": "0x369eec",
+        "registers": {
+          "Eip": "0x369eec",
+          "Esp": "0xcfedbc",
+          "Eax": "0xcfee28",
+          "Edx": "0xcfee78",
+          "Ecx": "0x1"
+        },
+        "one_shot": true,
+        "preferred_va": "00449eec"
+      },
+      {
+        "label": "file_check_return",
+        "address": "0x3a2f36",
+        "registers": {
+          "Eip": "0x3a2f36",
+          "Esp": "0xcff720",
+          "Eax": "0x0",
+          "Edx": "0x3be",
+          "Ecx": "0xcff8d8"
+        },
+        "one_shot": true,
+        "preferred_va": "00482f36"
+      }
+    ],
+    "observed_conclusion": "The owned process received g_chars43200.docx at file_check_entry, then hit 0043dd1c (docx_load), structure check 00451e54, work-name check 0044a748, matcher 00449eec, and returned through 0047a528. This confirms DOCX uses 00431c88/0043dd1c in this observed run.",
+    "limits": [
+      "One-shot breakpoints establish arrival, not full call counts or successful semantics.",
+      "Trace stopped when the drop sender finished; target did not exit before timeout.",
+      "The sender reports exit code 5 and its result capture failed at WM_GETTEXTLENGTH, so no complete user-facing diagnostic report is evidenced.",
+      "No PDF example was exercised."
+    ],
+    "intervention": {
+      "function_preferred_va": "0047a528",
+      "eax_form": "0x43ec6d0",
+      "edx_unicode_string_object": "0x32f00c0",
+      "unicode_string_data": "0x32f000c",
+      "utf16_units": 88,
+      "header_hex": "b0040200ffffffff58000000",
+      "stack_return_preserved": true,
+      "scope": "Owned main thread: replace drop-handler entry with the shared native file-processing entry; no disk patch"
+    }
+  },
+  "review_scope": "No execution performed for r2; the cited native trace was already collected and is treated as read-only evidence."
+}

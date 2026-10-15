@@ -1,0 +1,32 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "argument": "--help",
+  "owned_pid": 65256,
+  "debug_event_size": 176,
+  "wow64_context_size": 716,
+  "events": [
+    {
+      "event": "owned_suspended_attach",
+      "pid": 70932,
+      "parent_pid": 65256,
+      "primary_tid": 93024,
+      "previous_suspend_count": 2,
+      "image_name": "D:\\Codex\u9879\u76ee\\analysis_TestVkr\\runtime\\TestVkr232.exe"
+    }
+  ],
+  "breakpoint_hits": [],
+  "last_main_form_pointer": null,
+  "exited_before_timeout": false,
+  "error": "RuntimeError('Unexpected initial suspend count: 2')",
+  "binary_unchanged": true,
+  "limits": "Own helper and observed descendants only. LoaderWrapper uses process-local Russian settings, no registry redirection. Target creation is not proof of successful initialization; no checking interface or business predicate established by this run.",
+  "stop_reason": "duration_limit",
+  "locale_mode": "ru-RU LoaderWrapper (no registry redirection)",
+  "target_pid": 70932,
+  "owned_pids": [
+    65256,
+    70932
+  ],
+  "cleanup_errors": [],
+  "tracer_sha256": "0f1c75ff73e87c04e6429a202ea1dd7c22792c2baefb0ee1ed261b21fbca337a"
+}

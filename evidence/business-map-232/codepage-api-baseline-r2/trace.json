@@ -1,0 +1,968 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "argument": "--help",
+  "owned_pid": 85224,
+  "debug_event_size": 176,
+  "wow64_context_size": 716,
+  "events": [
+    {
+      "event": 3,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 0,
+      "image_base": "0x710000"
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 4
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 4
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 4,
+      "exception_code": "0x80000003",
+      "address": "0x7ffaa9242239",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 5
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 10
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 11
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 13
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 2,
+      "pid": 85224,
+      "tid": 13732,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 2,
+      "pid": 85224,
+      "tid": 79664,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 2,
+      "pid": 85224,
+      "tid": 73040,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 13732,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 13732,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 73040,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 13732,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 79664,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 73040,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 13732,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 7,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 13732,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 73040,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 79664,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 7,
+      "pid": 85224,
+      "tid": 73040,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 23
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 23
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 79664,
+      "elapsed_ms": 24
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 24,
+      "exception_code": "0x4000001f",
+      "address": "0x77798b88",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 28
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 34,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 34,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 35,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 35,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 35,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 36,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 36,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 36,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 36,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 36,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 37,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 37,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 38
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 41
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 42
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 43
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 43
+    },
+    {
+      "event": 6,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 45
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 68,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 68,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 71,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 72,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 90,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 90,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 92,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 92,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 96,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 96,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 96,
+      "exception_code": "0x4000001f",
+      "address": "0x9cf90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 96,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 485,
+      "exception_code": "0x4000001f",
+      "address": "0x73d890",
+      "first_chance": true,
+      "hit": "startup_bucket_candidate"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 488,
+      "exception_code": "0xc0000005",
+      "address": "0x73db4a",
+      "first_chance": true,
+      "registers": {
+        "Eip": "0x73db4a",
+        "Esp": "0x10ffa60",
+        "Ebp": "0x10ffae0",
+        "Eax": "0x5e54c4f",
+        "Ebx": "0x8443e0",
+        "Ecx": "0x9141",
+        "Edx": "0x45b13b4",
+        "Esi": "0x1e",
+        "Edi": "0x711000"
+      },
+      "access_information": [
+        "0x0",
+        "0x5e54c4f"
+      ],
+      "instruction_bytes": "8b08ff5154400f94c283e20152ff4dbc8d45d0ba02000000",
+      "preferred_va": "0x42db4a",
+      "bucket_index": 37185,
+      "inferred_first_utf16_unit": "0x9571",
+      "locals_hex": "e043840041910000000000000100000024fb0f01e057720420fb0f01804ba400fcfa0f01d3d69b008cd39d0060fa0f013c000000622688005d3288000100000021388800c11385001e000000804ba400b4135b040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "candidate_item_utf16_prefix": "\u9571",
+      "candidate_item_bytes": "7195000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x73db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x73db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x73db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x73db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x73db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x73db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 85224,
+      "tid": 94612,
+      "elapsed_ms": 489,
+      "exception_code": "0xc0000005",
+      "address": "0x73db4a",
+      "first_chance": true
+    }
+  ],
+  "breakpoint_hits": [
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ffadc",
+        "Eax": "0x9",
+        "Edx": "0xa",
+        "Ecx": "0x8a01eb"
+      },
+      "stack_dwords": [
+        8946865,
+        65001,
+        0,
+        9044459
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ffac8",
+        "Eax": "0xa",
+        "Edx": "0xb",
+        "Ecx": "0x849ae9"
+      },
+      "stack_dwords": [
+        8946865,
+        65001,
+        0,
+        8690409
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ffadc",
+        "Eax": "0xa",
+        "Edx": "0xb",
+        "Ecx": "0x849ae9"
+      },
+      "stack_dwords": [
+        8946865,
+        65001,
+        0,
+        8690409
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ffac8",
+        "Eax": "0xb",
+        "Edx": "0xc",
+        "Ecx": "0x84281b"
+      },
+      "stack_dwords": [
+        8946865,
+        65001,
+        0,
+        8661019
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ffac8",
+        "Eax": "0xb",
+        "Edx": "0xc",
+        "Ecx": "0x84281b"
+      },
+      "stack_dwords": [
+        8946865,
+        65001,
+        0,
+        8661019
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ffadc",
+        "Eax": "0xb",
+        "Edx": "0xc",
+        "Ecx": "0x84281b"
+      },
+      "stack_dwords": [
+        8946865,
+        65001,
+        0,
+        8661019
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ff9d8",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0x1ac67a"
+      },
+      "stack_dwords": [
+        8857379,
+        0,
+        0,
+        2129133592
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ff9ec",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0x1ac67a"
+      },
+      "stack_dwords": [
+        8857407,
+        0,
+        0,
+        2129133592
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ff9d8",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0xa19a1"
+      },
+      "stack_dwords": [
+        8857379,
+        0,
+        0,
+        2130182168
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ff9ec",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0xa19a1"
+      },
+      "stack_dwords": [
+        8857407,
+        0,
+        0,
+        2130182168
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ff9d8",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0xede8"
+      },
+      "stack_dwords": [
+        8857379,
+        0,
+        0,
+        73421832
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x9cf90c",
+      "registers": {
+        "Eip": "0x9cf90c",
+        "Esp": "0x10ff9ec",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0xede8"
+      },
+      "stack_dwords": [
+        8857407,
+        0,
+        0,
+        73421832
+      ],
+      "one_shot": true
+    },
+    {
+      "label": "startup_bucket_candidate",
+      "address": "0x73d890",
+      "registers": {
+        "Eip": "0x73d890",
+        "Esp": "0x10ffae4",
+        "Eax": "0xa44b80",
+        "Edx": "0x10ffb20",
+        "Ecx": "0x2"
+      },
+      "stack_dwords": [
+        7594234,
+        7410366,
+        17824528,
+        0
+      ],
+      "one_shot": true,
+      "candidate_input_string_length": 6,
+      "candidate_input_utf16_prefix": " - \u9571 |"
+    }
+  ],
+  "last_main_form_pointer": "0x0",
+  "exited_before_timeout": false,
+  "error": null,
+  "binary_unchanged": true,
+  "limits": "Actual owned Windows process execution; one-shot observed entries only, not full call counts. No UI input or forced business-function invocation. Absence of a hit is bounded to this startup/argument run; Chinese-locale initialization may differ from Russian execution.",
+  "stop_reason": "repeated_access_violation_limit",
+  "locale_mode": "system",
+  "target_pid": 85224,
+  "owned_pids": [
+    85224
+  ],
+  "cleanup_errors": [],
+  "codepage_api_calls_observed": 12,
+  "large_buffer_codepage_calls": [
+    {
+      "call_number": 7,
+      "return_address": "0x872723",
+      "return_preferred_va": "0x562723",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 1754746,
+      "input_prefix_hex": "e0e0e2ee0d0ae0e0ece8f00d0ae0e0f0e50d0ae0e0f0eeed0d0ae0e0f2eeebe8e90d0ae0e1e00d0ae0e1e0e1e0eae0f00d0ae0e1e0e1e0eae8f00d0ae0e1e0e1",
+      "output_pointer": "0x0",
+      "output_capacity": 0
+    },
+    {
+      "call_number": 8,
+      "return_address": "0x87273f",
+      "return_preferred_va": "0x56273f",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 1754746,
+      "input_prefix_hex": "e0e0e2ee0d0ae0e0ece8f00d0ae0e0f0e50d0ae0e0f0eeed0d0ae0e0f2eeebe8e90d0ae0e1e00d0ae0e1e0e1e0eae0f00d0ae0e1e0e1e0eae8f00d0ae0e1e0e1",
+      "output_pointer": "0x7e9f0018",
+      "output_capacity": 1004502
+    },
+    {
+      "call_number": 9,
+      "return_address": "0x872723",
+      "return_preferred_va": "0x562723",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 661921,
+      "input_prefix_hex": "202d20efee207c0d0a202d20f1e0ecee207c0d0a202d20f1ee207c0d0a202d20f1f3e1207c0d0a202d20f4ebeef2ee20f5e8ec207c0d0a202d20eae8edee207c",
+      "output_pointer": "0x0",
+      "output_capacity": 0
+    },
+    {
+      "call_number": 10,
+      "return_address": "0x87273f",
+      "return_preferred_va": "0x56273f",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 661921,
+      "input_prefix_hex": "202d20efee207c0d0a202d20f1e0ecee207c0d0a202d20f1ee207c0d0a202d20f1f3e1207c0d0a202d20f4ebeef2ee20f5e8ec207c0d0a202d20eae8edee207c",
+      "output_pointer": "0x7edd0018",
+      "output_capacity": 407368
+    },
+    {
+      "call_number": 11,
+      "return_address": "0x872723",
+      "return_preferred_va": "0x562723",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 60904,
+      "input_prefix_hex": "20ee20eee2e5ed20eee2e8f720eee2e8f7e020eee2e8f7e0ec20eee2e8f7e0ece820eee2e8f7e0f520eee2e8f7e520eee2e8f7e5e920eee2e8f7e5ec20eee2e8",
+      "output_pointer": "0x0",
+      "output_capacity": 0
+    },
+    {
+      "call_number": 12,
+      "return_address": "0x87273f",
+      "return_preferred_va": "0x56273f",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 60904,
+      "input_prefix_hex": "20ee20eee2e5ed20eee2e8f720eee2e8f7e020eee2e8f7e0ec20eee2e8f7e0ece820eee2e8f7e0f520eee2e8f7e520eee2e8f7e5e920eee2e8f7e5ec20eee2e8",
+      "output_pointer": "0x4626d68",
+      "output_capacity": 37344
+    }
+  ],
+  "tracer_sha256": "104f0190365c58a43a5013feab0cfca66b571507ead44c6f3a9b087e5ce5549d"
+}

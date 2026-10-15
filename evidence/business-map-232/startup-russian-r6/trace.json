@@ -1,0 +1,552 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "argument": "--help",
+  "owned_pid": 5792,
+  "debug_event_size": 176,
+  "wow64_context_size": 716,
+  "events": [
+    {
+      "event": 3,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 0,
+      "image_name": "D:\\Codex\u9879\u76ee\\analysis_TestVkr\\runtime\\locale-emulator-2.5.0.1\\RussianLocaleProbe.exe"
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 4
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 5
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 5
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 6
+    },
+    {
+      "event": 1,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 6,
+      "exception_code": "0x80000003",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 7
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 9
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 9
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 9
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 31
+    },
+    {
+      "event": 1,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 37,
+      "exception_code": "0x4000001f",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 37
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 38
+    },
+    {
+      "event": 2,
+      "pid": 5792,
+      "tid": 85352,
+      "elapsed_ms": 38
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 38
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 39
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 43
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 45
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 46
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 49
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 50
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 52
+    },
+    {
+      "event": 2,
+      "pid": 5792,
+      "tid": 27952,
+      "elapsed_ms": 53
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 53
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 54
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 85352,
+      "elapsed_ms": 54
+    },
+    {
+      "event": 2,
+      "pid": 5792,
+      "tid": 71516,
+      "elapsed_ms": 54
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 27952,
+      "elapsed_ms": 54
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 55
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 55
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 56
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 59
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 63
+    },
+    {
+      "event": 7,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 65
+    },
+    {
+      "event": 1,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 66,
+      "exception_code": "0x4242420",
+      "first_chance": true
+    },
+    {
+      "event": 2,
+      "pid": 5792,
+      "tid": 19976,
+      "elapsed_ms": 66
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 68
+    },
+    {
+      "event": 7,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 68
+    },
+    {
+      "event": 2,
+      "pid": 5792,
+      "tid": 87456,
+      "elapsed_ms": 68
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 73
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 75
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 76
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 79
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 82
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 82
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 87
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 87
+    },
+    {
+      "event": 7,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 87
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 88
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 90
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 91
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 93
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 95
+    },
+    {
+      "event": 7,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 103
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 105
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 105
+    },
+    {
+      "event": 7,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 105
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 106
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 107
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 27952,
+      "elapsed_ms": 108
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 71516,
+      "elapsed_ms": 108
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 71516,
+      "elapsed_ms": 110
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 27952,
+      "elapsed_ms": 110
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 117
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 123
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 125
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 129
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 130
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 139
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 141
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 491
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 492
+    },
+    {
+      "event": 7,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 492
+    },
+    {
+      "event": 6,
+      "pid": 5792,
+      "tid": 52068,
+      "elapsed_ms": 493
+    },
+    {
+      "event": 3,
+      "pid": 43760,
+      "tid": 70304,
+      "elapsed_ms": 506,
+      "image_name": "D:\\Codex\u9879\u76ee\\analysis_TestVkr\\runtime\\TestVkr232.exe",
+      "image_base": "0x960000"
+    },
+    {
+      "event": 6,
+      "pid": 43760,
+      "tid": 70304,
+      "elapsed_ms": 509
+    },
+    {
+      "event": 6,
+      "pid": 43760,
+      "tid": 70304,
+      "elapsed_ms": 509
+    },
+    {
+      "event": 6,
+      "pid": 43760,
+      "tid": 70304,
+      "elapsed_ms": 510
+    },
+    {
+      "event": 6,
+      "pid": 43760,
+      "tid": 70304,
+      "elapsed_ms": 511
+    },
+    {
+      "event": 6,
+      "pid": 43760,
+      "tid": 70304,
+      "elapsed_ms": 511
+    },
+    {
+      "event": 6,
+      "pid": 43760,
+      "tid": 70304,
+      "elapsed_ms": 512
+    },
+    {
+      "event": 1,
+      "pid": 43760,
+      "tid": 70304,
+      "elapsed_ms": 512,
+      "exception_code": "0x80000003",
+      "address": "0x7ffaa9242239",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 43760,
+      "tid": 70304,
+      "elapsed_ms": 513
+    }
+  ],
+  "breakpoint_hits": [],
+  "last_main_form_pointer": "0x0",
+  "exited_before_timeout": false,
+  "error": null,
+  "binary_unchanged": true,
+  "limits": "Actual owned Windows process execution; one-shot observed entries only, not full call counts. No UI input or forced business-function invocation. Absence of a hit is bounded to this startup/argument run; Chinese-locale initialization may differ from Russian execution.",
+  "stop_reason": "duration_limit",
+  "locale_mode": "ru-RU LoaderWrapper (no registry redirection)",
+  "target_pid": 43760,
+  "owned_pids": [
+    5792,
+    43760
+  ],
+  "cleanup_errors": [],
+  "tracer_sha256": "b4509e3af8e628e9315605e09dc1024c0693f94623148c7920433338c4e3aebb"
+}

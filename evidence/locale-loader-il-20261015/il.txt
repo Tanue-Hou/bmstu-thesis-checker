@@ -1,0 +1,389 @@
+
+METHOD LEProc.LoaderWrapper.Start token=0x06000028
+IL_0000  ldarg.0
+IL_0001  call System.String get_ApplicationName()
+IL_0006  call Boolean IsNullOrEmpty(System.String)
+IL_000b  brfalse.s IL_0018
+IL_000d  ldstr string: ApplicationName cannot null.
+IL_0012  newobj Void .ctor(System.String)
+IL_0017  throw
+IL_0018  ldarg.0
+IL_0019  ldfld LEB _leb
+IL_001e  box LEProc.LoaderWrapper+LEB
+IL_0023  call Byte[] StructToBytes(System.Object)
+IL_0028  stloc.0
+IL_0029  ldloc.0
+IL_002a  ldarg.0
+IL_002b  ldfld LEProc.LERegistryRedirector _registry
+IL_0030  callvirt Byte[] GetBinaryData()
+IL_0035  call Byte[] CombineWith[Byte](Byte[], Byte[])
+IL_003a  stloc.0
+IL_003b  ldloc.0
+IL_003c  ldlen
+IL_003d  conv.i4
+IL_003e  call IntPtr AllocHGlobal(Int32)
+IL_0043  stloc.1
+IL_0044  ldloc.0
+IL_0045  ldc.i4.0
+IL_0046  ldloc.1
+IL_0047  ldloc.0
+IL_0048  ldlen
+IL_0049  conv.i4
+IL_004a  call Void Copy(Byte[], Int32, IntPtr, Int32)
+IL_004f  ldc.i4.m1
+IL_0050  call Boolean AttachConsole(UInt32)
+IL_0055  pop
+IL_0056  ldloca.s 2
+IL_0058  initobj LEProc.LoaderWrapper+STARTUPINFO
+IL_005e  ldloca.s 3
+IL_0060  initobj LEProc.LoaderWrapper+PROCESS_INFORMATION
+IL_0066  ldloc.1
+IL_0067  ldarg.0
+IL_0068  call System.String get_ApplicationName()
+IL_006d  ldarg.0
+IL_006e  call System.String get_CommandLine()
+IL_0073  ldarg.0
+IL_0074  call System.String get_CurrentDirectory()
+IL_0079  ldarg.0
+IL_007a  call Boolean get_DebugMode()
+IL_007f  brtrue.s IL_0084
+IL_0081  ldc.i4.0
+IL_0082  br.s IL_0085
+IL_0084  ldc.i4.4
+IL_0085  ldloca.s 2
+IL_0087  ldloca.s 3
+IL_0089  ldsfld IntPtr Zero
+IL_008e  ldsfld IntPtr Zero
+IL_0093  ldsfld IntPtr Zero
+IL_0098  ldsfld IntPtr Zero
+IL_009d  call UInt32 LeCreateProcess(IntPtr, System.String, System.String, System.String, UInt32, STARTUPINFO ByRef, PROCESS_INFORMATION ByRef, IntPtr, IntPtr, IntPtr, IntPtr)
+IL_00a2  ldloc.1
+IL_00a3  call Void FreeHGlobal(IntPtr)
+IL_00a8  dup
+IL_00a9  brtrue.s IL_00d0
+IL_00ab  ldloc.3
+IL_00ac  ldfld IntPtr hProcess
+IL_00b1  ldc.i4.m1
+IL_00b2  call UInt32 WaitForSingleObject(IntPtr, UInt32)
+IL_00b7  pop
+IL_00b8  ldloc.3
+IL_00b9  ldfld IntPtr hProcess
+IL_00be  call Boolean CloseHandle(IntPtr)
+IL_00c3  pop
+IL_00c4  ldloc.3
+IL_00c5  ldfld IntPtr hThread
+IL_00ca  call Boolean CloseHandle(IntPtr)
+IL_00cf  pop
+IL_00d0  ret
+
+METHOD LEProc.LoaderWrapper.get_ApplicationName token=0x06000011
+IL_0000  ldarg.0
+IL_0001  ldfld System.String <ApplicationName>k__BackingField
+IL_0006  ret
+
+METHOD LEProc.LoaderWrapper.set_ApplicationName token=0x06000012
+IL_0000  ldarg.0
+IL_0001  ldarg.1
+IL_0002  stfld System.String <ApplicationName>k__BackingField
+IL_0007  ret
+
+METHOD LEProc.LoaderWrapper.get_CommandLine token=0x06000013
+IL_0000  ldarg.0
+IL_0001  ldfld System.String <CommandLine>k__BackingField
+IL_0006  ret
+
+METHOD LEProc.LoaderWrapper.set_CommandLine token=0x06000014
+IL_0000  ldarg.0
+IL_0001  ldarg.1
+IL_0002  stfld System.String <CommandLine>k__BackingField
+IL_0007  ret
+
+METHOD LEProc.LoaderWrapper.get_CurrentDirectory token=0x06000015
+IL_0000  ldarg.0
+IL_0001  ldfld System.String <CurrentDirectory>k__BackingField
+IL_0006  ret
+
+METHOD LEProc.LoaderWrapper.set_CurrentDirectory token=0x06000016
+IL_0000  ldarg.0
+IL_0001  ldarg.1
+IL_0002  stfld System.String <CurrentDirectory>k__BackingField
+IL_0007  ret
+
+METHOD LEProc.LoaderWrapper.get_DebugMode token=0x06000017
+IL_0000  ldarg.0
+IL_0001  ldfld Boolean <DebugMode>k__BackingField
+IL_0006  ret
+
+METHOD LEProc.LoaderWrapper.set_DebugMode token=0x06000018
+IL_0000  ldarg.0
+IL_0001  ldarg.1
+IL_0002  stfld Boolean <DebugMode>k__BackingField
+IL_0007  ret
+
+METHOD LEProc.LoaderWrapper.get_AnsiCodePage token=0x06000019
+IL_0000  ldarg.0
+IL_0001  ldflda LEB _leb
+IL_0006  ldfld UInt32 AnsiCodePage
+IL_000b  ret
+
+METHOD LEProc.LoaderWrapper.set_AnsiCodePage token=0x0600001a
+IL_0000  ldarg.0
+IL_0001  ldflda LEB _leb
+IL_0006  ldarg.1
+IL_0007  stfld UInt32 AnsiCodePage
+IL_000c  ret
+
+METHOD LEProc.LoaderWrapper.get_OemCodePage token=0x0600001b
+IL_0000  ldarg.0
+IL_0001  ldflda LEB _leb
+IL_0006  ldfld UInt32 OemCodePage
+IL_000b  ret
+
+METHOD LEProc.LoaderWrapper.set_OemCodePage token=0x0600001c
+IL_0000  ldarg.0
+IL_0001  ldflda LEB _leb
+IL_0006  ldarg.1
+IL_0007  stfld UInt32 OemCodePage
+IL_000c  ret
+
+METHOD LEProc.LoaderWrapper.get_LocaleID token=0x0600001d
+IL_0000  ldarg.0
+IL_0001  ldflda LEB _leb
+IL_0006  ldfld UInt32 LocaleID
+IL_000b  ret
+
+METHOD LEProc.LoaderWrapper.set_LocaleID token=0x0600001e
+IL_0000  ldarg.0
+IL_0001  ldflda LEB _leb
+IL_0006  ldarg.1
+IL_0007  stfld UInt32 LocaleID
+IL_000c  ret
+
+METHOD LEProc.LoaderWrapper.get_DefaultCharset token=0x0600001f
+IL_0000  ldarg.0
+IL_0001  ldflda LEB _leb
+IL_0006  ldfld UInt32 DefaultCharset
+IL_000b  ret
+
+METHOD LEProc.LoaderWrapper.set_DefaultCharset token=0x06000020
+IL_0000  ldarg.0
+IL_0001  ldflda LEB _leb
+IL_0006  ldarg.1
+IL_0007  stfld UInt32 DefaultCharset
+IL_000c  ret
+
+METHOD LEProc.LoaderWrapper.get_HookUILanguageAPI token=0x06000021
+IL_0000  ldarg.0
+IL_0001  ldflda LEB _leb
+IL_0006  ldfld UInt32 HookUILanguageAPI
+IL_000b  ret
+
+METHOD LEProc.LoaderWrapper.set_HookUILanguageAPI token=0x06000022
+IL_0000  ldarg.0
+IL_0001  ldflda LEB _leb
+IL_0006  ldarg.1
+IL_0007  stfld UInt32 HookUILanguageAPI
+IL_000c  ret
+
+METHOD LEProc.LoaderWrapper.get_Timezone token=0x06000023
+IL_0000  ldarg.0
+IL_0001  ldflda LEB _leb
+IL_0006  ldflda RTL_TIME_ZONE_INFORMATION Timezone
+IL_000b  call System.String GetStandardName()
+IL_0010  ret
+
+METHOD LEProc.LoaderWrapper.set_Timezone token=0x06000024
+IL_0000  newobj Void .ctor()
+IL_0005  stloc.0
+IL_0006  ldloc.0
+IL_0007  ldarg.1
+IL_0008  stfld System.String value
+IL_000d  ldloc.0
+IL_000e  ldfld System.String value
+IL_0013  callvirt Int32 get_Length()
+IL_0018  ldc.i4.s 32
+IL_001a  ble.s IL_0027
+IL_001c  ldstr string: String too long.
+IL_0021  newobj Void .ctor(System.String)
+IL_0026  throw
+IL_0027  call System.Collections.ObjectModel.ReadOnlyCollection`1[System.TimeZoneInfo] GetSystemTimeZones()
+IL_002c  ldloc.0
+IL_002d  ldftn Boolean <set_Timezone>b__0(System.TimeZoneInfo)
+IL_0033  newobj Void .ctor(System.Object, IntPtr)
+IL_0038  call Boolean Any[TimeZoneInfo](System.Collections.Generic.IEnumerable`1[System.TimeZoneInfo], System.Func`2[System.TimeZoneInfo,System.Boolean])
+IL_003d  brtrue.s IL_005a
+IL_003f  ldstr string: Timezone "
+IL_0044  ldloc.0
+IL_0045  ldfld System.String value
+IL_004a  ldstr string: " not found in your system.
+IL_004f  call System.String Concat(System.String, System.String, System.String)
+IL_0054  newobj Void .ctor(System.String)
+IL_0059  throw
+IL_005a  ldloc.0
+IL_005b  ldfld System.String value
+IL_0060  call System.TimeZoneInfo FindSystemTimeZoneById(System.String)
+IL_0065  stloc.1
+IL_0066  ldarg.0
+IL_0067  ldflda LEB _leb
+IL_006c  ldflda RTL_TIME_ZONE_INFORMATION Timezone
+IL_0071  ldloc.1
+IL_0072  callvirt System.String get_StandardName()
+IL_0077  call Void SetStandardName(System.String)
+IL_007c  ldarg.0
+IL_007d  ldflda LEB _leb
+IL_0082  ldflda RTL_TIME_ZONE_INFORMATION Timezone
+IL_0087  ldloc.1
+IL_0088  callvirt System.String get_StandardName()
+IL_008d  call Void SetDaylightName(System.String)
+IL_0092  ldarg.0
+IL_0093  ldloc.0
+IL_0094  ldfld System.String value
+IL_0099  call _REG_TZI_FORMAT ReadTZIFromRegistry(System.String)
+IL_009e  stloc.2
+IL_009f  ldarg.0
+IL_00a0  ldflda LEB _leb
+IL_00a5  ldflda RTL_TIME_ZONE_INFORMATION Timezone
+IL_00aa  ldloc.2
+IL_00ab  ldfld Int32 Bias
+IL_00b0  stfld Int32 Bias
+IL_00b5  ldarg.0
+IL_00b6  ldflda LEB _leb
+IL_00bb  ldflda RTL_TIME_ZONE_INFORMATION Timezone
+IL_00c0  ldloc.2
+IL_00c1  ldfld Int32 StandardBias
+IL_00c6  stfld Int32 StandardBias
+IL_00cb  ldarg.0
+IL_00cc  ldflda LEB _leb
+IL_00d1  ldflda RTL_TIME_ZONE_INFORMATION Timezone
+IL_00d6  ldc.i4.0
+IL_00d7  stfld Int32 DaylightBias
+IL_00dc  ret
+
+METHOD LEProc.LoaderWrapper.get_NumberOfRegistryRedirectionEntries token=0x06000025
+IL_0000  ldarg.0
+IL_0001  ldfld LEProc.LERegistryRedirector _registry
+IL_0006  callvirt Int32 get_NumberOfRegistryRedirectionEntries()
+IL_000b  ret
+
+METHOD LEProc.LoaderWrapper.set_NumberOfRegistryRedirectionEntries token=0x06000026
+IL_0000  ldarg.0
+IL_0001  ldarg.1
+IL_0002  newobj Void .ctor(Int32)
+IL_0007  stfld LEProc.LERegistryRedirector _registry
+IL_000c  ret
+
+METHOD LEProc.LoaderWrapper.AddRegistryRedirectEntry token=0x06000027
+IL_0000  ldarg.0
+IL_0001  ldfld LEProc.LERegistryRedirector _registry
+IL_0006  ldarg.1
+IL_0007  ldarg.2
+IL_0008  ldarg.3
+IL_0009  ldarg.s 4
+IL_000b  ldarg.s 5
+IL_000d  callvirt Boolean AddRegistryEntry(System.String, System.String, System.String, System.String, System.String)
+IL_0012  ret
+
+METHOD LEProc.LoaderWrapper.SetBytes token=0x06000029
+IL_0000  ldc.i4.0
+IL_0001  stloc.0
+IL_0002  ldarg.1
+IL_0003  callvirt System.Collections.Generic.IEnumerator`1[System.Byte] GetEnumerator()
+IL_0008  stloc.1
+IL_0009  br.s IL_001a
+IL_000b  ldloc.1
+IL_000c  callvirt Byte get_Current()
+IL_0011  stloc.2
+IL_0012  ldarg.0
+IL_0013  ldloc.0
+IL_0014  ldloc.2
+IL_0015  stelem.i1
+IL_0016  ldloc.0
+IL_0017  ldc.i4.1
+IL_0018  add
+IL_0019  stloc.0
+IL_001a  ldloc.1
+IL_001b  callvirt Boolean MoveNext()
+IL_0020  brtrue.s IL_000b
+IL_0022  leave.s IL_002e
+IL_0024  ldloc.1
+IL_0025  brfalse.s IL_002d
+IL_0027  ldloc.1
+IL_0028  callvirt Void Dispose()
+IL_002d  endfinally
+IL_002e  ldarg.0
+IL_002f  ret
+
+METHOD LEProc.LoaderWrapper.BytesToStruct token=0x0600002a
+IL_0000  ldtoken token 0x1b000004
+IL_0005  call System.Type GetTypeFromHandle(System.RuntimeTypeHandle)
+IL_000a  call Int32 SizeOf(System.Type)
+IL_000f  stloc.0
+IL_0010  ldloc.0
+IL_0011  call IntPtr AllocHGlobal(Int32)
+IL_0016  stloc.1
+IL_0017  ldarg.0
+IL_0018  ldc.i4.0
+IL_0019  ldloc.1
+IL_001a  ldloc.0
+IL_001b  call Void Copy(Byte[], Int32, IntPtr, Int32)
+IL_0020  ldloc.1
+IL_0021  ldtoken token 0x1b000004
+IL_0026  call System.Type GetTypeFromHandle(System.RuntimeTypeHandle)
+IL_002b  call System.Object PtrToStructure(IntPtr, System.Type)
+IL_0030  unbox.any token 0x1b000004
+IL_0035  stloc.2
+IL_0036  leave.s IL_003f
+IL_0038  ldloc.1
+IL_0039  call Void FreeHGlobal(IntPtr)
+IL_003e  endfinally
+IL_003f  ldloc.2
+IL_0040  ret
+
+METHOD LEProc.LoaderWrapper.SYSTEMTIME_To_TIME_FIELDS token=0x0600002b
+IL_0000  ldloca.s 0
+IL_0002  initobj LEProc.LoaderWrapper+TIME_FIELDS
+IL_0008  ldloca.s 0
+IL_000a  ldarg.1
+IL_000b  ldfld UInt16 wYear
+IL_0010  stfld UInt16 Year
+IL_0015  ldloca.s 0
+IL_0017  ldarg.1
+IL_0018  ldfld UInt16 wMonth
+IL_001d  stfld UInt16 Month
+IL_0022  ldloca.s 0
+IL_0024  ldarg.1
+IL_0025  ldfld UInt16 wDay
+IL_002a  stfld UInt16 Day
+IL_002f  ldloca.s 0
+IL_0031  ldarg.1
+IL_0032  ldfld UInt16 wHour
+IL_0037  stfld UInt16 Hour
+IL_003c  ldloca.s 0
+IL_003e  ldarg.1
+IL_003f  ldfld UInt16 wMinute
+IL_0044  stfld UInt16 Minute
+IL_0049  ldloca.s 0
+IL_004b  ldarg.1
+IL_004c  ldfld UInt16 wSecond
+IL_0051  stfld UInt16 Second
+IL_0056  ldloca.s 0
+IL_0058  ldarg.1
+IL_0059  ldfld UInt16 wMilliseconds
+IL_005e  stfld UInt16 Milliseconds
+IL_0063  ldloca.s 0
+IL_0065  ldarg.1
+IL_0066  ldfld UInt16 wDayOfWeek
+IL_006b  stfld UInt16 Weekday
+IL_0070  ldloc.0
+IL_0071  ret
+
+METHOD LEProc.LoaderWrapper.ReadTZIFromRegistry token=0x0600002c
+IL_0000  ldstr string: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones\
+IL_0005  ldarg.1
+IL_0006  call System.String Concat(System.String, System.String)
+IL_000b  ldstr string: TZI
+IL_0010  ldnull
+IL_0011  call System.Object GetValue(System.String, System.String, System.Object)
+IL_0016  castclass System.Byte[]
+IL_001b  call _REG_TZI_FORMAT BytesToStruct[_REG_TZI_FORMAT](Byte[])
+IL_0020  ret

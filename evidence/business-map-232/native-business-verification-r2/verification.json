@@ -1,0 +1,122 @@
+{
+  "status": "passed_bounded_instrumented_native_business_verification",
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "sources": {
+    "evidence\\business-map-232\\native-volume-g_chars43199-r3\\trace.json": "375bf2d6caf86b4fb5f0e9dbbe92c19105b1e457909afc7e32388ac230443478",
+    "evidence\\business-map-232\\native-volume-g_chars43199-r3\\native-result.txt": "261c6d45d2333918b0763a993d799ade2aa86fe39c3d1989a5a8b0faa8a4ffb8",
+    "evidence\\business-map-232\\native-volume-g_chars43200-r3\\trace.json": "8d9fe12857cd41b95dad7dcfd528b6a2f2cda37629d6eaace4a1cc7038dd9fdd",
+    "evidence\\business-map-232\\native-volume-g_chars43200-r3\\native-result.txt": "48e004486a2df2f2b68e73e7aee178cbd1869c7ffcd5254aab307b66a1befbe0",
+    "evidence\\business-map-232\\native-volume-g_toc47-r3\\trace.json": "f0dc5f22163c7c2c88442faa4fd3f42bdaef6ad61cec8f425a582f55c88a2b06",
+    "evidence\\business-map-232\\native-volume-g_toc47-r3\\native-result.txt": "cc4a2c15f3e9c96a9b5da559da537b5fe444161d684aff95bc028a92ef615b78",
+    "evidence\\business-map-232\\native-volume-g_toc48-r3\\trace.json": "4bb83c54c724986b2d751bc3016b3d9637e3c4cc17db4ac58ca088ce315d2b95",
+    "evidence\\business-map-232\\native-volume-g_toc48-r3\\native-result.txt": "5581c5a72c066db72fab5448c58bc43dd4158ca369b124bd14836e03530cd415",
+    "evidence/business-map-232/native-direct-complex-reference-r3/trace.json": "17fdf9866de2ef639db8c80a1288d6c37eba122634bed7fb90b8a151976c71f7",
+    "evidence/business-map-232/native-direct-complex-reference-r3/native-result.txt": "a19783c11f67b1c310cb59a5d059a5f57bdcd766934b542fb3febe4732b96640",
+    "evidence/v028/complex-repair/C01A.capture.json": "07b55cb969d59bafc125c3c3eff18711e99483923f0516e15f846d00ca769374",
+    "evidence/v028/complex-repair/C01A.original.txt": "373517b42a04ced8bdd94acc067b051f6b321cbdac38e0526209cf8bd471baab",
+    "evidence/business-map-232/file-entry-decompilation-r1/function.c": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4",
+    "evidence/business-map-232/file-entry-decompilation-r1/status.txt": "98409f9996cec54c5d56482d557c233b22d11acef676d1c451f6322cdf2fb1e5"
+  },
+  "master_volume": [
+    {
+      "case": "g_chars43199",
+      "input_sha256": "986be5f8d97ee9e786b9232a0db8a2c1e1f96212c642d64b547f8910b41c0c16",
+      "native_state": {
+        "state_pointer": "0x45aca90",
+        "work_code": {
+          "length": 1,
+          "prefix": "1"
+        },
+        "minimum": 48,
+        "divisor": 900,
+        "toc_page_candidate": 48,
+        "text_units_candidate": 43199,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": 47
+      },
+      "insufficient_branch_hit": true,
+      "native_diagnostics": 1,
+      "local_size_finding": true,
+      "native_report_exact_completed": true
+    },
+    {
+      "case": "g_chars43200",
+      "input_sha256": "ea4ff3262f38bed993ed4871a9a7122bee92a38bb7e3e00faca87a063a8d101f",
+      "native_state": {
+        "state_pointer": "0x470ca90",
+        "work_code": {
+          "length": 1,
+          "prefix": "1"
+        },
+        "minimum": 48,
+        "divisor": 900,
+        "toc_page_candidate": 48,
+        "text_units_candidate": 43200,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "insufficient_branch_hit": false,
+      "native_diagnostics": 0,
+      "local_size_finding": false,
+      "native_report_exact_completed": true
+    },
+    {
+      "case": "g_toc47",
+      "input_sha256": "1235001169fe895df337d6e38cf0bad3c959f437127c7ed3599cff2f1262c864",
+      "native_state": {
+        "state_pointer": "0x45fca90",
+        "work_code": {
+          "length": 1,
+          "prefix": "1"
+        },
+        "minimum": 48,
+        "divisor": 900,
+        "toc_page_candidate": 47,
+        "text_units_candidate": 73679,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": 47
+      },
+      "insufficient_branch_hit": true,
+      "native_diagnostics": 1,
+      "local_size_finding": true,
+      "native_report_exact_completed": true
+    },
+    {
+      "case": "g_toc48",
+      "input_sha256": "da7426b2db56775f92c4dc55be4b9ab8d80575268d53a57602ab781f671fd403",
+      "native_state": {
+        "state_pointer": "0x43cca90",
+        "work_code": {
+          "length": 1,
+          "prefix": "1"
+        },
+        "minimum": 48,
+        "divisor": 900,
+        "toc_page_candidate": 48,
+        "text_units_candidate": 73679,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "insufficient_branch_hit": false,
+      "native_diagnostics": 0,
+      "local_size_finding": false,
+      "native_report_exact_completed": true
+    }
+  ],
+  "complex_reference": {
+    "input_sha256": "f48d643d723575d6dd0ad8b77e4f39a95303d1ab15de707c9e7fe2e7ecf64ef1",
+    "numbered_diagnostics": 13,
+    "all_diagnostics_equal_after_whitespace_and_filename_normalization": true,
+    "original_screenshot_hashes_verified": true
+  },
+  "file_entry_recovery": {
+    "address": "0047a528",
+    "pseudocode_bytes": 95189,
+    "status": "recovered_with_longer_decompile_timeout"
+  },
+  "limits": [
+    "Instrumented startup and entry; not an unmodified native run.",
+    "Only these master DOCX cases; no PDF/doctoral native harness claim.",
+    "Local build232 rule verification statuses and all repair gates remain unchanged."
+  ]
+}

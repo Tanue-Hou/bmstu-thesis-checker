@@ -1,0 +1,4 @@
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 RussianLocaleProbe.<>c__DisplayClass1.<Run>b__0(String name, Object value)
+   在 RussianLocaleProbe.Run(String[] args)
+   在 RussianLocaleProbe.Main(String[] args)

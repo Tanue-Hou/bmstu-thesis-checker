@@ -1,0 +1,12 @@
+{
+  "status": "actual_native_mcp_pass",
+  "server_version": "0.2.9",
+  "tool_count": 10,
+  "native_build": 232,
+  "input_sha256": "f48d643d723575d6dd0ad8b77e4f39a95303d1ab15de707c9e7fe2e7ecf64ef1",
+  "diagnostic_count": 13,
+  "source_unchanged": true,
+  "native_text_sha256": "9dc03666ce1c3d842f76cf9a976f2e7da46e208b62b22a6a35c9b716ead87688",
+  "raw_mcp_response_sha256": "2cf47c92d4c25b3568ba80015b2fb55292ff9b780c86d354e6f68716f97e4d91",
+  "limits": "Raw response retained privately. Instrumented master DOCX only, not independent clone or new repair permission."
+}

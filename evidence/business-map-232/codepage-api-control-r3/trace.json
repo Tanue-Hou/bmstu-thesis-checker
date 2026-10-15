@@ -1,0 +1,993 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "argument": "--help",
+  "owned_pid": 86752,
+  "debug_event_size": 176,
+  "wow64_context_size": 716,
+  "events": [
+    {
+      "event": 3,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 0,
+      "image_base": "0xf0000"
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 1
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 2
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 3
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 4
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 4,
+      "exception_code": "0x80000003",
+      "address": "0x7ffaa9242239",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 5
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 9
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 10
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 12
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 13
+    },
+    {
+      "event": 2,
+      "pid": 86752,
+      "tid": 92728,
+      "elapsed_ms": 13
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 2,
+      "pid": 86752,
+      "tid": 12588,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 2,
+      "pid": 86752,
+      "tid": 81660,
+      "elapsed_ms": 14
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 92728,
+      "elapsed_ms": 15
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 92728,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 12588,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 81660,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 16
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 92728,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 81660,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 17
+    },
+    {
+      "event": 7,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 92728,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 81660,
+      "elapsed_ms": 18
+    },
+    {
+      "event": 7,
+      "pid": 86752,
+      "tid": 81660,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 12588,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 92728,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 7,
+      "pid": 86752,
+      "tid": 92728,
+      "elapsed_ms": 19
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 20
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 21
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 12588,
+      "elapsed_ms": 22
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 23,
+      "exception_code": "0x4000001f",
+      "address": "0x77798b88",
+      "first_chance": true
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 26
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 32,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 33,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 33,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 33,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 33,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 34,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 34,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 34,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 34,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 34,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 35,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 35,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 36
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 38
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 39
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 41
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 42
+    },
+    {
+      "event": 6,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 43
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 66,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 68,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 72,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 75,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 92,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 93,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 95,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 96,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 99,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 100,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 100,
+      "exception_code": "0x4000001f",
+      "address": "0x3af90c",
+      "first_chance": true,
+      "hit": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 100,
+      "exception_code": "0x4000001e",
+      "address": "0x75eb4f10",
+      "first_chance": true,
+      "single_step_rearmed": "MultiByteToWideChar_thunk"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 486,
+      "exception_code": "0x4000001f",
+      "address": "0x11d890",
+      "first_chance": true,
+      "hit": "startup_bucket_candidate"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0x11db4a",
+      "first_chance": true,
+      "registers": {
+        "Eip": "0x11db4a",
+        "Esp": "0xaffb0c",
+        "Ebp": "0xaffb8c",
+        "Eax": "0x5e54c4f",
+        "Ebx": "0x2243e0",
+        "Ecx": "0x9141",
+        "Edx": "0x3f913b4",
+        "Esi": "0x1e",
+        "Edi": "0xf1000"
+      },
+      "access_information": [
+        "0x0",
+        "0x5e54c4f"
+      ],
+      "instruction_bytes": "8b08ff5154400f94c283e20152ff4dbc8d45d0ba02000000",
+      "preferred_va": "0x42db4a",
+      "bucket_index": 37185,
+      "inferred_first_utf16_unit": "0x9571",
+      "locals_hex": "e0432200419100000000000001000000d0fbaf01e0571004ccfbaf00804b4200a8fbaf00d3d639008cd33b000cfbaf003c000000622626005d3226000100000021382600c11323001e000000804b4200b413f9030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "candidate_item_utf16_prefix": "\u9571",
+      "candidate_item_bytes": "7195000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0x11db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0x11db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0x11db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0x11db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0x11db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0x11db4a",
+      "first_chance": true
+    },
+    {
+      "event": 1,
+      "pid": 86752,
+      "tid": 31348,
+      "elapsed_ms": 490,
+      "exception_code": "0xc0000005",
+      "address": "0x11db4a",
+      "first_chance": true
+    }
+  ],
+  "breakpoint_hits": [
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffb88",
+        "Eax": "0x9",
+        "Edx": "0xa",
+        "Ecx": "0x2801eb"
+      },
+      "stack_dwords": [
+        2524337,
+        65001,
+        0,
+        2621931
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffb74",
+        "Eax": "0xa",
+        "Edx": "0xb",
+        "Ecx": "0x229ae9"
+      },
+      "stack_dwords": [
+        2524337,
+        65001,
+        0,
+        2267881
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffb88",
+        "Eax": "0xa",
+        "Edx": "0xb",
+        "Ecx": "0x229ae9"
+      },
+      "stack_dwords": [
+        2524337,
+        65001,
+        0,
+        2267881
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffb74",
+        "Eax": "0xb",
+        "Edx": "0xc",
+        "Ecx": "0x22281b"
+      },
+      "stack_dwords": [
+        2524337,
+        65001,
+        0,
+        2238491
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffb74",
+        "Eax": "0xb",
+        "Edx": "0xc",
+        "Ecx": "0x22281b"
+      },
+      "stack_dwords": [
+        2524337,
+        65001,
+        0,
+        2238491
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffb88",
+        "Eax": "0xb",
+        "Edx": "0xc",
+        "Ecx": "0x22281b"
+      },
+      "stack_dwords": [
+        2524337,
+        65001,
+        0,
+        2238491
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffa84",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0x1ac67a"
+      },
+      "stack_dwords": [
+        2434851,
+        0,
+        0,
+        2129133592
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffa98",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0x1ac67a"
+      },
+      "stack_dwords": [
+        2434879,
+        0,
+        0,
+        2129133592
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffa84",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0xa19a1"
+      },
+      "stack_dwords": [
+        2434851,
+        0,
+        0,
+        2130182168
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffa98",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0xa19a1"
+      },
+      "stack_dwords": [
+        2434879,
+        0,
+        0,
+        2130182168
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffa84",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0xede8"
+      },
+      "stack_dwords": [
+        2434851,
+        0,
+        0,
+        66999304
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "MultiByteToWideChar_thunk",
+      "address": "0x3af90c",
+      "registers": {
+        "Eip": "0x3af90c",
+        "Esp": "0xaffa98",
+        "Eax": "0x0",
+        "Edx": "0x0",
+        "Ecx": "0xede8"
+      },
+      "stack_dwords": [
+        2434879,
+        0,
+        0,
+        66999304
+      ],
+      "one_shot": false
+    },
+    {
+      "label": "startup_bucket_candidate",
+      "address": "0x11d890",
+      "registers": {
+        "Eip": "0x11d890",
+        "Esp": "0xaffb90",
+        "Eax": "0x424b80",
+        "Edx": "0xaffbcc",
+        "Ecx": "0x2"
+      },
+      "stack_dwords": [
+        1171706,
+        987838,
+        11533244,
+        0
+      ],
+      "one_shot": true,
+      "candidate_input_string_length": 6,
+      "candidate_input_utf16_prefix": " - \u9571 |"
+    }
+  ],
+  "last_main_form_pointer": "0x0",
+  "exited_before_timeout": false,
+  "error": null,
+  "binary_unchanged": true,
+  "limits": "Actual owned Windows process execution; one-shot observed entries only, not full call counts. No UI input or forced business-function invocation. Absence of a hit is bounded to this startup/argument run; Chinese-locale initialization may differ from Russian execution.",
+  "stop_reason": "repeated_access_violation_limit",
+  "locale_mode": "system",
+  "target_pid": 86752,
+  "owned_pids": [
+    86752
+  ],
+  "cleanup_errors": [],
+  "codepage_api_calls_observed": 12,
+  "large_buffer_codepage_calls": [
+    {
+      "call_number": 7,
+      "return_address": "0x252723",
+      "return_preferred_va": "0x562723",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 1754746,
+      "input_prefix_hex": "e0e0e2ee0d0ae0e0ece8f00d0ae0e0f0e50d0ae0e0f0eeed0d0ae0e0f2eeebe8e90d0ae0e1e00d0ae0e1e0e1e0eae0f00d0ae0e1e0e1e0eae8f00d0ae0e1e0e1",
+      "input_sha256": "8686a80fd04d201dedbc56f160bef6e1789e68805678c37b2edba705b07854ca",
+      "matched_resource": "RU_FORMS",
+      "output_pointer": "0x0",
+      "output_capacity": 0
+    },
+    {
+      "call_number": 8,
+      "return_address": "0x25273f",
+      "return_preferred_va": "0x56273f",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 1754746,
+      "input_prefix_hex": "e0e0e2ee0d0ae0e0ece8f00d0ae0e0f0e50d0ae0e0f0eeed0d0ae0e0f2eeebe8e90d0ae0e1e00d0ae0e1e0e1e0eae0f00d0ae0e1e0e1e0eae8f00d0ae0e1e0e1",
+      "input_sha256": "8686a80fd04d201dedbc56f160bef6e1789e68805678c37b2edba705b07854ca",
+      "matched_resource": "RU_FORMS",
+      "output_pointer": "0x7e9f0018",
+      "output_capacity": 1004502
+    },
+    {
+      "call_number": 9,
+      "return_address": "0x252723",
+      "return_preferred_va": "0x562723",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 661921,
+      "input_prefix_hex": "202d20efee207c0d0a202d20f1e0ecee207c0d0a202d20f1ee207c0d0a202d20f1f3e1207c0d0a202d20f4ebeef2ee20f5e8ec207c0d0a202d20eae8edee207c",
+      "input_sha256": "8821ddbb86a9a36bd08e37974929c2b6d76642b64aeb165eee9028a50cb36551",
+      "matched_resource": "RU_PREFS",
+      "output_pointer": "0x0",
+      "output_capacity": 0
+    },
+    {
+      "call_number": 10,
+      "return_address": "0x25273f",
+      "return_preferred_va": "0x56273f",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 661921,
+      "input_prefix_hex": "202d20efee207c0d0a202d20f1e0ecee207c0d0a202d20f1ee207c0d0a202d20f1f3e1207c0d0a202d20f4ebeef2ee20f5e8ec207c0d0a202d20eae8edee207c",
+      "input_sha256": "8821ddbb86a9a36bd08e37974929c2b6d76642b64aeb165eee9028a50cb36551",
+      "matched_resource": "RU_PREFS",
+      "output_pointer": "0x7edd0018",
+      "output_capacity": 407368
+    },
+    {
+      "call_number": 11,
+      "return_address": "0x252723",
+      "return_preferred_va": "0x562723",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 60904,
+      "input_prefix_hex": "20ee20eee2e5ed20eee2e8f720eee2e8f7e020eee2e8f7e0ec20eee2e8f7e0ece820eee2e8f7e0f520eee2e8f7e520eee2e8f7e5e920eee2e8f7e5ec20eee2e8",
+      "input_sha256": "c303c5ba16b749d7532fb45f54326f462ceb7d144595049abcae912d710a4c89",
+      "matched_resource": "RU_ENDS",
+      "output_pointer": "0x0",
+      "output_capacity": 0
+    },
+    {
+      "call_number": 12,
+      "return_address": "0x25273f",
+      "return_preferred_va": "0x56273f",
+      "codepage": 0,
+      "flags": 0,
+      "input_length": 60904,
+      "input_prefix_hex": "20ee20eee2e5ed20eee2e8f720eee2e8f7e020eee2e8f7e0ec20eee2e8f7e0ece820eee2e8f7e0f520eee2e8f7e520eee2e8f7e5e920eee2e8f7e5ec20eee2e8",
+      "input_sha256": "c303c5ba16b749d7532fb45f54326f462ceb7d144595049abcae912d710a4c89",
+      "matched_resource": "RU_ENDS",
+      "output_pointer": "0x4006d68",
+      "output_capacity": 37344
+    }
+  ],
+  "intervention_mode": "none",
+  "tracer_sha256": "d9221fa8e3830ec75d214f45e5836dec16b10204b1572b76938299dc1eef07f4"
+}
