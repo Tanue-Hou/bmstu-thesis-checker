@@ -1,8 +1,8 @@
 # BMSTU 论文检查器
 
-当前版本：插件 **0.2.22+codex.20261015**，MCP **0.2.22**。本地检查器处理 DOCX/PDF，提供结构化诊断和可用的来源位置；各规则的适用模式、样本范围和验证状态以报告与规则证据为准。默认检查仍由重建的本地引擎执行；原程序差分是独立的实验功能，不等同学校验收。
+当前版本：插件 **0.2.23+codex.20261016**，MCP **0.2.23**。本地检查器处理 DOCX/PDF，提供结构化诊断和可用的来源位置；各规则的适用模式、样本范围和验证状态以报告与规则证据为准。默认检查仍由重建的本地引擎执行；原程序差分是独立的实验功能，不等同学校验收。
 
-当前版本变更和历史版本记录见 [CHANGELOG.md](CHANGELOG.md) 与 [版本说明](releases/v0.2.22.md)。
+当前版本变更和历史版本记录见 [CHANGELOG.md](CHANGELOG.md) 与 [版本说明](releases/v0.2.23.md)。
 
 ## 快速开始
 
@@ -56,7 +56,7 @@ MCP 的 `check_thesis_document` 与 `check_thesis_folder` 也接受可选 `detai
 
 ## 深入资料
 
-[原生232版式规则证据](docs/NATIVE_PARAGRAPH_RULES_232.zh.md) · [字号证据](docs/NATIVE_FONT_RULES_232.zh.md) · [图片与图形证据](docs/NATIVE_IMAGE_RULE_232.zh.md) · [版本历史](docs/VERSION_HISTORY.zh.md) · [规则执行链](docs/RULE_CHAIN.zh.md)
+[原生232页眉页脚距离证据](docs/NATIVE_SECTION_DISTANCES_232.zh.md) · [原生232版式规则证据](docs/NATIVE_PARAGRAPH_RULES_232.zh.md) · [字号证据](docs/NATIVE_FONT_RULES_232.zh.md) · [图片与图形证据](docs/NATIVE_IMAGE_RULE_232.zh.md) · [版本历史](docs/VERSION_HISTORY.zh.md) · [规则执行链](docs/RULE_CHAIN.zh.md)
 
 ## 许可
 

@@ -1,0 +1,87 @@
+{
+  "status": "passed_fresh_native_aggregation_domain_controls",
+  "cases": [
+    {
+      "case": "master-both-0",
+      "mode": "master",
+      "both_distances_twips": 0,
+      "input_sha256": "c6b4a5f5718b9dfb0ab8b7969c99cc43a91e55acc6e055b95a6df89886bf20eb",
+      "increment_count_before": [
+        0,
+        1
+      ],
+      "increments_observed": 2,
+      "native_diagnostic_groups": 1,
+      "local_diagnostic_groups": 1,
+      "local_attribute_locations": 2,
+      "artifact_sha256": {
+        "evidence/native-section-integration-r1/aggregation-domain-controls/master-both-0/local.json": "bc4f07e06e8db5cfb457845f722c64f0f7c650eb4d891fa2ea9af140aeb18b59",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/master-both-0/native-result.txt": "032473a0ba6283901382f6ae5784b589251c00d60d68d85c6546180182f6c345",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/master-both-0/report.json": "4c549c1b7fd79b93ced04427981e66a5f8a3d9533933ebd7478adb2707934de2",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/master-both-0/trace.json": "86b2f66d2ff46abb921f478430148d9633d91514b34fa1facc4de8777bd5acc1"
+      }
+    },
+    {
+      "case": "master-both-1440",
+      "mode": "master",
+      "both_distances_twips": 1440,
+      "input_sha256": "1e42c8a11417ec253be7af8d6d88002918a12a7fd7af7802c7bf53611a0bef70",
+      "increment_count_before": [
+        0,
+        1
+      ],
+      "increments_observed": 2,
+      "native_diagnostic_groups": 1,
+      "local_diagnostic_groups": 1,
+      "local_attribute_locations": 2,
+      "artifact_sha256": {
+        "evidence/native-section-integration-r1/aggregation-domain-controls/master-both-1440/local.json": "7f99cf89442fdd976be4ab146e2d5dfbac2ea86cff2fea68eee1952aa5ae2539",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/master-both-1440/native-result.txt": "0fe2834aca71a376a3ac46d82bee71739be9b2e687903fff09148a743f5d9955",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/master-both-1440/report.json": "8b0e4c9935229fa8359e76f5c7fdcd0988cc64d03bd22b53da8b5cb0c223e053",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/master-both-1440/trace.json": "ba2310570dc247141f8ecfa7fcc4ce04b8b1dd88bcced2b2edb14c0eb5aa2d70"
+      }
+    },
+    {
+      "case": "phd-both-0",
+      "mode": "phd",
+      "both_distances_twips": 0,
+      "input_sha256": "c6b4a5f5718b9dfb0ab8b7969c99cc43a91e55acc6e055b95a6df89886bf20eb",
+      "increment_count_before": [
+        0,
+        1
+      ],
+      "increments_observed": 2,
+      "native_diagnostic_groups": 1,
+      "local_diagnostic_groups": 1,
+      "local_attribute_locations": 2,
+      "artifact_sha256": {
+        "evidence/native-section-integration-r1/aggregation-domain-controls/phd-both-0/local.json": "28a005bbf5babc612aa7879f817f1d306fdac5fe38fbede9ab24c648946e9dbd",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/phd-both-0/native-result.txt": "878f373eee845bcee63307d69da8df71bf8ff13c218d7982541d84ca49984892",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/phd-both-0/report.json": "d9871da459b019e6330a6b0a83053669263d76646510f4164e30f931c96ea7a5",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/phd-both-0/trace.json": "9d6a4b42987886f1e4f014f7f2df990f48b2ca74683d28566dac9a8e2a6a2c8c"
+      }
+    },
+    {
+      "case": "phd-both-1440",
+      "mode": "phd",
+      "both_distances_twips": 1440,
+      "input_sha256": "1e42c8a11417ec253be7af8d6d88002918a12a7fd7af7802c7bf53611a0bef70",
+      "increment_count_before": [
+        0,
+        1
+      ],
+      "increments_observed": 2,
+      "native_diagnostic_groups": 1,
+      "local_diagnostic_groups": 1,
+      "local_attribute_locations": 2,
+      "artifact_sha256": {
+        "evidence/native-section-integration-r1/aggregation-domain-controls/phd-both-1440/local.json": "42a9c712a27b0ca86fd9640ec1ea38a643edef7fa65bb48954a498e4e9db22f6",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/phd-both-1440/native-result.txt": "9e54efce907c6df5e6c1ed0b8037ce092e474aa89d8477e0a572bd75e276ba8e",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/phd-both-1440/report.json": "177a08a8a18ccd8e52cb01dfbf3a977f293a2207a9006210c1a7dc8f4c1cebaf",
+        "evidence/native-section-integration-r1/aggregation-domain-controls/phd-both-1440/trace.json": "2b19aeebb73d948ee1c9102ccb47c1251e0f06381ed79a4e94b06e78e8a3b0f1"
+      }
+    }
+  ],
+  "seed_unchanged": true,
+  "limits": "Two executed INC branches observed at before-values0 and1; no raw post-second-INC snapshot. One shared report and two local XML positions. Original ordinary explicit one-section profile only; no repair expansion."
+}

@@ -1,0 +1,479 @@
+{
+  "status": "passed_section_integration_non_target_golden_replay",
+  "unique_input_mode_pairs": 317,
+  "non_target_changed_cases": 0,
+  "before_output_sha256": "80b2105643ffa4b46a8c33aea9ff20aaa5135c922aecbf59500b17afcf088d9b",
+  "after_output_sha256": "80b2105643ffa4b46a8c33aea9ff20aaa5135c922aecbf59500b17afcf088d9b",
+  "rebound_contexts": [
+    {
+      "rule_id": "Word.LineSpacingInvalid",
+      "context": "docx:master",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.LineSpacingInvalid",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "context": "docx:master",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.FontScaleTooSmall",
+      "context": "docx:master",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.FontScaleTooSmall",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.FontScaleTooLarge",
+      "context": "docx:master",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.FontScaleTooLarge",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Pic.FileSizeTooLarge",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        }
+      }
+    },
+    {
+      "rule_id": "Pic.FloatingImages",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        }
+      }
+    },
+    {
+      "rule_id": "Pic.PixelSizeTooLarge",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        }
+      }
+    },
+    {
+      "rule_id": "Pic.PixelSizeTooLarge",
+      "context": "pdf:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.FontSizeTooLarge",
+      "context": "docx:master",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.FontSizeTooLarge",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Pic.SmallLabels",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        }
+      }
+    },
+    {
+      "rule_id": "Pic.FloatingShapes",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        }
+      }
+    },
+    {
+      "rule_id": "Pic.FloatingLabels",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.LeftIndentInvalid",
+      "context": "docx:master",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.LeftIndentInvalid",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.RightIndentInvalid",
+      "context": "docx:master",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Word.RightIndentInvalid",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        },
+        "scripts/testvkr-service/checkers/word_format.py": {
+          "before": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+          "after": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d"
+        }
+      }
+    },
+    {
+      "rule_id": "Pic.LabelsOutOfBounds",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        }
+      }
+    },
+    {
+      "rule_id": "Pic.ShapesOutOfBounds",
+      "context": "docx:phd",
+      "changes": {
+        "scripts/check_document.py": {
+          "before": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+          "after": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff"
+        },
+        "scripts/issue_locations.py": {
+          "before": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+          "after": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336"
+        },
+        "scripts/testvkr-service/parsers/docx_parser.py": {
+          "before": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+          "after": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b"
+        }
+      }
+    }
+  ],
+  "implementations": {
+    "scripts/check_document.py": "e93b796ed38b1abd32cc0848e98d59267f6ced4037b1af5a5820642bc544dbff",
+    "scripts/issue_locations.py": "78cda515c7a4471f6c70c6f6bf3c43c11e4142a4c5dba784efe52c7bfbca6336",
+    "scripts/testvkr-service/parsers/docx_parser.py": "ebf766157000f3d28912895708d16d9466f1c467fb3db80f1302690311e2673b",
+    "scripts/testvkr-service/checkers/word_format.py": "67fbc437cfd12e23e5e6098e3e7fd79a2cd6a1b43bd51ba2d1343b521c44396d",
+    "scripts/testvkr-service/checkers/native_section_counts.py": "0a15646b7c2b76237e8792fc304b26d39b8b25daa95a6119eb72b982879a18b0"
+  },
+  "limits": "Local golden replay preserves all non-target finding semantics, locations and verification status; not fresh native execution. Header/footer target intentionally changed."
+}

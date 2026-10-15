@@ -1,5 +1,7 @@
 # 规则执行与证据链
 
+v0.2.23 页眉/页脚距离链：单个纵向A4 DOCX section及显式整数twips → float32 twips-to-mm → 固定12.5 mm±float32(0.2 mm) → header/footer独立判定 → 共用原生报告项，定位到实际`w:pgMar/@w:header`或`@w:footer`属性 → master/NKR博士两个限定上下文。16条保留边界、四条新0/1440原生运行，并对全部1441个整数twips作不运行原程序的精确独立复算。复杂结构、缺失/多section、额外story均不继承此证明；旧build230可配置本地±0.5 mm阈值保持原样，且不新增修复权限。[范围](NATIVE_SECTION_DISTANCES_232.zh.md)
+
 v0.2.20 缩放链：w:w中间+9c → 输出run+a0 → 004098f8启用/整数缩放分桶 → 00402f08 UTF16计数 → 主槽10/12严格>10报告 → 52次原生同输入核对 → 检测验证与XML/run定位。极小2..30%单列观察；文本框不套用大字号门，修复权限不扩大。[范围](NATIVE_SCALE_RULES_232.zh.md)
 
 v0.2.19 字号链：run读取parser+11d → 原生关联字符样式/直接格式 → 字号角色门与UTF16计数 → >10报告；段落后处理才启用后续run。单格表格与简单文本框的额外空边界保留顺序。76次原生执行/48输入核对，复杂结构不外推，副本修复不扩大。[说明](NATIVE_FONT_ACTIVATION_232.zh.md)
@@ -75,6 +77,7 @@ flowchart TD
 | `Word.RightMarginInvalid` | `docx:phd` | [format-expansion](../evidence/format-expansion/comparison.json) |
 | `Word.TopMarginInvalid` | `docx:phd` | [format-expansion](../evidence/format-expansion/comparison.json) |
 | `Word.BottomMarginInvalid` | `docx:phd` | [format-expansion](../evidence/format-expansion/comparison.json) |
+| `Word.HeaderFooterDistanceInvalid` | `docx:master`、`docx:phd`（Native232单section明确距离profile） | [section边界回执](../evidence/differential-platform-r1/section-boundaries-r2/receipt.json)、[规则范围](NATIVE_SECTION_DISTANCES_232.zh.md) |
 | `Pic.PixelSizeTooLarge` | `docx:bachelor`、`docx:phd`、`pdf:phd` | [dynamic-pairs](../evidence/dynamic-pairs/comparison.json)、[format-expansion](../evidence/format-expansion/comparison.json)、[multipage-phd-repair](../evidence/multipage-phd-repair/comparison.json) |
 | `Word.FontSizeTooLarge` | `docx:bachelor`、`docx:master`、`docx:phd` | [dynamic-master](../evidence/dynamic-master/comparison.json)、[dynamic-pairs](../evidence/dynamic-pairs/comparison.json)、[multipage-phd-repair](../evidence/multipage-phd-repair/comparison.json) |
 | `Word.TextColorNotBlack` | `docx:bachelor`、`docx:master`、`docx:phd`、`pdf:phd` | [dynamic-master](../evidence/dynamic-master/comparison.json)、[dynamic-pairs](../evidence/dynamic-pairs/comparison.json)、[format-expansion](../evidence/format-expansion/comparison.json)、[multipage-phd-repair](../evidence/multipage-phd-repair/comparison.json) |

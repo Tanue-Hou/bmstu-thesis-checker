@@ -25,7 +25,7 @@ from compact_report import project_report
 
 
 SERVER_NAME = "BMSTU Thesis Checker"
-SERVER_VERSION = "0.2.22"
+SERVER_VERSION = "0.2.23"
 METHOD_NOT_FOUND = -32601
 INVALID_PARAMS = -32602
 INTERNAL_ERROR = -32603

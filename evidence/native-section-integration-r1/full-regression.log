@@ -1,0 +1,95 @@
+Failed to find real location of C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\python.exe
+............................................................................................................................EEEEEEEEF.E..........................................................
+======================================================================
+ERROR: test_all_16_frozen_branches_match_native_family_and_field (test_native_section_model.NativeSectionModelTests.test_all_16_frozen_branches_match_native_family_and_field) (case='master-header-697')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_native_section_model.py", line 75, in test_all_16_frozen_branches_match_native_family_and_field
+    self.assertEqual(occurrences[0]['section'], 1)
+                                ^^^^^^^^^^^^^^^^^^
+KeyError: 'native_section_fields'
+
+======================================================================
+ERROR: test_all_16_frozen_branches_match_native_family_and_field (test_native_section_model.NativeSectionModelTests.test_all_16_frozen_branches_match_native_family_and_field) (case='master-header-721')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_native_section_model.py", line 75, in test_all_16_frozen_branches_match_native_family_and_field
+    self.assertEqual(occurrences[0]['section'], 1)
+                                ^^^^^^^^^^^^^^^^^^
+KeyError: 'native_section_fields'
+
+======================================================================
+ERROR: test_all_16_frozen_branches_match_native_family_and_field (test_native_section_model.NativeSectionModelTests.test_all_16_frozen_branches_match_native_family_and_field) (case='master-footer-697')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_native_section_model.py", line 75, in test_all_16_frozen_branches_match_native_family_and_field
+    self.assertEqual(occurrences[0]['section'], 1)
+                                ^^^^^^^^^^^^^^^^^^
+KeyError: 'native_section_fields'
+
+======================================================================
+ERROR: test_all_16_frozen_branches_match_native_family_and_field (test_native_section_model.NativeSectionModelTests.test_all_16_frozen_branches_match_native_family_and_field) (case='master-footer-721')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_native_section_model.py", line 75, in test_all_16_frozen_branches_match_native_family_and_field
+    self.assertEqual(occurrences[0]['section'], 1)
+                                ^^^^^^^^^^^^^^^^^^
+KeyError: 'native_section_fields'
+
+======================================================================
+ERROR: test_all_16_frozen_branches_match_native_family_and_field (test_native_section_model.NativeSectionModelTests.test_all_16_frozen_branches_match_native_family_and_field) (case='phd-header-697')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_native_section_model.py", line 75, in test_all_16_frozen_branches_match_native_family_and_field
+    self.assertEqual(occurrences[0]['section'], 1)
+                                ^^^^^^^^^^^^^^^^^^
+KeyError: 'native_section_fields'
+
+======================================================================
+ERROR: test_all_16_frozen_branches_match_native_family_and_field (test_native_section_model.NativeSectionModelTests.test_all_16_frozen_branches_match_native_family_and_field) (case='phd-header-721')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_native_section_model.py", line 75, in test_all_16_frozen_branches_match_native_family_and_field
+    self.assertEqual(occurrences[0]['section'], 1)
+                                ^^^^^^^^^^^^^^^^^^
+KeyError: 'native_section_fields'
+
+======================================================================
+ERROR: test_all_16_frozen_branches_match_native_family_and_field (test_native_section_model.NativeSectionModelTests.test_all_16_frozen_branches_match_native_family_and_field) (case='phd-footer-697')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_native_section_model.py", line 75, in test_all_16_frozen_branches_match_native_family_and_field
+    self.assertEqual(occurrences[0]['section'], 1)
+                                ^^^^^^^^^^^^^^^^^^
+KeyError: 'native_section_fields'
+
+======================================================================
+ERROR: test_all_16_frozen_branches_match_native_family_and_field (test_native_section_model.NativeSectionModelTests.test_all_16_frozen_branches_match_native_family_and_field) (case='phd-footer-721')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_native_section_model.py", line 75, in test_all_16_frozen_branches_match_native_family_and_field
+    self.assertEqual(occurrences[0]['section'], 1)
+                                ^^^^^^^^^^^^^^^^^^
+KeyError: 'native_section_fields'
+
+======================================================================
+ERROR: test_one_paragraph_counterexample_is_supported_and_keeps_native_result (test_native_section_model.NativeSectionModelTests.test_one_paragraph_counterexample_is_supported_and_keeps_native_result)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_native_section_model.py", line 91, in test_one_paragraph_counterexample_is_supported_and_keeps_native_result
+    self.assertFalse(obs['sections'][0]['fields']['footer']['mismatch'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'native_section_fields'
+
+======================================================================
+FAIL: test_build_230_keeps_legacy_setting_separate_from_native_fixed_predicate (test_native_section_model.NativeSectionModelTests.test_build_230_keeps_legacy_setting_separate_from_native_fixed_predicate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_native_section_model.py", line 112, in test_build_230_keeps_legacy_setting_separate_from_native_fixed_predicate
+    try:
+AssertionError: False != True
+
+----------------------------------------------------------------------
+Ran 186 tests in 337.911s
+
+FAILED (failures=1, errors=9)

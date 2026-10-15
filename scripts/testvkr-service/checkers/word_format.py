@@ -6,6 +6,7 @@ from config import settings
 from .native_font_counts import count_font_candidates
 from .native_paragraph_counts import count_paragraph_candidates
 from .native_scale_counts import count_scale_candidates
+from .native_section_counts import count_section_distance_candidates
 
 class WordFormatChecker(BaseChecker):
     def check(self) -> List[Finding]:
@@ -22,6 +23,10 @@ class WordFormatChecker(BaseChecker):
 
     def _check_docx_margins_and_page(self, findings: List[Finding]):
         sections = self.doc_data.get('sections', [])
+        native_sections = None
+        if self.doc_data.get('native_build') == 232 and self.work_type in {'master', 'phd'} and self.doc_data.get('document_kind') != 'dissertation':
+            native_sections = count_section_distance_candidates(self.doc_data)
+            self.doc_data['native_section_observations'] = native_sections
         for idx, sec in enumerate(sections):
             page = idx + 1
             margin_tolerance = settings.MARGIN_TOLERANCE_PHD_MM if self.work_type=='phd' else settings.MARGIN_TOLERANCE_MM
@@ -116,6 +121,20 @@ class WordFormatChecker(BaseChecker):
             # 7. Header/Footer distances (Index 77, threshold > 0)
             hdr = sec.get('header_distance_cm')
             ftr = sec.get('footer_distance_cm')
+            if native_sections and native_sections['supported']:
+                record = native_sections['sections'][idx]
+                matched = [key for key, value in record['fields'].items() if value['mismatch']]
+                if matched:
+                    findings.append(Finding(
+                        code="Word.HeaderFooterDistanceInvalid", module=ModuleType.WORD_FORMAT,
+                        severity=Severity.INFO, message="Размеры колонтитулов должны быть 1,25 см.",
+                        location={"section": page, "native_section_fields": matched},
+                        threshold={"value": 1.25, "unit": "cm", "actual_hdr": hdr, "actual_ftr": ftr,
+                                   "native_expected_mm": native_sections['expected_mm'],
+                                   "native_tolerance_mm": native_sections['tolerance_mm'],
+                                   "native_mismatch_count": len(matched), "native_section_predicate_supported": True},
+                        skip_switch="SkipTestWord"))
+                continue
             if (hdr is not None and abs(hdr - settings.HEADER_FOOTER_DISTANCE_CM) > settings.HEADER_FOOTER_TOLERANCE_CM) or \
                (ftr is not None and abs(ftr - settings.HEADER_FOOTER_DISTANCE_CM) > settings.HEADER_FOOTER_TOLERANCE_CM):
                 findings.append(Finding(
@@ -124,7 +143,8 @@ class WordFormatChecker(BaseChecker):
                     severity=Severity.INFO,
                     message="Размеры колонтитулов должны быть 1,25 см.",
                     location={"section": page},
-                    threshold={"value": settings.HEADER_FOOTER_DISTANCE_CM, "unit": "cm", "actual_hdr": hdr, "actual_ftr": ftr},
+                    threshold={"value": settings.HEADER_FOOTER_DISTANCE_CM, "unit": "cm", "actual_hdr": hdr, "actual_ftr": ftr,
+                               **({"native_section_predicate_supported": False} if native_sections is not None else {})},
                     skip_switch="SkipTestWord"
                 ))
 

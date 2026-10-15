@@ -1,0 +1,61 @@
+"""Actual CLI and stdio MCP calls on retained synthetic cases; no native execution."""
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+ROOT = Path.cwd()
+private = ROOT.parent / 'private_trials/native-section-mcp-cli-r1'
+private.mkdir(exist_ok=False)
+cases = []
+base = ROOT / 'evidence/differential-platform-r1/section-boundaries-r2'
+for row in json.loads((base / 'receipt.json').read_bytes())['cases']:
+    cases.append((base / (row['case'] + '.docx'), row['work_type'], int(row['increment_branch_observed'])))
+extra = ROOT / 'evidence/native-section-integration-r1/aggregation-domain-controls'
+for row in json.loads((extra / 'receipt.json').read_bytes())['cases']:
+    cases.append((extra / (row['case'] + '.docx'), row['mode'], 2))
+cases.append((ROOT / 'evidence/differential-platform-r1/one-paragraph-counterexample/input.docx', 'master', 1))
+messages = [{'jsonrpc': '2.0', 'id': 1, 'method': 'initialize',
+             'params': {'protocolVersion': '2024-11-05', 'capabilities': {}, 'clientInfo': {'name': 'section-smoke', 'version': '1'}}},
+            {'jsonrpc': '2.0', 'id': 2, 'method': 'tools/list', 'params': {}}]
+for index, (path, mode, _) in enumerate(cases, 3):
+    messages.append({'jsonrpc': '2.0', 'id': index, 'method': 'tools/call',
+                     'params': {'name': 'check_thesis_document', 'arguments': {
+                         'file_path': str(path), 'work_type': mode, 'native_build': 232, 'detail': 'compact'}}})
+process = subprocess.run([sys.executable, '-X', 'utf8', str(ROOT / 'mcp/server.py')],
+                         input=''.join(json.dumps(m) + '\n' for m in messages).encode(),
+                         capture_output=True, timeout=120)
+(private / 'stdout.jsonl').write_bytes(process.stdout)
+(private / 'stderr.log').write_bytes(process.stderr)
+assert process.returncode == 0
+replies = {m['id']: m for m in map(json.loads, process.stdout.splitlines()) if 'id' in m}
+assert replies[1]['result']['serverInfo']['version'] == '0.2.23'
+assert len(replies[2]['result']['tools']) == 11
+for index, (_, mode, expected) in enumerate(cases, 3):
+    report = replies[index]['result']['structuredContent']
+    assert report['work_type'] == mode and report['native_section_observations']['count'] == expected
+    findings = [f for f in report['findings'] if f['rule_id'] == 'Word.HeaderFooterDistanceInvalid']
+    assert len(findings) == int(expected > 0)
+    for finding in findings:
+        assert finding['verification_status'] == 'verified_against_original'
+        assert finding['precise_locations']['occurrence_count'] == expected
+        assert not finding['action_eligibility']['automatic_repair_allowed']
+path, mode, expected = cases[-1]
+cli = subprocess.run([sys.executable, '-X', 'utf8', str(ROOT / 'scripts/thesis_cli.py'),
+                      'check', str(path), '--native-build', '232', '--work-type', mode, '--detail', 'compact'],
+                     capture_output=True, timeout=30)
+(private / 'cli.json').write_bytes(cli.stdout)
+(private / 'cli-stderr.log').write_bytes(cli.stderr)
+assert cli.returncode == 0
+report = json.loads(cli.stdout)['report']
+assert report['native_section_observations']['count'] == expected
+finding = next(f for f in report['findings'] if f['rule_id'] == 'Word.HeaderFooterDistanceInvalid')
+assert finding['verification_status'] == 'verified_against_original'
+receipt = {'status': 'passed_actual_section_cli_mcp_smoke', 'mcp_version': '0.2.23',
+           'mcp_cases': len(cases), 'tool_count': 11, 'cli_cases': 1, 'native_executions': 0,
+           'source_originals_modified': False, 'repair_permission_expanded': False,
+           'private_stdout_sha256': hashlib.sha256(process.stdout).hexdigest(),
+           'private_cli_sha256': hashlib.sha256(cli.stdout).hexdigest()}
+(ROOT / 'evidence/native-section-integration-r1/mcp-cli-receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf8')
+print(json.dumps(receipt))

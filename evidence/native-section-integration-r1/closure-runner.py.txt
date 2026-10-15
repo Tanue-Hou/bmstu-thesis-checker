@@ -1,0 +1,44 @@
+"""Re-evaluate all12 original pilot boundary inputs against retained native results."""
+from argparse import Namespace
+import hashlib
+import json
+from pathlib import Path
+import sys
+
+ROOT = Path.cwd()
+sys.path.insert(0, str(ROOT / 'scripts'))
+from check_document import check_file
+from native_reference_cli import validate_native_run
+
+pilot = ROOT.parent / 'private_trials/differential-platform-boundary-r1/results.private.json'
+rows = json.loads(pilot.read_bytes())
+cases = []
+for row in rows:
+    folder = Path(row['result']['evidence_directory'])
+    source = folder / 'input.docx'
+    digest = hashlib.sha256(source.read_bytes()).hexdigest()
+    assert digest == row['result']['input_sha256']
+    cache = json.loads((folder / 'cache.json').read_bytes())
+    for name, wanted in cache['files'].items():
+        path = (folder / name).resolve()
+        assert path.is_relative_to(folder.resolve()) and hashlib.sha256(path.read_bytes()).hexdigest() == wanted
+    trace = json.loads((folder / 'native/native/trace.json').read_bytes())
+    text = (folder / 'native/native/native-result.txt').read_bytes().decode('utf8')
+    native = validate_native_run(trace, text, 'master', 'docx', digest, True)
+    native_groups = sum('Размеры колонтитулов должны быть' in d['message'] for d in native)
+    options = Namespace(work_type='master', native_build=232, document_kind='auto', template_id=None,
+                        skip_structure=False, skip_pictures=False, skip_word_format=False, skip_dictionary=False)
+    report = check_file(source, options)
+    local = [f for f in report['findings'] if f['rule_id'] == 'Word.HeaderFooterDistanceInvalid']
+    assert report['native_section_observations']['supported']
+    assert len(local) == native_groups
+    assert all(f['verification_status'] == 'verified_against_original' for f in local)
+    cases.append({'mutation': row['mutation'], 'source_sha256': digest,
+                  'previous_different': row['result']['status'] == 'family_difference',
+                  'native_groups': native_groups, 'current_local_groups': len(local), 'different': False})
+receipt = {'status': 'passed_original_boundary_discrepancy_closure', 'cases': cases,
+           'previous_differences': sum(c['previous_different'] for c in cases), 'current_differences': 0,
+           'retained_native_input_cases': len(cases), 'fresh_native_executions': 0,
+           'limits': 'Same12 synthetic pilot inputs with cache hashes and original completion receipts revalidated. Diagnostic group parity, not school accuracy or real-case false-positive rate.'}
+(ROOT / 'evidence/native-section-integration-r1/closure-receipt.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf8')
+print(json.dumps({k: receipt[k] for k in ['status', 'previous_differences', 'current_differences', 'retained_native_input_cases', 'fresh_native_executions']}))

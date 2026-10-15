@@ -1,0 +1,57 @@
+"""Independent rational recomputation of the finite declared arithmetic domain.
+Not a native execution and not proof of untested document structure.
+"""
+from fractions import Fraction
+import json
+from pathlib import Path
+import sys
+
+ROOT = Path.cwd()
+sys.path.insert(0, str(ROOT / 'scripts/testvkr-service'))
+from checkers.native_section_counts import count_section_distance_candidates
+
+
+def decode(bits):
+    if bits == 0:
+        return Fraction(0)
+    exponent = ((bits >> 23) & 255) - 127 - 23
+    mantissa = (bits & 0x7fffff) | 0x800000
+    return Fraction(mantissa) * Fraction(2) ** exponent
+
+
+def round_binary32(value):
+    if not value:
+        return Fraction(0)
+    exponent = value.numerator.bit_length() - value.denominator.bit_length()
+    if value < Fraction(2) ** exponent:
+        exponent -= 1
+    scaled = value * Fraction(2) ** (23 - exponent)
+    quotient, remainder = divmod(scaled.numerator, scaled.denominator)
+    if 2 * remainder > scaled.denominator or (2 * remainder == scaled.denominator and quotient % 2):
+        quotient += 1
+    if quotient == 1 << 24:
+        quotient >>= 1
+        exponent += 1
+    return decode(((exponent + 127) << 23) | (quotient - (1 << 23)))
+
+
+factor = decode(0x3c907f6e)
+tolerance = decode(0x3e4ccccd)
+target = Fraction(25, 2)
+matched = []
+for twips in range(1441):
+    actual = round_binary32(twips * factor)
+    expected = not target - tolerance <= actual <= target + tolerance
+    data = {'native232_section_distances_supported': True,
+            'sections': [{'native_distances_twips': {'header': twips, 'footer': twips}, 'xml_path': '/section'}]}
+    result = count_section_distance_candidates(data)
+    assert result['supported'] and result['count'] == 2 * int(expected)
+    assert Fraction(result['sections'][0]['fields']['header']['actual_mm']) == actual
+    if not expected:
+        matched.append(twips)
+receipt = {'status': 'passed_exact_rational_finite_domain_recompute', 'integer_values': 1441,
+           'accepted_twips_min': min(matched), 'accepted_twips_max': max(matched),
+           'accepted_count': len(matched), 'native_executions_in_this_audit': 0,
+           'limits': 'Independent exact rational decode and nearest-even binary32 storage for0..1440. Bounds stay promoted as native x87 instructions; no intermediate float32 store is assumed. This is arithmetic reconstruction, not native/document/branch coverage of1441 cases.'}
+(ROOT / 'evidence/native-section-integration-r1/numeric-recompute.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf8')
+print(json.dumps(receipt))

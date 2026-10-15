@@ -6,9 +6,11 @@ description: Check Russian BMSTU VKR/thesis DOCX and PDF files using an independ
 # BMSTU Thesis Checker
 
 Use this skill to check `.docx` and `.pdf` thesis-style documents with the bundled local rules engine.
-The v0.2.22 plugin exposes `check_thesis_document`, `check_thesis_folder`, `list_rules`, `explain_rule`, `preview_thesis_fixes`, `fix_thesis_copy`, `list_school_templates`, `list_native_builds`, `compare_thesis_results`, `check_native_reference_experimental`, and `run_differential_campaign_experimental`.
+The v0.2.23 plugin exposes `check_thesis_document`, `check_thesis_folder`, `list_rules`, `explain_rule`, `preview_thesis_fixes`, `fix_thesis_copy`, `list_school_templates`, `list_native_builds`, `compare_thesis_results`, `check_native_reference_experimental`, and `run_differential_campaign_experimental`.
 
 ## Scope
+
+For the Native232 `Word.HeaderFooterDistanceInvalid` predicate, read [section-distance evidence](../../docs/NATIVE_SECTION_DISTANCES_232.zh.md). The fixed native comparison is 12.5 mm ± float32(0.2 mm), with precise `w:header`/`w:footer` XML attribute locations. Verification is restricted to a single portrait A4 section with explicit integer header/footer distances from 0 to 1440 twips and no tables, drawings, formulas, fields, revisions, content controls, or extra story parts. Missing or unsupported profiles remain unassessed; no repair permission is implied. The configurable build230 tolerance remains a separate local policy.
 
 For native232 character scale, read [scale evidence](../../docs/NATIVE_SCALE_RULES_232.zh.md). Ordinary small-scale reports use31..69 percent, while2..30 is a separate observed bucket; large scale uses>130. Count UTF16 units including spaces after native activation; do not apply the font-size textbox prior100 gate to scale. Only registered ordinary DOCX master/NKR profiles are verified. No scale copy-repair permission is added.
 

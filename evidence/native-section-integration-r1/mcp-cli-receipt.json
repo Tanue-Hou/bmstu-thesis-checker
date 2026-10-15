@@ -1,0 +1,12 @@
+{
+  "status": "passed_actual_section_cli_mcp_smoke",
+  "mcp_version": "0.2.23",
+  "mcp_cases": 21,
+  "tool_count": 11,
+  "cli_cases": 1,
+  "native_executions": 0,
+  "source_originals_modified": false,
+  "repair_permission_expanded": false,
+  "private_stdout_sha256": "eec9113ed270710fb0cc2e0279134db327850d3db18ffaa651d8a20b64003c7d",
+  "private_cli_sha256": "3618b2e6631a374ae3820d3f850a36926f4218a51c1e4958d9d769833bd63f4f"
+}

@@ -17,6 +17,19 @@ def locate_finding(f,data,file_type,limit=100):
     if rule.startswith('Template.'):
         candidates=(f.get('location') or {}).get('template_occurrences',[])
         total=(f.get('threshold') or {}).get('occurrence_count',len(candidates));out=candidates[:limit]
+    elif rule == 'Word.HeaderFooterDistanceInvalid' and (f.get('location') or {}).get('native_section_fields'):
+        index = f['location']['section'] - 1
+        sections = data.get('native_section_observations', {}).get('sections', [])
+        if 0 <= index < len(sections):
+            for name in f['location']['native_section_fields']:
+                field = sections[index]['fields'][name]
+                total += 1
+                if len(out) < limit:
+                    out.append({'kind': 'docx_section_attribute', 'part': 'word/document.xml',
+                                'section': index + 1, 'attribute': 'w:' + name,
+                                'xml_path': field['attribute_xml_path'], 'raw_twips': field['twips'],
+                                'actual_mm': field['actual_mm'], 'native_counter_slot': '0x4d',
+                                'content_role': 'section_property_not_rendered_page'})
     elif rule in ['Word.FontSizeTooSmall','Word.FontSizeTooLarge'] and 'native_font_runs' in (f.get('location') or {}):
         selected=set(f['location']['native_font_runs'])
         for r in data.get('native_font_candidates',[]):

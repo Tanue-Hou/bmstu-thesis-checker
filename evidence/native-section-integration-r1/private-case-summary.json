@@ -1,0 +1,11 @@
+{
+  "status": "private_case_recheck",
+  "cases": 17,
+  "errors": 0,
+  "source_unchanged_cases": 17,
+  "non_target_equal_cases": 17,
+  "target_groups_before": 4,
+  "target_groups_after": 4,
+  "private_receipt_sha256": "2eaf442847e3ed4f62a7f60211a3878a6de3ad222f1013907443a19541673400",
+  "limits": "Local recheck of previously supplied cases, no fresh native runs. Originals untouched. Not school ground truth, accuracy, or broad profile verification."
+}

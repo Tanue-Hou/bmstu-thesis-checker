@@ -1,0 +1,68 @@
+"""Run from implementation root: four fresh native aggregation/domain controls."""
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import sys
+from argparse import Namespace
+
+ROOT = Path.cwd()
+sys.path.insert(0, str(ROOT / 'scripts'))
+from differential_mutations import mutate_docx
+from check_document import check_file
+from native_reference_cli import validate_native_run
+
+out = ROOT / 'evidence/native-section-integration-r1/aggregation-domain-controls'
+out.mkdir(exist_ok=False)
+private = ROOT.parent / 'private_trials/section-aggregation-domain-r1'
+private.mkdir(exist_ok=False)
+seed = ROOT / 'evidence/dynamic-master/baseline.docx'
+raw = seed.read_bytes()
+sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+rows = []
+for mode in ('master', 'phd'):
+    for value in (0, 1440):
+        name = f'{mode}-both-{value}'
+        candidate = mutate_docx(raw, {'kind': 'section_page_margin', 'attribute': 'header', 'value': value})
+        candidate = mutate_docx(candidate, {'kind': 'section_page_margin', 'attribute': 'footer', 'value': value})
+        source = out / (name + '.docx')
+        source.write_bytes(candidate)
+        folder = private / name
+        result = subprocess.run([sys.executable, '-X', 'utf8', str(ROOT / 'scripts/native_reference_cli.py'),
+                                 '--input', str(source), '--trace-sections', '--work-type', mode,
+                                 '--out', str(folder)], capture_output=True)
+        (private / (name + '.log')).write_bytes(result.stdout + result.stderr)
+        assert result.returncode == 0, name
+        trace = json.loads((folder / 'native/trace.json').read_bytes())
+        text = (folder / 'native/native-result.txt').read_bytes().decode('utf8')
+        diagnostics = validate_native_run(trace, text, mode, 'docx', sha(source), True)
+        increments = [h for h in trace['breakpoint_hits'] if h['label'] in {'section_header_increment', 'section_footer_increment'}]
+        assert len(increments) == 2
+        assert [h['section_state']['header_footer_count_before'] for h in increments] == [0, 1]
+        assert all(h['registers']['Eax'] == h['section_state']['parser_address'] for h in increments)
+        native_count = sum('Размеры колонтитулов должны быть' in d['message'] for d in diagnostics)
+        options = Namespace(work_type=mode, native_build=232, document_kind='auto', template_id=None,
+                            skip_structure=False, skip_pictures=False, skip_word_format=False, skip_dictionary=False)
+        local = check_file(source, options)
+        findings = [f for f in local['findings'] if f['rule_id'] == 'Word.HeaderFooterDistanceInvalid']
+        assert native_count == len(findings) == 1
+        assert local['native_section_observations']['supported'] and local['native_section_observations']['count'] == 2
+        assert findings[0]['threshold']['native_mismatch_count'] == 2
+        assert findings[0]['precise_locations']['occurrence_count'] == 2
+        public = out / name
+        public.mkdir()
+        for target, original in [('trace.json', folder / 'native/trace.json'),
+                                 ('native-result.txt', folder / 'native/native-result.txt'),
+                                 ('report.json', folder / 'report.json')]:
+            (public / target).write_bytes(original.read_bytes())
+        (public / 'local.json').write_text(json.dumps(local, ensure_ascii=False, indent=2), encoding='utf8')
+        rows.append({'case': name, 'mode': mode, 'both_distances_twips': value, 'input_sha256': sha(source),
+                     'increment_count_before': [0, 1], 'increments_observed': 2,
+                     'native_diagnostic_groups': native_count, 'local_diagnostic_groups': len(findings),
+                     'local_attribute_locations': findings[0]['precise_locations']['occurrence_count'],
+                     'artifact_sha256': {p.relative_to(ROOT).as_posix(): sha(p) for p in public.iterdir()}})
+        print(name, 'passed', flush=True)
+assert seed.read_bytes() == raw
+(out / 'receipt.json').write_text(json.dumps({'status': 'passed_fresh_native_aggregation_domain_controls',
+    'cases': rows, 'seed_unchanged': True,
+    'limits': 'Two executed INC branches observed at before-values0 and1; no raw post-second-INC snapshot. One shared report and two local XML positions. Original ordinary explicit one-section profile only; no repair expansion.'}, ensure_ascii=False, indent=2) + '\n', encoding='utf8')

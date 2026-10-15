@@ -83,6 +83,7 @@ class DocxParser:
         self.file_path = file_path
         self.zip_image_headers={}
         with zipfile.ZipFile(file_path) as archive,open(file_path,'rb') as stream:
+            self.archive_names = archive.namelist()
             stream.seek(max(0,os.path.getsize(file_path)-70000));tail=stream.read()
             zip64_directory=b'PK\x06\x06' in tail or b'PK\x06\x07' in tail
             def zip64_extra(extra):
@@ -110,7 +111,18 @@ class DocxParser:
         # Sections (Margins, Page size, Header/Footer)
         self.metadata['sections'] = []
         for sec in self.doc.sections:
+            section_xml = sec._sectPr
+            page_margins = section_xml.find(qn('w:pgMar'))
+            raw_distances = {}
+            for name in ('header', 'footer'):
+                raw = page_margins.get(qn('w:' + name)) if page_margins is not None else None
+                try:
+                    raw_distances[name] = int(raw) if raw is not None else None
+                except (ValueError, TypeError):
+                    raw_distances[name] = None
             sec_info = {
+                'xml_path': section_xml.getroottree().getpath(section_xml),
+                'native_distances_twips': raw_distances,
                 'page_width_mm': sec.page_width.mm if sec.page_width is not None else None,
                 'page_height_mm': sec.page_height.mm if sec.page_height is not None else None,
                 'margin_left_mm': sec.left_margin.mm if sec.left_margin is not None else None,
@@ -122,6 +134,15 @@ class DocxParser:
                 'gutter_mm': sec.gutter.mm if sec.gutter is not None else 0.0,
             }
             self.metadata['sections'].append(sec_info)
+        sections = self.metadata['sections']
+        section_profile = (len(sections) == 1 and
+            len(self.doc.element.xpath('.//w:sectPr')) == 1 and
+            all(isinstance(v, int) and 0 <= v <= 1440 for v in sections[0]['native_distances_twips'].values()) and
+            sections[0]['page_width_mm'] is not None and sections[0]['page_height_mm'] is not None and
+            abs(sections[0]['page_width_mm'] - 210) < 0.1 and abs(sections[0]['page_height_mm'] - 297) < 0.1 and
+            not self.doc.element.xpath('.//w:tbl | .//w:drawing | .//w:pict | .//w:object | .//w:fldSimple | .//w:instrText | .//w:del | .//w:ins | .//w:altChunk | .//w:sdt | .//*[local-name()="oMath" or local-name()="oMathPara"]') and
+            not any(n.startswith(('word/header', 'word/footer', 'word/footnotes', 'word/endnotes', 'word/comments')) for n in self.archive_names))
+        self.metadata['native232_section_distances_supported'] = bool(section_profile)
 
     def extract_runs_formatting(self, p_element) -> List[Dict[str, Any]]:
         """Extract formatting for each run in a paragraph, including low-level XML attributes like scale."""
@@ -574,6 +595,7 @@ class DocxParser:
             'formatting_coverage': {'resolved': ['docDefaults', 'paragraph_basedOn', 'character_basedOn', 'direct'], 'unresolved': ['conditional_table_styles', 'numbering_properties', 'theme_font_and_color'], 'drawing_geometry':{'measured_vml_textboxes':sum(label['geometry_supported'] for label in labels),'unmeasured_vml_textboxes':sum(not label['geometry_supported'] for label in labels),'floating_png_profile_supported':floating_profile,'vml_label_profile_supported':labels_profile,'limits':'Simple explicit geometry only; general shapes, DrawingML textboxes, fit/crop/rotation and other units require separate proof.'}},
             'file_size_mb': self.metadata['file_size_mb'],
             'sections': self.metadata['sections'],
+            'native232_section_distances_supported': self.metadata['native232_section_distances_supported'],
             'paragraphs': self.parse_paragraphs(),
             'structure_paragraphs': self.parse_structure_paragraphs(),
             'tables': self.parse_tables(),

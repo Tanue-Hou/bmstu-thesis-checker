@@ -1,0 +1,9 @@
+{
+  "status": "passed_exact_rational_finite_domain_recompute",
+  "integer_values": 1441,
+  "accepted_twips_min": 698,
+  "accepted_twips_max": 720,
+  "accepted_count": 23,
+  "native_executions_in_this_audit": 0,
+  "limits": "Independent exact rational decode and nearest-even binary32 storage for0..1440. Bounds stay promoted as native x87 instructions; no intermediate float32 store is assumed. This is arithmetic reconstruction, not native/document/branch coverage of1441 cases."
+}

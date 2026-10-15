@@ -1,0 +1,161 @@
+{
+  "status": "passed_original_boundary_discrepancy_closure",
+  "cases": [
+    {
+      "mutation": null,
+      "source_sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+      "previous_different": false,
+      "native_groups": 0,
+      "current_local_groups": 0,
+      "different": false
+    },
+    {
+      "mutation": {
+        "kind": "section_page_margin",
+        "section_index": 0,
+        "attribute": "header",
+        "value": 680
+      },
+      "source_sha256": "02880f1b15f1905000d7e6a4814f7296d2f50d17240e105c8b2d194fc6bec7d8",
+      "previous_different": false,
+      "native_groups": 1,
+      "current_local_groups": 1,
+      "different": false
+    },
+    {
+      "mutation": {
+        "kind": "section_page_margin",
+        "section_index": 0,
+        "attribute": "header",
+        "value": 681
+      },
+      "source_sha256": "185e5bb870fcbaa18db9ce1e67ae03094a325b556eeb6e0f7dcb3822f201c127",
+      "previous_different": true,
+      "native_groups": 1,
+      "current_local_groups": 1,
+      "different": false
+    },
+    {
+      "mutation": {
+        "kind": "section_page_margin",
+        "section_index": 0,
+        "attribute": "header",
+        "value": 690
+      },
+      "source_sha256": "29118c4d3691ef190f1a6848a6a014b08679fbad04a6a1c1ba34020c18179455",
+      "previous_different": true,
+      "native_groups": 1,
+      "current_local_groups": 1,
+      "different": false
+    },
+    {
+      "mutation": {
+        "kind": "section_page_margin",
+        "section_index": 0,
+        "attribute": "header",
+        "value": 694
+      },
+      "source_sha256": "182b3c26271964e3600810d80f051fed96917d1988627a69029fc34cea58be57",
+      "previous_different": true,
+      "native_groups": 1,
+      "current_local_groups": 1,
+      "different": false
+    },
+    {
+      "mutation": {
+        "kind": "section_page_margin",
+        "section_index": 0,
+        "attribute": "header",
+        "value": 695
+      },
+      "source_sha256": "b6a10ce3342d2a7d205bb32db04a8b2bba0ce13ecea6c74e5e13647c90c218bd",
+      "previous_different": true,
+      "native_groups": 1,
+      "current_local_groups": 1,
+      "different": false
+    },
+    {
+      "mutation": {
+        "kind": "section_page_margin",
+        "section_index": 0,
+        "attribute": "header",
+        "value": 700
+      },
+      "source_sha256": "aa7821d9cd073787446167dd6785bba4061cfdfd48ecb2c1d2d72a97d85708fe",
+      "previous_different": false,
+      "native_groups": 0,
+      "current_local_groups": 0,
+      "different": false
+    },
+    {
+      "mutation": {
+        "kind": "section_page_margin",
+        "section_index": 0,
+        "attribute": "header",
+        "value": 714
+      },
+      "source_sha256": "1e2024941c348a40381ec10e1d54667ec31e600107c5347df8bb999a15e4cdd8",
+      "previous_different": false,
+      "native_groups": 0,
+      "current_local_groups": 0,
+      "different": false
+    },
+    {
+      "mutation": {
+        "kind": "section_page_margin",
+        "section_index": 0,
+        "attribute": "header",
+        "value": 715
+      },
+      "source_sha256": "58f28b69bee9095be04393a83a85be1db42dacece3ebbe23d141a685ad2533a1",
+      "previous_different": false,
+      "native_groups": 0,
+      "current_local_groups": 0,
+      "different": false
+    },
+    {
+      "mutation": {
+        "kind": "section_page_margin",
+        "section_index": 0,
+        "attribute": "header",
+        "value": 730
+      },
+      "source_sha256": "f79aed644e93fb9855d046b2c71c96b01442cc754abff60671865c5bfefd16c7",
+      "previous_different": true,
+      "native_groups": 1,
+      "current_local_groups": 1,
+      "different": false
+    },
+    {
+      "mutation": {
+        "kind": "section_page_margin",
+        "section_index": 0,
+        "attribute": "header",
+        "value": 736
+      },
+      "source_sha256": "16c562d53f37f39445dff88cd5be5127023cb874502f603c046b83869952ea0e",
+      "previous_different": true,
+      "native_groups": 1,
+      "current_local_groups": 1,
+      "different": false
+    },
+    {
+      "mutation": {
+        "kind": "section_page_margin",
+        "section_index": 0,
+        "attribute": "header",
+        "value": 737
+      },
+      "source_sha256": "36f0572f2af2b823ded485102082596cc93c85c54e15c95ef3b9e10b627e4d21",
+      "previous_different": true,
+      "native_groups": 1,
+      "current_local_groups": 1,
+      "different": false
+    }
+  ],
+  "previous_differences": 7,
+  "current_differences": 0,
+  "retained_native_input_cases": 12,
+  "fresh_native_executions": 0,
+  "limits": "Same12 synthetic pilot inputs with cache hashes and original completion receipts revalidated. Diagnostic group parity, not school accuracy or real-case false-positive rate."
+}
