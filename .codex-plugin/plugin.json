@@ -1,6 +1,6 @@
 {
   "name": "bmstu-thesis-checker",
-  "version": "0.2.6+codex.20261015",
+  "version": "0.2.7+codex.20261015",
   "description": "Local BMSTU VKR thesis checker for DOCX/PDF formatting, structure, images, and dictionary issues.",
   "author": {
     "name": "Tanue Hou"

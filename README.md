@@ -1,8 +1,8 @@
-# BMSTU 论文检查器 · v0.2.6
+# BMSTU 论文检查器 · v0.2.7
 
-当前版本：插件 **0.2.6+codex.20261015** / MCP **0.2.6**。
+当前版本：插件 **0.2.7+codex.20261015** / MCP **0.2.7**。
 
-[版本迭代](docs/VERSION_HISTORY.zh.md) · [规则执行与证据链](docs/RULE_CHAIN.zh.md) · [v0.2.6发布说明](releases/v0.2.6.md) · [Skill入口](skills/bmstu-thesis-checker/SKILL.md)
+[版本迭代](docs/VERSION_HISTORY.zh.md) · [规则执行与证据链](docs/RULE_CHAIN.zh.md) · [v0.2.7发布说明](releases/v0.2.7.md) · [Skill入口](skills/bmstu-thesis-checker/SKILL.md)
 
 规则是否可靠以精确格式/论文类型、样本范围和证据哈希为准；本地检查零诊断不代表原程序通过。仓库保留原程序对照、合成样本、截图和副本修改记录。
 
@@ -183,3 +183,6 @@ Python 依赖请见 `scripts/testvkr-service/requirements.txt`
 ## 版本日志
 
 参见 [CHANGELOG.md](./CHANGELOG.md)
+# v0.2.7 更新
+
+新增[后台JSON CLI](docs/AGENT_CLI.zh.md)、[行为重建伪源码](docs/RECONSTRUCTED_ALGORITHM.zh.md)和[新版机器码反编译](evidence/agent-v027/decompilation/provenance.json)。17案例修正13组名称识别误报；298条证据处置仍含待判定项目。新版副本修复尚未开放，详见[发布边界](releases/v0.2.7.md)。

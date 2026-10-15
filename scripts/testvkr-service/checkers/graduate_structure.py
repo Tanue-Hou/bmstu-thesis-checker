@@ -46,7 +46,10 @@ def check_graduate(data, mode):
         emit('TitlePageMismatch','*** Отсутствует или неправильно введен титульный лист (много несоответствий).',Severity.CRITICAL,{'matched_template_tokens':sum(matched),'template_tokens':len(TITUL)})
     expected=['научно','квалификационная','работа'] if mode=='phd' else ['выпускная','квалификационная','работа']
     cover_pairs=[line+' '+(cover[i+1] if i+1<len(cover) else '') for i,line in enumerate(cover)]
-    if not any(all(w in line for w in expected) for line in cover_pairs):
+    # Build232 0044a748 references both nominative and oblique VKR token lists.
+    # Exact phrase support here is bounded; the full native matcher is not cloned.
+    oblique_vkr=mode=='master' and any(re.search(r'\bвыпускной\s+квалификационной\s+работе\b',line) for line in cover_pairs)
+    if not oblique_vkr and not any(all(w in line for w in expected) for line in cover_pairs):
         emit('WorkNameInvalid','*** Ошибка в наименовании работы.',Severity.CRITICAL,{'expected_words':expected})
     missing=[]
     if abstract is None and mode=='master':missing.append('РЕФЕРАТ (АННОТАЦИЯ)')

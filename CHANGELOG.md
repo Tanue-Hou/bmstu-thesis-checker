@@ -1,3 +1,11 @@
+# 0.2.7 - Evidence dispositions, false-positive fix and agent CLI (2026-10-15)
+
+- Retain individual dispositions for all 298 original private review rows; school compliance remains unresolved where evidence is insufficient.
+- Correct oblique Russian VKR cover-name recognition; recheck all17 cases, removing13 confirmed local recognition defects (218 to205 candidate groups).
+- Add independent action eligibility without hiding candidates, plus JSON CLI check/review/plan/apply with stale-plan refusal.
+- Export actual build232 C-like decompiler output (10191 of10192 discovered functions) and trace both work-name token lists; not original source or complete semantic recovery.
+- Retain two synthetic master font repair native before/after pairs. Build232 repair remains closed pending broader protected-content/layout validation.
+
 # 0.2.6 - TestVkr build232 and source-bound cross-checks (2026-10-15)
 
 - Identify build232 independently; bind report/capture/executable/screenshot identities and prevent build230 proof transfer.

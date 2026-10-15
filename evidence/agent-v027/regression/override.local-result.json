@@ -1,0 +1,852 @@
+{
+  "document_kind": "vkr",
+  "native_reference": {
+    "selected_build": 230,
+    "executable_sha256": "0bb43cebc4c7ee196913d2ea2240f7bc53aaac1e6b8f6394e6201024a108b8cb",
+    "historical_rule_evidence_build": 230,
+    "transfer_validated": true,
+    "limits": "Real-case family agreement is not controlled threshold validation"
+  },
+  "template": null,
+  "template_coverage": {},
+  "source_sha256": "d196244a4e25babc9d3e9fd2093fdc08e28560ca5c0bac4dd5d358c15f1f0748",
+  "location_contract": "PDF physical page+bbox; DOCX XML/paragraph/run/table coordinates, no inferred rendered page",
+  "work_type_policy": {},
+  "file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\agent-v027\\regression\\regression_inputs\\override.docx",
+  "file_type": "docx",
+  "work_type": "bachelor",
+  "verification_status": "local_policy_check_not_original_program_certification",
+  "formatting_coverage": {
+    "resolved": [
+      "docDefaults",
+      "paragraph_basedOn",
+      "character_basedOn",
+      "direct"
+    ],
+    "unresolved": [
+      "conditional_table_styles",
+      "numbering_properties",
+      "theme_font_and_color"
+    ]
+  },
+  "native_comparison_limits": {},
+  "summary": {
+    "total": 9,
+    "critical": 0,
+    "major": 1,
+    "warning": 0,
+    "info": 8
+  },
+  "review_summary": {
+    "status_zh": "不建议直接提交，需要先处理必改项和较高严重度问题。",
+    "must_fix_count": 2,
+    "should_fix_count": 0,
+    "manual_review_count": 7,
+    "optional_count": 0,
+    "antiplagiarism_related_count": 1,
+    "critical_or_major_count": 1,
+    "native_verified_findings": 2,
+    "template_reference_findings": 0
+  },
+  "groups": {
+    "by_severity": {
+      "info": [
+        "Pic.SmallLabels",
+        "Word.PageSizeNotA4",
+        "Word.LeftMarginInvalid",
+        "Word.RightMarginInvalid",
+        "Word.TopMarginInvalid",
+        "Word.BottomMarginInvalid",
+        "Word.LineSpacingInvalid",
+        "Word.FirstLineIndentInvalid"
+      ],
+      "major": [
+        "Word.FontSizeTooSmall"
+      ]
+    },
+    "by_module": {
+      "pictures": [
+        "Pic.SmallLabels"
+      ],
+      "word_format": [
+        "Word.PageSizeNotA4",
+        "Word.LeftMarginInvalid",
+        "Word.RightMarginInvalid",
+        "Word.TopMarginInvalid",
+        "Word.BottomMarginInvalid",
+        "Word.FontSizeTooSmall",
+        "Word.LineSpacingInvalid",
+        "Word.FirstLineIndentInvalid"
+      ]
+    },
+    "by_fix_priority": {
+      "manual_review": [
+        "Pic.SmallLabels",
+        "Word.LeftMarginInvalid",
+        "Word.RightMarginInvalid",
+        "Word.TopMarginInvalid",
+        "Word.BottomMarginInvalid",
+        "Word.LineSpacingInvalid",
+        "Word.FirstLineIndentInvalid"
+      ],
+      "must_fix": [
+        "Word.PageSizeNotA4",
+        "Word.FontSizeTooSmall"
+      ]
+    },
+    "by_location": {
+      "未定位": [
+        "Pic.SmallLabels",
+        "Word.FontSizeTooSmall"
+      ],
+      "section 1": [
+        "Word.PageSizeNotA4",
+        "Word.LeftMarginInvalid",
+        "Word.RightMarginInvalid",
+        "Word.TopMarginInvalid",
+        "Word.BottomMarginInvalid"
+      ],
+      "段落": [
+        "Word.LineSpacingInvalid",
+        "Word.FirstLineIndentInvalid"
+      ]
+    },
+    "antiplagiarism_related": [
+      "Word.FontSizeTooSmall"
+    ]
+  },
+  "fix_checklist": {
+    "must_fix": [
+      {
+        "rule_id": "Word.PageSizeNotA4",
+        "label_zh": "必改",
+        "title_zh": "页面不是 A4",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "section 1",
+        "fix_suggestion_zh": "将页面纸张大小统一设置为 A4，并检查所有分节。",
+        "word_path_zh": "布局 -> 大小 -> A4；多节文档需在每个节中确认。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Word.FontSizeTooSmall",
+        "label_zh": "必改",
+        "title_zh": "字号过小",
+        "severity": "major",
+        "module": "word_format",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "先核对学校模板及文字用途，再处理异常小字；不要把全文统一改成检查下限。",
+        "word_path_zh": "开始 -> 字体 -> 字号。",
+        "affects_antiplagiarism": true
+      }
+    ],
+    "should_fix": [],
+    "manual_review": [
+      {
+        "rule_id": "Pic.SmallLabels",
+        "label_zh": "需要人工确认",
+        "title_zh": "图片或标注文字过小",
+        "severity": "info",
+        "module": "pictures",
+        "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+        "fix_suggestion_zh": "放大图中文字，或将说明文字改为正文题注形式。",
+        "word_path_zh": "选中文字 -> 开始 -> 字号；图内文字需在原图编辑后重新插入。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Word.LeftMarginInvalid",
+        "label_zh": "需要人工确认",
+        "title_zh": "左页边距不正确",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "section 1",
+        "fix_suggestion_zh": "博士按真实学校模板人工核对左边距；本轮25毫米通过，但尚未测定容差。不使用副本自动修复修改边距。",
+        "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 左 3.0cm。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Word.RightMarginInvalid",
+        "label_zh": "需要人工确认",
+        "title_zh": "右页边距不正确",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "section 1",
+        "fix_suggestion_zh": "将右页边距设置为 1.0cm。",
+        "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 右 1.0cm。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Word.TopMarginInvalid",
+        "label_zh": "需要人工确认",
+        "title_zh": "上页边距不正确",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "section 1",
+        "fix_suggestion_zh": "将上页边距设置为 2.0cm。",
+        "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 上 2.0cm。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Word.BottomMarginInvalid",
+        "label_zh": "需要人工确认",
+        "title_zh": "下页边距不正确",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "section 1",
+        "fix_suggestion_zh": "将下页边距设置为 2.0cm。",
+        "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 下 2.0cm。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Word.LineSpacingInvalid",
+        "label_zh": "需要人工确认",
+        "title_zh": "行距不符合要求",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "段落 1",
+        "fix_suggestion_zh": "正文统一设为 1.5 倍行距；表格内文字统一设为单倍行距。",
+        "word_path_zh": "开始 -> 段落 -> 行和段落间距；或右键段落 -> 段落 -> 行距。",
+        "affects_antiplagiarism": false
+      },
+      {
+        "rule_id": "Word.FirstLineIndentInvalid",
+        "label_zh": "需要人工确认",
+        "title_zh": "首行缩进不正确",
+        "severity": "info",
+        "module": "word_format",
+        "location_summary_zh": "段落 1",
+        "fix_suggestion_zh": "将正文段落特殊格式设为首行缩进 1.25cm。",
+        "word_path_zh": "段落设置 -> 缩进和间距 -> 特殊格式 -> 首行缩进 1.25cm。",
+        "affects_antiplagiarism": false
+      }
+    ],
+    "optional": []
+  },
+  "findings": [
+    {
+      "rule_id": "Word.FontSizeTooSmall",
+      "module": "word_format",
+      "severity": "major",
+      "message": "В документе много символов, размер которых меньше 8.0 пт",
+      "russian_message": "В документе много символов, размер которых меньше 8.0 пт",
+      "title_zh": "字号过小",
+      "explanation_zh": "字符字号低于当前检查下限。程序的异常字号下限不等于学校要求的正文字号。",
+      "trigger_reason_zh": "字符字号低于规则下限并超过数量阈值。",
+      "fix_suggestion_zh": "先核对学校模板及文字用途，再处理异常小字；不要把全文统一改成检查下限。",
+      "word_path_zh": "开始 -> 字体 -> 字号。",
+      "fix_priority": "must_fix",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": true,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_evidence_intact": true,
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "bachelor",
+        "build": 230,
+        "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+      },
+      "threshold_origin": "static_shipped_default_with_font_predicate_references",
+      "evidence_refs": [
+        "evidence/dynamic-pairs/comparison.json"
+      ],
+      "static_evidence_refs": [
+        "evidence/2026-10-14/static-findings.json"
+      ],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 8.0,
+        "unit": "pt",
+        "count_chars": 249,
+        "table_count_chars": 0
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestWord",
+      "source_va": "0x6ee118",
+      "comparator": "<",
+      "sample_trigger": [
+        "03_font_size/font_size_11.docx",
+        "03_font_size/font_size_12.01.docx"
+      ],
+      "precise_locations": {
+        "occurrences": [
+          {
+            "kind": "docx_run",
+            "part": "word/document.xml",
+            "paragraph": 1,
+            "run": 1,
+            "xml_path": "/w:document/w:body/w:p",
+            "style": "DerivedBody",
+            "text_excerpt": "Контрольный текст для проверки формата документа. Контрольный текст для проверки формата документа. Контрольный текст для проверки формата д",
+            "content_role": "body_or_special_content_unknown",
+            "actual": 7.0,
+            "formatting_sources": {
+              "rFonts": "docDefaults",
+              "sz": "direct_run",
+              "szCs": "docDefaults",
+              "lang": "docDefaults"
+            },
+            "context_note": null,
+            "locator_id": "fe13242888089b37"
+          }
+        ],
+        "occurrence_count": 1,
+        "truncated": false,
+        "limit": 100,
+        "precision": "source_coordinate",
+        "docx_pages": "unknown_without_layout_engine"
+      },
+      "action_eligibility": {
+        "status": "evidence_required",
+        "reason_zh": "属性异常或原程序同类提示不等于学校违规；需要适用条款及页面/语义复核。",
+        "automatic_repair_allowed": false
+      }
+    },
+    {
+      "rule_id": "Word.PageSizeNotA4",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Документ содержит страницы, размеры которых не соответствуют формату А4.",
+      "russian_message": "Документ содержит страницы, размеры которых не соответствуют формату А4.",
+      "title_zh": "页面不是 A4",
+      "explanation_zh": "论文页面尺寸应为 A4，即 210mm x 297mm。",
+      "trigger_reason_zh": "检测到 section 或 PDF 页面尺寸与 A4 相差超过容差。",
+      "fix_suggestion_zh": "将页面纸张大小统一设置为 A4，并检查所有分节。",
+      "word_path_zh": "布局 -> 大小 -> A4；多节文档需在每个节中确认。",
+      "fix_priority": "must_fix",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "high",
+      "verification_status": "verified_against_original",
+      "verification_evidence_intact": true,
+      "verification_scope": {
+        "format": "docx",
+        "work_type": "bachelor",
+        "build": 230,
+        "limits": "Validated fixture predicates and tested boundaries; not full document-role/counting equivalence."
+      },
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [
+        "evidence/dynamic-pairs/comparison.json"
+      ],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "expected": "210x297mm",
+        "actual": "215.9x279.4mm"
+      },
+      "location": {
+        "section": 1
+      },
+      "location_summary_zh": "section 1",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "11_page_size/page_size_not_a4.docx"
+      ],
+      "precise_locations": {
+        "occurrences": [
+          {
+            "kind": "document_scope",
+            "section": 1,
+            "locator_id": "9b365fc12dcb42a7"
+          }
+        ],
+        "occurrence_count": 1,
+        "truncated": false,
+        "limit": 100,
+        "precision": "document_scope_or_unavailable",
+        "docx_pages": "unknown_without_layout_engine"
+      },
+      "action_eligibility": {
+        "status": "evidence_required",
+        "reason_zh": "属性异常或原程序同类提示不等于学校违规；需要适用条款及页面/语义复核。",
+        "automatic_repair_allowed": false
+      }
+    },
+    {
+      "rule_id": "Pic.SmallLabels",
+      "module": "pictures",
+      "severity": "info",
+      "message": "Документ содержит мелкие надписи. Увеличьте их размер или удалите:",
+      "russian_message": "Документ содержит мелкие надписи. Увеличьте их размер или удалите:",
+      "title_zh": "图片或标注文字过小",
+      "explanation_zh": "图内标注、题注或相关文字字号太小，影响阅读。",
+      "trigger_reason_zh": "检测到图片附近或文档中小字号标注字符数量超过阈值。",
+      "fix_suggestion_zh": "放大图中文字，或将说明文字改为正文题注形式。",
+      "word_path_zh": "选中文字 -> 开始 -> 字号；图内文字需在原图编辑后重新插入。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "should_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_evidence_intact": false,
+      "verification_scope": {},
+      "threshold_origin": "local_heuristic",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {},
+      "threshold": {
+        "count_chars": 250
+      },
+      "location": null,
+      "location_summary_zh": "未提供精确位置；请结合模块和阈值信息人工定位。",
+      "skip_switch": "SkipTestPic",
+      "source_va": null,
+      "comparator": null,
+      "sample_trigger": [],
+      "precise_locations": {
+        "occurrences": [],
+        "occurrence_count": 0,
+        "truncated": false,
+        "limit": 100,
+        "precision": "document_scope_or_unavailable",
+        "docx_pages": "unknown_without_layout_engine"
+      },
+      "action_eligibility": {
+        "status": "advisory_only",
+        "reason_zh": "混合字符、浮动图或技术标记本身不证明格式违规；保留上下文供复核。",
+        "automatic_repair_allowed": false
+      }
+    },
+    {
+      "rule_id": "Word.BottomMarginInvalid",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Документ содержит страницы, размеры нижнего поля на которых не соответствуют требованиям:",
+      "russian_message": "Документ содержит страницы, размеры нижнего поля на которых не соответствуют требованиям:",
+      "title_zh": "下页边距不正确",
+      "explanation_zh": "下页边距通常应为 20mm。",
+      "trigger_reason_zh": "检测到 section 下页边距与 20mm 不一致。",
+      "fix_suggestion_zh": "将下页边距设置为 2.0cm。",
+      "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 下 2.0cm。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_evidence_intact": false,
+      "verification_scope": {},
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 20.0,
+        "unit": "mm",
+        "actual": 25.4,
+        "native_margin_probe_supported": false
+      },
+      "location": {
+        "section": 1
+      },
+      "location_summary_zh": "section 1",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "10_margins/margin_bottom_15mm.docx"
+      ],
+      "precise_locations": {
+        "occurrences": [
+          {
+            "kind": "document_scope",
+            "section": 1,
+            "locator_id": "7cc0d9ff69cb679e"
+          }
+        ],
+        "occurrence_count": 1,
+        "truncated": false,
+        "limit": 100,
+        "precision": "document_scope_or_unavailable",
+        "docx_pages": "unknown_without_layout_engine"
+      },
+      "action_eligibility": {
+        "status": "evidence_required",
+        "reason_zh": "属性异常或原程序同类提示不等于学校违规；需要适用条款及页面/语义复核。",
+        "automatic_repair_allowed": false
+      }
+    },
+    {
+      "rule_id": "Word.FirstLineIndentInvalid",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Отступ первой строки в абзаце должен быть 1,25 см. (при выравнивании строк а абзаце по центру - 0 см.):",
+      "russian_message": "Отступ первой строки в абзаце должен быть 1,25 см. (при выравнивании строк а абзаце по центру - 0 см.):",
+      "title_zh": "首行缩进不正确",
+      "explanation_zh": "正文段落首行缩进应为 1.25cm，居中段落通常不需要首行缩进。",
+      "trigger_reason_zh": "检测到正文段落首行缩进缺失或不在 1.20-1.30cm 容差范围内。",
+      "fix_suggestion_zh": "将正文段落特殊格式设为首行缩进 1.25cm。",
+      "word_path_zh": "段落设置 -> 缩进和间距 -> 特殊格式 -> 首行缩进 1.25cm。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_evidence_intact": false,
+      "verification_scope": {},
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 1.25,
+        "unit": "cm",
+        "count_paragraphs": 1
+      },
+      "location": {
+        "paragraphs": [
+          1
+        ]
+      },
+      "location_summary_zh": "段落 1",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "12_first_line_indent/indent_missing.docx",
+        "12_first_line_indent/indent_invalid.docx"
+      ],
+      "precise_locations": {
+        "occurrences": [
+          {
+            "kind": "docx_paragraph",
+            "part": "word/document.xml",
+            "paragraph": 1,
+            "xml_path": "/w:document/w:body/w:p",
+            "text_excerpt": "Контрольный текст для проверки формата документа. Контрольный текст для проверки формата документа. Контрольный текст для проверки формата д",
+            "locator_id": "9b59ae1a8d0b2c82"
+          }
+        ],
+        "occurrence_count": 1,
+        "truncated": false,
+        "limit": 100,
+        "precision": "source_coordinate",
+        "docx_pages": "unknown_without_layout_engine"
+      },
+      "action_eligibility": {
+        "status": "evidence_required",
+        "reason_zh": "属性异常或原程序同类提示不等于学校违规；需要适用条款及页面/语义复核。",
+        "automatic_repair_allowed": false
+      }
+    },
+    {
+      "rule_id": "Word.LeftMarginInvalid",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Документ содержит страницы, размеры левого поля на которых не соответствуют требованиям или отступ первой строки абзаца не равен 1.25…1.27 см:",
+      "russian_message": "Документ содержит страницы, размеры левого поля на которых не соответствуют требованиям или отступ первой строки абзаца не равен 1.25…1.27 см:",
+      "title_zh": "左页边距不正确",
+      "explanation_zh": "博士科研资格论文的单变量样例中，左边距30毫米报警、25毫米通过；右／上／下保持10／20／20毫米。其他模式和偏差需看验证状态。",
+      "trigger_reason_zh": "本地测量与当前模式边距策略不符。仅已实测的博士30毫米反例可标为已验证，其他情况为本地策略提示。",
+      "fix_suggestion_zh": "博士按真实学校模板人工核对左边距；本轮25毫米通过，但尚未测定容差。不使用副本自动修复修改边距。",
+      "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 左 3.0cm。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "manual_review",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_evidence_intact": false,
+      "verification_scope": {},
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 30.0,
+        "unit": "mm",
+        "actual": 31.75,
+        "native_margin_probe_supported": false
+      },
+      "location": {
+        "section": 1
+      },
+      "location_summary_zh": "section 1",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "10_margins/margin_left_20mm.docx"
+      ],
+      "precise_locations": {
+        "occurrences": [
+          {
+            "kind": "document_scope",
+            "section": 1,
+            "locator_id": "4c9c63d74d70394d"
+          }
+        ],
+        "occurrence_count": 1,
+        "truncated": false,
+        "limit": 100,
+        "precision": "document_scope_or_unavailable",
+        "docx_pages": "unknown_without_layout_engine"
+      },
+      "action_eligibility": {
+        "status": "evidence_required",
+        "reason_zh": "属性异常或原程序同类提示不等于学校违规；需要适用条款及页面/语义复核。",
+        "automatic_repair_allowed": false
+      }
+    },
+    {
+      "rule_id": "Word.LineSpacingInvalid",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Междустрочный интервал в абзацах должен быть равен 1.5 строки (в таблицах одинарный):",
+      "russian_message": "Междустрочный интервал в абзацах должен быть равен 1.5 строки (в таблицах одинарный):",
+      "title_zh": "行距不符合要求",
+      "explanation_zh": "正文段落应使用 1.5 倍行距，表格内文字通常应使用单倍行距。",
+      "trigger_reason_zh": "检测到段落或表格单元格的行距与目标值不一致。",
+      "fix_suggestion_zh": "正文统一设为 1.5 倍行距；表格内文字统一设为单倍行距。",
+      "word_path_zh": "开始 -> 段落 -> 行和段落间距；或右键段落 -> 段落 -> 行距。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_evidence_intact": false,
+      "verification_scope": {},
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 1.5,
+        "unit": "multiplier",
+        "count_paragraphs": 1
+      },
+      "location": {
+        "paragraphs": [
+          1
+        ]
+      },
+      "location_summary_zh": "段落 1",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "01_line_spacing_body/body_line_spacing_1.0.docx",
+        "01_line_spacing_body/body_line_spacing_1.49.docx",
+        "01_line_spacing_body/body_line_spacing_1.51.docx",
+        "01_line_spacing_body/body_line_spacing_2.0.docx"
+      ],
+      "precise_locations": {
+        "occurrences": [
+          {
+            "kind": "docx_paragraph",
+            "part": "word/document.xml",
+            "paragraph": 1,
+            "xml_path": "/w:document/w:body/w:p",
+            "text_excerpt": "Контрольный текст для проверки формата документа. Контрольный текст для проверки формата документа. Контрольный текст для проверки формата д",
+            "locator_id": "458d415bcb6f383a"
+          }
+        ],
+        "occurrence_count": 1,
+        "truncated": false,
+        "limit": 100,
+        "precision": "source_coordinate",
+        "docx_pages": "unknown_without_layout_engine"
+      },
+      "action_eligibility": {
+        "status": "evidence_required",
+        "reason_zh": "属性异常或原程序同类提示不等于学校违规；需要适用条款及页面/语义复核。",
+        "automatic_repair_allowed": false
+      }
+    },
+    {
+      "rule_id": "Word.RightMarginInvalid",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Документ содержит страницы, размеры правого поля на которых не соответствуют требованиям, или нет знаков препинаний в конце коротких строк, или не используется выравнивание текста по ширине:",
+      "russian_message": "Документ содержит страницы, размеры правого поля на которых не соответствуют требованиям, или нет знаков препинаний в конце коротких строк, или не используется выравнивание текста по ширине:",
+      "title_zh": "右页边距不正确",
+      "explanation_zh": "右页边距通常应为 10mm。",
+      "trigger_reason_zh": "检测到 section 右页边距与 10mm 不一致。",
+      "fix_suggestion_zh": "将右页边距设置为 1.0cm。",
+      "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 右 1.0cm。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_evidence_intact": false,
+      "verification_scope": {},
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 10.0,
+        "unit": "mm",
+        "actual": 31.75,
+        "native_margin_probe_supported": false
+      },
+      "location": {
+        "section": 1
+      },
+      "location_summary_zh": "section 1",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "10_margins/margin_right_20mm.docx"
+      ],
+      "precise_locations": {
+        "occurrences": [
+          {
+            "kind": "document_scope",
+            "section": 1,
+            "locator_id": "14a28576a49d953a"
+          }
+        ],
+        "occurrence_count": 1,
+        "truncated": false,
+        "limit": 100,
+        "precision": "document_scope_or_unavailable",
+        "docx_pages": "unknown_without_layout_engine"
+      },
+      "action_eligibility": {
+        "status": "evidence_required",
+        "reason_zh": "属性异常或原程序同类提示不等于学校违规；需要适用条款及页面/语义复核。",
+        "automatic_repair_allowed": false
+      }
+    },
+    {
+      "rule_id": "Word.TopMarginInvalid",
+      "module": "word_format",
+      "severity": "info",
+      "message": "Документ содержит страницы, размеры верхнего поля на которых не соответствуют требованиям:",
+      "russian_message": "Документ содержит страницы, размеры верхнего поля на которых не соответствуют требованиям:",
+      "title_zh": "上页边距不正确",
+      "explanation_zh": "上页边距通常应为 20mm。",
+      "trigger_reason_zh": "检测到 section 上页边距与 20mm 不一致。",
+      "fix_suggestion_zh": "将上页边距设置为 2.0cm。",
+      "word_path_zh": "布局 -> 页边距 -> 自定义页边距 -> 上 2.0cm。",
+      "fix_priority": "manual_review",
+      "suggested_fix_priority": "must_fix",
+      "affects_antiplagiarism": false,
+      "confidence": "low",
+      "verification_status": "pending_original_program_comparison",
+      "verification_evidence_intact": false,
+      "verification_scope": {},
+      "threshold_origin": "local_policy_unverified_against_original",
+      "evidence_refs": [],
+      "static_evidence_refs": [],
+      "comparison_policy": {
+        "status": "local_policy_not_original_program_proof",
+        "line_spacing_tolerance": 0.1,
+        "table_line_spacing": 1.0,
+        "font_violation_min_chars_exclusive": 10,
+        "page_size_tolerance_mm": 2.0,
+        "margin_tolerance_mm": 1.0,
+        "header_footer_tolerance_cm": 0.05,
+        "first_line_indent_tolerance_cm": 0.05
+      },
+      "threshold": {
+        "value": 20.0,
+        "unit": "mm",
+        "actual": 25.4,
+        "native_margin_probe_supported": false
+      },
+      "location": {
+        "section": 1
+      },
+      "location_summary_zh": "section 1",
+      "skip_switch": "SkipTestWord",
+      "source_va": null,
+      "comparator": "!=",
+      "sample_trigger": [
+        "10_margins/margin_top_15mm.docx"
+      ],
+      "precise_locations": {
+        "occurrences": [
+          {
+            "kind": "document_scope",
+            "section": 1,
+            "locator_id": "f22cdc5e45111bd5"
+          }
+        ],
+        "occurrence_count": 1,
+        "truncated": false,
+        "limit": 100,
+        "precision": "document_scope_or_unavailable",
+        "docx_pages": "unknown_without_layout_engine"
+      },
+      "action_eligibility": {
+        "status": "evidence_required",
+        "reason_zh": "属性异常或原程序同类提示不等于学校违规；需要适用条款及页面/语义复核。",
+        "automatic_repair_allowed": false
+      }
+    }
+  ],
+  "action_summary": {
+    "evidence_required": 8,
+    "advisory_only": 1
+  },
+  "action_contract": "Candidates retained; action eligibility is not a truth verdict. Build232 repair remains closed."
+}

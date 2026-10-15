@@ -20,6 +20,7 @@ from config import settings
 from school_templates import load_template,check_template
 from issue_locations import locate_finding
 from native_builds import require_build
+from review_policy import annotate
 
 
 SEVERITY_ORDER = {"critical": 0, "major": 1, "warning": 2, "info": 3}
@@ -386,7 +387,7 @@ def check_file(path: Path, args):
         "fix_checklist": build_fix_checklist(finding_dicts),
         "findings": sorted_findings(finding_dicts),
     }
-    return result
+    return annotate(result)
 
 
 def render_markdown(result):

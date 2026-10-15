@@ -1,0 +1,27 @@
+{
+  "cases": [
+    {
+      "id": "R01",
+      "target": "Word.FontSizeTooSmall",
+      "native_before": true,
+      "native_after": false,
+      "other_native_messages_unchanged": true,
+      "only_main_xml_changed": true,
+      "text_preserved": true,
+      "changed_runs": 18
+    },
+    {
+      "id": "R02",
+      "target": "Word.FontSizeTooLarge",
+      "native_before": true,
+      "native_after": false,
+      "other_native_messages_unchanged": true,
+      "only_main_xml_changed": true,
+      "text_preserved": true,
+      "changed_runs": 18
+    }
+  ],
+  "all_pass": true,
+  "build232_repair_open": false,
+  "limits": "Two synthetic ordinary-body master font repairs only. No complex-document layout QA, protected-content native pair, A4/color/other-mode proof. Historical machinery used to generate experimental copies; no build232 public repair promotion."
+}

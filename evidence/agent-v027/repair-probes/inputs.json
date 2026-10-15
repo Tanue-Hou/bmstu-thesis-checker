@@ -1,0 +1,18 @@
+[
+  {
+    "id": "R01",
+    "source_control": "Z01",
+    "source_sha256": "08e89d982018c10d9414e1b737c0c2a1554364110cbda702014ac81a603290d9",
+    "copy_sha256": "8a7bd8f7a0d37e01ac9ba214f189333500921cc7f3f2edf2579ce451134310fb",
+    "changes": 18,
+    "scope": "Experimental candidate generated with historical230 repair; native232 validation pending"
+  },
+  {
+    "id": "R02",
+    "source_control": "Z04",
+    "source_sha256": "921c9e00d07e8bf6a4f8e3a7da06737de127b7736afc2ff63bca940a7e6c23c2",
+    "copy_sha256": "c4689222bcdaf52e9eeefcbc8b2dd56a45485476162681db481e16abf03954aa",
+    "changes": 18,
+    "scope": "Experimental candidate generated with historical230 repair; native232 validation pending"
+  }
+]

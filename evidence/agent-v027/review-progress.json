@@ -1,0 +1,20 @@
+{
+  "original_review_rows": 298,
+  "dispositions": {
+    "scope_not_applicable": 47,
+    "evidence_required": 164,
+    "confirmed_local_recognition_defect": 13,
+    "advisory_only": 29,
+    "reference_applicability_unconfirmed": 32,
+    "special_role_requires_review": 13
+  },
+  "school_compliance_fully_adjudicated": false,
+  "accuracy": null,
+  "cases_rechecked": 17,
+  "before_candidate_groups": 218,
+  "after_candidate_groups": 205,
+  "removed_confirmed_recognition_defects": 13,
+  "originals_unchanged": true,
+  "build232_repair_open": false,
+  "limits": "Evidence dispositions are not final school compliance verdicts; 164 require further clause/source/page review. No private identifiers or source hashes are published."
+}

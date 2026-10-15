@@ -1,0 +1,5 @@
+target_sha256=5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0
+functions=10192
+decompiled=10191
+failed=1
+limitations=Recovered C-like pseudocode; compiler runtime included; function discovery and indirect calls incomplete; per-function timeout 5 seconds; export deadline 600 seconds.

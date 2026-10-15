@@ -2670,5 +2670,193 @@
   "build-232\\git-source-receipt.json": {
     "sha256": "f1dc0e99aadf303233bda5fd9de4660b3b47dc05176bf50838063fa3ecaec99d",
     "bytes": 10538
+  },
+  "agent-v027\\review-progress.json": {
+    "sha256": "2eaeeaf75441f0d38e4e0fbcc67f5bab2f0eea0b53774e147b1f5f184d2e39fc",
+    "bytes": 748
+  },
+  "agent-v027\\decompilation\\calls.tsv": {
+    "sha256": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "bytes": 547502
+  },
+  "agent-v027\\decompilation\\coverage.txt": {
+    "sha256": "54f3dd144ddbdea6c91809ba94469565ab6c1e3504ac9ae777e5f0f04e318d0b",
+    "bytes": 300
+  },
+  "agent-v027\\decompilation\\defined_strings.tsv": {
+    "sha256": "70343e389f7049f7b0d72b3f5df4fb2fa084e5c300ef762a5847f54d54bf84a2",
+    "bytes": 459720
+  },
+  "agent-v027\\decompilation\\functions.tsv": {
+    "sha256": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0",
+    "bytes": 382890
+  },
+  "agent-v027\\decompilation\\provenance.json": {
+    "sha256": "3608d1961f95f3ca6ce5c5f7e69d5a08e84b56b5dc2ab7b3531dfa608eae5733",
+    "bytes": 2626
+  },
+  "agent-v027\\decompilation\\recovered_pseudocode.c": {
+    "sha256": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "bytes": 11119735
+  },
+  "agent-v027\\decompilation\\work-name.function.c": {
+    "sha256": "1c33ef44c3f570c3bf1f0f1e3e687555dc06ea2e1e98512c08f046335a81e26e",
+    "bytes": 5975
+  },
+  "agent-v027\\regression\\character.local-result.json": {
+    "sha256": "34cf1fccbf041afab2062909d310c76077755a61149dff2435196c4de1da8168",
+    "bytes": 27868
+  },
+  "agent-v027\\regression\\default.local-result.json": {
+    "sha256": "22a4e435eb435b210c6af3df94627751f0b0ad54d7be60c53b62d85fd6f128b6",
+    "bytes": 20339
+  },
+  "agent-v027\\regression\\direct.local-result.json": {
+    "sha256": "3e114d76638da8b888d0c25a40d5736ca6a7cc3ec82f86bbeeae1ac3780b0334",
+    "bytes": 20338
+  },
+  "agent-v027\\regression\\exact.local-result.json": {
+    "sha256": "9fd9d2d397abd58651bc30370d733ee08f41f349c9cd7aaf9cff52ac0bbf8ef0",
+    "bytes": 20337
+  },
+  "agent-v027\\regression\\hidden_off.local-result.json": {
+    "sha256": "df12c3cc3568b30889229242814edc98cc1f928f1b9911521a470cfe1c10224e",
+    "bytes": 20342
+  },
+  "agent-v027\\regression\\inherited.local-result.json": {
+    "sha256": "c89224a62954a5f46b6182a6010da84961320bd288b35b4f38e9f7e20c3e6ce3",
+    "bytes": 20341
+  },
+  "agent-v027\\regression\\override.local-result.json": {
+    "sha256": "a52e2cd52ccb795106acbba40aa9dcea171d322da649f0069e01940cc8f8abfd",
+    "bytes": 35952
+  },
+  "agent-v027\\regression\\partial.local-result.json": {
+    "sha256": "01c6c692e9578cf89f103bfb25f3e5b5e0683318a38f4d35e38d301e96a4e33e",
+    "bytes": 20339
+  },
+  "agent-v027\\regression\\regression-test.log": {
+    "sha256": "f247bb55fadbcdc678057264aaac008132b7088c9c07444d6b1d5134ca40d12f",
+    "bytes": 9526
+  },
+  "agent-v027\\regression\\table.local-result.json": {
+    "sha256": "a53e58400f62085dfa09d4cf2d9d7b41987c11d3b1815b905cf877413a4f4593",
+    "bytes": 24458
+  },
+  "agent-v027\\regression\\validation.json": {
+    "sha256": "fdc6801d2b1254fc16f2a1c25a2b02b3faaf831e2b3d808f3ffc9c3a27a2a592",
+    "bytes": 15198
+  },
+  "agent-v027\\repair-probes\\comparison.json": {
+    "sha256": "244fa1a8c07c03b468581aaa44ffac71a28e8c84c13ae980290e93cfa3c8991a",
+    "bytes": 892
+  },
+  "agent-v027\\repair-probes\\inputs.json": {
+    "sha256": "9c6a7293829d3e399a598d51b6179c0ab5351aa3642b1220c47b2a9e01879a26",
+    "bytes": 727
+  },
+  "agent-v027\\repair-probes\\R01.capture.json": {
+    "sha256": "6d310c1d235b139b7529cd0470680cb7393c97bc6888e01e049fad978b97542f",
+    "bytes": 669
+  },
+  "agent-v027\\repair-probes\\R01.docx": {
+    "sha256": "8a7bd8f7a0d37e01ac9ba214f189333500921cc7f3f2edf2579ce451134310fb",
+    "bytes": 37612
+  },
+  "agent-v027\\repair-probes\\R01.local.json": {
+    "sha256": "78da36c362402ecef3562c7600d194602f32239533e3694256edd8538ad3e24f",
+    "bytes": 42880
+  },
+  "agent-v027\\repair-probes\\R01.original.txt": {
+    "sha256": "91aff68b3dac6200aa8c822f54eb84c2d6d85028de199970ceb03128334b385a",
+    "bytes": 1405
+  },
+  "agent-v027\\repair-probes\\R01.screen-0.jpg": {
+    "sha256": "cafa9bdbb944766fcaae86cc23bcb5860eb1381570d43466bdce1622c6de084d",
+    "bytes": 62332
+  },
+  "agent-v027\\repair-probes\\R01.uia.json": {
+    "sha256": "9b784a3315644a7b3e2ca03d76f82cedc10b784e286530542a659ebeacc9527e",
+    "bytes": 3108
+  },
+  "agent-v027\\repair-probes\\R02.capture.json": {
+    "sha256": "892c31832fb2b37c682c291d14ffec5017e02dff641fc0e424aeb33d1c2ee8eb",
+    "bytes": 669
+  },
+  "agent-v027\\repair-probes\\R02.docx": {
+    "sha256": "c4689222bcdaf52e9eeefcbc8b2dd56a45485476162681db481e16abf03954aa",
+    "bytes": 37612
+  },
+  "agent-v027\\repair-probes\\R02.local.json": {
+    "sha256": "8beb85a93f46fc8be82739f4a117837271187879d822f92e8f293408aa1cc099",
+    "bytes": 42880
+  },
+  "agent-v027\\repair-probes\\R02.original.txt": {
+    "sha256": "acfe4817c0360e576673395052cf616e6d413f2e21579d28a40d1f094a42d94b",
+    "bytes": 1405
+  },
+  "agent-v027\\repair-probes\\R02.screen-0.jpg": {
+    "sha256": "0f7d9f0bea703c4d45401325e7b829d24cc2a2cab662b1652392cca79cefebdf",
+    "bytes": 62350
+  },
+  "agent-v027\\repair-probes\\R02.uia.json": {
+    "sha256": "f39c50f44ec724c201869d4a277fb2074f394bf1a7afe019c1e1844d8e3e88b7",
+    "bytes": 3108
+  },
+  "agent-v027\\repair-probes\\Z01.repaired-93053466c7.changes.json": {
+    "sha256": "670abf91af7ee744a2bc0741ca0dc0eca308d2a64758594ece98621c3676b046",
+    "bytes": 33790
+  },
+  "agent-v027\\repair-probes\\Z01.repaired-93053466c7.docx": {
+    "sha256": "8a7bd8f7a0d37e01ac9ba214f189333500921cc7f3f2edf2579ce451134310fb",
+    "bytes": 37612
+  },
+  "agent-v027\\repair-probes\\Z04.repaired-fc8458351f.changes.json": {
+    "sha256": "3aa66bb0277cf87d29e17284f37ab5a2920e0a52a14c64efd7b5de69692bca5b",
+    "bytes": 33760
+  },
+  "agent-v027\\repair-probes\\Z04.repaired-fc8458351f.docx": {
+    "sha256": "c4689222bcdaf52e9eeefcbc8b2dd56a45485476162681db481e16abf03954aa",
+    "bytes": 37612
+  },
+  "agent-v027\\regression\\regression_inputs\\character.docx": {
+    "sha256": "abcdc5ee1e32913d06f74e989da90d2b8d768d01cb8d44779957d43cc83ed84b",
+    "bytes": 36878
+  },
+  "agent-v027\\regression\\regression_inputs\\default.docx": {
+    "sha256": "5639a9d4498628dfa11d20e0b7c594ec01f5743656f4395eb81e63533ced7698",
+    "bytes": 36815
+  },
+  "agent-v027\\regression\\regression_inputs\\direct.docx": {
+    "sha256": "fd2f56848e4b3e542def4d069f96b8cd02644af5bafeca3a2dcb282786af59cc",
+    "bytes": 36864
+  },
+  "agent-v027\\regression\\regression_inputs\\exact.docx": {
+    "sha256": "8d0a00be0792c6ac7ebf428482e343db698be1281e77de366a8880b5ade889d6",
+    "bytes": 36832
+  },
+  "agent-v027\\regression\\regression_inputs\\hidden_off.docx": {
+    "sha256": "993f66481f367064b1bb447a3d7397e183eda1553c68e2308e1e81044ef78e67",
+    "bytes": 36838
+  },
+  "agent-v027\\regression\\regression_inputs\\inherited.docx": {
+    "sha256": "109e2f07478d171ea78f7ac623ba78519405f17a24e532fe64e01d24df612245",
+    "bytes": 36815
+  },
+  "agent-v027\\regression\\regression_inputs\\override.docx": {
+    "sha256": "d196244a4e25babc9d3e9fd2093fdc08e28560ca5c0bac4dd5d358c15f1f0748",
+    "bytes": 36852
+  },
+  "agent-v027\\regression\\regression_inputs\\partial.docx": {
+    "sha256": "2a9cf5cfcdd650326117126eb91ac71f53b955658d05d3cfc576bf026b005770",
+    "bytes": 36835
+  },
+  "agent-v027\\regression\\regression_inputs\\table.docx": {
+    "sha256": "e3c008b976f7fffe81be72a2f2887f113f826541f2e1c7432f07525b0aa5ba0e",
+    "bytes": 36947
+  },
+  "agent-v027\\git-source-receipt.json": {
+    "sha256": "c997cde28b75d815522b0a3a69f2e1bd4f2058de7c45370af98853c803d91f77",
+    "bytes": 11187
   }
 }

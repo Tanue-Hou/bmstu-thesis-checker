@@ -10,6 +10,8 @@ The plugin exposes `check_thesis_document`, `check_thesis_folder`, `list_rules`,
 
 ## Scope
 
+For headless model-driven workflows, read [agent CLI](../../docs/AGENT_CLI.zh.md). The check report includes `action_eligibility`: preserve candidate facts but do not treat anomaly detection as permission to modify. Build232 repair remains closed pending independent before/after proof. Review school applicability and special content roles first.
+
 For the updated TestVkr build232 or real-case cross-checks, first read [build232 cross-check](references/build232-cross-check.md). Version identity and repair boundaries here supersede earlier scope. Never transfer build230 validation to232.
 
 

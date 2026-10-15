@@ -1,0 +1,54 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "tool": "Ghidra 12.1.4 headless + ExportTestVkr.java",
+  "export_script_sha256": "091951251b0beb65be52b7c5e113b325bd4e6ea20bfb3a31d7a0b371508d7a89",
+  "files": {
+    "calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "coverage.txt": "54f3dd144ddbdea6c91809ba94469565ab6c1e3504ac9ae777e5f0f04e318d0b",
+    "defined_strings.tsv": "70343e389f7049f7b0d72b3f5df4fb2fa084e5c300ef762a5847f54d54bf84a2",
+    "functions.tsv": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0",
+    "recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "work-name.function.c": "1c33ef44c3f570c3bf1f0f1e3e687555dc06ea2e1e98512c08f046335a81e26e"
+  },
+  "work_name_literals": [
+    {
+      "va": "006d6a86",
+      "file_offset": 2970758,
+      "utf16_text": "5",
+      "referencing_function": "0044a748"
+    },
+    {
+      "va": "006d6a8a",
+      "file_offset": 2970762,
+      "utf16_text": "научно;квалификационная;работа",
+      "referencing_function": "0044a748"
+    },
+    {
+      "va": "006d6ac8",
+      "file_offset": 2970824,
+      "utf16_text": "выпускной;квалификационной;работе",
+      "referencing_function": "0044a748"
+    },
+    {
+      "va": "006d6b0c",
+      "file_offset": 2970892,
+      "utf16_text": "выпускная;квалификационная;работа",
+      "referencing_function": "0044a748"
+    },
+    {
+      "va": "006d6b5a",
+      "file_offset": 2970970,
+      "utf16_text": "<font color=\"green\"/>* Ошибка в наименовании работы.<font color=\"black\"/>",
+      "referencing_function": "0044a748"
+    },
+    {
+      "va": "006d6bee",
+      "file_offset": 2971118,
+      "utf16_text": "<font color=\"maroon\"/>*** Ошибка в наименовании работы.<font color=\"black\"/>",
+      "referencing_function": "0044a748"
+    }
+  ],
+  "limits": "Decompiled C-like text, not original source or compilable project. Function discovery/types/indirect calls incomplete. 10191/10192 refers only to discovered functions, not semantic coverage. Literal references are static evidence, not execution.",
+  "work_name_trace": "0044a748 references both nominative and oblique VKR word lists; real-case native captures omit WorkNameInvalid for all 13 oblique covers. Adjacent paragraph matching/combinations remain bounded.",
+  "export_script": "scripts/reverse_engineering/ExportTestVkr.java"
+}
