@@ -1,0 +1,33 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "02bbb9f1cec03086883dc056293b106ada9c6e32d544b92e418594f50dc4a323",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 2,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "** Документ содержит плавающие графические фигуры. Встройте фигуры в текст: \" исследования.|||Рисунок 1 — Результаты анализа|X|\", \"следования.|||Рисунок 1 — Результаты анализа|X||X|\", \"дования.|||Рисунок 1 — Результаты анализа|X||X||X|\", \"ания.|||Рисунок 1 — Результаты анализа|X||X||X||X|\", \"я.|||Рисунок 1 — Результаты анализа|X||X||X||X||X|\", \"||Рисунок 1 — Результаты анализа|X||X||X||X||X||X|\", \"исунок 1 — Результаты анализа|X||X||X||X||X||X||X|\", \"нок 1 — Результаты анализа|X||X||X||X||X||X||X||X|\", \" 1 — Результаты анализа|X||X||X||X||X||X||X||X||X|\", \"— Результаты анализа|X||X||X||X||X||X||X||X||X||X|\", \"езультаты анализа|X||X||X||X||X||X||X||X||X||X||X|\"; ."
+    },
+    {
+      "number": 2,
+      "message": "** Документ содержит плавающие надписи. Встройте надписи в текст:\" исследования.|||Рисунок 1 — Результаты анализа|X|\", \"следования.|||Рисунок 1 — Результаты анализа|X||X|\", \"дования.|||Рисунок 1 — Результаты анализа|X||X||X|\", \"ания.|||Рисунок 1 — Результаты анализа|X||X||X||X|\", \"я.|||Рисунок 1 — Результаты анализа|X||X||X||X||X|\", \"||Рисунок 1 — Результаты анализа|X||X||X||X||X||X|\", \"исунок 1 — Результаты анализа|X||X||X||X||X||X||X|\", \"нок 1 — Результаты анализа|X||X||X||X||X||X||X||X|\", \" 1 — Результаты анализа|X||X||X||X||X||X||X||X||X|\", \"— Результаты анализа|X||X||X||X||X||X||X||X||X||X|\", \"езультаты анализа|X||X||X||X||X||X||X||X||X||X||X|\"; ."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/textbox-bounds-native-r1/control",
+  "trace_sha256": "96c1adc13b7ed3e86ae8bbb334a740c91cf5613b0144178036443687088a8f46",
+  "native_text_sha256": "bd76e76be5fc863b24221d2644c2e7c94272703f08d26b7e15f5937d4696804a",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "3a4e699d586d3083467e195e3e1984a6b1124efda716ec6b400bd9d8341144d5",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

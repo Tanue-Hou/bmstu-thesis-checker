@@ -1,0 +1,18 @@
+{
+  "status": "same_input_private_cross_check_completed",
+  "cases": 17,
+  "errors": 0,
+  "native_diagnostics": 80,
+  "native_unmapped": 0,
+  "native_drawing_diagnostics": 0,
+  "summary_sha256": "1b4796b42961bbdcaa8fd2d117ff7f51e6101e6eb3fbc0d2c4c5e5b1be6bf795",
+  "implementation_sha256": {
+    "scripts/check_document.py": "b65b2996dd56f3705c5573994a13e7884f46bfbbe35d885917e35aa70014d207",
+    "scripts/compare_native_trial.py": "f1551bb0b5ec91d6b64ff00b5e2978c1a522f11ca21fce78fde7ab81d7fce6c9",
+    "scripts/testvkr-service/checkers/pictures.py": "599e0a2bfae3ccc5f035b08a723cdb5d5c4158682934e29c6b1df0a7807a21c8",
+    "scripts/testvkr-service/parsers/docx_parser.py": "ee1af45b2c4a5b8644670bd940bfad6897f59d1bf1212f468b5853aaa4d213ec",
+    "scripts/testvkr-service/parsers/drawing_geometry.py": "a00a69b66bd241d408160fcc131c686960fad7ecfb2afe611f5d6671626e3259",
+    "scripts/testvkr-service/rules/rules_verified.json": "6607caf32526588ea751e6d61cb00b70d61b250d5de01cb2af93d274e96daa80"
+  },
+  "limits": "Retained build232 native captures, not new native executions. Family mapping is not semantic equivalence, school compliance, accuracy or recall. No private filenames/content published."
+}

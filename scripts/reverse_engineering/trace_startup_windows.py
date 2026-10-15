@@ -196,7 +196,7 @@ def main():
                             for va,label in [(0x00438dd3,'image_bytes_zip_lookup'),(0x0044405a,'image_bytes_zip_header_read'),(0x00438dd8,'image_bytes_compare'),(0x00438ddf,'image_bytes_emit'),(0x0047c5e7,'image_bytes_report_gate')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                         if drawing_trace:
-                            for va,label in [(0x0047c8fe,'drawing_report_state'),(0x0047c939,'floating_image_emit'),(0x0047d051,'small_labels_report_gate'),(0x0047d05e,'small_labels_emit'),(0x0041d672,'small_label_geometry'),(0x00438805,'drawing_area_geometry'),(0x0041d581,'textbox_overflow_emit'),(0x0041d693,'textbox_small_width_emit'),(0x0041d7a6,'textbox_small_height_emit'),(0x0041d665,'textbox_exclusion_flag'),(0x0041d799,'textbox_autofit_flag')]:
+                            for va,label in [(0x0047c8fe,'drawing_report_state'),(0x0047c939,'floating_image_emit'),(0x0047d051,'small_labels_report_gate'),(0x0047d05e,'small_labels_emit'),(0x0041d672,'small_label_geometry'),(0x00438805,'drawing_area_geometry'),(0x0041d581,'textbox_overflow_emit'),(0x0041d693,'textbox_small_width_emit'),(0x0041d7a6,'textbox_small_height_emit'),(0x0041d665,'textbox_exclusion_flag'),(0x0041d799,'textbox_autofit_flag'),(0x0041d537,'textbox_bounds_compare')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                     if event.u.create.file:k.CloseHandle(event.u.create.file)
                 elif event.code==6:
@@ -232,6 +232,7 @@ def main():
                             if label.startswith('textbox_'):
                                 state=unsigned(context.Ebp-0xbc);hit['textbox_branch_state']={'width_mm':struct.unpack('<f',read(state+0x100,4))[0],'height_mm':struct.unpack('<f',read(state+0x104,4))[0],'small_count_before':signed(state+0x210),'overflow_count_before':signed(state+0x214)}
                                 if label in ['textbox_exclusion_flag','textbox_autofit_flag']:hit['textbox_flags']={'fc':read(context.Eax+0xfc,1)[0],'fe':read(context.Eax+0xfe,1)[0]}
+                                if label=='textbox_bounds_compare':hit['textbox_bounds']={'width_base':struct.unpack('<f',read(context.Ebp-0xcc,4))[0],'height_base':struct.unpack('<f',read(context.Ebp-0xd0,4))[0],'width_addend':5.0,'height_subtrahend':5.0,'width_comparison':'strict_greater','height_comparison':'strict_greater'}
                                 pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
                                 if pixel_hit_counts[label]<128:
                                     pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False

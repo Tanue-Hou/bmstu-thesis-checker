@@ -1,0 +1,135 @@
+{
+  "parent_sha256": "ac064b607bc0b15bed620e9a5ecfb9de527f4b4af0433ef515ee0774f39f0c40",
+  "cases": [
+    {
+      "case": "control",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/control.docx",
+      "sha256": "02bbb9f1cec03086883dc056293b106ada9c6e32d544b92e418594f50dc4a323",
+      "width_mm": 5,
+      "height_mm": 5,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait"
+    },
+    {
+      "case": "widthBelow",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/widthBelow.docx",
+      "sha256": "b7a3753562c43442acef526e91fa82c0ec0028f6ff1c7d8e1e32d754b1ee112f",
+      "width_mm": 176.99,
+      "height_mm": 5,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait"
+    },
+    {
+      "case": "widthEqual",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/widthEqual.docx",
+      "sha256": "bc88a9d3da3324d07d3689e073fb0e361e64f7a7bde6604ff4ef935e394b456f",
+      "width_mm": 177,
+      "height_mm": 5,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait"
+    },
+    {
+      "case": "widthAbove",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/widthAbove.docx",
+      "sha256": "459d5ba32898ee010727f7847353dc7053844b50cc23c180b663584ee8e2d313",
+      "width_mm": 177.01,
+      "height_mm": 5,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait"
+    },
+    {
+      "case": "heightBelow",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/heightBelow.docx",
+      "sha256": "fb3fd31030b56e67d88112006c25058151879face4a60752c6ff38dc6f49dec6",
+      "width_mm": 5,
+      "height_mm": 253.99,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait"
+    },
+    {
+      "case": "heightEqual",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/heightEqual.docx",
+      "sha256": "5423ca403750cada791f46c47563d3c9e9a5b03f50dc14f5d99a7de2e904aa5c",
+      "width_mm": 5,
+      "height_mm": 254,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait"
+    },
+    {
+      "case": "heightAbove",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/heightAbove.docx",
+      "sha256": "506fc8952bd1db2877d9b0b5fe334ed0e7f2a348f14dc48687989808f314867e",
+      "width_mm": 5,
+      "height_mm": 254.01,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait"
+    },
+    {
+      "case": "smallWidthTall",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/smallWidthTall.docx",
+      "sha256": "7ad010e2cb06105aa43d50e4411fd0d6d1ee230070571a7dde26b4260d6f629c",
+      "width_mm": 1,
+      "height_mm": 300,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait"
+    },
+    {
+      "case": "smallHeightWide",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/smallHeightWide.docx",
+      "sha256": "df0c7ac0861bf2c4ab6fa0109aabf292ddb48f956d4343a91e18991c2e284941",
+      "width_mm": 300,
+      "height_mm": 1,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait"
+    },
+    {
+      "case": "positionRight",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/positionRight.docx",
+      "sha256": "7b15ea28ac641eb3a6d896d9d1961b0c034831284fab25453e2e9e6ec2fe9a7a",
+      "width_mm": 5,
+      "height_mm": 5,
+      "left_mm": 300,
+      "top_mm": 0,
+      "orientation": "portrait"
+    },
+    {
+      "case": "positionBelow",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/positionBelow.docx",
+      "sha256": "4d39a27a8a7736887837b14f9344b05b6ab4bbdd4a20ed5c31d666cf2914f8bb",
+      "width_mm": 5,
+      "height_mm": 5,
+      "left_mm": 0,
+      "top_mm": 300,
+      "orientation": "portrait"
+    },
+    {
+      "case": "landscapeWide",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/landscapeWide.docx",
+      "sha256": "39876cea72524283abdb8c2a3a701b9eccc7c971ddd1d8590b657df12a65855c",
+      "width_mm": 250,
+      "height_mm": 5,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "landscape"
+    },
+    {
+      "case": "landscapeTall",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/landscapeTall.docx",
+      "sha256": "a7cb50ad8a97dc02366153ebd255b18a49af0cee83e15beba74437b0a8488918",
+      "width_mm": 5,
+      "height_mm": 200,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "landscape"
+    }
+  ]
+}

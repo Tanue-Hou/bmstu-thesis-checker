@@ -1,0 +1,37 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "39876cea72524283abdb8c2a3a701b9eccc7c971ddd1d8590b657df12a65855c",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 3,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "** Документ содержит плавающие графические фигуры. Встройте фигуры в текст: \" исследования.|||Рисунок 1 — Результаты анализа|X|\", \"следования.|||Рисунок 1 — Результаты анализа|X||X|\", \"дования.|||Рисунок 1 — Результаты анализа|X||X||X|\", \"ания.|||Рисунок 1 — Результаты анализа|X||X||X||X|\", \"я.|||Рисунок 1 — Результаты анализа|X||X||X||X||X|\", \"||Рисунок 1 — Результаты анализа|X||X||X||X||X||X|\", \"исунок 1 — Результаты анализа|X||X||X||X||X||X||X|\", \"нок 1 — Результаты анализа|X||X||X||X||X||X||X||X|\", \" 1 — Результаты анализа|X||X||X||X||X||X||X||X||X|\", \"— Результаты анализа|X||X||X||X||X||X||X||X||X||X|\", \"езультаты анализа|X||X||X||X||X||X||X||X||X||X||X|\"; ."
+    },
+    {
+      "number": 2,
+      "message": "** Документ содержит плавающие надписи. Встройте надписи в текст:\" исследования.|||Рисунок 1 — Результаты анализа|X|\", \"следования.|||Рисунок 1 — Результаты анализа|X||X|\", \"дования.|||Рисунок 1 — Результаты анализа|X||X||X|\", \"ания.|||Рисунок 1 — Результаты анализа|X||X||X||X|\", \"я.|||Рисунок 1 — Результаты анализа|X||X||X||X||X|\", \"||Рисунок 1 — Результаты анализа|X||X||X||X||X||X|\", \"исунок 1 — Результаты анализа|X||X||X||X||X||X||X|\", \"нок 1 — Результаты анализа|X||X||X||X||X||X||X||X|\", \" 1 — Результаты анализа|X||X||X||X||X||X||X||X||X|\", \"— Результаты анализа|X||X||X||X||X||X||X||X||X||X|\", \"езультаты анализа|X||X||X||X||X||X||X||X||X||X||X|\"; ."
+    },
+    {
+      "number": 3,
+      "message": "Документ содержит страницы, размеры полей на которых не соответствуют требованиям."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/textbox-bounds-native-r2/landscapeWide",
+  "trace_sha256": "5045c0c211e5cf73417015122fbadcae149bad258ca325e265a57865985fd90f",
+  "native_text_sha256": "07a0cee93738a31f08575eb8faf9885bcee27bba1b2b18ac91ef123df678ad4f",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "8d828ff5e6cfa44c90e59af4687c4f2545b6bd38d83192ec1c052c41ea8c770a",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "7b15ea28ac641eb3a6d896d9d1961b0c034831284fab25453e2e9e6ec2fe9a7a",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 1,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "** Документ содержит плавающие графические фигуры. Встройте фигуры в текст: \" исследования.|||Рисунок 1 — Результаты анализа|X|\", \"следования.|||Рисунок 1 — Результаты анализа|X||X|\", \"дования.|||Рисунок 1 — Результаты анализа|X||X||X|\", \"ания.|||Рисунок 1 — Результаты анализа|X||X||X||X|\", \"я.|||Рисунок 1 — Результаты анализа|X||X||X||X||X|\", \"||Рисунок 1 — Результаты анализа|X||X||X||X||X||X|\", \"исунок 1 — Результаты анализа|X||X||X||X||X||X||X|\", \"нок 1 — Результаты анализа|X||X||X||X||X||X||X||X|\", \" 1 — Результаты анализа|X||X||X||X||X||X||X||X||X|\", \"— Результаты анализа|X||X||X||X||X||X||X||X||X||X|\", \"езультаты анализа|X||X||X||X||X||X||X||X||X||X||X|\"; ."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/textbox-bounds-native-r2/positionRight",
+  "trace_sha256": "fbbf4996412e3ed654000c967bbd8513933f5b1575120c90ae42c415e0614309",
+  "native_text_sha256": "079ea483c92da3d0a50eb590ff74b469c323dadc18a87e3183dd0fd9640740b1",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "0775f373e470704f9bab507e617da66b9073c17f88e5ce6273fa43a844298edc",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

@@ -29,6 +29,11 @@ PATTERNS={
  'Native.PdfTopMargin':r'размеры верхнего поля',
  'Native.PdfPageNumberPlacement':r'Номер страницы должен находиться',
  'Pic.PixelSizeTooLarge':r'изображени.*(?:16000000|16 000 000)',
+ 'Pic.FloatingImages':r'плавающие рисунки',
+ 'Pic.SmallLabels':r'мелкие надписи',
+ 'Pic.FloatingShapes':r'плавающие графические фигуры',
+ 'Pic.FloatingLabels':r'плавающие надписи',
+ 'Pic.LabelsOutOfBounds':r'надписи, выходящие за границы текста',
 }
 def parse_diagnostics(text,file_type):
     starts=[];expected=1

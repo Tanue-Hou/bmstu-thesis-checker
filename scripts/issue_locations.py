@@ -36,7 +36,7 @@ def locate_finding(f,data,file_type,limit=100):
                 if rule!='Dict.MixedScriptHomoglyphs' and not any(k in match.group().lower() for k in ['ьь','ъъ','ьъ','ъь','щч','шч','жш','чщ']):continue
                 total+=1
                 if len(out)<limit:out.append({**loc,'text_excerpt':match.group(),'character_start':match.start(),'character_end':match.end(),'classification':'candidate_spelling_or_mixed_script_not_intent'})
-    elif rule in {'Pic.SmallLabels','Pic.FloatingShapes','Pic.FloatingLabels'} and (f.get('location') or {}).get('labels'):
+    elif rule in {'Pic.SmallLabels','Pic.FloatingShapes','Pic.FloatingLabels','Pic.LabelsOutOfBounds'} and (f.get('location') or {}).get('labels'):
         selected=set(f['location']['labels'])
         for label in data.get('labels',[]):
             if label['index']+1 not in selected:continue

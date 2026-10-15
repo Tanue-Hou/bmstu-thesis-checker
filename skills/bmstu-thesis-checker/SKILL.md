@@ -10,6 +10,8 @@ The plugin exposes `check_thesis_document`, `check_thesis_folder`, `list_rules`,
 
 ## Scope
 
+For `Pic.LabelsOutOfBounds`, read [dimension bounds evidence](../../docs/NATIVE_TEXTBOX_BOUNDS_232.zh.md). This native diagnostic uses dimension thresholds, not rendered-page overflow or actual school margins. Preserve overflow-before-small-label precedence and separate position exclusions. Only the registered simple single-section A4 DOCX/NKR profile is verified; general shape bounds remain separate coverage gaps. No drawing repair is allowed.
+
 For native232 VML unit or fit differences, read [textbox extension](../../docs/NATIVE_TEXTBOX_232.zh.md). Reproduce native float32 length conversion. Shape-level fit t/true sets effective height10mm and suppresses the small-height path, but small width still counts; the same textbox-layer values did not set the flag in measured inputs. Registered profiles include bounded cm/pt/in/unitless configurations; px/pc remain pending. Preserve declared and native effective geometry separately in locations.
 
 For build232 floating images or textbox diagnostics, read [native drawing evidence](../../docs/NATIVE_DRAWINGS_232.zh.md). Ordinary small body text is not `Pic.SmallLabels`; the proven simple VML predicate uses dimensions below2mm and count above10. Floating image detection also requires native float32 area above500mm2; wrapSquare contributes zero area. Verification is only for the registered narrow DOCX/NKR profiles, with exact evidence/source hashes. Unknown geometry remains unassessed or pending; no finding is not a pass. All drawing repair stays closed.

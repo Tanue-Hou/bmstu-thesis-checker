@@ -1,3 +1,10 @@
+# v0.2.15
+
+- Recover textbox dimension overflow with13 actual native A4 portrait/landscape cases, branch hits and report counters.
+- Add Pic.LabelsOutOfBounds; fix long/narrow textbox small-label false positives by preserving native branch precedence.
+- Separate position exclusion from dimension overflow; add diagnostic family mapping for reconstructed drawing rules.
+- Keep larger/unsupported drawing families pending and all drawing repair closed.
+
 # v0.2.14
 
 - Add32 actual native textbox inputs covering unit boundaries, layer-specific fit, insets, empty/long text and larger rectangles.

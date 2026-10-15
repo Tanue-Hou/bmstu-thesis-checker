@@ -1,0 +1,84 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "slices": {
+    "vml_unit_conversion": {
+      "start_va": "0x41a204",
+      "end_va_exclusive": "0x41a3a2",
+      "instruction_count": 121
+    },
+    "small_label_flags_and_branches": {
+      "start_va": "0x41d645",
+      "end_va_exclusive": "0x41d866",
+      "instruction_count": 119
+    },
+    "overflow_branch": {
+      "start_va": "0x41d581",
+      "end_va_exclusive": "0x41d645",
+      "instruction_count": 43
+    },
+    "dimension_bounds_compare": {
+      "start_va": "0x41d537",
+      "end_va_exclusive": "0x41d581",
+      "instruction_count": 18
+    }
+  },
+  "native_unit_constants": {
+    "pt": {
+      "va": "0x41a3a8",
+      "raw_float32_hex": "4a9fb43e",
+      "multiplier": 0.35277777910232544
+    },
+    "in": {
+      "va": "0x41a3ac",
+      "raw_float32_hex": "3333cb41",
+      "multiplier": 25.399999618530273
+    },
+    "cm": {
+      "va": "0x41a3b0",
+      "raw_float32_hex": "00002041",
+      "multiplier": 10.0
+    },
+    "pc": {
+      "va": "0x41a3b4",
+      "raw_float32_hex": "77778740",
+      "multiplier": 4.233333110809326
+    },
+    "px": {
+      "va": "0x41a3b8",
+      "raw_float32_hex": "1ee1343b",
+      "multiplier": 0.0027600000612437725
+    }
+  },
+  "static_decompilation_provenance": {
+    "path": "evidence/agent-v027/decompilation/provenance.json",
+    "sha256": "3608d1961f95f3ca6ce5c5f7e69d5a08e84b56b5dc2ab7b3531dfa608eae5733"
+  },
+  "analyst_names": {
+    "0041a204": "parse_vml_length_with_native_units",
+    "0041dee0": "dispatch_vml_or_wps_textbox_content",
+    "0041c6ac": "parse_textbox_content_and_update_geometry_diagnostics"
+  },
+  "limits": [
+    "Names are analyst interpretations; float constants and branch instructions are static binary observations.",
+    "Dynamic overflow proof now exists separately in textbox-bounds-native-r1/r2 and the bounds audit; other overflow paths remain unverified.",
+    "px multiplier is native behavior, not a screen DPI conversion."
+  ],
+  "dimension_bounds_constants": {
+    "0x6e51e8": {
+      "raw_hex": "ac000000",
+      "value": 172
+    },
+    "0x6e51ec": {
+      "raw_hex": "03010000",
+      "value": 259
+    },
+    "0x41dc08": {
+      "raw_hex": "00006643",
+      "value": 230.0
+    },
+    "0x41dc10": {
+      "raw_hex": "0000a040",
+      "value": 5.0
+    }
+  }
+}

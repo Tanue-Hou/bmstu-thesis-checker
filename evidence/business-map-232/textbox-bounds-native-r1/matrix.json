@@ -1,0 +1,134 @@
+{
+  "native_build": 232,
+  "work_type": "phd",
+  "cases": [
+    {
+      "case": "control",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/control.docx",
+      "sha256": "02bbb9f1cec03086883dc056293b106ada9c6e32d544b92e418594f50dc4a323",
+      "width_mm": 5,
+      "height_mm": 5,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-bounds-native-r1/control"
+    },
+    {
+      "case": "widthEqual",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/widthEqual.docx",
+      "sha256": "bc88a9d3da3324d07d3689e073fb0e361e64f7a7bde6604ff4ef935e394b456f",
+      "width_mm": 177,
+      "height_mm": 5,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-bounds-native-r1/widthEqual"
+    },
+    {
+      "case": "widthAbove",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/widthAbove.docx",
+      "sha256": "459d5ba32898ee010727f7847353dc7053844b50cc23c180b663584ee8e2d313",
+      "width_mm": 177.01,
+      "height_mm": 5,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 4,
+      "evidence_directory": "evidence/business-map-232/textbox-bounds-native-r1/widthAbove"
+    },
+    {
+      "case": "heightEqual",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/heightEqual.docx",
+      "sha256": "5423ca403750cada791f46c47563d3c9e9a5b03f50dc14f5d99a7de2e904aa5c",
+      "width_mm": 5,
+      "height_mm": 254,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-bounds-native-r1/heightEqual"
+    },
+    {
+      "case": "heightAbove",
+      "input": "evidence/business-map-232/textbox-bounds-inputs-r1/heightAbove.docx",
+      "sha256": "506fc8952bd1db2877d9b0b5fe334ed0e7f2a348f14dc48687989808f314867e",
+      "width_mm": 5,
+      "height_mm": 254.01,
+      "left_mm": 0,
+      "top_mm": 0,
+      "orientation": "portrait",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 4,
+      "evidence_directory": "evidence/business-map-232/textbox-bounds-native-r1/heightAbove"
+    }
+  ],
+  "limits": [
+    "Synthetic VML label and DrawingML anchor cases; no general-shape or PDF equivalence claim."
+  ]
+}

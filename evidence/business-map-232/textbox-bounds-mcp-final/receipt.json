@@ -1,0 +1,65 @@
+{
+  "status": "passed_actual_mcp_with_retained_same_input_native",
+  "server_version": "0.2.15",
+  "cases": [
+    {
+      "case": "widthEqual",
+      "source_sha256": "bc88a9d3da3324d07d3689e073fb0e361e64f7a7bde6604ff4ef935e394b456f",
+      "native_capture": "evidence/business-map-232/textbox-bounds-native-r1/widthEqual",
+      "matched_families": [
+        "Pic.FloatingShapes",
+        "Pic.FloatingLabels"
+      ],
+      "all_four_families_agree": true,
+      "drawing_repair_allowed": false
+    },
+    {
+      "case": "widthAbove",
+      "source_sha256": "459d5ba32898ee010727f7847353dc7053844b50cc23c180b663584ee8e2d313",
+      "native_capture": "evidence/business-map-232/textbox-bounds-native-r1/widthAbove",
+      "matched_families": [
+        "Pic.FloatingShapes",
+        "Pic.FloatingLabels",
+        "Pic.LabelsOutOfBounds"
+      ],
+      "all_four_families_agree": true,
+      "drawing_repair_allowed": false
+    },
+    {
+      "case": "smallWidthTall",
+      "source_sha256": "7ad010e2cb06105aa43d50e4411fd0d6d1ee230070571a7dde26b4260d6f629c",
+      "native_capture": "evidence/business-map-232/textbox-bounds-native-r2/smallWidthTall",
+      "matched_families": [
+        "Pic.FloatingShapes",
+        "Pic.FloatingLabels",
+        "Pic.LabelsOutOfBounds"
+      ],
+      "all_four_families_agree": true,
+      "drawing_repair_allowed": false
+    },
+    {
+      "case": "positionRight",
+      "source_sha256": "7b15ea28ac641eb3a6d896d9d1961b0c034831284fab25453e2e9e6ec2fe9a7a",
+      "native_capture": "evidence/business-map-232/textbox-bounds-native-r2/positionRight",
+      "matched_families": [
+        "Pic.FloatingShapes"
+      ],
+      "all_four_families_agree": true,
+      "drawing_repair_allowed": false
+    },
+    {
+      "case": "landscapeTall",
+      "source_sha256": "a7cb50ad8a97dc02366153ebd255b18a49af0cee83e15beba74437b0a8488918",
+      "native_capture": "evidence/business-map-232/textbox-bounds-native-r2/landscapeTall",
+      "matched_families": [
+        "Pic.FloatingShapes",
+        "Pic.FloatingLabels",
+        "Pic.LabelsOutOfBounds"
+      ],
+      "all_four_families_agree": true,
+      "drawing_repair_allowed": false
+    }
+  ],
+  "raw_response_sha256": "eb599a531967815327c3466ad1369c1cb9b98d0701c2a6f54dea818da88ad665",
+  "limits": "Actual local MCP calls; original runs retained by identical source hash, not rerun here. Four drawing families only, not full report or school equivalence."
+}

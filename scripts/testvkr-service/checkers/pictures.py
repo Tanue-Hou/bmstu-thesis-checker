@@ -102,7 +102,10 @@ class PicturesChecker(BaseChecker):
             ))
 
         if native232_docx:
+            overflow_labels=[l for l in self.doc_data.get('labels',[]) if l.get('overflow_geometry_candidate')]
+            if overflow_labels:findings.append(Finding(code='Pic.LabelsOutOfBounds',module=ModuleType.PICTURES,severity=Severity.MAJOR,message='** Документ содержит надписи, выходящие за границы текста:',location={'labels':[l['index']+1 for l in overflow_labels]},threshold={'count_labels':len(overflow_labels),'measurement':'native width > selected base +5mm OR effective height > selected base -5mm; not rendered page overflow'},skip_switch='SkipTestPic'))
             floating_labels=[l for l in self.doc_data.get('labels',[]) if l.get('position')=='absolute']
             for code,message in [('Pic.FloatingShapes','** Документ содержит плавающие графические фигуры. Встройте фигуры в текст:'),('Pic.FloatingLabels','** Документ содержит плавающие надписи. Встройте надписи в текст:')]:
-                if floating_labels:findings.append(Finding(code=code,module=ModuleType.PICTURES,severity=Severity.MAJOR,message=message,location={'labels':[l['index']+1 for l in floating_labels]},threshold={'count_labels':len(floating_labels),'measurement':'simple absolute VML textboxes; general shapes unimplemented'},skip_switch='SkipTestPic'))
+                selected=[l for l in floating_labels if code!='Pic.FloatingLabels' or l.get('native_position_inside_bounds') is not False]
+                if selected:findings.append(Finding(code=code,module=ModuleType.PICTURES,severity=Severity.MAJOR,message=message,location={'labels':[l['index']+1 for l in selected]},threshold={'count_labels':len(selected),'measurement':'simple absolute VML textboxes; general shapes unimplemented'},skip_switch='SkipTestPic'))
         return findings

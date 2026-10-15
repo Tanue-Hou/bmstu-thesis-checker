@@ -462,6 +462,7 @@ class DocxParser:
         images=self.parse_drawings_and_images()
         labels=vml_textboxes(self.doc.element.body)
         labels_profile=(len(labels)==len(self.doc.element.body.findall('.//{urn:schemas-microsoft-com:vml}shape')) and all(l['geometry_supported'] for l in labels) and not bool(self.doc.element.xpath('.//*[local-name()="txbx"] | .//*[local-name()="group"]')))
+        bounds_profile=(len(labels)==len(self.doc.element.body.findall('.//{urn:schemas-microsoft-com:vml}shape')) and all(l['bounds_geometry_supported'] for l in labels) and not bool(self.doc.element.xpath('.//*[local-name()="txbx"] | .//*[local-name()="group"]')))
         floating_profile=(1<=len(images)<=2 and not labels and all(im['placement'] in {'inline','floating'} and (im['placement']=='inline' or im['wrap_mode'] in {'wrapNone','wrapSquare'}) and im['extension']=='png' and im['png_structure_verified'] and im['png_bit_depth']==8 and im['png_color_type']==2 and im['blip_count']==1 and im['native_display_area_mm2'] is not None and im['ordinary_drawing_geometry_supported'] for im in images) and not bool(self.doc.element.xpath('.//w:pict | .//*[local-name()="AlternateContent"]')))
         bytes_profile=(1<=len(images)<=2 and all(im.get('placement')=='inline' and im.get('extension')=='png' and im.get('png_bit_depth')==8 and im.get('png_color_type')==2 and im.get('png_structure_verified') and im.get('blip_count')==1 and im.get('zip_local_flags') in {0,8} and im.get('zip_compression_method')==8 and not im.get('zip_uses_zip64',True) and not im.get('zip_entry_ambiguous',True) and (im.get('zip_local_uncompressed_size')==im.get('zip_central_uncompressed_size') if im.get('zip_local_flags')==0 else im.get('zip_local_uncompressed_size')==0) for im in images)
                        and not bool(self.doc.element.xpath('.//w:pict | .//w:txbxContent | .//w:object | .//*[local-name()="AlternateContent"]')))
@@ -470,7 +471,7 @@ class DocxParser:
                        and images[0]['width_px']*images[0]['height_px']<2**31
                        and not bool(self.doc.element.xpath('.//w:pict | .//w:txbxContent | .//w:object | .//*[local-name()="AlternateContent"]')))
         return {
-            'labels':labels,'native232_vml_label_profile_supported':labels_profile,'native232_floating_profile_supported':floating_profile,
+            'labels':labels,'native232_vml_label_profile_supported':labels_profile,'native232_vml_bounds_profile_supported':bounds_profile,'native232_floating_profile_supported':floating_profile,
             'native232_image_bytes_profile_supported':bytes_profile,
             'native232_single_inline_png_profile_supported':pixel_profile,
             'native_graduate_scope_supported': not bool(self.doc.element.xpath('.//w:tbl | .//w:drawing | .//w:pict | .//w:txbxContent | .//w:fldSimple | .//w:instrText | .//w:del | .//w:ins | .//w:altChunk | .//w:sdt')),

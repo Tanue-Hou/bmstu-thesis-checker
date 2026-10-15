@@ -101,8 +101,17 @@
   "Pic.SmallLabels": {
     "title_zh": "小尺寸文本框数量异常",
     "explanation_zh": "232已验证简单VML文本框的几何尺寸计数，不是正文小字号或图片OCR。其他版本与形状类型待复核。",
-    "trigger_reason_zh": "在已验证232 DOCX/NKR配置中，小框计数超过10个；宽严格小于2mm，或高严格小于2mm且形状自适应未启用。尺寸按原生单位换算，配置外待复核。",
+    "trigger_reason_zh": "在已验证232 DOCX/NKR配置中，小框计数超过10个；宽严格小于2mm，或高严格小于2mm且形状自适应未启用。尺寸越界优先，越界框不再计入小框；配置外待复核。",
     "fix_suggestion_zh": "按XML/对象定位复核文本框的尺寸和用途，必要时手工调整并复查布局；不要因此批量放大正文字号。",
+    "word_path_zh": "Word选择窗格 -> 对应文本框 -> 形状格式 -> 大小。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Pic.LabelsOutOfBounds": {
+    "title_zh": "文本框尺寸超过原生检查边界",
+    "explanation_zh": "232检查框宽高是否超过选定常数，不等于实际渲染溢出页面，也不是学校边距规定。",
+    "trigger_reason_zh": "受测A4纵向宽>177mm或高>254mm；横向宽>264mm或高>167mm。严格等值不触发，配置外待复核。",
+    "fix_suggestion_zh": "按XML和对象ID查看文本框尺寸，结合实际页面与内容手工复核；不要直接裁切或删除。",
     "word_path_zh": "Word选择窗格 -> 对应文本框 -> 形状格式 -> 大小。",
     "fix_priority": "manual_review",
     "affects_antiplagiarism": false
