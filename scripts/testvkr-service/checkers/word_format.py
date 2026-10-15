@@ -4,6 +4,7 @@ from models.finding import Finding
 from models.enums import Severity, ModuleType
 from config import settings
 from .native_font_counts import count_font_candidates
+from .native_paragraph_counts import count_paragraph_candidates
 
 class WordFormatChecker(BaseChecker):
     def check(self) -> List[Finding]:
@@ -340,14 +341,24 @@ class WordFormatChecker(BaseChecker):
             ))
 
         # Paragraph style violations (threshold > 0)
+        native_paragraph_mode=False
+        if self.doc_data.get('native_build')==232:
+            counts,records,supported=count_paragraph_candidates(self.doc_data)
+            self.doc_data['native_paragraph_counters']=counts;self.doc_data['native_paragraph_candidates']=records
+            self.doc_data['native232_paragraph_profile_supported']=supported
+            native_paragraph_mode=supported
+            if supported:
+                line_spacing_violations=[r['index'] for r in records if r['matches']['line']]
+                left_indent_violations=[r['index'] for r in records if r['matches']['left']]
+                right_indent_violations=[r['index'] for r in records if r['matches']['right']]
         if len(line_spacing_violations) > 0:
             findings.append(Finding(
                 code="Word.LineSpacingInvalid",
                 module=ModuleType.WORD_FORMAT,
                 severity=Severity.INFO,
-                message=f"Междустрочный интервал в абзацах должен быть равен {settings.LINE_SPACING_BODY} строки (в таблицах одинарный):",
-                location={"paragraphs": [i + 1 for i in line_spacing_violations]},
-                threshold={"value": settings.LINE_SPACING_BODY, "unit": "multiplier", "count_paragraphs": len(line_spacing_violations)},
+                message="Междустрочный интервал в абзацах должен быть равен 1,5 строки (в таблицах одинарный):" if native_paragraph_mode else f"Междустрочный интервал в абзацах должен быть равен {settings.LINE_SPACING_BODY} строки (в таблицах одинарный):",
+                location={"native_paragraph_records":line_spacing_violations} if native_paragraph_mode else {"paragraphs": [i + 1 for i in line_spacing_violations]},
+                threshold={"native_line_integer_minimum":180,"comparator":"<","count_paragraphs":len(line_spacing_violations),"native_predicate_supported":True} if native_paragraph_mode else {"value": settings.LINE_SPACING_BODY, "unit": "multiplier", "count_paragraphs": len(line_spacing_violations)},
                 skip_switch="SkipTestWord"
             ))
 
@@ -368,8 +379,8 @@ class WordFormatChecker(BaseChecker):
                 module=ModuleType.WORD_FORMAT,
                 severity=Severity.INFO,
                 message="Левый отступ в абзацах должен быть равен 0 см.:",
-                location={"paragraphs": [i + 1 for i in left_indent_violations]},
-                threshold={"count_paragraphs": len(left_indent_violations)},
+                location={"native_paragraph_records":left_indent_violations} if native_paragraph_mode else {"paragraphs": [i + 1 for i in left_indent_violations]},
+                threshold={"count_paragraphs": len(left_indent_violations),"native_negative_limit_mm":-0.10000000149011612,"native_predicate_supported":True} if native_paragraph_mode else {"count_paragraphs":len(left_indent_violations)},
                 skip_switch="SkipTestWord"
             ))
 
@@ -379,8 +390,8 @@ class WordFormatChecker(BaseChecker):
                 module=ModuleType.WORD_FORMAT,
                 severity=Severity.INFO,
                 message="Правый отступ в абзацах должен быть равен 0 см.:",
-                location={"paragraphs": [i + 1 for i in right_indent_violations]},
-                threshold={"count_paragraphs": len(right_indent_violations)},
+                location={"native_paragraph_records":right_indent_violations} if native_paragraph_mode else {"paragraphs": [i + 1 for i in right_indent_violations]},
+                threshold={"count_paragraphs": len(right_indent_violations),"native_negative_limit_mm":-0.10000000149011612,"native_predicate_supported":True} if native_paragraph_mode else {"count_paragraphs":len(right_indent_violations)},
                 skip_switch="SkipTestWord"
             ))
 
@@ -447,7 +458,7 @@ class WordFormatChecker(BaseChecker):
                     for cp in c.get('paragraphs', []):
                         # Table cell line spacing must be 1.0 (single)
                         line_spacing = cp.get('line_spacing')
-                        if line_spacing is not None and cp.get('line_spacing_type', 'multiplier') == 'multiplier':
+                        if not (self.doc_data.get('native_build')==232 and self.doc_data.get('native232_paragraph_profile_supported')) and line_spacing is not None and cp.get('line_spacing_type', 'multiplier') == 'multiplier':
                             if abs(line_spacing - settings.LINE_SPACING_TABLE) > settings.LINE_SPACING_TOLERANCE:
                                 if len(cp.get('text', '').strip()) > 5:
                                     table_line_spacing_violations += 1

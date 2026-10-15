@@ -122,7 +122,7 @@ Supported options:
 
 ## Useful paths
 
-For build232 DOCX line-spacing or left/right-indent disagreements, consult `docs/NATIVE_PARAGRAPH_INVESTIGATION_232.zh.md`. The read-only experimental `scripts/reverse_engineering/predict_native_paragraphs.py --input <docx> --out <json>` returns three native-derived counters, XML locations and coverage limits without the EXE. Keep it separate from production findings and school requirements; `profile_supported=false` is unresolved coverage, not a pass. The retained 45-run synthetic comparison does not authorize first-line-indent inference, global rule verification or any new automatic repair.
+For build232 DOCX paragraph findings, consult `docs/NATIVE_PARAGRAPH_RULES_232.zh.md`. Production CLI/MCP returns bounded `native_paragraph_observations` and exact XML locations. Native predicates use negative indent<−0.1mm and normalized/truncated line integer<180 after exact-title or61st-paragraph activation; wording is not the comparison expression. Keep school-template suggestions separate. `profile_supported=false` is unresolved coverage, not a pass. General/conditional tables, fields/formulas, PDF and first-line-indent production remain unverified; no new paragraph repair is permitted.
 
 - Rule registry: `scripts/testvkr-service/rules/rules_verified.json`
 - Chinese rule guidance: `scripts/testvkr-service/rules/rule_guidance_zh.json`

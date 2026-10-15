@@ -24,6 +24,15 @@ def locate_finding(f,data,file_type,limit=100):
             total+=1
             if len(out)<limit:
                 loc=r['location'];out.append({**loc,'text_excerpt':r['text'][:140],'actual':r['font_size_pt'],'utf16_units':r['utf16_units'],'previous_textbox_utf16_units':r['previous_textbox_utf16_units'],'content_role':'textbox_text_manual_review' if r['role']=='textbox' else content_role(loc,data)})
+    elif 'native_paragraph_records' in (f.get('location') or {}):
+        selected=set(f['location']['native_paragraph_records'])
+        for r in data.get('native_paragraph_candidates',[]):
+            if r['index'] not in selected:continue
+            total+=1
+            if len(out)<limit:out.append({'kind':'docx_paragraph','part':'word/document.xml','paragraph':r.get('paragraph'),'xml_path':r['xml_path'],
+                'text_excerpt':r['text'][:140],'content_role':'table_text_manual_review' if r['role']=='table' else content_role(r,data),
+                'raw_twips':r['raw_twips'],'resolved_float32_mm':r['resolved_float32'],'native_line_integer':r['line_integer'],
+                'native_activation_ordinal':r['activation_ordinal'],'formatting_sources':r['property_provenance']})
     elif rule in ['Word.FontSizeTooSmall','Word.FontSizeTooLarge','Word.TextColorNotBlack']:
         threshold=(f.get('threshold') or {}).get('value',8 if 'Small' in rule else 18)
         for r,loc in iter_text(data,file_type):

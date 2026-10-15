@@ -1,0 +1,302 @@
+{
+  "status": "passed_actual_mcp_native_paragraph_smoke",
+  "server_version": "0.2.18",
+  "audit_path": "evidence/business-map-232/paragraph-acceptance-r1/audit.json",
+  "cases": [
+    {
+      "case": "control",
+      "work_type": "master",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/control.docx",
+      "source_sha256": "5fa53c26bd0ee5749947ed29fe2043b330090444ab37e05a2bad082d93e8ee63",
+      "native_capture": "evidence/business-map-232/paragraph-native-r1/control",
+      "paragraph_counters_and_verified_xml_findings": {
+        "left": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "right": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "line": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        }
+      },
+      "three_families_match_native_capture": true
+    },
+    {
+      "case": "fallback60",
+      "work_type": "master",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/fallback60.docx",
+      "source_sha256": "d225d685446177cd2a3f5f2e8ca6628da30c19550519671db478d5ad496e9781",
+      "native_capture": "evidence/business-map-232/paragraph-state-native-r1/fallback60",
+      "paragraph_counters_and_verified_xml_findings": {
+        "left": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        },
+        "right": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "line": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        }
+      },
+      "three_families_match_native_capture": true
+    },
+    {
+      "case": "inheritedBoth",
+      "work_type": "master",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/inheritedBoth.docx",
+      "source_sha256": "51f2196546020ddbaaa2cb717fd1b5a7491bd26d3d52e65b155ba573e8c7f89c",
+      "native_capture": "evidence/business-map-232/paragraph-state-native-r1/inheritedBoth",
+      "paragraph_counters_and_verified_xml_findings": {
+        "left": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        },
+        "right": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "line": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        }
+      },
+      "three_families_match_native_capture": true
+    },
+    {
+      "case": "leftNegative6",
+      "work_type": "master",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/leftNegative6.docx",
+      "source_sha256": "af3a2a72860208e9bb233a9f8825cf014ee17b2b23d9d8c038fec4825b6e313a",
+      "native_capture": "evidence/business-map-232/paragraph-branches-native-r2/leftNegative6",
+      "paragraph_counters_and_verified_xml_findings": {
+        "left": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        },
+        "right": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "line": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        }
+      },
+      "three_families_match_native_capture": true
+    },
+    {
+      "case": "line179",
+      "work_type": "master",
+      "input": "evidence/business-map-232/paragraph-inputs-r3/line179.docx",
+      "source_sha256": "b57e97ce3fe0f3331d90a14b0e754494dcc519991d7d9f1ca1da0c6e0a089693",
+      "native_capture": "evidence/business-map-232/paragraph-boundary-native-r1/line179",
+      "paragraph_counters_and_verified_xml_findings": {
+        "left": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "right": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "line": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        }
+      },
+      "three_families_match_native_capture": true
+    },
+    {
+      "case": "tableBoth",
+      "work_type": "master",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/tableBoth.docx",
+      "source_sha256": "98f6f745bf5aa845730d9adfeab210de016b2f9db28f906e778e562e7a928fe0",
+      "native_capture": "evidence/business-map-232/paragraph-state-native-r1/tableBoth",
+      "paragraph_counters_and_verified_xml_findings": {
+        "left": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        },
+        "right": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "line": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        }
+      },
+      "three_families_match_native_capture": true
+    },
+    {
+      "case": "fallback60",
+      "work_type": "phd",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback60.docx",
+      "source_sha256": "d225d685446177cd2a3f5f2e8ca6628da30c19550519671db478d5ad496e9781",
+      "native_capture": "evidence/business-map-232/paragraph-state-phd-native-r1/fallback60",
+      "paragraph_counters_and_verified_xml_findings": {
+        "left": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        },
+        "right": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "line": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        }
+      },
+      "three_families_match_native_capture": true
+    },
+    {
+      "case": "line180",
+      "work_type": "phd",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/line180.docx",
+      "source_sha256": "624ccbc33f48d444fcfaaf0ff0377a4a3a8224e4e3d29f1d8590c7bbf3f49092",
+      "native_capture": "evidence/business-map-232/paragraph-phd-native-r1/line180",
+      "paragraph_counters_and_verified_xml_findings": {
+        "left": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "right": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "line": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        }
+      },
+      "three_families_match_native_capture": true
+    },
+    {
+      "case": "rightNegative6",
+      "work_type": "phd",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/rightNegative6.docx",
+      "source_sha256": "9277f4856854a870ab64e8c0bdfeb59c78d4c1a90d5a31d6d45e1ee30ae55ba4",
+      "native_capture": "evidence/business-map-232/paragraph-phd-native-r1/rightNegative6",
+      "paragraph_counters_and_verified_xml_findings": {
+        "left": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "right": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        },
+        "line": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        }
+      },
+      "three_families_match_native_capture": true
+    },
+    {
+      "case": "tableBoth",
+      "work_type": "phd",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/tableBoth.docx",
+      "source_sha256": "98f6f745bf5aa845730d9adfeab210de016b2f9db28f906e778e562e7a928fe0",
+      "native_capture": "evidence/business-map-232/paragraph-state-phd-native-r1/tableBoth",
+      "paragraph_counters_and_verified_xml_findings": {
+        "left": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        },
+        "right": {
+          "native_counter": 0,
+          "finding_present": false,
+          "verified_positive": false,
+          "xml_occurrences": 0
+        },
+        "line": {
+          "native_counter": 1,
+          "finding_present": true,
+          "verified_positive": true,
+          "xml_occurrences": 1
+        }
+      },
+      "three_families_match_native_capture": true
+    }
+  ],
+  "native_captures": [
+    "evidence/business-map-232/paragraph-native-r1/control",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback60",
+    "evidence/business-map-232/paragraph-state-native-r1/inheritedBoth",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative6",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line179",
+    "evidence/business-map-232/paragraph-state-native-r1/tableBoth",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback60",
+    "evidence/business-map-232/paragraph-phd-native-r1/line180",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightNegative6",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableBoth"
+  ],
+  "raw_response_sha256": "39b3e696e5209e2fb7e80da3574ea64b5075697df8c46cad6fbcb56d1c67a8fc",
+  "private_raw_response": "private_trials/paragraph-mcp-final-r3/responses.jsonl",
+  "limits": "Actual MCP transport for left/right/line only; positive findings required native-build-232 verification scope and exact word/document.xml paragraph locations. Native executions were retained by source hash and were not rerun by this smoke script."
+}

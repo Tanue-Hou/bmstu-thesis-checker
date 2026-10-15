@@ -1,0 +1,12 @@
+Failed to find real location of C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\python.exe
+test_all_68_actual_executions_match_production_and_exact_locations (test_native_paragraphs.NativeParagraphTests.test_all_68_actual_executions_match_production_and_exact_locations) ... ok
+test_complex_formula_cannot_inherit_verified_paragraph_profile (test_native_paragraphs.NativeParagraphTests.test_complex_formula_cannot_inherit_verified_paragraph_profile) ... ok
+test_context_hashes_and_version_format_mode_isolation (test_native_paragraphs.NativeParagraphTests.test_context_hashes_and_version_format_mode_isolation) ... ok
+test_fallback_counts_empty_paragraphs_and_starts_at_61 (test_native_paragraphs.NativeParagraphTests.test_fallback_counts_empty_paragraphs_and_starts_at_61) ... ok
+test_inheritance_direct_override_and_table_ownership (test_native_paragraphs.NativeParagraphTests.test_inheritance_direct_override_and_table_ownership) ... ok
+test_output_omits_full_thesis_text_and_repair_remains_unchanged (test_native_paragraphs.NativeParagraphTests.test_output_omits_full_thesis_text_and_repair_remains_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 64.425s
+
+OK

@@ -1,3 +1,9 @@
+# v0.2.18
+
+- Integrate native232 activation, negative left/right indent and normalized/truncated line-spacing predicates, with exact paragraph XML locations.
+- Validate68 native runs/42 unique inputs, inheritance/override, a single-cell table and1001-paragraph fallback; keep school suggestions separate and unknown profiles pending.
+- Bound observation output to matched metadata; no new automatic repair.
+
 # v0.2.17
 
 - Recover font producer branches, half-point comparisons, UTF16 counters and final >10 report gates using29 native master/NKR DOCX executions.

@@ -489,9 +489,45 @@ class DocxParser:
                        and all(isinstance(images[0].get(k),(int,float)) and images[0][k]>0 for k in ['width_px','height_px'])
                        and images[0]['width_px']*images[0]['height_px']<2**31
                        and not bool(self.doc.element.xpath('.//w:pict | .//w:txbxContent | .//w:object | .//*[local-name()="AlternateContent"]')))
+        native_paragraphs=[];native_paragraph_profile=font_profile and not labels and not images and not bool(self.doc.element.xpath('.//w:tblStyle'))
+        main_paragraphs={p._p:i+1 for i,p in enumerate(self.doc.paragraphs)}
+        for element in self.doc.element.body.iter(qn('w:p')):
+            prop,provenance=self.style_resolver.properties(element)
+            raw={};ind=prop.find(qn('w:ind'));spacing=prop.find(qn('w:spacing'))
+            for key,node,attr in [('left',ind,'left'),('right',ind,'right'),('line',spacing,'line')]:
+                value=node.get(qn('w:'+attr)) if node is not None else None
+                try:raw[key]=int(value) if value is not None else (None if key=='line' else 0)
+                except (TypeError,ValueError):raw[key]=None;native_paragraph_profile=False
+                if raw[key] is not None and not -2147483648<=raw[key]<=2147483647:raw[key]=None;native_paragraph_profile=False
+            if prop.find(qn('w:numPr')) is not None or prop.find(qn('w:tabs')) is not None:native_paragraph_profile=False
+            if any(prop.find(qn('w:'+name)) is not None for name in ['framePr','bidi','textDirection']):native_paragraph_profile=False
+            if spacing is not None and spacing.get(qn('w:lineRule')) not in {None,'auto','exact','atLeast'}:native_paragraph_profile=False
+            if ind is not None and any(k not in {qn('w:'+a) for a in ['left','right','firstLine','hanging']} for k in ind.attrib):native_paragraph_profile=False
+            style_id=self.style_resolver.style_id(element.find(qn('w:pPr')),'pStyle');seen=set()
+            while style_id:
+                if style_id in seen or style_id not in self.style_resolver.styles:native_paragraph_profile=False;break
+                seen.add(style_id);style=self.style_resolver.styles[style_id];parent=style.find(qn('w:basedOn'));style_id=parent.get(qn('w:val')) if parent is not None else None
+            text=''.join(t.text or '' for t in element.findall('.//w:t',NS) if next(t.iterancestors(qn('w:p')),None) is element)
+            if any(c.isspace() and c not in ' \t\r\n' for c in text):native_paragraph_profile=False
+            native_paragraphs.append({'text':text,'xml_path':element.getroottree().getpath(element),'paragraph':main_paragraphs.get(element),
+                                      'role':'table' if element.xpath('ancestor::w:tbl') else 'body','raw_twips':raw,'property_provenance':provenance})
+        # Plain-list fallback has been tested through1001 paragraphs. Inline text
+        # controls before activation may create additional native list entries.
+        activators={'реферат','аннотация','введение','содержание'};activated=False
+        first_activation=next((i+1 for i,r in enumerate(native_paragraphs) if r['text'].strip(' \t\r\n').lower() in activators),None)
+        prior_breaks=0
+        for element,record in zip(self.doc.element.body.iter(qn('w:p')),native_paragraphs):
+            if record['text'].strip(' \t\r\n').lower() in activators:activated=True
+            breaks=element.findall('.//w:br',NS)
+            if element.xpath('.//w:tab | .//w:cr | .//w:sym') or (breaks and (record['text'] or any(b.get(qn('w:type'))!='page' for b in breaks))):native_paragraph_profile=False
+            if not activated and breaks:
+                prior_breaks+=len(breaks)
+                if first_activation is None or first_activation+prior_breaks>60:native_paragraph_profile=False
+        native_paragraph_profile=bool(native_paragraph_profile and len(native_paragraphs)<=1001)
         return {
             'labels':labels,'native232_vml_label_profile_supported':labels_profile,'native232_vml_bounds_profile_supported':bounds_profile,'native232_vml_shape_bounds_profile_supported':shape_bounds_profile,'native232_floating_profile_supported':floating_profile,
             'native232_font_profile_supported':font_profile,
+            'native_paragraph_properties':native_paragraphs,'native232_paragraph_profile_supported':native_paragraph_profile,
             'native232_image_bytes_profile_supported':bytes_profile,
             'native232_single_inline_png_profile_supported':pixel_profile,
             'native_graduate_scope_supported': not bool(self.doc.element.xpath('.//w:tbl | .//w:drawing | .//w:pict | .//w:txbxContent | .//w:fldSimple | .//w:instrText | .//w:del | .//w:ins | .//w:altChunk | .//w:sdt')),

@@ -1,0 +1,68 @@
+{
+  "title": "Static trace of the first-line-indent report counter",
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "scope": "Read-only pseudocode/call-graph review plus bounded disassembly of every function.tsv entry marked decompiled. No target execution.",
+  "sources": {
+    "agent-v027/decompilation/provenance.json": "3608d1961f95f3ca6ce5c5f7e69d5a08e84b56b5dc2ab7b3531dfa608eae5733",
+    "agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "agent-v027/decompilation/functions.tsv": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0",
+    "business-map-232/file-entry-decompilation-r1/function.c": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4",
+    "business-map-232/diagnostic-map-r2/diagnostic-map.json": "a325300fb719105bca7b494ffddc5a9f2579846e3950e6cac24f2444a26ad863"
+  },
+  "report_gate": {
+    "function": "FUN_0047a528",
+    "source": "business-map-232/file-entry-decompilation-r1/function.c",
+    "source_lines": "607-612 and 2055-2078",
+    "parser_base": "local_5e0 = local_74 + 0x158",
+    "gate": "local_5e0[0x51] > 0",
+    "effective_parser_counter_offset": "+0x158 + 4*0x51 = +0x29c",
+    "gate_va": "0x0047ee16",
+    "emit_va": "0x0047ee23",
+    "message_va": "0x006e7930",
+    "message": "Отступ первой строки в абзаце должен быть 1,25 см. (при выравнивании строк а абзаце по центру - 0 см.):"
+  },
+  "input_property_path": {
+    "function": "FUN_0040b198",
+    "pseudocode_lines": "4971-5013",
+    "observed_static_behavior": "Reads w:firstLine and w:hanging and stores the scaled values to param_2+0x1c; the hanging value is negated.",
+    "caller": "FUN_0040e9a8 invokes FUN_0040b198 for w:ind at pseudocode lines 6795-6800.",
+    "limit": "This proves a parsed paragraph property field, not a write to the report counter at parser+0x29c."
+  },
+  "producer_search": {
+    "generic_counter_helper": {
+      "function": "FUN_00403318",
+      "pseudocode_lines": "983-1110",
+      "behavior": "Addresses a report counter through param_1 + param_2*4 + 0x158; increments it by one when param_4 is nonzero, otherwise by text length.",
+      "relevant_known_producer": "FUN_00437374 calls the helper for indices resolved from offsets +0x290, +0x294, +0x298 (lines 28009, 28021, 28034); no +0x29c / index 0x51 branch appears in that function."
+    },
+    "pdf_path_review": {
+      "main_to_pdf": "calls.tsv lists FUN_0047a528 -> FUN_0046ba90; FUN_0046ba90 -> FUN_004645bc.",
+      "reviewed_pdf_function": "FUN_004645bc, pseudocode lines 53318 onward.",
+      "candidate_disposition": "The visible local_2a8+0x29c..+0x2a8 uses at lines 53475-53509 are passed to a four-float formatted parser and then released; the surrounding block handles page metadata including MediaBox. This is not evidence that report counter +0x29c is written.",
+      "literal_offset_check": "Across 10,191 functions.tsv entries marked decompiled, full-entry x86 disassembly found zero memory operands with displacement 0x668. This bounds the exported/disassembled function set; it does not rule out an indirect alias or code outside that set."
+    },
+    "typed_pointer_check": {
+      "search": "Within the decompiled function set, +0xa7 memory-displacement hits were limited to byte-flag access at 006138a0 and 00613cd0; neither is in the paragraph/report call chain. The focused FUN_00437374 producer references typed offsets +0xa4/+0xa5/+0xa6 only.",
+      "conclusion": "No +0xa7-to-counter-0x51 mapping was established."
+    },
+    "common_offset_check": {
+      "result": "Many unrelated structures use +0x144. In FUN_00438304 (pseudocode lines 28244-28633), the +0x144 field participates in geometry/layout calculations on local_78; no connection to the report counter is shown.",
+      "limit": "Offset equality alone is not a type or data-flow link."
+    }
+  },
+  "threshold_role_guard_and_chain": {
+    "status": "not_recovered",
+    "threshold": null,
+    "role_guard": null,
+    "producer_va": null,
+    "known_input_chain": "w:firstLine/w:hanging -> FUN_0040b198 -> paragraph field +0x1c",
+    "known_report_chain": "parser counter +0x29c -> main local_5e0[0x51] > 0 at 0047ee16 -> report emit at 0047ee23",
+    "missing_link": "No producer connecting the parsed +0x1c value to counter +0x29c was identified in this static pass."
+  },
+  "search_boundary": [
+    "No scan of undocumented/undecoded code outside functions.tsv status=decompiled was performed.",
+    "No indirect alias analysis across all pointer flows was performed.",
+    "The first-line producer threshold, role guard and caller chain remain unresolved; no inference is made from absence of direct offsets."
+  ]
+}

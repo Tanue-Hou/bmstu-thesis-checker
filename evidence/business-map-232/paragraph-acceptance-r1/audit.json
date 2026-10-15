@@ -1,0 +1,3201 @@
+{
+  "status": "passed_integrated_native232_paragraph_counters_activation_inheritance_and_table_audit",
+  "native_executions": 68,
+  "unique_input_hashes": 42,
+  "native_modes": {
+    "master": 47,
+    "phd": 21
+  },
+  "cases": [
+    {
+      "case": "control",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/control.docx",
+      "sha256": "5fa53c26bd0ee5749947ed29fe2043b330090444ab37e05a2bad082d93e8ee63",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r1/control",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "single",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/single.docx",
+      "sha256": "fe58fae1b7fda51c0e10d5cca42de9de7873a825d0b08c8e951f3327297a8397",
+      "line": 240,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r1/single",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "noFirst",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/noFirst.docx",
+      "sha256": "cf82372ebf5c530c081ef05df2d5dccc44f56ed8a044017b5ae913ee54101b84",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 0,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r1/noFirst",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "leftOneInch",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/leftOneInch.docx",
+      "sha256": "3c94f35b3266b94a6d257b114bf0bc4b1d7fd246214cbbc722d3ed842c680055",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r1/leftOneInch",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LeftIndentInvalid",
+          "shipped_checker": true,
+          "native": false
+        },
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "rightOneInch",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/rightOneInch.docx",
+      "sha256": "fdb25adb444b8118fa214f85ac856294efd083cffac456026b7551e9185fb82c",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 1440,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r1/rightOneInch",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.RightIndentInvalid",
+          "shipped_checker": true,
+          "native": false
+        },
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "double",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/double.docx",
+      "sha256": "9f2105e4ea25f876b14f180cda3738003d3eca0cd7078b8eb30c3132f6119e28",
+      "line": 480,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/double",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "exact24",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/exact24.docx",
+      "sha256": "d5dcaf820a10085469e68938b29c41153ed8227c2a20303486dd4cbba9d6a144",
+      "line": 480,
+      "line_rule": "exact",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/exact24",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "atLeast24",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/atLeast24.docx",
+      "sha256": "a6b92d7633a9c47752bbcf3a35e0e14be7bfc530593b7930a69bf8405ccec0bd",
+      "line": 480,
+      "line_rule": "atLeast",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/atLeast24",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "firstOneInch",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/firstOneInch.docx",
+      "sha256": "292b90ebf4877a382b7c10b4ccbae5c00e1754d533da1815ce1efa192da3be97",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 1440,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/firstOneInch",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "negativeLeft",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/negativeLeft.docx",
+      "sha256": "a8a6de4dd882d6924e5bc3e38c467e25ce8e880fc7dbc4119d5444756027226a",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/negativeLeft",
+      "independent_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "leftAlign",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/leftAlign.docx",
+      "sha256": "7e4bfb57cf6d50155a61ef2d502dbe88c671c7ef9d7d1b771bf868809ca1145a",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "left",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/leftAlign",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "single40",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/single40.docx",
+      "sha256": "8732627455f405ca16eeb6d92d43f4a001b455672cd6210c6afec804890d42ee",
+      "line": 240,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 40,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/single40",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "single41",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/single41.docx",
+      "sha256": "d66db5bc265d7b0d93151c3ae7c89c3666eae2e6d351e685b107777d0b41e10e",
+      "line": 240,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 41,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/single41",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "control",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/control.docx",
+      "sha256": "5fa53c26bd0ee5749947ed29fe2043b330090444ab37e05a2bad082d93e8ee63",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-producer-discovery-r1/control",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "negativeLeft",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/negativeLeft.docx",
+      "sha256": "a8a6de4dd882d6924e5bc3e38c467e25ce8e880fc7dbc4119d5444756027226a",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-producer-discovery-r1/negativeLeft",
+      "independent_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "control",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/control.docx",
+      "sha256": "5fa53c26bd0ee5749947ed29fe2043b330090444ab37e05a2bad082d93e8ee63",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-branches-native-r2/control",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "single",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/single.docx",
+      "sha256": "fe58fae1b7fda51c0e10d5cca42de9de7873a825d0b08c8e951f3327297a8397",
+      "line": 240,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-branches-native-r2/single",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "negativeLeft",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/negativeLeft.docx",
+      "sha256": "a8a6de4dd882d6924e5bc3e38c467e25ce8e880fc7dbc4119d5444756027226a",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-branches-native-r2/negativeLeft",
+      "independent_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "leftNegative5",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/leftNegative5.docx",
+      "sha256": "67ee1df11d1137f67c5ec8a161429a61764d39b34c028c38d3557f4076ba976a",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -5,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-branches-native-r2/leftNegative5",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "leftNegative6",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/leftNegative6.docx",
+      "sha256": "af3a2a72860208e9bb233a9f8825cf014ee17b2b23d9d8c038fec4825b6e313a",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -6,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-branches-native-r2/leftNegative6",
+      "independent_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LeftIndentInvalid",
+          "shipped_checker": false,
+          "native": true
+        },
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "rightNegative5",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/rightNegative5.docx",
+      "sha256": "c12a7d4459f9387dc10138d9cc9d7cda4af5f574090a768cf2ccea5f3aac4ff1",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": -5,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-branches-native-r2/rightNegative5",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "rightNegative6",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/rightNegative6.docx",
+      "sha256": "9277f4856854a870ab64e8c0bdfeb59c78d4c1a90d5a31d6d45e1ee30ae55ba4",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": -6,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 1,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_right_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-branches-native-r2/rightNegative6",
+      "independent_counters": {
+        "left": 0,
+        "right": 1,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.RightIndentInvalid",
+          "shipped_checker": false,
+          "native": true
+        },
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 1,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "line62",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/line62.docx",
+      "sha256": "18366601233f5e50ba8ca3cf05c392ed845de8d34bd2c2372d4ae471a5f19e94",
+      "line": 62,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-branches-native-r2/line62",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "line63",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/line63.docx",
+      "sha256": "cc6920656cf6dbf39a01a396cedf8e140d8a4e5f970854eca866b282a145467a",
+      "line": 63,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-branches-native-r2/line63",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "line64",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/line64.docx",
+      "sha256": "2b40914c9ab48ed3d5207cd77cbcf6fff00f32f7b6093a7fb0b39f2046023754",
+      "line": 64,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-branches-native-r2/line64",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "line178",
+      "input": "evidence/business-map-232/paragraph-inputs-r3/line178.docx",
+      "sha256": "c2dbc1bda56a3375e79b3f7efb1de05a61cb2d6aedd325ace2b512b14e7725f4",
+      "line": 178,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-boundary-native-r1/line178",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "line179",
+      "input": "evidence/business-map-232/paragraph-inputs-r3/line179.docx",
+      "sha256": "b57e97ce3fe0f3331d90a14b0e754494dcc519991d7d9f1ca1da0c6e0a089693",
+      "line": 179,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-boundary-native-r1/line179",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "line180",
+      "input": "evidence/business-map-232/paragraph-inputs-r3/line180.docx",
+      "sha256": "624ccbc33f48d444fcfaaf0ff0377a4a3a8224e4e3d29f1d8590c7bbf3f49092",
+      "line": 180,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-boundary-native-r1/line180",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "line181",
+      "input": "evidence/business-map-232/paragraph-inputs-r3/line181.docx",
+      "sha256": "7563e886905109f7ea407266411d28002310322277df8eebad3b4b8ea7b7bf39",
+      "line": 181,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-boundary-native-r1/line181",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "preambleNegative",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/preambleNegative.docx",
+      "sha256": "89c49370a362c36e5ad9872eef708c2ea91afbacf2561fa24233fe17a4a0088e",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/paragraph-role-native-r1/preambleNegative",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LeftIndentInvalid",
+          "shipped_checker": true,
+          "native": false
+        },
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "unactivatedNegative",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/unactivatedNegative.docx",
+      "sha256": "a48e60005cc84e63fc2c419642a94584f35f43e20f4d8f855e824ffa1b82f950",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/paragraph-role-native-r1/unactivatedNegative",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LeftIndentInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "shortNegative",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/shortNegative.docx",
+      "sha256": "498e6dc4373476dce186086b3c455b7c6d39adfd6f3a2a90f2316dd76ef8a933",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-role-native-r1/shortNegative",
+      "independent_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "shortLine179",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/shortLine179.docx",
+      "sha256": "dfe9ba56a5ac3034048fd8e74d4870daae8ac0cb083d74fb1289dc10629037b1",
+      "line": 179,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-role-native-r1/shortLine179",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "blankNegative",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/blankNegative.docx",
+      "sha256": "7cff4987dfec4daf8433cc7a30d2e9ec1dfae982df44cdf775ac83c79d88d888",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 0,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/paragraph-role-native-r1/blankNegative",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "control",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/control.docx",
+      "sha256": "5fa53c26bd0ee5749947ed29fe2043b330090444ab37e05a2bad082d93e8ee63",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/paragraph-phd-native-r1/control",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "single",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/single.docx",
+      "sha256": "fe58fae1b7fda51c0e10d5cca42de9de7873a825d0b08c8e951f3327297a8397",
+      "line": 240,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/paragraph-phd-native-r1/single",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "leftOneInch",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/leftOneInch.docx",
+      "sha256": "3c94f35b3266b94a6d257b114bf0bc4b1d7fd246214cbbc722d3ed842c680055",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/paragraph-phd-native-r1/leftOneInch",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LeftIndentInvalid",
+          "shipped_checker": true,
+          "native": false
+        },
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "rightOneInch",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/rightOneInch.docx",
+      "sha256": "fdb25adb444b8118fa214f85ac856294efd083cffac456026b7551e9185fb82c",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 1440,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/paragraph-phd-native-r1/rightOneInch",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.RightIndentInvalid",
+          "shipped_checker": true,
+          "native": false
+        },
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "leftNegative5",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/leftNegative5.docx",
+      "sha256": "67ee1df11d1137f67c5ec8a161429a61764d39b34c028c38d3557f4076ba976a",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -5,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/paragraph-phd-native-r1/leftNegative5",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "leftNegative6",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/leftNegative6.docx",
+      "sha256": "af3a2a72860208e9bb233a9f8825cf014ee17b2b23d9d8c038fec4825b6e313a",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -6,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit"
+      ],
+      "native_diagnostic_count": 12,
+      "evidence_directory": "evidence/business-map-232/paragraph-phd-native-r1/leftNegative6",
+      "independent_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LeftIndentInvalid",
+          "shipped_checker": false,
+          "native": true
+        },
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "rightNegative6",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/rightNegative6.docx",
+      "sha256": "9277f4856854a870ab64e8c0bdfeb59c78d4c1a90d5a31d6d45e1ee30ae55ba4",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": -6,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 1,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_right_report_emit"
+      ],
+      "native_diagnostic_count": 12,
+      "evidence_directory": "evidence/business-map-232/paragraph-phd-native-r1/rightNegative6",
+      "independent_counters": {
+        "left": 0,
+        "right": 1,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.RightIndentInvalid",
+          "shipped_checker": false,
+          "native": true
+        },
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 1,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "line179",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/line179.docx",
+      "sha256": "b57e97ce3fe0f3331d90a14b0e754494dcc519991d7d9f1ca1da0c6e0a089693",
+      "line": 179,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 12,
+      "evidence_directory": "evidence/business-map-232/paragraph-phd-native-r1/line179",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "line180",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/line180.docx",
+      "sha256": "624ccbc33f48d444fcfaaf0ff0377a4a3a8224e4e3d29f1d8590c7bbf3f49092",
+      "line": 180,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/paragraph-phd-native-r1/line180",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "preambleNegative",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/preambleNegative.docx",
+      "sha256": "89c49370a362c36e5ad9872eef708c2ea91afbacf2561fa24233fe17a4a0088e",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/paragraph-phd-native-r1/preambleNegative",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [
+        {
+          "rule_id": "Word.LeftIndentInvalid",
+          "shipped_checker": true,
+          "native": false
+        },
+        {
+          "rule_id": "Word.LineSpacingInvalid",
+          "shipped_checker": true,
+          "native": false
+        }
+      ],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "shortLine179",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/shortLine179.docx",
+      "sha256": "dfe9ba56a5ac3034048fd8e74d4870daae8ac0cb083d74fb1289dc10629037b1",
+      "line": 179,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 1,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 12,
+      "evidence_directory": "evidence/business-map-232/paragraph-phd-native-r1/shortLine179",
+      "independent_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "shipped_checker_differences": [],
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1
+      },
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "fallback58",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/fallback58.docx",
+      "sha256": "d1777ee749c810f46095624430266d9f5bda9669350dbd5ed66d4a79350d6f38",
+      "filler_paragraphs": 58,
+      "role": "plain",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-native-r1/fallback58",
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "fallback59",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/fallback59.docx",
+      "sha256": "191283013796e8f01a753768376a2ac83a19c06fa31c4476f1d701626d8c1e13",
+      "filler_paragraphs": 59,
+      "role": "plain",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-native-r1/fallback59",
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "fallback60",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/fallback60.docx",
+      "sha256": "d225d685446177cd2a3f5f2e8ca6628da30c19550519671db478d5ad496e9781",
+      "filler_paragraphs": 60,
+      "role": "plain",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-native-r1/fallback60",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "fallback61",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/fallback61.docx",
+      "sha256": "acb2615fd173be68c5ef36891924c0695f105d5939f716ba562f9a56b986e1b5",
+      "filler_paragraphs": 61,
+      "role": "plain",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-native-r1/fallback61",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "blankFallback60",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/blankFallback60.docx",
+      "sha256": "dff14df969287ac2012c342bf0fa147648288ea83a591b9b29b689562b4e5f03",
+      "filler_paragraphs": 60,
+      "role": "blank",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-native-r1/blankFallback60",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "exactActivator",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/exactActivator.docx",
+      "sha256": "fbcfe56070aef691e86fbd06c552d24ad8dc7123ee54275590c3189b7fa254fe",
+      "filler_paragraphs": 0,
+      "role": "exact",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-native-r1/exactActivator",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "prefixActivator",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/prefixActivator.docx",
+      "sha256": "b512801ba7870d3e8a13f738aa1397e8d7e4444c3eec3e6d3da465af313b0811",
+      "filler_paragraphs": 0,
+      "role": "prefix",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-native-r1/prefixActivator",
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "inheritedBoth",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/inheritedBoth.docx",
+      "sha256": "51f2196546020ddbaaa2cb717fd1b5a7491bd26d3d52e65b155ba573e8c7f89c",
+      "filler_paragraphs": 0,
+      "role": "style",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-native-r1/inheritedBoth",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "directOverridesStyle",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/directOverridesStyle.docx",
+      "sha256": "30f99cc462d7cc0183dad6ac9b8e274f18ca3ed98bf861d4063e2099046cac89",
+      "filler_paragraphs": 0,
+      "role": "override",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-native-r1/directOverridesStyle",
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "tableBoth",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/tableBoth.docx",
+      "sha256": "98f6f745bf5aa845730d9adfeab210de016b2f9db28f906e778e562e7a928fe0",
+      "filler_paragraphs": 0,
+      "role": "table",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-native-r1/tableBoth",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "tableControl",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r1/tableControl.docx",
+      "sha256": "4de1fea5e99d3b69424db2a785f6729a1ec5de31824f72418a1d6bd8efeeab4e",
+      "filler_paragraphs": 0,
+      "role": "tableControl",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-native-r1/tableControl",
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "fallback100",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback100.docx",
+      "sha256": "1c4cf2a13b1bf15c39598c92003bbe7da4a3714f23ab9ff339d26d7449ed6023",
+      "filler_paragraphs": 100,
+      "role": "plain",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-long-native-r1/fallback100",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "fallback1000",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback1000.docx",
+      "sha256": "9550c0565912f668258587255c0f085241e0e8ee2cccb8516cc979ea11efdf8c",
+      "filler_paragraphs": 1000,
+      "role": "plain",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-long-native-r1/fallback1000",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": true,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "fallback59",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback59.docx",
+      "sha256": "191283013796e8f01a753768376a2ac83a19c06fa31c4476f1d701626d8c1e13",
+      "filler_paragraphs": 59,
+      "role": "plain",
+      "text_utf16_units": 1,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-phd-native-r1/fallback59",
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "fallback60",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback60.docx",
+      "sha256": "d225d685446177cd2a3f5f2e8ca6628da30c19550519671db478d5ad496e9781",
+      "filler_paragraphs": 60,
+      "role": "plain",
+      "text_utf16_units": 1,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-phd-native-r1/fallback60",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "blankFallback60",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/blankFallback60.docx",
+      "sha256": "dff14df969287ac2012c342bf0fa147648288ea83a591b9b29b689562b4e5f03",
+      "filler_paragraphs": 60,
+      "role": "blank",
+      "text_utf16_units": 1,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-phd-native-r1/blankFallback60",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "exactActivator",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/exactActivator.docx",
+      "sha256": "fbcfe56070aef691e86fbd06c552d24ad8dc7123ee54275590c3189b7fa254fe",
+      "filler_paragraphs": 0,
+      "role": "exact",
+      "text_utf16_units": 1,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-phd-native-r1/exactActivator",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "prefixActivator",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/prefixActivator.docx",
+      "sha256": "b512801ba7870d3e8a13f738aa1397e8d7e4444c3eec3e6d3da465af313b0811",
+      "filler_paragraphs": 0,
+      "role": "prefix",
+      "text_utf16_units": 1,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-phd-native-r1/prefixActivator",
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": false,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "inheritedBoth",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/inheritedBoth.docx",
+      "sha256": "51f2196546020ddbaaa2cb717fd1b5a7491bd26d3d52e65b155ba573e8c7f89c",
+      "filler_paragraphs": 0,
+      "role": "style",
+      "text_utf16_units": 1,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-phd-native-r1/inheritedBoth",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "directOverridesStyle",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/directOverridesStyle.docx",
+      "sha256": "30f99cc462d7cc0183dad6ac9b8e274f18ca3ed98bf861d4063e2099046cac89",
+      "filler_paragraphs": 0,
+      "role": "override",
+      "text_utf16_units": 1,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-phd-native-r1/directOverridesStyle",
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "tableBoth",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/tableBoth.docx",
+      "sha256": "98f6f745bf5aa845730d9adfeab210de016b2f9db28f906e778e562e7a928fe0",
+      "filler_paragraphs": 0,
+      "role": "table",
+      "text_utf16_units": 1,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-phd-native-r1/tableBoth",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "tableControl",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/tableControl.docx",
+      "sha256": "4de1fea5e99d3b69424db2a785f6729a1ec5de31824f72418a1d6bd8efeeab4e",
+      "filler_paragraphs": 0,
+      "role": "tableControl",
+      "text_utf16_units": 1,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-phd-native-r1/tableControl",
+      "integrated_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": false,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    },
+    {
+      "case": "fallback1000",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback1000.docx",
+      "sha256": "9550c0565912f668258587255c0f085241e0e8ee2cccb8516cc979ea11efdf8c",
+      "filler_paragraphs": 1000,
+      "role": "plain",
+      "text_utf16_units": 1,
+      "work_type": "phd",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-state-phd-native-r1/fallback1000",
+      "integrated_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1
+      },
+      "three_families_agree": true,
+      "producer_adds_checked": true,
+      "ordinary_property_trace_capped": true,
+      "long_probe_note": "Late anomalous add branches and final counters remain directly observed even when ordinary-property sampling stops."
+    }
+  ],
+  "sources": {
+    "evidence/business-map-232/paragraph-native-r1/matrix.json": "c7c55cffb8b2a9737d9df3110f7aa2d0ef8277fa7cdb3f7bc7524361f3db83d8",
+    "evidence/business-map-232/paragraph-inputs-r1/control.docx": "5fa53c26bd0ee5749947ed29fe2043b330090444ab37e05a2bad082d93e8ee63",
+    "evidence/business-map-232/paragraph-native-r1/control/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-native-r1/control/native-result.txt": "4b5941f8d09b9f8be1b95868bf8b937a391527db105ced32c28e2f9fedaf3d1b",
+    "evidence/business-map-232/paragraph-native-r1/control/report.json": "ea289efcca9d9d3a46d31abf6e1d77615105219ba396f1fa011694da6c19437b",
+    "evidence/business-map-232/paragraph-native-r1/control/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r1/control/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r1/control/trace.json": "fb452cc9bc03241c1d3c0fd5c1da5e2f38097b64f0f2c698b1f87816d7b4f204",
+    "evidence/business-map-232/paragraph-native-r1/control/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-inputs-r1/single.docx": "fe58fae1b7fda51c0e10d5cca42de9de7873a825d0b08c8e951f3327297a8397",
+    "evidence/business-map-232/paragraph-native-r1/single/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-native-r1/single/native-result.txt": "0029b1094a4304f82dc096d2109cadec3454d08b7335c80eaa8186bb3673f364",
+    "evidence/business-map-232/paragraph-native-r1/single/report.json": "2d975610f3f0dfa927b20dfc2105241a6ad60a2e88634ae2a07a8ec957755254",
+    "evidence/business-map-232/paragraph-native-r1/single/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r1/single/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r1/single/trace.json": "2a25850ccd87f1b93e8cd558974658fe888be5b3d868019ee95aa3a6e429684d",
+    "evidence/business-map-232/paragraph-native-r1/single/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-inputs-r1/noFirst.docx": "cf82372ebf5c530c081ef05df2d5dccc44f56ed8a044017b5ae913ee54101b84",
+    "evidence/business-map-232/paragraph-native-r1/noFirst/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-native-r1/noFirst/native-result.txt": "efa81e1f80748d54fa1140b815318a834f803b7b33e532b5fedfdbb5de35ec43",
+    "evidence/business-map-232/paragraph-native-r1/noFirst/report.json": "a4bb906e94010faedc5fcb2a61a68d07174509bc8f09fa71f580ddf164e7b264",
+    "evidence/business-map-232/paragraph-native-r1/noFirst/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r1/noFirst/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r1/noFirst/trace.json": "4cea4d8601f6c93765c9a60d2e392e10d081e39983a0ac6a11387e2fd3100265",
+    "evidence/business-map-232/paragraph-native-r1/noFirst/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-inputs-r1/leftOneInch.docx": "3c94f35b3266b94a6d257b114bf0bc4b1d7fd246214cbbc722d3ed842c680055",
+    "evidence/business-map-232/paragraph-native-r1/leftOneInch/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-native-r1/leftOneInch/native-result.txt": "8930c7813f9e9f1f2cbc27cf68ecf51ac7f31174186539391cafeeb4918ef572",
+    "evidence/business-map-232/paragraph-native-r1/leftOneInch/report.json": "390975dc0bfcc42cb199bc4657c8f7559e5f119a8ca50355ee2a311ca2319f6e",
+    "evidence/business-map-232/paragraph-native-r1/leftOneInch/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r1/leftOneInch/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r1/leftOneInch/trace.json": "6a8a4b7a422c814b48eba08d7b32dfdaf679fef2db01da9be44a2f02e86dc55a",
+    "evidence/business-map-232/paragraph-native-r1/leftOneInch/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-inputs-r1/rightOneInch.docx": "fdb25adb444b8118fa214f85ac856294efd083cffac456026b7551e9185fb82c",
+    "evidence/business-map-232/paragraph-native-r1/rightOneInch/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-native-r1/rightOneInch/native-result.txt": "d47a4ba13a97ed614eafbf6eb70b2136c758cff5d047a87223de05cfdecfec7f",
+    "evidence/business-map-232/paragraph-native-r1/rightOneInch/report.json": "9262ebdfe50ca793e18ecd16faa5a443929faa680e8b19f9ec9713d5d9289989",
+    "evidence/business-map-232/paragraph-native-r1/rightOneInch/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r1/rightOneInch/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r1/rightOneInch/trace.json": "82f4679d7e5aa001beb983fb438456fb082a0d51677a4f38ffcc789f0a8606d7",
+    "evidence/business-map-232/paragraph-native-r1/rightOneInch/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-native-r2/matrix.json": "74e4e458a9f2ae509dbed9322e2da0e3837621a270c32f9a6240171377c66044",
+    "evidence/business-map-232/paragraph-inputs-r1/double.docx": "9f2105e4ea25f876b14f180cda3738003d3eca0cd7078b8eb30c3132f6119e28",
+    "evidence/business-map-232/paragraph-native-r2/double/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-native-r2/double/native-result.txt": "4ae7d10c3f872f3b3d90ccb8cffef29059babdee6566b26dc64a5d534fd7d500",
+    "evidence/business-map-232/paragraph-native-r2/double/report.json": "14a57c20027f5a5ab85fd69a3f8777acf01b98fbffd8d50393e0f55cae5faa9c",
+    "evidence/business-map-232/paragraph-native-r2/double/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r2/double/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r2/double/trace.json": "dde0cb2db84d6db8b408332f56e5af4e8d2bc0f951197afeecf5099af05c345f",
+    "evidence/business-map-232/paragraph-native-r2/double/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-inputs-r1/exact24.docx": "d5dcaf820a10085469e68938b29c41153ed8227c2a20303486dd4cbba9d6a144",
+    "evidence/business-map-232/paragraph-native-r2/exact24/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-native-r2/exact24/native-result.txt": "81dac19974ccaab83387eacbbb868c159aea83aee1b2042ed641f83dbc70e577",
+    "evidence/business-map-232/paragraph-native-r2/exact24/report.json": "383c36c0de03f7c7e37aba99e439be18ca3ce13e3b8f20d5d5ee38be15eecc9e",
+    "evidence/business-map-232/paragraph-native-r2/exact24/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r2/exact24/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r2/exact24/trace.json": "ffd74255050a9109233f4e5867ee8f30983b436af504cdc6480238c114be3b92",
+    "evidence/business-map-232/paragraph-native-r2/exact24/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-inputs-r1/atLeast24.docx": "a6b92d7633a9c47752bbcf3a35e0e14be7bfc530593b7930a69bf8405ccec0bd",
+    "evidence/business-map-232/paragraph-native-r2/atLeast24/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-native-r2/atLeast24/native-result.txt": "88a97cfb781a0654459be7eb825a8e223cc4be7b2d13676b0cfa9adcb99a5597",
+    "evidence/business-map-232/paragraph-native-r2/atLeast24/report.json": "1a1f2f070e87b6e4302d1985429f47d0a0b440d939980da84046eb61181d3e8b",
+    "evidence/business-map-232/paragraph-native-r2/atLeast24/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r2/atLeast24/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r2/atLeast24/trace.json": "9756ea9bc9acbe1dee2acf6cb17ff1a2e213ffdab2aad77fce3d499d2307a120",
+    "evidence/business-map-232/paragraph-native-r2/atLeast24/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-inputs-r1/firstOneInch.docx": "292b90ebf4877a382b7c10b4ccbae5c00e1754d533da1815ce1efa192da3be97",
+    "evidence/business-map-232/paragraph-native-r2/firstOneInch/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-native-r2/firstOneInch/native-result.txt": "3cb81fd49f238a6a90568618b5b0217880f9df67ea89d8208a7c25d6a9ae0cc2",
+    "evidence/business-map-232/paragraph-native-r2/firstOneInch/report.json": "b0ebc83c49372409e1ff9c5f5b803df3b206d359291a8d3abc753765f3915941",
+    "evidence/business-map-232/paragraph-native-r2/firstOneInch/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r2/firstOneInch/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r2/firstOneInch/trace.json": "0d9111cf64dc6dd3f5cd3d5a9233ec0c82cdc743467d080aab89ddfd1f72fe58",
+    "evidence/business-map-232/paragraph-native-r2/firstOneInch/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-inputs-r1/negativeLeft.docx": "a8a6de4dd882d6924e5bc3e38c467e25ce8e880fc7dbc4119d5444756027226a",
+    "evidence/business-map-232/paragraph-native-r2/negativeLeft/collection-length.txt": "e205cb4f54143f20987aa39cc9f69c641a8cc3423acdd5b15012af86f39b1027",
+    "evidence/business-map-232/paragraph-native-r2/negativeLeft/native-result.txt": "5b28cf775888b7ea45d107186830bcf2990717c8f0c1c0c214160735b1e12ba9",
+    "evidence/business-map-232/paragraph-native-r2/negativeLeft/report.json": "40733fd72042045c32f12abcd95d57717c02c84371f031f43072231590520f1f",
+    "evidence/business-map-232/paragraph-native-r2/negativeLeft/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r2/negativeLeft/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r2/negativeLeft/trace.json": "db2d85b50e1174f9a716ccf4a35ec0f62dcae6c5c730bddaed776d7f9edb5bfa",
+    "evidence/business-map-232/paragraph-native-r2/negativeLeft/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-inputs-r1/leftAlign.docx": "7e4bfb57cf6d50155a61ef2d502dbe88c671c7ef9d7d1b771bf868809ca1145a",
+    "evidence/business-map-232/paragraph-native-r2/leftAlign/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-native-r2/leftAlign/native-result.txt": "33cfdfb1b88cff32d7802f654f5f2ee415ef8c64e4608f4bde5d9f46a458c939",
+    "evidence/business-map-232/paragraph-native-r2/leftAlign/report.json": "5fb10eba66642727897871fd0319881115cb0b845c7901616c3812f977330460",
+    "evidence/business-map-232/paragraph-native-r2/leftAlign/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r2/leftAlign/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r2/leftAlign/trace.json": "9cb25345a3c089d9f56927e4e721f1537c2b4b30808c85678badb5c68c3700ab",
+    "evidence/business-map-232/paragraph-native-r2/leftAlign/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-inputs-r1/single40.docx": "8732627455f405ca16eeb6d92d43f4a001b455672cd6210c6afec804890d42ee",
+    "evidence/business-map-232/paragraph-native-r2/single40/collection-length.txt": "ae36b7228b6a9c40121ae5d1f412617d10a5d24fd0c935c507b2f516680e9a2b",
+    "evidence/business-map-232/paragraph-native-r2/single40/native-result.txt": "903e704c91b116dbb415c57c9834aa3a363dff4869bdce190d2ec6d047784c0d",
+    "evidence/business-map-232/paragraph-native-r2/single40/report.json": "11c6e307aa884f4fd138a8a0438577d3483aa34b9b0b8eb5b001b688df09b8cc",
+    "evidence/business-map-232/paragraph-native-r2/single40/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r2/single40/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r2/single40/trace.json": "eb56fa5e30e83c104ed00343b61ec72482c4d3fc29f8427654ddb76f1ca6af43",
+    "evidence/business-map-232/paragraph-native-r2/single40/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-inputs-r1/single41.docx": "d66db5bc265d7b0d93151c3ae7c89c3666eae2e6d351e685b107777d0b41e10e",
+    "evidence/business-map-232/paragraph-native-r2/single41/collection-length.txt": "659f0820ab3468903c4d0250f6d6f56f0ac0b492786d7dcbdf5d8a50585e0609",
+    "evidence/business-map-232/paragraph-native-r2/single41/native-result.txt": "1762db9641c7fe7163a0d47929a2c46ba6462cbaeeabd5f034ec1da3e2c2367d",
+    "evidence/business-map-232/paragraph-native-r2/single41/report.json": "0474bc45891c16acde5bd225b1c4bbbf809dc535784d77f374f9f827c7319dd4",
+    "evidence/business-map-232/paragraph-native-r2/single41/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-native-r2/single41/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-native-r2/single41/trace.json": "41993240be832fa2e5288995482a82270d73c7fd4aaf8bdc8871c242379957af",
+    "evidence/business-map-232/paragraph-native-r2/single41/tracer-source.py.txt": "bf2e2dead90d1cfcd69b4b31a71c43bc8256c6e0a95f4cd044d97a03813a56f0",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/matrix.json": "cb42f2feca9daf906aa25eb8c0375f265d257124842a11249439fba852950a37",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/control/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/control/native-result.txt": "e575dfb2bb28f9537ee03a58a4fff536f7cf7615e24d47659d0234db9762c9b4",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/control/report.json": "f3b7f95d49902f06d574aa5b4f3ce7120c63319f3656353f511e0d9ac551048b",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/control/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/control/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/control/trace.json": "3caa3ac51aa4c1cdcdd790fef1ca9d411761b2f5deaf80757b0ea423807e84b5",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/control/tracer-source.py.txt": "d38a4f9f9e4aaa16ee7b60baecbc8939ca414a6c3e3fceb81be58905d5b3e819",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/negativeLeft/collection-length.txt": "e205cb4f54143f20987aa39cc9f69c641a8cc3423acdd5b15012af86f39b1027",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/negativeLeft/native-result.txt": "54dfcf773a4d582dfec9a0f377a3dffe2375c3b884877ce239d5f71c29a8c33e",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/negativeLeft/report.json": "59352dc3cac0ca6f4d165bb905476de631a2e51f5f6b9807227c2ab4553a9cde",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/negativeLeft/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/negativeLeft/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/negativeLeft/trace.json": "83abee5c60598480a144d2e6b69c475c089832865249fa9a20ce03176f98469f",
+    "evidence/business-map-232/paragraph-producer-discovery-r1/negativeLeft/tracer-source.py.txt": "d38a4f9f9e4aaa16ee7b60baecbc8939ca414a6c3e3fceb81be58905d5b3e819",
+    "evidence/business-map-232/paragraph-branches-native-r2/matrix.json": "d717e78bc0d6c97d61506a7c277bff4db7942d660b8b0e6466e75a9493e7caf4",
+    "evidence/business-map-232/paragraph-inputs-r2/control.docx": "5fa53c26bd0ee5749947ed29fe2043b330090444ab37e05a2bad082d93e8ee63",
+    "evidence/business-map-232/paragraph-branches-native-r2/control/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-branches-native-r2/control/native-result.txt": "b8f30b0f2eb41b2b7602a1027d04e2c609fd73fd8f4f363a1a86661b30a6c58a",
+    "evidence/business-map-232/paragraph-branches-native-r2/control/report.json": "10f990b6b7b5fe011aa16796712e7caf7bf1d810b2db24df049753d1fa757156",
+    "evidence/business-map-232/paragraph-branches-native-r2/control/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-branches-native-r2/control/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-branches-native-r2/control/trace.json": "bde88912bdffbb6a900cd64f69d9aad0966c6e9e233314efda871525dbcdec83",
+    "evidence/business-map-232/paragraph-branches-native-r2/control/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r2/single.docx": "fe58fae1b7fda51c0e10d5cca42de9de7873a825d0b08c8e951f3327297a8397",
+    "evidence/business-map-232/paragraph-branches-native-r2/single/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-branches-native-r2/single/native-result.txt": "dac13a3e9fbd3be2576f68c794a8e2dc31c8746d8bc454e162e9d1507f11ddea",
+    "evidence/business-map-232/paragraph-branches-native-r2/single/report.json": "29b713c540d3e99188f3c5cc349e18c06da0a87d6f042a7685c622ec6fbc4a63",
+    "evidence/business-map-232/paragraph-branches-native-r2/single/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-branches-native-r2/single/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-branches-native-r2/single/trace.json": "389fb9047d663199d8c91622b3af16fcb9f1435a2b802722dab886df035218a5",
+    "evidence/business-map-232/paragraph-branches-native-r2/single/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r2/negativeLeft.docx": "a8a6de4dd882d6924e5bc3e38c467e25ce8e880fc7dbc4119d5444756027226a",
+    "evidence/business-map-232/paragraph-branches-native-r2/negativeLeft/collection-length.txt": "e205cb4f54143f20987aa39cc9f69c641a8cc3423acdd5b15012af86f39b1027",
+    "evidence/business-map-232/paragraph-branches-native-r2/negativeLeft/native-result.txt": "0569b772f16c9194bf8444cec8890b70a23a70878334e39d4f0b93607e461216",
+    "evidence/business-map-232/paragraph-branches-native-r2/negativeLeft/report.json": "7919f5f2b8d024b4597609d2618bbe3242896cd81311837139f5ef8a8fa26927",
+    "evidence/business-map-232/paragraph-branches-native-r2/negativeLeft/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-branches-native-r2/negativeLeft/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-branches-native-r2/negativeLeft/trace.json": "3b9321279122db1528faa2d4c53748ae60305d601157a891a94a77f2218ec240",
+    "evidence/business-map-232/paragraph-branches-native-r2/negativeLeft/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r2/leftNegative5.docx": "67ee1df11d1137f67c5ec8a161429a61764d39b34c028c38d3557f4076ba976a",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative5/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative5/native-result.txt": "0847eb15080971a7a7d4c8480c6c27d209176628ad96434c00ebb6abdc673c1a",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative5/report.json": "e0695f1d7246b7e89551a05e92ed93b243ec1d387394f6c8ef187b5fb1ac6f83",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative5/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative5/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative5/trace.json": "600b2e327670911916bbbf98603bdf731d269682156985879748533c62a2a535",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative5/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r2/leftNegative6.docx": "af3a2a72860208e9bb233a9f8825cf014ee17b2b23d9d8c038fec4825b6e313a",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative6/collection-length.txt": "e205cb4f54143f20987aa39cc9f69c641a8cc3423acdd5b15012af86f39b1027",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative6/native-result.txt": "0df872dbbba6820eda1c6b0b32fa6e820cb169b0f9ef0a7d3685a585147096ab",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative6/report.json": "0fbabda546c05320046605d67f9a1a278c52689bf65b2772f16e7b222194c11d",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative6/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative6/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative6/trace.json": "d78adb4f8dbfcb64481f56638bd81533ad2a2475cbc8cb2bc3be9bb477463fae",
+    "evidence/business-map-232/paragraph-branches-native-r2/leftNegative6/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r2/rightNegative5.docx": "c12a7d4459f9387dc10138d9cc9d7cda4af5f574090a768cf2ccea5f3aac4ff1",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative5/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative5/native-result.txt": "f3d79a2f92f7b6dfe46092c6150fc834d080443fc8059d7ef652f42f4b1707a2",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative5/report.json": "a887bc0d196e558485467508d39ee1bf462a2426271d154dabdc91f1f2345a98",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative5/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative5/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative5/trace.json": "b5382598e2e3d5286b25a35f82fd793aaff54dc27f4fd40c979f8e2cfae6611d",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative5/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r2/rightNegative6.docx": "9277f4856854a870ab64e8c0bdfeb59c78d4c1a90d5a31d6d45e1ee30ae55ba4",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative6/collection-length.txt": "af6f06d593f43b0a8b4216bc924642a38c89c01cad4e1dbede9ed9a715d81dfb",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative6/native-result.txt": "3a3c011c672f168e6d1ad833af6b353a22a5c152f1389edb21177904464185c2",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative6/report.json": "cb40e9c403a838e5543b4396f2795cebf4ddff70450e577bb77949e3411b9fcb",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative6/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative6/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative6/trace.json": "df7fe9b31d007389b34564d6ebc42f83905434afd748544b859b6c996a33941f",
+    "evidence/business-map-232/paragraph-branches-native-r2/rightNegative6/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r2/line62.docx": "18366601233f5e50ba8ca3cf05c392ed845de8d34bd2c2372d4ae471a5f19e94",
+    "evidence/business-map-232/paragraph-branches-native-r2/line62/collection-length.txt": "4ba744009426c43328f7c930169da46e4ab5a198f449e918e8854e9a71d64f72",
+    "evidence/business-map-232/paragraph-branches-native-r2/line62/native-result.txt": "52feb4c0791c64183300c48fc7a97d90019e75e2aee44a99922c168a59da93c5",
+    "evidence/business-map-232/paragraph-branches-native-r2/line62/report.json": "d06e3822e77049592c01043ca0d70e963e684e39b0b53d29bae5871f958ba314",
+    "evidence/business-map-232/paragraph-branches-native-r2/line62/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-branches-native-r2/line62/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-branches-native-r2/line62/trace.json": "26ad8cadfcbe125493100692723d59b7e7da2e7748a09441e1959cafbc61602d",
+    "evidence/business-map-232/paragraph-branches-native-r2/line62/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r2/line63.docx": "cc6920656cf6dbf39a01a396cedf8e140d8a4e5f970854eca866b282a145467a",
+    "evidence/business-map-232/paragraph-branches-native-r2/line63/collection-length.txt": "4ba744009426c43328f7c930169da46e4ab5a198f449e918e8854e9a71d64f72",
+    "evidence/business-map-232/paragraph-branches-native-r2/line63/native-result.txt": "295b5ef533eae63947e277c02272b5e9d41dbb2f0ebebefcb7d9001f728413ab",
+    "evidence/business-map-232/paragraph-branches-native-r2/line63/report.json": "b7756fb0c08ebbddc56d1fe2d510a7ac1dd8c7bf7bd9e7818f442fdca1398761",
+    "evidence/business-map-232/paragraph-branches-native-r2/line63/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-branches-native-r2/line63/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-branches-native-r2/line63/trace.json": "14498f709e0e7d7541d5a0aca009be7305e807c659d1ddffafead5feb4849edb",
+    "evidence/business-map-232/paragraph-branches-native-r2/line63/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r2/line64.docx": "2b40914c9ab48ed3d5207cd77cbcf6fff00f32f7b6093a7fb0b39f2046023754",
+    "evidence/business-map-232/paragraph-branches-native-r2/line64/collection-length.txt": "4ba744009426c43328f7c930169da46e4ab5a198f449e918e8854e9a71d64f72",
+    "evidence/business-map-232/paragraph-branches-native-r2/line64/native-result.txt": "74329599177c60b900ff416c557553320afd9e11b92533bb478ddc04acbde0e0",
+    "evidence/business-map-232/paragraph-branches-native-r2/line64/report.json": "28379caf0114c6293638bfb2c71c9bc46f1020328bbecfd96bf4329a3a338785",
+    "evidence/business-map-232/paragraph-branches-native-r2/line64/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-branches-native-r2/line64/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-branches-native-r2/line64/trace.json": "2bf6fcc60a5b4b1ac2d5b130b04cf59ad31f5a57b3b6ebf35b5db62915a50b10",
+    "evidence/business-map-232/paragraph-branches-native-r2/line64/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-boundary-native-r1/matrix.json": "a745fd163dc35679e84bfd1addd18c59c41f995980a9d1a954d8a92cf0d78f9f",
+    "evidence/business-map-232/paragraph-inputs-r3/line178.docx": "c2dbc1bda56a3375e79b3f7efb1de05a61cb2d6aedd325ace2b512b14e7725f4",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line178/collection-length.txt": "4ba744009426c43328f7c930169da46e4ab5a198f449e918e8854e9a71d64f72",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line178/native-result.txt": "a175e7b8fd8a81b18655d43dccc45f5db950a9a89bf7856400cba7bf8fb28a39",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line178/report.json": "fcb75df6e81c0973a2b2c82b0d81ec8b23e2b027e41ba04f4f76d174b44b22e2",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line178/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line178/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line178/trace.json": "754ad8697f1c65e11d32fffdfc9533e1b0bc2a4434d235e4166b8853658baf2e",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line178/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r3/line179.docx": "b57e97ce3fe0f3331d90a14b0e754494dcc519991d7d9f1ca1da0c6e0a089693",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line179/collection-length.txt": "4ba744009426c43328f7c930169da46e4ab5a198f449e918e8854e9a71d64f72",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line179/native-result.txt": "60d1667f3e3d8dae7e10cf1d07d69c9b6b630eb5b4253ef2c5318884f8a2f4fb",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line179/report.json": "ae188df33ca8b144fa6c9d622df8a2c4bae8fcf00ddafb35b2eecbcd94802797",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line179/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line179/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line179/trace.json": "2f6fa568cda996805da9cae290714f3b15cf0982795343c81b77b7f7c125dac1",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line179/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r3/line180.docx": "624ccbc33f48d444fcfaaf0ff0377a4a3a8224e4e3d29f1d8590c7bbf3f49092",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line180/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line180/native-result.txt": "04a08190cf748a8ba2e7c2f055e70862f6252a4e7d90183e56f35e54bc6c31e9",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line180/report.json": "ded230fd68c28765fcf634a85e38df06d6b42d978903eab5e5ba8b153e48b791",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line180/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line180/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line180/trace.json": "70c826b70721a8aba228450e5bd555efad2f441d676181bff350586fb6f2c888",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line180/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r3/line181.docx": "7563e886905109f7ea407266411d28002310322277df8eebad3b4b8ea7b7bf39",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line181/collection-length.txt": "b36f81c2111c9b77fd090a20474d46035b35c0888cf80050dbf98fb35cd94250",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line181/native-result.txt": "b9da8dd0e06507b37242ac6e5f334c6f84650213126bdd6b31086c50dd69512c",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line181/report.json": "fe50ea3a2f838a81670bdaec23330c408cd19734ce66533402f092092eb8121b",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line181/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line181/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line181/trace.json": "818ce2618dc75ae9caaf81abc4a626e5ca874ffb21882e4814fe79a7a84f136e",
+    "evidence/business-map-232/paragraph-boundary-native-r1/line181/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-role-native-r1/matrix.json": "e332e42d46f47a8c257d9535fdc1277fee5a9b8c521c8583da92a9599d074404",
+    "evidence/business-map-232/paragraph-inputs-r4/preambleNegative.docx": "89c49370a362c36e5ad9872eef708c2ea91afbacf2561fa24233fe17a4a0088e",
+    "evidence/business-map-232/paragraph-role-native-r1/preambleNegative/collection-length.txt": "0e4f57fa376ad30c413796064d9631dbe0f7f51ab1d0f87e6141e2c11e5ce1b2",
+    "evidence/business-map-232/paragraph-role-native-r1/preambleNegative/native-result.txt": "bd8142dd7fff23a4a516f63b16e3f38b474a68f9b1f3bf4ace484c8498728293",
+    "evidence/business-map-232/paragraph-role-native-r1/preambleNegative/report.json": "4f0dce6a6fbe48b955ac4a1dcb7caf4ef26d206c8335cd5f6dce0196762b6cac",
+    "evidence/business-map-232/paragraph-role-native-r1/preambleNegative/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-role-native-r1/preambleNegative/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-role-native-r1/preambleNegative/trace.json": "95756a01f93e11639af986bc2d56a7b4fe4c88e69a2d76f5f0245d08b1f72b0c",
+    "evidence/business-map-232/paragraph-role-native-r1/preambleNegative/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/unactivatedNegative.docx": "a48e60005cc84e63fc2c419642a94584f35f43e20f4d8f855e824ffa1b82f950",
+    "evidence/business-map-232/paragraph-role-native-r1/unactivatedNegative/collection-length.txt": "34cbf3b314a7862d330fb85db35fba8d5fb7ae459f1f7c02e61959bf4d35fee8",
+    "evidence/business-map-232/paragraph-role-native-r1/unactivatedNegative/native-result.txt": "6e98a288db7c266193c31ee0588585c3eea4503a2e3547d71d396b738ee58d00",
+    "evidence/business-map-232/paragraph-role-native-r1/unactivatedNegative/report.json": "8c1b8859e2f5ffe7cc02efbac618b9619decd8390e142decb787a672299ca2bf",
+    "evidence/business-map-232/paragraph-role-native-r1/unactivatedNegative/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-role-native-r1/unactivatedNegative/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-role-native-r1/unactivatedNegative/trace.json": "93d7b8ddab40fa6effab297a52028d94190763aa2b9b2a30598d8c64698ac05c",
+    "evidence/business-map-232/paragraph-role-native-r1/unactivatedNegative/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/shortNegative.docx": "498e6dc4373476dce186086b3c455b7c6d39adfd6f3a2a90f2316dd76ef8a933",
+    "evidence/business-map-232/paragraph-role-native-r1/shortNegative/collection-length.txt": "88e08fdcdc4e8530d05f1bdee7d15e8c78cbc43c8155737b0de822a6dbc062a0",
+    "evidence/business-map-232/paragraph-role-native-r1/shortNegative/native-result.txt": "874192fc6ce0f1b39bdb935b10c3f195768f1e8fd4770bdf0301386dc1638a1b",
+    "evidence/business-map-232/paragraph-role-native-r1/shortNegative/report.json": "a413f477ec3576ae0c4b91627b7fd71b544d78be4ddc98f5ab488c046a68d990",
+    "evidence/business-map-232/paragraph-role-native-r1/shortNegative/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-role-native-r1/shortNegative/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-role-native-r1/shortNegative/trace.json": "6da2d656bbba1c04d9c49ba029d875ac96e54a5d370af90b2c234d7ff0a678d4",
+    "evidence/business-map-232/paragraph-role-native-r1/shortNegative/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/shortLine179.docx": "dfe9ba56a5ac3034048fd8e74d4870daae8ac0cb083d74fb1289dc10629037b1",
+    "evidence/business-map-232/paragraph-role-native-r1/shortLine179/collection-length.txt": "02c5a3b5ae3343a8271cb6f859c3438a7b11fd49a4774c1015c771fe5789877d",
+    "evidence/business-map-232/paragraph-role-native-r1/shortLine179/native-result.txt": "3c6f061df5fc969a931b25e3ef3414996a16d772bdc0d11981305d1d25e4dc94",
+    "evidence/business-map-232/paragraph-role-native-r1/shortLine179/report.json": "9439e652f388db7d5e148258173b1c2e4c4d932ca21b3cd7cc13879453903ac8",
+    "evidence/business-map-232/paragraph-role-native-r1/shortLine179/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-role-native-r1/shortLine179/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-role-native-r1/shortLine179/trace.json": "d640357632ca1bc6bae6ad31d933c85ac15bc82a5e54a027484939efb832b861",
+    "evidence/business-map-232/paragraph-role-native-r1/shortLine179/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/blankNegative.docx": "7cff4987dfec4daf8433cc7a30d2e9ec1dfae982df44cdf775ac83c79d88d888",
+    "evidence/business-map-232/paragraph-role-native-r1/blankNegative/collection-length.txt": "0e4f57fa376ad30c413796064d9631dbe0f7f51ab1d0f87e6141e2c11e5ce1b2",
+    "evidence/business-map-232/paragraph-role-native-r1/blankNegative/native-result.txt": "2d0ee5e9bf259873b75d0aa6897b015233723c93831e1745e484c0acc49fc3ef",
+    "evidence/business-map-232/paragraph-role-native-r1/blankNegative/report.json": "597d6f53a2495e5a72ff850788ae6c5dc394a900a277741a801750b880269686",
+    "evidence/business-map-232/paragraph-role-native-r1/blankNegative/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-role-native-r1/blankNegative/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-role-native-r1/blankNegative/trace.json": "60732159c315f8d220f6c2163fa54bfaaba9f3aa655632535d54e550ba2d6169",
+    "evidence/business-map-232/paragraph-role-native-r1/blankNegative/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-phd-native-r1/matrix.json": "b0056ccd2c1c293ac859775d2938e65a521634c3de751e855694c5a5b3aecde2",
+    "evidence/business-map-232/paragraph-inputs-r4/control.docx": "5fa53c26bd0ee5749947ed29fe2043b330090444ab37e05a2bad082d93e8ee63",
+    "evidence/business-map-232/paragraph-phd-native-r1/control/collection-length.txt": "42450ffe2c937afe38fc3e7770bcbd362e63b6230383e47692c27e1e8d5e9900",
+    "evidence/business-map-232/paragraph-phd-native-r1/control/native-result.txt": "5d6b7cb81c84d0d00def232863536ee917e05c38f539c982ca59091f2879b876",
+    "evidence/business-map-232/paragraph-phd-native-r1/control/report.json": "cd9da4c9c9d7b3e628611aa210ff66cc81937e2480516885fccd57a01b89807c",
+    "evidence/business-map-232/paragraph-phd-native-r1/control/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-phd-native-r1/control/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-phd-native-r1/control/trace.json": "026b6ad0e28f489c5b2f222f261cc5516eb008e9825b5016b6af218050b6ee2b",
+    "evidence/business-map-232/paragraph-phd-native-r1/control/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/single.docx": "fe58fae1b7fda51c0e10d5cca42de9de7873a825d0b08c8e951f3327297a8397",
+    "evidence/business-map-232/paragraph-phd-native-r1/single/collection-length.txt": "42450ffe2c937afe38fc3e7770bcbd362e63b6230383e47692c27e1e8d5e9900",
+    "evidence/business-map-232/paragraph-phd-native-r1/single/native-result.txt": "77b0fe3ecea98ef356c08b883a4db26cc56240320154c556fd0ef75549810949",
+    "evidence/business-map-232/paragraph-phd-native-r1/single/report.json": "5faf24f58c5888023958812dade10fc34c89071f57d1bea8c56afcff1e343998",
+    "evidence/business-map-232/paragraph-phd-native-r1/single/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-phd-native-r1/single/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-phd-native-r1/single/trace.json": "546cbd6c74606b9f5411b141108c541e954f82f714a3dcc0ce1adf5bc4a33b42",
+    "evidence/business-map-232/paragraph-phd-native-r1/single/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/leftOneInch.docx": "3c94f35b3266b94a6d257b114bf0bc4b1d7fd246214cbbc722d3ed842c680055",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftOneInch/collection-length.txt": "42450ffe2c937afe38fc3e7770bcbd362e63b6230383e47692c27e1e8d5e9900",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftOneInch/native-result.txt": "8e82355ed335469bbd0b15044000edcacb332f2d1defba5031fe518e20b0779d",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftOneInch/report.json": "6d58649aa69b5f2c4713a5f2810bd2a6998092d845614fd5952467e85bd36f2c",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftOneInch/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftOneInch/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftOneInch/trace.json": "765372abb6f7980b4e57eeb5be611df7883ddaad4600026909937bc000adcf71",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftOneInch/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/rightOneInch.docx": "fdb25adb444b8118fa214f85ac856294efd083cffac456026b7551e9185fb82c",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightOneInch/collection-length.txt": "42450ffe2c937afe38fc3e7770bcbd362e63b6230383e47692c27e1e8d5e9900",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightOneInch/native-result.txt": "1b32cfae70ae35db1b8daa8075ddad4e6c2567abac09c9b14fbe491008e47cdc",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightOneInch/report.json": "b2b2861480d001da17c7c72e1ba51a0b19f02bd8c131e9f9e56bcdc294565501",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightOneInch/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightOneInch/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightOneInch/trace.json": "882223195cab56c4c6fd190132dd18d95350faa0e6f48b4553cb7edaa9b190e0",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightOneInch/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/leftNegative5.docx": "67ee1df11d1137f67c5ec8a161429a61764d39b34c028c38d3557f4076ba976a",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative5/collection-length.txt": "42450ffe2c937afe38fc3e7770bcbd362e63b6230383e47692c27e1e8d5e9900",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative5/native-result.txt": "cd30976e6098d3d84fa30c97ff06d75788cb63003628c44a88240236eb3e36f5",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative5/report.json": "2ee5a866f870f874c254125022ded24d4f943831ed3064580167f6c990951ee8",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative5/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative5/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative5/trace.json": "13fbfedc93c06b65174749c7bf6837ee5b78906c3b1d794df2fe38e7dcb1e484",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative5/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/leftNegative6.docx": "af3a2a72860208e9bb233a9f8825cf014ee17b2b23d9d8c038fec4825b6e313a",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative6/collection-length.txt": "700b9488f258faffd0dd69b7ffcc5b59745337e4419746b9f3d6ed5d39c2cf9a",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative6/native-result.txt": "cdf62725d61480229f7fe1a4c7cabac2824f1e6df907dc7ba4b127e18512eb08",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative6/report.json": "ca750e317d6d7c18e7f3d2fd48bae967069e014a71048cea41567999a9984d33",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative6/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative6/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative6/trace.json": "e70c1a0777b2a2342e17431c1f2a754bf73470b01e459f75aabfa128d32fef32",
+    "evidence/business-map-232/paragraph-phd-native-r1/leftNegative6/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/rightNegative6.docx": "9277f4856854a870ab64e8c0bdfeb59c78d4c1a90d5a31d6d45e1ee30ae55ba4",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightNegative6/collection-length.txt": "8b3f02346b5cf53b69adcb73070374c7db21f7193434349d1e8c3d04ac451921",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightNegative6/native-result.txt": "174f114537e431ed8b2a6482be6f5f07edb70862f27a9d648f401a820a7ebb71",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightNegative6/report.json": "cf5c6277300651c4a8e4b1d80e32d90cfe78deadcf85cead21335a950bf830ee",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightNegative6/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightNegative6/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightNegative6/trace.json": "537397176ba5a2e8fbff797023bf715a70dd2ae4b52637aef661c76a82be6159",
+    "evidence/business-map-232/paragraph-phd-native-r1/rightNegative6/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/line179.docx": "b57e97ce3fe0f3331d90a14b0e754494dcc519991d7d9f1ca1da0c6e0a089693",
+    "evidence/business-map-232/paragraph-phd-native-r1/line179/collection-length.txt": "1ed957018716f855a03dafcbd96c1d58db845cce132bd62bc9a5975bc5fba84d",
+    "evidence/business-map-232/paragraph-phd-native-r1/line179/native-result.txt": "1f0fbb7da10c0c5c539c95813b500d05ddba02e06192b01036fd11083fe8d501",
+    "evidence/business-map-232/paragraph-phd-native-r1/line179/report.json": "ca409a8b2046bb0393a2afa83e90209c2c7c74cca44a2cd1d0354e981c47d994",
+    "evidence/business-map-232/paragraph-phd-native-r1/line179/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-phd-native-r1/line179/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-phd-native-r1/line179/trace.json": "a03bdc3331c372f08bffc8f299f6da188797d432505e28761f31663074333ed9",
+    "evidence/business-map-232/paragraph-phd-native-r1/line179/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-inputs-r4/line180.docx": "624ccbc33f48d444fcfaaf0ff0377a4a3a8224e4e3d29f1d8590c7bbf3f49092",
+    "evidence/business-map-232/paragraph-phd-native-r1/line180/collection-length.txt": "42450ffe2c937afe38fc3e7770bcbd362e63b6230383e47692c27e1e8d5e9900",
+    "evidence/business-map-232/paragraph-phd-native-r1/line180/native-result.txt": "13375913e1e9151f518ce7006bc720e1936e6108d3c203a2832340bcf9fb3fbf",
+    "evidence/business-map-232/paragraph-phd-native-r1/line180/report.json": "39f10040f8b1486591fc281e7d40217da65ba0f16e5e37db80e8283cb6aef918",
+    "evidence/business-map-232/paragraph-phd-native-r1/line180/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-phd-native-r1/line180/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-phd-native-r1/line180/trace.json": "e77863aeffcb588b176ae09e9703bc8803761c48c6313d26986b6d2107f422eb",
+    "evidence/business-map-232/paragraph-phd-native-r1/line180/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-phd-native-r1/preambleNegative/collection-length.txt": "c4d7b7a8cc4b090f3cab316f344408b516fc1fe9b7c3ef67fba3f95cdc8f3296",
+    "evidence/business-map-232/paragraph-phd-native-r1/preambleNegative/native-result.txt": "899a68a415dab3d25a791595193537dd1cb1702928ef03ed029c610de98be4ad",
+    "evidence/business-map-232/paragraph-phd-native-r1/preambleNegative/report.json": "ea11980a6ec78e5dda954a2e25dac3206eda8649feed38cfe8d15695a81738ef",
+    "evidence/business-map-232/paragraph-phd-native-r1/preambleNegative/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-phd-native-r1/preambleNegative/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-phd-native-r1/preambleNegative/trace.json": "aff0a7fea1704245472ec51bd74e35a323091972729e5a1996485cafa742869e",
+    "evidence/business-map-232/paragraph-phd-native-r1/preambleNegative/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-phd-native-r1/shortLine179/collection-length.txt": "573e742b723cceb1d20d91c83bb950692552a0575ddf8ecf868c08c52be37f02",
+    "evidence/business-map-232/paragraph-phd-native-r1/shortLine179/native-result.txt": "1adcec9f3398b1f9a766b401b1497d1c08a5aa31ef4e88050b26c994d3340363",
+    "evidence/business-map-232/paragraph-phd-native-r1/shortLine179/report.json": "49f0497f4e6182f6a9929fb03e9146eec9330bcb0b5bd508684a87b48fa8d15f",
+    "evidence/business-map-232/paragraph-phd-native-r1/shortLine179/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-phd-native-r1/shortLine179/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-phd-native-r1/shortLine179/trace.json": "87182cbcb729196d0c2c4cd1f8df989f831daeb82cf5219e0ec44bf05225c233",
+    "evidence/business-map-232/paragraph-phd-native-r1/shortLine179/tracer-source.py.txt": "35e0c9f4b615db025fe036ed69218c0143ba180f134a57342f8dafccd116fa78",
+    "evidence/business-map-232/paragraph-state-native-r1/matrix.json": "b074d77fbcca6a23c12920dd9c143301a1355565fad077b8ac5a86116ffc2108",
+    "evidence/business-map-232/paragraph-long-native-r1/matrix.json": "757beb28dbb1787756eb927ed25c67b2475b23368d4c092586c76c6a7a578af6",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/matrix.json": "15e802d8f127d340aebeac494c1b1c4b77be97817865f7fd87d64a2ee19f0eb7",
+    "evidence/business-map-232/paragraph-state-inputs-r1/fallback58.docx": "d1777ee749c810f46095624430266d9f5bda9669350dbd5ed66d4a79350d6f38",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback58/collection-length.txt": "34cbf3b314a7862d330fb85db35fba8d5fb7ae459f1f7c02e61959bf4d35fee8",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback58/native-result.txt": "68cd966d58b317a1cd3b5522ee6921e1a6ad1ba466cd75beb29030e2a890ceb0",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback58/report.json": "ac10546321572cf24ec9c616f0d87361eb671408c7d352b1fd2369b6a3e00875",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback58/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback58/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback58/trace.json": "77fe47058af74f7eb066fa10247171d9e1a8fe8b27c7a4026948a546a87b1c38",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback58/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r1/fallback59.docx": "191283013796e8f01a753768376a2ac83a19c06fa31c4476f1d701626d8c1e13",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback59/collection-length.txt": "34cbf3b314a7862d330fb85db35fba8d5fb7ae459f1f7c02e61959bf4d35fee8",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback59/native-result.txt": "c85d19ddc9f632d9835e62e294658bcd08e753758bce5edab8900d88e63a6682",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback59/report.json": "5b0b35764b816a528b67f5cac4015b11ea610db858f6e4b87f6a8dfd19545e87",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback59/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback59/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback59/trace.json": "221be2e6dc47f2a96d67860b459a4b3b612f949d35b2ad7806f809add41e764a",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback59/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r1/fallback60.docx": "d225d685446177cd2a3f5f2e8ca6628da30c19550519671db478d5ad496e9781",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback60/collection-length.txt": "c4d7b7a8cc4b090f3cab316f344408b516fc1fe9b7c3ef67fba3f95cdc8f3296",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback60/native-result.txt": "04efd9113398863c0b3c3326c9d0334bb6418d1cfd2a7e6d54f4d80b7c3ca976",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback60/report.json": "17e1dd5735380b05d2ccafa4e1e658fdba7bc8fcd15ba4ea460eb1af392757d3",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback60/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback60/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback60/trace.json": "c504b88cb8a4d574a75071efcd237f5de3c455fa5d93f8bafd6af2e5d6a475a8",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback60/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r1/fallback61.docx": "acb2615fd173be68c5ef36891924c0695f105d5939f716ba562f9a56b986e1b5",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback61/collection-length.txt": "c4d7b7a8cc4b090f3cab316f344408b516fc1fe9b7c3ef67fba3f95cdc8f3296",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback61/native-result.txt": "e599f822bfb121d387da94e652be40444d1a0be47ae88467f855bae8718d80bc",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback61/report.json": "e1eaf4458f53f6f1fb91404742ac53ccc5da14d099b2a442ba2cfa219e64d59a",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback61/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback61/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback61/trace.json": "a4c6d514cf1741a571561f757f2309c083f50c0fcccf4dcbca91676f153264d8",
+    "evidence/business-map-232/paragraph-state-native-r1/fallback61/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r1/blankFallback60.docx": "dff14df969287ac2012c342bf0fa147648288ea83a591b9b29b689562b4e5f03",
+    "evidence/business-map-232/paragraph-state-native-r1/blankFallback60/collection-length.txt": "41b48d64dc888f0bca47841e7a977c3eb63fac7772d808edbcb479c6f1523a7b",
+    "evidence/business-map-232/paragraph-state-native-r1/blankFallback60/native-result.txt": "ecd04cb826ddd6a59ae8866eacc78712b1931a6b2719c8ef56173249c91282a1",
+    "evidence/business-map-232/paragraph-state-native-r1/blankFallback60/report.json": "11af4952375d20e8b3f9513d45a9ee9b53abb6f29ce431192a0b1a2631af0074",
+    "evidence/business-map-232/paragraph-state-native-r1/blankFallback60/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-state-native-r1/blankFallback60/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-native-r1/blankFallback60/trace.json": "bc623d412a04d82311b7c9f309d8e6ccbe416984b90a91876ecbe7ac33b0e4bd",
+    "evidence/business-map-232/paragraph-state-native-r1/blankFallback60/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r1/exactActivator.docx": "fbcfe56070aef691e86fbd06c552d24ad8dc7123ee54275590c3189b7fa254fe",
+    "evidence/business-map-232/paragraph-state-native-r1/exactActivator/collection-length.txt": "f87ead2e62c12cb16f840c9b17a92e6366e2c2c1ccea556606b62fff4d61e6c3",
+    "evidence/business-map-232/paragraph-state-native-r1/exactActivator/native-result.txt": "a5593fe08d451c8001e1d9b49a78786a160c2505b6c2059a530d89815ecf7993",
+    "evidence/business-map-232/paragraph-state-native-r1/exactActivator/report.json": "e465a225ef6af51e06fe02d9c1ff90ab3193d4634354012b866c8da769bd6e84",
+    "evidence/business-map-232/paragraph-state-native-r1/exactActivator/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-state-native-r1/exactActivator/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-native-r1/exactActivator/trace.json": "f92f5386d50e76c6e4515901e88be08be9cfd38427cda4abc0fa5bed6340c0c8",
+    "evidence/business-map-232/paragraph-state-native-r1/exactActivator/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r1/prefixActivator.docx": "b512801ba7870d3e8a13f738aa1397e8d7e4444c3eec3e6d3da465af313b0811",
+    "evidence/business-map-232/paragraph-state-native-r1/prefixActivator/collection-length.txt": "34cbf3b314a7862d330fb85db35fba8d5fb7ae459f1f7c02e61959bf4d35fee8",
+    "evidence/business-map-232/paragraph-state-native-r1/prefixActivator/native-result.txt": "6a75b4c194152d30f101aa7fcc08d40be6f7611b10516a6167799ddeb9a60306",
+    "evidence/business-map-232/paragraph-state-native-r1/prefixActivator/report.json": "ef820606d891faa7bf101bd4caea2d2e4555299edff493021a31240bee698050",
+    "evidence/business-map-232/paragraph-state-native-r1/prefixActivator/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-state-native-r1/prefixActivator/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-native-r1/prefixActivator/trace.json": "350b93009b5bb80edfcd676a5715d6347610337c56935ec7bca6a23dc54270dc",
+    "evidence/business-map-232/paragraph-state-native-r1/prefixActivator/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r1/inheritedBoth.docx": "51f2196546020ddbaaa2cb717fd1b5a7491bd26d3d52e65b155ba573e8c7f89c",
+    "evidence/business-map-232/paragraph-state-native-r1/inheritedBoth/collection-length.txt": "f87ead2e62c12cb16f840c9b17a92e6366e2c2c1ccea556606b62fff4d61e6c3",
+    "evidence/business-map-232/paragraph-state-native-r1/inheritedBoth/native-result.txt": "9f7e7224342b040241b1eca3f6d1d4ff22e1e64c0ac8f6b31241ebd9ed2a3a77",
+    "evidence/business-map-232/paragraph-state-native-r1/inheritedBoth/report.json": "221adad2e2a80021998fedb5c8d0b5382a53e0c01ac8f07af9513a8fcf5d0923",
+    "evidence/business-map-232/paragraph-state-native-r1/inheritedBoth/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-state-native-r1/inheritedBoth/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-native-r1/inheritedBoth/trace.json": "2fd102f2dfbb3a316ea2ac76d5adf928c9a3304b01a418a64f80b2d0a2877049",
+    "evidence/business-map-232/paragraph-state-native-r1/inheritedBoth/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r1/directOverridesStyle.docx": "30f99cc462d7cc0183dad6ac9b8e274f18ca3ed98bf861d4063e2099046cac89",
+    "evidence/business-map-232/paragraph-state-native-r1/directOverridesStyle/collection-length.txt": "e1adbfc09de3f0b0eccb3e60e7520cb52a0e915aff4ff51d95cc329dfb21c3e8",
+    "evidence/business-map-232/paragraph-state-native-r1/directOverridesStyle/native-result.txt": "e28c596a398f1075fb5d8372682b98f8acc5517ef60ad1b0cd44b006edd74753",
+    "evidence/business-map-232/paragraph-state-native-r1/directOverridesStyle/report.json": "a41c9825cdd60b2a804e4cae313cfce485e0195f386677eed0b5bda58151b8f5",
+    "evidence/business-map-232/paragraph-state-native-r1/directOverridesStyle/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-state-native-r1/directOverridesStyle/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-native-r1/directOverridesStyle/trace.json": "d59850a8b70941cefb547ccbc18e4b06b630e7813d71854569fee3c0663aa556",
+    "evidence/business-map-232/paragraph-state-native-r1/directOverridesStyle/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r1/tableBoth.docx": "98f6f745bf5aa845730d9adfeab210de016b2f9db28f906e778e562e7a928fe0",
+    "evidence/business-map-232/paragraph-state-native-r1/tableBoth/collection-length.txt": "f87ead2e62c12cb16f840c9b17a92e6366e2c2c1ccea556606b62fff4d61e6c3",
+    "evidence/business-map-232/paragraph-state-native-r1/tableBoth/native-result.txt": "bdc7f7b0a6d8a0c0b02209c4ea8ebc3cfa4862a6e33bc54a756955c54e55a24e",
+    "evidence/business-map-232/paragraph-state-native-r1/tableBoth/report.json": "24fa70b0804c7f73781ea0a2faa92955a9a10e2ba1607106bc3b2a1cbbb9f0f7",
+    "evidence/business-map-232/paragraph-state-native-r1/tableBoth/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-state-native-r1/tableBoth/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-native-r1/tableBoth/trace.json": "9af5bc1a6a3a9fa9d113ca78e1dd52597d5603b01d8e179b3b1aba6517f4b5b6",
+    "evidence/business-map-232/paragraph-state-native-r1/tableBoth/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r1/tableControl.docx": "4de1fea5e99d3b69424db2a785f6729a1ec5de31824f72418a1d6bd8efeeab4e",
+    "evidence/business-map-232/paragraph-state-native-r1/tableControl/collection-length.txt": "e1adbfc09de3f0b0eccb3e60e7520cb52a0e915aff4ff51d95cc329dfb21c3e8",
+    "evidence/business-map-232/paragraph-state-native-r1/tableControl/native-result.txt": "17f349bed7f1da2967d741dfa2f98df977c59390d70b511a446d9be4b239bce1",
+    "evidence/business-map-232/paragraph-state-native-r1/tableControl/report.json": "c521be3566674dc5eb04fa43b5e6665a42fa243ab2d18ac7b059b06570c44371",
+    "evidence/business-map-232/paragraph-state-native-r1/tableControl/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-state-native-r1/tableControl/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-native-r1/tableControl/trace.json": "971371b00b9a26fb68ba35e93a0aa7287fba2abc07c1eb6ac13e151e4db30208",
+    "evidence/business-map-232/paragraph-state-native-r1/tableControl/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r2/fallback100.docx": "1c4cf2a13b1bf15c39598c92003bbe7da4a3714f23ab9ff339d26d7449ed6023",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback100/collection-length.txt": "c4d7b7a8cc4b090f3cab316f344408b516fc1fe9b7c3ef67fba3f95cdc8f3296",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback100/native-result.txt": "0e634f46f31c2a4c5f07d50ccd84489e47319b3598bf184331c41b933cbdc68f",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback100/report.json": "8cc900c77758b304d9c46ea2870b50fc16f6c1de499a40d9bdb810e2cb0925d5",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback100/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback100/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback100/trace.json": "637bca647f2df07687b655f90bdc439f494bfe767adac42485828c6f2cca3d54",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback100/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r2/fallback1000.docx": "9550c0565912f668258587255c0f085241e0e8ee2cccb8516cc979ea11efdf8c",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback1000/collection-length.txt": "c4d7b7a8cc4b090f3cab316f344408b516fc1fe9b7c3ef67fba3f95cdc8f3296",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback1000/native-result.txt": "354c2b006442d59a89032dc10bb66ffbccf225758b09e2553444e902e2f19021",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback1000/report.json": "366df0050c5c4041a233608d4aae48ff2cf69430666fe2234470a36ea1745aaf",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback1000/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback1000/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback1000/trace.json": "d29f243d144a289f657a0f08d5fa11abf38acb30e0a68ed155a20c8d19a56eda",
+    "evidence/business-map-232/paragraph-long-native-r1/fallback1000/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r2/fallback59.docx": "191283013796e8f01a753768376a2ac83a19c06fa31c4476f1d701626d8c1e13",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback59/collection-length.txt": "0da43803159f31f07a76adb531220427ac82a2d54f6e6556263272aa50a9c4c6",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback59/native-result.txt": "663128fd306c961595b84611be992221b813207230936a4ad9cad918b31050be",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback59/report.json": "dbb64d01b65297cd02913539f58e46ea3a872398dc035f3ea1f2218af36473d9",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback59/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback59/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback59/trace.json": "d553c57bc86ec0df1077483b89564454b706a8c7d8c4fd4423577ce3e45def4f",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback59/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r2/fallback60.docx": "d225d685446177cd2a3f5f2e8ca6628da30c19550519671db478d5ad496e9781",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback60/collection-length.txt": "136a9d71acd3f8cd403bbbb2607f2c97f74a6b728ef9f6381c0bcce4888c0136",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback60/native-result.txt": "c73d197b7c3e83e3ad583a8d314caacc56fb138ba280fdb19006e513812859fa",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback60/report.json": "7fc96efd11990c0cc0f721cc9c60f7bad046225461b1ab10d50ac36e0a5813b4",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback60/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback60/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback60/trace.json": "6ee1fd1edb22614667adb4d4aba222c7e3f713b480ccbc39b10f4f8fb3c459b3",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback60/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r2/blankFallback60.docx": "dff14df969287ac2012c342bf0fa147648288ea83a591b9b29b689562b4e5f03",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/blankFallback60/collection-length.txt": "11f57b8fbf5c010976ab04919afffc9680f7493dd5abae85b1618445cdfda53a",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/blankFallback60/native-result.txt": "0b3d29264b7c6e71b746bae5d368fd606b5d92861cac1b74216aa40bf1a1a0b2",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/blankFallback60/report.json": "9d8f33ead49a11542d24bfdd08d2f3185058583c7e2b67d6bb79e244e2d06840",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/blankFallback60/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/blankFallback60/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/blankFallback60/trace.json": "cb4982867ba59b8f9542f472d16c1185ec2504fd5db2b24f2d7b4183d44ff64c",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/blankFallback60/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r2/exactActivator.docx": "fbcfe56070aef691e86fbd06c552d24ad8dc7123ee54275590c3189b7fa254fe",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/exactActivator/collection-length.txt": "4fbbb2a02910149075f513be7014606bb209860a873e98000f45ed33b5d6722c",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/exactActivator/native-result.txt": "175de7f0a091e2fdad198418a9ad35b6d79df1a63730dfbf75e60a43a0a69d40",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/exactActivator/report.json": "ee5b0d5edf8f0c9305488048896bd9cac522dacadf1d6680ebcd64f46ad699e3",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/exactActivator/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/exactActivator/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/exactActivator/trace.json": "85e66c955ed30662f6fce13c3e6067ddf4ff3c43dd8e665e50e15259c04712bd",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/exactActivator/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r2/prefixActivator.docx": "b512801ba7870d3e8a13f738aa1397e8d7e4444c3eec3e6d3da465af313b0811",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/prefixActivator/collection-length.txt": "0da43803159f31f07a76adb531220427ac82a2d54f6e6556263272aa50a9c4c6",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/prefixActivator/native-result.txt": "7aa7969b90417b4a1bb5fe15dbb6e930edce46ace97ad78a76af4c84f7946f37",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/prefixActivator/report.json": "49ff3d748796743e9a68c321271f3a0c89a227319df6c9201967efcb59a7602d",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/prefixActivator/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/prefixActivator/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/prefixActivator/trace.json": "2a083db0335ca077c2deb221e3ea552142cb221fb862712821b80fc1ea9a5f2c",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/prefixActivator/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r2/inheritedBoth.docx": "51f2196546020ddbaaa2cb717fd1b5a7491bd26d3d52e65b155ba573e8c7f89c",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/inheritedBoth/collection-length.txt": "4fbbb2a02910149075f513be7014606bb209860a873e98000f45ed33b5d6722c",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/inheritedBoth/native-result.txt": "66ec4b2ef7a5ae9e9dc2779c6fbbba91bfcdad54ef47b8606cf3d0f5c345d9bd",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/inheritedBoth/report.json": "9b06a6b9b02f3bc5d78e5ba4df35075c141730a9779f07d2eb8f848b4a0784d6",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/inheritedBoth/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/inheritedBoth/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/inheritedBoth/trace.json": "7a80e7850472d8a6e116da33c62cd91a01771c1cf86a37383e4162c0759ce844",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/inheritedBoth/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r2/directOverridesStyle.docx": "30f99cc462d7cc0183dad6ac9b8e274f18ca3ed98bf861d4063e2099046cac89",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/directOverridesStyle/collection-length.txt": "528037778e7c4ad46b032400e876514722b256e40fbca642cc8ae4cb810a466e",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/directOverridesStyle/native-result.txt": "aefd72efa49121c8c0aaa501c02d55e3435cef085e07fe6f93745310467624d7",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/directOverridesStyle/report.json": "3be4d717f569b95cc111f1f025b4822d98b5df0069401adc08957ddf50c5465c",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/directOverridesStyle/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/directOverridesStyle/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/directOverridesStyle/trace.json": "890817d4bca7bbe42830d58335e6e07da110af5ab7a693530204643268c45abb",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/directOverridesStyle/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r2/tableBoth.docx": "98f6f745bf5aa845730d9adfeab210de016b2f9db28f906e778e562e7a928fe0",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableBoth/collection-length.txt": "4fbbb2a02910149075f513be7014606bb209860a873e98000f45ed33b5d6722c",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableBoth/native-result.txt": "e3e0231b59b9fc3c305bf8cafe623442bf0495f8a4e5d8d29a7fd2579ab58870",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableBoth/report.json": "a00555be9d3f28fdb2cea7e7d00336a1bc0d00c831b6006d49058d54e804952c",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableBoth/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableBoth/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableBoth/trace.json": "3fc6ee2897c797476f79bb2ce8ad74132da47c5f0433834cb44a56816e442c5f",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableBoth/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-inputs-r2/tableControl.docx": "4de1fea5e99d3b69424db2a785f6729a1ec5de31824f72418a1d6bd8efeeab4e",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableControl/collection-length.txt": "528037778e7c4ad46b032400e876514722b256e40fbca642cc8ae4cb810a466e",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableControl/native-result.txt": "6395a7d0893763f19ee9b429138474aa292bd8327cde4c9c4c7a5d5d43b10b93",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableControl/report.json": "77ace7e274b4be5b13244db98a2cbf1cf162e418ca90ced58cdeb4a3cadc3a88",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableControl/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableControl/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableControl/trace.json": "12888f0425eb9e1b567110df13504ade9ff2718cb24400b213aee6f7b99228b2",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/tableControl/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback1000/collection-length.txt": "136a9d71acd3f8cd403bbbb2607f2c97f74a6b728ef9f6381c0bcce4888c0136",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback1000/native-result.txt": "aa341affc8989fac79f800c21182ba2f5ad2ee6c37fc28e2aad4961c4dc09099",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback1000/report.json": "7fa35cbdbf883137f499e0529f76d093767266182f73eb8728d36a87e7f59885",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback1000/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback1000/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback1000/trace.json": "226c8378d347e95eb8cc3a1ff62cc660201fd5bc873ed69455e58f0f4a311226",
+    "evidence/business-map-232/paragraph-state-phd-native-r1/fallback1000/tracer-source.py.txt": "a4cd446849d522c4cc1e187657b6ed6f8bc61b72334dd0bf679916c0d7d371b0"
+  },
+  "repair_permission_expanded": false,
+  "limits": [
+    "Synthetic inputs and repeated baselines, not real-paper accuracy or school-compliance evidence.",
+    "Plain-list fallback tested through1001 paragraphs; inherited/direct properties and one single-cell table tested.",
+    "General tables, fields, formulas, textboxes, numbering styles, pre-activation table state and PDF remain unverified.",
+    "First-line-indent producer remains unresolved; this audit covers only three buckets."
+  ]
+}

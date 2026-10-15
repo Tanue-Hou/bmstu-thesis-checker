@@ -1,0 +1,24 @@
+Failed to find real location of C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\python.exe
+test_character_based_on (test_regression.RegressionTests.test_character_based_on) ... ok
+test_direct_override_triggers (test_regression.RegressionTests.test_direct_override_triggers) ... ok
+test_doc_defaults (test_regression.RegressionTests.test_doc_defaults) ... ok
+test_exact_spacing_keeps_units (test_regression.RegressionTests.test_exact_spacing_keeps_units) ... ok
+test_explicit_hidden_false (test_regression.RegressionTests.test_explicit_hidden_false) ... ok
+test_font_size_boundaries (test_regression.RegressionTests.test_font_size_boundaries) ... ok
+test_font_upper_boundary (test_regression.RegressionTests.test_font_upper_boundary) ... ok
+test_image_area_not_width (test_regression.RegressionTests.test_image_area_not_width) ... ok
+test_image_guess_disabled (test_regression.RegressionTests.test_image_guess_disabled) ... ok
+test_inherited_matches_direct (test_regression.RegressionTests.test_inherited_matches_direct) ... ok
+test_mcp_rule_metadata_matches_runtime (test_regression.RegressionTests.test_mcp_rule_metadata_matches_runtime) ... ok
+test_mcp_stdio_protocol (test_regression.RegressionTests.test_mcp_stdio_protocol) ... ok
+test_partial_spacing_attributes_inherit (test_regression.RegressionTests.test_partial_spacing_attributes_inherit) ... ok
+test_registry_does_not_claim_original_verification (test_regression.RegressionTests.test_registry_does_not_claim_original_verification) ... ok
+test_report_preserves_runtime_message_and_evidence_status (test_regression.RegressionTests.test_report_preserves_runtime_message_and_evidence_status) ... ok
+test_table_inherits (test_regression.RegressionTests.test_table_inherits) ... ok
+test_verification_does_not_transfer_to_pdf_or_other_work_type (test_regression.RegressionTests.test_verification_does_not_transfer_to_pdf_or_other_work_type) ... ok
+test_zero_margin_is_not_missing (test_regression.RegressionTests.test_zero_margin_is_not_missing) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 2.816s
+
+OK

@@ -1,0 +1,47 @@
+{
+  "build": 232,
+  "cases": [
+    {
+      "case": "fallback100",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback100.docx",
+      "sha256": "1c4cf2a13b1bf15c39598c92003bbe7da4a3714f23ab9ff339d26d7449ed6023",
+      "filler_paragraphs": 100,
+      "role": "plain",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-long-native-r1/fallback100"
+    },
+    {
+      "case": "fallback1000",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback1000.docx",
+      "sha256": "9550c0565912f668258587255c0f085241e0e8ee2cccb8516cc979ea11efdf8c",
+      "filler_paragraphs": 1000,
+      "role": "plain",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit",
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-long-native-r1/fallback1000"
+    }
+  ]
+}

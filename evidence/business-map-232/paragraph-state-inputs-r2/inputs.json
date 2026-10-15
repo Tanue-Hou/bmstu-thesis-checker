@@ -1,0 +1,109 @@
+{
+  "parent_sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+  "cases": [
+    {
+      "case": "fallback58",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback58.docx",
+      "sha256": "d1777ee749c810f46095624430266d9f5bda9669350dbd5ed66d4a79350d6f38",
+      "filler_paragraphs": 58,
+      "role": "plain",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "fallback59",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback59.docx",
+      "sha256": "191283013796e8f01a753768376a2ac83a19c06fa31c4476f1d701626d8c1e13",
+      "filler_paragraphs": 59,
+      "role": "plain",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "fallback60",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback60.docx",
+      "sha256": "d225d685446177cd2a3f5f2e8ca6628da30c19550519671db478d5ad496e9781",
+      "filler_paragraphs": 60,
+      "role": "plain",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "fallback61",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback61.docx",
+      "sha256": "acb2615fd173be68c5ef36891924c0695f105d5939f716ba562f9a56b986e1b5",
+      "filler_paragraphs": 61,
+      "role": "plain",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "blankFallback60",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/blankFallback60.docx",
+      "sha256": "dff14df969287ac2012c342bf0fa147648288ea83a591b9b29b689562b4e5f03",
+      "filler_paragraphs": 60,
+      "role": "blank",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "exactActivator",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/exactActivator.docx",
+      "sha256": "fbcfe56070aef691e86fbd06c552d24ad8dc7123ee54275590c3189b7fa254fe",
+      "filler_paragraphs": 0,
+      "role": "exact",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "prefixActivator",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/prefixActivator.docx",
+      "sha256": "b512801ba7870d3e8a13f738aa1397e8d7e4444c3eec3e6d3da465af313b0811",
+      "filler_paragraphs": 0,
+      "role": "prefix",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "inheritedBoth",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/inheritedBoth.docx",
+      "sha256": "51f2196546020ddbaaa2cb717fd1b5a7491bd26d3d52e65b155ba573e8c7f89c",
+      "filler_paragraphs": 0,
+      "role": "style",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "directOverridesStyle",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/directOverridesStyle.docx",
+      "sha256": "30f99cc462d7cc0183dad6ac9b8e274f18ca3ed98bf861d4063e2099046cac89",
+      "filler_paragraphs": 0,
+      "role": "override",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "tableBoth",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/tableBoth.docx",
+      "sha256": "98f6f745bf5aa845730d9adfeab210de016b2f9db28f906e778e562e7a928fe0",
+      "filler_paragraphs": 0,
+      "role": "table",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "tableControl",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/tableControl.docx",
+      "sha256": "4de1fea5e99d3b69424db2a785f6729a1ec5de31824f72418a1d6bd8efeeab4e",
+      "filler_paragraphs": 0,
+      "role": "tableControl",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "fallback100",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback100.docx",
+      "sha256": "1c4cf2a13b1bf15c39598c92003bbe7da4a3714f23ab9ff339d26d7449ed6023",
+      "filler_paragraphs": 100,
+      "role": "plain",
+      "text_utf16_units": 1
+    },
+    {
+      "case": "fallback1000",
+      "input": "evidence/business-map-232/paragraph-state-inputs-r2/fallback1000.docx",
+      "sha256": "9550c0565912f668258587255c0f085241e0e8ee2cccb8516cc979ea11efdf8c",
+      "filler_paragraphs": 1000,
+      "role": "plain",
+      "text_utf16_units": 1
+    }
+  ]
+}

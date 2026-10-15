@@ -203,6 +203,8 @@ def main():
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                         if a.paragraph_trace:
                             addr=base+0x3318;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,'paragraph_bucket_add')
+                            for va,label in [(0x00437abd,'paragraph_activation_count'),(0x00437ae2,'paragraph_activation_gate')]:
+                                addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                             for va,label in [(0x00437b69,'paragraph_properties'),(0x00437b7a,'paragraph_left_compare'),(0x00437bd0,'paragraph_left_add'),(0x00437bf6,'paragraph_right_compare'),(0x00437c4c,'paragraph_right_add'),(0x00437c8e,'paragraph_line_compare'),(0x00437cf7,'paragraph_line_add')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                             for va,label in [(0x0047eac2,'paragraph_left_report_gate'),(0x0047ebde,'paragraph_right_report_gate'),(0x0047ecfa,'paragraph_line_report_gate'),(0x0047ee16,'paragraph_first_report_gate'),(0x0047eacf,'paragraph_left_report_emit'),(0x0047ebeb,'paragraph_right_report_emit'),(0x0047ed07,'paragraph_line_report_emit'),(0x0047ee23,'paragraph_first_report_emit')]:
@@ -263,6 +265,10 @@ def main():
                                     parser=unsigned(context.Ebp-0x88);style=unsigned(context.Ebp-0x90)
                                     hit['paragraph_property_state']={name:struct.unpack('<f',read(style+offset,4))[0] for name,offset in [('left',0x10),('right',8),('first',0x1c),('line',0x20)]}
                                     hit['paragraph_property_state'].update({'enabled_11d':read(parser+0x11d,1)[0],'parser':hex(parser),'style':hex(style),'prior_text':unicode_object(context.Ebp-0x1c) if unsigned(context.Ebp-0x1c) else {'length':0,'prefix':''},'rounded_line_candidate':signed(context.Ebp-0xb8) if label=='paragraph_line_compare' else None})
+                                    if label.startswith('paragraph_activation_'):
+                                        text_object=unsigned(context.Ebp-0x8c)
+                                        hit['paragraph_property_state']['input_text']=unicode_object(text_object) if text_object and unsigned(text_object) else {'length':0,'prefix':''}
+                                        if label=='paragraph_activation_count':hit['paragraph_property_state']['native_paragraph_count']=context.Eax
                                     pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
                                     if pixel_hit_counts[label]<128:
                                         pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False

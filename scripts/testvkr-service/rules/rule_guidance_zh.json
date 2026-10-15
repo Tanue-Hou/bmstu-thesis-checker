@@ -10,11 +10,27 @@
   },
   "Word.LineSpacingInvalid": {
     "title_zh": "行距不符合要求",
-    "explanation_zh": "正文段落应使用 1.5 倍行距，表格内文字通常应使用单倍行距。",
-    "trigger_reason_zh": "检测到段落或表格单元格的行距与目标值不一致。",
-    "fix_suggestion_zh": "正文统一设为 1.5 倍行距；表格内文字统一设为单倍行距。",
+    "explanation_zh": "需区分原程序触发条件与学校正文/表格行距政策；二者不能互相替代。",
+    "trigger_reason_zh": "已验证的232 DOCX路径比较行距换算并向零截断后的整数是否<180，且受检查启用与非空文本门限制；原文1.5行提示不等于实际相等比较。其它配置以验证状态为准。",
+    "fix_suggestion_zh": "先核对命中位置和正式学校要求，再调整正文/表格行距；不能仅为消除程序提示而把全文改成阈值。",
     "word_path_zh": "开始 -> 段落 -> 行和段落间距；或右键段落 -> 段落 -> 行距。",
     "fix_priority": "must_fix",
+    "affects_antiplagiarism": false
+  },
+  "Word.LeftIndentInvalid": {
+    "title_zh": "左缩进异常",
+    "explanation_zh": "原程序提示左缩进应为0，但已验证的232 DOCX实际只对小于约−0.1mm的负缩进计数。",
+    "trigger_reason_zh": "float32换算后的左缩进严格<−0.10000000149mm，且段落检查已启用、文本非空。正缩进不是此原生分支的触发条件。",
+    "fix_suggestion_zh": "核对XML定位与学校模板，避免把正文、引用或表格的正缩进统一清零。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
+  "Word.RightIndentInvalid": {
+    "title_zh": "右缩进异常",
+    "explanation_zh": "需区分原生异常负缩进检查与学校的左右缩进政策。",
+    "trigger_reason_zh": "受测232 DOCX中，float32右缩进严格<−0.10000000149mm且检查启用/文本非空才计数；−5twips不报、−6twips报。",
+    "fix_suggestion_zh": "按具体段落或单元格的来源属性复核，未经学校模板确认不批量清除缩进。",
+    "fix_priority": "manual_review",
     "affects_antiplagiarism": false
   },
   "Word.FontSizeTooSmall": {
