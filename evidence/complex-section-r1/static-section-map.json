@@ -1,0 +1,88 @@
+{
+  "schema": "native232-complex-section-static-map-r1",
+  "target": {
+    "path_from_workspace_root": "runtime/TestVkr232.exe",
+    "sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+    "architecture": "Windows x86"
+  },
+  "verified_source_sha256": {
+    "implementation/evidence/agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "implementation/evidence/agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "implementation/evidence/business-map-232/file-entry-decompilation-r1/function.c": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4",
+    "implementation/scripts/reverse_engineering/trace_startup_windows.py": "7204a79d330bb971d21a74c3ddb5290e2ae54bc9de10601746c993d9ac0f7646",
+    "implementation/scripts/testvkr-service/checkers/native_section_counts.py": "0a15646b7c2b76237e8792fc304b26d39b8b25daa95a6119eb72b982879a18b0"
+  },
+  "static_call_chain": [
+    {
+      "caller": "FUN_0047a528",
+      "callee": "FUN_0043dd1c",
+      "source": "file-entry-decompilation-r1/function.c:611",
+      "behavior": "DOCX branch passes the document parser object as param_1"
+    },
+    {
+      "caller": "FUN_0043dd1c",
+      "callee": "FUN_0043c408",
+      "source": "agent-v027/decompilation/recovered_pseudocode.c:31014",
+      "behavior": "Document XML parsing path"
+    },
+    {
+      "caller": "FUN_0043c408",
+      "callee": "FUN_0040b31c",
+      "source": "agent-v027/decompilation/recovered_pseudocode.c:30418",
+      "native_call_va": "0x0043ccc6",
+      "native_call_bytes": "e851e6fcff",
+      "behavior": "Reached in the w:sectPr branch after excluding w:sectPrChange"
+    }
+  ],
+  "section_state": {
+    "getter": {
+      "function": "FUN_0040c770",
+      "entry_va": "0x0040c770",
+      "source_line": 5691,
+      "record_expression": "*param_1 + param_2 * 0x34"
+    },
+    "record_fields": {
+      "header_distance": "record + 0x28",
+      "footer_distance": "record + 0x2c"
+    },
+    "counter_producer": {
+      "function": "FUN_0040b31c",
+      "entry_va": "0x0040b31c",
+      "counter_offset": "parser + 0x28c",
+      "source_lines": [5476, 5481],
+      "behavior": "Each out-of-tolerance comparison increments the same parser counter"
+    }
+  },
+  "main_report_binding": {
+    "function": "FUN_0047a528",
+    "report_count_slot_index": "0x4d",
+    "report_source_line": 1789,
+    "gate_va": "0x0047e293",
+    "gate_instruction_bytes": "83b93401000000",
+    "gate_instruction": "cmp dword ptr [ecx + 0x134], 0",
+    "pointer_load_va": "0x0047e28d",
+    "pointer_load_bytes": "8b8d24faffff",
+    "pointer_load": "mov ecx, dword ptr [ebp - 0x5dc]",
+    "docx_report_counter_base_assignment": {
+      "function_source_line": 608,
+      "pointer_slot": "[ebp - 0x5dc]",
+      "expression": "parser + 0x158",
+      "native_address_of_add": "0x0047ad46",
+      "native_add_immediate": "0x158"
+    },
+    "static_alias_arithmetic": "(parser + 0x158) + (0x4d * 4) = parser + 0x28c",
+    "trace_reading_at_gate": {
+      "report_counter_base": "unsigned(EBP - 0x5dc), which dereferences the stack slot to obtain its stored pointer",
+      "observed_register_pointer": "ECX; at 0x0047e293 it should equal the report counter base",
+      "count": "signed(ECX + 0x134), equivalently signed(parser + 0x28c) for the DOCX branch",
+      "dynamic_alias_validation": "At the gate compare the dereferenced [EBP-0x5dc] with parser_base+0x158, ECX with that pointer, and the values at ECX+0x134 and parser_base+0x28c. This equality is a static address derivation until observed in a trace."
+    }
+  },
+  "scope_and_unknowns": [
+    "Recovered calls.tsv lists FUN_0043c408 as the only direct caller of FUN_0040b31c; FUN_0043dd1c is the direct caller of FUN_0043c408.",
+    "The recovered path shows the producer under the main document parser's w:sectPr handling. Table, OMML, image, and chart-specific routines are not listed as direct callers of the producer.",
+    "The producer reads section header/footer distance fields and stores header/footer reference relationship IDs; this static path does not establish that header/footer story bodies are parsed through this producer.",
+    "No dynamic hit at 0x0047e293 is included in this map. Counter address alias is statically derived; runtime equality at the final report gate remains to be captured.",
+    "No claim is made that supported section-count checking generalizes to multi-section stories, tables, OMML, images, or charts."
+  ]
+}

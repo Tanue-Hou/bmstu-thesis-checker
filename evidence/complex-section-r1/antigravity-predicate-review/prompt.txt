@@ -1,0 +1,43 @@
+只读独立复核。只使用下面给出的技术摘要和代码。不要执行代码、查看本机文件、调用外部资料或修改任何文件。请用简短中文回答，并分开写“已给证据 / 推断 / 未知”。重点回答：
+1. 若要把此单显式 section 距离谓词扩展到复杂 stories、tables、OMML、images、charts，需要哪些最小而有辨识力的证据，才能证明入口、section继承/作用域、计数语义与最终报告路径？
+2. 最终 counter alias 的动态核验方案有哪些不足或边界？建议报告门命中时应同时验证哪些指针和值关系？
+3. 明确哪些问题仅凭当前代码/静态摘要仍不能回答。意见不是执行证据，也不要给出未经证据支持的功能范围声明。
+
+技术摘要：Native232 Windows x86 原生section距离逻辑将twips乘以float32因子(raw 0x3c907f6e)并存成float32，然后以float32的12.5与±float32(0.2)比较（端点包含）；整数698..720被接受。section parser在header/footer各失配时对parser+0x28c执行一次INC。主报告门在VA 0x0047e293比较[ECX+0x134]，正值时生成一条信息。DOCX主报告数组指针静态设为parser+0x158，因此0x158+0x134=0x28c。到门时原生指令先从[EBP-0x5dc]加载ECX；该栈槽应先解引用取得指针。现有trace脚本没有安装0x0047e293门断点；动态确认应核对栈槽解引用值、ECX、parser_base+0x158，以及parser_base+0x28c与ECX+0x134两处计数值。
+
+下面是 native_section_counts.py 的完整源码：
+```python"""Native232 finite explicit-section distance predicate; independent of school policy."""
+import struct
+
+TWIPS_TO_MM = struct.unpack('<f', bytes.fromhex('6e7f903c'))[0]
+TOLERANCE_MM = struct.unpack('<f', bytes.fromhex('cdcc4c3e'))[0]
+EXPECTED_MM = 12.5
+
+
+def f32(value):
+    return struct.unpack('<f', struct.pack('<f', value))[0]
+
+
+def count_section_distance_candidates(data):
+    sections = []
+    known_count = 0
+    supported = bool(data.get('native232_section_distances_supported'))
+    supported = supported and len(data.get('sections', [])) == 1
+    for index, section in enumerate(data.get('sections', []), 1):
+        fields = {}
+        path = section.get('xml_path')
+        for name in ('header', 'footer'):
+            twips = section.get('native_distances_twips', {}).get(name)
+            valid = isinstance(twips, int) and not isinstance(twips, bool) and 0 <= twips <= 1440
+            supported = supported and valid
+            actual = f32(twips * TWIPS_TO_MM) if valid else None
+            mismatch = not (EXPECTED_MM - TOLERANCE_MM <= actual <= EXPECTED_MM + TOLERANCE_MM) if valid else None
+            known_count += int(mismatch is True)
+            fields[name] = {'twips': twips, 'actual_mm': actual, 'mismatch': mismatch,
+                            'attribute_xml_path': path + '/w:pgMar/@w:' + name if path else None}
+        sections.append({'section': index, 'xml_path': path, 'fields': fields})
+    return {'supported': supported, 'count': known_count if supported else None,
+            'known_mismatch_count': known_count, 'sections': sections,
+            'expected_mm': EXPECTED_MM, 'tolerance_mm': TOLERANCE_MM,
+            'limits': 'Native232 single explicit ordinary DOCX section, integer distances 0..1440 twips. Unsupported profiles are unassessed, not a pass. This is not school compliance or repair permission.'}
+```

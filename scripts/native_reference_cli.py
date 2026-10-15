@@ -114,6 +114,7 @@ def main():
     source=resolved(a.input);binary=resolved(a.native_exe)
     if source.suffix.lower() not in {'.docx','.pdf'}:raise ValueError('Native harness accepts DOCX/PDF only')
     file_type=source.suffix.lower()[1:]
+    if a.trace_sections and file_type!='docx':raise ValueError('Section predicate tracing currently requires DOCX')
     if sha(binary)!=IDENTITY:raise ValueError('Unsupported native build; re-identify before execution')
     if not 5<=a.timeout<=30:raise ValueError('Timeout must be between5 and30 seconds')
     original_hash=sha(source)

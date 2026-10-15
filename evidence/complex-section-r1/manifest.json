@@ -1,0 +1,457 @@
+{
+  "schema": "native232-complex-section-probes-r1",
+  "seed": "native232-complex-section-probes-r1:baseline-sha-bound:20261016",
+  "seed_sha256": "81d762883a24251cad855a5cde073bd1f42244673e45d8a0d6a65cbadc1668dd",
+  "baseline": {
+    "path_from_implementation": "evidence/dynamic-master/baseline.docx",
+    "sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+    "bytes": 37612,
+    "read_only_source": true
+  },
+  "generator": {
+    "path_from_implementation": "scripts/reverse_engineering/generate_complex_section_probes.py",
+    "sha256": "a5e415c2c2f817fd079805aff546744d09b6fd62c78ba890e4959658759dff96"
+  },
+  "output_directory": "evidence/complex-section-r1/inputs",
+  "case_count": 28,
+  "cases": [
+    {
+      "case_id": "header_footer_story-header-697",
+      "family": "header_footer_story",
+      "path": "inputs/header_footer_story-header-697.docx",
+      "sha256": "f2aec3941eb5ca4148e8101ebb06e425c3e8e0cde57d3081d39e4ff800163339",
+      "bytes": 36020,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "header_footer_story-header-698",
+      "family": "header_footer_story",
+      "path": "inputs/header_footer_story-header-698.docx",
+      "sha256": "19edf08dbdf0409eb96565d0c47f5327dca0103fba0fda60b76920ec9cd95bbf",
+      "bytes": 36019,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "header_footer_story-header-720",
+      "family": "header_footer_story",
+      "path": "inputs/header_footer_story-header-720.docx",
+      "sha256": "1e282f33c21776cb94ecc111dcd6ad60d95598865bc984e67772d006761fea94",
+      "bytes": 36020,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "header_footer_story-header-721",
+      "family": "header_footer_story",
+      "path": "inputs/header_footer_story-header-721.docx",
+      "sha256": "65d5546867e12c80f27d79435180f32ef2c9ef7448a43b1c2b97aa55d9447f59",
+      "bytes": 36018,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "single_ordinary_table-header-697",
+      "family": "single_ordinary_table",
+      "path": "inputs/single_ordinary_table-header-697.docx",
+      "sha256": "5b276e7e800058bd06ac425af77ae228edc01e505660189b1f216e3be22eca6f",
+      "bytes": 35329,
+      "features": {
+        "table": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "single_ordinary_table-header-698",
+      "family": "single_ordinary_table",
+      "path": "inputs/single_ordinary_table-header-698.docx",
+      "sha256": "49867706a3b652d62c2a9f5464f4f5d1cbd21186b8d155f34d809f0d39807280",
+      "bytes": 35329,
+      "features": {
+        "table": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "single_ordinary_table-header-720",
+      "family": "single_ordinary_table",
+      "path": "inputs/single_ordinary_table-header-720.docx",
+      "sha256": "3244ebeba7831c7cce28a2be201adcb25558dadded93fa46275e4c84356c8734",
+      "bytes": 35330,
+      "features": {
+        "table": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "single_ordinary_table-header-721",
+      "family": "single_ordinary_table",
+      "path": "inputs/single_ordinary_table-header-721.docx",
+      "sha256": "7c3c4493ba02d477095e32bea1992d5a52a9a5efe9ba85c0160c4a18c43e2d72",
+      "bytes": 35328,
+      "features": {
+        "table": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "omml_equation-header-697",
+      "family": "omml_equation",
+      "path": "inputs/omml_equation-header-697.docx",
+      "sha256": "f1f1b24a657513a880e07729046c9245e3c5d0a4e738796c35684c0448084dc4",
+      "bytes": 35305,
+      "features": {
+        "omml": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "omml_equation-header-698",
+      "family": "omml_equation",
+      "path": "inputs/omml_equation-header-698.docx",
+      "sha256": "529df8987ead8d5b194741449781ca0352b9ce66f416ada19be8aacafcea02b7",
+      "bytes": 35306,
+      "features": {
+        "omml": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "omml_equation-header-720",
+      "family": "omml_equation",
+      "path": "inputs/omml_equation-header-720.docx",
+      "sha256": "27a37b2ef0629a46cc130c96a61e28455e4f274d5f9e3785d5eae7939aa9accf",
+      "bytes": 35305,
+      "features": {
+        "omml": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "omml_equation-header-721",
+      "family": "omml_equation",
+      "path": "inputs/omml_equation-header-721.docx",
+      "sha256": "8f8354d3fe827cca7e9173a4f7590680ed7c0b8f5917a287501dc565864da8e3",
+      "bytes": 35304,
+      "features": {
+        "omml": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "inline_png-header-697",
+      "family": "inline_png",
+      "path": "inputs/inline_png-header-697.docx",
+      "sha256": "372a34e7dd4fe54b6de517f95fb5dd8728ba077926a77d613bef4a3e2eab8d0d",
+      "bytes": 35850,
+      "features": {
+        "inline_png": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "inline_png-header-698",
+      "family": "inline_png",
+      "path": "inputs/inline_png-header-698.docx",
+      "sha256": "5a753e3d2ea5b0f2c18b8c0bf2429a087aae7134663ba4a8c3863e30253c53d6",
+      "bytes": 35849,
+      "features": {
+        "inline_png": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "inline_png-header-720",
+      "family": "inline_png",
+      "path": "inputs/inline_png-header-720.docx",
+      "sha256": "51a231a8a360c281dd7ec13bce528d1ce6a5e501e3c5e8e688b08bf553b15708",
+      "bytes": 35850,
+      "features": {
+        "inline_png": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "inline_png-header-721",
+      "family": "inline_png",
+      "path": "inputs/inline_png-header-721.docx",
+      "sha256": "e3bd2492e911ab999f4816220e6d4e14945159b0c15ffa670af9c5973e430386",
+      "bytes": 35848,
+      "features": {
+        "inline_png": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "native_word_chart-header-697",
+      "family": "native_word_chart",
+      "path": "inputs/native_word_chart-header-697.docx",
+      "sha256": "2598b0749df668a1c5b876185ea5758339d15d0081cc932d923d68284114b9f4",
+      "bytes": 36231,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "native_word_chart-header-698",
+      "family": "native_word_chart",
+      "path": "inputs/native_word_chart-header-698.docx",
+      "sha256": "bfcbb1f757949e11dd6f91088297a8593bc211e43c66e60bbe1f21c4affd5cfb",
+      "bytes": 36230,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "native_word_chart-header-720",
+      "family": "native_word_chart",
+      "path": "inputs/native_word_chart-header-720.docx",
+      "sha256": "e5757581fe6242001d6f979d3aca9c3668f3bd83fc0be9c7a6bb4ced3a1604bf",
+      "bytes": 36232,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "native_word_chart-header-721",
+      "family": "native_word_chart",
+      "path": "inputs/native_word_chart-header-721.docx",
+      "sha256": "aab5bfdffa09f704221ebc9122f5c75a665ce4af958e0cc68ae1faa8ca61b3a1",
+      "bytes": 36230,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "combined_complex-header-697",
+      "family": "combined_complex",
+      "path": "inputs/combined_complex-header-697.docx",
+      "sha256": "25be278b22a5681cb678a2318cc30363f3d25936e14f563a14948f5543fdc3f5",
+      "bytes": 37546,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "combined_complex-header-698",
+      "family": "combined_complex",
+      "path": "inputs/combined_complex-header-698.docx",
+      "sha256": "2bf3aff5752f428357a43d34e635cd5a134fe8869ace353be5cb8860bc7398e9",
+      "bytes": 37546,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "combined_complex-header-720",
+      "family": "combined_complex",
+      "path": "inputs/combined_complex-header-720.docx",
+      "sha256": "b775ec09318c6376f124844b96670b6ff74f76ea654049669ae96f4fda81f0f6",
+      "bytes": 37544,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "combined_complex-header-721",
+      "family": "combined_complex",
+      "path": "inputs/combined_complex-header-721.docx",
+      "sha256": "f739b8e24e0aef98296fec8cb9bd9a03d3252a2b863bed9dc1c2d972c97b6965",
+      "bytes": 37544,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "header-footer-story-footer-697",
+      "family": "header_footer_story",
+      "path": "inputs/header-footer-story-footer-697.docx",
+      "sha256": "53de3ea1d8ff374526637898557f8cb6a44cd4ba3fde32c6d80f29b66193859d",
+      "bytes": 36019,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 709,
+        "footer_twips": 697
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "header-footer-story-footer-698",
+      "family": "header_footer_story",
+      "path": "inputs/header-footer-story-footer-698.docx",
+      "sha256": "1e2237b4e5406f034d528d30db25bbdec9a07aa986fc085d4ea896238036d7b8",
+      "bytes": 36020,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 709,
+        "footer_twips": 698
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "header-footer-story-footer-720",
+      "family": "header_footer_story",
+      "path": "inputs/header-footer-story-footer-720.docx",
+      "sha256": "76e8ef4dcb931da6afbbc026c04e608d22f7904e309ea01f12c278f36d46ee74",
+      "bytes": 36018,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 709,
+        "footer_twips": 720
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    },
+    {
+      "case_id": "header-footer-story-footer-721",
+      "family": "header_footer_story",
+      "path": "inputs/header-footer-story-footer-721.docx",
+      "sha256": "a31e211f09c81fe07d5cede7e6e74b7bf3612c0fa2f4262446f8cf1ada83e476",
+      "bytes": 36018,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 709,
+        "footer_twips": 721
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; synthetic input only."
+    }
+  ],
+  "chart_part_validation": "Package relationships, content type, chartSpace, lineChart and cached literal data are checked; no Open XML XSD or Microsoft Word validation is performed. Treat chart native behavior as unverified until actual capture.",
+  "execution_policy": "Synthetic DOCX generation only. This script does not start TestVkr, open Word, use network, or modify the baseline."
+}

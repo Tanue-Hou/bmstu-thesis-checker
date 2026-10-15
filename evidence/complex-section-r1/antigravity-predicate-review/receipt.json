@@ -1,0 +1,8 @@
+{
+  "scope": "Only native_section_counts.py source and supplied technical summary were submitted; no EXE or paper content was sent.",
+  "model_requested": "gemini-3.8-flash-low",
+  "independent_opinion_is_execution_evidence": false,
+  "review_result": "No reviewer opinion returned.",
+  "exit_code": 1,
+  "status": "not_completed"
+}

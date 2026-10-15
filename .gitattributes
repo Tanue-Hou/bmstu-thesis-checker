@@ -1,5 +1,7 @@
 * text=auto eol=lf
 evidence/** -text -whitespace
+scripts/reverse_engineering/generate_complex_section_probes.py -text
+scripts/reverse_engineering/generate_complex_section_probes_r2.py -text
 *.docx binary
 *.pdf binary
 *.png binary

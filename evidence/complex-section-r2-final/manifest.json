@@ -1,0 +1,157 @@
+{
+  "schema": "native232-complex-section-probes-r2",
+  "seed": "native232-complex-section-probes-r2:baseline-sha-bound:20261016",
+  "seed_sha256": "b05743a7e9b901be4d0b7700af9a86904f10d9ebb5a854ba0c52a46935f0abe6",
+  "baseline": {
+    "path_from_implementation": "evidence/dynamic-master/baseline.docx",
+    "sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+    "bytes": 37612,
+    "read_only_source": true
+  },
+  "generator": {
+    "path_from_implementation": "scripts/reverse_engineering/generate_complex_section_probes_r2.py",
+    "sha256": "577b299a9b4a6310647deb55210c1df47ba9fcd05868f8c16c735b5f039a7f0a"
+  },
+  "output_directory": "evidence/complex-section-r2-final/inputs",
+  "case_count": 8,
+  "cases": [
+    {
+      "case_id": "chart_cached_series-header-697",
+      "family": "chart_cached_series",
+      "path": "inputs/chart_cached_series-header-697.docx",
+      "sha256": "d00e7fd2d0a56c9e824b69dd4dd05c03d19b061b467a7926a74cd3b3eaae3d18",
+      "bytes": 36237,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "chart_cached_series-header-698",
+      "family": "chart_cached_series",
+      "path": "inputs/chart_cached_series-header-698.docx",
+      "sha256": "00a48323c45a9817a1ce2c4f9d5c5fa49cc61b8d0df4687af2234935bbc8129a",
+      "bytes": 36236,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "chart_cached_series-header-720",
+      "family": "chart_cached_series",
+      "path": "inputs/chart_cached_series-header-720.docx",
+      "sha256": "aed38cdda6d42e4d22c419a69e08247f573f8762ca8121966a3aa851daf5e3b5",
+      "bytes": 36238,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "chart_cached_series-header-721",
+      "family": "chart_cached_series",
+      "path": "inputs/chart_cached_series-header-721.docx",
+      "sha256": "c70a76483d922fa4b99a0be85ac89cffb54f4a2f0077ffb2fc0ce8c672e358c0",
+      "bytes": 36236,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "combined_all-header-697",
+      "family": "combined_all",
+      "path": "inputs/combined_all-header-697.docx",
+      "sha256": "42958ffef344a13bf0e153504d12d82ab864ab1892edeb4697cdf01610cccdbe",
+      "bytes": 37552,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "combined_all-header-698",
+      "family": "combined_all",
+      "path": "inputs/combined_all-header-698.docx",
+      "sha256": "4e74630186e8b738f890a79a725291d9cfed16d7fc78f160bb03b0a06a5d3411",
+      "bytes": 37552,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "combined_all-header-720",
+      "family": "combined_all",
+      "path": "inputs/combined_all-header-720.docx",
+      "sha256": "69123aa13f01e21e47646900c831b47e2243a633d3c3d20e7a1d3c2f3bb02346",
+      "bytes": 37550,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    },
+    {
+      "case_id": "combined_all-header-721",
+      "family": "combined_all",
+      "path": "inputs/combined_all-header-721.docx",
+      "sha256": "8cd7bbe11e3cd08a1c2d2ce6a1cd686786b936d4dd94bb981716be2bbfed3174",
+      "bytes": 37550,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML parse and python-docx open succeeded; chart remains unverified against Office XSD/native behavior."
+    }
+  ],
+  "chart_part_validation": "The generator checks series child order marker<cat<val and two lineChart axId values matching category/value axes, along with relationships, content type, chartSpace and literal caches. No Open XML XSD or Microsoft Word validation is performed; chart validity and native behavior remain unverified.",
+  "execution_policy": "Synthetic DOCX generation only. This script does not start TestVkr, open Word, use network, or modify the baseline."
+}

@@ -198,7 +198,7 @@ def main():
                         for va,label in [(0x00481794,'single_file_drop_handler'),(0x0047a528,'file_check_entry'),(0x0043dd1c,'docx_load'),(0x0046ba90,'pdf_load'),(0x00451e54,'structure_volume_check'),(0x00452ac5,'volume_selected_threshold'),(0x00452b94,'volume_decision'),(0x00452bb3,'volume_insufficient_emit')]:
                             addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                         if a.section_trace:
-                            for va,label in [(0x0040c3b4,'section_header_compare'),(0x0040c3b9,'section_header_result'),(0x0040c3c0,'section_header_increment'),(0x0040c3e6,'section_footer_compare'),(0x0040c3eb,'section_footer_result'),(0x0040c3f2,'section_footer_increment')]:
+                            for va,label in [(0x0040c3b4,'section_header_compare'),(0x0040c3b9,'section_header_result'),(0x0040c3c0,'section_header_increment'),(0x0040c3e6,'section_footer_compare'),(0x0040c3eb,'section_footer_result'),(0x0040c3f2,'section_footer_increment'),(0x0047e293,'section_distance_report_gate')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                         if pixel_trace:
                             for va,label in [(0x0042ae4b,'docx_image_dimensions'),(0x0042ae4e,'docx_image_area_compare'),(0x0042ae56,'docx_large_image_flag'),(0x0042ae5c,'docx_image_flag_result'),(0x00472be7,'pdf_image_area_compare'),(0x00472bef,'pdf_large_image_emit'),(0x0047c709,'image_counter_report_gate'),(0x0047c795,'pixel_literal_conversion'),(0x0047c79a,'pixel_literal_return')]:
@@ -263,6 +263,13 @@ def main():
                                 if label.endswith('_compare'):
                                     values=read(context.Esp,8);hit['section_state'].update(compare_stack_hex=values.hex(),target_and_actual_mm=list(struct.unpack('<2f',values)))
                                 if label.endswith('_result'):hit['section_state']['comparison_return_al']=context.Eax&255
+                                if label=='section_distance_report_gate':
+                                    report_base=unsigned(context.Ebp-0x5dc)
+                                    parser_counter=section_parser+0x28c
+                                    report_counter=context.Ecx+0x134
+                                    if context.Ecx!=report_base or report_counter!=parser_counter:
+                                        raise RuntimeError('Section counter does not alias the final report slot')
+                                    hit['section_state'].update(report_base=hex(report_base),counter_address=hex(report_counter),addresses_match=True,final_count=signed(report_counter))
                             if a.watch_first_counter and label in ['docx_load','pdf_load']:
                                 if counter_watch.get('installed'):raise RuntimeError('Counter watch cannot silently switch parser objects')
                                 if context.Dr7&0xff:raise RuntimeError('Unexpected pre-existing hardware watch in owned thread')

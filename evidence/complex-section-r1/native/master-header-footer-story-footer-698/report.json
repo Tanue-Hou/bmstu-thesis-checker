@@ -1,0 +1,61 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "1e2237b4e5406f034d528d30db25bbdec9a07aa986fc085d4ea896238036d7b8",
+  "source_unchanged": true,
+  "work_type": "master",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 9,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Допущены ошибки в названии университета на титульном листе."
+    },
+    {
+      "number": 2,
+      "message": "*** Отсутствует или неправильно введен титульный лист (много несоответствий)."
+    },
+    {
+      "number": 3,
+      "message": "В документе много символов, цвет которых отличается от черного: \"МГТУ им. Н. Э. Баумана\", \"ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА БАКАЛАВРА\", \"РЕФЕРАТ\", \"СОДЕРЖАНИЕ\", \"ВВЕДЕНИЕ\", \"1 ОСНОВНАЯ ЧАСТЬ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 4,
+      "message": "Верхние колонтитулы должны содержать один пустой абзац.."
+    },
+    {
+      "number": 5,
+      "message": "* Нижние колонтитулы должны содержать один абзац с номером страницы, выровненным по центру. На титульном листе номер страницы не ставится.."
+    },
+    {
+      "number": 6,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"ПРИЛОЖЕНИЕ А\"."
+    },
+    {
+      "number": 7,
+      "message": "** Обнаружены пустые структурные элементы: \"СОДЕРЖАНИЕ\"."
+    },
+    {
+      "number": 8,
+      "message": "* Обнаружены небольшие структурные элементы (проверяется кол-во символов и кол-во абзацев (кол-во источников)): \"РЕФЕРАТ\"."
+    },
+    {
+      "number": 9,
+      "message": "* Маленький объем ВКР: Не хватает 33 стр. (сначала исправьте остальные замечания, если они есть)."
+    }
+  ],
+  "evidence_directory": "D:\\Codex项目\\analysis_TestVkr\\private_trials\\complex-section-r1\\native\\master-header-footer-story-footer-698",
+  "trace_sha256": "0f984ca0871476438e1db186055f92f8c928515797fd36f24432825cd5a40a9c",
+  "native_text_sha256": "e1952e5e7d1ff0877bb32ba6f033585638ef554dafaf6b707c24b479d1764a86",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "dde9ef2956ecf9a1baf30e4e17b4dfe76e248b9d0db9020bc647330ae74b4670",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "model_requested": "gemini-3.8-flash-low",
+  "exit_code": 1,
+  "scope": "Public deidentified static facts only; independent model opinion is not execution evidence",
+  "raw_cli_logs_private": [
+    {
+      "name": "cli.log",
+      "private_path": "private_trials/complex-section-r1/agent-logs/cli.log",
+      "sha256": "a3b526f230ce0765ea871e8d651c59e228f9802abc5cebc7cc1880f6f61f9de6",
+      "bytes": 33741
+    },
+    {
+      "name": "stderr.log",
+      "private_path": "private_trials/complex-section-r1/agent-logs/stderr.log",
+      "sha256": "f7dfd178317c4e481da948cc1c77ffe70f85abfa05cba24087cd127049bd96c0",
+      "bytes": 946
+    }
+  ]
+}

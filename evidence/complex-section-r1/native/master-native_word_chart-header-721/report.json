@@ -1,0 +1,57 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "aab5bfdffa09f704221ebc9122f5c75a665ce4af958e0cc68ae1faa8ca61b3a1",
+  "source_unchanged": true,
+  "work_type": "master",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 8,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Допущены ошибки в названии университета на титульном листе."
+    },
+    {
+      "number": 2,
+      "message": "*** Отсутствует или неправильно введен титульный лист (много несоответствий)."
+    },
+    {
+      "number": 3,
+      "message": "В документе много символов, цвет которых отличается от черного: \"МГТУ им. Н. Э. Баумана\", \"ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА БАКАЛАВРА\", \"РЕФЕРАТ\", \"СОДЕРЖАНИЕ\", \"ВВЕДЕНИЕ\", \"1 ОСНОВНАЯ ЧАСТЬ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 4,
+      "message": "Размеры колонтитулов должны быть 1,25 см."
+    },
+    {
+      "number": 5,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"ПРИЛОЖЕНИЕ А\"."
+    },
+    {
+      "number": 6,
+      "message": "** Обнаружены пустые структурные элементы: \"СОДЕРЖАНИЕ\"."
+    },
+    {
+      "number": 7,
+      "message": "* Обнаружены небольшие структурные элементы (проверяется кол-во символов и кол-во абзацев (кол-во источников)): \"РЕФЕРАТ\"."
+    },
+    {
+      "number": 8,
+      "message": "* Маленький объем ВКР: Не хватает 33 стр. (сначала исправьте остальные замечания, если они есть)."
+    }
+  ],
+  "evidence_directory": "D:\\Codex项目\\analysis_TestVkr\\private_trials\\complex-section-r1\\native\\master-native_word_chart-header-721",
+  "trace_sha256": "b532ad8ab9ac43b2ceff03a5ee5e0946bde455c3e50d5999487bffefc0737348",
+  "native_text_sha256": "80145a7add05425e1b879d24b64fd2730e920c683e2f5bf6d7cf07ed5d782e0b",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "dcb1f788dac827b206cb31244ece5731835c7d5d27cc6b42ed5626b4bd5e95d5",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}
