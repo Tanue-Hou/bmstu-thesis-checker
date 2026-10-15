@@ -36,12 +36,13 @@ def locate_finding(f,data,file_type,limit=100):
                 if rule!='Dict.MixedScriptHomoglyphs' and not any(k in match.group().lower() for k in ['ьь','ъъ','ьъ','ъь','щч','шч','жш','чщ']):continue
                 total+=1
                 if len(out)<limit:out.append({**loc,'text_excerpt':match.group(),'character_start':match.start(),'character_end':match.end(),'classification':'candidate_spelling_or_mixed_script_not_intent'})
-    elif rule in {'Pic.SmallLabels','Pic.FloatingShapes','Pic.FloatingLabels','Pic.LabelsOutOfBounds'} and (f.get('location') or {}).get('labels'):
+    elif rule in {'Pic.SmallLabels','Pic.FloatingShapes','Pic.FloatingLabels','Pic.LabelsOutOfBounds','Pic.ShapesOutOfBounds'} and (f.get('location') or {}).get('labels'):
         selected=set(f['location']['labels'])
         for label in data.get('labels',[]):
             if label['index']+1 not in selected:continue
             total+=1
             if len(out)<limit:out.append({'kind':'docx_textbox','shape_id':label.get('shape_id'),'xml_path':label.get('xml_path'),'width_mm':label.get('width_mm'),'height_mm':label.get('height_mm'),'native_effective_height_mm':label.get('native_effective_height_mm'),'native_shape_autofit':label.get('native_shape_autofit'),'dimension_measurement':label.get('dimension_measurement'),'position':label.get('position'),'text_excerpt':label.get('text','')[:140]})
+            if total<=limit and rule=='Pic.ShapesOutOfBounds':out[-1].update(native_rotation_degrees=label.get('native_rotation_degrees'),native_selected_width_mm=label.get('native_shape_selected_width_mm'),native_selected_height_mm=label.get('native_shape_selected_height_mm'),native_width_limit_mm=label.get('native_shape_width_limit_mm'),native_height_limit_mm=label.get('native_shape_height_limit_mm'))
     elif rule=='Pic.FloatingImages' and (f.get('location') or {}).get('images'):
         selected=set(f['location']['images'])
         for index,image in enumerate(data.get('images',[]),1):

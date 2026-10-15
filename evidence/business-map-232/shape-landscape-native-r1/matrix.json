@@ -1,0 +1,159 @@
+{
+  "native_build": 232,
+  "work_type": "phd",
+  "cases": [
+    {
+      "case": "landscapeWidthBelow",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeWidthBelow.docx",
+      "sha256": "9a273682eed626263620a5ccb0faeb81c1ae037f2b2b54aa296661623526c4fb",
+      "width_mm": "11906",
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 11,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 5,
+      "evidence_directory": "evidence/business-map-232/shape-landscape-native-r1/landscapeWidthBelow"
+    },
+    {
+      "case": "landscapeWidthEqual",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeWidthEqual.docx",
+      "sha256": "9a273682eed626263620a5ccb0faeb81c1ae037f2b2b54aa296661623526c4fb",
+      "width_mm": "11906",
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 11,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 5,
+      "evidence_directory": "evidence/business-map-232/shape-landscape-native-r1/landscapeWidthEqual"
+    },
+    {
+      "case": "landscapeWidthAbove",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeWidthAbove.docx",
+      "sha256": "9a273682eed626263620a5ccb0faeb81c1ae037f2b2b54aa296661623526c4fb",
+      "width_mm": "11906",
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 11,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 5,
+      "evidence_directory": "evidence/business-map-232/shape-landscape-native-r1/landscapeWidthAbove"
+    },
+    {
+      "case": "landscapeHeightBelow",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeHeightBelow.docx",
+      "sha256": "fadf8763e8b4fbf2ffb563bf13854c5fba5b755a3c5cabd2c60c248dfde17f39",
+      "width_mm": "11906",
+      "height_mm": 165.99,
+      "rotation": 0,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 11,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 5,
+      "evidence_directory": "evidence/business-map-232/shape-landscape-native-r1/landscapeHeightBelow"
+    },
+    {
+      "case": "landscapeHeightEqual",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeHeightEqual.docx",
+      "sha256": "7a151741c078c4188a410c9558f869696bd96aba9cdf5c3d2768115a42c96821",
+      "width_mm": "11906",
+      "height_mm": 166,
+      "rotation": 0,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 11,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 5,
+      "evidence_directory": "evidence/business-map-232/shape-landscape-native-r1/landscapeHeightEqual"
+    },
+    {
+      "case": "landscapeHeightAbove",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeHeightAbove.docx",
+      "sha256": "8df739be109f35a7561e3043a493f86c7273ec5180c32e64bdb4da41d47b16a9",
+      "width_mm": "11906",
+      "height_mm": 166.01,
+      "rotation": 0,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 11,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 5,
+      "evidence_directory": "evidence/business-map-232/shape-landscape-native-r1/landscapeHeightAbove"
+    }
+  ],
+  "limits": [
+    "Synthetic VML label and DrawingML anchor cases; no general-shape or PDF equivalence claim."
+  ]
+}

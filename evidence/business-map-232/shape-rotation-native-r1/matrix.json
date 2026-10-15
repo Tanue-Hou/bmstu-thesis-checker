@@ -1,0 +1,59 @@
+{
+  "native_build": 232,
+  "work_type": "phd",
+  "cases": [
+    {
+      "case": "rotated44",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r2/rotated44.docx",
+      "sha256": "3949e2db4e36c0955b88d6316d87e4ed77f39ce16c30e01c7e529cccad401e3a",
+      "width_mm": 177,
+      "height_mm": 5,
+      "rotation": 44,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/shape-rotation-native-r1/rotated44"
+    },
+    {
+      "case": "rotated46",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r2/rotated46.docx",
+      "sha256": "ed6c92a103b650ac7d1385263dc3cf3cb6b488f90df25f022952008c74b8ff83",
+      "width_mm": 177,
+      "height_mm": 5,
+      "rotation": 46,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0,
+        "shape_bounds_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/shape-rotation-native-r1/rotated46"
+    }
+  ],
+  "limits": [
+    "Synthetic VML label and DrawingML anchor cases; no general-shape or PDF equivalence claim."
+  ]
+}

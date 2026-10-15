@@ -1,0 +1,159 @@
+{
+  "native_build": 232,
+  "work_type": "phd",
+  "cases": [
+    {
+      "case": "widthAbove",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r1/widthAbove.docx",
+      "sha256": "459d5ba32898ee010727f7847353dc7053844b50cc23c180b663584ee8e2d313",
+      "width_mm": 177.01,
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 11,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 4,
+      "evidence_directory": "evidence/business-map-232/shape-bounds-native-r2/widthAbove"
+    },
+    {
+      "case": "heightAbove",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r1/heightAbove.docx",
+      "sha256": "1a1a2f191950029080c999910aa44e2c4bc5dfef0eb32fbe846573b5ceed0d97",
+      "width_mm": 5,
+      "height_mm": 253.01,
+      "rotation": 0,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/shape-bounds-native-r2/heightAbove"
+    },
+    {
+      "case": "rotated180",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r1/rotated180.docx",
+      "sha256": "3b28b41c77d1f8b591a57b00d3ef1376b2a989c04fa2e353f6e8a76779f87b5c",
+      "width_mm": 253,
+      "height_mm": 5,
+      "rotation": 180,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 11,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 4,
+      "evidence_directory": "evidence/business-map-232/shape-bounds-native-r2/rotated180"
+    },
+    {
+      "case": "rotated270",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r1/rotated270.docx",
+      "sha256": "a29c5992026538fa9c9e672b98d619fe12e8ee76a88b7319782507179becf54c",
+      "width_mm": 253,
+      "height_mm": 5,
+      "rotation": 270,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 11,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 4,
+      "evidence_directory": "evidence/business-map-232/shape-bounds-native-r2/rotated270"
+    },
+    {
+      "case": "rotated45",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r1/rotated45.docx",
+      "sha256": "67368c08ce9e599bedb13d2c89de299aa73d9fbc7f3b55e1a9a631c816c5ee74",
+      "width_mm": 177,
+      "height_mm": 5,
+      "rotation": 45,
+      "inset": null,
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0,
+        "shape_bounds_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/shape-bounds-native-r2/rotated45"
+    },
+    {
+      "case": "insetZero",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r1/insetZero.docx",
+      "sha256": "e42f61a8765331553b71fb4950dc40ed4dd766344f1cd16126e8421545767c09",
+      "width_mm": 177,
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": "0,0,0,0",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0,
+        "shape_bounds_count": 11
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/shape-bounds-native-r2/insetZero"
+    }
+  ],
+  "limits": [
+    "Synthetic VML label and DrawingML anchor cases; no general-shape or PDF equivalence claim."
+  ]
+}

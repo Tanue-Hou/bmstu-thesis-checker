@@ -1,0 +1,185 @@
+{
+  "parent_sha256": "ac064b607bc0b15bed620e9a5ecfb9de527f4b4af0433ef515ee0774f39f0c40",
+  "cases": [
+    {
+      "case": "widthBelow",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/widthBelow.docx",
+      "sha256": "b7a3753562c43442acef526e91fa82c0ec0028f6ff1c7d8e1e32d754b1ee112f",
+      "width_mm": 176.99,
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": null
+    },
+    {
+      "case": "widthEqual",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/widthEqual.docx",
+      "sha256": "bc88a9d3da3324d07d3689e073fb0e361e64f7a7bde6604ff4ef935e394b456f",
+      "width_mm": 177,
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": null
+    },
+    {
+      "case": "widthAbove",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/widthAbove.docx",
+      "sha256": "459d5ba32898ee010727f7847353dc7053844b50cc23c180b663584ee8e2d313",
+      "width_mm": 177.01,
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": null
+    },
+    {
+      "case": "heightBelow",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/heightBelow.docx",
+      "sha256": "e1aa4565a00f82f24db933bb1d906e468b611df283e78623ad613a6da782ce20",
+      "width_mm": 5,
+      "height_mm": 252.99,
+      "rotation": 0,
+      "inset": null
+    },
+    {
+      "case": "heightEqual",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/heightEqual.docx",
+      "sha256": "697f8dbfff65b700590df3455f9643945d2630b2b73d5589644e52e5f51b11c5",
+      "width_mm": 5,
+      "height_mm": 253,
+      "rotation": 0,
+      "inset": null
+    },
+    {
+      "case": "heightAbove",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/heightAbove.docx",
+      "sha256": "1a1a2f191950029080c999910aa44e2c4bc5dfef0eb32fbe846573b5ceed0d97",
+      "width_mm": 5,
+      "height_mm": 253.01,
+      "rotation": 0,
+      "inset": null
+    },
+    {
+      "case": "rotated90",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/rotated90.docx",
+      "sha256": "e0ef445248ac2e3c22e22de45ae8f0926295f77ca779eccc0f7a305ebcad6f3b",
+      "width_mm": 253,
+      "height_mm": 5,
+      "rotation": 90,
+      "inset": null
+    },
+    {
+      "case": "rotated180",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/rotated180.docx",
+      "sha256": "3b28b41c77d1f8b591a57b00d3ef1376b2a989c04fa2e353f6e8a76779f87b5c",
+      "width_mm": 253,
+      "height_mm": 5,
+      "rotation": 180,
+      "inset": null
+    },
+    {
+      "case": "rotated270",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/rotated270.docx",
+      "sha256": "a29c5992026538fa9c9e672b98d619fe12e8ee76a88b7319782507179becf54c",
+      "width_mm": 253,
+      "height_mm": 5,
+      "rotation": 270,
+      "inset": null
+    },
+    {
+      "case": "rotated45",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/rotated45.docx",
+      "sha256": "67368c08ce9e599bedb13d2c89de299aa73d9fbc7f3b55e1a9a631c816c5ee74",
+      "width_mm": 177,
+      "height_mm": 5,
+      "rotation": 45,
+      "inset": null
+    },
+    {
+      "case": "insetZero",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/insetZero.docx",
+      "sha256": "e42f61a8765331553b71fb4950dc40ed4dd766344f1cd16126e8421545767c09",
+      "width_mm": 177,
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": "0,0,0,0"
+    },
+    {
+      "case": "insetLarge",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/insetLarge.docx",
+      "sha256": "9161c41d88d5c5c4f2b79b7c0abf419159865bf504a65395d0d15d68f4b0f085",
+      "width_mm": 177,
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": "2mm,2mm,2mm,2mm"
+    },
+    {
+      "case": "rotated44",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/rotated44.docx",
+      "sha256": "3949e2db4e36c0955b88d6316d87e4ed77f39ce16c30e01c7e529cccad401e3a",
+      "width_mm": 177,
+      "height_mm": 5,
+      "rotation": 44,
+      "inset": null
+    },
+    {
+      "case": "rotated46",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/rotated46.docx",
+      "sha256": "ed6c92a103b650ac7d1385263dc3cf3cb6b488f90df25f022952008c74b8ff83",
+      "width_mm": 177,
+      "height_mm": 5,
+      "rotation": 46,
+      "inset": null
+    },
+    {
+      "case": "landscapeWidthBelow",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeWidthBelow.docx",
+      "sha256": "9a273682eed626263620a5ccb0faeb81c1ae037f2b2b54aa296661623526c4fb",
+      "width_mm": "11906",
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": null
+    },
+    {
+      "case": "landscapeWidthEqual",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeWidthEqual.docx",
+      "sha256": "9a273682eed626263620a5ccb0faeb81c1ae037f2b2b54aa296661623526c4fb",
+      "width_mm": "11906",
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": null
+    },
+    {
+      "case": "landscapeWidthAbove",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeWidthAbove.docx",
+      "sha256": "9a273682eed626263620a5ccb0faeb81c1ae037f2b2b54aa296661623526c4fb",
+      "width_mm": "11906",
+      "height_mm": 5,
+      "rotation": 0,
+      "inset": null
+    },
+    {
+      "case": "landscapeHeightBelow",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeHeightBelow.docx",
+      "sha256": "fadf8763e8b4fbf2ffb563bf13854c5fba5b755a3c5cabd2c60c248dfde17f39",
+      "width_mm": "11906",
+      "height_mm": 165.99,
+      "rotation": 0,
+      "inset": null
+    },
+    {
+      "case": "landscapeHeightEqual",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeHeightEqual.docx",
+      "sha256": "7a151741c078c4188a410c9558f869696bd96aba9cdf5c3d2768115a42c96821",
+      "width_mm": "11906",
+      "height_mm": 166,
+      "rotation": 0,
+      "inset": null
+    },
+    {
+      "case": "landscapeHeightAbove",
+      "input": "evidence/business-map-232/shape-bounds-inputs-r3/landscapeHeightAbove.docx",
+      "sha256": "8df739be109f35a7561e3043a493f86c7273ec5180c32e64bdb4da41d47b16a9",
+      "width_mm": "11906",
+      "height_mm": 166.01,
+      "rotation": 0,
+      "inset": null
+    }
+  ]
+}

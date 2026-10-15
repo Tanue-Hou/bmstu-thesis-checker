@@ -207,6 +207,7 @@ def finding_to_dict(finding, rule_registry, rule_guidance, file_type=None, work_
     profile_supported=(profile is None or
                        (profile=='native232_simple_vml_labels' and bool((doc_data or {}).get('native232_vml_label_profile_supported'))) or
                        (profile=='native232_simple_vml_bounds' and bool((doc_data or {}).get('native232_vml_bounds_profile_supported'))) or
+                       (profile=='native232_simple_vml_shape_bounds' and bool((doc_data or {}).get('native232_vml_shape_bounds_profile_supported'))) or
                        (profile=='native232_plain_floating_png' and bool((doc_data or {}).get('native232_floating_profile_supported'))) or
                        (profile=='native232_docx_image_zip_bytes' and bool((doc_data or {}).get('native232_image_bytes_profile_supported'))) or
                        (profile=='native232_single_inline_png' and bool((doc_data or {}).get('native232_single_inline_png_profile_supported'))) or

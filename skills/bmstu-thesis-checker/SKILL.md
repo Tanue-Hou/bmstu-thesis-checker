@@ -10,6 +10,8 @@ The plugin exposes `check_thesis_document`, `check_thesis_folder`, `list_rules`,
 
 ## Scope
 
+For `Pic.ShapesOutOfBounds`, read [independent shape-bounds evidence](../../docs/NATIVE_SHAPE_BOUNDS_232.zh.md). This inclusive native predicate differs from textbox strict bounds. Match the tested native rotation-bin selection, not a rendered bounding box. Only registered simple VML/angle/A4 configurations are verified; four raw adjustment fields have unknown full semantics. Invalid landscape batch r3/r1 is excluded from verification. No shape movement/deletion/resize repair is allowed.
+
 For `Pic.LabelsOutOfBounds`, read [dimension bounds evidence](../../docs/NATIVE_TEXTBOX_BOUNDS_232.zh.md). This native diagnostic uses dimension thresholds, not rendered-page overflow or actual school margins. Preserve overflow-before-small-label precedence and separate position exclusions. Only the registered simple single-section A4 DOCX/NKR profile is verified; general shape bounds remain separate coverage gaps. No drawing repair is allowed.
 
 For native232 VML unit or fit differences, read [textbox extension](../../docs/NATIVE_TEXTBOX_232.zh.md). Reproduce native float32 length conversion. Shape-level fit t/true sets effective height10mm and suppresses the small-height path, but small width still counts; the same textbox-layer values did not set the flag in measured inputs. Registered profiles include bounded cm/pt/in/unitless configurations; px/pc remain pending. Preserve declared and native effective geometry separately in locations.

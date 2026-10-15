@@ -1,3 +1,10 @@
+# v0.2.16
+
+- Recover independent shape-bounds diagnostics using20 valid native cases with inclusive portrait/landscape boundaries and rotation-bin observations.
+- Add Pic.ShapesOutOfBounds and exact XML/selected-dimension locations; keep textbox strict bounds separate.
+- Retain raw comparison operands, actual shape branch/counter and static function map; field semantic names remain provisional.
+- Exclude six wrongly generated landscape inputs, retain failed experiment provenance and guard against generator variable collisions. Drawing repair remains closed.
+
 # v0.2.15
 
 - Recover textbox dimension overflow with13 actual native A4 portrait/landscape cases, branch hits and report counters.

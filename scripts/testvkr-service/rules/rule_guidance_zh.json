@@ -107,6 +107,15 @@
     "fix_priority": "manual_review",
     "affects_antiplagiarism": false
   },
+  "Pic.ShapesOutOfBounds": {
+    "title_zh": "图形超过原生尺寸检查边界",
+    "explanation_zh": "232图形诊断使用旋转分箱后的尺寸及原生边界，和文本框越界规则不同；不等于实际渲染溢出页面或学校标准。",
+    "trigger_reason_zh": "受测零调整字段配置中，纵向所选宽≥177mm或高≥253mm；横向宽≥264mm或高≥166mm。等值触发，旋转可能交换宽高；配置外待复核。",
+    "fix_suggestion_zh": "按XML/对象ID和所选宽高复核原图形及实际页面，必要时手工调整后重查；不要据此批量移动、删除或裁切图形。",
+    "word_path_zh": "Word选择窗格 -> 对应图形 -> 形状格式 -> 大小与旋转。",
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
+  },
   "Pic.LabelsOutOfBounds": {
     "title_zh": "文本框尺寸超过原生检查边界",
     "explanation_zh": "232检查框宽高是否超过选定常数，不等于实际渲染溢出页面，也不是学校边距规定。",

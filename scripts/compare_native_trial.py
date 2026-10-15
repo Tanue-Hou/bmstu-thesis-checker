@@ -34,6 +34,7 @@ PATTERNS={
  'Pic.FloatingShapes':r'плавающие графические фигуры',
  'Pic.FloatingLabels':r'плавающие надписи',
  'Pic.LabelsOutOfBounds':r'надписи, выходящие за границы текста',
+ 'Pic.ShapesOutOfBounds':r'графические фигуры, выходящие за рамки текста',
 }
 def parse_diagnostics(text,file_type):
     starts=[];expected=1

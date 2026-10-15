@@ -102,6 +102,8 @@ class PicturesChecker(BaseChecker):
             ))
 
         if native232_docx:
+            shape_overflow=[l for l in self.doc_data.get('labels',[]) if l.get('shape_overflow_geometry_candidate')]
+            if shape_overflow:findings.append(Finding(code='Pic.ShapesOutOfBounds',module=ModuleType.PICTURES,severity=Severity.MAJOR,message='Документ содержит графические фигуры, выходящие за рамки текста:',location={'labels':[l['index']+1 for l in shape_overflow]},threshold={'count_shapes':len(shape_overflow),'comparison':'greater_or_equal','measurement':'native selected dimensions after rotation bins; width >= base+5 OR height >= base-6, zero adjustment profile'},skip_switch='SkipTestPic'))
             overflow_labels=[l for l in self.doc_data.get('labels',[]) if l.get('overflow_geometry_candidate')]
             if overflow_labels:findings.append(Finding(code='Pic.LabelsOutOfBounds',module=ModuleType.PICTURES,severity=Severity.MAJOR,message='** Документ содержит надписи, выходящие за границы текста:',location={'labels':[l['index']+1 for l in overflow_labels]},threshold={'count_labels':len(overflow_labels),'measurement':'native width > selected base +5mm OR effective height > selected base -5mm; not rendered page overflow'},skip_switch='SkipTestPic'))
             floating_labels=[l for l in self.doc_data.get('labels',[]) if l.get('position')=='absolute']

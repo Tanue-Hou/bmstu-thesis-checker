@@ -1,0 +1,58 @@
+{
+  "status": "passed_actual_mcp_with_retained_same_input_native",
+  "server_version": "0.2.16",
+  "cases": [
+    {
+      "case": "widthBelow",
+      "source_sha256": "b7a3753562c43442acef526e91fa82c0ec0028f6ff1c7d8e1e32d754b1ee112f",
+      "native_capture": "evidence/business-map-232/shape-bounds-native-r1/widthBelow",
+      "matched_families": [
+        "Pic.FloatingShapes",
+        "Pic.FloatingLabels"
+      ],
+      "all_compared_families_agree": true,
+      "compared_family_count": 6,
+      "drawing_repair_allowed": false
+    },
+    {
+      "case": "widthEqual",
+      "source_sha256": "bc88a9d3da3324d07d3689e073fb0e361e64f7a7bde6604ff4ef935e394b456f",
+      "native_capture": "evidence/business-map-232/shape-bounds-native-r1/widthEqual",
+      "matched_families": [
+        "Pic.FloatingShapes",
+        "Pic.FloatingLabels",
+        "Pic.ShapesOutOfBounds"
+      ],
+      "all_compared_families_agree": true,
+      "compared_family_count": 6,
+      "drawing_repair_allowed": false
+    },
+    {
+      "case": "rotated45",
+      "source_sha256": "67368c08ce9e599bedb13d2c89de299aa73d9fbc7f3b55e1a9a631c816c5ee74",
+      "native_capture": "evidence/business-map-232/shape-bounds-native-r2/rotated45",
+      "matched_families": [
+        "Pic.FloatingShapes",
+        "Pic.FloatingLabels"
+      ],
+      "all_compared_families_agree": true,
+      "compared_family_count": 6,
+      "drawing_repair_allowed": false
+    },
+    {
+      "case": "landscapeHeightEqual",
+      "source_sha256": "0042dd66f416ed145a32c6c4acc93d8713501c23145f7d4dd58a533c4ce6bd68",
+      "native_capture": "evidence/business-map-232/shape-landscape-native-r2/landscapeHeightEqual",
+      "matched_families": [
+        "Pic.FloatingShapes",
+        "Pic.FloatingLabels",
+        "Pic.ShapesOutOfBounds"
+      ],
+      "all_compared_families_agree": true,
+      "compared_family_count": 6,
+      "drawing_repair_allowed": false
+    }
+  ],
+  "raw_response_sha256": "7ad412e5173eed17ecd646c6b3f94766bba753affd3bce23cb823fc853e000a9",
+  "limits": "Actual local MCP calls; original runs retained by identical source hash, not rerun here. Only the explicitly counted drawing families, not full report or school equivalence."
+}
