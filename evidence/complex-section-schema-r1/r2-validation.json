@@ -1,0 +1,165 @@
+{
+  "sdk": "DocumentFormat.OpenXml, Version=2.20.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17",
+  "target": "Office2013",
+  "read_only": true,
+  "cases": [
+    {
+      "file": "evidence/complex-section-r2-final/inputs/chart_cached_series-header-697.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 1,
+      "source_sha256": "d00e7fd2d0a56c9e824b69dd4dd05c03d19b061b467a7926a74cd3b3eaae3d18",
+      "case_id": "chart_cached_series-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r2-final/inputs/chart_cached_series-header-698.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 1,
+      "source_sha256": "00a48323c45a9817a1ce2c4f9d5c5fa49cc61b8d0df4687af2234935bbc8129a",
+      "case_id": "chart_cached_series-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r2-final/inputs/chart_cached_series-header-720.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 1,
+      "source_sha256": "aed38cdda6d42e4d22c419a69e08247f573f8762ca8121966a3aa851daf5e3b5",
+      "case_id": "chart_cached_series-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r2-final/inputs/chart_cached_series-header-721.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 1,
+      "source_sha256": "c70a76483d922fa4b99a0be85ac89cffb54f4a2f0077ffb2fc0ce8c672e358c0",
+      "case_id": "chart_cached_series-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r2-final/inputs/combined_all-header-697.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[43]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[42]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 2,
+      "source_sha256": "42958ffef344a13bf0e153504d12d82ab864ab1892edeb4697cdf01610cccdbe",
+      "case_id": "combined_all-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r2-final/inputs/combined_all-header-698.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[43]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[42]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 2,
+      "source_sha256": "4e74630186e8b738f890a79a725291d9cfed16d7fc78f160bb03b0a06a5d3411",
+      "case_id": "combined_all-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r2-final/inputs/combined_all-header-720.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[43]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[42]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 2,
+      "source_sha256": "69123aa13f01e21e47646900c831b47e2243a633d3c3d20e7a1d3c2f3bb02346",
+      "case_id": "combined_all-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r2-final/inputs/combined_all-header-721.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[43]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[42]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 2,
+      "source_sha256": "8cd7bbe11e3cd08a1c2d2ce6a1cd686786b936d4dd94bb981716be2bbfed3174",
+      "case_id": "combined_all-header-721"
+    }
+  ],
+  "limits": "SDK package/schema validation only; not rendering, school compliance or TestVkr equivalence.",
+  "manifest_sha256": "61e384adf5222388fe660b9c7482f9711b449ee2fcc2be513e378815142e92e7",
+  "validator_source_sha256": "bd1d57770fad07f32ee338f6fab2173749d53d87532e77745ca8062f624df69c",
+  "validator_binary_sha256": "78f5d77a98eb3ebee02947116115c4bc9971bb4d93dfca648910be7e68863a57",
+  "sdk_binary_sha256": "379dfb830452b1b7476f1cd3f21423d9f99cf0c84bbf70b1611ba5e53d320f4b",
+  "nuget_package_sha256": "053312e1a2a606dcc5bcfcff6cc9f37235a1f43b3745ac907283d3122ce9f768",
+  "package_source": "https://api.nuget.org/v3-flatcontainer/documentformat.openxml/2.20.0/documentformat.openxml.2.20.0.nupkg",
+  "input_count": 8,
+  "valid_input_count": 0,
+  "source_unchanged": true
+}

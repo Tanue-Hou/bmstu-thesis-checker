@@ -10,6 +10,8 @@ The v0.2.23 plugin exposes `check_thesis_document`, `check_thesis_folder`, `list
 
 ## Scope
 
+For complex DOCX probe validity and native section-counter observations, read [SDK and native evidence](../../evidence/complex-section-schema-r1/README.zh.md). The corrected r3 inputs pass read-only Office2013 SDK validation and have retained original-program comparisons. This does not change the production profile below. Never treat successful parsing, SDK validation, rendering, native agreement, and repair authorization as interchangeable evidence. Earlier r1/r2 inputs include invalid DrawingML and must not establish valid-document coverage.
+
 For the Native232 `Word.HeaderFooterDistanceInvalid` predicate, read [section-distance evidence](../../docs/NATIVE_SECTION_DISTANCES_232.zh.md). The fixed native comparison is 12.5 mm ± float32(0.2 mm), with precise `w:header`/`w:footer` XML attribute locations. Verification is restricted to a single portrait A4 section with explicit integer header/footer distances from 0 to 1440 twips and no tables, drawings, formulas, fields, revisions, content controls, or extra story parts. Missing or unsupported profiles remain unassessed; no repair permission is implied. The configurable build230 tolerance remains a separate local policy.
 
 For native232 character scale, read [scale evidence](../../docs/NATIVE_SCALE_RULES_232.zh.md). Ordinary small-scale reports use31..69 percent, while2..30 is a separate observed bucket; large scale uses>130. Count UTF16 units including spaces after native activation; do not apply the font-size textbox prior100 gate to scale. Only registered ordinary DOCX master/NKR profiles are verified. No scale copy-repair permission is added.

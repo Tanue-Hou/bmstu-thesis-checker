@@ -19,7 +19,7 @@ def sha(path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--evidence', default='complex-section-r1',
-                        choices=['complex-section-r1', 'complex-section-r2-final'])
+                        choices=['complex-section-r1', 'complex-section-r2-final', 'complex-section-r3-schema'])
     args = parser.parse_args()
     out = ROOT / 'evidence' / args.evidence
     private = ROOT.parent / 'private_trials' / args.evidence / 'native'

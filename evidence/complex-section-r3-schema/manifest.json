@@ -1,0 +1,493 @@
+{
+  "schema": "native232-complex-section-probes-r3-schema",
+  "cases": [
+    {
+      "case_id": "header_footer_story-header-697",
+      "family": "header_footer_story",
+      "path": "inputs/header_footer_story-header-697.docx",
+      "sha256": "f2aec3941eb5ca4148e8101ebb06e425c3e8e0cde57d3081d39e4ff800163339",
+      "bytes": 36020,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "header_footer_story-header-698",
+      "family": "header_footer_story",
+      "path": "inputs/header_footer_story-header-698.docx",
+      "sha256": "19edf08dbdf0409eb96565d0c47f5327dca0103fba0fda60b76920ec9cd95bbf",
+      "bytes": 36019,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "header_footer_story-header-720",
+      "family": "header_footer_story",
+      "path": "inputs/header_footer_story-header-720.docx",
+      "sha256": "1e282f33c21776cb94ecc111dcd6ad60d95598865bc984e67772d006761fea94",
+      "bytes": 36020,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "header_footer_story-header-721",
+      "family": "header_footer_story",
+      "path": "inputs/header_footer_story-header-721.docx",
+      "sha256": "65d5546867e12c80f27d79435180f32ef2c9ef7448a43b1c2b97aa55d9447f59",
+      "bytes": 36018,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "single_ordinary_table-header-697",
+      "family": "single_ordinary_table",
+      "path": "inputs/single_ordinary_table-header-697.docx",
+      "sha256": "5b276e7e800058bd06ac425af77ae228edc01e505660189b1f216e3be22eca6f",
+      "bytes": 35329,
+      "features": {
+        "table": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "single_ordinary_table-header-698",
+      "family": "single_ordinary_table",
+      "path": "inputs/single_ordinary_table-header-698.docx",
+      "sha256": "49867706a3b652d62c2a9f5464f4f5d1cbd21186b8d155f34d809f0d39807280",
+      "bytes": 35329,
+      "features": {
+        "table": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "single_ordinary_table-header-720",
+      "family": "single_ordinary_table",
+      "path": "inputs/single_ordinary_table-header-720.docx",
+      "sha256": "3244ebeba7831c7cce28a2be201adcb25558dadded93fa46275e4c84356c8734",
+      "bytes": 35330,
+      "features": {
+        "table": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "single_ordinary_table-header-721",
+      "family": "single_ordinary_table",
+      "path": "inputs/single_ordinary_table-header-721.docx",
+      "sha256": "7c3c4493ba02d477095e32bea1992d5a52a9a5efe9ba85c0160c4a18c43e2d72",
+      "bytes": 35328,
+      "features": {
+        "table": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "omml_equation-header-697",
+      "family": "omml_equation",
+      "path": "inputs/omml_equation-header-697.docx",
+      "sha256": "f1f1b24a657513a880e07729046c9245e3c5d0a4e738796c35684c0448084dc4",
+      "bytes": 35305,
+      "features": {
+        "omml": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "omml_equation-header-698",
+      "family": "omml_equation",
+      "path": "inputs/omml_equation-header-698.docx",
+      "sha256": "529df8987ead8d5b194741449781ca0352b9ce66f416ada19be8aacafcea02b7",
+      "bytes": 35306,
+      "features": {
+        "omml": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "omml_equation-header-720",
+      "family": "omml_equation",
+      "path": "inputs/omml_equation-header-720.docx",
+      "sha256": "27a37b2ef0629a46cc130c96a61e28455e4f274d5f9e3785d5eae7939aa9accf",
+      "bytes": 35305,
+      "features": {
+        "omml": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "omml_equation-header-721",
+      "family": "omml_equation",
+      "path": "inputs/omml_equation-header-721.docx",
+      "sha256": "8f8354d3fe827cca7e9173a4f7590680ed7c0b8f5917a287501dc565864da8e3",
+      "bytes": 35304,
+      "features": {
+        "omml": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "inline_png-header-697",
+      "family": "inline_png",
+      "path": "inputs/inline_png-header-697.docx",
+      "sha256": "7e2d3153f422f54e1fb4f7b99226d0716c230ccda7dee7f33bfd726441b1153a",
+      "bytes": 35848,
+      "features": {
+        "inline_png": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 1
+    },
+    {
+      "case_id": "inline_png-header-698",
+      "family": "inline_png",
+      "path": "inputs/inline_png-header-698.docx",
+      "sha256": "fec059ad31fc30a21fbfe9440a06a4b542b7b55f5eaae9086a6edd01ffa18334",
+      "bytes": 35848,
+      "features": {
+        "inline_png": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 1
+    },
+    {
+      "case_id": "inline_png-header-720",
+      "family": "inline_png",
+      "path": "inputs/inline_png-header-720.docx",
+      "sha256": "76cf447a6f1682abbc2057814e0f58324560b90a28598e953488229a68333c2c",
+      "bytes": 35848,
+      "features": {
+        "inline_png": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 1
+    },
+    {
+      "case_id": "inline_png-header-721",
+      "family": "inline_png",
+      "path": "inputs/inline_png-header-721.docx",
+      "sha256": "e928e5e4bbf3ddd775ec5cc327595aaa45cad9c3ba2471c164650567e0155596",
+      "bytes": 35847,
+      "features": {
+        "inline_png": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 1
+    },
+    {
+      "case_id": "native_word_chart-header-697",
+      "family": "native_word_chart",
+      "path": "inputs/native_word_chart-header-697.docx",
+      "sha256": "742c2a12c67f8c1b4e3c5534264bb9cd2c0503442c96247d3e05fa7b1a5cd00b",
+      "bytes": 36235,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 1
+    },
+    {
+      "case_id": "native_word_chart-header-698",
+      "family": "native_word_chart",
+      "path": "inputs/native_word_chart-header-698.docx",
+      "sha256": "0d01553c3d5fa39306374ac84e257c856063a18b259b885ccbfaf6e49e7913aa",
+      "bytes": 36235,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 1
+    },
+    {
+      "case_id": "native_word_chart-header-720",
+      "family": "native_word_chart",
+      "path": "inputs/native_word_chart-header-720.docx",
+      "sha256": "10a10c0a4f6d50458d4f24041f6413173715b4c8968b58fb4c0d8d21de18ecf1",
+      "bytes": 36236,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 1
+    },
+    {
+      "case_id": "native_word_chart-header-721",
+      "family": "native_word_chart",
+      "path": "inputs/native_word_chart-header-721.docx",
+      "sha256": "09a4198293cd2273435c0d2efda1607b85626bd531198e9591d938380ede4bb1",
+      "bytes": 36234,
+      "features": {
+        "chart_part": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 1
+    },
+    {
+      "case_id": "combined_complex-header-697",
+      "family": "combined_complex",
+      "path": "inputs/combined_complex-header-697.docx",
+      "sha256": "e681db73f0d1ec285bb569fbf5332a5bbdccd22236a062d8f6d3c218c1244484",
+      "bytes": 37549,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 697,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 2
+    },
+    {
+      "case_id": "combined_complex-header-698",
+      "family": "combined_complex",
+      "path": "inputs/combined_complex-header-698.docx",
+      "sha256": "0d89675614fae35bdf92778b575991c146d93e6a4c61ec2fffcd261c1bd8d3b0",
+      "bytes": 37550,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 698,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 2
+    },
+    {
+      "case_id": "combined_complex-header-720",
+      "family": "combined_complex",
+      "path": "inputs/combined_complex-header-720.docx",
+      "sha256": "0f4bbdcf0f45ddc0f15345ef362134038ba71bd71719880a50467bde24352e3b",
+      "bytes": 37548,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 720,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 2
+    },
+    {
+      "case_id": "combined_complex-header-721",
+      "family": "combined_complex",
+      "path": "inputs/combined_complex-header-721.docx",
+      "sha256": "231c6a60f8cd78a062ddbe97df4d943d864d297445318cb8071d285fb8f2c169",
+      "bytes": 37548,
+      "features": {
+        "chart_part": true,
+        "inline_png": true,
+        "omml": true,
+        "stories": true,
+        "table": true
+      },
+      "section": {
+        "header_twips": 721,
+        "footer_twips": 709
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 2
+    },
+    {
+      "case_id": "header-footer-story-footer-697",
+      "family": "header_footer_story",
+      "path": "inputs/header-footer-story-footer-697.docx",
+      "sha256": "53de3ea1d8ff374526637898557f8cb6a44cd4ba3fde32c6d80f29b66193859d",
+      "bytes": 36019,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 709,
+        "footer_twips": 697
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "header-footer-story-footer-698",
+      "family": "header_footer_story",
+      "path": "inputs/header-footer-story-footer-698.docx",
+      "sha256": "1e2237b4e5406f034d528d30db25bbdec9a07aa986fc085d4ea896238036d7b8",
+      "bytes": 36020,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 709,
+        "footer_twips": 698
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "header-footer-story-footer-720",
+      "family": "header_footer_story",
+      "path": "inputs/header-footer-story-footer-720.docx",
+      "sha256": "76e8ef4dcb931da6afbbc026c04e608d22f7904e309ea01f12c278f36d46ee74",
+      "bytes": 36018,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 709,
+        "footer_twips": 720
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    },
+    {
+      "case_id": "header-footer-story-footer-721",
+      "family": "header_footer_story",
+      "path": "inputs/header-footer-story-footer-721.docx",
+      "sha256": "a31e211f09c81fe07d5cede7e6e74b7bf3612c0fa2f4262446f8cf1ada83e476",
+      "bytes": 36018,
+      "features": {
+        "stories": true
+      },
+      "section": {
+        "header_twips": 709,
+        "footer_twips": 721
+      },
+      "input_validation": "ZIP/XML/python-docx and local chart checks passed; official SDK results recorded separately.",
+      "corrected_lock_attributes": 0
+    }
+  ],
+  "case_count": 28,
+  "baseline": {
+    "path_from_implementation": "evidence/dynamic-master/baseline.docx",
+    "sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+    "bytes": 37612,
+    "read_only_source": true
+  },
+  "matrix_source": {
+    "path": "evidence/complex-section-r1/manifest.json",
+    "sha256": "c43c54aaf169d25ac223024a165055bbe98c19fc08bf7413ec9feff0c2417117"
+  },
+  "generator": {
+    "path_from_implementation": "scripts/reverse_engineering/generate_schema_section_probes.py",
+    "sha256": "3ea1c3cadd2b243fa295cb0519765e2a0198416ba4e417ab9a5caf47bc6a37b8"
+  },
+  "builder": {
+    "path_from_implementation": "scripts/reverse_engineering/generate_complex_section_probes_r2.py",
+    "sha256": "577b299a9b4a6310647deb55210c1df47ba9fcd05868f8c16c735b5f039a7f0a"
+  },
+  "changes": [
+    "r2 chart marker ordering and two axis IDs",
+    "graphicFrameLocks noChangeAspect attribute is unqualified"
+  ],
+  "limits": "Synthetic generation; schema/native validation stored separately. No rendering or repair claim."
+}

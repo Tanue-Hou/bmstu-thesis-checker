@@ -1,0 +1,213 @@
+{
+  "sdk": "DocumentFormat.OpenXml, Version=2.20.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17",
+  "target": "Office2013",
+  "read_only": true,
+  "cases": [
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/header_footer_story-header-697.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "f2aec3941eb5ca4148e8101ebb06e425c3e8e0cde57d3081d39e4ff800163339",
+      "case_id": "header_footer_story-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/header_footer_story-header-698.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "19edf08dbdf0409eb96565d0c47f5327dca0103fba0fda60b76920ec9cd95bbf",
+      "case_id": "header_footer_story-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/header_footer_story-header-720.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "1e282f33c21776cb94ecc111dcd6ad60d95598865bc984e67772d006761fea94",
+      "case_id": "header_footer_story-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/header_footer_story-header-721.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "65d5546867e12c80f27d79435180f32ef2c9ef7448a43b1c2b97aa55d9447f59",
+      "case_id": "header_footer_story-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/single_ordinary_table-header-697.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "5b276e7e800058bd06ac425af77ae228edc01e505660189b1f216e3be22eca6f",
+      "case_id": "single_ordinary_table-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/single_ordinary_table-header-698.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "49867706a3b652d62c2a9f5464f4f5d1cbd21186b8d155f34d809f0d39807280",
+      "case_id": "single_ordinary_table-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/single_ordinary_table-header-720.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "3244ebeba7831c7cce28a2be201adcb25558dadded93fa46275e4c84356c8734",
+      "case_id": "single_ordinary_table-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/single_ordinary_table-header-721.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "7c3c4493ba02d477095e32bea1992d5a52a9a5efe9ba85c0160c4a18c43e2d72",
+      "case_id": "single_ordinary_table-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/omml_equation-header-697.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "f1f1b24a657513a880e07729046c9245e3c5d0a4e738796c35684c0448084dc4",
+      "case_id": "omml_equation-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/omml_equation-header-698.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "529df8987ead8d5b194741449781ca0352b9ce66f416ada19be8aacafcea02b7",
+      "case_id": "omml_equation-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/omml_equation-header-720.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "27a37b2ef0629a46cc130c96a61e28455e4f274d5f9e3785d5eae7939aa9accf",
+      "case_id": "omml_equation-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/omml_equation-header-721.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "8f8354d3fe827cca7e9173a4f7590680ed7c0b8f5917a287501dc565864da8e3",
+      "case_id": "omml_equation-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/inline_png-header-697.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "7e2d3153f422f54e1fb4f7b99226d0716c230ccda7dee7f33bfd726441b1153a",
+      "case_id": "inline_png-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/inline_png-header-698.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "fec059ad31fc30a21fbfe9440a06a4b542b7b55f5eaae9086a6edd01ffa18334",
+      "case_id": "inline_png-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/inline_png-header-720.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "76cf447a6f1682abbc2057814e0f58324560b90a28598e953488229a68333c2c",
+      "case_id": "inline_png-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/inline_png-header-721.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "e928e5e4bbf3ddd775ec5cc327595aaa45cad9c3ba2471c164650567e0155596",
+      "case_id": "inline_png-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/native_word_chart-header-697.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "742c2a12c67f8c1b4e3c5534264bb9cd2c0503442c96247d3e05fa7b1a5cd00b",
+      "case_id": "native_word_chart-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/native_word_chart-header-698.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "0d01553c3d5fa39306374ac84e257c856063a18b259b885ccbfaf6e49e7913aa",
+      "case_id": "native_word_chart-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/native_word_chart-header-720.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "10a10c0a4f6d50458d4f24041f6413173715b4c8968b58fb4c0d8d21de18ecf1",
+      "case_id": "native_word_chart-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/native_word_chart-header-721.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "09a4198293cd2273435c0d2efda1607b85626bd531198e9591d938380ede4bb1",
+      "case_id": "native_word_chart-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/combined_complex-header-697.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "e681db73f0d1ec285bb569fbf5332a5bbdccd22236a062d8f6d3c218c1244484",
+      "case_id": "combined_complex-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/combined_complex-header-698.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "0d89675614fae35bdf92778b575991c146d93e6a4c61ec2fffcd261c1bd8d3b0",
+      "case_id": "combined_complex-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/combined_complex-header-720.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "0f4bbdcf0f45ddc0f15345ef362134038ba71bd71719880a50467bde24352e3b",
+      "case_id": "combined_complex-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/combined_complex-header-721.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "231c6a60f8cd78a062ddbe97df4d943d864d297445318cb8071d285fb8f2c169",
+      "case_id": "combined_complex-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/header-footer-story-footer-697.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "53de3ea1d8ff374526637898557f8cb6a44cd4ba3fde32c6d80f29b66193859d",
+      "case_id": "header-footer-story-footer-697"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/header-footer-story-footer-698.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "1e2237b4e5406f034d528d30db25bbdec9a07aa986fc085d4ea896238036d7b8",
+      "case_id": "header-footer-story-footer-698"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/header-footer-story-footer-720.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "76e8ef4dcb931da6afbbc026c04e608d22f7904e309ea01f12c278f36d46ee74",
+      "case_id": "header-footer-story-footer-720"
+    },
+    {
+      "file": "evidence/complex-section-r3-schema/inputs/header-footer-story-footer-721.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "a31e211f09c81fe07d5cede7e6e74b7bf3612c0fa2f4262446f8cf1ada83e476",
+      "case_id": "header-footer-story-footer-721"
+    }
+  ],
+  "limits": "SDK package/schema validation only; not rendering, school compliance or TestVkr equivalence.",
+  "manifest_sha256": "d4f014bd068697f96cc79ba3d1173201fd2fab6fc7edc7621ec1caaef8b8a88a",
+  "validator_source_sha256": "bd1d57770fad07f32ee338f6fab2173749d53d87532e77745ca8062f624df69c",
+  "validator_binary_sha256": "78f5d77a98eb3ebee02947116115c4bc9971bb4d93dfca648910be7e68863a57",
+  "sdk_binary_sha256": "379dfb830452b1b7476f1cd3f21423d9f99cf0c84bbf70b1611ba5e53d320f4b",
+  "nuget_package_sha256": "053312e1a2a606dcc5bcfcff6cc9f37235a1f43b3745ac907283d3122ce9f768",
+  "package_source": "https://api.nuget.org/v3-flatcontainer/documentformat.openxml/2.20.0/documentformat.openxml.2.20.0.nupkg",
+  "input_count": 28,
+  "valid_input_count": 28,
+  "source_unchanged": true
+}

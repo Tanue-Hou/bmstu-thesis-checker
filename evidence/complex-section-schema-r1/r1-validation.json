@@ -1,0 +1,449 @@
+{
+  "sdk": "DocumentFormat.OpenXml, Version=2.20.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17",
+  "target": "Office2013",
+  "read_only": true,
+  "cases": [
+    {
+      "file": "evidence/complex-section-r1/inputs/header_footer_story-header-697.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "f2aec3941eb5ca4148e8101ebb06e425c3e8e0cde57d3081d39e4ff800163339",
+      "case_id": "header_footer_story-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/header_footer_story-header-698.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "19edf08dbdf0409eb96565d0c47f5327dca0103fba0fda60b76920ec9cd95bbf",
+      "case_id": "header_footer_story-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/header_footer_story-header-720.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "1e282f33c21776cb94ecc111dcd6ad60d95598865bc984e67772d006761fea94",
+      "case_id": "header_footer_story-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/header_footer_story-header-721.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "65d5546867e12c80f27d79435180f32ef2c9ef7448a43b1c2b97aa55d9447f59",
+      "case_id": "header_footer_story-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/single_ordinary_table-header-697.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "5b276e7e800058bd06ac425af77ae228edc01e505660189b1f216e3be22eca6f",
+      "case_id": "single_ordinary_table-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/single_ordinary_table-header-698.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "49867706a3b652d62c2a9f5464f4f5d1cbd21186b8d155f34d809f0d39807280",
+      "case_id": "single_ordinary_table-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/single_ordinary_table-header-720.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "3244ebeba7831c7cce28a2be201adcb25558dadded93fa46275e4c84356c8734",
+      "case_id": "single_ordinary_table-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/single_ordinary_table-header-721.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "7c3c4493ba02d477095e32bea1992d5a52a9a5efe9ba85c0160c4a18c43e2d72",
+      "case_id": "single_ordinary_table-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/omml_equation-header-697.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "f1f1b24a657513a880e07729046c9245e3c5d0a4e738796c35684c0448084dc4",
+      "case_id": "omml_equation-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/omml_equation-header-698.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "529df8987ead8d5b194741449781ca0352b9ce66f416ada19be8aacafcea02b7",
+      "case_id": "omml_equation-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/omml_equation-header-720.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "27a37b2ef0629a46cc130c96a61e28455e4f274d5f9e3785d5eae7939aa9accf",
+      "case_id": "omml_equation-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/omml_equation-header-721.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "8f8354d3fe827cca7e9173a4f7590680ed7c0b8f5917a287501dc565864da8e3",
+      "case_id": "omml_equation-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/inline_png-header-697.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 1,
+      "source_sha256": "372a34e7dd4fe54b6de517f95fb5dd8728ba077926a77d613bef4a3e2eab8d0d",
+      "case_id": "inline_png-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/inline_png-header-698.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 1,
+      "source_sha256": "5a753e3d2ea5b0f2c18b8c0bf2429a087aae7134663ba4a8c3863e30253c53d6",
+      "case_id": "inline_png-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/inline_png-header-720.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 1,
+      "source_sha256": "51a231a8a360c281dd7ec13bce528d1ce6a5e501e3c5e8e688b08bf553b15708",
+      "case_id": "inline_png-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/inline_png-header-721.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        }
+      ],
+      "error_count": 1,
+      "source_sha256": "e3bd2492e911ab999f4816220e6d4e14945159b0c15ffa670af9c5973e430386",
+      "case_id": "inline_png-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/native_word_chart-header-697.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_IncompleteContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has incomplete content. List of possible elements expected: <http://schemas.openxmlformats.org/drawingml/2006/chart:axId>.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]"
+        },
+        {
+          "id": "Sch_UnexpectedElementContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has unexpected child element 'http://schemas.openxmlformats.org/drawingml/2006/chart:marker'.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]/c:ser[1]"
+        }
+      ],
+      "error_count": 3,
+      "source_sha256": "2598b0749df668a1c5b876185ea5758339d15d0081cc932d923d68284114b9f4",
+      "case_id": "native_word_chart-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/native_word_chart-header-698.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_IncompleteContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has incomplete content. List of possible elements expected: <http://schemas.openxmlformats.org/drawingml/2006/chart:axId>.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]"
+        },
+        {
+          "id": "Sch_UnexpectedElementContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has unexpected child element 'http://schemas.openxmlformats.org/drawingml/2006/chart:marker'.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]/c:ser[1]"
+        }
+      ],
+      "error_count": 3,
+      "source_sha256": "bfcbb1f757949e11dd6f91088297a8593bc211e43c66e60bbe1f21c4affd5cfb",
+      "case_id": "native_word_chart-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/native_word_chart-header-720.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_IncompleteContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has incomplete content. List of possible elements expected: <http://schemas.openxmlformats.org/drawingml/2006/chart:axId>.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]"
+        },
+        {
+          "id": "Sch_UnexpectedElementContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has unexpected child element 'http://schemas.openxmlformats.org/drawingml/2006/chart:marker'.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]/c:ser[1]"
+        }
+      ],
+      "error_count": 3,
+      "source_sha256": "e5757581fe6242001d6f979d3aca9c3668f3bd83fc0be9c7a6bb4ced3a1604bf",
+      "case_id": "native_word_chart-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/native_word_chart-header-721.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[41]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_IncompleteContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has incomplete content. List of possible elements expected: <http://schemas.openxmlformats.org/drawingml/2006/chart:axId>.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]"
+        },
+        {
+          "id": "Sch_UnexpectedElementContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has unexpected child element 'http://schemas.openxmlformats.org/drawingml/2006/chart:marker'.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]/c:ser[1]"
+        }
+      ],
+      "error_count": 3,
+      "source_sha256": "aab5bfdffa09f704221ebc9122f5c75a665ce4af958e0cc68ae1faa8ca61b3a1",
+      "case_id": "native_word_chart-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/combined_complex-header-697.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[43]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[42]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_IncompleteContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has incomplete content. List of possible elements expected: <http://schemas.openxmlformats.org/drawingml/2006/chart:axId>.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]"
+        },
+        {
+          "id": "Sch_UnexpectedElementContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has unexpected child element 'http://schemas.openxmlformats.org/drawingml/2006/chart:marker'.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]/c:ser[1]"
+        }
+      ],
+      "error_count": 4,
+      "source_sha256": "25be278b22a5681cb678a2318cc30363f3d25936e14f563a14948f5543fdc3f5",
+      "case_id": "combined_complex-header-697"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/combined_complex-header-698.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[43]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[42]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_IncompleteContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has incomplete content. List of possible elements expected: <http://schemas.openxmlformats.org/drawingml/2006/chart:axId>.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]"
+        },
+        {
+          "id": "Sch_UnexpectedElementContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has unexpected child element 'http://schemas.openxmlformats.org/drawingml/2006/chart:marker'.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]/c:ser[1]"
+        }
+      ],
+      "error_count": 4,
+      "source_sha256": "2bf3aff5752f428357a43d34e635cd5a134fe8869ace353be5cb8860bc7398e9",
+      "case_id": "combined_complex-header-698"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/combined_complex-header-720.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[43]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[42]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_IncompleteContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has incomplete content. List of possible elements expected: <http://schemas.openxmlformats.org/drawingml/2006/chart:axId>.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]"
+        },
+        {
+          "id": "Sch_UnexpectedElementContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has unexpected child element 'http://schemas.openxmlformats.org/drawingml/2006/chart:marker'.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]/c:ser[1]"
+        }
+      ],
+      "error_count": 4,
+      "source_sha256": "b775ec09318c6376f124844b96670b6ff74f76ea654049669ae96f4fda81f0f6",
+      "case_id": "combined_complex-header-720"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/combined_complex-header-721.docx",
+      "errors": [
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[43]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_UndeclaredAttribute",
+          "kind": "Schema",
+          "description": "The 'http://schemas.openxmlformats.org/drawingml/2006/main:noChangeAspect' attribute is not declared.",
+          "part": "/word/document.xml",
+          "xpath": "/w:document[1]/w:body[1]/w:p[42]/w:r[1]/w:drawing[1]/wp:inline[1]/wp:cNvGraphicFramePr[1]/ns2:graphicFrameLocks[1]"
+        },
+        {
+          "id": "Sch_IncompleteContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has incomplete content. List of possible elements expected: <http://schemas.openxmlformats.org/drawingml/2006/chart:axId>.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]"
+        },
+        {
+          "id": "Sch_UnexpectedElementContentExpectingComplex",
+          "kind": "Schema",
+          "description": "The element has unexpected child element 'http://schemas.openxmlformats.org/drawingml/2006/chart:marker'.",
+          "part": "/word/charts/chart1.xml",
+          "xpath": "/c:chartSpace[1]/c:chart[1]/c:plotArea[1]/c:lineChart[1]/c:ser[1]"
+        }
+      ],
+      "error_count": 4,
+      "source_sha256": "f739b8e24e0aef98296fec8cb9bd9a03d3252a2b863bed9dc1c2d972c97b6965",
+      "case_id": "combined_complex-header-721"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/header-footer-story-footer-697.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "53de3ea1d8ff374526637898557f8cb6a44cd4ba3fde32c6d80f29b66193859d",
+      "case_id": "header-footer-story-footer-697"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/header-footer-story-footer-698.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "1e2237b4e5406f034d528d30db25bbdec9a07aa986fc085d4ea896238036d7b8",
+      "case_id": "header-footer-story-footer-698"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/header-footer-story-footer-720.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "76e8ef4dcb931da6afbbc026c04e608d22f7904e309ea01f12c278f36d46ee74",
+      "case_id": "header-footer-story-footer-720"
+    },
+    {
+      "file": "evidence/complex-section-r1/inputs/header-footer-story-footer-721.docx",
+      "errors": [],
+      "error_count": 0,
+      "source_sha256": "a31e211f09c81fe07d5cede7e6e74b7bf3612c0fa2f4262446f8cf1ada83e476",
+      "case_id": "header-footer-story-footer-721"
+    }
+  ],
+  "limits": "SDK package/schema validation only; not rendering, school compliance or TestVkr equivalence.",
+  "manifest_sha256": "c43c54aaf169d25ac223024a165055bbe98c19fc08bf7413ec9feff0c2417117",
+  "validator_source_sha256": "bd1d57770fad07f32ee338f6fab2173749d53d87532e77745ca8062f624df69c",
+  "validator_binary_sha256": "78f5d77a98eb3ebee02947116115c4bc9971bb4d93dfca648910be7e68863a57",
+  "sdk_binary_sha256": "379dfb830452b1b7476f1cd3f21423d9f99cf0c84bbf70b1611ba5e53d320f4b",
+  "nuget_package_sha256": "053312e1a2a606dcc5bcfcff6cc9f37235a1f43b3745ac907283d3122ce9f768",
+  "package_source": "https://api.nuget.org/v3-flatcontainer/documentformat.openxml/2.20.0/documentformat.openxml.2.20.0.nupkg",
+  "input_count": 28,
+  "valid_input_count": 16,
+  "source_unchanged": true
+}

@@ -28,7 +28,12 @@ def signature(report):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('phase', choices=['before', 'after'])
+    p.add_argument('--session', default='section-migration-r1')
     a = p.parse_args()
+    if not a.session or any(c not in 'abcdefghijklmnopqrstuvwxyz0123456789-' for c in a.session):
+        raise ValueError('Migration session must be a plain lowercase directory name')
+    global PRIVATE
+    PRIVATE = ROOT.parent / 'private_trials' / a.session
     PRIVATE.mkdir(parents=True, exist_ok=True)
     baseline = PRIVATE / 'before.jsonl'
     if a.phase == 'before':

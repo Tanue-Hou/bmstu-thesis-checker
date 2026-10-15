@@ -12,7 +12,7 @@ from native_reference_cli import validate_native_run
 
 class ComplexSectionEvidenceTests(unittest.TestCase):
     def test_retained_complex_section_counters_and_reports(self):
-        for name in ('complex-section-r1', 'complex-section-r2-final'):
+        for name in ('complex-section-r1', 'complex-section-r2-final', 'complex-section-r3-schema'):
             with self.subTest(campaign=name):
                 self.check_campaign(name)
 

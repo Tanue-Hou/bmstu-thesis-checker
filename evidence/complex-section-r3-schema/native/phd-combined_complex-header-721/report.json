@@ -1,0 +1,81 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "231c6a60f8cd78a062ddbe97df4d943d864d297445318cb8071d285fb8f2c169",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 14,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Ошибка в наименовании работы."
+    },
+    {
+      "number": 2,
+      "message": "*** Допущены ошибки в названии университета на титульном листе."
+    },
+    {
+      "number": 3,
+      "message": "*** Отсутствует или неправильно введен титульный лист (много несоответствий)."
+    },
+    {
+      "number": 4,
+      "message": "* В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок)."
+    },
+    {
+      "number": 5,
+      "message": "* Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании)."
+    },
+    {
+      "number": 6,
+      "message": "В документе много символов, цвет которых отличается от черного: \"МГТУ им. Н. Э. Баумана\", \"ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА БАКАЛАВРА\", \"РЕФЕРАТ\", \"СОДЕРЖАНИЕ\", \"ВВЕДЕНИЕ\", \"1 ОСНОВНАЯ ЧАСТЬ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 7,
+      "message": "Документ содержит страницы, размеры полей на которых не соответствуют требованиям."
+    },
+    {
+      "number": 8,
+      "message": "Размеры колонтитулов должны быть 1,25 см."
+    },
+    {
+      "number": 9,
+      "message": "Нижние колонтитулы должны содержать один пустой абзац.."
+    },
+    {
+      "number": 10,
+      "message": "* Верхние колонтитулы должны содержать один абзац с номером страницы, выровненным по центру. На титульном листе номер страницы не ставится.."
+    },
+    {
+      "number": 11,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"ОГЛАВЛЕНИЕ\"."
+    },
+    {
+      "number": 12,
+      "message": "** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\"."
+    },
+    {
+      "number": 13,
+      "message": "* В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 14,
+      "message": "* Разберитесь с источником (возможно, чего-то не хватает): \"table cell a\", \"table cell b\"."
+    }
+  ],
+  "evidence_directory": "D:\\Codex项目\\analysis_TestVkr\\private_trials\\complex-section-r3-schema\\native\\phd-combined_complex-header-721",
+  "trace_sha256": "c72c50ef8fdc8205dde768cb4425e021eed96a3ba238634026bb0e5cfb072cf8",
+  "native_text_sha256": "8a2e25fe23c04de0b9571c742310a239c3b8931a1e6da37df4a58d0b1f1e427d",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "841f98a0446f008f2b989dec8a806c40602323b114d61125abcefd0d8f7f607f",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}
