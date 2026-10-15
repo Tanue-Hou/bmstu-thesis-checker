@@ -1,0 +1,409 @@
+{
+  "measurement": "Script-calculated aggregates only; no private case names, paths, contents, IDs, or case hashes.",
+  "registry": {
+    "raw_json_bytes": 2497779,
+    "rule_count": 39,
+    "verification_by_build_context_count": 23,
+    "contexts_by_build_and_format_work_type": {
+      "232:docx:master": 7,
+      "232:docx:phd": 15,
+      "232:pdf:phd": 1
+    },
+    "explicit_status_counts": {
+      "verified_against_original": 21,
+      "absent": 2
+    },
+    "resolved_status_counts": {
+      "verified_against_original": 23
+    },
+    "context_evidence_valid_counts": {
+      "valid": 23
+    },
+    "rule_field_compact_json_bytes": {
+      "verification_by_build": 2120562,
+      "verification_by_context": 16907,
+      "verification_by_work_type": 7859,
+      "legacy_claim": 4929,
+      "predicate_by_build": 4347,
+      "message_template": 3054,
+      "verification_scope": 2697,
+      "sample_trigger": 1409,
+      "verification_status": 1263,
+      "observed_message": 1248,
+      "verification_evidence_sha256": 1188,
+      "threshold_origin": 1126,
+      "rule_id": 994,
+      "evidence_refs": 855,
+      "verified_policy": 480,
+      "verified_work_types": 266,
+      "confidence": 213,
+      "source_va_by_build": 206,
+      "verified_formats": 171,
+      "static_evidence_refs": 132,
+      "source_va": 124,
+      "rejection_reason": 123,
+      "enabled_by_default": 108,
+      "rejection_evidence": 108,
+      "comparator": 88,
+      "threshold": 82,
+      "threshold_by_work_type": 48,
+      "automatic_repair": 45,
+      "measurement": 36,
+      "unit": 14,
+      "rejected_reverse_engineering_candidate": 8
+    },
+    "verification_by_build_share_of_compact_rule_payload_pct": 97.19,
+    "verification_by_build_share_of_rule_field_value_bytes_pct": 97.69,
+    "evidence_reference_occurrences": 9213,
+    "distinct_evidence_references": 2277,
+    "references_reused_at_least_once": 1978,
+    "duplicate_reference_occurrences": 6936,
+    "max_reuse_count_for_one_reference": 6
+  },
+  "private_case_outputs": {
+    "case_count": 17,
+    "raw_json_bytes": {
+      "total": 5000887,
+      "min": 40229,
+      "median": 290819,
+      "max": 536127
+    },
+    "findings_total": 146,
+    "finding_compact_json_bytes": {
+      "median": 7604,
+      "max": 82414
+    },
+    "max_finding_field_compact_json_bytes": {
+      "evidence_refs": 44572,
+      "precise_locations": 34331,
+      "location": 1268,
+      "verification_scope": 310,
+      "comparison_policy": 273,
+      "action_eligibility": 181,
+      "trigger_reason_zh": 136,
+      "word_path_zh": 114
+    },
+    "rule_trigger_frequency": {
+      "Dict.MixedScriptHomoglyphs": {
+        "cases": 16,
+        "case_rate_pct": 94.12,
+        "finding_instances": 16
+      },
+      "Dict.SuspiciousRussianWords": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Graduate.AbstractTooShort": {
+        "cases": 5,
+        "case_rate_pct": 29.41,
+        "finding_instances": 5
+      },
+      "Graduate.RequiredHeadingsMissing": {
+        "cases": 3,
+        "case_rate_pct": 17.65,
+        "finding_instances": 3
+      },
+      "Graduate.ThesisSizeTooSmall": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Graduate.TitlePageMismatch": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Graduate.TocEmpty": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Graduate.TocSmall": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Graduate.UniversityNameInvalid": {
+        "cases": 13,
+        "case_rate_pct": 76.47,
+        "finding_instances": 13
+      },
+      "Graduate.WorkNameInvalid": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Pic.FileSizeTooLarge": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Pic.FloatingImages": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Pic.FloatingLabels": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Pic.FloatingShapes": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Pic.LabelsOutOfBounds": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Pic.PixelSizeTooLarge": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Pic.ShapesOutOfBounds": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Pic.SmallLabels": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Struct.ContainsLatex": {
+        "cases": 1,
+        "case_rate_pct": 5.88,
+        "finding_instances": 1
+      },
+      "Struct.EmptyStructuralElement": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Struct.MissingCitations": {
+        "cases": 1,
+        "case_rate_pct": 5.88,
+        "finding_instances": 1
+      },
+      "Struct.RequiredHeadingsMissing": {
+        "cases": 1,
+        "case_rate_pct": 5.88,
+        "finding_instances": 1
+      },
+      "Struct.SmallStructuralElement": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Struct.ThesisSizeTooSmall": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Word.AlignmentNotJustified": {
+        "cases": 13,
+        "case_rate_pct": 76.47,
+        "finding_instances": 13
+      },
+      "Word.BottomMarginInvalid": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Word.FirstLineIndentInvalid": {
+        "cases": 13,
+        "case_rate_pct": 76.47,
+        "finding_instances": 13
+      },
+      "Word.FontScaleTooLarge": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Word.FontScaleTooSmall": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Word.FontSizeTooLarge": {
+        "cases": 1,
+        "case_rate_pct": 5.88,
+        "finding_instances": 1
+      },
+      "Word.FontSizeTooSmall": {
+        "cases": 3,
+        "case_rate_pct": 17.65,
+        "finding_instances": 3
+      },
+      "Word.HeaderFooterDistanceInvalid": {
+        "cases": 4,
+        "case_rate_pct": 23.53,
+        "finding_instances": 4
+      },
+      "Word.LeadingWhitespace": {
+        "cases": 13,
+        "case_rate_pct": 76.47,
+        "finding_instances": 13
+      },
+      "Word.LeftIndentInvalid": {
+        "cases": 13,
+        "case_rate_pct": 76.47,
+        "finding_instances": 13
+      },
+      "Word.LeftMarginInvalid": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Word.LineSpacingInvalid": {
+        "cases": 13,
+        "case_rate_pct": 76.47,
+        "finding_instances": 19
+      },
+      "Word.PageSizeNotA4": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Word.RightIndentInvalid": {
+        "cases": 12,
+        "case_rate_pct": 70.59,
+        "finding_instances": 12
+      },
+      "Word.RightMarginInvalid": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      },
+      "Word.TableRowHeightTooSmall": {
+        "cases": 4,
+        "case_rate_pct": 23.53,
+        "finding_instances": 4
+      },
+      "Word.TableSuspiciousHeightRule": {
+        "cases": 7,
+        "case_rate_pct": 41.18,
+        "finding_instances": 7
+      },
+      "Word.TextColorNotBlack": {
+        "cases": 4,
+        "case_rate_pct": 23.53,
+        "finding_instances": 4
+      },
+      "Word.TopMarginInvalid": {
+        "cases": 0,
+        "case_rate_pct": 0.0,
+        "finding_instances": 0
+      }
+    },
+    "top_level_report_field_compact_json_bytes": {
+      "findings": 3615260,
+      "native_paragraph_observations": 95579,
+      "fix_checklist": 74890,
+      "groups": 21642,
+      "formatting_coverage": 5901,
+      "review_summary": 5653,
+      "work_type_policy": 4315,
+      "native_reference": 4250,
+      "native_word_observations": 4078,
+      "native_scale_observations": 3544,
+      "repair_capability": 3077,
+      "action_contract": 3026,
+      "action_summary": 1827,
+      "native_comparison_limits": 1666,
+      "location_contract": 1581,
+      "file": 1351,
+      "source_sha256": 1122,
+      "summary": 945,
+      "verification_status": 935,
+      "work_type": 124,
+      "document_kind": 121,
+      "file_type": 98,
+      "template": 68,
+      "template_coverage": 34
+    },
+    "top_level_findings_share_of_report_fields_pct": 93.88,
+    "finding_field_compact_json_bytes": {
+      "evidence_refs": 2011666,
+      "precise_locations": 1255737,
+      "location": 35452,
+      "comparison_policy": 32270,
+      "action_eligibility": 28162,
+      "message": 22317,
+      "russian_message": 22317,
+      "trigger_reason_zh": 16184,
+      "verification_scope": 14217,
+      "fix_suggestion_zh": 13949,
+      "word_path_zh": 13511,
+      "explanation_zh": 12660,
+      "location_summary_zh": 11630,
+      "sample_trigger": 7550,
+      "threshold": 7257,
+      "threshold_origin": 5575,
+      "verification_status": 5402,
+      "rule_id": 3984,
+      "title_zh": 3133,
+      "fix_priority": 2190,
+      "skip_switch": 2092,
+      "suggested_fix_priority": 1853,
+      "module": 1834,
+      "severity": 977,
+      "confidence": 730,
+      "affects_antiplagiarism": 711,
+      "verification_evidence_intact": 685,
+      "source_va": 608,
+      "comparator": 560,
+      "static_evidence_refs": 460
+    },
+    "largest_finding_fields_share_of_finding_payload_pct": {
+      "evidence_refs": 56.9,
+      "precise_locations": 35.52
+    }
+  },
+  "compact_output_recommendation": {
+    "compatibility": "Add an opt-in compact projection or separate response mode; retain current default JSON, Markdown, and DOCX outputs.",
+    "report_fields_to_keep": [
+      "document_kind",
+      "file_type",
+      "work_type",
+      "verification_status",
+      "summary",
+      "review_summary",
+      "groups",
+      "findings"
+    ],
+    "finding_fields_to_keep": [
+      "rule_id",
+      "module",
+      "severity",
+      "message",
+      "title_zh",
+      "explanation_zh",
+      "trigger_reason_zh",
+      "fix_suggestion_zh",
+      "word_path_zh",
+      "fix_priority",
+      "suggested_fix_priority",
+      "affects_antiplagiarism",
+      "confidence",
+      "verification_status",
+      "threshold",
+      "location",
+      "location_summary_zh",
+      "threshold_origin"
+    ],
+    "large_fields_to_defer_or_bound": [
+      "evidence_refs",
+      "static_evidence_refs",
+      "precise_locations",
+      "sample_trigger",
+      "verification_scope",
+      "comparison_policy"
+    ],
+    "deferred_field_contract": "Compact responses should retain evidence-reference count and precise-location occurrence count, with full evidence and coordinates available through a detail response. Never silently truncate arrays in the existing full response."
+  }
+}

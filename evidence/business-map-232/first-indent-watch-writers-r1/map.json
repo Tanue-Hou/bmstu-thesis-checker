@@ -1,0 +1,274 @@
+{
+  "schema": "native-counter-watch-writer-map-r1",
+  "target": {
+    "path_from_repo": "runtime/TestVkr232.exe",
+    "sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+    "preferred_image_base": "0x400000"
+  },
+  "inputs": {
+    "docx_calibration": {
+      "path_from_repo": "private_trials/first-watch-calibration-r1/native/trace.json",
+      "sha256": "b21c51a656bff61044ae6f4acbbc0f7365270f04e4af7e771624a7d47a8101e9",
+      "probe_document_sha256": "a8a6de4dd882d6924e5bc3e38c467e25ce8e880fc7dbc4119d5444756027226a",
+      "loader": "docx_load",
+      "initial_values": {
+        "first": 0,
+        "left": 0
+      },
+      "final_values": {
+        "first": 0,
+        "left": 1
+      },
+      "report_binding_match": true,
+      "report_base": "0x4df35f8",
+      "watched_addresses": {
+        "first": "0x4df373c",
+        "left": "0x4df3730"
+      }
+    },
+    "pdf_multipage": {
+      "path_from_repo": "private_trials/first-watch-pdf-mp-r1/native/trace.json",
+      "sha256": "3d58fbe2e52bfe92774452f844eecfbc2a0c58444ce8545899ef49b84fbaf719",
+      "probe_document_sha256": "a0815ebc8b37789c8982d037b6b8bbce929730122cc66e324a36c9289b713205",
+      "loader": "pdf_load",
+      "initial_values": {
+        "first": 0,
+        "left": 0
+      },
+      "final_values": {
+        "first": 0,
+        "left": 0
+      },
+      "report_binding_match": true,
+      "report_base": "0x4b43a04",
+      "watched_addresses": {
+        "first": "0x4b43b48",
+        "left": "0x4b43b3c"
+      }
+    }
+  },
+  "writers": [
+    {
+      "trace": "docx_calibration",
+      "fired_fields": [
+        "left"
+      ],
+      "before": {
+        "first": 0,
+        "left": 0
+      },
+      "after": {
+        "first": 0,
+        "left": 0
+      },
+      "eip_after_preferred_va": "0x6acef5",
+      "writer_va": "0x6acef2",
+      "writer_bytes": "dd1410",
+      "writer_instruction": "fst qword ptr [eax + edx]",
+      "owner_function": "FUN_006acec0",
+      "memory_write_start": "0x4df3730",
+      "memory_write_width_bytes": 8,
+      "rep_prefix": false,
+      "near_code_match": true,
+      "near_code_differing_preferred_vas": [],
+      "writer_bytes_match_disk": true,
+      "software_breakpoint_byte_in_writer": false
+    },
+    {
+      "trace": "docx_calibration",
+      "fired_fields": [
+        "first"
+      ],
+      "before": {
+        "first": 0,
+        "left": 0
+      },
+      "after": {
+        "first": 0,
+        "left": 0
+      },
+      "eip_after_preferred_va": "0x6acef9",
+      "writer_va": "0x6acef5",
+      "writer_bytes": "dd541008",
+      "writer_instruction": "fst qword ptr [eax + edx + 8]",
+      "owner_function": "FUN_006acec0",
+      "memory_write_start": "0x4df3738",
+      "memory_write_width_bytes": 8,
+      "rep_prefix": false,
+      "near_code_match": false,
+      "near_code_differing_preferred_vas": [
+        "0x6acf18"
+      ],
+      "writer_bytes_match_disk": true,
+      "software_breakpoint_byte_in_writer": false,
+      "mismatch_explanation": "Only relocation-adjusted immediate data in sampled window; writer bytes themselves match disk.",
+      "relocation_rvas_in_window": [
+        "0x2acf16"
+      ]
+    },
+    {
+      "trace": "docx_calibration",
+      "fired_fields": [
+        "left"
+      ],
+      "before": {
+        "first": 0,
+        "left": 0
+      },
+      "after": {
+        "first": 0,
+        "left": 1
+      },
+      "eip_after_preferred_va": "0x403623",
+      "writer_va": "0x403621",
+      "writer_bytes": "ff01",
+      "writer_instruction": "inc dword ptr [ecx]",
+      "owner_function": "FUN_00403318",
+      "memory_write_start": "0x4df3730",
+      "memory_write_width_bytes": 4,
+      "rep_prefix": false,
+      "near_code_match": true,
+      "near_code_differing_preferred_vas": [],
+      "writer_bytes_match_disk": true,
+      "software_breakpoint_byte_in_writer": false
+    },
+    {
+      "trace": "pdf_multipage",
+      "fired_fields": [
+        "left"
+      ],
+      "before": {
+        "first": 0,
+        "left": 0
+      },
+      "after": {
+        "first": 0,
+        "left": 0
+      },
+      "eip_after_preferred_va": "0x6acef5",
+      "writer_va": "0x6acef2",
+      "writer_bytes": "dd1410",
+      "writer_instruction": "fst qword ptr [eax + edx]",
+      "owner_function": "FUN_006acec0",
+      "memory_write_start": "0x4b43b38",
+      "memory_write_width_bytes": 8,
+      "rep_prefix": false,
+      "near_code_match": true,
+      "near_code_differing_preferred_vas": [],
+      "writer_bytes_match_disk": true,
+      "software_breakpoint_byte_in_writer": false
+    },
+    {
+      "trace": "pdf_multipage",
+      "fired_fields": [
+        "first"
+      ],
+      "before": {
+        "first": 0,
+        "left": 0
+      },
+      "after": {
+        "first": 0,
+        "left": 0
+      },
+      "eip_after_preferred_va": "0x6acef5",
+      "writer_va": "0x6acef2",
+      "writer_bytes": "dd1410",
+      "writer_instruction": "fst qword ptr [eax + edx]",
+      "owner_function": "FUN_006acec0",
+      "memory_write_start": "0x4b43b48",
+      "memory_write_width_bytes": 8,
+      "rep_prefix": false,
+      "near_code_match": true,
+      "near_code_differing_preferred_vas": [],
+      "writer_bytes_match_disk": true,
+      "software_breakpoint_byte_in_writer": false
+    }
+  ],
+  "private_function_assembly_artifacts": {
+    "FUN_006acec0.asm": {
+      "path_from_repo": "private_trials/reverse-engineering/first-indent-watch-writers-r1/FUN_006acec0.asm",
+      "sha256": "1ae09944058e22d3f189f2749dbdc47c449c6eb00b087f8423a02d7e1cc9dab4",
+      "availability": "private_trial_artifact_not_obtainable_from_public_repository"
+    },
+    "FUN_006acf5b.asm": {
+      "path_from_repo": "private_trials/reverse-engineering/first-indent-watch-writers-r1/FUN_006acf5b.asm",
+      "sha256": "44c3c960fe5c4d4ed8e76feb2cfd5de561bf465dca1f3136f1084dc3bc31cec6",
+      "availability": "private_trial_artifact_not_obtainable_from_public_repository"
+    },
+    "FUN_00403318.asm": {
+      "path_from_repo": "private_trials/reverse-engineering/first-indent-watch-writers-r1/FUN_00403318.asm",
+      "sha256": "013f99bf7b21aceeb578367dd126a7f651f6cbdc24bc283989e2864c312e04c1",
+      "availability": "private_trial_artifact_not_obtainable_from_public_repository"
+    },
+    "FUN_0043e010.asm": {
+      "path_from_repo": "private_trials/reverse-engineering/first-indent-watch-writers-r1/FUN_0043e010.asm",
+      "sha256": "7e52d3de9cf2574399fb0369c471e303673d5f73d6c5c9be21d94303d2d35a96",
+      "availability": "private_trial_artifact_not_obtainable_from_public_repository"
+    },
+    "FUN_0043dd1c.asm": {
+      "path_from_repo": "private_trials/reverse-engineering/first-indent-watch-writers-r1/FUN_0043dd1c.asm",
+      "sha256": "9799a64b4cbbbf6c841c7e7592dcac9874ce1b97300c138a0bdca19d0cc19152",
+      "availability": "private_trial_artifact_not_obtainable_from_public_repository"
+    },
+    "FUN_0046ba90.asm": {
+      "path_from_repo": "private_trials/reverse-engineering/first-indent-watch-writers-r1/FUN_0046ba90.asm",
+      "sha256": "b0ed524eeb07462cab9848c37bbebc968cce2d0d2d691f0b74ebc4e2e33438c8",
+      "availability": "private_trial_artifact_not_obtainable_from_public_repository"
+    }
+  },
+  "decompilation_sources": {
+    "evidence/agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "evidence/agent-v027/decompilation/functions.tsv": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0",
+    "evidence/agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "evidence/agent-v027/decompilation/provenance.json": "3608d1961f95f3ca6ce5c5f7e69d5a08e84b56b5dc2ab7b3531dfa608eae5733"
+  },
+  "interpretation_boundary": [
+    "Hardware watch confirms only writes observed in these two synthetic runs.",
+    "FST qword stores are same-value zero writes in the calibration trace; second store overlaps the watched 4-byte first slot.",
+    "INC dword [ecx] changes the watched left counter from 0 to 1 in the calibration trace.",
+    "PDF trace confirms zeroing writes and report-address binding; no first increment occurred in this trace, which does not establish that no writer exists.",
+    "All mapped writer instructions are non-REP; for REP string instructions, an after-watch EIP can require separate iteration-aware handling."
+  ],
+  "static_call_chains": {
+    "docx": [
+      "FUN_0043dd1c",
+      "FUN_0043e010",
+      "FUN_006acf5b",
+      "FUN_006acec0"
+    ],
+    "pdf": [
+      "FUN_0046ba90",
+      "FUN_0043e010",
+      "FUN_006acf5b",
+      "FUN_006acec0"
+    ],
+    "counter_writer": "FUN_00403318; direct callers exist in calls.tsv but the watch trace does not identify a unique dynamic caller."
+  },
+  "static_pseudocode_lines": {
+    "FUN_00403318": [
+      983,
+      1128
+    ],
+    "FUN_0043dd1c": [
+      30941,
+      31043
+    ],
+    "FUN_0043e010": [
+      31045,
+      31062
+    ],
+    "FUN_0046ba90": [
+      57180,
+      57210
+    ],
+    "FUN_006acec0": [
+      382433,
+      382520
+    ],
+    "FUN_006acf5b": [
+      382522,
+      382530
+    ]
+  }
+}

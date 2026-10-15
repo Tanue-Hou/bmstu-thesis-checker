@@ -1,0 +1,267 @@
+{
+  "status": "passed_first_indent_counter_watch_revalidation",
+  "target_exe_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "manifest": "evidence/business-map-232/first-indent-watch-inputs-r1/manifest.json",
+  "manifest_sha256": "b81fe87e3560be98f47e0dbb481e8fdda53d0c678720123d35cd8a067355e4a0",
+  "cases": [
+    {
+      "case": "noFirst",
+      "format": "docx",
+      "mode": "master",
+      "source_sha256": "cf82372ebf5c530c081ef05df2d5dccc44f56ed8a044017b5ae913ee54101b84",
+      "artifact_kind": "fresh",
+      "artifact_directory": "private_trials/first-indent-watch-native-r1/noFirst",
+      "report": "private_trials/first-indent-watch-native-r1/noFirst/report.json",
+      "report_sha256": "6fcf607b244e0fcbbcdcb2efd2427eeeb63ab9fe43ab1ccc5c37844ba7a910f9",
+      "trace": "private_trials/first-indent-watch-native-r1/noFirst/native/trace.json",
+      "trace_sha256": "a9d0481dfcaca20d651f7704ba6c0429f50f6192029b39069799c08658672b05",
+      "source_copy": "private_trials/first-indent-watch-native-r1/noFirst/input.docx",
+      "native_diagnostic_count": 8,
+      "baseline_diagnostic_count": 8,
+      "normalized_full_diagnostics_sha256": "2837c80f5c308cb06eb12a1b0a824ecb0c0d4bd58386fddab450e3bf5dc99b60",
+      "same_full_report": true,
+      "watch": {
+        "status": "complete_bound_owned_thread_hardware_write_observation",
+        "write_events": 2,
+        "final_values": {
+          "first": 0,
+          "left": 0
+        },
+        "changed_events": {
+          "first": 0,
+          "left": 0
+        },
+        "limits": "Loader-to-report checker thread only; zero writes beyond reset do not establish a universally absent rule."
+      },
+      "baseline_capture": "implementation/evidence/business-map-232/paragraph-native-r1/noFirst",
+      "baseline_native_text_sha256": "efa81e1f80748d54fa1140b815318a834f803b7b33e532b5fedfdbb5de35ec43",
+      "published": {
+        "directory": "evidence/business-map-232/first-indent-watch-native-r1/noFirst",
+        "report": "evidence/business-map-232/first-indent-watch-native-r1/noFirst/report.json",
+        "report_sha256": "517d0e6ec9698750a910d320036902e43bd96fbfc51c985cc98c35fe0780be30",
+        "trace": "evidence/business-map-232/first-indent-watch-native-r1/noFirst/trace.json",
+        "trace_sha256": "a9d0481dfcaca20d651f7704ba6c0429f50f6192029b39069799c08658672b05",
+        "native_text": "evidence/business-map-232/first-indent-watch-native-r1/noFirst/native-result.txt",
+        "native_text_sha256": "26cb863694884b1ac9323469a8fb5838275fd8dce5e9f3519f452bce7958f7e9",
+        "source": "evidence/business-map-232/first-indent-watch-native-r1/noFirst/input.docx",
+        "source_sha256": "cf82372ebf5c530c081ef05df2d5dccc44f56ed8a044017b5ae913ee54101b84"
+      }
+    },
+    {
+      "case": "firstOneInch",
+      "format": "docx",
+      "mode": "master",
+      "source_sha256": "292b90ebf4877a382b7c10b4ccbae5c00e1754d533da1815ce1efa192da3be97",
+      "artifact_kind": "fresh",
+      "artifact_directory": "private_trials/first-indent-watch-native-r1/firstOneInch",
+      "report": "private_trials/first-indent-watch-native-r1/firstOneInch/report.json",
+      "report_sha256": "432dd659ec3d0e963303b235b15f188e44a437f10734f1e11fc114f3cd97413b",
+      "trace": "private_trials/first-indent-watch-native-r1/firstOneInch/native/trace.json",
+      "trace_sha256": "59bfffb03530881101eae266f13a352be10c5c0e474a0a2a139c4c49a501cac6",
+      "source_copy": "private_trials/first-indent-watch-native-r1/firstOneInch/input.docx",
+      "native_diagnostic_count": 8,
+      "baseline_diagnostic_count": 8,
+      "normalized_full_diagnostics_sha256": "2837c80f5c308cb06eb12a1b0a824ecb0c0d4bd58386fddab450e3bf5dc99b60",
+      "same_full_report": true,
+      "watch": {
+        "status": "complete_bound_owned_thread_hardware_write_observation",
+        "write_events": 2,
+        "final_values": {
+          "first": 0,
+          "left": 0
+        },
+        "changed_events": {
+          "first": 0,
+          "left": 0
+        },
+        "limits": "Loader-to-report checker thread only; zero writes beyond reset do not establish a universally absent rule."
+      },
+      "baseline_capture": "implementation/evidence/business-map-232/paragraph-native-r2/firstOneInch",
+      "baseline_native_text_sha256": "3cb81fd49f238a6a90568618b5b0217880f9df67ea89d8208a7c25d6a9ae0cc2",
+      "published": {
+        "directory": "evidence/business-map-232/first-indent-watch-native-r1/firstOneInch",
+        "report": "evidence/business-map-232/first-indent-watch-native-r1/firstOneInch/report.json",
+        "report_sha256": "ac1a03506f199e022e6028e8c586bd966de86ec832a60857f83eb3c07aa95a18",
+        "trace": "evidence/business-map-232/first-indent-watch-native-r1/firstOneInch/trace.json",
+        "trace_sha256": "59bfffb03530881101eae266f13a352be10c5c0e474a0a2a139c4c49a501cac6",
+        "native_text": "evidence/business-map-232/first-indent-watch-native-r1/firstOneInch/native-result.txt",
+        "native_text_sha256": "0a4e43f1fee1e4d2750ef301e3f7ea9e22f719b26a1772d56da09261fc7ed2f2",
+        "source": "evidence/business-map-232/first-indent-watch-native-r1/firstOneInch/input.docx",
+        "source_sha256": "292b90ebf4877a382b7c10b4ccbae5c00e1754d533da1815ce1efa192da3be97"
+      }
+    },
+    {
+      "case": "negativeLeft_positive_writer_control",
+      "format": "docx",
+      "mode": "master",
+      "source_sha256": "a8a6de4dd882d6924e5bc3e38c467e25ce8e880fc7dbc4119d5444756027226a",
+      "artifact_kind": "seed",
+      "artifact_directory": "private_trials/first-watch-calibration-r1",
+      "report": "private_trials/first-watch-calibration-r1/report.json",
+      "report_sha256": "37876b39e219ab62ffc2049aa636e066b06e88c3349851daab6578501c07fccf",
+      "trace": "private_trials/first-watch-calibration-r1/native/trace.json",
+      "trace_sha256": "b21c51a656bff61044ae6f4acbbc0f7365270f04e4af7e771624a7d47a8101e9",
+      "source_copy": "private_trials/first-watch-calibration-r1/input.docx",
+      "native_diagnostic_count": 9,
+      "baseline_diagnostic_count": 9,
+      "normalized_full_diagnostics_sha256": "80b337627650b7d4c7499010cb55a7e5b0176f0e7dc81a5a81338a9b7ce285d9",
+      "same_full_report": true,
+      "watch": {
+        "status": "complete_bound_owned_thread_hardware_write_observation",
+        "write_events": 3,
+        "final_values": {
+          "first": 0,
+          "left": 1
+        },
+        "changed_events": {
+          "first": 0,
+          "left": 1
+        },
+        "limits": "Loader-to-report checker thread only; zero writes beyond reset do not establish a universally absent rule."
+      },
+      "baseline_capture": "implementation/evidence/business-map-232/paragraph-branches-native-r2/negativeLeft",
+      "baseline_native_text_sha256": "0569b772f16c9194bf8444cec8890b70a23a70878334e39d4f0b93607e461216",
+      "published": {
+        "directory": "evidence/business-map-232/first-indent-watch-native-r1/negativeLeft_positive_writer_control",
+        "report": "evidence/business-map-232/first-indent-watch-native-r1/negativeLeft_positive_writer_control/report.json",
+        "report_sha256": "e628e400e481c9254329b0623f2d1d9b0673258bbd40da6f221f4fd61e2d8c6a",
+        "trace": "evidence/business-map-232/first-indent-watch-native-r1/negativeLeft_positive_writer_control/trace.json",
+        "trace_sha256": "b21c51a656bff61044ae6f4acbbc0f7365270f04e4af7e771624a7d47a8101e9",
+        "native_text": "evidence/business-map-232/first-indent-watch-native-r1/negativeLeft_positive_writer_control/native-result.txt",
+        "native_text_sha256": "78167ba399abcc959851ceef180978afffa6798010de2d686bdcc09b8c8ca4cb",
+        "source": "evidence/business-map-232/first-indent-watch-native-r1/negativeLeft_positive_writer_control/input.docx",
+        "source_sha256": "a8a6de4dd882d6924e5bc3e38c467e25ce8e880fc7dbc4119d5444756027226a"
+      }
+    },
+    {
+      "case": "pdf_one_page_pixel_boundary_baseline",
+      "format": "pdf",
+      "mode": "phd",
+      "source_sha256": "d85f85d5a38268add142601ad453aae9100d59a61556dc39c1cb2bdd6a6a9892",
+      "artifact_kind": "fresh",
+      "artifact_directory": "private_trials/first-indent-watch-native-r1/pdf_one_page_pixel_boundary_baseline",
+      "report": "private_trials/first-indent-watch-native-r1/pdf_one_page_pixel_boundary_baseline/report.json",
+      "report_sha256": "0480d54e8a085d1263ed3a4f9f2cdddea8959cc4190afcecc8dd53aca53cf64c",
+      "trace": "private_trials/first-indent-watch-native-r1/pdf_one_page_pixel_boundary_baseline/native/trace.json",
+      "trace_sha256": "a1d115f02eefe31891b75ed30fbe7e0508028617e09d9d26aa4d6a288980d09d",
+      "source_copy": "private_trials/first-indent-watch-native-r1/pdf_one_page_pixel_boundary_baseline/input.pdf",
+      "native_diagnostic_count": 9,
+      "baseline_diagnostic_count": 9,
+      "normalized_full_diagnostics_sha256": "0a0c4bbbac356e7fe0cd88555152435d0774a924386d29aa4c46e374502257c9",
+      "same_full_report": true,
+      "watch": {
+        "status": "complete_bound_owned_thread_hardware_write_observation",
+        "write_events": 2,
+        "final_values": {
+          "first": 0,
+          "left": 0
+        },
+        "changed_events": {
+          "first": 0,
+          "left": 0
+        },
+        "limits": "Loader-to-report checker thread only; zero writes beyond reset do not establish a universally absent rule."
+      },
+      "baseline_capture": "implementation/evidence/business-map-232/pixel-boundaries-r1/pdf_4000x4000",
+      "baseline_native_text_sha256": "13ab5eafe76495ee996c9e04c5eaa12066604e678dc5fb2c9aedd70acb135f59",
+      "published": {
+        "directory": "evidence/business-map-232/first-indent-watch-native-r1/pdf_one_page_pixel_boundary_baseline",
+        "report": "evidence/business-map-232/first-indent-watch-native-r1/pdf_one_page_pixel_boundary_baseline/report.json",
+        "report_sha256": "f00250ad76098c253b9751cb9e62256035b2a70b2746ad217a3b83b37b2ef69b",
+        "trace": "evidence/business-map-232/first-indent-watch-native-r1/pdf_one_page_pixel_boundary_baseline/trace.json",
+        "trace_sha256": "a1d115f02eefe31891b75ed30fbe7e0508028617e09d9d26aa4d6a288980d09d",
+        "native_text": "evidence/business-map-232/first-indent-watch-native-r1/pdf_one_page_pixel_boundary_baseline/native-result.txt",
+        "native_text_sha256": "0912996467c7754795681d7f2900b39e915ee9a5a2a0fc8ccd5527af0201407c",
+        "source": "evidence/business-map-232/first-indent-watch-native-r1/pdf_one_page_pixel_boundary_baseline/input.pdf",
+        "source_sha256": "d85f85d5a38268add142601ad453aae9100d59a61556dc39c1cb2bdd6a6a9892"
+      }
+    },
+    {
+      "case": "mp_clean_three_page_control",
+      "format": "pdf",
+      "mode": "phd",
+      "source_sha256": "a0815ebc8b37789c8982d037b6b8bbce929730122cc66e324a36c9289b713205",
+      "artifact_kind": "seed",
+      "artifact_directory": "private_trials/first-watch-pdf-mp-r1",
+      "report": "private_trials/first-watch-pdf-mp-r1/report.json",
+      "report_sha256": "7dd565f16c8f092bcec8ee9af5ec6bb4a0aeec19bf17bb2b9dcd446f00921c75",
+      "trace": "private_trials/first-watch-pdf-mp-r1/native/trace.json",
+      "trace_sha256": "3d58fbe2e52bfe92774452f844eecfbc2a0c58444ce8545899ef49b84fbaf719",
+      "source_copy": "private_trials/first-watch-pdf-mp-r1/input.pdf",
+      "native_diagnostic_count": 10,
+      "baseline_diagnostic_count": 10,
+      "normalized_full_diagnostics_sha256": "14f056f738ad9c6813ed7d82a1e69841ce141ab7680583ae758c1260a22fd7e9",
+      "same_full_report": true,
+      "watch": {
+        "status": "complete_bound_owned_thread_hardware_write_observation",
+        "write_events": 2,
+        "final_values": {
+          "first": 0,
+          "left": 0
+        },
+        "changed_events": {
+          "first": 0,
+          "left": 0
+        },
+        "limits": "Loader-to-report checker thread only; zero writes beyond reset do not establish a universally absent rule."
+      },
+      "baseline_capture": "implementation/evidence/business-map-232/native-modes-r1/phd_pdf_clean",
+      "baseline_native_text_sha256": "9379c1e1c4b58ca0649353744360a11a9af6c983d0d7eef013c61dfe7f2b0f6e",
+      "published": {
+        "directory": "evidence/business-map-232/first-indent-watch-native-r1/mp_clean_three_page_control",
+        "report": "evidence/business-map-232/first-indent-watch-native-r1/mp_clean_three_page_control/report.json",
+        "report_sha256": "2a423dbd7e25bc3a95b906bf05d0b85f54e28567d6e53cfc8472333f4fb9aede",
+        "trace": "evidence/business-map-232/first-indent-watch-native-r1/mp_clean_three_page_control/trace.json",
+        "trace_sha256": "3d58fbe2e52bfe92774452f844eecfbc2a0c58444ce8545899ef49b84fbaf719",
+        "native_text": "evidence/business-map-232/first-indent-watch-native-r1/mp_clean_three_page_control/native-result.txt",
+        "native_text_sha256": "00cdf9a38a18d895329951595ff7888a061a8905e81aa4fcea4bfd6934d03fc6",
+        "source": "evidence/business-map-232/first-indent-watch-native-r1/mp_clean_three_page_control/input.pdf",
+        "source_sha256": "a0815ebc8b37789c8982d037b6b8bbce929730122cc66e324a36c9289b713205"
+      }
+    },
+    {
+      "case": "structure_clean_fourteen_page_control",
+      "format": "pdf",
+      "mode": "phd",
+      "source_sha256": "5272656dcc7a90fb2eb487851d67e7a9a0e347b84b9cf259647b58d8abbd26d6",
+      "artifact_kind": "fresh",
+      "artifact_directory": "private_trials/first-indent-watch-native-r1/structure_clean_fourteen_page_control",
+      "report": "private_trials/first-indent-watch-native-r1/structure_clean_fourteen_page_control/report.json",
+      "report_sha256": "538f6b3255d0d2a0cace788b044982a8b1a48076f21ccacb53d67c97e49c5db8",
+      "trace": "private_trials/first-indent-watch-native-r1/structure_clean_fourteen_page_control/native/trace.json",
+      "trace_sha256": "cfe20f0ef50c0bcdc45b30ea15688cc8e28dbcc3275cfe21c36104be5284bce4",
+      "source_copy": "private_trials/first-indent-watch-native-r1/structure_clean_fourteen_page_control/input.pdf",
+      "native_diagnostic_count": 3,
+      "baseline_diagnostic_count": 3,
+      "normalized_full_diagnostics_sha256": "7373d5deed0b4d017fd4cd86fd4ee3ce47492aa3ee494520d1ca43c9cbdb644a",
+      "same_full_report": true,
+      "watch": {
+        "status": "complete_bound_owned_thread_hardware_write_observation",
+        "write_events": 2,
+        "final_values": {
+          "first": 0,
+          "left": 0
+        },
+        "changed_events": {
+          "first": 0,
+          "left": 0
+        },
+        "limits": "Loader-to-report checker thread only; zero writes beyond reset do not establish a universally absent rule."
+      },
+      "baseline_capture": "implementation/evidence/business-map-232/native-modes-r1/phd_pdf_structure",
+      "baseline_native_text_sha256": "73b5fdfa568e45c20caca261c3cb85028988943cb0ef1cb010fd7149e923c093",
+      "published": {
+        "directory": "evidence/business-map-232/first-indent-watch-native-r1/structure_clean_fourteen_page_control",
+        "report": "evidence/business-map-232/first-indent-watch-native-r1/structure_clean_fourteen_page_control/report.json",
+        "report_sha256": "615c2777a9db822618bfad77c121631c29f037840aa4e5fba72231f69c95d19c",
+        "trace": "evidence/business-map-232/first-indent-watch-native-r1/structure_clean_fourteen_page_control/trace.json",
+        "trace_sha256": "cfe20f0ef50c0bcdc45b30ea15688cc8e28dbcc3275cfe21c36104be5284bce4",
+        "native_text": "evidence/business-map-232/first-indent-watch-native-r1/structure_clean_fourteen_page_control/native-result.txt",
+        "native_text_sha256": "0a6b235785e69cfd453f93c9251474a988168ec621c84edffea71f79599e020b",
+        "source": "evidence/business-map-232/first-indent-watch-native-r1/structure_clean_fourteen_page_control/input.pdf",
+        "source_sha256": "5272656dcc7a90fb2eb487851d67e7a9a0e347b84b9cf259647b58d8abbd26d6"
+      }
+    }
+  ],
+  "limits": "Retained synthetic inputs only. The hardware watch is bound to the report interval/thread and validates writes; zero changes do not prove a rule is absent. Full diagnostic text is compared after whitespace normalization; no semantic equivalence or rule promotion is asserted."
+}

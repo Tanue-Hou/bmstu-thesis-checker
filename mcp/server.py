@@ -21,10 +21,11 @@ from repair_document import repair_copy
 from compare_native_trial import compare,load_capture
 from native_builds import BUILDS,require_build
 from school_templates import BUILTINS, load_template
+from compact_report import project_report
 
 
 SERVER_NAME = "BMSTU Thesis Checker"
-SERVER_VERSION = "0.2.20"
+SERVER_VERSION = "0.2.21"
 METHOD_NOT_FOUND = -32601
 INVALID_PARAMS = -32602
 INTERNAL_ERROR = -32603
@@ -65,6 +66,8 @@ def make_args(args):
 
 
 def check_document_tool(args):
+    detail=args.get('detail','full')
+    if detail not in {'full','compact'}:raise ValueError('detail must be full or compact')
     path = Path(require_string(args.get("file_path"), "file_path")).expanduser().resolve()
     if not path.exists():
         raise ValueError(f"File does not exist: {path}")
@@ -73,7 +76,7 @@ def check_document_tool(args):
         result["report_paths"] = write_report_bundle(result, args["report_dir"])
     return {
         "content": [{"type": "text", "text": f"Checked {path.name}: {result['summary']['total']} findings."}],
-        "structuredContent": result,
+        "structuredContent": project_report(result,detail),
     }
 
 
@@ -86,6 +89,8 @@ def list_document_files(folder, recursive=True):
 
 
 def check_folder_tool(args):
+    detail=args.get('detail','full')
+    if detail not in {'full','compact'}:raise ValueError('detail must be full or compact')
     files = list_document_files(args.get("folder_path"), args.get("recursive", True) is not False)
     checker_args = make_args(args)
     results = [check_file(path, checker_args) for path in files]
@@ -102,7 +107,7 @@ def check_folder_tool(args):
     }
     return {
         "content": [{"type": "text", "text": f"Checked {summary['files']} files: {summary['findings']} findings."}],
-        "structuredContent": {"folder": str(Path(args.get("folder_path")).resolve()), "summary": summary, "results": results},
+        "structuredContent": {"folder": str(Path(args.get("folder_path")).resolve()), "summary": summary, "results": [project_report(result,detail) for result in results]},
     }
 
 
@@ -178,6 +183,7 @@ def tool_list_result():
                         "skip_pictures": {"type": "boolean", "default": False},
                         "skip_word_format": {"type": "boolean", "default": False},
                         "skip_dictionary": {"type": "boolean", "default": False},
+                        "detail": {"type":"string","enum":["full","compact"],"default":"full","description":"Compact keeps all findings and decisions, with three location examples and one evidence reference per finding."},
                         "report_dir": {"type": "string", "description": "Optional output folder for JSON, Markdown, and DOCX report files."},
                     },
                     "required": ["file_path"],
@@ -202,6 +208,7 @@ def tool_list_result():
                         "skip_pictures": {"type": "boolean", "default": False},
                         "skip_word_format": {"type": "boolean", "default": False},
                         "skip_dictionary": {"type": "boolean", "default": False},
+                        "detail": {"type":"string","enum":["full","compact"],"default":"full","description":"Compact keeps all findings and decisions, with three location examples and one evidence reference per finding."},
                         "report_dir": {"type": "string", "description": "Optional output folder for per-file JSON, Markdown, and DOCX report files."},
                     },
                     "required": ["folder_path"],

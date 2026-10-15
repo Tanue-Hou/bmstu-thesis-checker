@@ -1,0 +1,13 @@
+{
+  "status": "passed_default_native_control",
+  "same_normalized_full_diagnostics": true,
+  "diagnostic_count": 8,
+  "counter_watch_requested": false,
+  "source_sha256": "cf82372ebf5c530c081ef05df2d5dccc44f56ed8a044017b5ae913ee54101b84",
+  "files": {
+    "native-result.txt": "28a55f3331b76de8325a1cd411ebd0b36ef2289e28f31d5e5cd56a8419a2f6fc",
+    "report.json": "43b279d962506a08609cb17e9d5bf6f98f57ea220797178ab47dc8752016f2b7",
+    "trace.json": "bd0bc22f9ea607ee6673c7c38ad81807864c7c43a7cd013be972c2f4cfd4ceca"
+  },
+  "watch_traces_revalidated": 6
+}

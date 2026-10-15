@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "cases_processed": 17,
+  "findings_total": 146,
+  "source_location_occurrences_total": 10642,
+  "decision_and_location_invariants": {
+    "cases_unchanged": 17,
+    "all_cases_unchanged": true
+  },
+  "serialized_report_bytes": {
+    "format": "UTF-8 JSON, ensure_ascii=false, indent=2; same serializer for both levels",
+    "full_total": 4907702,
+    "compact_total": 923849,
+    "bytes_removed": 3983853,
+    "reduction_percent": 81.18,
+    "cases_with_smaller_compact_output": 17
+  },
+  "limits": "Aggregate output only. No case identifiers, paths, hashes, finding text, or document text are retained. Size change is serialization volume, not accuracy or correctness evidence beyond the explicit invariant checks."
+}

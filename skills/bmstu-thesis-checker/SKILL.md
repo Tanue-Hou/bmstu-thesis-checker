@@ -1,6 +1,6 @@
 ---
 name: bmstu-thesis-checker
-description: Check Russian BMSTU VKR/thesis DOCX and PDF files using a local clean-room rules engine derived from TestVkr reverse-engineering signals plus BMSTU/GOST-style formatting rules. Use when the user asks to inspect a thesis, diploma, VKR, dissertation, scientific paper, DOCX, or PDF for formatting, structure, images, dictionary/homoglyph issues, and problem locations.
+description: Check Russian BMSTU VKR/thesis DOCX and PDF files using an independent local reconstruction with explicit source provenance and bounded validation, informed by TestVkr reverse-engineering evidence and BMSTU/GOST-style formatting rules. Use when the user asks to inspect a thesis, diploma, VKR, dissertation, scientific paper, DOCX, or PDF for formatting, structure, images, dictionary/homoglyph issues, and problem locations.
 ---
 
 # BMSTU Thesis Checker
@@ -48,7 +48,7 @@ Read [format expansion](references/format-expansion.md) for the current doctoral
 
 For graduate/master and doctoral research qualification theses, read [graduate modes](references/graduate-modes.md). Pass `work_type=master` or `work_type=phd` explicitly. Build-230 cover, TOC and text-volume predicates have independent native evidence in `evidence/graduate-structure`; doctoral mode is `НКР аспиранта`. Graduate structure findings remain manual review. Doctoral copy repair supports only the three validated formatting actions in one portrait section, with native before/after evidence.
 
-This is a clean-room checker, not a byte-for-byte clone of `TestVkr.exe`. It is based on:
+This is an independent reconstruction, not recovered original source code or a byte-for-byte clone of `TestVkr.exe`. Its inputs and evidence are explicitly versioned and sourced from:
 
 - recovered TestVkr strings and candidate thresholds,
 - recovered threshold table/function analysis,
@@ -64,7 +64,7 @@ Report confidence clearly:
 - The old 540px width rule was rejected. Native image width times height is compared against 16,000,000 pixels; both the exact boundary and just-above case were checked in the original program.
 - Shipped DOCX font defaults recovered from the original are 8pt minimum and 18pt maximum, not the earlier 12.01pt table guess. These are anomaly limits, not a recommendation to set thesis body text to 8pt. Respect the user's school template when choosing body text formatting.
 - DOCX resolution covers document defaults, paragraph and character `basedOn` chains, and direct formatting. Conditional table styles, numbering and theme font/color interpretation remain unsupported; report these limits when relevant.
-- Line spacing and first-line indent produced local findings absent from original outputs in the controlled matrix. Keep them in manual review and exclude them from default automatic repair. A passing fixture is not whole-document certification.
+- Paragraph line-spacing and first-indent coverage remains bounded. In six native counter-watch observations, the controlled negative-left case incremented the left slot; the first-indent slot showed only its reset value. A zero-write observation does not establish that a producer or rule is absent. Keep unsupported contexts in manual review; no repair scope is added. A passing fixture is not whole-document certification.
 
 ## Repair a copy
 
@@ -114,6 +114,8 @@ Supported options:
 - `--format json|markdown|docx`
 - `--out <path>`
 - `--report-dir <path>`
+
+For JSON agent workflows, `scripts/thesis_cli.py check` also accepts `--detail compact`; the default `full` preserves the existing output. Compact retains all findings and decision fields, caps location examples/evidence references, and marks truncation. `review` requires a full report and rejects compact output. MCP `check_thesis_document` and `check_thesis_folder` expose the same optional `detail` setting, defaulting to `full`.
 
 ## Workflow
 

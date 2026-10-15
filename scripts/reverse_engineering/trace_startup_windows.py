@@ -33,9 +33,12 @@ class THREAD_ENTRY(C.Structure):
     _fields_=[('size',D),('usage',D),('tid',D),('pid',D),('base_priority',W.LONG),('delta_priority',W.LONG),('flags',D)]
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--drawing-trace',action='store_true');p.add_argument('--font-trace',action='store_true');p.add_argument('--scale-trace',action='store_true');p.add_argument('--paragraph-trace',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--drawing-trace',action='store_true');p.add_argument('--font-trace',action='store_true');p.add_argument('--scale-trace',action='store_true');p.add_argument('--watch-first-counter',action='store_true');p.add_argument('--paragraph-trace',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
     # Additional business trace uses the same bounded, owned process.
     if a.scale_trace:a.font_trace=True
+    if a.watch_first_counter:
+        if not a.probe_document:raise ValueError('Counter watch requires an explicit document probe')
+        a.paragraph_trace=True
     if a.direct_file_entry and not a.probe_document:raise ValueError('Direct entry requires a synthetic document probe')
     if a.probe_document and not a.direct_file_entry:raise ValueError('Only controlled direct-entry probes are supported; natural cross-process HDROP is not validated')
     if a.dictionary_cp1251:a.trace_codepage=True
@@ -112,6 +115,8 @@ def main():
         return {'length':length,'prefix':read(pointer,min(length,256)*2).decode('utf-16le',errors='replace')}
     events=[];hits=[];breakpoints={};base=None;exited=False;error=None;started=time.monotonic();form_pointer=None;fault_count=0;stop_reason='duration_limit';cleanup_errors=[];pending_steps={};codepage_calls=[];api_calls=0;sender=None;sender_status=None
     pixel_api_active=False;pixel_api_calls=0;pixel_output_object=None;pixel_dimensions={};pixel_hit_counts={}
+    counter_watch={'requested':a.watch_first_counter,'active':False,'writes':[],'limit':256,
+                   'coverage':'Owned checker thread only, loader entry through first-indent report gate; hardware writes, including same-value writes. No universal absence claim.'}
     event_limit=4096 if a.trace_codepage or a.paragraph_trace or a.font_trace else 512
     try:
         if a.russian_suspended:
@@ -225,7 +230,7 @@ def main():
                     if ex.record.code in [0x80000003,0x4000001f] and addr in breakpoints:
                         thread=k.OpenThread(0x1fffff,False,event.tid);checked(thread)
                         try:
-                            context=WOW64_CONTEXT();context.ContextFlags=0x10007;checked(k.Wow64GetThreadContext(thread,C.byref(context)))
+                            context=WOW64_CONTEXT();context.ContextFlags=0x10017 if a.watch_first_counter else 0x10007;checked(k.Wow64GetThreadContext(thread,C.byref(context)))
                             original,label=breakpoints.pop(addr);write(addr,original);context.Eip=addr;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
                             if label=='MultiByteToWideChar_thunk':
                                 api_calls+=1
@@ -247,6 +252,37 @@ def main():
                                     pending_steps[int(event.tid)]=(addr,original,label)
                                     context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
                             hit={'label':label,'address':hex(addr),'registers':{n:hex(getattr(context,n)) for n in ['Eip','Esp','Eax','Edx','Ecx']},'stack_dwords':list(struct.unpack('<4I',read(context.Esp,16))),'one_shot':label!='MultiByteToWideChar_thunk'};hits.append(hit);entry['hit']=label
+                            if a.watch_first_counter and label in ['docx_load','pdf_load']:
+                                if counter_watch.get('installed'):raise RuntimeError('Counter watch cannot silently switch parser objects')
+                                if context.Dr7&0xff:raise RuntimeError('Unexpected pre-existing hardware watch in owned thread')
+                                offsets={'first':0x29c,'left':0x290} if label=='docx_load' else {'first':0x668,'left':0x65c}
+                                addresses={name:context.Eax+offset for name,offset in offsets.items()}
+                                if any(value%4 for value in addresses.values()):raise RuntimeError('Unaligned counter watch address')
+                                original_debug={n:getattr(context,n) for n in ['Dr0','Dr1','Dr2','Dr3','Dr6','Dr7']}
+                                context.Dr0=addresses['first'];context.Dr1=addresses['left'];context.Dr6=0
+                                context.Dr7=(context.Dr7&~0xff000f)|0xdd0005
+                                checked(k.Wow64SetThreadContext(thread,C.byref(context)))
+                                observed=WOW64_CONTEXT();observed.ContextFlags=0x10010;checked(k.Wow64GetThreadContext(thread,C.byref(observed)))
+                                if observed.Dr0!=addresses['first'] or observed.Dr1!=addresses['left'] or observed.Dr7&0xff000f!=0xdd0005:raise RuntimeError('Hardware watch configuration not observed')
+                                counter_watch.update(installed=True,active=True,thread_id=int(event.tid),loader=label,
+                                    parser_address=context.Eax,addresses=addresses,original_debug=original_debug,
+                                    observed_debug={n:hex(getattr(observed,n)) for n in ['Dr0','Dr1','Dr6','Dr7']},
+                                    initial_values={name:signed(value) for name,value in addresses.items()})
+                                counter_watch['last_values']=dict(counter_watch['initial_values'])
+                                hit['counter_watch_installed']={'addresses':{n:hex(v) for n,v in addresses.items()},'debug_registers':counter_watch['observed_debug']}
+                            if a.watch_first_counter and label=='paragraph_first_report_gate':
+                                if not counter_watch.get('active') or counter_watch['thread_id']!=int(event.tid):raise RuntimeError('Counter report reached outside watched thread/interval')
+                                report_base=unsigned(context.Ebp-0x5dc)
+                                expected={'first':report_base+0x144,'left':report_base+0x138}
+                                if expected!=counter_watch['addresses']:raise RuntimeError('Watched counters do not match actual report base')
+                                counter_watch.update(report_base=report_base,report_addresses_match=True,
+                                    final_values={name:signed(value) for name,value in expected.items()})
+                                for name,value in counter_watch['original_debug'].items():setattr(context,name,value)
+                                context.Dr6=0;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
+                                observed=WOW64_CONTEXT();observed.ContextFlags=0x10010;checked(k.Wow64GetThreadContext(thread,C.byref(observed)))
+                                if observed.Dr7&0xff!=counter_watch['original_debug']['Dr7']&0xff:raise RuntimeError('Hardware watch was not removed')
+                                counter_watch.update(active=False,disarmed=True,disarm_debug_dr7=hex(observed.Dr7))
+                                hit['counter_watch_report_binding']={'report_base':hex(report_base),'addresses_match':True,'final_values':counter_watch['final_values']}
                             if label=='drawing_report_state':hit['drawing_state']={'count_slot_26':signed(context.Ecx+0x98),'count_slot_27':signed(context.Ecx+0x9c),'count_slot_28':signed(context.Ecx+0xa0),'count_slot_29':signed(context.Ecx+0xa4),'count_slot_30':signed(context.Ecx+0xc0),'count_slot_32':signed(context.Ecx+0xc8),'floating_area_float':struct.unpack('<f',read(context.Ecx+0x1cc,4))[0],'small_label_count':signed(context.Ecx+0xb8),'overflow_label_count':signed(context.Ecx+0xbc)}
                             if label=='drawing_report_state':hit['drawing_state']['shape_bounds_count']=signed(context.Ecx+0xa8)
                             if label.startswith('font_'):
@@ -367,13 +403,29 @@ def main():
                                 try:hit['string_arguments']={'Eax':unicode_object(context.Eax),'Edx':unicode_object(context.Edx)}
                                 except (OSError,ValueError) as exc:hit['string_argument_read_error']=str(exc)
                         finally:k.CloseHandle(thread)
-                    elif ex.record.code in [0x80000004,0x4000001e] and int(event.tid) in pending_steps:
-                        bp,original,label=pending_steps.pop(int(event.tid));write(bp,b'\xcc');breakpoints[bp]=(original,label)
+                    elif ex.record.code in [0x80000004,0x4000001e] and (int(event.tid) in pending_steps or (counter_watch['active'] and int(event.tid)==counter_watch.get('thread_id'))):
                         thread=k.OpenThread(0x1fffff,False,event.tid);checked(thread)
                         try:
-                            context=WOW64_CONTEXT();context.ContextFlags=0x10007;checked(k.Wow64GetThreadContext(thread,C.byref(context)));context.EFlags&=~0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
+                            context=WOW64_CONTEXT();context.ContextFlags=0x10017 if a.watch_first_counter else 0x10007;checked(k.Wow64GetThreadContext(thread,C.byref(context)))
+                            watched_bits=context.Dr6&3 if counter_watch['active'] else 0
+                            if watched_bits:
+                                if len(counter_watch['writes'])>=counter_watch['limit']:raise RuntimeError('Hardware watch capture limit reached')
+                                values={name:signed(value) for name,value in counter_watch['addresses'].items()}
+                                observation={'thread_id':int(event.tid),'dr6':hex(context.Dr6),'fired_fields':[name for bit,name in enumerate(['first','left']) if watched_bits&(1<<bit)],
+                                    'before':dict(counter_watch['last_values']),'after':values,
+                                    'eip_after':hex(context.Eip),'preferred_eip_after':hex(context.Eip-base+0x400000),
+                                    'registers':{n:hex(getattr(context,n)) for n in ['Eip','Esp','Ebp','Eax','Edx','Ecx','Esi','Edi']},
+                                    'stack_dwords':list(struct.unpack('<8I',read(context.Esp,32))),
+                                    'near_code_start':hex(context.Eip-32),'near_code_hex':read(context.Eip-32,64).hex()}
+                                counter_watch['writes'].append(observation);counter_watch['last_values']=values
+                                entry['counter_write']=observation
+                            if int(event.tid) in pending_steps:
+                                bp,original,label=pending_steps.pop(int(event.tid));write(bp,b'\xcc');breakpoints[bp]=(original,label)
+                                context.EFlags&=~0x100;entry['single_step_rearmed']=label
+                            elif not watched_bits:raise RuntimeError('Unexpected single-step without watched-field or rearm cause')
+                            if a.watch_first_counter:context.Dr6=0
+                            checked(k.Wow64SetThreadContext(thread,C.byref(context)))
                         finally:k.CloseHandle(thread)
-                        entry['single_step_rearmed']=label
                     elif ex.record.code not in [0x80000003,0x4000001f]:
                         status=0x80010001
                         if ex.record.code==0xc0000005:
@@ -438,6 +490,7 @@ def main():
             except subprocess.TimeoutExpired:sender.kill();sender.communicate()
     result={'target_sha256':IDENTITY,'argument':a.argument,'owned_pid':int(pi.dwProcessId),'debug_event_size':C.sizeof(DEBUG_EVENT),'wow64_context_size':C.sizeof(WOW64_CONTEXT),'events':events,'breakpoint_hits':hits,'last_main_form_pointer':form_pointer,'exited_before_timeout':exited,'error':error,'binary_unchanged':binary.read_bytes()==raw,'limits':'Actual owned Windows process execution; one-shot observed entries only, not full call counts. No UI input or forced business-function invocation. Absence of a hit is bounded to this startup/argument run; Chinese-locale initialization may differ from Russian execution.'}
     result['stop_reason']=stop_reason
+    result['first_indent_counter_watch']=counter_watch
     result['locale_mode']='ru-RU LoaderWrapper (no registry redirection)' if a.russian else 'system'
     result['target_pid']=int(target_pid) if target_pid else None
     result['owned_pids']=list(owned)

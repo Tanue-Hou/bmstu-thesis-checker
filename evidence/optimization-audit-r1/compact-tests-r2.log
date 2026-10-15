@@ -1,0 +1,9 @@
+Failed to find real location of C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\python.exe
+test_compact_cli_matches_full_decisions_and_review_rejects_compact (test_compact_output.CompactOutputTests.test_compact_cli_matches_full_decisions_and_review_rejects_compact) ... ok
+test_projection_is_non_mutating_and_preserves_decisions_and_location_totals (test_compact_output.CompactOutputTests.test_projection_is_non_mutating_and_preserves_decisions_and_location_totals) ... ok
+test_stdio_mcp_compact_preserves_document_and_folder_results (test_compact_output.CompactOutputTests.test_stdio_mcp_compact_preserves_document_and_folder_results) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 8.951s
+
+OK

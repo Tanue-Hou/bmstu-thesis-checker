@@ -1,0 +1,1 @@
+Attempt 1 stopped during Windows path canonicalization because of an ACL restriction; no report rows were processed or emitted. The script was adjusted to read the explicitly authorized path directly. Final attempt passed; see compact-benchmark-run-r2.log.

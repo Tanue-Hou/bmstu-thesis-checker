@@ -1,6 +1,6 @@
 {
   "name": "bmstu-thesis-checker",
-  "version": "0.2.20+codex.20261015",
+  "version": "0.2.21+codex.20261015",
   "description": "Local BMSTU VKR thesis checker for DOCX/PDF formatting, structure, images, and dictionary issues.",
   "author": {
     "name": "Tanue Hou"
@@ -19,7 +19,7 @@
   "interface": {
     "displayName": "BMSTU Thesis Checker",
     "shortDescription": "Check thesis DOCX/PDF files for BMSTU-style issues.",
-    "longDescription": "Runs a local clean-room rules engine derived from TestVkr reverse-engineering signals and BMSTU/GOST-style formatting requirements. It checks structure, Word/PDF formatting, images, dictionary and homoglyph issues, and returns severity, confidence, thresholds, and locations when available.",
+    "longDescription": "Runs an independent local rules engine reconstructed from documented TestVkr behavior, reverse-engineering evidence and BMSTU/GOST-style formatting requirements. It checks structure, Word/PDF formatting, images, dictionary and homoglyph issues, and returns severity, confidence, thresholds, and locations when available.",
     "developerName": "Tanue Hou",
     "category": "Productivity",
     "capabilities": [

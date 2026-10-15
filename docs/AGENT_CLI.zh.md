@@ -11,6 +11,16 @@ py scripts/thesis_cli.py --out report.json check thesis.docx --work-type master 
 py scripts/thesis_cli.py --out review.json review report.json
 ```
 
+`check`可选`--detail compact`压缩结构化JSON；省略参数或传`--detail full`仍返回完整报告，保持既有行为：
+
+```powershell
+py scripts/thesis_cli.py --out compact.json check thesis.docx --work-type master --native-build 232 --detail compact
+py scripts/thesis_cli.py --out full.json check thesis.docx --work-type master --native-build 232 --detail full
+py scripts/thesis_cli.py --out review.json review full.json
+```
+
+compact保留完整finding列表、规则/严重度/验证状态/阈值/修改资格和位置总数；每项最多列3个位置示例、1条证据引用，native段落观察最多列3条记录，并对各自省略内容显式标记截断。它只缩减展示数据，不改变判定。`review`拒绝compact报告，因为省略的证据细节不能参与重新推断；需要复核时请重新运行full检查。MCP的`check_thesis_document`和`check_thesis_folder`使用可选`detail: "compact"`参数，缺省同样为full。
+
 `check` 返回 `report` 对象；`review` 接收完整 CLI 输出或单独的检查报告对象。现有 MCP 检查工具也返回相同的 `action_eligibility` 字段。
 
 成功退出码为 0；运行失败/修复被阻止为 2，标准输出为 JSON。命令行语法错误由 argparse 写入标准错误。输出文件必须是新文件。论文路径、摘录和坐标包含隐私，保存到本地私有目录，不提交 Git。

@@ -1,0 +1,145 @@
+Failed to find real location of C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\python.exe
+test_compact_cli_matches_full_decisions_and_review_rejects_compact (test_compact_output.CompactOutputTests.test_compact_cli_matches_full_decisions_and_review_rejects_compact) ... ERROR
+test_projection_is_non_mutating_and_preserves_decisions_and_location_totals (test_compact_output.CompactOutputTests.test_projection_is_non_mutating_and_preserves_decisions_and_location_totals) ... ok
+test_stdio_mcp_compact_preserves_document_and_folder_results (test_compact_output.CompactOutputTests.test_stdio_mcp_compact_preserves_document_and_folder_results) ... ERROR
+
+======================================================================
+ERROR: test_compact_cli_matches_full_decisions_and_review_rejects_compact (test_compact_output.CompactOutputTests.test_compact_cli_matches_full_decisions_and_review_rejects_compact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex��Ŀ\analysis_TestVkr\implementation\tests\test_compact_output.py", line 134, in test_compact_cli_matches_full_decisions_and_review_rejects_compact
+    make_synthetic_docx(source)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Codex��Ŀ\analysis_TestVkr\implementation\tests\test_compact_output.py", line 35, in make_synthetic_docx
+    doc.save(path)
+    ~~~~~~~~^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\document.py", line 204, in save
+    self._part.save(path_or_stream)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\parts\document.py", line 114, in save
+    self.package.save(path_or_stream)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\opc\package.py", line 166, in save
+    PackageWriter.write(pkg_file, self.rels, self.parts)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\opc\pkgwriter.py", line 34, in write
+    phys_writer = PhysPkgWriter(pkg_file)
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\opc\phys_pkg.py", line 109, in __init__
+    self._zipf = ZipFile(pkg_file, "w", compression=ZIP_DEFLATED)
+                 ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1367, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Tanue Hou\\AppData\\Local\\Packages\\sandbox.{7a1bfe58-5af1-47a7-8ba4-d3309a0294f2}\\AC\\Temp\\tmph8fqpfuv\\synthetic.docx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 631, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] �ܾ����ʡ�: 'C:\\Users\\Tanue Hou\\AppData\\Local\\Packages\\sandbox.{7a1bfe58-5af1-47a7-8ba4-d3309a0294f2}\\AC\\Temp\\tmph8fqpfuv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Codex��Ŀ\analysis_TestVkr\implementation\tests\test_compact_output.py", line 131, in test_compact_cli_matches_full_decisions_and_review_rejects_compact
+    with tempfile.TemporaryDirectory() as temporary:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 635, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 275, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] �ܾ����ʡ�: 'C:\\Users\\Tanue Hou\\AppData\\Local\\Packages\\sandbox.{7a1bfe58-5af1-47a7-8ba4-d3309a0294f2}\\AC\\Temp\\tmph8fqpfuv'
+
+======================================================================
+ERROR: test_stdio_mcp_compact_preserves_document_and_folder_results (test_compact_output.CompactOutputTests.test_stdio_mcp_compact_preserves_document_and_folder_results)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex��Ŀ\analysis_TestVkr\implementation\tests\test_compact_output.py", line 170, in test_stdio_mcp_compact_preserves_document_and_folder_results
+    make_synthetic_docx(source)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Codex��Ŀ\analysis_TestVkr\implementation\tests\test_compact_output.py", line 35, in make_synthetic_docx
+    doc.save(path)
+    ~~~~~~~~^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\document.py", line 204, in save
+    self._part.save(path_or_stream)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\parts\document.py", line 114, in save
+    self.package.save(path_or_stream)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\opc\package.py", line 166, in save
+    PackageWriter.write(pkg_file, self.rels, self.parts)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\opc\pkgwriter.py", line 34, in write
+    phys_writer = PhysPkgWriter(pkg_file)
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\site-packages\docx\opc\phys_pkg.py", line 109, in __init__
+    self._zipf = ZipFile(pkg_file, "w", compression=ZIP_DEFLATED)
+                 ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\zipfile\__init__.py", line 1367, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Tanue Hou\\AppData\\Local\\Packages\\sandbox.{7a1bfe58-5af1-47a7-8ba4-d3309a0294f2}\\AC\\Temp\\tmphd76nmeo\\synthetic.docx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 631, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] �ܾ����ʡ�: 'C:\\Users\\Tanue Hou\\AppData\\Local\\Packages\\sandbox.{7a1bfe58-5af1-47a7-8ba4-d3309a0294f2}\\AC\\Temp\\tmphd76nmeo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Codex��Ŀ\analysis_TestVkr\implementation\tests\test_compact_output.py", line 167, in test_stdio_mcp_compact_preserves_document_and_folder_results
+    with tempfile.TemporaryDirectory() as temporary:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\shutil.py", line 635, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\Lib\tempfile.py", line 275, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] �ܾ����ʡ�: 'C:\\Users\\Tanue Hou\\AppData\\Local\\Packages\\sandbox.{7a1bfe58-5af1-47a7-8ba4-d3309a0294f2}\\AC\\Temp\\tmphd76nmeo'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.179s
+
+FAILED (errors=2)

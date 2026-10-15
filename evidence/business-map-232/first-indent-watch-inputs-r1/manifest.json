@@ -1,0 +1,110 @@
+{
+  "title": "Existing synthetic watchpoint inputs for first-indent and left-indent slots",
+  "target_exe_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "scope": "Read-only selection and hash verification of retained synthetic DOCX/PDF inputs, native traces, and reports. No target execution or input creation.",
+  "address_derivation": {
+    "docx_parser_base": "DOCX load/parser pointer EAX corresponds to local_74; main counter base is local_5e0=local_74+0x158.",
+    "docx_first_slot": {"index": "0x51", "offset_from_docx_parser_eax": "0x29c", "derivation": "0x158 + 4*0x51 = 0x29c"},
+    "docx_left_slot": {"index": "0x4e", "offset_from_docx_parser_eax": "0x290", "derivation": "0x158 + 4*0x4e = 0x290"},
+    "pdf_parser_base": "PDF branch main counter base is local_5e0=local_78+0x149.",
+    "pdf_first_slot": {"index": "0x51", "offset_from_pdf_parser_eax": "0x668", "derivation": "4*(0x149+0x51)=4*0x19a=0x668"},
+    "pdf_left_slot_candidate": {"index": "0x4e", "offset_from_pdf_parser_eax": "0x65c", "derivation": "4*(0x149+0x4e)=4*0x197=0x65c", "status": "Address arithmetic from the PDF main counter base and shared main slot index; these PDF captures do not expose separate first/left counter values or prove a PDF producer writes the candidate left slot."},
+    "static_source_hashes": {
+      "evidence/business-map-232/first-indent-static-r1/index.json": "4d38a6036a77fd83bcbbad2eb7e4ec4df253bd5bcb87f2960cb1f994208d3b72",
+      "evidence/business-map-232/paragraph-static-index-r1/index.json": "437e2672a82c6ad082f52fd05506026f076f967c67db074920c9d8606fb1bd85"
+    }
+  },
+  "docx_inputs": [
+    {
+      "case": "noFirst",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/noFirst.docx",
+      "input_sha256": "cf82372ebf5c530c081ef05df2d5dccc44f56ed8a044017b5ae913ee54101b84",
+      "mode": "master",
+      "controlled_properties": {"first_line_twips": 0, "left_twips": 0},
+      "native_counters": {"first": 0, "left": 0},
+      "native_emit_labels": [],
+      "capture": "evidence/business-map-232/paragraph-native-r1/noFirst",
+      "trace": {"path": "evidence/business-map-232/paragraph-native-r1/noFirst/trace.json", "sha256": "4cea4d8601f6c93765c9a60d2e392e10d081e39983a0ac6a11387e2fd3100265"},
+      "report": {"path": "evidence/business-map-232/paragraph-native-r1/noFirst/report.json", "sha256": "a4bb906e94010faedc5fcb2a61a68d07174509bc8f09fa71f580ddf164e7b264"},
+      "matrix": {"path": "evidence/business-map-232/paragraph-native-r1/matrix.json", "sha256": "c7c55cffb8b2a9737d9df3110f7aa2d0ef8277fa7cdb3f7bc7524361f3db83d8"}
+    },
+    {
+      "case": "firstOneInch",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/firstOneInch.docx",
+      "input_sha256": "292b90ebf4877a382b7c10b4ccbae5c00e1754d533da1815ce1efa192da3be97",
+      "mode": "master",
+      "controlled_properties": {"first_line_twips": 1440, "left_twips": 0},
+      "native_counters": {"first": 0, "left": 0},
+      "native_emit_labels": [],
+      "capture": "evidence/business-map-232/paragraph-native-r2/firstOneInch",
+      "trace": {"path": "evidence/business-map-232/paragraph-native-r2/firstOneInch/trace.json", "sha256": "0d9111cf64dc6dd3f5cd3d5a9233ec0c82cdc743467d080aab89ddfd1f72fe58"},
+      "report": {"path": "evidence/business-map-232/paragraph-native-r2/firstOneInch/report.json", "sha256": "b0ebc83c49372409e1ff9c5f5b803df3b206d359291a8d3abc753765f3915941"},
+      "matrix": {"path": "evidence/business-map-232/paragraph-native-r2/matrix.json", "sha256": "74e4e458a9f2ae509dbed9322e2da0e3837621a270c32f9a6240171377c66044"}
+    },
+    {
+      "case": "negativeLeft_positive_writer_control",
+      "input": "evidence/business-map-232/paragraph-inputs-r2/negativeLeft.docx",
+      "input_sha256": "a8a6de4dd882d6924e5bc3e38c467e25ce8e880fc7dbc4119d5444756027226a",
+      "mode": "master",
+      "controlled_properties": {"first_line_twips": 709, "left_twips": -1440},
+      "native_counters": {"first": 0, "left": 1},
+      "native_emit_labels": ["paragraph_left_report_emit"],
+      "capture": "evidence/business-map-232/paragraph-branches-native-r2/negativeLeft",
+      "trace": {"path": "evidence/business-map-232/paragraph-branches-native-r2/negativeLeft/trace.json", "sha256": "3b9321279122db1528faa2d4c53748ae60305d601157a891a94a77f2218ec240"},
+      "report": {"path": "evidence/business-map-232/paragraph-branches-native-r2/negativeLeft/report.json", "sha256": "7919f5f2b8d024b4597609d2618bbe3242896cd81311837139f5ef8a8fa26927"},
+      "matrix": {"path": "evidence/business-map-232/paragraph-branches-native-r2/matrix.json", "sha256": "d717e78bc0d6c97d61506a7c277bff4db7942d660b8b0e6466e75a9493e7caf4"}
+    }
+  ],
+  "pdf_inputs": [
+    {
+      "case": "pdf_one_page_pixel_boundary_baseline",
+      "input": "evidence/business-map-232/pixel-boundaries-r1/inputs/pdf_4000x4000.pdf",
+      "input_sha256": "d85f85d5a38268add142601ad453aae9100d59a61556dc39c1cb2bdd6a6a9892",
+      "page_count": 1,
+      "mode": "phd",
+      "capture": "evidence/business-map-232/pixel-boundaries-r1/pdf_4000x4000",
+      "native_pixel_diagnostic_count": 0,
+      "native_total_diagnostic_count": 9,
+      "first_left_native_counters": null,
+      "counter_note": "Pixel-boundary matrix/trace records pixel branch state, not first/left counter values.",
+      "trace": {"path": "evidence/business-map-232/pixel-boundaries-r1/pdf_4000x4000/trace.json", "sha256": "0a6ae279b580a1ef4eaa8fdd220dbc6aa15b49132de65d624726e445eb3a24ef"},
+      "report": {"path": "evidence/business-map-232/pixel-boundaries-r1/pdf_4000x4000/report.json", "sha256": "1b370d286326274f129a584b9fbc579860baf059997e1b64a34650c974008aea"},
+      "matrix": {"path": "evidence/business-map-232/pixel-boundaries-r1/matrix.json", "sha256": "35993fee4ee9b9fb420be0228649042f99b08519265cb168d00c66cf040791d6"}
+    },
+    {
+      "case": "mp_clean_three_page_control",
+      "input": "evidence/multipage-phd-repair/mp_clean.pdf",
+      "input_sha256": "a0815ebc8b37789c8982d037b6b8bbce929730122cc66e324a36c9289b713205",
+      "page_count": 3,
+      "mode": "phd",
+      "capture": "evidence/business-map-232/native-modes-r1/phd_pdf_clean",
+      "native_total_diagnostic_count": 10,
+      "first_left_native_counters": null,
+      "counter_note": "Native-mode report/trace records overall diagnostics and mode state, not first/left counter values.",
+      "trace": {"path": "evidence/business-map-232/native-modes-r1/phd_pdf_clean/trace.json", "sha256": "655c9e62a957ca7fc3ffc470b8ab0274b841c9ad61ce6474f89e455e804c8f96"},
+      "report": {"path": "evidence/business-map-232/native-modes-r1/phd_pdf_clean/report.json", "sha256": "ef663fc7fc419f8d2abf9bcd2fa794e07071f42ee294efb3dfe46b9e1ab128bb"},
+      "matrix": {"path": "evidence/business-map-232/native-modes-r1/matrix.json", "sha256": "7a98c4dad3c3b9a74324f15f5045ca4123d7777212c6279f161c202efaceb48d"}
+    },
+    {
+      "case": "structure_clean_fourteen_page_control",
+      "input": "evidence/multipage-phd-repair/structure_clean.pdf",
+      "input_sha256": "5272656dcc7a90fb2eb487851d67e7a9a0e347b84b9cf259647b58d8abbd26d6",
+      "page_count": 14,
+      "mode": "phd",
+      "capture": "evidence/business-map-232/native-modes-r1/phd_pdf_structure",
+      "native_total_diagnostic_count": 3,
+      "first_left_native_counters": null,
+      "counter_note": "Native-mode report/trace records overall diagnostics and mode state, not first/left counter values.",
+      "trace": {"path": "evidence/business-map-232/native-modes-r1/phd_pdf_structure/trace.json", "sha256": "67c8ed65b5640c4818b8929858fdf471c122cbda9ef461f66668b25e785f0dd5"},
+      "report": {"path": "evidence/business-map-232/native-modes-r1/phd_pdf_structure/report.json", "sha256": "2f154ed953b5192c8b3aa954b3c8ab824f3f74822562ccd32e386922660fc6b9"},
+      "matrix": {"path": "evidence/business-map-232/native-modes-r1/matrix.json", "sha256": "7a98c4dad3c3b9a74324f15f5045ca4123d7777212c6279f161c202efaceb48d"}
+    }
+  ],
+  "selection_limits": [
+    "The DOCX first-line property inputs both report native first counter 0; they do not provide an already-positive first-line writer control.",
+    "The negative-left DOCX is a positive native left-counter/report control (left=1) for the DOCX parser+0x290 watchpoint.",
+    "The one-page PDF is a pixel-boundary baseline, not a dedicated paragraph-structure fixture. The two multipage PDFs provide clean and structure-oriented loader controls.",
+    "No selected PDF trace/report exposes separate first/left native counters; their current values and whether the candidate PDF left slot is written remain unknown.",
+    "Offsets are address derivations from the cited main parser bases and shared report-slot indices; they do not establish that PDF code has a corresponding left-indent producer."
+  ]
+}

@@ -1,0 +1,38 @@
+Independent read-only code review. This is our own small validator, not target software source. No tool calls, file reads, configuration changes or outside research. Return at most three concrete correctness gaps and minimal tests, Chinese under400 characters. Scope: actual owned-thread Windows hardware write observations, not a proof a rule is absent. A separate native-run validator already checks EXE/input identity, complete report, loader/return/mode and cleanup. Identify internal consistency gaps, especially matching recorded watch summary to original debug events. Do not suggest re-running identical targets or authentication.
+def validate_counter_watch(trace):
+    """Require a complete, correctly bound hardware-watch interval, not a rule proof."""
+    watch=trace.get('first_indent_counter_watch',{})
+    if not watch.get('requested') or not watch.get('installed') or watch.get('active') or not watch.get('disarmed') or not watch.get('report_addresses_match'):
+        raise ValueError('Counter-watch interval incomplete or not bound to actual report')
+    kind=trace.get('probe_document',{}).get('file_type')
+    offsets={'first':0x29c,'left':0x290} if kind=='docx' else {'first':0x668,'left':0x65c} if kind=='pdf' else None
+    if offsets is None or watch.get('loader')!=kind+'_load':raise ValueError('Counter watch format/loader mismatch')
+    expected={name:watch['parser_address']+offset for name,offset in offsets.items()}
+    report_addresses={name:watch['report_base']+offset for name,offset in [('first',0x144),('left',0x138)]}
+    if expected!=watch.get('addresses') or expected!=report_addresses or any(value%4 for value in expected.values()):
+        raise ValueError('Counter watch address/actual report base mismatch')
+    observed=watch['observed_debug']
+    if int(observed['Dr0'],16)!=expected['first'] or int(observed['Dr1'],16)!=expected['left'] or int(observed['Dr7'],16)&0xff000f!=0xdd0005:
+        raise ValueError('Required four-byte write watch was not configured')
+    if int(watch['disarm_debug_dr7'],16)&0xff!=watch['original_debug']['Dr7']&0xff:
+        raise ValueError('Hardware watch removal not observed')
+    previous=watch['initial_values'];writes=watch['writes']
+    if not writes or len(writes)>watch.get('limit',0):raise ValueError('Missing or truncated counter-write observations')
+    for item in writes:
+        fired=[name for bit,name in enumerate(['first','left']) if int(item['dr6'],16)&(1<<bit)]
+        if item['thread_id']!=watch['thread_id'] or not fired or item['fired_fields']!=fired or item['before']!=previous:
+            raise ValueError('Counter write thread/status/sequence mismatch')
+        if any(item['before'][name]!=item['after'][name] and name not in fired for name in expected):
+            raise ValueError('Counter changed without the corresponding watched-field status')
+        if len(bytes.fromhex(item['near_code_hex']))!=64:raise ValueError('Counter writer code sample missing')
+        previous=item['after']
+    if previous!=watch.get('last_values') or previous!=watch.get('final_values'):
+        raise ValueError('Final counter values differ from captured write sequence')
+    bindings=[h['counter_watch_report_binding'] for h in trace['breakpoint_hits'] if h['label']=='paragraph_first_report_gate' and 'counter_watch_report_binding' in h]
+    if len(bindings)!=1 or not bindings[0]['addresses_match'] or bindings[0]['final_values']!=previous:
+        raise ValueError('Counter watch lacks actual first-indent report binding')
+    return {'status':'complete_bound_owned_thread_hardware_write_observation',
+            'write_events':len(writes),'final_values':previous,
+            'changed_events':{name:sum(name in i['fired_fields'] and i['before'][name]!=i['after'][name] for i in writes) for name in expected},
+            'limits':'Loader-to-report checker thread only; zero writes beyond reset do not establish a universally absent rule.'}
+

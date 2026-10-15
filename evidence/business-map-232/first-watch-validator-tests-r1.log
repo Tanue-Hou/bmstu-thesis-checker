@@ -1,0 +1,14 @@
+Failed to find real location of C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\python.exe
+test_all_six_actual_native_observations_and_positive_writer (test_counter_watch.CounterWatchTests.test_all_six_actual_native_observations_and_positive_writer) ... ok
+test_dropped_debug_write_cannot_leave_accepted_summary (test_counter_watch.CounterWatchTests.test_dropped_debug_write_cannot_leave_accepted_summary) ... ok
+test_foreign_event_thread_is_rejected (test_counter_watch.CounterWatchTests.test_foreign_event_thread_is_rejected) ... ok
+test_reordered_interval_is_rejected (test_counter_watch.CounterWatchTests.test_reordered_interval_is_rejected) ... ok
+test_report_alias_and_incomplete_interval_are_rejected (test_counter_watch.CounterWatchTests.test_report_alias_and_incomplete_interval_are_rejected) ... ok
+test_same_value_clearing_writes_are_valid_observations (test_counter_watch.CounterWatchTests.test_same_value_clearing_writes_are_valid_observations) ... ok
+test_unobserved_counter_change_is_rejected (test_counter_watch.CounterWatchTests.test_unobserved_counter_change_is_rejected) ... ok
+test_wrong_watch_length_mask_is_rejected (test_counter_watch.CounterWatchTests.test_wrong_watch_length_mask_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.200s
+
+OK

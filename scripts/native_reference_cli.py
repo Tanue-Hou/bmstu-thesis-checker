@@ -46,8 +46,69 @@ def validate_native_run(trace,text,work_type="master",file_type="docx",source_sh
         diagnostics.append({'number':number,'message':text[match.end():end].strip()})
     if not diagnostics and 'Замечаний нет.' not in text:raise ValueError('Missing diagnostics and native no-remarks completion text')
     return diagnostics
+def validate_counter_watch(trace):
+    """Require a complete, correctly bound hardware-watch interval, not a rule proof."""
+    watch=trace.get('first_indent_counter_watch',{})
+    if not watch.get('requested') or not watch.get('installed') or watch.get('active') or not watch.get('disarmed') or not watch.get('report_addresses_match'):
+        raise ValueError('Counter-watch interval incomplete or not bound to actual report')
+    kind=trace.get('probe_document',{}).get('file_type')
+    offsets={'first':0x29c,'left':0x290} if kind=='docx' else {'first':0x668,'left':0x65c} if kind=='pdf' else None
+    if offsets is None or watch.get('loader')!=kind+'_load':raise ValueError('Counter watch format/loader mismatch')
+    expected={name:watch['parser_address']+offset for name,offset in offsets.items()}
+    report_addresses={name:watch['report_base']+offset for name,offset in [('first',0x144),('left',0x138)]}
+    if expected!=watch.get('addresses') or expected!=report_addresses or any(value%4 for value in expected.values()):
+        raise ValueError('Counter watch address/actual report base mismatch')
+    observed=watch['observed_debug']
+    if int(observed['Dr0'],16)!=expected['first'] or int(observed['Dr1'],16)!=expected['left'] or int(observed['Dr7'],16)&0xff000f!=0xdd0005:
+        raise ValueError('Required four-byte write watch was not configured')
+    if watch['original_debug']['Dr7']&0xff or int(observed['Dr7'],16)&0xff!=5:
+        raise ValueError('Unexpected additional hardware watch configuration')
+    if int(watch['disarm_debug_dr7'],16)&0xff!=watch['original_debug']['Dr7']&0xff:
+        raise ValueError('Hardware watch removal not observed')
+    previous=watch['initial_values'];writes=watch['writes']
+    if not writes or len(writes)>watch.get('limit',0):raise ValueError('Missing or truncated counter-write observations')
+    for item in writes:
+        fired=[name for bit,name in enumerate(['first','left']) if int(item['dr6'],16)&(1<<bit)]
+        if item['thread_id']!=watch['thread_id'] or not fired or item['fired_fields']!=fired or item['before']!=previous:
+            raise ValueError('Counter write thread/status/sequence mismatch')
+        if any(item['before'][name]!=item['after'][name] and name not in fired for name in expected):
+            raise ValueError('Counter changed without the corresponding watched-field status')
+        if len(bytes.fromhex(item['near_code_hex']))!=64:raise ValueError('Counter writer code sample missing')
+        previous=item['after']
+    if previous!=watch.get('last_values') or previous!=watch.get('final_values'):
+        raise ValueError('Final counter values differ from captured write sequence')
+    bindings=[h['counter_watch_report_binding'] for h in trace['breakpoint_hits'] if h['label']=='paragraph_first_report_gate' and 'counter_watch_report_binding' in h]
+    if len(bindings)!=1 or not bindings[0]['addresses_match'] or bindings[0]['final_values']!=previous:
+        raise ValueError('Counter watch lacks actual first-indent report binding')
+    if int(bindings[0]['report_base'],16)!=watch['report_base']:
+        raise ValueError('Counter watch report-base binding changed')
+    installations=[h for h in trace['breakpoint_hits'] if h['label']==watch['loader'] and 'counter_watch_installed' in h]
+    if len(installations)!=1 or int(installations[0]['registers']['Eax'],16)!=watch['parser_address']:
+        raise ValueError('Counter watch parser does not match observed loader register')
+    if {name:int(value,16) for name,value in installations[0]['counter_watch_installed']['addresses'].items()}!=expected:
+        raise ValueError('Loader installation addresses differ from watch summary')
+    events=trace.get('events',[])
+    loader_events=[i for i,e in enumerate(events) if e.get('hit')==watch['loader']]
+    gate_events=[i for i,e in enumerate(events) if e.get('hit')=='paragraph_first_report_gate']
+    if len(loader_events)!=1 or len(gate_events)!=1 or loader_events[0]>=gate_events[0]:
+        raise ValueError('Missing or reordered loader-to-report debug events')
+    write_events=[(i,e) for i,e in enumerate(events) if 'counter_write' in e]
+    if [e['counter_write'] for _,e in write_events]!=writes:
+        raise ValueError('Counter watch summary does not match recorded debug events')
+    for index,event in write_events:
+        if not loader_events[0]<index<gate_events[0] or event.get('event')!=1 or event.get('exception_code') not in ['0x80000004','0x4000001e']:
+            raise ValueError('Counter write is outside observed interval or not a single-step event')
+    for event in [events[loader_events[0]],events[gate_events[0]],*(e for _,e in write_events)]:
+        if event.get('pid')!=trace.get('target_pid') or event.get('tid')!=watch['thread_id']:
+            raise ValueError('Counter watch events have mismatched process/thread ownership')
+    return {'status':'complete_bound_owned_thread_hardware_write_observation',
+            'write_events':len(writes),'final_values':previous,
+            'changed_events':{name:sum(name in i['fired_fields'] and i['before'][name]!=i['after'][name] for i in writes) for name in expected},
+            'limits':'Loader-to-report checker thread only; zero writes beyond reset do not establish a universally absent rule.'}
+
+
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,required=True);p.add_argument('--native-exe',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--trace-drawings',action='store_true');p.add_argument('--trace-fonts',action='store_true');p.add_argument('--trace-scale',action='store_true');p.add_argument('--trace-paragraphs',action='store_true');p.add_argument('--trace-image-bytes',action='store_true');p.add_argument('--preserve-pixel-codepage',action='store_true');p.add_argument('--trace-images',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--out',type=Path);p.add_argument('--timeout',type=float,default=25);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,required=True);p.add_argument('--native-exe',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--trace-drawings',action='store_true');p.add_argument('--trace-fonts',action='store_true');p.add_argument('--trace-scale',action='store_true');p.add_argument('--watch-first-counter',action='store_true');p.add_argument('--trace-paragraphs',action='store_true');p.add_argument('--trace-image-bytes',action='store_true');p.add_argument('--preserve-pixel-codepage',action='store_true');p.add_argument('--trace-images',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--out',type=Path);p.add_argument('--timeout',type=float,default=25);a=p.parse_args()
     if os.name!='nt':raise RuntimeError('This native reference harness requires Windows')
     if struct.calcsize('P')!=8:raise RuntimeError('Native reference requires 64-bit Python on 64-bit Windows')
     source=resolved(a.input);binary=resolved(a.native_exe)
@@ -73,6 +134,7 @@ def main():
     if a.trace_drawings:command.append('--drawing-trace')
     if a.trace_fonts:command.append('--font-trace')
     if a.trace_scale:command.append('--scale-trace')
+    if a.watch_first_counter:command.append('--watch-first-counter')
     if a.trace_paragraphs:command.append('--paragraph-trace')
     if a.trace_image_bytes:command.append('--image-bytes-trace')
     pixel_fix=not a.preserve_pixel_codepage or a.pixel_cp1251
@@ -83,11 +145,13 @@ def main():
     if execution.returncode:raise RuntimeError('Native trace failed; see private execution log')
     trace=json.loads((native/'trace.json').read_text(encoding='utf-8'));text_path=native/'native-result.txt';text=text_path.read_bytes().decode('utf-8')
     diagnostics=validate_native_run(trace,text,a.work_type,file_type,original_hash,pixel_fix)
+    counter_watch_receipt=validate_counter_watch(trace) if a.watch_first_counter else None
     if sha(copy)!=original_hash:raise ValueError('Native input copy changed or differs from source')
     if not trace.get('cleanup_verified'):raise ValueError('Owned process exit was not verified')
     if sha(source)!=original_hash:raise ValueError('Original input changed during native run')
     if sha(binary)!=IDENTITY:raise ValueError('Original native executable changed during run')
     report={'status':'completed_instrumented_native_reference','experimental':True,'native_build':232,'executable_sha256':IDENTITY,'source_sha256':original_hash,'source_unchanged':True,'work_type':a.work_type,'file_type':file_type,'pixel_unit_codepage_fix_enabled':pixel_fix,'diagnostic_count':len(diagnostics),'diagnostics':diagnostics,'evidence_directory':str(out),'trace_sha256':sha(native/'trace.json'),'native_text_sha256':sha(text_path),'sender_source_sha256':sha(sender_source),'sender_binary_sha256':sha(sender),'limits':['Requires the original executable and Windows; not a standalone open-source replacement.','Uses process-local resource codepage and controlled file-entry interventions.','Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.','Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof.']}
+    if counter_watch_receipt is not None:report['counter_watch_receipt']=counter_watch_receipt
     (out/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(report,ensure_ascii=True))
 if __name__=='__main__':
     try:main()

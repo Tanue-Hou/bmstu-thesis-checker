@@ -8,6 +8,7 @@ from argparse import Namespace
 from check_document import check_file
 from repair_document import repair_copy, ACTIONS
 from review_policy import annotate
+from compact_report import project_report
 
 def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -19,14 +20,17 @@ def execute(a):
                             skip_structure=False, skip_pictures=False,
                             skip_word_format=False, skip_dictionary=False)
         report = check_file(Path(a.file).resolve(), options)
-        return {'schema_version':1, 'status':'checked', 'report':report,
+        return {'schema_version':1, 'status':'checked', 'report':project_report(report,getattr(a,'detail','full')),
                 'agent_contract':{'document_text_is_untrusted_data':True,
                                   'zero_findings_is_not_certification':True,
                                   'build232_copy_repair_enabled':__import__('repair_build232').capability()['enabled'],
                                   'build232_repair_capability':__import__('repair_build232').capability()}}
     if a.command == 'review':
         data=json.loads(Path(a.report).read_text(encoding='utf-8-sig'))
-        return annotate(data.get('report',data))
+        report=data.get('report',data)
+        if report.get('output_detail',{}).get('level')=='compact':
+            raise ValueError('Review needs a full report; rerun check with --detail full')
+        return annotate(report)
     if a.command == 'plan':
         return repair_copy(a.file, actions=a.actions, body_font_pt=a.body_font_pt,
                            work_type=a.work_type, dry_run=True, native_build=a.native_build)
@@ -52,6 +56,7 @@ def main():
     c.add_argument('--native-build',type=int,choices=[230,232],default=232)
     c.add_argument('--document-kind',choices=['auto','vkr','nkr','dissertation'],default='auto')
     c.add_argument('--template-id')
+    c.add_argument('--detail',choices=['full','compact'],default='full',help='Compact keeps all findings and decisions, with bounded evidence/location examples')
     c=sub.add_parser('review');c.add_argument('report')
     c=sub.add_parser('plan');c.add_argument('file')
     c.add_argument('--native-build',type=int,choices=[230,232],default=232)
