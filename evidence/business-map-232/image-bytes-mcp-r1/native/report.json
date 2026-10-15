@@ -1,0 +1,29 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "c0babe865e044c4530ac41c3846bbdac69bef8eb5452448b7cd37ff56c7d421b",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 1,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Документ содержит рисунки большого размера (больше 40 Mb): \"ультаты обработки данных и анализа исследования.||\"."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/image-bytes-mcp-r1/native",
+  "trace_sha256": "3c205a35dd8dc6e3c421a6517d6aa20aa64a29356134b79c557e9454bc728bf4",
+  "native_text_sha256": "0d65c21b3aa37738fb8a0d5d8903c2a7e8e10729dab211eb388ad3484bf7b6f7",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "301a1c7ee16aaf5816c74e1001d634b58da82d6461cb63d9a7e5fb877e3ae830",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

@@ -1,3 +1,10 @@
+# v0.2.12
+
+- Trace per-image ZIP local-header size lookup, unsigned30000000-byte comparison, branch and report counter; preserve the native40Mb text mismatch.
+- Fix build232 DOCX aggregation false positive and boundary false negative, with exact image/ZIP/XML locations.
+- Retain five native cases including data-descriptor local-zero behavior and a same-input MCP comparison.
+- Register only the supported NKR DOCX context; reject ZIP64/ambiguous headers for verification and keep repair permissions unchanged.
+
 # v0.2.11
 
 - Map image predicates through native getters, signed32 comparison, flag, counter and report; retain six real PNG boundary runs and same-input codepage control/treatment.

@@ -1,0 +1,21 @@
+{
+  "status": "actual_same_input_image_bytes_mcp_pass",
+  "server_version": "0.2.12",
+  "source_sha256": "c0babe865e044c4530ac41c3846bbdac69bef8eb5452448b7cd37ff56c7d421b",
+  "native_build": 232,
+  "native_diagnostics": 1,
+  "local_image_count": 1,
+  "local_verification_scope": {
+    "build": 232,
+    "format": "docx",
+    "work_type": "phd",
+    "profile": "native232_docx_image_zip_bytes",
+    "limits": "One/two ordinary inline RGB8 PNG images; standard local ZIP headers flags0/8. Per-entry declared size, not aggregate or central-directory size. Sentinel, ZIP64, malformed headers, vectors, other modes and repair remain unverified."
+  },
+  "actual_declared_bytes": 30000001,
+  "threshold_bytes": 30000000,
+  "native_report_mb": 40,
+  "automatic_image_repair_allowed": false,
+  "raw_response_sha256": "7e854e83413a32e50643ba8ca84cae30d0fe03f1731f21c1fd189863ed78cca3",
+  "limits": "One public synthetic case. Full response is private; detection agreement is not school compliance."
+}

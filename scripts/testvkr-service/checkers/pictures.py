@@ -23,13 +23,16 @@ class PicturesChecker(BaseChecker):
         images = self.doc_data.get("images", [])
         total_images_size_mb = sum(img.get("byte_size_mb", 0.0) for img in images)
 
-        if total_images_size_mb > settings.IMAGE_FILE_SIZE_MAX_MB:
+        native232_docx=self.file_type=='docx' and self.doc_data.get('native_build')==232
+        byte_violations=[im for im in images if isinstance(im.get('zip_local_uncompressed_size'),int) and im['zip_local_uncompressed_size']>30000000] if native232_docx else []
+        if (bool(byte_violations) if native232_docx else total_images_size_mb > settings.IMAGE_FILE_SIZE_MAX_MB):
             findings.append(Finding(
                 code="Pic.FileSizeTooLarge",
                 module=ModuleType.PICTURES,
                 severity=Severity.CRITICAL,
-                message=self.MSG_FILE_SIZE.format(value=settings.IMAGE_FILE_SIZE_MAX_MB),
-                threshold={"value": settings.IMAGE_FILE_SIZE_MAX_MB, "unit": "MB", "actual": total_images_size_mb},
+                message=self.MSG_FILE_SIZE.format(value=40 if native232_docx else settings.IMAGE_FILE_SIZE_MAX_MB),
+                location={'images':[im['index']+1 for im in byte_violations]} if native232_docx else None,
+                threshold=({'value':30000000,'unit':'bytes','measurement':'per referenced ZIP local-header declared uncompressed size','native_message_value':40,'native_message_unit':'Mb','actual_max_bytes':max(im['zip_local_uncompressed_size'] for im in byte_violations),'count_images':len(byte_violations)} if native232_docx else {"value": settings.IMAGE_FILE_SIZE_MAX_MB, "unit": "MB", "actual": total_images_size_mb}),
                 skip_switch="SkipTestPic",
             ))
 

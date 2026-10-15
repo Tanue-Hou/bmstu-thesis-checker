@@ -1,0 +1,169 @@
+{
+  "status": "passed_native232_docx_image_bytes_audit",
+  "native_build": 232,
+  "rule_id": "Pic.FileSizeTooLarge",
+  "cases": [
+    {
+      "case": "below",
+      "input": "evidence/business-map-232/image-bytes-boundaries-r1/inputs/below.docx",
+      "input_sha256": "1733558446668e210361d9bfd4a5cfaa9fd20b37222047ec1db44b975da16328",
+      "entries": [
+        {
+          "entry": "word/media/image1.png",
+          "local_size": 29999999,
+          "central_size": 29999999,
+          "compressed_size": 33482,
+          "flags": 0
+        }
+      ],
+      "observed_sizes": [
+        29999999
+      ],
+      "native_counter": 0,
+      "local_native_predicate_agree": true,
+      "legacy_local_40MiB_sum_finding": false,
+      "legacy_local_differs_from_native232": false,
+      "evidence_directory": "evidence/business-map-232/image-bytes-boundaries-r1/below"
+    },
+    {
+      "case": "equal",
+      "input": "evidence/business-map-232/image-bytes-boundaries-r1/inputs/equal.docx",
+      "input_sha256": "6adfc5448493c5262e8a4ec5bde5d03850712fc7d3809db5b6d1ac0ea35fc3b0",
+      "entries": [
+        {
+          "entry": "word/media/image1.png",
+          "local_size": 30000000,
+          "central_size": 30000000,
+          "compressed_size": 33482,
+          "flags": 0
+        }
+      ],
+      "observed_sizes": [
+        30000000
+      ],
+      "native_counter": 0,
+      "local_native_predicate_agree": true,
+      "legacy_local_40MiB_sum_finding": false,
+      "legacy_local_differs_from_native232": false,
+      "evidence_directory": "evidence/business-map-232/image-bytes-boundaries-r1/equal"
+    },
+    {
+      "case": "above",
+      "input": "evidence/business-map-232/image-bytes-boundaries-r1/inputs/above.docx",
+      "input_sha256": "c0babe865e044c4530ac41c3846bbdac69bef8eb5452448b7cd37ff56c7d421b",
+      "entries": [
+        {
+          "entry": "word/media/image1.png",
+          "local_size": 30000001,
+          "central_size": 30000001,
+          "compressed_size": 33481,
+          "flags": 0
+        }
+      ],
+      "observed_sizes": [
+        30000001
+      ],
+      "native_counter": 1,
+      "local_native_predicate_agree": true,
+      "legacy_local_40MiB_sum_finding": false,
+      "legacy_local_differs_from_native232": true,
+      "evidence_directory": "evidence/business-map-232/image-bytes-boundaries-r1/above"
+    },
+    {
+      "case": "aggregate",
+      "input": "evidence/business-map-232/image-bytes-boundaries-r1/inputs/aggregate.docx",
+      "input_sha256": "f29f1e629a9556ac139a53ed17dd326269a87904668dd05f9f8e7c0438d9a633",
+      "entries": [
+        {
+          "entry": "word/media/image1.png",
+          "local_size": 22000000,
+          "central_size": 22000000,
+          "compressed_size": 25704,
+          "flags": 0
+        },
+        {
+          "entry": "word/media/image2.png",
+          "local_size": 22000000,
+          "central_size": 22000000,
+          "compressed_size": 25706,
+          "flags": 0
+        }
+      ],
+      "observed_sizes": [
+        22000000,
+        22000000
+      ],
+      "native_counter": 0,
+      "local_native_predicate_agree": true,
+      "legacy_local_40MiB_sum_finding": true,
+      "legacy_local_differs_from_native232": true,
+      "evidence_directory": "evidence/business-map-232/image-bytes-boundaries-r1/aggregate"
+    },
+    {
+      "case": "descriptor",
+      "input": "evidence/business-map-232/image-bytes-boundaries-r1/inputs/descriptor.docx",
+      "input_sha256": "e8c093425e0068fa812224c43fed2610664592638d5dfa99fc12e779608958ed",
+      "entries": [
+        {
+          "entry": "word/media/image1.png",
+          "local_size": 0,
+          "central_size": 30000001,
+          "compressed_size": 33481,
+          "flags": 8
+        }
+      ],
+      "observed_sizes": [
+        0
+      ],
+      "native_counter": 0,
+      "local_native_predicate_agree": true,
+      "legacy_local_40MiB_sum_finding": false,
+      "legacy_local_differs_from_native232": false,
+      "evidence_directory": "evidence/business-map-232/image-bytes-audit-r1/descriptor"
+    }
+  ],
+  "sources": {
+    "evidence/business-map-232/image-bytes-boundaries-r1/matrix.json": "57550de45fa51878e5ebb058c13181e106935bfd712273981237067c0ebfd502",
+    "evidence/business-map-232/image-bytes-boundaries-r1/inputs/below.docx": "1733558446668e210361d9bfd4a5cfaa9fd20b37222047ec1db44b975da16328",
+    "evidence/business-map-232/image-bytes-boundaries-r1/below/trace.json": "b43c37ca09ac03e45ea143d1f8255cd2673625a7652888b0a37834ed142f380c",
+    "evidence/business-map-232/image-bytes-boundaries-r1/below/native-result.txt": "a42af5e653ae66cc1c447b6d1b42f328eb82cd775cffce4b600d148778e2a59d",
+    "evidence/business-map-232/image-bytes-boundaries-r1/below/tracer-source.py.txt": "f6f95bac8935717e40a77f1d785737255aa1237744d2c47ba516ef1d6bbff57c",
+    "evidence/business-map-232/image-bytes-boundaries-r1/below/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/image-bytes-boundaries-r1/inputs/equal.docx": "6adfc5448493c5262e8a4ec5bde5d03850712fc7d3809db5b6d1ac0ea35fc3b0",
+    "evidence/business-map-232/image-bytes-boundaries-r1/equal/trace.json": "f807c47566ebb3d82c8eaf7dd28a93551677e721e1ae3cf2bc8b829a79198441",
+    "evidence/business-map-232/image-bytes-boundaries-r1/equal/native-result.txt": "51598b04ef5679bc317f6597855260b557547a117e1b4907d43c67e64da236cb",
+    "evidence/business-map-232/image-bytes-boundaries-r1/equal/tracer-source.py.txt": "f6f95bac8935717e40a77f1d785737255aa1237744d2c47ba516ef1d6bbff57c",
+    "evidence/business-map-232/image-bytes-boundaries-r1/equal/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/image-bytes-boundaries-r1/inputs/above.docx": "c0babe865e044c4530ac41c3846bbdac69bef8eb5452448b7cd37ff56c7d421b",
+    "evidence/business-map-232/image-bytes-boundaries-r1/above/trace.json": "613154e543700faa21adcf4ec4d84a6611664c6f0602b7c43d00b9dcc3535bfb",
+    "evidence/business-map-232/image-bytes-boundaries-r1/above/native-result.txt": "829cc3aff5faa7c9922d9ea00f295537a5806a0e87cea1606742a90d25edf3a5",
+    "evidence/business-map-232/image-bytes-boundaries-r1/above/tracer-source.py.txt": "f6f95bac8935717e40a77f1d785737255aa1237744d2c47ba516ef1d6bbff57c",
+    "evidence/business-map-232/image-bytes-boundaries-r1/above/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/image-bytes-boundaries-r1/inputs/aggregate.docx": "f29f1e629a9556ac139a53ed17dd326269a87904668dd05f9f8e7c0438d9a633",
+    "evidence/business-map-232/image-bytes-boundaries-r1/aggregate/trace.json": "ca619555328f5223703c9835ac440cda3c843517e97c0b989e03d6cc3aa3c2b7",
+    "evidence/business-map-232/image-bytes-boundaries-r1/aggregate/native-result.txt": "4eaf69bb4876be13fe8ef28f7ca9587b2d71772b6ccad0aad78984f26b0d00ef",
+    "evidence/business-map-232/image-bytes-boundaries-r1/aggregate/tracer-source.py.txt": "f6f95bac8935717e40a77f1d785737255aa1237744d2c47ba516ef1d6bbff57c",
+    "evidence/business-map-232/image-bytes-boundaries-r1/aggregate/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/image-bytes-boundaries-r1/inputs/descriptor.docx": "e8c093425e0068fa812224c43fed2610664592638d5dfa99fc12e779608958ed",
+    "evidence/business-map-232/image-bytes-audit-r1/descriptor/trace.json": "31f151751f88202aaa8483d4a9f564839e07aaab982e364e276a262672ee7bd9",
+    "evidence/business-map-232/image-bytes-audit-r1/descriptor/native-result.txt": "a9c8dfc130d14557af3b521f013f462a1334603313e3ac79f0115d6c0ad34f3a",
+    "evidence/business-map-232/image-bytes-audit-r1/descriptor/tracer-source.py.txt": "f6f95bac8935717e40a77f1d785737255aa1237744d2c47ba516ef1d6bbff57c",
+    "evidence/business-map-232/image-bytes-audit-r1/descriptor/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55"
+  },
+  "predicate": {
+    "per_entry_local_zip_header_uncompressed_size": true,
+    "threshold_bytes": 30000000,
+    "comparison": "unsigned_strict_greater",
+    "native_message": "40 Mb",
+    "report_counter_offset": "0x90",
+    "native_compare_va": "00438dd8",
+    "native_emit_va": "00438ddf",
+    "local_header_read_va": "0044405a",
+    "report_gate_va": "0047c5e7"
+  },
+  "limits": [
+    "Five synthetic NKR DOCX inputs, ordinary RGB8 PNGs, one/two inline images, flags0/8.",
+    "No forged ZIP sizes or malformed-header interventions. Error sentinelffffffff, ZIP64, vector paths and other modes remain unverified.",
+    "Legacy comparison is local230 policy, not original230 behavior. No image repair permission."
+  ]
+}

@@ -205,10 +205,11 @@ def finding_to_dict(finding, rule_registry, rule_guidance, file_type=None, work_
     context = selected_context or {}
     profile=context.get('scope',{}).get('profile')
     profile_supported=(profile is None or
+                       (profile=='native232_docx_image_zip_bytes' and bool((doc_data or {}).get('native232_image_bytes_profile_supported'))) or
                        (profile=='native232_single_inline_png' and bool((doc_data or {}).get('native232_single_inline_png_profile_supported'))) or
                        (profile=='native232_single_page_png_pdf' and (doc_data or {}).get('page_count')==1 and len((doc_data or {}).get('images',[]))==1
                         and all(im.get('extension')=='png' and im.get('bits_per_component')==8 and im.get('colorspace_components')==3 and im.get('soft_mask_xref')==0 and not im.get('has_color_mask',True) and 0<im.get('width_px',0)*im.get('height_px',0)<2**31 for im in (doc_data or {}).get('images',[]))))
-    verified = (rule.get('verification_status') == 'verified_against_original'
+    verified = (context.get('verification_status',rule.get('verification_status')) == 'verified_against_original'
                 and context.get('scope',rule.get('verification_scope',{})).get('build',230)==native_build
                 and profile_supported
                 and selected_context is not None
@@ -218,8 +219,8 @@ def finding_to_dict(finding, rule_registry, rule_guidance, file_type=None, work_
                 and (finding.code!='Struct.RequiredHeadingsMissing' or bool((finding.threshold or {}).get('native_predicate_supported')))
                 and (finding.code not in {'Word.LeftMarginInvalid','Word.RightMarginInvalid','Word.TopMarginInvalid','Word.BottomMarginInvalid'} or work_type!='phd' or bool((finding.threshold or {}).get('native_margin_probe_supported')))
                 and (not finding.code.startswith('Graduate.') or (bool((finding.threshold or {}).get('native_scope_supported')) and bool((finding.threshold or {}).get('native_predicate_supported'))))
-                and file_type in rule.get('verified_formats', [])
-                and work_type in rule.get('verified_work_types', [])
+                and (file_type in rule.get('verified_formats', []) if native_build==230 else context.get('scope',{}).get('format')==file_type)
+                and (work_type in rule.get('verified_work_types', []) if native_build==230 else context.get('scope',{}).get('work_type')==work_type)
                 and all(getattr(settings, key, None) == value
                         for key, value in context.get('verified_policy',rule.get('verified_policy', {})).items()))
     verification_status = ('verified_against_original' if verified else
@@ -242,11 +243,11 @@ def finding_to_dict(finding, rule_registry, rule_guidance, file_type=None, work_
                          else "manual_review"),
         "suggested_fix_priority": guidance.get("fix_priority", "manual_review"),
         "affects_antiplagiarism": bool(guidance.get("affects_antiplagiarism")),
-        "confidence": rule.get("confidence", "low") if verified else "low",
+        "confidence": context.get('confidence',rule.get("confidence", "low")) if verified else "low",
         "verification_status": verification_status,
         "verification_evidence_intact": context_evidence_valid(selected_context),
         "verification_scope": context.get('scope', rule.get("verification_scope", {})) if selected_context is not None else {},
-        "threshold_origin": rule.get("threshold_origin", "local_heuristic"),
+        "threshold_origin": context.get('threshold_origin',rule.get("threshold_origin", "local_heuristic")),
         "evidence_refs": context.get('evidence_refs', rule.get("evidence_refs", [])) if selected_context is not None else [],
         "static_evidence_refs": rule.get("static_evidence_refs", []),
         "comparison_policy": {**rule.get("comparison_policy", {}), **({"margin_tolerance_mm": settings.MARGIN_TOLERANCE_PHD_MM} if work_type=="phd" and finding.code in {"Word.LeftMarginInvalid","Word.RightMarginInvalid","Word.TopMarginInvalid","Word.BottomMarginInvalid"} else {})},

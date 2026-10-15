@@ -1,0 +1,88 @@
+{
+  "native_build": 232,
+  "cases": [
+    {
+      "case": "below",
+      "input": "evidence/business-map-232/image-bytes-boundaries-r1/inputs/below.docx",
+      "input_sha256": "1733558446668e210361d9bfd4a5cfaa9fd20b37222047ec1db44b975da16328",
+      "parent_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+      "actual_image_entry_sizes": {
+        "word/media/image1.png": 29999999
+      },
+      "observed_sizes": [
+        29999999
+      ],
+      "emitted_branches": 0,
+      "report_counter": 0,
+      "diagnostic_count": 0,
+      "diagnostics": [],
+      "zip_bytes": 72492,
+      "evidence_directory": "evidence/business-map-232/image-bytes-boundaries-r1/below"
+    },
+    {
+      "case": "equal",
+      "input": "evidence/business-map-232/image-bytes-boundaries-r1/inputs/equal.docx",
+      "input_sha256": "6adfc5448493c5262e8a4ec5bde5d03850712fc7d3809db5b6d1ac0ea35fc3b0",
+      "parent_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+      "actual_image_entry_sizes": {
+        "word/media/image1.png": 30000000
+      },
+      "observed_sizes": [
+        30000000
+      ],
+      "emitted_branches": 0,
+      "report_counter": 0,
+      "diagnostic_count": 0,
+      "diagnostics": [],
+      "zip_bytes": 72492,
+      "evidence_directory": "evidence/business-map-232/image-bytes-boundaries-r1/equal"
+    },
+    {
+      "case": "above",
+      "input": "evidence/business-map-232/image-bytes-boundaries-r1/inputs/above.docx",
+      "input_sha256": "c0babe865e044c4530ac41c3846bbdac69bef8eb5452448b7cd37ff56c7d421b",
+      "parent_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+      "actual_image_entry_sizes": {
+        "word/media/image1.png": 30000001
+      },
+      "observed_sizes": [
+        30000001
+      ],
+      "emitted_branches": 1,
+      "report_counter": 1,
+      "diagnostic_count": 1,
+      "diagnostics": [
+        {
+          "number": 1,
+          "message": "*** Документ содержит рисунки большого размера (больше 40 Mb): \"ультаты обработки данных и анализа исследования.||\"."
+        }
+      ],
+      "zip_bytes": 72491,
+      "evidence_directory": "evidence/business-map-232/image-bytes-boundaries-r1/above"
+    },
+    {
+      "case": "aggregate",
+      "input": "evidence/business-map-232/image-bytes-boundaries-r1/inputs/aggregate.docx",
+      "input_sha256": "f29f1e629a9556ac139a53ed17dd326269a87904668dd05f9f8e7c0438d9a633",
+      "parent_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+      "actual_image_entry_sizes": {
+        "word/media/image1.png": 22000000,
+        "word/media/image2.png": 22000000
+      },
+      "observed_sizes": [
+        22000000,
+        22000000
+      ],
+      "emitted_branches": 0,
+      "report_counter": 0,
+      "diagnostic_count": 0,
+      "diagnostics": [],
+      "zip_bytes": 90566,
+      "evidence_directory": "evidence/business-map-232/image-bytes-boundaries-r1/aggregate"
+    }
+  ],
+  "limits": [
+    "Synthetic valid PNGs padded after IEND; no forged ZIP sizes or malformed-header interventions.",
+    "Native file parser and declared ZIP size values must both be checked before promoting a predicate."
+  ]
+}

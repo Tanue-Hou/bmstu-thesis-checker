@@ -1,0 +1,15 @@
+ANALYSIS PSEUDOCODE, NOT ORIGINAL SOURCE
+
+for each eligible drawing reference:
+  entry_name = native_build_word_media_path(reference)
+  header = native_zip_lookup(entry_name)
+  if missing entry or bad signature: size = UINT32_MAX  # static only
+  else: size = read_u32(header + 0x16)
+  if unsigned(size) > 30000000:
+    append_context_and_increment(object + 0x1e8)
+
+if report_state[0x24] > 0:
+  emit_native_literal("bigger than40Mb", collected_image_contexts)
+
+Do not sum image sizes; do not use ZIP compressed size or central-directory size.
+Flags8 zero local size is observed aszero despite a nonzero central size.

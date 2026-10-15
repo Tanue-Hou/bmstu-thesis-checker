@@ -73,12 +73,12 @@
   },
   "Pic.FileSizeTooLarge": {
     "title_zh": "图片文件体积过大",
-    "explanation_zh": "文档中图片总量或图片资源体积过大，TestVkr 原程序会作为严重图片问题提示。",
-    "trigger_reason_zh": "图片资源大小超过 40MB 阈值。",
+    "explanation_zh": "图片资源大小候选。232 DOCX按单个ZIP本地头声明大小检查，不等于压缩文件大小或图片总量。",
+    "trigger_reason_zh": "232 DOCX实测阈值为30,000,000字节，原程序文案却写40 Mb。请以JSON中版本、measurement和阈值为准；其他上下文仍待复核。",
     "fix_suggestion_zh": "压缩图片、裁剪无关区域，使用适当分辨率重新插入。",
     "word_path_zh": "图片格式 -> 压缩图片；或删除后插入压缩后的图片。",
-    "fix_priority": "must_fix",
-    "affects_antiplagiarism": true
+    "fix_priority": "manual_review",
+    "affects_antiplagiarism": false
   },
   "Pic.PixelSizeTooLarge": {
     "title_zh": "图片总像素数过大",

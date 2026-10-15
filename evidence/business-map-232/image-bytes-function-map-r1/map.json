@@ -1,0 +1,292 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "functions": [
+    {
+      "va": "00436888",
+      "analyst_name": "iterate_docx_drawing_shapes",
+      "original_symbol": "FUN_00436888",
+      "direct_callers": [
+        "00405458",
+        "00405e58",
+        "004064e0",
+        "00406734",
+        "004072c0",
+        "004078c0",
+        "00408a08",
+        "00408e58",
+        "00409744",
+        "00412214",
+        "004151b0",
+        "00415824",
+        "0041614c",
+        "00418b50",
+        "0041b954",
+        "0041c6ac",
+        "0041e4c0",
+        "0041ee1c",
+        "0041f868",
+        "0041fb10",
+        "0041fe38",
+        "00420408",
+        "00423a0c",
+        "00423d84",
+        "0042410c",
+        "004243f0",
+        "00425b44",
+        "0043040c",
+        "00431004"
+      ],
+      "pseudocode_reference_lines": [
+        2185,
+        2615,
+        2686,
+        2854,
+        3176,
+        3430,
+        3716,
+        3803,
+        4095,
+        8626,
+        9631,
+        9827,
+        10179,
+        11307,
+        13071,
+        13824,
+        14247,
+        14491,
+        14714,
+        14808,
+        14890,
+        15043,
+        16776,
+        16880,
+        16965,
+        17035,
+        17697,
+        24025,
+        24268,
+        27334
+      ],
+      "limits": "Analyst aliases, not original symbols; whole-function semantics remain incomplete."
+    },
+    {
+      "va": "00438304",
+      "analyst_name": "inspect_drawing_reference_and_zip_entry_size",
+      "original_symbol": "FUN_00438304",
+      "direct_callers": [
+        "00436888"
+      ],
+      "pseudocode_reference_lines": [
+        27347,
+        28151,
+        28155
+      ],
+      "limits": "Analyst aliases, not original symbols; whole-function semantics remain incomplete."
+    },
+    {
+      "va": "00443fb8",
+      "analyst_name": "read_zip_local_header_declared_uncompressed_size",
+      "original_symbol": "FUN_00443fb8",
+      "direct_callers": [
+        "00401e4c",
+        "00438304",
+        "0043c408"
+      ],
+      "pseudocode_reference_lines": [
+        397,
+        28483,
+        30363,
+        34559,
+        34561
+      ],
+      "limits": "Analyst aliases, not original symbols; whole-function semantics remain incomplete."
+    },
+    {
+      "va": "00403318",
+      "analyst_name": "increment_selected_diagnostic_context_counter",
+      "original_symbol": "FUN_00403318",
+      "direct_callers": [
+        "00401e4c",
+        "004120b8",
+        "00414df8",
+        "00415824",
+        "0041614c",
+        "0041b954",
+        "0041c6ac",
+        "004206bc",
+        "00437374",
+        "00438304"
+      ],
+      "pseudocode_reference_lines": [
+        453,
+        462,
+        983,
+        985,
+        8106,
+        9421,
+        9813,
+        10130,
+        10143,
+        10155,
+        10175,
+        13042,
+        13643,
+        13655,
+        13670,
+        13709,
+        13733,
+        13753,
+        13777,
+        13784,
+        13804,
+        15148,
+        15185,
+        15204,
+        15243,
+        15272,
+        15323,
+        28009,
+        28021,
+        28034
+      ],
+      "limits": "Analyst aliases, not original symbols; whole-function semantics remain incomplete."
+    }
+  ],
+  "assembly": [
+    {
+      "va": "0x438dcb",
+      "bytes": "8b4590",
+      "instruction": "mov eax, dword ptr [ebp - 0x70]"
+    },
+    {
+      "va": "0x438dce",
+      "bytes": "0540010000",
+      "instruction": "add eax, 0x140"
+    },
+    {
+      "va": "0x438dd3",
+      "bytes": "e8e0b10000",
+      "instruction": "call 0x443fb8"
+    },
+    {
+      "va": "0x438dd8",
+      "bytes": "3d80c3c901",
+      "instruction": "cmp eax, 0x1c9c380"
+    },
+    {
+      "va": "0x438ddd",
+      "bytes": "764d",
+      "instruction": "jbe 0x438e2c"
+    },
+    {
+      "va": "0x438ddf",
+      "bytes": "6a01",
+      "instruction": "push 1"
+    },
+    {
+      "va": "0x438de1",
+      "bytes": "66c745a4b400",
+      "instruction": "mov word ptr [ebp - 0x5c], 0xb4"
+    },
+    {
+      "va": "0x44403d",
+      "bytes": "8b4dc4",
+      "instruction": "mov ecx, dword ptr [ebp - 0x3c]"
+    },
+    {
+      "va": "0x444040",
+      "bytes": "8139504b0304",
+      "instruction": "cmp dword ptr [ecx], 0x4034b50"
+    },
+    {
+      "va": "0x444046",
+      "bytes": "740f",
+      "instruction": "je 0x444057"
+    },
+    {
+      "va": "0x444048",
+      "bytes": "83c8ff",
+      "instruction": "or eax, 0xffffffff"
+    },
+    {
+      "va": "0x44404b",
+      "bytes": "8b55d8",
+      "instruction": "mov edx, dword ptr [ebp - 0x28]"
+    },
+    {
+      "va": "0x44404e",
+      "bytes": "64891500000000",
+      "instruction": "mov dword ptr fs:[0], edx"
+    },
+    {
+      "va": "0x444055",
+      "bytes": "eb10",
+      "instruction": "jmp 0x444067"
+    },
+    {
+      "va": "0x444057",
+      "bytes": "8b4dc4",
+      "instruction": "mov ecx, dword ptr [ebp - 0x3c]"
+    },
+    {
+      "va": "0x44405a",
+      "bytes": "8b4116",
+      "instruction": "mov eax, dword ptr [ecx + 0x16]"
+    },
+    {
+      "va": "0x47c5e1",
+      "bytes": "8b8d24faffff",
+      "instruction": "mov ecx, dword ptr [ebp - 0x5dc]"
+    },
+    {
+      "va": "0x47c5e7",
+      "bytes": "83b99000000000",
+      "instruction": "cmp dword ptr [ecx + 0x90], 0"
+    },
+    {
+      "va": "0x47c5ee",
+      "bytes": "0f8e0f010000",
+      "instruction": "jle 0x47c703"
+    },
+    {
+      "va": "0x47c5f4",
+      "bytes": "ff8540faffff",
+      "instruction": "inc dword ptr [ebp - 0x5c0]"
+    }
+  ],
+  "observed_predicate": {
+    "lookup_path": "word\\media\\imageN.png in retained fixtures",
+    "local_header_signature": "04034b50",
+    "field_offset": "0x16",
+    "field_type": "uint32",
+    "compare_va": "00438dd8",
+    "threshold_bytes": 30000000,
+    "skip_branch": "unsigned jbe",
+    "emit_va": "00438ddf",
+    "object_counter_offset": "0x1e8",
+    "state_base_offset": "0x158",
+    "report_counter_offset": "0x90",
+    "report_gate_va": "0047c5e7",
+    "native_message": "больше 40 Mb",
+    "message_literal_va": "006e5e78"
+  },
+  "runtime_results": [
+    "29999999 -> counter0",
+    "30000000 -> counter0",
+    "30000001 -> counter1",
+    "22000000+22000000 -> counter0",
+    "flags8/local0/central30000001 -> counter0"
+  ],
+  "static_unresolved": [
+    "Missing ZIP entry or bad local signature returnsffffffff and passes unsigned greater comparison if reached; not dynamically executed.",
+    "GeomShape/string and preliminary state gates exist; complete shape-type filtering and failure paths remain incomplete.",
+    "Why the report says40Mb despite30000000 bytes is unknown."
+  ],
+  "sources": {
+    "evidence/agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "evidence/agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "evidence/business-map-232/file-entry-decompilation-r1/function.c": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4",
+    "evidence/business-map-232/image-bytes-audit-r1/audit.json": "cf0d6c795cbabc6e259428930071be83f09893c1c3080d45dad999c0e5120357"
+  }
+}

@@ -36,11 +36,12 @@ def locate_finding(f,data,file_type,limit=100):
                 if rule!='Dict.MixedScriptHomoglyphs' and not any(k in match.group().lower() for k in ['ьь','ъъ','ьъ','ъь','щч','шч','жш','чщ']):continue
                 total+=1
                 if len(out)<limit:out.append({**loc,'text_excerpt':match.group(),'character_start':match.start(),'character_end':match.end(),'classification':'candidate_spelling_or_mixed_script_not_intent'})
-    elif rule=='Pic.PixelSizeTooLarge':
+    elif rule=='Pic.PixelSizeTooLarge' or (rule=='Pic.FileSizeTooLarge' and f.get('threshold',{}).get('unit')=='bytes'):
         for i,im in enumerate(data.get('images',[]),1):
-            if (im.get('width_px') or 0)*(im.get('height_px') or 0)<=f['threshold']['value']:continue
+            measured=(im.get('width_px') or 0)*(im.get('height_px') or 0) if rule=='Pic.PixelSizeTooLarge' else im.get('zip_local_uncompressed_size',0)
+            if measured<=f['threshold']['value']:continue
             total+=1
-            if len(out)<limit:out.append({'kind':'pdf_image' if file_type=='pdf' else 'docx_drawing','image':i,'page':im['page_index']+1 if 'page_index' in im else None,'bboxes':im.get('bboxes',[]),'xml_path':im.get('xml_path'),'relationship_id':im.get('relationship_id'),'actual_pixels':[im.get('width_px'),im.get('height_px')]})
+            if len(out)<limit:out.append({'kind':'pdf_image' if file_type=='pdf' else 'docx_drawing','image':i,'page':im['page_index']+1 if 'page_index' in im else None,'bboxes':im.get('bboxes',[]),'xml_path':im.get('xml_path'),'relationship_id':im.get('relationship_id'),'actual_pixels':[im.get('width_px'),im.get('height_px')],**({'zip_entry':im.get('zip_entry'),'zip_local_uncompressed_size':im.get('zip_local_uncompressed_size'),'zip_local_flags':im.get('zip_local_flags')} if rule=='Pic.FileSizeTooLarge' else {})})
     else:
         loc=f.get('location') or {};indices=loc.get('paragraphs',[])
         if 'paragraph_idx' in loc and loc['paragraph_idx'] is not None:indices=indices+[loc['paragraph_idx']+1]

@@ -80,6 +80,23 @@ def get_image_dimensions(data: bytes):
 class DocxParser:
     def __init__(self, file_path: str):
         self.file_path = file_path
+        self.zip_image_headers={}
+        with zipfile.ZipFile(file_path) as archive,open(file_path,'rb') as stream:
+            stream.seek(max(0,os.path.getsize(file_path)-70000));tail=stream.read()
+            zip64_directory=b'PK\x06\x06' in tail or b'PK\x06\x07' in tail
+            def zip64_extra(extra):
+                offset=0
+                while offset+4<=len(extra):
+                    tag=int.from_bytes(extra[offset:offset+2],'little');size=int.from_bytes(extra[offset+2:offset+4],'little')
+                    if tag==1 or offset+4+size>len(extra):return True
+                    offset+=4+size
+                return offset!=len(extra)
+            for info in archive.infolist():
+                if not info.filename.startswith('word/media/'):continue
+                stream.seek(info.header_offset);header=stream.read(30)
+                if len(header)==30 and header[:4]==b'PK\x03\x04':
+                    name_size=int.from_bytes(header[26:28],'little');extra_size=int.from_bytes(header[28:30],'little');stream.read(name_size);extra=stream.read(extra_size)
+                    self.zip_image_headers[info.filename]={'zip_local_uncompressed_size':int.from_bytes(header[22:26],'little'),'zip_central_uncompressed_size':info.file_size,'zip_local_flags':int.from_bytes(header[6:8],'little'),'zip_compression_method':int.from_bytes(header[8:10],'little'),'zip_uses_zip64':zip64_directory or int.from_bytes(header[4:6],'little')>=45 or zip64_extra(extra) or zip64_extra(info.extra),'zip_entry':info.filename,'zip_entry_ambiguous':info.filename in self.zip_image_headers}
         self.doc = Document(file_path)
         self.style_resolver = StyleResolver(self.doc)
         self.metadata = {}
@@ -371,6 +388,7 @@ class DocxParser:
             image_extension = None
             png_bit_depth = png_color_type = None
             png_structure_verified = False
+            zip_metadata={}
             display_width_px, display_height_px = width_px, height_px
             # Rendered extent at 96dpi is not the image's native pixel count.
             width_px, height_px = None, None
@@ -382,6 +400,7 @@ class DocxParser:
                 if embed_rid and embed_rid in rels:
                     try:
                         rel = rels[embed_rid]
+                        zip_metadata=self.zip_image_headers.get(str(rel.target_part.partname).lstrip('/'),{})
                         blob = rel.target_part.blob
                         image_extension = 'png' if blob.startswith(b'\x89PNG\r\n\x1a\n') else 'other'
                         if image_extension=='png' and len(blob)>=26:png_bit_depth,png_color_type=blob[24],blob[25]
@@ -408,6 +427,7 @@ class DocxParser:
                 'png_bit_depth':png_bit_depth,'png_color_type':png_color_type,
                 'png_structure_verified':png_structure_verified,
                 'blip_count':len(d.findall('.//a:blip',NS)),
+                **zip_metadata,
                 'width_px': width_px,
                 'height_px': height_px,
                 'display_width_px': display_width_px,
@@ -432,11 +452,14 @@ class DocxParser:
 
     def parse_all(self) -> Dict[str, Any]:
         images=self.parse_drawings_and_images()
+        bytes_profile=(1<=len(images)<=2 and all(im.get('placement')=='inline' and im.get('extension')=='png' and im.get('png_bit_depth')==8 and im.get('png_color_type')==2 and im.get('png_structure_verified') and im.get('blip_count')==1 and im.get('zip_local_flags') in {0,8} and im.get('zip_compression_method')==8 and not im.get('zip_uses_zip64',True) and not im.get('zip_entry_ambiguous',True) and (im.get('zip_local_uncompressed_size')==im.get('zip_central_uncompressed_size') if im.get('zip_local_flags')==0 else im.get('zip_local_uncompressed_size')==0) for im in images)
+                       and not bool(self.doc.element.xpath('.//w:pict | .//w:txbxContent | .//w:object | .//*[local-name()="AlternateContent"]')))
         pixel_profile=(len(images)==1 and images[0]['placement']=='inline' and images[0]['extension']=='png' and images[0]['png_bit_depth']==8 and images[0]['png_color_type']==2 and images[0]['png_structure_verified'] and images[0]['blip_count']==1
                        and all(isinstance(images[0].get(k),(int,float)) and images[0][k]>0 for k in ['width_px','height_px'])
                        and images[0]['width_px']*images[0]['height_px']<2**31
                        and not bool(self.doc.element.xpath('.//w:pict | .//w:txbxContent | .//w:object | .//*[local-name()="AlternateContent"]')))
         return {
+            'native232_image_bytes_profile_supported':bytes_profile,
             'native232_single_inline_png_profile_supported':pixel_profile,
             'native_graduate_scope_supported': not bool(self.doc.element.xpath('.//w:tbl | .//w:drawing | .//w:pict | .//w:txbxContent | .//w:fldSimple | .//w:instrText | .//w:del | .//w:ins | .//w:altChunk | .//w:sdt')),
             'formatting_coverage': {'resolved': ['docDefaults', 'paragraph_basedOn', 'character_basedOn', 'direct'], 'unresolved': ['conditional_table_styles', 'numbering_properties', 'theme_font_and_color']},

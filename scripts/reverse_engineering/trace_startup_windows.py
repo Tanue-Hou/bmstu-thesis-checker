@@ -33,12 +33,13 @@ class THREAD_ENTRY(C.Structure):
     _fields_=[('size',D),('usage',D),('tid',D),('pid',D),('base_priority',W.LONG),('delta_priority',W.LONG),('flags',D)]
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
     if a.direct_file_entry and not a.probe_document:raise ValueError('Direct entry requires a synthetic document probe')
     if a.probe_document and not a.direct_file_entry:raise ValueError('Only controlled direct-entry probes are supported; natural cross-process HDROP is not validated')
     if a.dictionary_cp1251:a.trace_codepage=True
     if a.russian_suspended:a.russian=True
     if not 0<a.seconds<=30:raise ValueError('Trace duration must be <=30 seconds')
+    image_bytes_trace=a.image_bytes_trace
     probe_raw=None
     # Opt-in business tracing is kept separate from the default wrapper.
     pixel_trace=a.pixel_trace
@@ -190,6 +191,9 @@ def main():
                         if pixel_trace:
                             for va,label in [(0x0042ae4b,'docx_image_dimensions'),(0x0042ae4e,'docx_image_area_compare'),(0x0042ae56,'docx_large_image_flag'),(0x0042ae5c,'docx_image_flag_result'),(0x00472be7,'pdf_image_area_compare'),(0x00472bef,'pdf_large_image_emit'),(0x0047c709,'image_counter_report_gate'),(0x0047c795,'pixel_literal_conversion'),(0x0047c79a,'pixel_literal_return')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
+                        if image_bytes_trace:
+                            for va,label in [(0x00438dd3,'image_bytes_zip_lookup'),(0x0044405a,'image_bytes_zip_header_read'),(0x00438dd8,'image_bytes_compare'),(0x00438ddf,'image_bytes_emit'),(0x0047c5e7,'image_bytes_report_gate')]:
+                                addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                     if event.u.create.file:k.CloseHandle(event.u.create.file)
                 elif event.code==6:
                     if event.u.load.file:k.CloseHandle(event.u.load.file)
@@ -220,6 +224,15 @@ def main():
                                     pending_steps[int(event.tid)]=(addr,original,label)
                                     context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
                             hit={'label':label,'address':hex(addr),'registers':{n:hex(getattr(context,n)) for n in ['Eip','Esp','Eax','Edx','Ecx']},'stack_dwords':list(struct.unpack('<4I',read(context.Esp,16))),'one_shot':label!='MultiByteToWideChar_thunk'};hits.append(hit);entry['hit']=label
+                            if label.startswith('image_bytes_'):
+                                if label=='image_bytes_zip_lookup':hit['zip_entry_path']=unicode_object(context.Edx)
+                                if label=='image_bytes_zip_header_read':
+                                    header=read(context.Ecx,30);hit['zip_local_header']={'hex':header.hex(),'signature':hex(int.from_bytes(header[:4],'little')),'flags':int.from_bytes(header[6:8],'little'),'compressed_size':int.from_bytes(header[18:22],'little'),'uncompressed_size':int.from_bytes(header[22:26],'little')}
+                                if label=='image_bytes_compare':hit['image_bytes_state']={'size_unsigned32':int(context.Eax),'threshold_bytes':30000000,'comparison':'unsigned_strict_greater'}
+                                if label=='image_bytes_report_gate':hit['image_bytes_counter']=signed(context.Ecx+0x90)
+                                pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
+                                if label!='image_bytes_report_gate' and pixel_hit_counts[label]<128:
+                                    pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False
                             if label=='image_counter_report_gate':hit['pixel_counter_state']={'state_pointer':hex(context.Ecx),'slot_offset':'0x94','count':signed(context.Ecx+0x94)}
                             if label in ['docx_image_dimensions','docx_image_area_compare','docx_large_image_flag','docx_image_flag_result','pdf_image_area_compare','pdf_large_image_emit']:
                                 pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
