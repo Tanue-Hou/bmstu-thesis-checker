@@ -85,7 +85,7 @@ class SchoolLocationTests(unittest.TestCase):
         self.assertEqual(compare(local,{'status':'pending'})['status'],'pending_native_capture')
         with tempfile.TemporaryDirectory() as td:
             p=Path(td)/'capture.txt';p.write_text('размер которых меньше 8 пт',encoding='utf-8')
-            capture={'status':'captured','input_sha256':'abc','work_type':'master','build':230,'text_path':str(p),'text_sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+            capture={'status':'captured','input_sha256':'abc','work_type':'master','build':230,'executable_sha256':'0bb43cebc4c7ee196913d2ea2240f7bc53aaac1e6b8f6394e6201024a108b8cb','text_path':str(p),'text_sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
             result=compare(local,capture);self.assertEqual(result['pairs'][0]['status'],'difference_requires_review')
             capture['input_sha256']='wrong'
             with self.assertRaises(ValueError):compare(local,capture)

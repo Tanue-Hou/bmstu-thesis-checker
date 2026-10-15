@@ -1,0 +1,18 @@
+{
+  "successful_build": 232,
+  "method": [
+    "hash-identical short-path copies outside appdata",
+    "fixed mode",
+    "maximize main window and refresh bounds after display changes",
+    "Alt+N filename focus and literal path input",
+    "verify filename value then Enter",
+    "wait until output identifies target input before capture"
+  ],
+  "observed_failures": [
+    "stale UIA indexes / not settable",
+    "failed to activate captured window for owned file dialog",
+    "UIA focused_element reported search field while screenshot showed filename caret",
+    "AppData staging path not visible in Explorer; D drive short path worked"
+  ],
+  "scope": "Observed recovery workflow, not a source fix to the computer-control provider or a universal coordinate recipe"
+}

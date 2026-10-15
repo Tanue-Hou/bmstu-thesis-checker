@@ -1,0 +1,24 @@
+{
+  "build": 232,
+  "cases": 17,
+  "source_unchanged": true,
+  "native_captures": 17,
+  "native_diagnostics": 80,
+  "local_findings": 218,
+  "mode_mismatch_cases": 4,
+  "mode_review_cases": 1,
+  "unmapped_native_diagnostics": 0,
+  "review_rows": 298,
+  "native_categories": {
+    "mode_mismatch_probe": 39,
+    "same_family_review_details": 28,
+    "native_only_coverage_gap_or_predicate_difference": 13
+  },
+  "local_categories": {
+    "local_only_candidate": 157,
+    "same_family_review_details": 29,
+    "school_reference_not_native_rule": 32
+  },
+  "accuracy": null,
+  "limits": "Case material is not ground truth; diagnostic-family relations only; private identifiers and document hashes omitted"
+}

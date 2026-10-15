@@ -10,12 +10,13 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('manifest');parser.add_argument('--out',required=True);a=parser.parse_args()
     out=Path(a.out).resolve();repo=Path(__file__).resolve().parents[1]
     if out.is_relative_to(repo):raise ValueError('Real-thesis trials must be stored outside the publishable repository')
+    if out.exists() and any(out.iterdir()):raise ValueError('Use a fresh trial directory; retained evidence must not be overwritten')
     out.mkdir(parents=True,exist_ok=True);rows=json.loads(Path(a.manifest).read_text(encoding='utf-8-sig'));summary=[]
     for row in rows:
         p=Path(row['path']);start=time.perf_counter();record={'id':row['id'],'file':p.name,'source_path':str(p),'work_type':row['requested_work_type'],'mode_needs_review':row.get('mode_needs_review',False)}
         try:
             before=sha(p);mode=row['requested_work_type'];profile='bmstu-dissertation-reference' if mode=='phd' else 'bmstu-master-reference'
-            args=Namespace(work_type=mode,template_id=profile,document_kind='auto',skip_structure=False,skip_pictures=False,skip_word_format=False,skip_dictionary=False)
+            args=Namespace(work_type=mode,native_build=232,template_id=profile,document_kind='auto',skip_structure=False,skip_pictures=False,skip_word_format=False,skip_dictionary=False)
             result=check_file(p,args);(out/(row['id']+'.report.private.json')).write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8');(out/(row['id']+'.report.private.md')).write_text(render_markdown(result),encoding='utf-8')
             repair=None
             if p.suffix.lower()=='.docx' and not row.get('mode_needs_review'):

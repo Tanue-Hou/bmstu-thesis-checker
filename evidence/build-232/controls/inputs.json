@@ -1,0 +1,26 @@
+[
+  {
+    "id": "Z01",
+    "case": "font_7",
+    "sha256": "08e89d982018c10d9414e1b737c0c2a1554364110cbda702014ac81a603290d9",
+    "work_type": "master"
+  },
+  {
+    "id": "Z02",
+    "case": "font_8",
+    "sha256": "1b9b00e7f37c0eaca3781e4dfa0081882f6e1e30aa63227f832f600f2431e482",
+    "work_type": "master"
+  },
+  {
+    "id": "Z03",
+    "case": "font_18",
+    "sha256": "5b0f0b5728895ed43e7fd2b0a798c403651d3cd5c5d540a41d8eaee4ef12df34",
+    "work_type": "master"
+  },
+  {
+    "id": "Z04",
+    "case": "font_18_5",
+    "sha256": "921c9e00d07e8bf6a4f8e3a7da06737de127b7736afc2ff63bca940a7e6c23c2",
+    "work_type": "master"
+  }
+]

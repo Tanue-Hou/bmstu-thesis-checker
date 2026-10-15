@@ -219,7 +219,7 @@ class RegressionTests(unittest.TestCase):
         self.assertEqual(run.returncode, 0, run.stderr)
         replies = [json.loads(line) for line in run.stdout.splitlines()]
         self.assertEqual([r['id'] for r in replies], [1, 2, 3])
-        self.assertEqual(len(replies[1]['result']['tools']), 7)
+        self.assertEqual(len(replies[1]['result']['tools']), 9)
         self.assertEqual(sum(r['verification_status']=='verified_against_original' for r in replies[2]['result']['structuredContent']['rules']),18)
 
     def test_verification_does_not_transfer_to_pdf_or_other_work_type(self):

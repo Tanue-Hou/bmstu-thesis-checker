@@ -1,3 +1,12 @@
+# 0.2.6 - TestVkr build232 and source-bound cross-checks (2026-10-15)
+
+- Identify build232 independently; bind report/capture/executable/screenshot identities and prevent build230 proof transfer.
+- Complete native captures for the 17 private cases; retain all diagnostic/finding comparison rows without treating cases as ground truth.
+- Read table covers and SDT TOCs in document order, retain source XML positions, avoid nested textbox duplication and table-only false empty checks.
+- Add front-matter/table/heading role hints to font locations and protect retained trial/review directories from overwrite.
+- Add MCP list_native_builds and compare_thesis_results; current check reference defaults to232, historical copy repair remains230 only.
+- Recheck 7/8/18/18.5pt master DOCX controls in232; no general rule, PDF-degree or232 repair validation claim.
+
 # 0.2.5 - Sourced school references and private real-case trials (2026-10-15)
 
 - Separate school reference profiles from native TestVkr thresholds; distinguish degree dissertations from NKR.

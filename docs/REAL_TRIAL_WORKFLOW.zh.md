@@ -6,7 +6,7 @@
 2. 明确 VKR硕士、NKR研究生科研报告、候选人/博士学位论文。文件名含学士标志或封面矛盾时记录待确认，停止自动修复。
 3. 选择有出处的学校参考配置。本轮两个内置配置的当前院系适用性均待确认。不要从案例众数制定标准。
 4. 运行本地检查，保留JSON/可搜索HTML/Markdown。PDF定位为物理页与未旋转坐标；DOCX为正文XML、段落/run、表格单元格，无排版引擎时不猜页码。JSON每规则最多保留100处、HTML30处，显示总数及截断状态。
-5. 以相同字节输入，在固定TestVkr build230与记录的模式下检查，保留原始俄文输出及截图，记录输入、输出、截图哈希、时间与开关。Unicode路径有兼容问题可使用ASCII命名的私人副本，并验证字节哈希相同。学位论文若以NKR模式试探，必须标明模式不适配，不能据此判断学校合规。
+5. 以相同字节输入，在固定TestVkr build230或232及其程序哈希与记录的模式下检查，保留原始俄文输出及截图，记录输入、输出、截图哈希、时间与开关。Unicode路径有兼容问题可使用ASCII命名的私人副本，并验证字节哈希相同。学位论文若以NKR模式试探，必须标明模式不适配，不能据此判断学校合规。
 6. 用 compare_native_trial.py 读取保留的原输出，校验输入、模式、build及输出哈希。内置文字模式只做部分规则的存在性比对；未命中并不证明原程序无诊断。人工逐条归类：双方一致、本地独有、原程序独有、阈值/计数差异、解析差异、适用范围冲突、待确认。
 7. 审核表记录规则、定位、学校条款、原诊断、源属性、页面证据、判定、原因、复核人和修复范围。空白判定保留待确认。公式上下标、封面标题、目录/表格/图题等先检查语义角色。
 8. 仅对已授权且支持的DOCX动作生成预览。记录 input_sha256 与 plan_id；执行 fix_thesis_copy 时传 expected_input_sha256 拒绝过期源文件。正文大小异常、颜色与A4仍受原证据上下文保护；识别出的封面/前置页、公式、域、表格等保持原样。学校模板批量规范化尚未开放。
@@ -20,6 +20,8 @@ py scripts/run_private_trials.py PRIVATE/inventory.private.json --out PRIVATE/ru
 py scripts/compare_native_trial.py PRIVATE/local-report.json PRIVATE/native-capture.json --out PRIVATE/comparison.json
 ```
 
-原程序采集JSON字段：status=captured、input_sha256、work_type、build=230、text_path、text_sha256。未采集必须 status=pending 并保留 reason。默认不上传任何真实论文、姓名、源路径、摘录或可关联源文件哈希。
+原程序采集JSON字段：status=captured、input_sha256、work_type、build、executable_sha256、text_path、text_sha256；232需screenshots列表及哈希。未采集必须 status=pending 并保留 reason。默认不上传任何真实论文、姓名、源路径、摘录或可关联源文件哈希。
 
 本轮状态与统计见 [v0.2.5](../releases/v0.2.5.md)，原程序采集未完成时不得记作对照通过。
+
+当前流程已在232完成17案例原输出采集与类别对照；版本、对话框方法和剩余边界见 [新版说明](BUILD232_CROSS_CHECK.zh.md)。真实最终判定仍需人工学校要求复核。

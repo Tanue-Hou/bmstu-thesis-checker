@@ -1,0 +1,60 @@
+{
+  "build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "cases": [
+    {
+      "id": "Z01",
+      "case": "font_7",
+      "sha256": "08e89d982018c10d9414e1b737c0c2a1554364110cbda702014ac81a603290d9",
+      "work_type": "master",
+      "native_small": true,
+      "native_large": false,
+      "local_small": true,
+      "local_large": false,
+      "pass": true,
+      "text_sha256": "b2cb1cc2ab96a177472d410a54952dc53c90659ca464721acf9d3d68c32e74ed",
+      "screenshot_sha256": "08742a970ae8f5e8cbccb0f6050762d8d3b943e5c2d619387cf88070ed26a3bd"
+    },
+    {
+      "id": "Z02",
+      "case": "font_8",
+      "sha256": "1b9b00e7f37c0eaca3781e4dfa0081882f6e1e30aa63227f832f600f2431e482",
+      "work_type": "master",
+      "native_small": false,
+      "native_large": false,
+      "local_small": false,
+      "local_large": false,
+      "pass": true,
+      "text_sha256": "3348d16846cb652684f79ad83414df0487cf23694ac717140ade52c3a4b77846",
+      "screenshot_sha256": "89b73f8777ac0cfa839254c37bdf7831b8fbeaf902276f81f22bf8a8fcc964d8"
+    },
+    {
+      "id": "Z03",
+      "case": "font_18",
+      "sha256": "5b0f0b5728895ed43e7fd2b0a798c403651d3cd5c5d540a41d8eaee4ef12df34",
+      "work_type": "master",
+      "native_small": false,
+      "native_large": false,
+      "local_small": false,
+      "local_large": false,
+      "pass": true,
+      "text_sha256": "1d891571c52812d1510995f71dad06347b391e57ef39961fea3b243b412b8fb2",
+      "screenshot_sha256": "79972e13a9efd02323b28625b253bc486e0e4c19d4ab0ba55ac89dfa71a4389e"
+    },
+    {
+      "id": "Z04",
+      "case": "font_18_5",
+      "sha256": "921c9e00d07e8bf6a4f8e3a7da06737de127b7736afc2ff63bca940a7e6c23c2",
+      "work_type": "master",
+      "native_small": false,
+      "native_large": true,
+      "local_small": false,
+      "local_large": true,
+      "pass": true,
+      "text_sha256": "794bec21b6f3b7551f3cf32cd5afe336c09ee679683c17389f233d3e3c1695f9",
+      "screenshot_sha256": "388e7c088c78c03169c5347bfbbaec51844953ca8445736ea94130bf84419a77"
+    }
+  ],
+  "all_pass": true,
+  "scope": "Four synthetic master DOCX font predicates: 7/8/18/18.5pt ordinary body. Other diagnostics intentionally not adjudicated; no general whole-rule, other-format or repair validation."
+}

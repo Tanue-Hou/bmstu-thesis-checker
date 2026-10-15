@@ -397,6 +397,20 @@ class DocxParser:
             })
         return images_info
 
+    def parse_structure_paragraphs(self):
+        """Document-order text including table covers and SDT TOCs; no inferred page numbers."""
+        main={p._p:i for i,p in enumerate(self.doc.paragraphs)}
+        records=[]
+        for element in self.doc.element.body.xpath('.//w:p'):
+            if element.xpath('ancestor::w:del'):continue
+            chunks=[]
+            for node in element.xpath('.//w:t | .//w:tab | .//w:br'):
+                # A drawing's nested textbox paragraph is a separate record, not duplicate text.
+                nearest=next((a for a in node.iterancestors() if a.tag==qn('w:p')),None)
+                if nearest is element:chunks.append(node.text or '' if node.tag==qn('w:t') else '\t' if node.tag==qn('w:tab') else '\n')
+            records.append({'index':len(records),'text':''.join(chunks),'xml_path':element.getroottree().getpath(element),'main_paragraph_index':main.get(element),'inside_table':bool(element.xpath('ancestor::w:tbl')),'inside_content_control':bool(element.xpath('ancestor::w:sdt')),'inside_textbox':bool(element.xpath('ancestor::w:txbxContent'))})
+        return records
+
     def parse_all(self) -> Dict[str, Any]:
         return {
             'native_graduate_scope_supported': not bool(self.doc.element.xpath('.//w:tbl | .//w:drawing | .//w:pict | .//w:txbxContent | .//w:fldSimple | .//w:instrText | .//w:del | .//w:ins | .//w:altChunk | .//w:sdt')),
@@ -404,6 +418,7 @@ class DocxParser:
             'file_size_mb': self.metadata['file_size_mb'],
             'sections': self.metadata['sections'],
             'paragraphs': self.parse_paragraphs(),
+            'structure_paragraphs': self.parse_structure_paragraphs(),
             'tables': self.parse_tables(),
             'images': self.parse_drawings_and_images()
         }

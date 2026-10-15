@@ -1,0 +1,15 @@
+{
+  "release": "0.2.6",
+  "test_exit_code": 0,
+  "test_count": 73,
+  "skill_validation": "passed",
+  "native_build": 232,
+  "native_executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "private_corpus_captures": 17,
+  "private_identifier_scan": "passed",
+  "private_source_hashes_unchanged": true,
+  "historical_evidence_entries_unchanged": 615,
+  "font_controls_passed": 4,
+  "rule_promotion": "none; finite build232 font predicates retained separately",
+  "build232_copy_repair": "unsupported"
+}

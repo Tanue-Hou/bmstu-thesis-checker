@@ -2458,5 +2458,213 @@
   "2026-10-15\\acceptance.json": {
     "sha256": "f4d347383d0dc914223e707ea6db539f1a0e740506c894449adc5abfe8aa2373",
     "bytes": 352
+  },
+  "build-232\\acceptance.json": {
+    "sha256": "b0cc6a55d1e1db598b60e6e7152eeac0e04aed1eac8e4922b76d74dcd8c8bf03",
+    "bytes": 550
+  },
+  "build-232\\binary-comparison.json": {
+    "sha256": "b450163fb7ae84bf19791f3013c1edb5f3754124e1f3bd40b99aa3357c7737ee",
+    "bytes": 18980
+  },
+  "build-232\\controls\\comparison.json": {
+    "sha256": "153d4095a2e5e3ebd990f3eac47ace0361c694decca53449bd918097bc1dde77",
+    "bytes": 2345
+  },
+  "build-232\\controls\\inputs.json": {
+    "sha256": "45f23ed46937c87d3c4e994f41af252f29bd91bd05fe6e6078d077f441ffd767",
+    "bytes": 657
+  },
+  "build-232\\controls\\Z01.capture.json": {
+    "sha256": "2369d371ea16eebe1ee346d2f024009c2b5b68b49c7314986f338ce1b1f60b38",
+    "bytes": 698
+  },
+  "build-232\\controls\\Z01.docx": {
+    "sha256": "08e89d982018c10d9414e1b737c0c2a1554364110cbda702014ac81a603290d9",
+    "bytes": 37610
+  },
+  "build-232\\controls\\Z01.local.json": {
+    "sha256": "7e67be4f61058c81fed8f4f688e5d35d4c6db89666f091c6370983dcd0d1a146",
+    "bytes": 63180
+  },
+  "build-232\\controls\\Z01.original.txt": {
+    "sha256": "b2cb1cc2ab96a177472d410a54952dc53c90659ca464721acf9d3d68c32e74ed",
+    "bytes": 3274
+  },
+  "build-232\\controls\\Z01.screen-0.jpg": {
+    "sha256": "08742a970ae8f5e8cbccb0f6050762d8d3b943e5c2d619387cf88070ed26a3bd",
+    "bytes": 140968
+  },
+  "build-232\\controls\\Z01.uia.json": {
+    "sha256": "1a55b3a2563d5e11483f45becd24e7ac284bf7d931c9ed2e08dcca45508d0ad2",
+    "bytes": 5017
+  },
+  "build-232\\controls\\Z02.capture.json": {
+    "sha256": "ffba37dd63f1460cc0a3f95dfcbcff973425e3717e6b8ce46ca53c7bb988848b",
+    "bytes": 698
+  },
+  "build-232\\controls\\Z02.docx": {
+    "sha256": "1b9b00e7f37c0eaca3781e4dfa0081882f6e1e30aa63227f832f600f2431e482",
+    "bytes": 37608
+  },
+  "build-232\\controls\\Z02.local.json": {
+    "sha256": "1545b93177dff3d1a3ed97cff7bfbb286376e26e971b7fc433b2e2770186e61d",
+    "bytes": 43265
+  },
+  "build-232\\controls\\Z02.original.txt": {
+    "sha256": "3348d16846cb652684f79ad83414df0487cf23694ac717140ade52c3a4b77846",
+    "bytes": 1404
+  },
+  "build-232\\controls\\Z02.screen-0.jpg": {
+    "sha256": "89b73f8777ac0cfa839254c37bdf7831b8fbeaf902276f81f22bf8a8fcc964d8",
+    "bytes": 92550
+  },
+  "build-232\\controls\\Z02.uia.json": {
+    "sha256": "262e0df9180d0f0a3b40e4fa60d7d9b66d3b84195356603ae1cc4f629d6f0860",
+    "bytes": 3111
+  },
+  "build-232\\controls\\Z03.capture.json": {
+    "sha256": "db31a38234433dbd2d2b4bcd8974225b7be85c7bc40ceefad5b343ceaf9844fe",
+    "bytes": 698
+  },
+  "build-232\\controls\\Z03.docx": {
+    "sha256": "5b0f0b5728895ed43e7fd2b0a798c403651d3cd5c5d540a41d8eaee4ef12df34",
+    "bytes": 37611
+  },
+  "build-232\\controls\\Z03.local.json": {
+    "sha256": "47d0143d2e2d1b4ae7f8cd7da8b57334c063c27cf35d82939b2b828681ef91d9",
+    "bytes": 40674
+  },
+  "build-232\\controls\\Z03.original.txt": {
+    "sha256": "1d891571c52812d1510995f71dad06347b391e57ef39961fea3b243b412b8fb2",
+    "bytes": 1404
+  },
+  "build-232\\controls\\Z03.screen-0.jpg": {
+    "sha256": "79972e13a9efd02323b28625b253bc486e0e4c19d4ab0ba55ac89dfa71a4389e",
+    "bytes": 92508
+  },
+  "build-232\\controls\\Z03.uia.json": {
+    "sha256": "b6bb3a3a528bb4fa4d4abd3e4d0aba38a844db477ea9b5a4be8047ecd9d48d45",
+    "bytes": 3111
+  },
+  "build-232\\controls\\Z04.capture.json": {
+    "sha256": "b1a313c5c31c9fdaf730413c7d73080304238d1e6742508addabb16699f159ca",
+    "bytes": 698
+  },
+  "build-232\\controls\\Z04.docx": {
+    "sha256": "921c9e00d07e8bf6a4f8e3a7da06737de127b7736afc2ff63bca940a7e6c23c2",
+    "bytes": 37611
+  },
+  "build-232\\controls\\Z04.local.json": {
+    "sha256": "f0192eca8beacd7f43a61eeed29c8d7666781947ec0825c06e17f314679f98ec",
+    "bytes": 60511
+  },
+  "build-232\\controls\\Z04.original.txt": {
+    "sha256": "794bec21b6f3b7551f3cf32cd5afe336c09ee679683c17389f233d3e3c1695f9",
+    "bytes": 3278
+  },
+  "build-232\\controls\\Z04.screen-0.jpg": {
+    "sha256": "388e7c088c78c03169c5347bfbbaec51844953ca8445736ea94130bf84419a77",
+    "bytes": 141108
+  },
+  "build-232\\controls\\Z04.uia.json": {
+    "sha256": "f9e0b2fd7c431cc9fd4adf05dfffa75dcd7378e7c7469cce946dec9aa6ac3470",
+    "bytes": 5021
+  },
+  "build-232\\dialog-recovery.json": {
+    "sha256": "a07250f8ea44beb363ff917cf30ad4aeeb039e54af7d1a322fda90c9346dd78d",
+    "bytes": 771
+  },
+  "build-232\\private-corpus-aggregate.json": {
+    "sha256": "8581e4db3a11ae790a27ee92936fab311352337cec8dba4458139a4c4691f6e4",
+    "bytes": 729
+  },
+  "build-232\\rea-pe-resources.json": {
+    "sha256": "ecd016df0c509a16dc71741dc792811477f8d58000ac84355fd7f8bf5e7ced81",
+    "bytes": 106286
+  },
+  "build-232\\regression\\character.local-result.json": {
+    "sha256": "8470f4ebdbd1afe16412c34b03050e9c15f377013920f4574c1a597b961fd4ba",
+    "bytes": 25904
+  },
+  "build-232\\regression\\default.local-result.json": {
+    "sha256": "04cbed49182530e30e27bc7560b524e2e36940b555fd6d50ac16f355f5484edb",
+    "bytes": 18895
+  },
+  "build-232\\regression\\direct.local-result.json": {
+    "sha256": "1f317af443dad7c0aa58abf4a6ef798cc7af6ee7d0babe348896a70adbfa5fb4",
+    "bytes": 18894
+  },
+  "build-232\\regression\\exact.local-result.json": {
+    "sha256": "8eda2e7221e188814b94153624d6bdf6f535eba8567f558759aca41d8d669624",
+    "bytes": 18893
+  },
+  "build-232\\regression\\hidden_off.local-result.json": {
+    "sha256": "4e1dcdfc025ed37b00c6b93874ad565df7a523556fc84a7e1fcec146f6b85c4c",
+    "bytes": 18898
+  },
+  "build-232\\regression\\inherited.local-result.json": {
+    "sha256": "5fe11f82e599b9e5d654533f1025469f91ac655b6b33a1185d5d5867968dbf2c",
+    "bytes": 18897
+  },
+  "build-232\\regression\\override.local-result.json": {
+    "sha256": "a137c08d0f752c6c3a494398ea1672f9cd96fe11b58a65800adb057eba442ef7",
+    "bytes": 33482
+  },
+  "build-232\\regression\\partial.local-result.json": {
+    "sha256": "71834b7e0c191132de53efcd88994f590766656f1446642eff2d9cc15e8b0e1e",
+    "bytes": 18895
+  },
+  "build-232\\regression\\regression-test.log": {
+    "sha256": "8ae9c1afc56f7f597f8b0e7e2fefb4f0312a3fc790c0369063eeaf10b5d5a64d",
+    "bytes": 9028
+  },
+  "build-232\\regression\\regression_inputs\\character.docx": {
+    "sha256": "dba270810de077c170ecc8e56506f4da0a27e66f4a3bf7a893d4478a272d3774",
+    "bytes": 36878
+  },
+  "build-232\\regression\\regression_inputs\\default.docx": {
+    "sha256": "9d155e75f2e2ce63e8c07c70f4c7186a1da94184a1a54dda51348f40e8f0322e",
+    "bytes": 36815
+  },
+  "build-232\\regression\\regression_inputs\\direct.docx": {
+    "sha256": "d726aa3ab2869c5cafc22148f001970b2e33fb4fc1c83f026eba8c81e61ac2a3",
+    "bytes": 36864
+  },
+  "build-232\\regression\\regression_inputs\\exact.docx": {
+    "sha256": "fccb0fb8663c2759539e7ea11eccf0095831b88f432b660e7467cfa88c0ec5fb",
+    "bytes": 36832
+  },
+  "build-232\\regression\\regression_inputs\\hidden_off.docx": {
+    "sha256": "d3225dbcc4626f4c84ed8d371d3635c05a2de798edc85e4cd952023e7a789ad4",
+    "bytes": 36838
+  },
+  "build-232\\regression\\regression_inputs\\inherited.docx": {
+    "sha256": "4a4977a8870b7bab475bf95482120c65d1a04bf401b6ac942a555e1d60faf365",
+    "bytes": 36815
+  },
+  "build-232\\regression\\regression_inputs\\override.docx": {
+    "sha256": "178e21a2e3cb20d4d2b00996bf3ec36e82f9e77ba0e285ad1632f0a123d917b9",
+    "bytes": 36852
+  },
+  "build-232\\regression\\regression_inputs\\partial.docx": {
+    "sha256": "1e27de248e52d4614cfe1d26849e7b55d7f76c156b3c304600a68495958b9794",
+    "bytes": 36835
+  },
+  "build-232\\regression\\regression_inputs\\table.docx": {
+    "sha256": "1d457035f79e46792ae409bb788719da3c903f7fe43dc691524be696aa7bed1b",
+    "bytes": 36947
+  },
+  "build-232\\regression\\table.local-result.json": {
+    "sha256": "43d11d9c801b6b42dcf4ac7a6c14a5b788c2b80a9310e594ac23c1d8629b7392",
+    "bytes": 22761
+  },
+  "build-232\\regression\\validation.json": {
+    "sha256": "9211a2e9d88d7aca11885252b874dd3b31fc20be8215ba089f70107e90be9abc",
+    "bytes": 13935
+  },
+  "build-232\\REPORT.zh.md": {
+    "sha256": "13f33edd2d8b982974fc56edd665c1c29795e951b679005ec4a89a2b1f71747f",
+    "bytes": 1863
   }
 }

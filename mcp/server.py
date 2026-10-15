@@ -17,11 +17,13 @@ if hasattr(sys.stdout, "reconfigure"):
 
 from check_document import check_file, load_rule_guidance, load_rule_registry, write_report_bundle
 from repair_document import repair_copy
+from compare_native_trial import compare,load_capture
+from native_builds import BUILDS,require_build
 from school_templates import BUILTINS, load_template
 
 
 SERVER_NAME = "BMSTU Thesis Checker"
-SERVER_VERSION = "0.2.5"
+SERVER_VERSION = "0.2.6"
 METHOD_NOT_FOUND = -32601
 INVALID_PARAMS = -32602
 INTERNAL_ERROR = -32603
@@ -52,6 +54,7 @@ def make_args(args):
         raise ValueError("work_type must be one of bachelor, specialist, master, phd.")
     return Namespace(
         work_type=work_type,
+        native_build=args.get("native_build",232),
         template_id=args.get("template_id"),template_path=args.get("template_path"),document_kind=args.get("document_kind","auto"),
         skip_structure=bool(args.get("skip_structure")),
         skip_pictures=bool(args.get("skip_pictures")),
@@ -121,7 +124,7 @@ def repair_tool(args, dry_run=False):
     result = repair_copy(require_string(args.get('file_path'),'file_path'),
                          output_dir=args.get('output_dir'), actions=args.get('actions'),
                          body_font_pt=args.get('body_font_pt'),
-                         work_type=args.get('work_type','bachelor'), dry_run=dry_run,expected_input_sha256=args.get('expected_input_sha256'))
+                         work_type=args.get('work_type','bachelor'), dry_run=dry_run,expected_input_sha256=args.get('expected_input_sha256'),native_build=args.get("native_build",230))
     return {'content':[{'type':'text','text':f"{'Planned' if dry_run else 'Applied'} {len(result['changes'])} formatting changes; source unchanged: {result['source_unchanged']}."}],
             'structuredContent':result}
 
@@ -129,6 +132,8 @@ def repair_tool(args, dry_run=False):
 def tool_list_result():
     return {
         "tools": [
+            {"name":"list_native_builds","description":"Known TestVkr identities and validation boundaries; no cross-build evidence transfer.","inputSchema":{"type":"object","properties":{}},"annotations":{"readOnlyHint":True,"destructiveHint":False}},
+            {"name":"compare_thesis_results","description":"Compare retained native diagnostics with a local report, verify hashes, retain every diagnostic/finding; no ground-truth or accuracy claim.","inputSchema":{"type":"object","properties":{"local_report_path":{"type":"string"},"native_capture_path":{"type":"string"}},"required":["local_report_path","native_capture_path"]},"annotations":{"readOnlyHint":True,"destructiveHint":False}},
             {"name":"list_school_templates","description":"List sourced school reference profiles and unconfirmed applicability; no native-proof promotion.","inputSchema":{"type":"object","properties":{}},"annotations":{"readOnlyHint":True,"destructiveHint":False}},
             {
                 'name':'preview_thesis_fixes',
@@ -137,6 +142,7 @@ def tool_list_result():
                     'file_path':{'type':'string'},
                     'actions':{'type':'array','items':{'type':'string','enum':['page_size_a4','font_size_anomalies','text_color_black']}},
                     'body_font_pt':{'type':'number'},
+                    'native_build':{'type':'integer','enum':[230],'default':230,'description':'Historical build230 repair evidence only; build232 execution remains unsupported'},
                     'expected_input_sha256':{'type':'string','description':'Preview source hash; reject changed inputs'},
                     'work_type':{'type':'string','enum':['bachelor','master','phd'],'default':'bachelor'}},'required':['file_path']},
                 'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}
@@ -148,6 +154,7 @@ def tool_list_result():
                     'file_path':{'type':'string'},'output_dir':{'type':'string'},
                     'actions':{'type':'array','items':{'type':'string','enum':['page_size_a4','font_size_anomalies','text_color_black']}},
                     'body_font_pt':{'type':'number'},
+                    'native_build':{'type':'integer','enum':[230],'default':230,'description':'Historical build230 repair evidence only; build232 execution remains unsupported'},
                     'expected_input_sha256':{'type':'string','description':'Preview source hash; reject changed inputs'},
                     'work_type':{'type':'string','enum':['bachelor','master','phd'],'default':'bachelor'}},'required':['file_path']},
                 'annotations':{'readOnlyHint':False,'destructiveHint':False,'idempotentHint':False,'openWorldHint':False}
@@ -161,6 +168,7 @@ def tool_list_result():
                     "properties": {
                         "file_path": {"type": "string", "description": "Absolute path to a .docx or .pdf file."},
                         "work_type": {"type": "string", "enum": ["bachelor", "specialist", "master", "phd"], "default": "bachelor"},
+                        "native_build":{"type":"integer","enum":[230,232],"default":232,"description":"Fixed original-program reference; build230 proof never transfers to232"},
                         "template_id":{"type":"string","description":"Optional school reference profile, separate from native proof"},
                         "template_path":{"type":"string"},
                         "document_kind":{"type":"string","enum":["auto","vkr","nkr","dissertation"],"default":"auto"},
@@ -184,6 +192,7 @@ def tool_list_result():
                         "folder_path": {"type": "string", "description": "Absolute path to a folder."},
                         "recursive": {"type": "boolean", "default": True},
                         "work_type": {"type": "string", "enum": ["bachelor", "specialist", "master", "phd"], "default": "bachelor"},
+                        "native_build":{"type":"integer","enum":[230,232],"default":232,"description":"Fixed original-program reference; build230 proof never transfers to232"},
                         "template_id":{"type":"string","description":"Optional school reference profile, separate from native proof"},
                         "template_path":{"type":"string"},
                         "document_kind":{"type":"string","enum":["auto","vkr","nkr","dissertation"],"default":"auto"},
@@ -222,6 +231,12 @@ def tool_list_result():
 def handle_tool_call(params):
     name = params.get("name")
     args = params.get("arguments") or {}
+    if name == "list_native_builds":
+        return {"content":[{"type":"text","text":"Build232 real cases and finite font probes do not transfer build230 whole-rule or repair validation."}],"structuredContent":{"builds":BUILDS,"rule_evidence_build":230,"current_build":232,"repair_evidence_build":230}}
+    if name == "compare_thesis_results":
+        local=json.loads(Path(require_string(args.get("local_report_path"),"local_report_path")).read_text(encoding="utf-8-sig"))
+        result=compare(local,load_capture(require_string(args.get("native_capture_path"),"native_capture_path")))
+        return {"content":[{"type":"text","text":result["status"]}],"structuredContent":result}
     if name == "list_school_templates":
         profiles=[load_template(p.stem) for p in sorted(BUILTINS.glob("*.json"))]
         return {"content":[{"type":"text","text":"School references require department/year applicability review."}],"structuredContent":{"templates":profiles}}

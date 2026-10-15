@@ -69,7 +69,7 @@ class FormatExpansionTests(unittest.TestCase):
                 self.assertTrue(all(a.read(n)==b.read(n) for n in a.namelist()))
     def test_mcp_pdf_runtime_context(self):
         import subprocess
-        request={'jsonrpc':'2.0','id':1,'method':'tools/call','params':{'name':'check_thesis_document','arguments':{'file_path':str(OUT/'pdf_font7.pdf'),'work_type':'phd'}}}
+        request={'jsonrpc':'2.0','id':1,'method':'tools/call','params':{'name':'check_thesis_document','arguments':{'file_path':str(OUT/'pdf_font7.pdf'),'work_type':'phd','native_build':230}}}
         p=subprocess.run([sys.executable,str(ROOT/'mcp/server.py')],input=json.dumps(request)+'\n',capture_output=True,text=True,encoding='utf-8',timeout=20)
         self.assertEqual(p.returncode,0,p.stderr)
         r=json.loads(p.stdout)['result']['structuredContent']

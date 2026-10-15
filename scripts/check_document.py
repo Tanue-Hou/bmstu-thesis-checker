@@ -19,6 +19,7 @@ from parsers.pdf_parser import PdfParser
 from config import settings
 from school_templates import load_template,check_template
 from issue_locations import locate_finding
+from native_builds import require_build
 
 
 SEVERITY_ORDER = {"critical": 0, "major": 1, "warning": 2, "info": 3}
@@ -198,6 +199,7 @@ def finding_to_dict(finding, rule_registry, rule_guidance, file_type=None, work_
     selected_context=verification_context(rule,file_type,work_type)
     context = selected_context or {}
     verified = (rule.get('verification_status') == 'verified_against_original'
+                and (doc_data or {}).get('native_build',230)==230
                 and selected_context is not None
                 and (doc_data or {}).get("document_kind")!="dissertation"
                 and context_evidence_valid(selected_context)
@@ -324,12 +326,15 @@ def check_file(path: Path, args):
     template=load_template(getattr(args,"template_id",None),getattr(args,"template_path",None),args.work_type)
     kind=getattr(args,"document_kind","auto")
     if kind not in {"auto","vkr","nkr","dissertation"}:raise ValueError("Invalid document_kind")
-    cover=" ".join(s.get("text","") for s in doc_data.get("spans",[]) if s.get("page_index")==0) if file_type=="pdf" else " ".join(p.get("text","") for p in doc_data.get("paragraphs",[])[:35])
+    cover=" ".join(s.get("text","") for s in doc_data.get("spans",[]) if s.get("page_index")==0) if file_type=="pdf" else " ".join(p.get("text","") for p in doc_data.get("structure_paragraphs",doc_data.get("paragraphs",[]))[:35])
     import re
     detected_dissertation=bool(re.search(r"(?:кандидата|доктора)\s+.{0,45}?наук",cover.lower()))
     if kind=="auto":kind="dissertation" if detected_dissertation else "nkr" if args.work_type=="phd" else "vkr"
     if template and template["document_kind"]!=kind:raise ValueError("Template document kind does not match detected/selected document")
     doc_data["document_kind"]=kind
+    native_build=getattr(args,"native_build",230)
+    identity=require_build(native_build)
+    doc_data["native_build"]=native_build
 
     findings = []
     checkers = [EntryDocumentChecker(doc_data, file_type, args.work_type)]
@@ -357,6 +362,7 @@ def check_file(path: Path, args):
             f.update(verification_status="school_template_reference_not_native_proof",threshold_origin="selected_template",confidence="medium",template_id=template["id"],template_sources=template["sources"],applicability_confirmed=template["applicability_confirmed"],explanation_zh="与所选学校参考配置不同，需核对院系和年份。",fix_suggestion_zh="先确认该参考适用性，再在源文件中处理。",title_zh=f["message"])
     result = {
         "document_kind":kind,
+        "native_reference":{"selected_build":native_build,"executable_sha256":identity["sha256"],"historical_rule_evidence_build":230,"transfer_validated":native_build==230,"limits":"Real-case family agreement is not controlled threshold validation"},
         "template":({k:v for k,v in template.items() if k!="targets"} if template else None),
         "template_coverage":template_coverage,
         "source_sha256":hashlib.sha256(Path(path).read_bytes()).hexdigest(),
@@ -574,6 +580,7 @@ def main():
     parser = argparse.ArgumentParser(description="Check a DOCX/PDF thesis with the BMSTU rules engine.")
     parser.add_argument("file", help="Path to a .docx or .pdf file.")
     parser.add_argument("--work-type", default="bachelor", choices=["bachelor", "specialist", "master", "phd"])
+    parser.add_argument("--native-build",type=int,choices=[230,232],default=232)
     parser.add_argument("--template-id")
     parser.add_argument("--template-path")
     parser.add_argument("--document-kind",choices=["auto","vkr","nkr","dissertation"],default="auto")

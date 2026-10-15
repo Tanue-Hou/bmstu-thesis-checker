@@ -21,9 +21,10 @@ def digest(path):
 
 def main():
     import argparse
-    parser=argparse.ArgumentParser();parser.add_argument('--output-dir',default='evidence/2026-10-15')
+    parser=argparse.ArgumentParser();parser.add_argument('--output-dir',default='evidence/build-232/regression')
     out=(ROOT/parser.parse_args().output_dir).resolve()
     if not out.is_relative_to(ROOT/'evidence'):raise ValueError('Validation output must stay in evidence')
+    if out.exists() and any(out.iterdir()):raise ValueError('Use a new validation directory; retained evidence is immutable')
     inputs = out / 'regression_inputs'
     inputs.mkdir(parents=True, exist_ok=True)
     run = subprocess.run([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-v'],

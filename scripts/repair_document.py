@@ -26,7 +26,8 @@ ACTIONS = {'page_size_a4': ['Word.PageSizeNotA4'],
 def sha(data):
     return hashlib.sha256(data).hexdigest()
 
-def repair_copy(file_path, output_dir=None, actions=None, body_font_pt=None, work_type='bachelor', dry_run=False, expected_input_sha256=None):
+def repair_copy(file_path, output_dir=None, actions=None, body_font_pt=None, work_type='bachelor', dry_run=False, expected_input_sha256=None, native_build=230):
+    if native_build!=230:raise ValueError('Copy repair is validated against build230 only; build232 needs independent before/after evidence')
     source = Path(file_path).expanduser().resolve()
     if source.suffix.lower() != '.docx':
         raise ValueError('Automatic repair supports DOCX only; PDF remains read-only.')
@@ -128,7 +129,7 @@ def repair_copy(file_path, output_dir=None, actions=None, body_font_pt=None, wor
     for rule in sorted(table_manual):skipped.append({'rule_id':rule,'reason':'Table text is preserved; manual correction required.'})
     report={'schema_version':1,'created_at_utc':datetime.now(timezone.utc).isoformat(),
             'input_file':str(source),'input_sha256':sha(raw),'dry_run':dry_run,
-            'work_type':work_type,'actions':actions,'body_font_pt':target,'changes':changes,'skipped':skipped,
+            'native_build':native_build,'work_type':work_type,'actions':actions,'body_font_pt':target,'changes':changes,'skipped':skipped,
             'manual_only_rule_ids':sorted(({f['rule_id'] for f in before['findings']} - {r for a in actions for r in ACTIONS[a]})|table_manual),
             'scope':'Main document text and portrait sections only; no table/header/footer/image repair; original-program pass is not guaranteed.'}
     report["plan_id"]=sha(json.dumps({k:report[k] for k in ["input_sha256","work_type","actions","body_font_pt","changes","skipped"]},ensure_ascii=False,sort_keys=True).encode())
@@ -163,7 +164,8 @@ if __name__=='__main__':
     p.add_argument('--actions',nargs='+',choices=list(ACTIONS));p.add_argument('--dry-run',action='store_true')
     p.add_argument('--work-type',choices=['bachelor','master','phd'],default='bachelor')
     p.add_argument('--expected-input-sha256')
+    p.add_argument('--native-build',type=int,choices=[230],default=230)
     a=p.parse_args()
-    result=repair_copy(a.file,a.output_dir,a.actions,a.body_font_pt,work_type=a.work_type,dry_run=a.dry_run,expected_input_sha256=a.expected_input_sha256)
+    result=repair_copy(a.file,a.output_dir,a.actions,a.body_font_pt,work_type=a.work_type,dry_run=a.dry_run,expected_input_sha256=a.expected_input_sha256,native_build=a.native_build)
     if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False,indent=2))

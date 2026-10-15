@@ -10,7 +10,7 @@ class EntryDocumentChecker(BaseChecker):
         # 1. Check if empty
         has_content = False
         if self.file_type == 'docx':
-            paragraphs = self.doc_data.get('paragraphs', [])
+            paragraphs = self.doc_data.get('structure_paragraphs', self.doc_data.get('paragraphs', []))
             has_content = any(p.get('text', '').strip() for p in paragraphs)
         elif self.file_type == 'pdf':
             spans = self.doc_data.get('spans', [])

@@ -13,14 +13,19 @@ TITUL = ['министерство','образования','науки','ро�
 def units(text): return len(text.encode('utf-16-le'))//2
 
 def check_graduate(data, mode):
-    texts=[p.get('text','').strip() for p in data.get('paragraphs',[])]
+    records=data.get('structure_paragraphs',data.get('paragraphs',[]))
+    texts=[p.get('text','').strip() for p in records]
     lower=[t.lower() for t in texts]
     findings=[]
     supported=data.get('native_graduate_scope_supported',False)
     def emit(code,message,severity=Severity.WARNING,threshold=None,idx=None,proof=True):
         facts={'native_scope_supported':supported,'native_predicate_supported':proof,**(threshold or {})}
+        location=None
+        if idx is not None:
+            record=records[idx];main_index=record.get('main_paragraph_index',record.get('index'))
+            location=({'paragraph_idx':main_index} if main_index is not None else {'kind':'docx_xml_paragraph','xml_path':record.get('xml_path'),'text_excerpt':record.get('text','')[:140],'structure_paragraph_index':idx})
         findings.append(Finding(code='Graduate.'+code,module=ModuleType.STRUCTURE,severity=severity,
-            message=message,threshold=facts,location={'paragraph_idx':idx} if idx is not None else None,skip_switch='SkipTestStruct'))
+            message=message,threshold=facts,location=location,skip_switch='SkipTestStruct'))
     def index(name,start=0):
         return next((i for i in range(max(start,0),len(lower)) if lower[i]==name),None)
     abstract=next((i for i,t in enumerate(lower) if t in ('реферат','аннотация')),None)

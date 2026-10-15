@@ -3,6 +3,15 @@ import hashlib
 import re
 from school_templates import iter_text
 
+def content_role(loc,data):
+    records=data.get('structure_paragraphs',[])
+    intro=next((p['index'] for p in records if p.get('text','').strip().lower()=='введение'),None)
+    current=next((p for p in records if p.get('xml_path')==loc.get('xml_path')),None)
+    if current is not None and intro is not None and current['index']<intro:return 'front_matter_candidate_manual_review'
+    if loc.get('kind')=='docx_table_run':return 'table_text_manual_review'
+    if str(loc.get('style','')).lower().startswith(('heading','title','caption','заголовок','название')):return 'heading_or_caption_candidate_manual_review'
+    return 'body_or_special_content_unknown'
+
 def locate_finding(f,data,file_type,limit=100):
     rule=f['rule_id'];out=[];total=0
     if rule.startswith('Template.'):
@@ -14,7 +23,7 @@ def locate_finding(f,data,file_type,limit=100):
             size=r.get('font_size_pt');color=r.get('color_hex');match=(size is not None and size<threshold) if rule.endswith('TooSmall') else (size is not None and size>threshold) if rule.endswith('TooLarge') else bool(color and color.upper() not in ['000000','AUTO'])
             if not match or not r.get('text','').strip():continue
             total+=1
-            if len(out)<limit:out.append({**{k:v for k,v in loc.items() if k not in ['paragraph_text','special_content']},'text_excerpt':r['text'][:140],'actual':size if 'FontSize' in rule else color,'formatting_sources':r.get('formatting_sources',[]),'context_note':('可能是公式上下标或脚注，不能自动当作正文字号错误' if file_type=='pdf' and size is not None and size<8 and len(r.get('text',''))<=5 else None)})
+            if len(out)<limit:out.append({**{k:v for k,v in loc.items() if k not in ['paragraph_text','special_content']},'text_excerpt':r['text'][:140],'content_role':content_role(loc,data) if file_type=='docx' else 'pdf_span_semantics_unknown','actual':size if 'FontSize' in rule else color,'formatting_sources':r.get('formatting_sources',[]),'context_note':('可能是公式上下标或脚注，不能自动当作正文字号错误' if file_type=='pdf' and size is not None and size<8 and len(r.get('text',''))<=5 else None)})
     elif rule.startswith('Dict.'):
         from checkers.dictionary import DictionaryChecker
         pattern=DictionaryChecker.MIXED_SCRIPT_PAT if rule=='Dict.MixedScriptHomoglyphs' else DictionaryChecker.RU_WORD_PAT
