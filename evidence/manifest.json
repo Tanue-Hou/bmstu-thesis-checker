@@ -2666,5 +2666,9 @@
   "build-232\\REPORT.zh.md": {
     "sha256": "13f33edd2d8b982974fc56edd665c1c29795e951b679005ec4a89a2b1f71747f",
     "bytes": 1863
+  },
+  "build-232\\git-source-receipt.json": {
+    "sha256": "f1dc0e99aadf303233bda5fd9de4660b3b47dc05176bf50838063fa3ecaec99d",
+    "bytes": 10538
   }
 }
