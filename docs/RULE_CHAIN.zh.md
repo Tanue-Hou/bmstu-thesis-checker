@@ -80,3 +80,9 @@ flowchart TD
 PDF几何边距、页边文字、页码/页眉页脚位置、目录页码与正文对应、封面及参考文献完整性尚未复制。报告保留native_comparison_limits；本地零诊断不代表原程序通过。
 
 完整结果：[本轮验收](../evidence/multipage-phd-repair/REPORT.zh.md)、[0.2.3验收](../evidence/format-expansion/REPORT.zh.md)、[Skill](../skills/bmstu-thesis-checker/SKILL.md)。
+
+## 0.2.5 学校与案例证据分支
+
+源文件字节哈希 → 模式/文档类型 → 解析与源坐标 → 原程序异常规则（原冻结上下文）＋独立学校参考规则 → 候选问题与人工判定 → 预览计划/哈希 → 受限副本修复 → 本地及排版QA/原程序复测。
+
+Template.* 始终独立于 native verification；学位论文不继承NKR证据。真实论文不预设合格。原程序采集只有经过输入/模式/build/输出哈希校验才进入对照，未采集保留pending。案例内容和哈希不进入公共证据；公开的本地回归不证明真实论文原程序通过。

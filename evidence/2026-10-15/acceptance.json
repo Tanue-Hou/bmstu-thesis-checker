@@ -1,0 +1,10 @@
+{
+  "test_exit_code": 0,
+  "test_count": 64,
+  "skill_validation": "passed",
+  "historical_evidence_hashes_unchanged": true,
+  "private_identifier_scan": "passed",
+  "scanned_changed_files": 51,
+  "native_real_case_comparison": "pending_window_activation_failure",
+  "scope": "Local implementation release; no new native equivalence claim"
+}

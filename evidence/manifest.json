@@ -2366,5 +2366,97 @@
   "multipage-phd-repair\\structure_wrong_toc.prechange.local.json": {
     "sha256": "dfe83951a769b3faba86d54cf079e6994e76128ffd014f268239d1339a83d3d5",
     "bytes": 4099
+  },
+  "2026-10-15\\character.local-result.json": {
+    "sha256": "742ef1cf393202fdc58b4dfaefa940441d8ea9a66f2b7bae288586c4c3517670",
+    "bytes": 25516
+  },
+  "2026-10-15\\default.local-result.json": {
+    "sha256": "7030ff6d173982bae2ea2ba958818eedcef8a9c7a306a1e4e5f3fa3ca4714fb4",
+    "bytes": 18571
+  },
+  "2026-10-15\\direct.local-result.json": {
+    "sha256": "f3e226c6ed36362d5a9bdc5ae771ed6c90a0fb200caa7b6ca221dd36f2015381",
+    "bytes": 18570
+  },
+  "2026-10-15\\exact.local-result.json": {
+    "sha256": "1242beb98cf2451f61377085e4aba29dd17aa00f1dc302916d35e78020cd76d8",
+    "bytes": 18569
+  },
+  "2026-10-15\\hidden_off.local-result.json": {
+    "sha256": "8c2c15987b340facb778c99a3c8ef6089bfe9f9c63b9f1d65d54b8db99f2453a",
+    "bytes": 18574
+  },
+  "2026-10-15\\inherited.local-result.json": {
+    "sha256": "29b5e57d158cbeb9bb8175c9d5ec1c93fde0a50fedbf6494cd5a15d1a64f7b4a",
+    "bytes": 18573
+  },
+  "2026-10-15\\override.local-result.json": {
+    "sha256": "fa3009dc9b9ca78341b2a6f3ce16b6c45e87120fa6d1a282dfeaf42c4e827f3b",
+    "bytes": 33094
+  },
+  "2026-10-15\\partial.local-result.json": {
+    "sha256": "7c640818b9ba14008b2b055f769c455bbba8c5593e9a08f29277cdfce3725550",
+    "bytes": 18571
+  },
+  "2026-10-15\\private-trial-aggregate.json": {
+    "sha256": "4e81f5f309e24d2fca5dcc86c606074287e25a7082824f62017d94ad46394870",
+    "bytes": 796
+  },
+  "2026-10-15\\regression-test.log": {
+    "sha256": "5c336b54aa8a19089f55501f50fe1bf0af6cf2a7975525159e1ec3a18420f1b9",
+    "bytes": 7850
+  },
+  "2026-10-15\\regression_inputs\\character.docx": {
+    "sha256": "e71aaa460eaa620eb2d5aa5f2344f446fcdcdae14b65efff7b89569186f56f6b",
+    "bytes": 36878
+  },
+  "2026-10-15\\regression_inputs\\default.docx": {
+    "sha256": "f69be8f7d939da961404acbf9205c91eddc7380daaf43c9cf0abb0a9dca7742a",
+    "bytes": 36815
+  },
+  "2026-10-15\\regression_inputs\\direct.docx": {
+    "sha256": "f9cef5cdd3321c5908839f7e2164f4d9b1e9c6666f191011513a4def053ddcf5",
+    "bytes": 36864
+  },
+  "2026-10-15\\regression_inputs\\exact.docx": {
+    "sha256": "c038c0bb0674c59b125adc65c4b1a32408ba2c6568c816e78ae8a3daabe571d7",
+    "bytes": 36832
+  },
+  "2026-10-15\\regression_inputs\\hidden_off.docx": {
+    "sha256": "7a325c3b93af7ab229c8b9d9b9e9f452eab3c817cad0c7b924d5c4b5cbfcd48b",
+    "bytes": 36838
+  },
+  "2026-10-15\\regression_inputs\\inherited.docx": {
+    "sha256": "62d45bd246aaccd5b9fda768f4400453a4e7ddfffbf3562e6390a5977a7bf638",
+    "bytes": 36815
+  },
+  "2026-10-15\\regression_inputs\\override.docx": {
+    "sha256": "3b9ddd91909eefad7ef1f840af16396653e8010d0832a7b4750f928bb6870da3",
+    "bytes": 36852
+  },
+  "2026-10-15\\regression_inputs\\partial.docx": {
+    "sha256": "392f27fe214a9327253a2b57e0ce49fa587a7a3a893e53c2c29b5c6ad5a4897e",
+    "bytes": 36835
+  },
+  "2026-10-15\\regression_inputs\\table.docx": {
+    "sha256": "950af27ebc6771db7e4b193a8cd9875c427db6f408d8acb971aefe85c2312f6f",
+    "bytes": 36947
+  },
+  "2026-10-15\\REPORT.zh.md": {
+    "sha256": "834cf4c37d79768fcde4ae6643eb8b1e229376a700c2a4b09ba5018640eeb2f9",
+    "bytes": 1812
+  },
+  "2026-10-15\\table.local-result.json": {
+    "sha256": "8c200b61c1d0ec8219afc41d4b8c92e6322b54bcb6bfc593bf94bb1ae340436d",
+    "bytes": 22437
+  },
+  "2026-10-15\\validation.json": {
+    "sha256": "139a3f7f306a83f9a168dca2682c524017654a0eef6fefb992c6a4eb4b96f4c3",
+    "bytes": 12597
+  },
+  "2026-10-15\\acceptance.json": {
+    "sha256": "f4d347383d0dc914223e707ea6db539f1a0e740506c894449adc5abfe8aa2373",
+    "bytes": 352
   }
 }

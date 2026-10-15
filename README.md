@@ -1,10 +1,16 @@
-# BMSTU 论文检查器 · v0.2.4
+# BMSTU 论文检查器 · v0.2.5
 
-当前版本：插件 **0.2.4+codex.20261014** / MCP **0.2.4**。
+当前版本：插件 **0.2.5+codex.20261015** / MCP **0.2.5**。
 
-[版本迭代](docs/VERSION_HISTORY.zh.md) · [规则执行与证据链](docs/RULE_CHAIN.zh.md) · [v0.2.4发布说明](releases/v0.2.4.md) · [Skill入口](skills/bmstu-thesis-checker/SKILL.md)
+[版本迭代](docs/VERSION_HISTORY.zh.md) · [规则执行与证据链](docs/RULE_CHAIN.zh.md) · [v0.2.5发布说明](releases/v0.2.5.md) · [Skill入口](skills/bmstu-thesis-checker/SKILL.md)
 
 规则是否可靠以精确格式/论文类型、样本范围和证据哈希为准；本地检查零诊断不代表原程序通过。仓库保留原程序对照、合成样本、截图和副本修改记录。
+
+## 0.2.5 学校参考与真实案例试用
+
+新增两个有出处且适用性待确认的学校参考配置、PDF页/坐标与DOCX XML/段落定位、案例交叉检测台账、预览哈希保护和封面保护。真实论文是案例，不能当标准答案；本轮真实案例的TestVkr对照采集因窗口控制故障仍待完成，不宣称准确率或原程序全通过。
+
+[学校参考](docs/SCHOOL_TEMPLATES.zh.md) · [真实论文试用流程](docs/REAL_TRIAL_WORKFLOW.zh.md) · [v0.2.5说明](releases/v0.2.5.md)
 
 ## 0.2.4 多页PDF与博士副本修复
 

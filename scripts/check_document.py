@@ -17,6 +17,8 @@ from checkers.word_format import WordFormatChecker
 from parsers.docx_parser import DocxParser
 from parsers.pdf_parser import PdfParser
 from config import settings
+from school_templates import load_template,check_template
+from issue_locations import locate_finding
 
 
 SEVERITY_ORDER = {"critical": 0, "major": 1, "warning": 2, "info": 3}
@@ -197,6 +199,7 @@ def finding_to_dict(finding, rule_registry, rule_guidance, file_type=None, work_
     context = selected_context or {}
     verified = (rule.get('verification_status') == 'verified_against_original'
                 and selected_context is not None
+                and (doc_data or {}).get("document_kind")!="dissertation"
                 and context_evidence_valid(selected_context)
                 and (file_type!='pdf' or bool((doc_data or {}).get('pdf_structure_profile_supported' if finding.code=='Struct.RequiredHeadingsMissing' else 'pdf_verification_profile_supported')))
                 and (finding.code!='Struct.RequiredHeadingsMissing' or bool((finding.threshold or {}).get('native_predicate_supported')))
@@ -318,6 +321,15 @@ def check_file(path: Path, args):
     rule_registry = load_rule_registry()
     rule_guidance = load_rule_guidance()
     file_type, doc_data = parse_document(path)
+    template=load_template(getattr(args,"template_id",None),getattr(args,"template_path",None),args.work_type)
+    kind=getattr(args,"document_kind","auto")
+    if kind not in {"auto","vkr","nkr","dissertation"}:raise ValueError("Invalid document_kind")
+    cover=" ".join(s.get("text","") for s in doc_data.get("spans",[]) if s.get("page_index")==0) if file_type=="pdf" else " ".join(p.get("text","") for p in doc_data.get("paragraphs",[])[:35])
+    import re
+    detected_dissertation=bool(re.search(r"(?:кандидата|доктора)\s+.{0,45}?наук",cover.lower()))
+    if kind=="auto":kind="dissertation" if detected_dissertation else "nkr" if args.work_type=="phd" else "vkr"
+    if template and template["document_kind"]!=kind:raise ValueError("Template document kind does not match detected/selected document")
+    doc_data["document_kind"]=kind
 
     findings = []
     checkers = [EntryDocumentChecker(doc_data, file_type, args.work_type)]
@@ -336,9 +348,20 @@ def check_file(path: Path, args):
         if not args.skip_dictionary:
             findings.extend(DictionaryChecker(doc_data, file_type, args.work_type).check())
 
+    template_findings,template_coverage=check_template(doc_data,file_type,template) if not stop else ([],{})
+    findings.extend(template_findings)
     finding_dicts = [finding_to_dict(f, rule_registry, rule_guidance, file_type, args.work_type,doc_data) for f in findings]
+    for f in finding_dicts:
+        f["precise_locations"]=locate_finding(f,doc_data,file_type)
+        if f["rule_id"].startswith("Template."):
+            f.update(verification_status="school_template_reference_not_native_proof",threshold_origin="selected_template",confidence="medium",template_id=template["id"],template_sources=template["sources"],applicability_confirmed=template["applicability_confirmed"],explanation_zh="与所选学校参考配置不同，需核对院系和年份。",fix_suggestion_zh="先确认该参考适用性，再在源文件中处理。",title_zh=f["message"])
     result = {
-        "work_type_policy": ({"native_mode": "НКР аспиранта", "toc_heading": "ОГЛАВЛЕНИЕ", "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied.", "manual_review": ["Doctoral DOCX margins left/right/top/bottom 25/10/20/20 mm, tolerance 0.2 mm; finite single-section native probes", "Not a general dissertation standard or original-program certification"]} if args.work_type == 'phd' else {"native_mode": "ВКР магистра", "docx_size_measure": "48 equivalent pages; 900 trimmed UTF-16 characters per page; appendix A TOC page also checked", "manual_review": ["Use actual school template and real pagination; do not fabricate cover data, TOC rows or text"]} if args.work_type == 'master' else {}),
+        "document_kind":kind,
+        "template":({k:v for k,v in template.items() if k!="targets"} if template else None),
+        "template_coverage":template_coverage,
+        "source_sha256":hashlib.sha256(Path(path).read_bytes()).hexdigest(),
+        "location_contract":"PDF physical page+bbox; DOCX XML/paragraph/run/table coordinates, no inferred rendered page",
+        "work_type_policy": ({"native_mode":None,"document_kind":"dissertation","manual_review":["Candidate/doctor of sciences dissertation: NKR native evidence and repair policy do not apply; use a confirmed council profile"]} if kind=="dissertation" else {"native_mode": "НКР аспиранта", "toc_heading": "ОГЛАВЛЕНИЕ", "docx_thesis_size_floor": "No numeric floor selected in the recovered build-230 branch; 100000-character heuristic is not applied.", "manual_review": ["Doctoral DOCX margins left/right/top/bottom 25/10/20/20 mm, tolerance 0.2 mm; finite single-section native probes", "Not a general dissertation standard or original-program certification"]} if args.work_type == 'phd' else {"native_mode": "ВКР магистра", "docx_size_measure": "48 equivalent pages; 900 trimmed UTF-16 characters per page; appendix A TOC page also checked", "manual_review": ["Use actual school template and real pagination; do not fabricate cover data, TOC rows or text"]} if args.work_type == 'master' else {}),
         "file": str(path),
         "file_type": file_type,
         "work_type": args.work_type,
@@ -352,7 +375,7 @@ def check_file(path: Path, args):
             "warning": sum(1 for f in findings if f.severity.value == "warning"),
             "info": sum(1 for f in findings if f.severity.value == "info"),
         },
-        "review_summary": build_review_summary(finding_dicts),
+        "review_summary": {**build_review_summary(finding_dicts),"native_verified_findings":sum(f["verification_status"]=="verified_against_original" for f in finding_dicts),"template_reference_findings":sum(f["rule_id"].startswith("Template.") for f in finding_dicts)},
         "groups": build_groups(finding_dicts),
         "fix_checklist": build_fix_checklist(finding_dicts),
         "findings": sorted_findings(finding_dicts),
@@ -379,6 +402,9 @@ def render_markdown(result):
     add()
     if result.get("native_comparison_limits"):
         add("PDF 原程序检查覆盖仍不完整：边距、页眉页脚、页码位置和目录对应关系需要人工复核；零条本地问题不表示原程序通过。")
+        add()
+    if result.get("template"):
+        add("学校参考配置："+result["template"]["id"]+"；当前适用性："+result["template_coverage"]["status"])
         add()
     add("## 审阅结论")
     add(f"- 结论：{review.get('status_zh', '')}")
@@ -427,6 +453,10 @@ def render_markdown(result):
         add(f"- 修改建议：{item.get('fix_suggestion_zh') or ''}")
         add(f"- Word 操作路径：{item.get('word_path_zh') or ''}")
         add(f"- 位置：{item.get('location_summary_zh') or ''}")
+        precise=item.get("precise_locations",{})
+        add("- 精确匹配位置数："+str(precise.get("occurrence_count",0))+"；完整坐标见JSON，DOCX页码不由XML推测。")
+        for occurrence in precise.get("occurrences",[])[:5]:
+            add("  - `"+json.dumps(occurrence,ensure_ascii=False)+"`")
         add(f"- 是否影响查重/反抄袭：{'是' if item.get('affects_antiplagiarism') else '否'}")
         add(f"- 置信度：{item['confidence']}")
         add(f"- 验证状态：{item.get('verification_status', 'unverified')}")
@@ -544,6 +574,9 @@ def main():
     parser = argparse.ArgumentParser(description="Check a DOCX/PDF thesis with the BMSTU rules engine.")
     parser.add_argument("file", help="Path to a .docx or .pdf file.")
     parser.add_argument("--work-type", default="bachelor", choices=["bachelor", "specialist", "master", "phd"])
+    parser.add_argument("--template-id")
+    parser.add_argument("--template-path")
+    parser.add_argument("--document-kind",choices=["auto","vkr","nkr","dissertation"],default="auto")
     parser.add_argument("--skip-structure", action="store_true")
     parser.add_argument("--skip-pictures", action="store_true")
     parser.add_argument("--skip-word-format", action="store_true")

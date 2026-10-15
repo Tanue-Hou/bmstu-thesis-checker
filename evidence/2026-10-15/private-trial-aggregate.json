@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "case_count": 17,
+  "pdf_cases": 4,
+  "docx_cases": 13,
+  "checked": 17,
+  "source_unchanged": true,
+  "candidate_rule_groups": 243,
+  "template_candidate_groups": 32,
+  "groups_with_location_or_scope": 192,
+  "repair_preview_changes": 0,
+  "mode_review_required": 1,
+  "native_corpus_captures_completed": 0,
+  "adjudicated_groups": 0,
+  "pdf_sample_bboxes_checked": 444,
+  "pdf_sample_bboxes_inside_page": 444,
+  "limits": [
+    "Cases are not ground truth; no accuracy/recall claim",
+    "No original-program pass for this corpus",
+    "Page bounds are geometry sanity only, not semantic confirmation",
+    "Private sources, names, excerpts, paths and source hashes excluded",
+    "Real documents remain unchanged; repair previews only"
+  ]
+}

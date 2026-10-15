@@ -231,6 +231,9 @@ class DocxParser:
 
             paragraphs_info.append({
                 'index': i,
+                'xml_path':p._p.getroottree().getpath(p._p),
+                'style_name':p.style.name,
+                'special_content':bool(p._p.xpath('.//w:drawing | .//w:pict | .//w:fldChar | .//w:fldSimple | .//w:instrText | .//m:oMath | .//w:ins | .//w:del | .//w:sdt | .//w:hyperlink')),
                 'text': text,
                 'line_spacing': line_spacing,
                 'line_spacing_type': line_spacing_type,
@@ -383,6 +386,8 @@ class DocxParser:
 
             images_info.append({
                 'index': idx,
+                'xml_path':d.getroottree().getpath(d),
+                'relationship_id':blip.get(qn('r:embed')) if blip is not None else None,
                 'placement': placement,
                 'width_px': width_px,
                 'height_px': height_px,

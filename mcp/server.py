@@ -17,10 +17,11 @@ if hasattr(sys.stdout, "reconfigure"):
 
 from check_document import check_file, load_rule_guidance, load_rule_registry, write_report_bundle
 from repair_document import repair_copy
+from school_templates import BUILTINS, load_template
 
 
 SERVER_NAME = "BMSTU Thesis Checker"
-SERVER_VERSION = "0.2.4"
+SERVER_VERSION = "0.2.5"
 METHOD_NOT_FOUND = -32601
 INVALID_PARAMS = -32602
 INTERNAL_ERROR = -32603
@@ -51,6 +52,7 @@ def make_args(args):
         raise ValueError("work_type must be one of bachelor, specialist, master, phd.")
     return Namespace(
         work_type=work_type,
+        template_id=args.get("template_id"),template_path=args.get("template_path"),document_kind=args.get("document_kind","auto"),
         skip_structure=bool(args.get("skip_structure")),
         skip_pictures=bool(args.get("skip_pictures")),
         skip_word_format=bool(args.get("skip_word_format")),
@@ -119,7 +121,7 @@ def repair_tool(args, dry_run=False):
     result = repair_copy(require_string(args.get('file_path'),'file_path'),
                          output_dir=args.get('output_dir'), actions=args.get('actions'),
                          body_font_pt=args.get('body_font_pt'),
-                         work_type=args.get('work_type','bachelor'), dry_run=dry_run)
+                         work_type=args.get('work_type','bachelor'), dry_run=dry_run,expected_input_sha256=args.get('expected_input_sha256'))
     return {'content':[{'type':'text','text':f"{'Planned' if dry_run else 'Applied'} {len(result['changes'])} formatting changes; source unchanged: {result['source_unchanged']}."}],
             'structuredContent':result}
 
@@ -127,6 +129,7 @@ def repair_tool(args, dry_run=False):
 def tool_list_result():
     return {
         "tools": [
+            {"name":"list_school_templates","description":"List sourced school reference profiles and unconfirmed applicability; no native-proof promotion.","inputSchema":{"type":"object","properties":{}},"annotations":{"readOnlyHint":True,"destructiveHint":False}},
             {
                 'name':'preview_thesis_fixes',
                 'description':'Preview conservative DOCX fixes using dynamically validated rules. Writes no document.',
@@ -134,6 +137,7 @@ def tool_list_result():
                     'file_path':{'type':'string'},
                     'actions':{'type':'array','items':{'type':'string','enum':['page_size_a4','font_size_anomalies','text_color_black']}},
                     'body_font_pt':{'type':'number'},
+                    'expected_input_sha256':{'type':'string','description':'Preview source hash; reject changed inputs'},
                     'work_type':{'type':'string','enum':['bachelor','master','phd'],'default':'bachelor'}},'required':['file_path']},
                 'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}
             },
@@ -144,6 +148,7 @@ def tool_list_result():
                     'file_path':{'type':'string'},'output_dir':{'type':'string'},
                     'actions':{'type':'array','items':{'type':'string','enum':['page_size_a4','font_size_anomalies','text_color_black']}},
                     'body_font_pt':{'type':'number'},
+                    'expected_input_sha256':{'type':'string','description':'Preview source hash; reject changed inputs'},
                     'work_type':{'type':'string','enum':['bachelor','master','phd'],'default':'bachelor'}},'required':['file_path']},
                 'annotations':{'readOnlyHint':False,'destructiveHint':False,'idempotentHint':False,'openWorldHint':False}
             },
@@ -156,6 +161,9 @@ def tool_list_result():
                     "properties": {
                         "file_path": {"type": "string", "description": "Absolute path to a .docx or .pdf file."},
                         "work_type": {"type": "string", "enum": ["bachelor", "specialist", "master", "phd"], "default": "bachelor"},
+                        "template_id":{"type":"string","description":"Optional school reference profile, separate from native proof"},
+                        "template_path":{"type":"string"},
+                        "document_kind":{"type":"string","enum":["auto","vkr","nkr","dissertation"],"default":"auto"},
                         "skip_structure": {"type": "boolean", "default": False},
                         "skip_pictures": {"type": "boolean", "default": False},
                         "skip_word_format": {"type": "boolean", "default": False},
@@ -176,6 +184,9 @@ def tool_list_result():
                         "folder_path": {"type": "string", "description": "Absolute path to a folder."},
                         "recursive": {"type": "boolean", "default": True},
                         "work_type": {"type": "string", "enum": ["bachelor", "specialist", "master", "phd"], "default": "bachelor"},
+                        "template_id":{"type":"string","description":"Optional school reference profile, separate from native proof"},
+                        "template_path":{"type":"string"},
+                        "document_kind":{"type":"string","enum":["auto","vkr","nkr","dissertation"],"default":"auto"},
                         "skip_structure": {"type": "boolean", "default": False},
                         "skip_pictures": {"type": "boolean", "default": False},
                         "skip_word_format": {"type": "boolean", "default": False},
@@ -211,6 +222,9 @@ def tool_list_result():
 def handle_tool_call(params):
     name = params.get("name")
     args = params.get("arguments") or {}
+    if name == "list_school_templates":
+        profiles=[load_template(p.stem) for p in sorted(BUILTINS.glob("*.json"))]
+        return {"content":[{"type":"text","text":"School references require department/year applicability review."}],"structuredContent":{"templates":profiles}}
     if name == 'preview_thesis_fixes':
         return repair_tool(args, dry_run=True)
     if name == 'fix_thesis_copy':

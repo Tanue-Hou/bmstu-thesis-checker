@@ -1,3 +1,12 @@
+# 0.2.5 - Sourced school references and private real-case trials (2026-10-15)
+
+- Separate school reference profiles from native TestVkr thresholds; distinguish degree dissertations from NKR.
+- Add bounded PDF page/bbox and DOCX XML/run/table locations and searchable private trial reports.
+- Normalize PDF font variants and recognize dissertation conclusion heading variants.
+- Protect recognized cover/front matter in copy repair; bind execution to preview input hash and retain deterministic plan IDs.
+- Add school-profile MCP discovery and private native-result comparison with input/output identity checks.
+- Real cases are not ground truth. Original-program capture for this corpus remains pending due to window activation failure; no accuracy claim or new native-proof promotion.
+
 # 0.2.4 - Multipage PDF and doctoral copy repair (2026-10-14)
 
 - Native later-page table/font, color, page-size and image probes; exact page locations and bounded proof profiles.

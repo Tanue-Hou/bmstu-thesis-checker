@@ -33,12 +33,13 @@ class PdfParser:
     def parse_text_and_fonts(self) -> List[Dict[str, Any]]:
         elements = []
         for page_idx, page in enumerate(self.doc):
-            text_dict = page.get_text("dict")
-            for block in text_dict.get("blocks", []):
+            import fitz
+            text_dict = page.get_text("dict",flags=fitz.TEXTFLAGS_DICT & ~fitz.TEXT_PRESERVE_IMAGES)
+            for block_index,block in enumerate(text_dict.get("blocks", [])):
                 # Only look at text blocks
                 if block.get("type") == 0:
-                    for line in block.get("lines", []):
-                        for span in line.get("spans", []):
+                    for line_index,line in enumerate(block.get("lines", [])):
+                        for span_index,span in enumerate(line.get("spans", [])):
                             # Convert PDF integer color (sRGB) to hex
                             # fitz color is integer representation of sRGB
                             color_int = span.get("color", 0)
@@ -49,7 +50,9 @@ class PdfParser:
 
                             elements.append({
                                 'page_index': page_idx,
+                                'block_index':block_index,'line_index':line_index,'span_index':span_index,
                                 'text': span.get("text", ""),
+                                'line_text':''.join(t.get('text','') for t in line.get('spans',[])),
                                 'font_name': span.get("font", ""),
                                 'font_size_pt': span.get("size", 0.0),
                                 'color_hex': color_hex,
@@ -59,11 +62,13 @@ class PdfParser:
 
     def parse_images(self) -> List[Dict[str, Any]]:
         images_info = []
+        cache={}
         for page_idx, page in enumerate(self.doc):
             image_list = page.get_images(full=True)
             for img_idx, img in enumerate(image_list):
                 xref = img[0]
-                base_image = self.doc.extract_image(xref)
+                if xref not in cache:cache[xref]=self.doc.extract_image(xref)
+                base_image = cache[xref]
                 image_bytes = base_image["image"]
                 image_ext = base_image["ext"]
                 width = base_image["width"]
@@ -73,6 +78,7 @@ class PdfParser:
                 images_info.append({
                     'page_index': page_idx,
                     'xref': xref,
+                    'bboxes':[tuple(r) for r in page.get_image_rects(xref)],
                     'width_px': float(width),
                     'height_px': float(height),
                     'byte_size_mb': byte_size / (1024 * 1024),
@@ -81,9 +87,11 @@ class PdfParser:
         return images_info
 
     def parse_all(self) -> Dict[str, Any]:
-        fonts=[f for page in self.doc for f in page.get_fonts(full=True)]
+        fonts=list({f for page in self.doc for f in page.get_fonts(full=True)})
+        images=self.parse_images()
+        page_images={i:[im for im in images if im['page_index']==i] for i in range(len(self.doc))}
         text_profile=(bool(fonts) and all('TimesNewRoman' in f[3].replace(' ','') and self.doc.xref_get_key(f[0],'ToUnicode')[0]=='xref' for f in fonts)
-                 and all(page.rotation==0 and len(page.get_images())<=1 and all(self.doc.extract_image(i[0])['ext']=='png' for i in page.get_images()) for page in self.doc))
+                 and all(page.rotation==0 and len(page_images[page.number])<=1 and all(im['extension']=='png' for im in page_images[page.number]) for page in self.doc))
         return {
             'pdf_text_profile_supported':text_profile,
             'pdf_verification_profile_supported':text_profile and 1<=len(self.doc)<=3,
@@ -92,5 +100,5 @@ class PdfParser:
             'page_count': self.metadata['page_count'],
             'pages': self.metadata['pages'],
             'spans': self.parse_text_and_fonts(),
-            'images': self.parse_images()
+            'images': images
         }

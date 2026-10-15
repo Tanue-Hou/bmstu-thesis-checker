@@ -70,5 +70,5 @@ class MultipagePhdTests(unittest.TestCase):
             requests=[{'jsonrpc':'2.0','id':i,'method':'tools/call','params':{'name':tool,'arguments':{'file_path':str(OUT/'phd_combined.docx'),'output_dir':td,'work_type':'phd','body_font_pt':14}}} for i,tool in enumerate(['preview_thesis_fixes','fix_thesis_copy'],1)]
             run=subprocess.run([sys.executable,str(ROOT/'mcp/server.py')],input='\n'.join(json.dumps(r) for r in requests)+'\n',text=True,encoding='utf-8',capture_output=True,timeout=30,env={**os.environ,'PYTHONUTF8':'1'})
             self.assertEqual(run.returncode,0,run.stderr);results=[json.loads(line)['result']['structuredContent'] for line in run.stdout.splitlines()]
-            self.assertEqual(len(results[0]['changes']),5);self.assertTrue(results[0]['dry_run']);self.assertTrue(results[1]['source_unchanged']);self.assertEqual(results[1]['after_rule_ids'],[]);self.assertTrue(Path(results[1]['change_log']).exists())
+            self.assertEqual(len(results[0]['changes']),4);self.assertTrue(results[0]['dry_run']);self.assertTrue(results[1]['source_unchanged']);self.assertEqual(results[1]['after_rule_ids'],[]);self.assertTrue(any('cover/front matter' in x['reason'] for x in results[0]['skipped']));self.assertTrue(Path(results[1]['change_log']).exists())
 if __name__=='__main__':unittest.main()

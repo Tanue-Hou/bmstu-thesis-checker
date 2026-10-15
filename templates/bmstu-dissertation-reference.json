@@ -1,0 +1,42 @@
+{
+  "id": "bmstu-dissertation-reference",
+  "work_types": [
+    "phd"
+  ],
+  "document_kind": "dissertation",
+  "scope": "BMSTU Mytishchi dissertation-council published reference; Moscow campus/current council applicability unconfirmed; NOT NKR aspirant",
+  "sources": [
+    {
+      "url": "https://mf.bmstu.ru/assets/info/dissovet/requirements/docs/diss_requirements.pdf",
+      "pages": [
+        4
+      ],
+      "retrieved": "2026-10-15"
+    }
+  ],
+  "targets": {
+    "page_width_mm": 210,
+    "page_height_mm": 297,
+    "body_font_pt": 14,
+    "body_font_families": [
+      "Times New Roman"
+    ],
+    "line_spacing": 1.5,
+    "margins_mm": {
+      "left": 30,
+      "right": 10,
+      "top": 20,
+      "bottom": 25
+    }
+  },
+  "schema_version": 1,
+  "institution": "BMSTU",
+  "applicability_confirmed": false,
+  "measurement_tolerance": {
+    "page_mm": 0.5,
+    "margin_mm": 0.5,
+    "font_pt": 0.1,
+    "paragraph": 0.05
+  },
+  "auto_repair": false
+}

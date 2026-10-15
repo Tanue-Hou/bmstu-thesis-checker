@@ -20,7 +20,10 @@ def digest(path):
 
 
 def main():
-    out = ROOT / 'evidence' / '2026-10-14'
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--output-dir',default='evidence/2026-10-15')
+    out=(ROOT/parser.parse_args().output_dir).resolve()
+    if not out.is_relative_to(ROOT/'evidence'):raise ValueError('Validation output must stay in evidence')
     inputs = out / 'regression_inputs'
     inputs.mkdir(parents=True, exist_ok=True)
     run = subprocess.run([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-v'],
@@ -37,7 +40,7 @@ def main():
         cases.append({'case': mode, 'input': str(path.relative_to(ROOT)), 'input_sha256': digest(path),
                       'result': str(result_path.relative_to(ROOT)), 'result_sha256': digest(result_path),
                       'findings': result['summary']['total']})
-    source_paths = sorted(p for folder in ('scripts', 'mcp', 'skills', 'tests')
+    source_paths = sorted(p for folder in ('scripts', 'mcp', 'skills', 'tests', 'templates', 'docs', 'releases', '.codex-plugin')
                           for p in (ROOT / folder).rglob('*')
                           if p.is_file() and p.suffix in ('.py', '.json', '.md', '.java', '.ps1') and '__pycache__' not in p.parts)
     record = {'generated_at_utc': datetime.now(timezone.utc).isoformat(),

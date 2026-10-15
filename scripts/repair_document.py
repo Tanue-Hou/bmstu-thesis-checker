@@ -26,11 +26,12 @@ ACTIONS = {'page_size_a4': ['Word.PageSizeNotA4'],
 def sha(data):
     return hashlib.sha256(data).hexdigest()
 
-def repair_copy(file_path, output_dir=None, actions=None, body_font_pt=None, work_type='bachelor', dry_run=False):
+def repair_copy(file_path, output_dir=None, actions=None, body_font_pt=None, work_type='bachelor', dry_run=False, expected_input_sha256=None):
     source = Path(file_path).expanduser().resolve()
     if source.suffix.lower() != '.docx':
         raise ValueError('Automatic repair supports DOCX only; PDF remains read-only.')
     raw = source.read_bytes()
+    if expected_input_sha256 and sha(raw)!=expected_input_sha256:raise ValueError("Source changed since preview; regenerate the preview")
     actions = list(ACTIONS) if actions is None else list(actions)
     if not all(a in ACTIONS for a in actions):
         raise ValueError('Unknown or unsupported repair action')
@@ -57,6 +58,8 @@ def repair_copy(file_path, output_dir=None, actions=None, body_font_pt=None, wor
     triggered={f['rule_id'] for f in before['findings'] if f['verification_status']=='verified_against_original'}
     parser=DocxParser(str(source))
     document=parser.doc
+    import re
+    if re.search(r"(?:кандидата|доктора)\s+.{0,45}?наук", " ".join(p.text for p in document.paragraphs[:35]).lower()):raise ValueError("Dissertation-degree formatting repair requires independent validation; NKR proof is not transferable")
     if work_type=='phd' and (len(document.sections)!=1 or document.sections[0].page_width is None or document.sections[0].page_height is None or document.sections[0].page_width>document.sections[0].page_height):
         raise ValueError('Doctoral copy repair currently supports one portrait section only.')
     changes, skipped = [], []
@@ -78,7 +81,13 @@ def repair_copy(file_path, output_dir=None, actions=None, body_font_pt=None, wor
     if target is not None and not (settings.FONT_SIZE_MIN_PT <= target <= settings.FONT_SIZE_MAX_PT and target*2==int(target*2)):
         raise ValueError('Replacement body font must be a half-point value within validated anomaly limits')
     ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+    cover_like=bool(re.search(r'министерство|квалификационн|пояснительная записка', ' '.join(p.text for p in document.paragraphs[:35]).lower()))
+    intro=next((i for i,p in enumerate(document.paragraphs) if p.text.strip().lower()=='введение'),None)
+    front_end=(intro if intro is not None else min(35,len(document.paragraphs))) if cover_like else 0
     for p_index,p in enumerate(document.paragraphs):
+        if p_index<front_end:
+            skipped.append({'paragraph':p_index+1,'reason':'Recognized cover/front matter; preserve intentional formatting'})
+            continue
         if p._p.findall('.//w:fldChar',ns) or p._p.findall('.//w:fldSimple',ns) or p._p.findall('.//w:instrText',ns) or p._p.xpath('.//m:oMath'):
             skipped.append({'paragraph':p_index+1,'reason':'Field or equation paragraph'})
             continue
@@ -111,7 +120,7 @@ def repair_copy(file_path, output_dir=None, actions=None, body_font_pt=None, wor
                 if element is None:element=OxmlElement('w:'+tag);rpr.append(element)
                 if tag=='color':element.attrib.clear()
                 element.set(qn('w:val'),value)
-                changes.append({'rule_id':rule_id,'paragraph':p_index+1,'run':r_index+1,
+                changes.append({'rule_id':rule_id,'paragraph':p_index+1,'run':r_index+1,'xml_path':run.getroottree().getpath(run),
                                 'text_excerpt':text[:100],'property':tag,'before_direct_xml':old,
                                 'before_effective':size_pt if tag=='sz' else color_hex,
                                 'after':target if tag=='sz' else value})
@@ -122,6 +131,7 @@ def repair_copy(file_path, output_dir=None, actions=None, body_font_pt=None, wor
             'work_type':work_type,'actions':actions,'body_font_pt':target,'changes':changes,'skipped':skipped,
             'manual_only_rule_ids':sorted(({f['rule_id'] for f in before['findings']} - {r for a in actions for r in ACTIONS[a]})|table_manual),
             'scope':'Main document text and portrait sections only; no table/header/footer/image repair; original-program pass is not guaranteed.'}
+    report["plan_id"]=sha(json.dumps({k:report[k] for k in ["input_sha256","work_type","actions","body_font_pt","changes","skipped"]},ensure_ascii=False,sort_keys=True).encode())
     if dry_run:
         report['source_unchanged']=source.read_bytes()==raw
         return report
@@ -152,7 +162,8 @@ if __name__=='__main__':
     p.add_argument('file');p.add_argument('--output-dir');p.add_argument('--body-font-pt',type=float)
     p.add_argument('--actions',nargs='+',choices=list(ACTIONS));p.add_argument('--dry-run',action='store_true')
     p.add_argument('--work-type',choices=['bachelor','master','phd'],default='bachelor')
+    p.add_argument('--expected-input-sha256')
     a=p.parse_args()
-    result=repair_copy(a.file,a.output_dir,a.actions,a.body_font_pt,work_type=a.work_type,dry_run=a.dry_run)
+    result=repair_copy(a.file,a.output_dir,a.actions,a.body_font_pt,work_type=a.work_type,dry_run=a.dry_run,expected_input_sha256=a.expected_input_sha256)
     if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False,indent=2))

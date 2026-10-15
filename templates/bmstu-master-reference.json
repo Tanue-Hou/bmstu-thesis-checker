@@ -1,0 +1,47 @@
+{
+  "id": "bmstu-master-reference",
+  "work_types": [
+    "master"
+  ],
+  "document_kind": "vkr",
+  "scope": "BMSTU university master appendix, historical publication hosted on IU5; SM1/current-year applicability unconfirmed",
+  "sources": [
+    {
+      "url": "https://e-learning.bmstu.ru/iu5/pluginfile.php/7455/mod_folder/content/0/756_Prilozheniya%20k%20Polozheniyu%20o%20VKRM.pdf?forcedownload=1",
+      "pages": [
+        5
+      ],
+      "section": "2.1",
+      "retrieved": "2026-10-15"
+    }
+  ],
+  "targets": {
+    "page_width_mm": 210,
+    "page_height_mm": 297,
+    "body_font_pt": 14,
+    "body_font_families": [
+      "Times New Roman",
+      "Arial",
+      "Liberation Serif",
+      "Liberation Sans"
+    ],
+    "line_spacing": 1.5,
+    "first_line_indent_cm": 1.25,
+    "margins_mm": {
+      "left": 30,
+      "right": 10,
+      "top": 20,
+      "bottom": 20
+    }
+  },
+  "schema_version": 1,
+  "institution": "BMSTU",
+  "applicability_confirmed": false,
+  "measurement_tolerance": {
+    "page_mm": 0.5,
+    "margin_mm": 0.5,
+    "font_pt": 0.1,
+    "paragraph": 0.05
+  },
+  "auto_repair": false
+}

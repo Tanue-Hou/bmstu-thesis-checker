@@ -23,8 +23,6 @@ class StructureChecker(BaseChecker):
     BIB_KEYWORDS = [
         U("\u0441\u043f\u0438\u0441\u043e\u043a \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u043e\u0432"),
         U("\u0441\u043f\u0438\u0441\u043e\u043a \u043b\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u044b"),
-        U("\u0441\u043f\u0438\u0441\u043e\u043a \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u043d\u043e\u0439 \u043b\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u044b"),
-        U("\u043b\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430"),
     ]
 
     MSG_LATEX = U("** \u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442 \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u0442 \u0442\u0435\u0433\u0438 \u0438\u0437 LaTeX.")
@@ -144,10 +142,13 @@ class StructureChecker(BaseChecker):
         spans = self.doc_data.get("spans", [])
         text_full = re.sub(r"\s+", " ", " ".join([s.get("text", "") for s in spans])).lower()
         # PDF extraction may contain NBSP; require an actual heading, not a TOC/body mention.
-        lines=[re.sub(r"\s+", " ", span.get('text','')).strip().lower() for span in spans]
+        lines=[re.sub(r"\s+", " ", span.get('line_text',span.get('text',''))).strip().lower() for span in spans]
         missing=[]
         names={'introduction':self.INTRO_KEYWORDS,'conclusion':self.OUTRO_KEYWORDS,'bibliography':self.BIB_KEYWORDS}
-        if self.work_type=='phd':
+        if self.doc_data.get('document_kind')=='dissertation':
+            names['conclusion']=self.OUTRO_KEYWORDS+['общие выводы и заключение','общие выводы','основные результаты и выводы']
+            names['bibliography']=self.BIB_KEYWORDS+['список использованной литературы','литература']
+        if self.work_type=='phd' and self.doc_data.get('document_kind')!='dissertation':
             names.update({'abstract':['реферат','аннотация','реферат (аннотация)'],'toc':['оглавление']})
         for key,aliases in names.items():
             if not any(line in aliases for line in lines):missing.append(key)

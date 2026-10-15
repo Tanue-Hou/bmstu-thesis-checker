@@ -50,3 +50,7 @@ output/
 !evidence/**/*.docx
 !evidence/**/*.pdf
 !evidence/**/*.log
+
+# Real thesis documents and local trial results must remain outside publication
+private_trials/
+private_data/
