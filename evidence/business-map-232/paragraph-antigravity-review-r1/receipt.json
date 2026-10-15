@@ -1,0 +1,10 @@
+{
+  "model_requested": "gemini-3.8-flash-low",
+  "exit_code": 0,
+  "scope": "Public deidentified static facts only; independent model opinion is not execution evidence",
+  "operational_logs_retained_privately_sha256": {
+    "cli.log": "e18fbeaf6f3efd842883b1b9111dda592b7aab540837800ea8a85193ab096979",
+    "stderr.log": "74e7b4521686e6abeff87ebb6d47e49ebb4f38787dd0cab41ff848ec01008e5f"
+  },
+  "review_result_is_not_execution_evidence": true
+}

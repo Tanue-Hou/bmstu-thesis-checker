@@ -1,0 +1,51 @@
+{
+  "build": 232,
+  "cases": [
+    {
+      "case": "control",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/control.docx",
+      "sha256": "5fa53c26bd0ee5749947ed29fe2043b330090444ab37e05a2bad082d93e8ee63",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-producer-discovery-r1/control"
+    },
+    {
+      "case": "negativeLeft",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/negativeLeft.docx",
+      "sha256": "a8a6de4dd882d6924e5bc3e38c467e25ce8e880fc7dbc4119d5444756027226a",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-producer-discovery-r1/negativeLeft"
+    }
+  ]
+}

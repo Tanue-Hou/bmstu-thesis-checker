@@ -33,7 +33,7 @@ class THREAD_ENTRY(C.Structure):
     _fields_=[('size',D),('usage',D),('tid',D),('pid',D),('base_priority',W.LONG),('delta_priority',W.LONG),('flags',D)]
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--drawing-trace',action='store_true');p.add_argument('--font-trace',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--drawing-trace',action='store_true');p.add_argument('--font-trace',action='store_true');p.add_argument('--paragraph-trace',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
     if a.direct_file_entry and not a.probe_document:raise ValueError('Direct entry requires a synthetic document probe')
     if a.probe_document and not a.direct_file_entry:raise ValueError('Only controlled direct-entry probes are supported; natural cross-process HDROP is not validated')
     if a.dictionary_cp1251:a.trace_codepage=True
@@ -110,7 +110,7 @@ def main():
         return {'length':length,'prefix':read(pointer,min(length,256)*2).decode('utf-16le',errors='replace')}
     events=[];hits=[];breakpoints={};base=None;exited=False;error=None;started=time.monotonic();form_pointer=None;fault_count=0;stop_reason='duration_limit';cleanup_errors=[];pending_steps={};codepage_calls=[];api_calls=0;sender=None;sender_status=None
     pixel_api_active=False;pixel_api_calls=0;pixel_output_object=None;pixel_dimensions={};pixel_hit_counts={}
-    event_limit=4096 if a.trace_codepage else 512
+    event_limit=4096 if a.trace_codepage or a.paragraph_trace else 512
     try:
         if a.russian_suspended:
             candidates=[]
@@ -201,6 +201,12 @@ def main():
                         if a.font_trace:
                             for va,label in [(0x0040992a,'font_run_state'),(0x00409ad7,'font_small_add'),(0x00409afc,'font_tiny_add'),(0x00409b61,'font_large_add'),(0x0047b5e3,'font_small_report_gate'),(0x0047b7cd,'font_large_report_gate'),(0x0047b5ed,'font_small_report_emit'),(0x0047b7d7,'font_large_report_emit')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
+                        if a.paragraph_trace:
+                            addr=base+0x3318;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,'paragraph_bucket_add')
+                            for va,label in [(0x00437b69,'paragraph_properties'),(0x00437b7a,'paragraph_left_compare'),(0x00437bd0,'paragraph_left_add'),(0x00437bf6,'paragraph_right_compare'),(0x00437c4c,'paragraph_right_add'),(0x00437c8e,'paragraph_line_compare'),(0x00437cf7,'paragraph_line_add')]:
+                                addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
+                            for va,label in [(0x0047eac2,'paragraph_left_report_gate'),(0x0047ebde,'paragraph_right_report_gate'),(0x0047ecfa,'paragraph_line_report_gate'),(0x0047ee16,'paragraph_first_report_gate'),(0x0047eacf,'paragraph_left_report_emit'),(0x0047ebeb,'paragraph_right_report_emit'),(0x0047ed07,'paragraph_line_report_emit'),(0x0047ee23,'paragraph_first_report_emit')]:
+                                addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                         if drawing_trace:
                             for va,label in [(0x0047c8fe,'drawing_report_state'),(0x0047c939,'floating_image_emit'),(0x0047d051,'small_labels_report_gate'),(0x0047d05e,'small_labels_emit'),(0x0041d672,'small_label_geometry'),(0x00438805,'drawing_area_geometry'),(0x0041d581,'textbox_overflow_emit'),(0x0041d693,'textbox_small_width_emit'),(0x0041d7a6,'textbox_small_height_emit'),(0x0041d665,'textbox_exclusion_flag'),(0x0041d799,'textbox_autofit_flag'),(0x0041d537,'textbox_bounds_compare')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
@@ -244,6 +250,22 @@ def main():
                                 pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
                                 if 'report_' not in label and pixel_hit_counts[label]<256:
                                     pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False
+                            if label.startswith('paragraph_'):
+                                if label=='paragraph_bucket_add':
+                                    hit['paragraph_bucket_state']={'index':context.Edx,'parser':hex(context.Eax),'return_preferred_va':hex(unsigned(context.Esp)-base+0x400000),'text':unicode_object(context.Ecx) if unsigned(context.Ecx) else {'length':0,'prefix':''}}
+                                    pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
+                                    if pixel_hit_counts[label]<256:
+                                        pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False
+                                elif 'report_' in label:
+                                    state=unsigned(context.Ebp-0x5dc)
+                                    hit['paragraph_report_state']={name:signed(state+offset) for name,offset in [('left',0x138),('right',0x13c),('line',0x140),('first',0x144)]}
+                                else:
+                                    parser=unsigned(context.Ebp-0x88);style=unsigned(context.Ebp-0x90)
+                                    hit['paragraph_property_state']={name:struct.unpack('<f',read(style+offset,4))[0] for name,offset in [('left',0x10),('right',8),('first',0x1c),('line',0x20)]}
+                                    hit['paragraph_property_state'].update({'enabled_11d':read(parser+0x11d,1)[0],'parser':hex(parser),'style':hex(style),'prior_text':unicode_object(context.Ebp-0x1c) if unsigned(context.Ebp-0x1c) else {'length':0,'prefix':''},'rounded_line_candidate':signed(context.Ebp-0xb8) if label=='paragraph_line_compare' else None})
+                                    pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
+                                    if pixel_hit_counts[label]<128:
+                                        pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False
                             if label.startswith('shape_bounds_'):
                                 state=unsigned(context.Ebp-0x74);hit['shape_bounds_state']={name:struct.unpack('<f',read(state+offset,4))[0] for name,offset in [('width',0x120),('height',0x124),('inset_138',0x138),('inset_13c',0x13c),('inset_140',0x140),('inset_144',0x144),('rotation',0x148)]}
                                 hit['shape_bounds_state'].update({name:struct.unpack('<f',read(context.Ebp-offset,4))[0] for name,offset in [('selected_width',0xa0),('selected_height',0xa4),('width_base',0x90),('height_base',0x94)]})

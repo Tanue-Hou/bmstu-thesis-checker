@@ -1,0 +1,69 @@
+{
+  "target": {
+    "path": "runtime/TestVkr232.exe",
+    "sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+    "image_base": "0x00400000"
+  },
+  "method": "x86 Capstone disassembly from full function entries, then filtered to requested VA ranges; float32 constants read directly from the hash-matched PE.",
+  "sources": {
+    "agent-v027/decompilation/provenance.json": "3608d1961f95f3ca6ce5c5f7e69d5a08e84b56b5dc2ab7b3531dfa608eae5733",
+    "agent-v027/decompilation/functions.tsv": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0",
+    "agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d"
+  },
+  "functions": {
+    "FUN_00437374": {
+      "entry": "0x00437374",
+      "body_bytes": 3245,
+      "decoded_from_entry": true,
+      "saved_slice": "producer_00437374.asm",
+      "saved_slice_va": ["0x00437b69", "0x00437cfc"],
+      "pseudocode": "agent-v027/decompilation/recovered_pseudocode.c lines 27695 onward; relevant branch at 28001-28035",
+      "indent_branches": [
+        {
+          "property_offset": "+0x10",
+          "compare_constant": "0x00438050",
+          "count_slot": "parser+0x290 (index 0x4e)",
+          "branch_va": "0x00437b69-0x00437be0",
+          "predicate": "x87 compares property float with -0.10000000149f; continuation to diagnostic call occurs only when property < constant and FUN_004032dc(local_20) returns false. FUN_004032dc returns *param == 0, so this branch requires the pointed value to be nonzero. Unordered comparisons skip the diagnostic branch.",
+          "generic_counter_call": "0x00437bd0 -> FUN_00403318; return site 0x00437bd5"
+        },
+        {
+          "property_offset": "+0x08",
+          "compare_constant": "0x00438050",
+          "count_slot": "parser+0x294 (index 0x4f)",
+          "branch_va": "0x00437be5-0x00437c5c",
+          "predicate": "Same strict less-than and nonzero-value guard structure as the +0x10 branch.",
+          "generic_counter_call": "0x00437c4c -> FUN_00403318"
+        }
+      ],
+      "line_spacing_branch": {
+        "branch_va": "0x00437c61-0x00437cf7",
+        "input": "float at [local_94+0x20]",
+        "conversion": "FLD input; FMUL float32 at 0x0043802c; FADD float32 at 0x00438054; call 0x006b70b8; CMP returned signed EAX with 0xb4; JGE skips report bucket. Thus the bucket path is selected when the converted integer is < 180 and FUN_004032dc(local_20) returns false (the pointed value is nonzero).",
+        "count_slot": "parser+0x298 (index 0x50)",
+        "generic_counter_call": "0x00437cf7 -> FUN_00403318",
+        "rounding_limit": "For finite positive values, adding 0.5 then truncating toward zero has the usual half-up effect. Negative values, NaN, overflow and x87 invalid-conversion behavior are not generalized here."
+      },
+      "not_found": "No first-line-indent producer to parser+0x29c was identified in this focused slice."
+    },
+    "FUN_006b70b8": {
+      "entry": "0x006b70b8",
+      "body_bytes": 48,
+      "decoded_from_entry": true,
+      "saved_slice": "helper_006b70b8.asm",
+      "result": "Truncation, not round-to-nearest: saves x87 control word; ORs 0x0c01 into its low word (rounding-control bits 10-11 become 11, round toward zero); loads that word; FISTP stores a signed 64-bit integer; restores the original control word and returns the low/high halves in EAX/EDX."
+    }
+  },
+  "float32_constants": {
+    "0x0040b194": {"file_offset": "0x0000a794", "raw_hex": "6e7f903c", "value": 0.017638888210058212, "use": "FUN_0040b094 multiplies parsed w:line integer by this value before storing parser field +0x20."},
+    "0x0040b2d4": {"file_offset": "0x0000a8d4", "raw_hex": "6e7f903c", "value": 0.017638888210058212, "use": "FUN_0040b198 multiplies parsed w:indent integers by this value before storing parser fields +0x10/+8/+0x1c."},
+    "0x00438050": {"file_offset": "0x00037650", "raw_hex": "cdccccbd", "value": -0.10000000149011612, "use": "Strict negative indent comparison in both branches."},
+    "0x0043802c": {"file_offset": "0x0003762c", "raw_hex": "8bc56242", "value": 56.69291305541992, "use": "Line-spacing float scaling before adding 0.5 and truncating."},
+    "0x00438054": {"file_offset": "0x00037654", "raw_hex": "0000003f", "value": 0.5, "use": "Added before truncating line-spacing conversion."}
+  },
+  "limits": [
+    "This is instruction/data evidence for this exact executable hash; it does not reconstruct original source or establish broader format coverage.",
+    "Parser field units are not independently inferred from the numeric constants alone.",
+    "The first-line producer was not located; PDF local offset +0x2a8/+0x668 and common structure +0x144 remain unexamined in this task."
+  ]
+}

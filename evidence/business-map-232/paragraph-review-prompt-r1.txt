@@ -1,0 +1,11 @@
+Read-only review; do not call tools, inspect files, execute programs, or research externally. Use ONLY these deidentified technical observations. Return concise Chinese with observations/inferences/unknowns separately.
+Target: native Windows x86 TestVkr build232, SHA256 5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0.
+Actual disassembly in the common report function contains diagnostic counter gates:
+0047eac2 cmp dword ptr [ecx+0x138],0; 0047eac9 jle0047ebd8 (left indent)
+0047ebde cmp dword ptr [ecx+0x13c],0; 0047ebe5 jle0047ecf4 (right indent)
+0047ecfa cmp dword ptr [ecx+0x140],0; 0047ed01 jle0047ee10 (line spacing)
+0047ee16 cmp dword ptr [ecx+0x144],0; 0047ee1d jle0047ef2c (first-line indent).
+The known DOCX parser counter array starts at parser+0x158: font counter parser+0x184 maps to common slot0xb. A bounded search of the recovered DOCX function region finds no direct writes to parser+0x290,294,298,29c (expected corresponding slots4e,4f,50,51). This is only a text search, not a complete absence proof, because generic or indirect writes remain possible.
+DOCX helper0040b094 reads w:line into a style float as raw integer*float32(0.05);0040b198 reads w:left/right/firstLine/hanging. Parsing a property does not establish validating it.
+One fresh instrumented native master DOCX control execution reached all four report gates; all four counters were0, with no corresponding emit. More perturbation cases are running. Native entry mode, DOCX loader, return, output-length, original/copy hashes and owned-process cleanup are independently checked by the harness. The harness applies process-local CP1251 resource fixes and redirects an owned initialized file-drop thread into the shared check function; it is not the unmodified UI path.
+Question: Is it justified yet to conclude these four diagnostics are PDF-only or to disable all DOCX checks? What smallest further evidence discriminates unsupported DOCX checks from role exclusions? What should an independent CLI report while scope is uncertain? Do not propose counter suppression as a universal conclusion without callgraph/state evidence. Independent model opinion is not runtime proof.

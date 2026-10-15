@@ -1,0 +1,119 @@
+{
+  "build": 232,
+  "cases": [
+    {
+      "case": "preambleNegative",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/preambleNegative.docx",
+      "sha256": "89c49370a362c36e5ad9872eef708c2ea91afbacf2561fa24233fe17a4a0088e",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/paragraph-role-native-r1/preambleNegative"
+    },
+    {
+      "case": "unactivatedNegative",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/unactivatedNegative.docx",
+      "sha256": "a48e60005cc84e63fc2c419642a94584f35f43e20f4d8f855e824ffa1b82f950",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/paragraph-role-native-r1/unactivatedNegative"
+    },
+    {
+      "case": "shortNegative",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/shortNegative.docx",
+      "sha256": "498e6dc4373476dce186086b3c455b7c6d39adfd6f3a2a90f2316dd76ef8a933",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-role-native-r1/shortNegative"
+    },
+    {
+      "case": "shortLine179",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/shortLine179.docx",
+      "sha256": "dfe9ba56a5ac3034048fd8e74d4870daae8ac0cb083d74fb1289dc10629037b1",
+      "line": 179,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 1,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 1,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_line_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-role-native-r1/shortLine179"
+    },
+    {
+      "case": "blankNegative",
+      "input": "evidence/business-map-232/paragraph-inputs-r4/blankNegative.docx",
+      "sha256": "7cff4987dfec4daf8433cc7a30d2e9ec1dfae982df44cdf775ac83c79d88d888",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 0,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/paragraph-role-native-r1/blankNegative"
+    }
+  ]
+}

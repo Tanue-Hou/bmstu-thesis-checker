@@ -1,0 +1,9 @@
+# Paragraph producer instruction map
+
+This map is bound to `runtime/TestVkr232.exe` SHA-256 `5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0`. The requested assembly slices are in [producer_00437374.asm](producer_00437374.asm) and [helper_006b70b8.asm](helper_006b70b8.asm); exact VAs, file offsets, bytes, float32 interpretations, and limits are recorded in [map.json](map.json).
+
+The full function `FUN_00437374` was disassembled from entry 00437374 (3245 bytes) before filtering to 00437b69–00437cfc. The two indent checks compare their respective float fields with the float32 value at 00438050 (`-0.10000000149`). The x87 status test and `jp` skip the report path for unordered values; otherwise the report path requires a strict less-than comparison. Each branch also calls `FUN_004032dc`, which returns `*param == 0`, and skips when that result is nonzero. The call therefore proceeds only when the pointed value is nonzero.
+
+The line-spacing path scales the float at `[local_94+0x20]` by 56.6929130554, adds 0.5, then calls 006b70b8. That helper sets the x87 rounding-control bits to round toward zero for `FISTP`, restores the saved control word, and returns the integer in EAX. The caller uses a signed comparison with 180 and skips the report bucket for values greater than or equal to 180. For finite positive inputs, the preceding `+0.5` followed by truncation has the usual half-up effect. The behavior for negative, non-finite, or out-of-range inputs is not generalized here.
+
+The same constant `0.0176388882101` is used by the pseudocode readers for parsed `w:line` and `w:ind` values. Its physical unit is not inferred in this artifact. The first-line producer was not found in this focused pass; the potential PDF/common offsets noted in `map.json` were not examined. This artifact does not change implementation code or verified registries.

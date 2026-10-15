@@ -1,0 +1,10 @@
+Failed to find real location of C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\python.exe
+test_activation_and_short_text_are_observed_separately (test_native_paragraph_model.NativeParagraphModelTests.test_activation_and_short_text_are_observed_separately) ... ok
+test_independent_read_only_cli (test_native_paragraph_model.NativeParagraphModelTests.test_independent_read_only_cli) ... ok
+test_line_and_signed_indent_boundaries_from_native (test_native_paragraph_model.NativeParagraphModelTests.test_line_and_signed_indent_boundaries_from_native) ... ok
+test_retained_native_counters_on_all_same_inputs (test_native_paragraph_model.NativeParagraphModelTests.test_retained_native_counters_on_all_same_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 3.969s
+
+OK

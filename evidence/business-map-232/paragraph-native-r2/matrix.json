@@ -1,0 +1,183 @@
+{
+  "build": 232,
+  "cases": [
+    {
+      "case": "double",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/double.docx",
+      "sha256": "9f2105e4ea25f876b14f180cda3738003d3eca0cd7078b8eb30c3132f6119e28",
+      "line": 480,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/double"
+    },
+    {
+      "case": "exact24",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/exact24.docx",
+      "sha256": "d5dcaf820a10085469e68938b29c41153ed8227c2a20303486dd4cbba9d6a144",
+      "line": 480,
+      "line_rule": "exact",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/exact24"
+    },
+    {
+      "case": "atLeast24",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/atLeast24.docx",
+      "sha256": "a6b92d7633a9c47752bbcf3a35e0e14be7bfc530593b7930a69bf8405ccec0bd",
+      "line": 480,
+      "line_rule": "atLeast",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/atLeast24"
+    },
+    {
+      "case": "firstOneInch",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/firstOneInch.docx",
+      "sha256": "292b90ebf4877a382b7c10b4ccbae5c00e1754d533da1815ce1efa192da3be97",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 1440,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/firstOneInch"
+    },
+    {
+      "case": "negativeLeft",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/negativeLeft.docx",
+      "sha256": "a8a6de4dd882d6924e5bc3e38c467e25ce8e880fc7dbc4119d5444756027226a",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": -1440,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 1,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [
+        "paragraph_left_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/negativeLeft"
+    },
+    {
+      "case": "leftAlign",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/leftAlign.docx",
+      "sha256": "7e4bfb57cf6d50155a61ef2d502dbe88c671c7ef9d7d1b771bf868809ca1145a",
+      "line": 360,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "left",
+      "text_utf16_units": 200,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/leftAlign"
+    },
+    {
+      "case": "single40",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/single40.docx",
+      "sha256": "8732627455f405ca16eeb6d92d43f4a001b455672cd6210c6afec804890d42ee",
+      "line": 240,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 40,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/single40"
+    },
+    {
+      "case": "single41",
+      "input": "evidence/business-map-232/paragraph-inputs-r1/single41.docx",
+      "sha256": "d66db5bc265d7b0d93151c3ae7c89c3666eae2e6d351e685b107777d0b41e10e",
+      "line": 240,
+      "line_rule": "auto",
+      "first_line_twips": 709,
+      "left_twips": 0,
+      "right_twips": 0,
+      "alignment": "both",
+      "text_utf16_units": 41,
+      "work_type": "master",
+      "native_counters": {
+        "left": 0,
+        "right": 0,
+        "line": 0,
+        "first": 0
+      },
+      "native_emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/paragraph-native-r2/single41"
+    }
+  ]
+}

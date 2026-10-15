@@ -1,0 +1,107 @@
+{
+  "title": "Static index of paragraph spacing and indent diagnostics",
+  "scope": "Static pseudocode and call-graph review only. Candidate mapping, not an independent behavioral validation.",
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "sources": {
+    "agent-v027/decompilation/provenance.json": "target sha above; export provenance binds the decompilation to this binary",
+    "agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "agent-v027/decompilation/defined_strings.tsv": "70343e389f7049f7b0d72b3f5df4fb2fa084e5c300ef762a5847f54d54bf84a2",
+    "agent-v027/decompilation/functions.tsv": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0",
+    "business-map-232/file-entry-decompilation-r1/function.c": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4",
+    "business-map-232/diagnostic-map-r2/diagnostic-map.json": "a325300fb719105bca7b494ffddc5a9f2579846e3950e6cac24f2444a26ad863"
+  },
+  "findings": [
+    {
+      "rule": "left_indent",
+      "main_counter": "parser+0x290 (word index 0x4e), exposed as main local_5e0[0x4e]",
+      "main_report_gate": "file-entry-decompilation-r1/function.c:1980-2004; count > 0",
+      "report_text_va": "0x006e77b0",
+      "report_text": "Левый отступ в абзацах должен быть равен 0 см.",
+      "producer_candidate": {
+        "function": "FUN_00437374",
+        "function_start": "0x00437374",
+        "function_size_bytes": 3245,
+        "pseudocode_lines": "28001-28011",
+        "branch": "if (*(float *)(local_94 + 0x10) < _DAT_00438050) and FUN_004032dc(local_20) returns false, call FUN_00403318 with index from FUN_00402ca8(local_8c+0x56, local_8c+0xa4) and count mode 1; FUN_004032dc returns *param == 0, so this call path requires the pointed value to be nonzero",
+        "return_va_from_existing_trace": "0x00437bd5",
+        "interpretation": "The existing paragraph_bucket_add trace identifies index 0x4e and parser pointer; statically the helper adds at parser+0x158+4*index. The trace's preferred return VA lies inside this producer candidate."
+      },
+      "threshold": "The pseudocode names _DAT_00438050 but does not resolve its value here; no numeric threshold is asserted by this static index.",
+      "limits": "The source label at 0x006cefea and the full semantic meaning of local_94+0x10 are not resolved from this pseudocode alone."
+    },
+    {
+      "rule": "right_indent",
+      "main_counter": "parser+0x294 (word index 0x4f), exposed as main local_5e0[0x4f]",
+      "main_report_gate": "file-entry-decompilation-r1/function.c:2005-2029; count > 0",
+      "report_text_va": "0x006e7816",
+      "report_text": "Правый отступ в абзацах должен быть равен 0 см.",
+      "producer_candidate": {
+        "function": "FUN_00437374",
+        "function_start": "0x00437374",
+        "pseudocode_lines": "28012-28022",
+        "branch": "if (*(float *)(local_94 + 8) < _DAT_00438050) and FUN_004032dc(local_20) returns false, call FUN_00403318 with index from FUN_00402ca8(local_8c+0x56, local_8c+0xa5) and count mode 1; FUN_004032dc returns *param == 0, so this call path requires the pointed value to be nonzero"
+      },
+      "threshold": "Uses _DAT_00438050; numeric value is not established by this static branch excerpt.",
+      "limits": "The source label at 0x006cefec and full semantic meaning of local_94+8 remain unresolved."
+    },
+    {
+      "rule": "line_spacing",
+      "main_counter": "parser+0x298 (word index 0x50), exposed as main local_5e0[0x50]",
+      "main_report_gate": "file-entry-decompilation-r1/function.c:2030-2054; count > 0",
+      "report_text_va": "0x006e787e",
+      "report_text": "Междустрочный интервал в абзацах должен быть равен 1,5 строки (в таблицах одинарный):",
+      "producer_candidate": {
+        "function": "FUN_00437374",
+        "function_start": "0x00437374",
+        "pseudocode_lines": "28023-28035",
+        "branch": "if FUN_006b70b8() < 0xb4 and FUN_004032dc(local_20) returns false, call FUN_00403318 with index from FUN_00402ca8(local_8c+0x56, local_8c+0xa6) and count mode 1; FUN_004032dc returns *param == 0, so this call path requires the pointed value to be nonzero"
+      },
+      "threshold": "Static predicate is a returned integer compared with 0xb4; the conversion/rounding and underlying value semantics are not inferred here.",
+      "limits": "The source label at 0x006cefee and exact behavior of FUN_006b70b8 are not resolved by this index."
+    },
+    {
+      "rule": "first_line_indent",
+      "main_counter": "parser+0x29c (word index 0x51), exposed as main local_5e0[0x51]",
+      "main_report_gate": "file-entry-decompilation-r1/function.c:2055 onward; count > 0",
+      "report_text_va": "0x006e7930",
+      "report_text": "Отступ первой строки в абзаце должен быть 1,25 см. (при выравнивании строк а абзаце по центру - 0 см.):",
+      "producer_candidate": null,
+      "static_search_result": "No producer branch writing this counter was identified in the reviewed pseudocode. Absence of an obvious direct write does not establish that DOCX is not checked; generic indexed helpers or an unreviewed path may populate it.",
+      "limits": "Production path, threshold and exclusions remain unknown."
+    }
+  ],
+  "shared_helpers_and_path": [
+    {
+      "function": "FUN_00403318",
+      "pseudocode_lines": "983-1110",
+      "behavior_visible_in_pseudocode": "Computes counter pointer as param_1 + param_2*4 + 0x158; if param_4 is zero, adds text length, otherwise increments by one.",
+      "callers_relevant_to_paragraphs": "FUN_00437374 calls it at lines 28009, 28021 and 28034."
+    },
+    {
+      "function": "FUN_0040b198",
+      "pseudocode_lines": "4971-5013",
+      "behavior_visible_in_pseudocode": "Reads OOXML w:left, w:right, w:firstLine and w:hanging into parser-local float fields at +0x10, +8 and +0x1c; scales integer values by _DAT_0040b2d4.",
+      "caller": "FUN_0040e9a8 calls it when handling w:ind (pseudocode lines 6795-6800)."
+    },
+    {
+      "function": "FUN_0040b094",
+      "pseudocode_lines": "4932-4968",
+      "behavior_visible_in_pseudocode": "Reads OOXML w:before, w:after and w:line into parser-local fields +0xc, +0x14 and +0x20, using _DAT_0040b194.",
+      "caller": "FUN_0040e9a8 calls it for w:spacing (pseudocode lines 6788-6793)."
+    },
+    {
+      "function": "FUN_0040e9a8",
+      "pseudocode_lines": "6649 onward",
+      "behavior_visible_in_pseudocode": "Dispatches w:spacing and w:ind to the readers above. Calls.tsv also lists 0040e9a8 -> 00437374; this supports a shared parser/layout route but does not by itself prove every paragraph counter is produced on every input path."
+    }
+  ],
+  "callers_of_00437374_from_calls_tsv": ["00405e58", "004064e0", "004078c0", "00408a08", "0040e9a8", "004120b8", "00412214", "00415824"],
+  "main_entry_context": "file-entry-decompilation-r1/function.c:607-612 sets local_5e0 = local_74+0x158 then calls FUN_0043dd1c. This aligns main counter indices 0x4e-0x51 with parser offsets +0x290-+0x29c.",
+  "explicit_unknowns": [
+    "Exact numeric value and unit of _DAT_00438050 in the two indent branches.",
+    "Conversion and rounding behavior behind FUN_006b70b8 and the semantic relationship between its return value and the line-spacing property.",
+    "Whether the same counter producers cover all DOCX paragraph types, tables, shapes, and non-DOCX inputs.",
+    "A producer for first-line-indent counter +0x29c and its threshold/exclusions."
+  ]
+}
