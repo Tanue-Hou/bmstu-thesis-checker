@@ -1,0 +1,8 @@
+Failed to find real location of C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\python.exe
+.................D:\Codex项目\analysis_TestVkr\implementation\scripts\testvkr-service\config.py:4: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+  class Settings(BaseSettings):
+.............
+----------------------------------------------------------------------
+Ran 30 tests in 3.368s
+
+OK

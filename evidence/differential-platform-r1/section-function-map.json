@@ -1,0 +1,154 @@
+{
+  "schema": "native232-section-header-footer-function-map-r1",
+  "target": {
+    "path_from_repo_root": "runtime/TestVkr232.exe",
+    "sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+    "preferred_image_base": "0x00400000"
+  },
+  "recovered_sources": {
+    "evidence/agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "evidence/agent-v027/decompilation/functions.tsv": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0",
+    "evidence/agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "evidence/business-map-232/file-entry-decompilation-r1/function.c": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4"
+  },
+  "runtime_evidence": {
+    "receipt_path_relative_to_implementation": "evidence/differential-platform-r1/section-boundaries-r2/receipt.json",
+    "receipt_sha256": "b28c29f6c6a62d50fd73231141813eecaf8b53a5d93a88b1ded2855d0a618823",
+    "receipt_status": "passed_section_distance_boundary_branches",
+    "source_unchanged_recorded": true,
+    "receipt_case_count": 16,
+    "input_hashes_checked_and_matching": 16,
+    "artifact_hashes_checked_and_matching": 64,
+    "field_distribution": {
+      "header": 8,
+      "footer": 8
+    },
+    "work_type_distribution": {
+      "master": 8,
+      "phd": 8
+    },
+    "twips_distribution": {
+      "697": 4,
+      "698": 4,
+      "720": 4,
+      "721": 4
+    },
+    "observed_outside_tolerance": {
+      "twips": [697, 721],
+      "increment_branch_true": 8,
+      "diagnostic_observed": 8,
+      "helper_return_al_zero": 8
+    },
+    "observed_inside_tolerance": {
+      "twips": [698, 720],
+      "increment_branch_false": 8,
+      "diagnostic_observed": 0,
+      "helper_return_al_one": 8
+    },
+    "increment_register_binding": {
+      "instruction": "inc dword ptr [eax+0x28c]",
+      "increment_hits": 8,
+      "eax_equals_parser_base": 8,
+      "ebx_equals_parser_base": 0
+    },
+    "per_field_per_twips": {
+      "header": {
+        "697": {"cases": 2, "increment": 2, "diagnostic": 2},
+        "698": {"cases": 2, "increment": 0, "diagnostic": 0},
+        "720": {"cases": 2, "increment": 0, "diagnostic": 0},
+        "721": {"cases": 2, "increment": 2, "diagnostic": 2}
+      },
+      "footer": {
+        "697": {"cases": 2, "increment": 2, "diagnostic": 2},
+        "698": {"cases": 2, "increment": 0, "diagnostic": 0},
+        "720": {"cases": 2, "increment": 0, "diagnostic": 0},
+        "721": {"cases": 2, "increment": 2, "diagnostic": 2}
+      }
+    },
+    "privacy_boundary": "Only aggregate counts are repeated here; individual case names, input hashes, and per-case artifact hashes are omitted."
+  },
+  "static_mapping": {
+    "section_parser_and_counter_producer": {
+      "function": "FUN_0040b31c",
+      "entry_va": "0x0040b31c",
+      "recovered_pseudocode_line": 5045,
+      "header_attribute_tag": "w:header",
+      "header_record_field_offset": "0x28",
+      "footer_attribute_tag": "w:footer",
+      "footer_record_field_offset": "0x2c",
+      "twips_to_float32_multiplier": {
+        "va": "0x0040c444",
+        "raw_hex": "6e7f903c",
+        "float32": 0.017638888210058212
+      },
+      "producer_counter_offset": "0x28c",
+      "producer_register_and_instruction": "inc dword ptr [eax+0x28c]",
+      "counter_result_in_main_report": {
+        "function": "FUN_0047a528",
+        "main_report_slot": "0x4d",
+        "source_line": 1789,
+        "condition": "counter > 0 emits the corresponding report item"
+      }
+    },
+    "section_record_getter": {
+      "function": "FUN_0040c770",
+      "entry_va": "0x0040c770",
+      "recovered_pseudocode_line": 5691,
+      "record_address_expression": "*param_1 + param_2 * 0x34"
+    },
+    "tolerance_comparator": {
+      "function": "FUN_0040b2d8",
+      "entry_va": "0x0040b2d8",
+      "recovered_pseudocode_line": 5016,
+      "expected_float32": {
+        "value": 12.5,
+        "raw_hex": "00004841",
+        "caller_stack_immediate": "0x41480000"
+      },
+      "epsilon_float32": {
+        "va": "0x0040b318",
+        "value": 0.20000000298023224,
+        "raw_hex": "cdcc4c3e"
+      },
+      "closure": "12.5 - epsilon <= actual <= 12.5 + epsilon",
+      "helper_return": {"within_closed_range": 1, "outside_range": 0},
+      "static_integer_twips_prediction": {"minimum_inclusive": 698, "maximum_inclusive": 720}
+    },
+    "main_reporter": {
+      "function": "FUN_0047a528",
+      "entry_va": "0x0047a528",
+      "source_file": "evidence/business-map-232/file-entry-decompilation-r1/function.c",
+      "source_line": 1789,
+      "main_report_slot": "0x4d"
+    }
+  },
+  "key_instruction_bytes": [
+    {"va": "0x0040b9ab", "bytes": "ba351c6c00", "instruction": "mov edx, 0x6c1c35 ; w:header tag"},
+    {"va": "0x0040b9b9", "bytes": "e8e2b10300", "instruction": "call 0x00446ba0 ; read header attribute"},
+    {"va": "0x0040b9d2", "bytes": "e8990d0000", "instruction": "call 0x0040c770 ; select section record"},
+    {"va": "0x0040b9da", "bytes": "8d4828", "instruction": "lea ecx, [eax+0x28] ; header field"},
+    {"va": "0x0040b9f9", "bytes": "d80d44c44000", "instruction": "fmul dword ptr [0x0040c444]"},
+    {"va": "0x0040ba00", "bytes": "d91a", "instruction": "fstp dword ptr [edx]"},
+    {"va": "0x0040ba05", "bytes": "ba3e1c6c00", "instruction": "mov edx, 0x6c1c3e ; w:footer tag"},
+    {"va": "0x0040ba13", "bytes": "e888b10300", "instruction": "call 0x00446ba0 ; read footer attribute"},
+    {"va": "0x0040ba2c", "bytes": "e83f0d0000", "instruction": "call 0x0040c770 ; select section record"},
+    {"va": "0x0040ba34", "bytes": "8d482c", "instruction": "lea ecx, [eax+0x2c] ; footer field"},
+    {"va": "0x0040ba53", "bytes": "d80d44c44000", "instruction": "fmul dword ptr [0x0040c444]"},
+    {"va": "0x0040ba5a", "bytes": "d91a", "instruction": "fstp dword ptr [edx]"},
+    {"va": "0x0040b2de", "bytes": "d82518b34000", "instruction": "fsub dword ptr [0x0040b318]"},
+    {"va": "0x0040b2f9", "bytes": "d80518b34000", "instruction": "fadd dword ptr [0x0040b318]"},
+    {"va": "0x0040c3ac", "bytes": "ff7028", "instruction": "push dword ptr [eax+0x28]"},
+    {"va": "0x0040c3af", "bytes": "6800004841", "instruction": "push 0x41480000 ; 12.5f"},
+    {"va": "0x0040c3b4", "bytes": "e81fefffff", "instruction": "call 0x0040b2d8 ; header compare"},
+    {"va": "0x0040c3c0", "bytes": "ff808c020000", "instruction": "inc dword ptr [eax+0x28c] ; header mismatch"},
+    {"va": "0x0040c3de", "bytes": "ff702c", "instruction": "push dword ptr [eax+0x2c]"},
+    {"va": "0x0040c3e1", "bytes": "6800004841", "instruction": "push 0x41480000 ; 12.5f"},
+    {"va": "0x0040c3e6", "bytes": "e8edeeffff", "instruction": "call 0x0040b2d8 ; footer compare"},
+    {"va": "0x0040c3f2", "bytes": "ff808c020000", "instruction": "inc dword ptr [eax+0x28c] ; footer mismatch"}
+  ],
+  "interpretation_boundary": [
+    "Static prediction is 698 through 720 twips inclusive; the 16 runtime cases confirm it at the selected boundary points for both fields and both work types.",
+    "Receipt evidence records EAX equal to parser base at each observed increment; EBX did not equal parser base in those observations.",
+    "Runtime scope is the synthetic section-boundary matrix in the referenced receipt; it does not claim universal document-family coverage."
+  ]
+}

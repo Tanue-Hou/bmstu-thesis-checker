@@ -1,0 +1,76 @@
+{
+  "seed": "../dynamic-master/baseline.docx",
+  "seed_sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+  "work_type": "master",
+  "focus_rules": [
+    "Word.HeaderFooterDistanceInvalid"
+  ],
+  "mutations": [
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 680
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 681
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 690
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 694
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 695
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 700
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 714
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 715
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 730
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 736
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 737
+    }
+  ]
+}

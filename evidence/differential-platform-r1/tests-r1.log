@@ -1,0 +1,32 @@
+Failed to find real location of C:\Users\Tanue Hou\AppData\Local\Programs\Python\Python313\python.exe
+EE.......
+======================================================================
+ERROR: test_cache_rejects_wrong_identity_and_incomplete_artifact_hash_manifest (test_differential_cli.DifferentialCacheTests.test_cache_rejects_wrong_identity_and_incomplete_artifact_hash_manifest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_differential_cli.py", line 157, in test_cache_rejects_wrong_identity_and_incomplete_artifact_hash_manifest
+    runner = self._runner()
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_differential_cli.py", line 118, in _runner
+    return cli.Runner(self.out, self.exe, 'master', list(focus), max_native_runs=2)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codex项目\analysis_TestVkr\implementation\scripts\differential_cli.py", line 71, in __init__
+    raise ValueError('Focus contains diagnostic families without a native mapping')
+ValueError: Focus contains diagnostic families without a native mapping
+
+======================================================================
+ERROR: test_focus_is_recomputed_on_verified_raw_cache_and_mode_changes_cache_identity (test_differential_cli.DifferentialCacheTests.test_focus_is_recomputed_on_verified_raw_cache_and_mode_changes_cache_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_differential_cli.py", line 144, in test_focus_is_recomputed_on_verified_raw_cache_and_mode_changes_cache_identity
+    runner_a = self._runner(('Rule.A',))
+  File "D:\Codex项目\analysis_TestVkr\implementation\tests\test_differential_cli.py", line 118, in _runner
+    return cli.Runner(self.out, self.exe, 'master', list(focus), max_native_runs=2)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codex项目\analysis_TestVkr\implementation\scripts\differential_cli.py", line 71, in __init__
+    raise ValueError('Focus contains diagnostic families without a native mapping')
+ValueError: Focus contains diagnostic families without a native mapping
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.102s
+
+FAILED (errors=2)

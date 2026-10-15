@@ -1,0 +1,65 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "b609e0685865191a03b1724934a59934c220bf25671d550ebebe74513d3ad786",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 10,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Ошибка в наименовании работы."
+    },
+    {
+      "number": 2,
+      "message": "*** Допущены ошибки в названии университета на титульном листе."
+    },
+    {
+      "number": 3,
+      "message": "*** Отсутствует или неправильно введен титульный лист (много несоответствий)."
+    },
+    {
+      "number": 4,
+      "message": "* В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок)."
+    },
+    {
+      "number": 5,
+      "message": "* Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании)."
+    },
+    {
+      "number": 6,
+      "message": "В документе много символов, цвет которых отличается от черного: \"МГТУ им. Н. Э. Баумана\", \"ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА БАКАЛАВРА\", \"РЕФЕРАТ\", \"СОДЕРЖАНИЕ\", \"ВВЕДЕНИЕ\", \"1 ОСНОВНАЯ ЧАСТЬ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 7,
+      "message": "Документ содержит страницы, размеры полей на которых не соответствуют требованиям."
+    },
+    {
+      "number": 8,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"ОГЛАВЛЕНИЕ\"."
+    },
+    {
+      "number": 9,
+      "message": "** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\"."
+    },
+    {
+      "number": 10,
+      "message": "* В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    }
+  ],
+  "evidence_directory": "D:\\Codex项目\\analysis_TestVkr\\private_trials\\section-distance-branches-r2\\phd-header-720",
+  "trace_sha256": "1d414d2baca35b409a265a095ab21d3c81bfd1f56ed8996581e64600c6f39059",
+  "native_text_sha256": "1ab52a65cab18a22f63cff3c004eb6c98228c5434f61f7dd0cfa8ad519702ac2",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "365f0fef81377a93106f1e187a0745821dd82dbadb14e2dae26a053e396c34f3",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

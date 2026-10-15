@@ -1,0 +1,424 @@
+{
+  "status": "passed_section_distance_boundary_branches",
+  "cases": [
+    {
+      "case": "master-header-697",
+      "work_type": "master",
+      "field": "header",
+      "twips": 697,
+      "input_sha256": "058dd4775da6e41bdfc2a554265d939abca84a270d08fe8173a3293f1c8c28b8",
+      "comparison": {
+        "parser_address": "0x48ed340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "0000484179b54441",
+        "target_and_actual_mm": [
+          12.5,
+          12.294304847717285
+        ]
+      },
+      "return_al": 0,
+      "increment_branch_observed": true,
+      "diagnostic_observed": true,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-697/native-result.txt": "5f40d22f16956e803d2ca5e4be62e4bb238d16e56eaf985ef68b364a898b40bc",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-697/report.json": "617d5314080bc3896091c748e2b54796e5c8c535e2bee7d0386064500c7e95af",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-697/trace.json": "42e5610aa1b203021f77431e46e3e44b026a9d6345e0c6b939c1919abc409548",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-697/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "master-header-698",
+      "work_type": "master",
+      "field": "header",
+      "twips": 698,
+      "input_sha256": "34deb8c8178762881ff7aab253b8eb95a32b0dfc78158af7f1a18893b163c496",
+      "comparison": {
+        "parser_address": "0x442d340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "00004841b9fd4441",
+        "target_and_actual_mm": [
+          12.5,
+          12.311944007873535
+        ]
+      },
+      "return_al": 1,
+      "increment_branch_observed": false,
+      "diagnostic_observed": false,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-698/native-result.txt": "4d62bcba8bb55b8b0b6a79117eb1554b6a28f8d7baa4fbb070da5464a903bc61",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-698/report.json": "20db46781f43cfdfe51f28bbc475584bc0fde92299a9fa7a97d50481005e0078",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-698/trace.json": "16e9a42088271fa6caee3b7b2ed1a37a3cf1c62d05dfa3319956390e666b55b6",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-698/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "master-header-720",
+      "work_type": "master",
+      "field": "header",
+      "twips": 720,
+      "input_sha256": "b609e0685865191a03b1724934a59934c220bf25671d550ebebe74513d3ad786",
+      "comparison": {
+        "parser_address": "0x4a3d340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "0000484133334b41",
+        "target_and_actual_mm": [
+          12.5,
+          12.699999809265137
+        ]
+      },
+      "return_al": 1,
+      "increment_branch_observed": false,
+      "diagnostic_observed": false,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-720/native-result.txt": "b7463bdef8d4d108b800b05ca24da76b1211893fa44725c7db31d1f38373cc86",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-720/report.json": "c51035070546120b2bbb628b576cf4271eddea4ac86e123627e49f7653349d20",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-720/trace.json": "2f894faead21d9cba39142112661b9f659608f487df3e5a31fd32749c1b9c070",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-720/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "master-header-721",
+      "work_type": "master",
+      "field": "header",
+      "twips": 721,
+      "input_sha256": "e3e9c151735f8fe0c6a902d35b72c72660aef91497ad3ac4af7211f316d0f818",
+      "comparison": {
+        "parser_address": "0x43fd340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "00004841727b4b41",
+        "target_and_actual_mm": [
+          12.5,
+          12.71763801574707
+        ]
+      },
+      "return_al": 0,
+      "increment_branch_observed": true,
+      "diagnostic_observed": true,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-721/native-result.txt": "8256932341c1abb19178ebeb7c9d065efe53b039719a49e05c2eb9995c631032",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-721/report.json": "a749b28ee71b92c80dd11b50d1427d15682a15e960c28210287bc7193b7e4935",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-721/trace.json": "14ae521c6a198d681a512d7efb4a4f2841b92d686c34286a4380b75fa4a105f5",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-header-721/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "master-footer-697",
+      "work_type": "master",
+      "field": "footer",
+      "twips": 697,
+      "input_sha256": "d312fb3a1357d65aa870e4c2c5c4ef79825db16d4283cb64ea8c5286005956b5",
+      "comparison": {
+        "parser_address": "0x44dd340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "0000484179b54441",
+        "target_and_actual_mm": [
+          12.5,
+          12.294304847717285
+        ]
+      },
+      "return_al": 0,
+      "increment_branch_observed": true,
+      "diagnostic_observed": true,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-697/native-result.txt": "b79dc5ffb4b68f3eda0fae21f9dcff9d98e49871a90fbcd8468080f5f9bca726",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-697/report.json": "4cc1e0fa6b52bad7d1ddffea5f21ed823e6304bd707b2c14874b7513826413c6",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-697/trace.json": "8e6f71e0a126d560f55badb644d5f2863bf6871cfbd31051a285dace9209f5ef",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-697/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "master-footer-698",
+      "work_type": "master",
+      "field": "footer",
+      "twips": 698,
+      "input_sha256": "a65239d9ffe443dd1e387a1dfef86c8c04313f78ed47c746c02c8c3e1c2b323c",
+      "comparison": {
+        "parser_address": "0x430d340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "00004841b9fd4441",
+        "target_and_actual_mm": [
+          12.5,
+          12.311944007873535
+        ]
+      },
+      "return_al": 1,
+      "increment_branch_observed": false,
+      "diagnostic_observed": false,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-698/native-result.txt": "ddcd47c51cab8f6ac0e8dd4942608035142128b4e7e4e93665a0798a20edaeee",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-698/report.json": "e1e9367dc7bb663476dc1d8198110f069bcf09140fd9a8ea287c22c4c595314f",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-698/trace.json": "a4d8e0609e007d86604c3ebd8149bcd4c2576fcc1b6f2efd5a36782c08ddf708",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-698/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "master-footer-720",
+      "work_type": "master",
+      "field": "footer",
+      "twips": 720,
+      "input_sha256": "ac8d3864d0381a772a2fa51f56b75ad8cb0e53a3d24360f1f2daed5f31c32f2f",
+      "comparison": {
+        "parser_address": "0x4dfd340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "0000484133334b41",
+        "target_and_actual_mm": [
+          12.5,
+          12.699999809265137
+        ]
+      },
+      "return_al": 1,
+      "increment_branch_observed": false,
+      "diagnostic_observed": false,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-720/native-result.txt": "f4040114e2a8e112df45080d600c5977eff5ea870993353b226a306d60c12696",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-720/report.json": "510c7d3a636aa2d56466deeb8d4ebd5597c0d87c8dd3689e773728dd3f90d0e8",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-720/trace.json": "14ca3aebc2c977a4bc25fe45e77a8714b45faffa5f311b84dcfd5aad19415263",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-720/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "master-footer-721",
+      "work_type": "master",
+      "field": "footer",
+      "twips": 721,
+      "input_sha256": "f4518177230f1531ae693f2676a9187bae397f6c0b21c7d0f1bb754ad4f9dd4c",
+      "comparison": {
+        "parser_address": "0x4b9d340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "00004841727b4b41",
+        "target_and_actual_mm": [
+          12.5,
+          12.71763801574707
+        ]
+      },
+      "return_al": 0,
+      "increment_branch_observed": true,
+      "diagnostic_observed": true,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-721/native-result.txt": "e1804ff83b015d0bf772cf0afed1da6a3d1b287c14bdee19c2efc7bc776abc46",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-721/report.json": "67fd6131bf98b36507ba3ad893d79f29aa6c967f1e2905b3554accaa249ff118",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-721/trace.json": "607074892e85ec2d36e5e7cb8c88b3d540cdc402c34338e9df5a0e3d5bf3729f",
+        "evidence/differential-platform-r1/section-boundaries-r2/master-footer-721/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "phd-header-697",
+      "work_type": "phd",
+      "field": "header",
+      "twips": 697,
+      "input_sha256": "058dd4775da6e41bdfc2a554265d939abca84a270d08fe8173a3293f1c8c28b8",
+      "comparison": {
+        "parser_address": "0x4a2d340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "0000484179b54441",
+        "target_and_actual_mm": [
+          12.5,
+          12.294304847717285
+        ]
+      },
+      "return_al": 0,
+      "increment_branch_observed": true,
+      "diagnostic_observed": true,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-697/native-result.txt": "6938824e10c147b1dfc22d096441a95dfc693571213cf8fdde65ee9583492cbb",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-697/report.json": "211fce4f61dd40cd027bcc7fedf7ed4a8b26c818f83908b71a1e32c32b02c724",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-697/trace.json": "1f1089e29a9760f720d945ec0dd5a13c24664a05b525bc0132dc6b2d829df883",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-697/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "phd-header-698",
+      "work_type": "phd",
+      "field": "header",
+      "twips": 698,
+      "input_sha256": "34deb8c8178762881ff7aab253b8eb95a32b0dfc78158af7f1a18893b163c496",
+      "comparison": {
+        "parser_address": "0x45bd340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "00004841b9fd4441",
+        "target_and_actual_mm": [
+          12.5,
+          12.311944007873535
+        ]
+      },
+      "return_al": 1,
+      "increment_branch_observed": false,
+      "diagnostic_observed": false,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-698/native-result.txt": "00d786ef7e640baa425f31c66ba5a73a7cdbab89339423c046fed74b17f00165",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-698/report.json": "541da11a5690c1fc6d3296864aa17630880f943de35e87c72d2b57f54478e9f3",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-698/trace.json": "4331ca767d38e94ca5c1696824caf4b4a5c2fad85a89c7be105f7908beb54f0e",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-698/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "phd-header-720",
+      "work_type": "phd",
+      "field": "header",
+      "twips": 720,
+      "input_sha256": "b609e0685865191a03b1724934a59934c220bf25671d550ebebe74513d3ad786",
+      "comparison": {
+        "parser_address": "0x4c0d340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "0000484133334b41",
+        "target_and_actual_mm": [
+          12.5,
+          12.699999809265137
+        ]
+      },
+      "return_al": 1,
+      "increment_branch_observed": false,
+      "diagnostic_observed": false,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-720/native-result.txt": "1ab52a65cab18a22f63cff3c004eb6c98228c5434f61f7dd0cfa8ad519702ac2",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-720/report.json": "fbb75ae747c4056660cd73576d16f01b21022121ffd11c802d443c477f432cf7",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-720/trace.json": "1d414d2baca35b409a265a095ab21d3c81bfd1f56ed8996581e64600c6f39059",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-720/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "phd-header-721",
+      "work_type": "phd",
+      "field": "header",
+      "twips": 721,
+      "input_sha256": "e3e9c151735f8fe0c6a902d35b72c72660aef91497ad3ac4af7211f316d0f818",
+      "comparison": {
+        "parser_address": "0x472d340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "00004841727b4b41",
+        "target_and_actual_mm": [
+          12.5,
+          12.71763801574707
+        ]
+      },
+      "return_al": 0,
+      "increment_branch_observed": true,
+      "diagnostic_observed": true,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-721/native-result.txt": "e19a1e2d1f0b01cfc1053e728dccebb4aed42a7e5007271cc6d708bace29aff3",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-721/report.json": "ced602c6dabcc683e5e6745907b08715e9c7b5d5cb6bb9180398b674a09e4d7c",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-721/trace.json": "da48ce9f49e34818238b21e10cdba9a8e304cabff0eb13162570c6443436ba8d",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-header-721/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "phd-footer-697",
+      "work_type": "phd",
+      "field": "footer",
+      "twips": 697,
+      "input_sha256": "d312fb3a1357d65aa870e4c2c5c4ef79825db16d4283cb64ea8c5286005956b5",
+      "comparison": {
+        "parser_address": "0x4ffd340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "0000484179b54441",
+        "target_and_actual_mm": [
+          12.5,
+          12.294304847717285
+        ]
+      },
+      "return_al": 0,
+      "increment_branch_observed": true,
+      "diagnostic_observed": true,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-697/native-result.txt": "09f071bfc973abc7e6e66f7157277ff3127558f4686517bbac39b3e601b88657",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-697/report.json": "f21968e026fe96a7bee75d12e763b123dc83e9a734e193ffb42c4f701fc02aeb",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-697/trace.json": "2d65bc2d55184c65c4a9eb27fd05487645e03d9ab2c86b5968e07baa4ba69af3",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-697/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "phd-footer-698",
+      "work_type": "phd",
+      "field": "footer",
+      "twips": 698,
+      "input_sha256": "a65239d9ffe443dd1e387a1dfef86c8c04313f78ed47c746c02c8c3e1c2b323c",
+      "comparison": {
+        "parser_address": "0x429d340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "00004841b9fd4441",
+        "target_and_actual_mm": [
+          12.5,
+          12.311944007873535
+        ]
+      },
+      "return_al": 1,
+      "increment_branch_observed": false,
+      "diagnostic_observed": false,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-698/native-result.txt": "270ef51d0242127a658088830a9f13682610b97d3c063b077ff0a977c725d8fa",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-698/report.json": "972787238a1d378e9ee5747fee9991f4e247367972613b291e4fc8d1bbd3493a",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-698/trace.json": "dbdf3934ffe15e18d6f955c3972c52ca8ddc370942193b2ce39a8ccee12f152b",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-698/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "phd-footer-720",
+      "work_type": "phd",
+      "field": "footer",
+      "twips": 720,
+      "input_sha256": "ac8d3864d0381a772a2fa51f56b75ad8cb0e53a3d24360f1f2daed5f31c32f2f",
+      "comparison": {
+        "parser_address": "0x4d1d340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "0000484133334b41",
+        "target_and_actual_mm": [
+          12.5,
+          12.699999809265137
+        ]
+      },
+      "return_al": 1,
+      "increment_branch_observed": false,
+      "diagnostic_observed": false,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-720/native-result.txt": "3cf12ca45537a9c44f8cdf7158845986219dca1ca51d3db6fed153bb34b8782b",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-720/report.json": "eb8a86f5fc888c9e87c933859d50537219862a52d79166cab662711d120d8790",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-720/trace.json": "3cd99e22f642b370f94f3da73506bd12bcc801f3c92daa44b9a84a9107bf1cae",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-720/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    },
+    {
+      "case": "phd-footer-721",
+      "work_type": "phd",
+      "field": "footer",
+      "twips": 721,
+      "input_sha256": "f4518177230f1531ae693f2676a9187bae397f6c0b21c7d0f1bb754ad4f9dd4c",
+      "comparison": {
+        "parser_address": "0x49fd340",
+        "header_footer_count_before": 0,
+        "ebx_matches_parser": false,
+        "compare_stack_hex": "00004841727b4b41",
+        "target_and_actual_mm": [
+          12.5,
+          12.71763801574707
+        ]
+      },
+      "return_al": 0,
+      "increment_branch_observed": true,
+      "diagnostic_observed": true,
+      "artifact_sha256": {
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-721/native-result.txt": "b279a948398e049634ad361dcee56e37037fe9cc747d12bddb4e759fba0b5710",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-721/report.json": "be73d62e03f32bc0a33b924f0e5c65402571bcbfc3f3b290ddbdd98cdf388591",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-721/trace.json": "ef215ef668d305ad02b9b2e92facfc467e2e18bc46393f5c7a05417b56c4cc77",
+        "evidence/differential-platform-r1/section-boundaries-r2/phd-footer-721/tracer-source.py.txt": "3693b0bb8a3ff4a971dbf72cfbb7121255956472311d4ffd0269871ad1ec49f0"
+      }
+    }
+  ],
+  "baseline_sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+  "source_unchanged": true,
+  "limits": "One-section synthetic DOCX only; first observed section predicate invocation. No rule or repair promotion. Modes master and NKR phd; not general dissertation compliance."
+}

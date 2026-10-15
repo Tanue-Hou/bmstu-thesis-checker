@@ -1,0 +1,9 @@
+{
+  "seed": "reduction-seed.docx",
+  "seed_sha256": "3e120c613643da6e258a4ce76f684dcca19b83c8e938356ea6c745bd047a1922",
+  "work_type": "master",
+  "focus_rules": [
+    "Word.HeaderFooterDistanceInvalid"
+  ],
+  "mutations": []
+}

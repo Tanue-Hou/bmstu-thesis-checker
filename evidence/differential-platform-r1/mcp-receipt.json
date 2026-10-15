@@ -1,0 +1,11 @@
+{
+  "status": "passed_actual_stdio_mcp_differential",
+  "tool_count": 11,
+  "mcp_version": "0.2.22",
+  "valid_call_cases": 1,
+  "fresh_native_runs": 0,
+  "verified_cache_hits": 1,
+  "invalid_boolean_limit_rejected": true,
+  "private_stdout_sha256": "bc144389ad014b8fe59905bdce4419e8abd06a42875ce163d6512ad8ffd5101e",
+  "exit_code": 0
+}

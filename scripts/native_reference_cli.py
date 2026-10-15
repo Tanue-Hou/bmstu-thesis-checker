@@ -108,7 +108,7 @@ def validate_counter_watch(trace):
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,required=True);p.add_argument('--native-exe',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--trace-drawings',action='store_true');p.add_argument('--trace-fonts',action='store_true');p.add_argument('--trace-scale',action='store_true');p.add_argument('--watch-first-counter',action='store_true');p.add_argument('--trace-paragraphs',action='store_true');p.add_argument('--trace-image-bytes',action='store_true');p.add_argument('--preserve-pixel-codepage',action='store_true');p.add_argument('--trace-images',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--out',type=Path);p.add_argument('--timeout',type=float,default=25);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,required=True);p.add_argument('--native-exe',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--trace-drawings',action='store_true');p.add_argument('--trace-fonts',action='store_true');p.add_argument('--trace-scale',action='store_true');p.add_argument('--trace-sections',action='store_true');p.add_argument('--watch-first-counter',action='store_true');p.add_argument('--trace-paragraphs',action='store_true');p.add_argument('--trace-image-bytes',action='store_true');p.add_argument('--preserve-pixel-codepage',action='store_true');p.add_argument('--trace-images',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--out',type=Path);p.add_argument('--timeout',type=float,default=25);a=p.parse_args()
     if os.name!='nt':raise RuntimeError('This native reference harness requires Windows')
     if struct.calcsize('P')!=8:raise RuntimeError('Native reference requires 64-bit Python on 64-bit Windows')
     source=resolved(a.input);binary=resolved(a.native_exe)
@@ -134,6 +134,7 @@ def main():
     if a.trace_drawings:command.append('--drawing-trace')
     if a.trace_fonts:command.append('--font-trace')
     if a.trace_scale:command.append('--scale-trace')
+    if a.trace_sections:command.append('--section-trace')
     if a.watch_first_counter:command.append('--watch-first-counter')
     if a.trace_paragraphs:command.append('--paragraph-trace')
     if a.trace_image_bytes:command.append('--image-bytes-trace')

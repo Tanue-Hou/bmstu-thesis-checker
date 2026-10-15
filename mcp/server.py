@@ -25,7 +25,7 @@ from compact_report import project_report
 
 
 SERVER_NAME = "BMSTU Thesis Checker"
-SERVER_VERSION = "0.2.21"
+SERVER_VERSION = "0.2.22"
 METHOD_NOT_FOUND = -32601
 INVALID_PARAMS = -32602
 INTERNAL_ERROR = -32603
@@ -138,6 +138,7 @@ def repair_tool(args, dry_run=False):
 def tool_list_result():
     return {
         "tools": [
+            {"name": "run_differential_campaign_experimental", "description": "Run a bounded private DOCX differential campaign using an explicit original TestVkr232 executable. Compares selected diagnostic-family group counts, optionally reduces paragraphs. Not school ground truth, repair authorization or automatic rule promotion. Use CLI for larger campaigns.", "inputSchema": {"type": "object", "properties": {"spec_path": {"type": "string"}, "output_dir": {"type": "string"}, "native_executable_path": {"type": "string"}, "max_cases": {"type": "integer", "minimum": 1, "maximum": 4, "default": 4}, "max_native_runs": {"type": "integer", "minimum": 1, "maximum": 8, "default": 8}, "minimize_evaluations": {"type": "integer", "minimum": 0, "maximum": 4, "default": 0}}, "required": ["spec_path", "output_dir", "native_executable_path"], "additionalProperties": False}, "annotations": {"readOnlyHint": False, "destructiveHint": False, "idempotentHint": False, "openWorldHint": True}},
             {"name":"check_native_reference_experimental","description":"Windows-only master / NKR postgraduate DOCX/PDF reference check using an explicitly supplied original TestVkr232 EXE. Hidden owned process; hash-matched codepage and native file-entry interventions. Writes private input copy, raw native report and trace. Not a standalone clone or repair authorization.","inputSchema":{"type":"object","properties":{"file_path":{"type":"string"},"native_executable_path":{"type":"string"},"work_type":{"type":"string","enum":["master","phd"],"default":"master"},"timeout_seconds":{"type":"number","minimum":5,"maximum":30,"default":25}},"required":["file_path","native_executable_path"],"additionalProperties":False},"annotations":{"readOnlyHint":False,"destructiveHint":False,"idempotentHint":False,"openWorldHint":True}},
             {"name":"list_native_builds","description":"Known TestVkr identities and validation boundaries; no cross-build evidence transfer.","inputSchema":{"type":"object","properties":{}},"annotations":{"readOnlyHint":True,"destructiveHint":False}},
             {"name":"compare_thesis_results","description":"Compare retained native diagnostics with a local report, verify hashes, retain every diagnostic/finding; no ground-truth or accuracy claim.","inputSchema":{"type":"object","properties":{"local_report_path":{"type":"string"},"native_capture_path":{"type":"string"}},"required":["local_report_path","native_capture_path"]},"annotations":{"readOnlyHint":True,"destructiveHint":False}},
@@ -240,6 +241,22 @@ def tool_list_result():
 def handle_tool_call(params):
     name = params.get("name")
     args = params.get("arguments") or {}
+    if name == 'run_differential_campaign_experimental':
+        bounds = {'max_cases': (4, 1, 4), 'max_native_runs': (8, 1, 8),
+                  'minimize_evaluations': (0, 0, 4)}
+        values = {}
+        for key, (default, lower, upper) in bounds.items():
+            value = args.get(key, default)
+            if isinstance(value, bool) or not isinstance(value, int) or not lower <= value <= upper:
+                raise ValueError(f'{key} must be an integer between {lower} and {upper}; use CLI for larger campaigns')
+            values[key] = value
+        from differential_cli import run as run_campaign
+        result = run_campaign(require_string(args.get('spec_path'), 'spec_path'),
+                              require_string(args.get('output_dir'), 'output_dir'),
+                              require_string(args.get('native_executable_path'), 'native_executable_path'),
+                              **values)
+        return {'content': [{'type': 'text', 'text': 'Bounded experimental differential campaign; private evidence retained. No rule or repair promotion.'}],
+                'structuredContent': result}
     if name == 'check_native_reference_experimental':
         if args.get('work_type','master') not in {'master','phd'}:raise ValueError('Native harness supports master / NKR postgraduate modes only')
         seconds=args.get('timeout_seconds',25)

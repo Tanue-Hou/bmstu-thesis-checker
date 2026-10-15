@@ -6,7 +6,7 @@ description: Check Russian BMSTU VKR/thesis DOCX and PDF files using an independ
 # BMSTU Thesis Checker
 
 Use this skill to check `.docx` and `.pdf` thesis-style documents with the bundled local rules engine.
-The plugin exposes `check_thesis_document`, `check_thesis_folder`, `list_rules`, `explain_rule`, `preview_thesis_fixes`, `fix_thesis_copy`, `list_school_templates`, `list_native_builds`, `compare_thesis_results`, and `check_native_reference_experimental`.
+The v0.2.22 plugin exposes `check_thesis_document`, `check_thesis_folder`, `list_rules`, `explain_rule`, `preview_thesis_fixes`, `fix_thesis_copy`, `list_school_templates`, `list_native_builds`, `compare_thesis_results`, `check_native_reference_experimental`, and `run_differential_campaign_experimental`.
 
 ## Scope
 
@@ -25,6 +25,8 @@ For native232 VML unit or fit differences, read [textbox extension](../../docs/N
 For build232 floating images or textbox diagnostics, read [native drawing evidence](../../docs/NATIVE_DRAWINGS_232.zh.md). Ordinary small body text is not `Pic.SmallLabels`; the proven simple VML predicate uses dimensions below2mm and count above10. Floating image detection also requires native float32 area above500mm2; wrapSquare contributes zero area. Verification is only for the registered narrow DOCX/NKR profiles, with exact evidence/source hashes. Unknown geometry remains unassessed or pending; no finding is not a pass. All drawing repair stays closed.
 
 For a requested live original-program comparison, read [experimental native reference CLI](../../docs/NATIVE_REFERENCE_CLI.zh.md). It supports Windows master / NKR postgraduate DOCX and PDF with an explicitly supplied hash-matching TestVkr232. Pass the actual mode explicitly; `phd` means НКР аспиранта, not every doctoral dissertation. Preserve private evidence and instrumentation labels: hidden owned process, eight resource codepage argument changes, an additional exact pixel-unit ANSI correction when triggered, controlled native entry, actual mode and loader checks. Do not call it an unmodified run, a built-in CLI, a standalone clone, or permission to repair. Default checks remain the reconstructed engine.
+
+For an experimental differential campaign, read [differential testing](../../docs/DIFFERENTIAL_TESTING.zh.md). `run_differential_campaign_experimental` uses a fixed-hash DOCX seed, an explicit matching TestVkr232 executable, and a private output directory. MCP limits a call to 4 variants, 8 fresh native runs, and 4 minimization evaluations. It compares selected diagnostic-family message/finding group counts and can perform paragraph-only ddmin; unresolved runs do not count as agreement. This is not a full fuzzing framework, school-compliance result, rule promotion, or repair permission. The default checking engine remains the local reconstruction.
 
 For native232 image predicates, read [version-scoped image evidence](../../docs/NATIVE_IMAGE_RULE_232.zh.md). Only the precise `verification_by_build["232"]` PNG contexts may gain detection verification after profile, policy, source and evidence hashes pass. Historical230 contexts do not transfer. This is anomaly detection, not school compliance or permission to resample images. Other rules and repair gates remain independent.
 

@@ -1,0 +1,435 @@
+"""Deterministic, single-property DOCX mutations and bounded sequence ddmin.
+
+This module never executes the native checker.  Input DOCX bytes are treated as
+immutable; every mutation is written to a new in-memory ZIP archive.
+"""
+from __future__ import annotations
+
+from dataclasses import dataclass
+from enum import Enum
+from io import BytesIO
+from typing import Any, Callable, Generic, Iterable, Sequence, TypeVar
+import zipfile
+
+from lxml import etree
+
+W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+NS = {"w": W}
+T = TypeVar("T")
+
+
+@dataclass(frozen=True)
+class Mutation:
+    data: bytes
+    description: str
+
+
+class OutcomeStatus(str, Enum):
+    MATCH = "match"
+    MISMATCH = "mismatch"
+    INVALID = "invalid"
+    UNRESOLVED = "unresolved"
+
+
+@dataclass(frozen=True)
+class PredicateOutcome:
+    status: OutcomeStatus
+    detail: str = ""
+
+
+@dataclass(frozen=True)
+class MinimizeResult(Generic[T]):
+    items: tuple[T, ...]
+    status: str
+    evaluations: int
+    unresolved_evaluations: int
+    message: str = ""
+
+
+def _archive_transform(seed: bytes, part: str, transform: Callable[[etree._Element], None]) -> bytes:
+    """Return a DOCX with only ``part`` XML transformed; preserve ZIP members."""
+    src_stream = BytesIO(seed)
+    dst_stream = BytesIO()
+    with zipfile.ZipFile(src_stream, "r") as src:
+        names = src.namelist()
+        if len(names) != len(set(names)):
+            raise ValueError("DOCX has duplicate ZIP member names")
+        if part not in names:
+            raise ValueError(f"DOCX is missing required part: {part}")
+        with zipfile.ZipFile(dst_stream, "w") as dst:
+            for info in src.infolist():
+                payload = src.read(info.filename)
+                if info.filename == part:
+                    root = etree.fromstring(payload, parser=etree.XMLParser(resolve_entities=False, no_network=True))
+                    transform(root)
+                    payload = etree.tostring(root, xml_declaration=True, encoding="UTF-8", standalone=True)
+                dst.writestr(info, payload)
+    result = dst_stream.getvalue()
+    validate_docx(result)
+    return result
+
+
+def validate_docx(data: bytes) -> None:
+    """Validate ZIP integrity, required parts, XML well-formedness and final sectPr."""
+    with zipfile.ZipFile(BytesIO(data), "r") as zf:
+        bad = zf.testzip()
+        if bad:
+            raise ValueError(f"corrupt ZIP member: {bad}")
+        names = set(zf.namelist())
+        if not {"[Content_Types].xml", "word/document.xml"} <= names:
+            raise ValueError("not a minimally valid Word DOCX package")
+        root = etree.fromstring(zf.read("word/document.xml"), parser=etree.XMLParser(resolve_entities=False, no_network=True))
+        body = root.find(f"{{{W}}}body")
+        if body is None or len(body) == 0:
+            raise ValueError("DOCX document body is absent or empty")
+        if body[-1].tag != f"{{{W}}}sectPr":
+            raise ValueError("final body child must remain w:sectPr")
+
+
+def _paragraphs(root: etree._Element) -> list[etree._Element]:
+    return root.xpath(".//w:body//w:p", namespaces=NS)
+
+
+def _get_or_add(parent: etree._Element, tag: str) -> etree._Element:
+    child = parent.find(f"{{{W}}}{tag}")
+    if child is None:
+        child = etree.SubElement(parent, f"{{{W}}}{tag}")
+    return child
+
+
+def _mutate_property(
+    seed: bytes,
+    property: str,
+    value: Any,
+    *,
+    paragraph_index: int = 0,
+    run_index: int = 0,
+    section_index: int = 0,
+) -> Mutation:
+    """Apply exactly one direct-format property mutation to an immutable DOCX.
+
+    Supported properties: ``left``, ``right``, ``firstLine``, ``line``,
+    ``lineRule``, ``font_sz``, ``gutter``, ``header``, ``footer``.  ``None``
+    removes only the selected property attribute/element.
+    """
+    validate_docx(seed)
+    prop = property
+    if prop in {"left", "right", "firstLine", "line", "lineRule"}:
+        def change(root: etree._Element) -> None:
+            pars = _paragraphs(root)
+            if not 0 <= paragraph_index < len(pars):
+                raise IndexError("paragraph_index out of range")
+            p = pars[paragraph_index]
+            ppr = p.find(f"{{{W}}}pPr")
+            if ppr is None:
+                if value is None:
+                    return
+                ppr = etree.Element(f"{{{W}}}pPr")
+                p.insert(0, ppr)
+            is_spacing = prop in {"line", "lineRule"}
+            element_name = "spacing" if is_spacing else "ind"
+            attr_name = prop if not is_spacing else ("line" if prop == "line" else "lineRule")
+            element = ppr.find(f"{{{W}}}{element_name}")
+            if value is None:
+                if element is not None:
+                    element.attrib.pop(f"{{{W}}}{attr_name}", None)
+                    if not element.attrib and len(element) == 0:
+                        ppr.remove(element)
+            else:
+                if element is None:
+                    element = _get_or_add(ppr, element_name)
+                element.set(f"{{{W}}}{attr_name}", str(value))
+        part = "word/document.xml"
+        location = f"paragraph[{paragraph_index}]"
+        target_property = prop
+    elif prop == "font_sz":
+        def change(root: etree._Element) -> None:
+            pars = _paragraphs(root)
+            if not 0 <= paragraph_index < len(pars):
+                raise IndexError("paragraph_index out of range")
+            runs = pars[paragraph_index].xpath("./w:r", namespaces=NS)
+            if not 0 <= run_index < len(runs):
+                raise IndexError("run_index out of range")
+            run = runs[run_index]
+            rpr = run.find(f"{{{W}}}rPr")
+            if rpr is None:
+                if value is None:
+                    return
+                rpr = etree.Element(f"{{{W}}}rPr")
+                run.insert(0, rpr)
+            sz = rpr.find(f"{{{W}}}sz")
+            if value is None:
+                if sz is not None:
+                    rpr.remove(sz)
+            else:
+                if sz is None:
+                    sz = _get_or_add(rpr, "sz")
+                sz.set(f"{{{W}}}val", str(value))
+        part = "word/document.xml"
+        location = f"paragraph[{paragraph_index}].run[{run_index}]"
+        target_property = "w:sz"
+    elif prop in {"gutter", "header", "footer"}:
+        def change(root: etree._Element) -> None:
+            sections = root.xpath(".//w:body//w:sectPr", namespaces=NS)
+            if not 0 <= section_index < len(sections):
+                raise IndexError("section_index out of range")
+            section = sections[section_index]
+            pgmar = section.find(f"{{{W}}}pgMar")
+            if pgmar is None:
+                if value is None:
+                    return
+                pgmar = _get_or_add(section, "pgMar")
+            attr = f"{{{W}}}{prop}"
+            if value is None:
+                pgmar.attrib.pop(attr, None)
+                if not pgmar.attrib and len(pgmar) == 0:
+                    section.remove(pgmar)
+            else:
+                pgmar.set(attr, str(value))
+        part = "word/document.xml"
+        location = f"section[{section_index}]"
+        target_property = f"w:pgMar/@w:{prop}"
+    else:
+        raise ValueError(f"unsupported property: {property}")
+
+    data = _archive_transform(seed, part, change)
+    action = "remove" if value is None else f"set to {value!r}"
+    return Mutation(data, f"{location}: {target_property} {action}")
+
+
+def mutate_docx(seed: bytes, mutation: dict[str, Any] | str, value: Any = None, **kwargs: Any) -> bytes | Mutation:
+    """Apply one mutation. Dict API returns bytes; legacy property API returns Mutation."""
+    if isinstance(mutation, str):
+        return _mutate_property(seed, mutation, value, **kwargs)
+    if not isinstance(mutation, dict):
+        raise TypeError("mutation must be a dict")
+    kind = mutation.get("kind")
+    if kind == "paragraph_indent":
+        result = _mutate_property(seed, str(mutation["attribute"]), mutation.get("value"), paragraph_index=int(mutation.get("index", 0)))
+    elif kind == "paragraph_spacing":
+        result = _mutate_property(seed, str(mutation["attribute"]), mutation.get("value"), paragraph_index=int(mutation.get("index", 0)))
+    elif kind == "run_font_sz":
+        result = _mutate_property(seed, "font_sz", mutation.get("value"), paragraph_index=int(mutation.get("paragraph_index", 0)), run_index=int(mutation.get("run_index", 0)))
+    elif kind == "section_page_margin":
+        result = _mutate_property(seed, str(mutation["attribute"]), mutation.get("value"), section_index=int(mutation.get("section_index", 0)))
+    elif kind == "paragraph_remove_property":
+        result = remove_paragraph_property(seed, int(mutation["index"]), str(mutation["property"]))
+    elif kind == "paragraph_delete":
+        result = delete_paragraph(seed, int(mutation["index"]))
+    else:
+        raise ValueError(f"unsupported mutation kind: {kind}")
+    return result.data
+
+
+def describe_mutation(mutation: dict[str, Any]) -> str:
+    """Stable concise description for receipts or variant manifests."""
+    kind = mutation.get("kind")
+    if kind in {"paragraph_indent", "paragraph_spacing"}:
+        loc = f"paragraph[{mutation.get('index', 0)}]"
+        field = f"w:{mutation.get('attribute')}"
+    elif kind == "run_font_sz":
+        loc = f"paragraph[{mutation.get('paragraph_index', 0)}].run[{mutation.get('run_index', 0)}]"
+        field = "w:sz"
+    elif kind == "section_page_margin":
+        loc = f"section[{mutation.get('section_index', 0)}]"
+        field = f"w:pgMar/@w:{mutation.get('attribute')}"
+    elif kind == "paragraph_remove_property":
+        loc = f"paragraph[{mutation.get('index')}]"
+        field = f"w:{mutation.get('property')}"
+    elif kind == "paragraph_delete":
+        return f"delete paragraph[{mutation.get('index')}]"
+    else:
+        raise ValueError(f"unsupported mutation kind: {kind}")
+    value = mutation.get("value")
+    action = "remove" if value is None else f"set to {value!r}"
+    return f"{loc}: {field} {action}"
+
+
+def delete_paragraph(seed: bytes, paragraph_index: int) -> Mutation:
+    """Create a candidate with one body paragraph deleted; final sectPr is protected."""
+    validate_docx(seed)
+    def change(root: etree._Element) -> None:
+        pars = _paragraphs(root)
+        if not 0 <= paragraph_index < len(pars):
+            raise IndexError("paragraph_index out of range")
+        p = pars[paragraph_index]
+        parent = p.getparent()
+        if parent is None:
+            raise ValueError("paragraph is not in document body")
+        parent.remove(p)
+    data = _archive_transform(seed, "word/document.xml", change)
+    return Mutation(data, f"delete body paragraph[{paragraph_index}]")
+
+
+def remove_paragraph_property(seed: bytes, paragraph_index: int, property: str) -> Mutation:
+    """Remove one direct paragraph-format child (for example ``ind`` or ``spacing``)."""
+    allowed = {"ind", "spacing", "jc", "keepNext", "keepLines", "pageBreakBefore", "outlineLvl"}
+    if property not in allowed:
+        raise ValueError(f"unsupported paragraph property: {property}")
+    validate_docx(seed)
+    def change(root: etree._Element) -> None:
+        pars = _paragraphs(root)
+        if not 0 <= paragraph_index < len(pars):
+            raise IndexError("paragraph_index out of range")
+        ppr = pars[paragraph_index].find(f"{{{W}}}pPr")
+        if ppr is not None:
+            element = ppr.find(f"{{{W}}}{property}")
+            if element is not None:
+                ppr.remove(element)
+    data = _archive_transform(seed, "word/document.xml", change)
+    return Mutation(data, f"paragraph[{paragraph_index}]: remove w:{property}")
+
+
+def structural_candidates(seed: bytes) -> list[Mutation]:
+    """Enumerate valid single-paragraph-deletion and direct-property-removal candidates."""
+    validate_docx(seed)
+    with zipfile.ZipFile(BytesIO(seed)) as zf:
+        root = etree.fromstring(zf.read("word/document.xml"))
+    pars = _paragraphs(root)
+    candidates: list[Mutation] = []
+    for i in range(len(pars)):
+        try:
+            candidates.append(delete_paragraph(seed, i))
+        except ValueError:
+            # Keep at least one body paragraph and the mandatory final sectPr.
+            continue
+        ppr = pars[i].find(f"{{{W}}}pPr")
+        if ppr is not None:
+            for child in list(ppr):
+                local = etree.QName(child).localname
+                if local in {"ind", "spacing", "jc", "keepNext", "keepLines", "pageBreakBefore", "outlineLvl"}:
+                    candidates.append(remove_paragraph_property(seed, i, local))
+    return candidates
+
+
+def paragraph_atoms(seed: bytes) -> list[int]:
+    """Return stable document-order paragraph ids for this immutable seed."""
+    validate_docx(seed)
+    with zipfile.ZipFile(BytesIO(seed)) as zf:
+        root = etree.fromstring(zf.read("word/document.xml"))
+    return list(range(len(_paragraphs(root))))
+
+
+def retain_paragraphs(seed: bytes, ids: Iterable[int]) -> bytes:
+    """Return a valid candidate retaining only the selected paragraph ids."""
+    keep = set(ids)
+    pars = paragraph_atoms(seed)
+    if any(not isinstance(i, int) or i < 0 or i >= len(pars) for i in keep):
+        raise ValueError("paragraph id out of range")
+    def change(root: etree._Element) -> None:
+        all_pars = _paragraphs(root)
+        for i in range(len(all_pars) - 1, -1, -1):
+            if i not in keep:
+                p = all_pars[i]
+                parent = p.getparent()
+                if parent is not None:
+                    parent.remove(p)
+    return _archive_transform(seed, "word/document.xml", change)
+
+
+def _normalize_outcome(raw: Any) -> PredicateOutcome:
+    if isinstance(raw, PredicateOutcome):
+        return raw
+    if raw is True:
+        return PredicateOutcome(OutcomeStatus.MATCH)
+    if raw is False:
+        return PredicateOutcome(OutcomeStatus.MISMATCH)
+    if raw is None:
+        return PredicateOutcome(OutcomeStatus.UNRESOLVED, "predicate returned None")
+    raise TypeError("predicate must return bool, None, or PredicateOutcome")
+
+
+def ddmin(items: Sequence[T], predicate: Callable[[tuple[T, ...]], Any], max_evaluations: int = 100) -> dict[str, Any]:
+    """Minimize a sequence while preserving a tri-state predicate under a budget.
+
+    Only a valid ``MATCH`` preserves the candidate. ``INVALID`` and
+    ``UNRESOLVED`` never count as mismatches and prevent a 1-minimality claim
+    when encountered in the final delete-one certification pass.
+    """
+    if max_evaluations < 1:
+        return _ddmin_dict(tuple(items), "budget_exhausted", 0, 0, "no evaluation budget")
+    current = tuple(items)
+    cache: dict[tuple[int, ...], PredicateOutcome] = {}
+    original_index = {i: item for i, item in enumerate(current)}
+    active = tuple(range(len(current)))
+    evaluations = 0
+    unresolved = 0
+
+    def evaluate(indices: tuple[int, ...]) -> PredicateOutcome | None:
+        nonlocal evaluations, unresolved
+        if indices in cache:
+            return cache[indices]
+        if evaluations >= max_evaluations:
+            return None
+        candidate = tuple(original_index[i] for i in indices)
+        try:
+            outcome = _normalize_outcome(predicate(candidate))
+        except Exception as exc:
+            outcome = PredicateOutcome(OutcomeStatus.UNRESOLVED, f"predicate raised {type(exc).__name__}")
+        evaluations += 1
+        if outcome.status in {OutcomeStatus.INVALID, OutcomeStatus.UNRESOLVED}:
+            unresolved += 1
+        cache[indices] = outcome
+        return outcome
+
+    first = evaluate(active)
+    if first is None:
+        return _ddmin_dict(current, "budget_exhausted", evaluations, unresolved, "budget exhausted before initial evaluation")
+    if first.status != OutcomeStatus.MATCH:
+        status = "initial_unresolved" if first.status in {OutcomeStatus.INVALID, OutcomeStatus.UNRESOLVED} else "initial_mismatch"
+        return _ddmin_dict(current, status, evaluations, unresolved, first.detail)
+
+    granularity = 2
+    while len(active) >= 2:
+        n = min(granularity, len(active))
+        chunks = [active[(i * len(active)) // n:((i + 1) * len(active)) // n] for i in range(n)]
+        reduced = False
+        for chunk in chunks:
+            out = evaluate(chunk)
+            if out is None:
+                return _ddmin_dict(tuple(original_index[i] for i in active), "budget_exhausted", evaluations, unresolved, "budget exhausted during subset reduction")
+            if out.status == OutcomeStatus.MATCH:
+                active = chunk
+                granularity = max(granularity - 1, 2)
+                reduced = True
+                break
+        if reduced:
+            continue
+        for chunk in chunks:
+            excluded = set(chunk)
+            complement = tuple(i for i in active if i not in excluded)
+            out = evaluate(complement)
+            if out is None:
+                return _ddmin_dict(tuple(original_index[i] for i in active), "budget_exhausted", evaluations, unresolved, "budget exhausted during complement reduction")
+            if out.status == OutcomeStatus.MATCH:
+                active = complement
+                granularity = max(granularity - 1, 2)
+                reduced = True
+                break
+        if reduced:
+            continue
+        if n == len(active):
+            break
+        granularity = min(len(active), granularity * 2)
+
+    # Certification is deliberately separate: only a complete delete-one pass
+    # over the final candidate can yield a 1-minimality claim.
+    while True:
+        changed = False
+        for i in range(len(active)):
+            candidate = active[:i] + active[i + 1:]
+            out = evaluate(candidate)
+            if out is None:
+                return _ddmin_dict(tuple(original_index[j] for j in active), "budget_exhausted", evaluations, unresolved, "budget exhausted during 1-minimality certification")
+            if out.status == OutcomeStatus.MATCH:
+                active = candidate
+                changed = True
+                break
+            if out.status in {OutcomeStatus.INVALID, OutcomeStatus.UNRESOLVED}:
+                return _ddmin_dict(tuple(original_index[j] for j in active), "unresolved", evaluations, unresolved, out.detail or "delete-one predicate unresolved")
+        if not changed:
+            return _ddmin_dict(tuple(original_index[j] for j in active), "certified_1minimal", evaluations, unresolved, "")
+
+
+def _ddmin_dict(items: tuple[Any, ...], status: str, evaluations: int, unresolved: int, message: str) -> dict[str, Any]:
+    return {"items": list(items), "evaluations": evaluations, "status": status, "unresolved_evaluations": unresolved, "message": message}

@@ -1,0 +1,52 @@
+{
+  "seed": "../dynamic-master/baseline.docx",
+  "seed_sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+  "work_type": "master",
+  "focus_rules": [
+    "Word.HeaderFooterDistanceInvalid"
+  ],
+  "mutations": [
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 0
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 600
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 709
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "header",
+      "value": 720
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "footer",
+      "value": 0
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "footer",
+      "value": 709
+    },
+    {
+      "kind": "section_page_margin",
+      "section_index": 0,
+      "attribute": "footer",
+      "value": 720
+    }
+  ]
+}

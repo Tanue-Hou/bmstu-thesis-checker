@@ -1,0 +1,15 @@
+{
+  "status": "bounded_campaign_finished",
+  "cases": 12,
+  "available_cases": 12,
+  "case_limit_truncated": false,
+  "outcomes": {
+    "selected_families_equal": 5,
+    "family_difference": 7
+  },
+  "fresh_native_runs": 27,
+  "verified_cache_hits": 1,
+  "seed_unchanged": true,
+  "repair_or_rule_promotion": false,
+  "limits": "Selected family message counts only; failures unresolved; not school correctness, accuracy or branch coverage."
+}

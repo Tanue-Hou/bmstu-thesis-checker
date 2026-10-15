@@ -33,7 +33,7 @@ class THREAD_ENTRY(C.Structure):
     _fields_=[('size',D),('usage',D),('tid',D),('pid',D),('base_priority',W.LONG),('delta_priority',W.LONG),('flags',D)]
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--drawing-trace',action='store_true');p.add_argument('--font-trace',action='store_true');p.add_argument('--scale-trace',action='store_true');p.add_argument('--watch-first-counter',action='store_true');p.add_argument('--paragraph-trace',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--drawing-trace',action='store_true');p.add_argument('--font-trace',action='store_true');p.add_argument('--scale-trace',action='store_true');p.add_argument('--section-trace',action='store_true');p.add_argument('--watch-first-counter',action='store_true');p.add_argument('--paragraph-trace',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
     # Additional business trace uses the same bounded, owned process.
     if a.scale_trace:a.font_trace=True
     if a.watch_first_counter:
@@ -44,6 +44,7 @@ def main():
     if a.dictionary_cp1251:a.trace_codepage=True
     if a.russian_suspended:a.russian=True
     if not 0<a.seconds<=30:raise ValueError('Trace duration must be <=30 seconds')
+    section_parser=None
     drawing_trace=a.drawing_trace
     image_bytes_trace=a.image_bytes_trace
     probe_raw=None
@@ -196,6 +197,9 @@ def main():
                     if a.probe_document:
                         for va,label in [(0x00481794,'single_file_drop_handler'),(0x0047a528,'file_check_entry'),(0x0043dd1c,'docx_load'),(0x0046ba90,'pdf_load'),(0x00451e54,'structure_volume_check'),(0x00452ac5,'volume_selected_threshold'),(0x00452b94,'volume_decision'),(0x00452bb3,'volume_insufficient_emit')]:
                             addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
+                        if a.section_trace:
+                            for va,label in [(0x0040c3b4,'section_header_compare'),(0x0040c3b9,'section_header_result'),(0x0040c3c0,'section_header_increment'),(0x0040c3e6,'section_footer_compare'),(0x0040c3eb,'section_footer_result'),(0x0040c3f2,'section_footer_increment')]:
+                                addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                         if pixel_trace:
                             for va,label in [(0x0042ae4b,'docx_image_dimensions'),(0x0042ae4e,'docx_image_area_compare'),(0x0042ae56,'docx_large_image_flag'),(0x0042ae5c,'docx_image_flag_result'),(0x00472be7,'pdf_image_area_compare'),(0x00472bef,'pdf_large_image_emit'),(0x0047c709,'image_counter_report_gate'),(0x0047c795,'pixel_literal_conversion'),(0x0047c79a,'pixel_literal_return')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
@@ -252,6 +256,13 @@ def main():
                                     pending_steps[int(event.tid)]=(addr,original,label)
                                     context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
                             hit={'label':label,'address':hex(addr),'registers':{n:hex(getattr(context,n)) for n in ['Eip','Esp','Eax','Edx','Ecx']},'stack_dwords':list(struct.unpack('<4I',read(context.Esp,16))),'one_shot':label!='MultiByteToWideChar_thunk'};hits.append(hit);entry['hit']=label
+                            if a.section_trace and label=='docx_load':section_parser=context.Eax
+                            if a.section_trace and label.startswith('section_'):
+                                if section_parser is None:raise RuntimeError('Section predicate observed before DOCX parser identity')
+                                hit['section_state']={'parser_address':hex(section_parser),'header_footer_count_before':signed(section_parser+0x28c),'ebx_matches_parser':context.Ebx==section_parser}
+                                if label.endswith('_compare'):
+                                    values=read(context.Esp,8);hit['section_state'].update(compare_stack_hex=values.hex(),target_and_actual_mm=list(struct.unpack('<2f',values)))
+                                if label.endswith('_result'):hit['section_state']['comparison_return_al']=context.Eax&255
                             if a.watch_first_counter and label in ['docx_load','pdf_load']:
                                 if counter_watch.get('installed'):raise RuntimeError('Counter watch cannot silently switch parser objects')
                                 if context.Dr7&0xff:raise RuntimeError('Unexpected pre-existing hardware watch in owned thread')
