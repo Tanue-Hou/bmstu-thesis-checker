@@ -1,0 +1,86 @@
+{
+  "native_build": 232,
+  "work_type": "master",
+  "cases": [
+    {
+      "case": "beforeTiny",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/beforeTiny.docx",
+      "sha256": "84ef597b2311fa3c04c3d3f01ded157d5a7ea72f747ee1747fbf333b2d21549e",
+      "half_points": 8,
+      "text_utf16_units": 11,
+      "role": "before",
+      "filler_paragraphs": 0,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r3/beforeTiny"
+    },
+    {
+      "case": "fallback61Tiny",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/fallback61Tiny.docx",
+      "sha256": "632b339b4d665ff0bc4dacf7cd33a961ddd86ba51e84fb6dbed5353f101a8cba",
+      "half_points": 8,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 61,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 11,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 1,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r3/fallback61Tiny"
+    },
+    {
+      "case": "tableMarker",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/tableMarker.docx",
+      "sha256": "9bba3e3e0eae5470b38dbfb063b709b3798e58505e94bccf22e71bda4bf5c741",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "tableMarker",
+      "filler_paragraphs": 0,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r3/tableMarker"
+    },
+    {
+      "case": "textboxMarker",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/textboxMarker.docx",
+      "sha256": "a34886f7762a70e826a15c90294c044841cac1f37adf9e2ac8734d17350689a7",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "textboxMarker",
+      "filler_paragraphs": 0,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r3/textboxMarker"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "testvkr232-font-activation-static-index-v1",
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "sources": {
+    "implementation/evidence/agent-v027/decompilation/provenance.json": "3608d1961f95f3ca6ce5c5f7e69d5a08e84b56b5dc2ab7b3531dfa608eae5733",
+    "implementation/evidence/agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "implementation/evidence/agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "implementation/evidence/business-map-232/file-entry-decompilation-r1/function.c": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4",
+    "implementation/evidence/business-map-232/font-function-map-r1/map.json": "cae2e498ba8bce1f07a71f7207bb053695ad5b82bfa4ee3e019e74da97429b42"
+  },
+  "field": {
+    "parser_offset": "0x11d",
+    "static_writes": [
+      {
+        "va": "0x0043dd1c",
+        "file": "recovered_pseudocode.c",
+        "line": 30991,
+        "value": 0,
+        "context": "new-file processing initialization"
+      },
+      {
+        "va": "0x00437374",
+        "file": "recovered_pseudocode.c",
+        "lines": [27977, 27982],
+        "value": 1,
+        "context": "paragraph/post-text processing after role and token/length gates"
+      }
+    ],
+    "other_writes_found": false,
+    "reset_scope": "per file processing path at 0043dd1c; not cleared by 00437374"
+  },
+  "runtime_reader": {
+    "va": "0x004098f8",
+    "lines": [4127, 4174],
+    "uses": "font-size accumulation gates for small, large, and other size categories",
+    "important_gate": "param_3 + 0xac and parser + 0x11d condition the main small-font branch at lines 4127-4147"
+  },
+  "additional_read_sites": [
+    {
+      "function_va": "0x0040e9a8",
+      "line": 6873,
+      "context": "w:tabs parsing and conditional tab-stop handling"
+    },
+    {
+      "function_va": "0x0040fdfc",
+      "line": 7323,
+      "context": "w:rFonts parsing and font-name handling"
+    },
+    {
+      "function_va": "0x00415824",
+      "lines": [9804, 9813],
+      "context": "conditional report/addition path based on parser text and dimensions"
+    }
+  ],
+  "paragraph_setter": {
+    "va": "0x00437374",
+    "guard_lines": [27917, 27920],
+    "set_lines": [27977, 27984],
+    "conditions": [
+      "activation test is only entered when parser + 0x11d is zero and parser + 0x120 is zero",
+      "within this path, token comparisons at lines 27940-27974 or text length > 60 at lines 27975-27979 set +0x11d and +0x11e"
+    ],
+    "post_activation": "the function then reads +0x11d at line 27986 and processes paragraph-format branches; no clear occurs"
+  },
+  "order_and_callers": [
+    {
+      "caller_va": "0x004120b8",
+      "evidence": "recovered_pseudocode.c lines 8087-8102",
+      "order": ["0x004098f8", "0x00437374"],
+      "description": "main text/run path in this export"
+    },
+    {
+      "caller_va": "0x0040e9a8",
+      "evidence": "recovered_pseudocode.c lines 6947-6955",
+      "order": ["0x004098f8", "0x00437374"],
+      "description": "format/property parse path in this export"
+    },
+    {
+      "direct_callers_of_00437374": ["0x00405e58", "0x004064e0", "0x004078c0", "0x00408a08", "0x0040e9a8", "0x004120b8", "0x00412214", "0x00415824"]
+    }
+  ],
+  "role_boundaries": {
+    "confirmed": [
+      "0x11d is stored on the parser state object and is not reset in the paragraph routine",
+      "first activation is guarded by parser + 0x120 == 0",
+      "004098f8 separately gates particular counters using param_3 + 0xac and parser offsets +0xc8, +0xf0, +0x110"
+    ],
+    "unknown": [
+      "source-level meaning of parser +0x120 and param_3 +0xac",
+      "whether all table and textbox paths share the same parser-state instance",
+      "whether +0xc8 is a general table flag; existing font-function-map-r1 explicitly leaves its full semantics unresolved"
+    ]
+  },
+  "claim_boundary": "Static control-flow and field-write index only; it does not establish runtime activation for every document or source-level table/textbox semantics."
+}

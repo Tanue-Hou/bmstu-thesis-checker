@@ -1,0 +1,51 @@
+{
+  "status": "completed_same_hash_private_font_diagnostic_scope_delta",
+  "comparison": {
+    "baseline_summary_sha256": "101ca53b3ae9ebdb9066072f7b5c9bc56c5d2566ea17b6a994b220cd5c73e128",
+    "current_summary_sha256": "53d97b58e742199af7378c651c4f91e831d5ad2a480d3cb88e450a43de78fd98",
+    "matched_source_hash_mode_pairs": 17,
+    "source_identity_set_sha256": "19367d3dd6ccee7d303320ddbd57e47f3ea93e97ec77b8e14ce58f735366e6b2",
+    "input_inventory_sha256": "bf0ff0cf32953b17f3d4ba560543671bd6afbc5e1aec3033b1dd233a90284b55",
+    "same_native_capture_set": true,
+    "native_capture_set_sha256": "6f8429ae3ff89aa08b8218bc083ffc9d54cbcc8553972d90e5987559fa063cc6",
+    "errors_baseline": 0,
+    "errors_current": 0
+  },
+  "local_font_findings": {
+    "baseline_total": 16,
+    "current_total": 4,
+    "baseline_small": 3,
+    "current_small": 3,
+    "baseline_large": 13,
+    "current_large": 1,
+    "removed_findings": 12,
+    "removed_family": "Word.FontSizeTooLarge",
+    "removed_mode_counts": {
+      "master": 12,
+      "phd": 0
+    },
+    "small_findings_removed": 0,
+    "large_findings_removed": 12
+  },
+  "existing_native_capture_comparison": {
+    "native_diagnostics_total": 80,
+    "unmapped_native_diagnostics": 0,
+    "removed_large_same_rule_family_present": 0,
+    "removed_large_same_rule_family_absent": 12,
+    "mapping_basis": "existing normalized diagnostic-family mapping in retained comparison JSON, joined by input SHA-256 and work type"
+  },
+  "legacy_location_fields": {
+    "removed_large_findings": 12,
+    "sampled_precise_occurrences": 64,
+    "occurrences_with_enabled_true": 0,
+    "occurrences_with_enabled_false": 0,
+    "occurrences_without_enabled_field": 64,
+    "interpretation": "The v0.2.18 local finding locations do not expose native_font_enabled. Existing original-program captures contain document-level diagnostics, not per-run enabled state; therefore the 12 removals cannot be attributed to run enabled=false from these artifacts."
+  },
+  "implementation_hash_manifest_sha256": "97adcb38cabfcd1f928dc23685ac1adaaea6b03a752d2c477901469f3dc72a14",
+  "limits": [
+    "Counts describe local diagnostic-scope changes across 17 same-hash private inputs; they are not an accuracy estimate.",
+    "Original captures establish whether a mapped diagnostic family appeared, not its source run or effective enabled flag.",
+    "No private case identifiers, document paths, text excerpts, or per-document source hashes are included."
+  ]
+}

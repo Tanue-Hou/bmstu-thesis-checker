@@ -1,0 +1,54 @@
+{
+  "native_build": 232,
+  "work_type": "master",
+  "cases": [
+    {
+      "case": "titleChar50",
+      "input": "evidence/business-map-232/linked-font-inputs-r1/titleChar50.docx",
+      "sha256": "be19f3d615474fd7c70c23f9d350ae3eb598415199f193acd7638e3f37c650b6",
+      "work_type": "master",
+      "font_state": {
+        "small_count": 10,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/linked-font-native-r1/titleChar50"
+    },
+    {
+      "case": "unlinkTitle",
+      "input": "evidence/business-map-232/linked-font-inputs-r1/unlinkTitle.docx",
+      "sha256": "814a6170f2852e136760feba48a095df159dcb9af9d5b4802a40ea5ff9c53192",
+      "work_type": "master",
+      "font_state": {
+        "small_count": 10,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/linked-font-native-r1/unlinkTitle"
+    },
+    {
+      "case": "titleChar50Direct30",
+      "input": "evidence/business-map-232/linked-font-inputs-r1/titleChar50Direct30.docx",
+      "sha256": "17b0ebc9490d912ce0b889062f5f5ce5a45bd2b5f68964baed1276c9e7e84174",
+      "work_type": "master",
+      "font_state": {
+        "small_count": 10,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/linked-font-native-r1/titleChar50Direct30"
+    }
+  ]
+}

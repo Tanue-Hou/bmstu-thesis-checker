@@ -35,7 +35,7 @@ class StyleResolver:
         node = properties.find(qn('w:' + tag)) if properties is not None else None
         return node.get(qn('w:val')) if node is not None else None
 
-    def properties(self, paragraph, run=None):
+    def properties(self, paragraph, run=None, native_linked=False):
         kind = 'rPr' if run is not None else 'pPr'
         result = OxmlElement('w:' + kind)
         sources = {}
@@ -76,6 +76,16 @@ class StyleResolver:
         ppr = paragraph.find(qn('w:pPr'))
         for style in self.chain(self.style_id(ppr, 'pStyle'), 'paragraph'):
             merge(style.find(qn('w:' + kind)), 'paragraph_style:' + style.get(qn('w:styleId')), style=True)
+        if run is not None and native_linked:
+            # TestVkr232 applies the linked character style before direct run
+            # formatting. Keep this compatibility behavior out of the normal
+            # OOXML resolver and the existing copy-repair path.
+            for style in self.chain(self.style_id(ppr, 'pStyle'), 'paragraph'):
+                link = style.find(qn('w:link'))
+                linked = self.styles.get(link.get(qn('w:val'))) if link is not None else None
+                if linked is not None and linked.get(qn('w:type')) == 'character':
+                    for character in self.chain(linked.get(qn('w:styleId')), 'character'):
+                        merge(character.find(qn('w:rPr')), 'native_linked_character:' + character.get(qn('w:styleId')), style=True)
         if run is not None:
             rpr = run.find(qn('w:rPr'))
             for style in self.chain(self.style_id(rpr, 'rStyle'), 'character'):

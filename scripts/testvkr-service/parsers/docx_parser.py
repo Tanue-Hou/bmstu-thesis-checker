@@ -137,6 +137,9 @@ class DocxParser:
                 continue
 
             rPr, formatting_sources = self.style_resolver.properties(p_element, w_r)
+            native_props, native_sources = self.style_resolver.properties(p_element, w_r, native_linked=True)
+            native_sz = native_props.find(qn('w:sz'))
+            native_size = float(native_sz.get(qn('w:val'))) / 2.0 if native_sz is not None else None
 
             # Default properties
             font_size = None
@@ -193,6 +196,8 @@ class DocxParser:
                 'text': text,
                 'xml_path':w_r.getroottree().getpath(w_r),
                 'font_size_pt': font_size,
+                'native_font_size_pt': native_size,
+                'native_font_size_source': native_sources.get('sz'),
                 'font_name': font_name,
                 'color_hex': color_hex,
                 'bg_color_hex': bg_color_hex,
@@ -475,7 +480,7 @@ class DocxParser:
         for control in self.doc.element.xpath('.//w:tab | .//w:br | .//w:cr | .//w:sym'):
             paragraph=next(control.iterancestors(qn('w:p')),None);run=next(control.iterancestors(qn('w:r')),None)
             if paragraph is None or run is None:font_profile=False;continue
-            props,_=self.style_resolver.properties(paragraph,run);size=props.find(qn('w:sz'))
+            props,_=self.style_resolver.properties(paragraph,run,native_linked=True);size=props.find(qn('w:sz'))
             try:normal_size=size is not None and 16<=float(size.get(qn('w:val')))<=36
             except (ValueError,TypeError):normal_size=False
             if not normal_size or any(etree.QName(n).localname=='textbox' for n in control.iterancestors()):font_profile=False
@@ -524,9 +529,39 @@ class DocxParser:
                 prior_breaks+=len(breaks)
                 if first_activation is None or first_activation+prior_breaks>60:native_paragraph_profile=False
         native_paragraph_profile=bool(native_paragraph_profile and len(native_paragraphs)<=1001)
+        # Native font runs are classified before paragraph-end activation. A
+        # textbox's inner paragraph precedes its empty host boundary; a table
+        # adds a separate empty end boundary to the native text list.
+        by_path={r['xml_path']:r for r in native_paragraphs};font_events=[]
+        font_elements={e.getroottree().getpath(e):e for e in self.doc.element.body.iter(qn('w:p'))}
+        def font_event(element):
+            record=by_path.get(element.getroottree().getpath(element))
+            if record is not None:font_events.append({'kind':'paragraph','xml_path':record['xml_path'],'text':record['text']})
+        for child in self.doc.element.body:
+            if child.tag==qn('w:p'):
+                nested=list(child.iter(qn('w:p')))[1:]
+                for inner in nested:font_event(inner)
+                font_event(child)
+                if nested and by_path[child.getroottree().getpath(child)]['text']:font_profile=False
+            elif child.tag==qn('w:tbl'):
+                for element in child.iter(qn('w:p')):font_event(element)
+                font_events.append({'kind':'table_end_boundary','xml_path':None,'source_table_xml_path':child.getroottree().getpath(child),'text':''})
+        if tables_for_font and labels:font_profile=False
+        if len(native_paragraphs)>1001:font_profile=False
+        # Unmeasured text controls can split native list records before the
+        # fallback threshold. Early exact activation avoids that ambiguity.
+        font_early_marker=next((i+1 for i,e in enumerate(font_events) if e['text'].strip(' \t\r\n').lower() in activators),None)
+        pre_controls=0
+        for i,event in enumerate(font_events):
+            if font_early_marker is not None and i+1>=font_early_marker:break
+            if event['xml_path'] is not None:
+                element=font_elements[event['xml_path']]
+                pre_controls+=len(element.xpath('.//w:br | .//w:tab | .//w:cr | .//w:sym'))
+        if pre_controls and (font_early_marker is None or font_early_marker+pre_controls>60):font_profile=False
         return {
             'labels':labels,'native232_vml_label_profile_supported':labels_profile,'native232_vml_bounds_profile_supported':bounds_profile,'native232_vml_shape_bounds_profile_supported':shape_bounds_profile,'native232_floating_profile_supported':floating_profile,
             'native232_font_profile_supported':font_profile,
+            'native_font_activation_events':font_events,
             'native_paragraph_properties':native_paragraphs,'native232_paragraph_profile_supported':native_paragraph_profile,
             'native232_image_bytes_profile_supported':bytes_profile,
             'native232_single_inline_png_profile_supported':pixel_profile,

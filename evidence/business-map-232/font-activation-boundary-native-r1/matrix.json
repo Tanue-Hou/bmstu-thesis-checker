@@ -1,0 +1,126 @@
+{
+  "native_build": 232,
+  "work_type": "master",
+  "cases": [
+    {
+      "case": "fallback60Small",
+      "input": "evidence/business-map-232/font-activation-inputs-r4/fallback60Small.docx",
+      "sha256": "aff885738ef8266c356d249b5104ef6ee13bb00da2acec2411204182889ea5e3",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 60,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-boundary-native-r1/fallback60Small"
+    },
+    {
+      "case": "fallback61Small",
+      "input": "evidence/business-map-232/font-activation-inputs-r4/fallback61Small.docx",
+      "sha256": "22e216ecc683e7d85e9ac7e4590980d57090398fab62e34dd9a944c275d8610d",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 61,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/font-activation-boundary-native-r1/fallback61Small"
+    },
+    {
+      "case": "fallback59Table",
+      "input": "evidence/business-map-232/font-activation-inputs-r4/fallback59Table.docx",
+      "sha256": "d1d5043b9e49f1121fc01e37617e47e2f50e94993231ce69716830a5fbcaac9e",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "lateTable",
+      "filler_paragraphs": 59,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/font-activation-boundary-native-r1/fallback59Table"
+    },
+    {
+      "case": "fallback59Textbox",
+      "input": "evidence/business-map-232/font-activation-inputs-r4/fallback59Textbox.docx",
+      "sha256": "54eb8103d9f6c66d17e948a7cb414ff802d20f127622b8cc854fffcf95693732",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "lateTextbox",
+      "filler_paragraphs": 59,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/font-activation-boundary-native-r1/fallback59Textbox"
+    },
+    {
+      "case": "fallback58Table",
+      "input": "evidence/business-map-232/font-activation-inputs-r4/fallback58Table.docx",
+      "sha256": "a6bacf8330f68f005d8b362bac7fd83ed421072b5a9b94c3d4a02cb05c40b029",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "lateTable",
+      "filler_paragraphs": 58,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-boundary-native-r1/fallback58Table"
+    },
+    {
+      "case": "fallback58Textbox",
+      "input": "evidence/business-map-232/font-activation-inputs-r4/fallback58Textbox.docx",
+      "sha256": "317c8a68a6eb748b1dd2bf3cb371ba54a79d090cf362fa61d9cd08543593987e",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "lateTextbox",
+      "filler_paragraphs": 58,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/font-activation-boundary-native-r1/fallback58Textbox"
+    }
+  ]
+}

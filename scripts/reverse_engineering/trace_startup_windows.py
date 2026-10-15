@@ -110,7 +110,7 @@ def main():
         return {'length':length,'prefix':read(pointer,min(length,256)*2).decode('utf-16le',errors='replace')}
     events=[];hits=[];breakpoints={};base=None;exited=False;error=None;started=time.monotonic();form_pointer=None;fault_count=0;stop_reason='duration_limit';cleanup_errors=[];pending_steps={};codepage_calls=[];api_calls=0;sender=None;sender_status=None
     pixel_api_active=False;pixel_api_calls=0;pixel_output_object=None;pixel_dimensions={};pixel_hit_counts={}
-    event_limit=4096 if a.trace_codepage or a.paragraph_trace else 512
+    event_limit=4096 if a.trace_codepage or a.paragraph_trace or a.font_trace else 512
     try:
         if a.russian_suspended:
             candidates=[]
@@ -249,6 +249,7 @@ def main():
                                 else:
                                     parser=unsigned(context.Ebp-0x34);style=unsigned(context.Ebp-0x3c);text_object=unsigned(context.Ebp-0x38)
                                     hit['font_state']={'size_half_points':signed(style+0x94),'vertical_align_flag':read(style+0xac,1)[0],'enabled_flag':read(parser+0x11d,1)[0],'table_gate_c8':signed(parser+0xc8),'textbox_gate_f0':signed(parser+0xf0),'textbox_count_110':signed(parser+0x110),'small_count_before':signed(parser+0x184),'tiny_count_before':signed(parser+0x188),'large_count_before':signed(parser+0x18c),'text':unicode_object(text_object) if unsigned(text_object) else {'length':0,'prefix':''}}
+                                    hit['font_state']['role_gate_120']=signed(parser+0x120)
                                 pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
                                 if 'report_' not in label and pixel_hit_counts[label]<256:
                                     pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False

@@ -1,3 +1,9 @@
+# v0.2.19
+
+- 修正原生字号计数启用顺序：本段字号先检查，段落结束后才启用后续检查；精确标题、第61段、表格/文本框空边界按原程序证据处理。
+- 原生兼容字号单独解析关联字符样式，并保留普通OOXML字号及既有副本修复路径。
+- 76次原生执行、48个不同输入用于受限检测核对；未扩大复杂文档、PDF或副本修复权限。
+
 # v0.2.18
 
 - Integrate native232 activation, negative left/right indent and normalized/truncated line-spacing predicates, with exact paragraph XML locations.

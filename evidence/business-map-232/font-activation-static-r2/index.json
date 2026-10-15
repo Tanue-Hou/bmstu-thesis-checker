@@ -1,0 +1,69 @@
+{
+  "schema": "testvkr232-font-activation-boundary-static-index-v1",
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": {
+    "implementation/evidence/agent-v027/decompilation/provenance.json": "3608d1961f95f3ca6ce5c5f7e69d5a08e84b56b5dc2ab7b3531dfa608eae5733",
+    "implementation/evidence/agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "implementation/evidence/agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "implementation/evidence/agent-v027/decompilation/functions.tsv": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0",
+    "implementation/evidence/business-map-232/paragraph-function-map-r1/producer_00437374.asm": "e02e56d54c187ea921b15808c7d111306947fc6091a5b1d9814a6b2ba5163d62",
+    "implementation/evidence/business-map-232/paragraph-function-map-r1/map.json": "5abe96fededbee183c9883c49f1ae2833fdf59aa80849ae8e711dab7d48dc4cd",
+    "implementation/evidence/business-map-232/font-activation-boundary-native-r1/matrix.json": "9c02e43558c5b136344e6decb2b18bb9cbe677f6634d61b6d3b840df2b0c0afb",
+    "implementation/evidence/business-map-232/font-activation-boundary-native-r1/fallback58Table/trace.json": "dc289bd1a6243b09007bcae04320fa9e0a8df190a87d211fce62674e953e3fdb",
+    "implementation/evidence/business-map-232/font-activation-boundary-native-r1/fallback59Table/trace.json": "ed76516660e88cd1e56bdf70ac45e23290911ac52bf8fd53ff22653434e057fa",
+    "implementation/evidence/business-map-232/font-activation-boundary-native-r1/fallback58Textbox/trace.json": "7e46d8853dafb4be37bfc1d9359014fea403df14e50214b790a5377859ee665b",
+    "implementation/evidence/business-map-232/font-activation-boundary-native-r1/fallback59Textbox/trace.json": "76efdd916d6543109b52d6b8e0e040588ba02b3dd6cd3078da4bf401b4253088"
+  },
+  "producer": {
+    "function_va": "0x00437374",
+    "count_query_and_activation": {
+      "initial_count_call_va": "0x004378cb",
+      "first_activation_guard_va": "0x004378dc",
+      "threshold_count_call_va": "0x00437aba",
+      "threshold_compare_va": "0x00437abd",
+      "threshold": 60,
+      "predicate": "count > 60 (signed cmp; jle skips activation)",
+      "flag_store_vas": ["0x00437a98", "0x00437aca"],
+      "flag_offsets": ["0x11d", "0x11e"]
+    },
+    "empty_record_append": {
+      "literal_va": "0x006ceff0",
+      "string_construction_call_va": "0x00437d1a",
+      "virtual_append_call_va": "0x00437d32",
+      "virtual_slot": "0x38",
+      "receiver_field": "parser + 0x558",
+      "observed_text_length": 0,
+      "observation_source": "font-activation-boundary-native-r1 traces; see source_sha256"
+    },
+    "order": "Threshold activation executes before the common-tail append call."
+  },
+  "structure_paths": {
+    "table_row": {
+      "confirmed_static_chain": [
+        {"function_va": "0x0041c6ac", "tag": "w:tbl", "next_callsite_va": "0x0041caa9", "next_function_va": "0x0041614c"},
+        {"function_va": "0x0041614c", "next_callsite_va": "0x00416314", "next_function_va": "0x00415824"},
+        {"function_va": "0x00415824", "pseudo_lines": [9823, 9827], "next_callsite_va": "0x00415f30", "next_function_va": "0x00437374"},
+        {"function_va": "0x00437374", "append_callsite_va": "0x00437d32"}
+      ],
+      "interpretation": "A table row reaches the same paragraph/text postprocessor and its trailing virtual append."
+    },
+    "textbox": {
+      "entry": {"function_va": "0x0041dee0", "tag": "v:textbox", "callsite_va": "0x0041e135", "next_function_va": "0x0041c6ac"},
+      "content_recursion": [
+        {"function_va": "0x0041c6ac", "tag": "w:tbl", "callsite_va": "0x0041caa9", "next_function_va": "0x0041614c"},
+        {"function_va": "0x0041c6ac", "paragraph_parser_callsite_va": "0x0041c9c1", "next_function_va": "0x004078c0"},
+        {"function_va": "0x0041c6ac", "paragraph_parser_callsite_va": "0x0041ca35", "next_function_va": "0x00408a08"}
+      ],
+      "producer_callsites": {
+        "0x004078c0": ["0x00407947", "0x004082e3"],
+        "0x00408a08": ["0x00408a77", "0x00408c70", "0x00408deb"]
+      },
+      "dynamic_empty_host_callsite_unresolved": true
+    }
+  },
+  "boundary_native_observation": {
+    "statement": "Existing traces show a structural empty-record count after table/textbox inner text and before the following body run; the index identifies the common append instruction and static candidate paths.",
+    "limit": "The specific textbox caller site producing the final empty host record is not distinguished by the static export; record the return address at 0x00437d32 to resolve it."
+  },
+  "claim_limit": "Static call-chain and instruction mapping for this executable hash; dynamic trace supplies the empty-string length and ordering. Does not equate OOXML paragraph ordinals with native list count."
+}

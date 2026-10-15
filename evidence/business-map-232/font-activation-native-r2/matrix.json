@@ -1,0 +1,166 @@
+{
+  "native_build": 232,
+  "work_type": "master",
+  "cases": [
+    {
+      "case": "fallback59Small",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/fallback59Small.docx",
+      "sha256": "0952e18fdeec5d67aeacd129d762236001282e37cd009f64d805ff365b191991",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 59,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r2/fallback59Small"
+    },
+    {
+      "case": "fallback60Large",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/fallback60Large.docx",
+      "sha256": "c70c3252347aa95713b0c6a80e66b33fb4eab28b6586cfa140173c037e8bf74b",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 60,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r2/fallback60Large"
+    },
+    {
+      "case": "fallback61Large",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/fallback61Large.docx",
+      "sha256": "a2103c7bfa44a8969fc0a434b085ca9c3699ec22c70e762c79ff2c1ef2fa568e",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 61,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 1,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r2/fallback61Large"
+    },
+    {
+      "case": "prefixSmallMarker",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/prefixSmallMarker.docx",
+      "sha256": "4f5d4e7e6aedea626bb6a6d2f4902763996697ba6b3014a32a97cf44c4d2c1b0",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "prefix",
+      "filler_paragraphs": 0,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r2/prefixSmallMarker"
+    },
+    {
+      "case": "tableBeforeSmall",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/tableBeforeSmall.docx",
+      "sha256": "76a90bc14c6ee9f7921215131e3d331788a7a11a4ad7e62cb62849a1006784ff",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "tableBefore",
+      "filler_paragraphs": 0,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r2/tableBeforeSmall"
+    },
+    {
+      "case": "textboxBeforeSmall",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/textboxBeforeSmall.docx",
+      "sha256": "f54091fc91d3b9ece9c3603e09755a800b522941a4b6ff86ee5c4427cd89d0bb",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "textboxBefore",
+      "filler_paragraphs": 0,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r2/textboxBeforeSmall"
+    },
+    {
+      "case": "textboxBeforeLarge101",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/textboxBeforeLarge101.docx",
+      "sha256": "d7fb33d5972d74fce988e2a471e3b357266b9c9542c4bfa3368f3b2933394924",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "textbox101Before",
+      "filler_paragraphs": 0,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r2/textboxBeforeLarge101"
+    },
+    {
+      "case": "fallback1000Small",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/fallback1000Small.docx",
+      "sha256": "7ae0e8a092fb68ff526a65c2c95ed58974cdc2152fbb2b40b31d8cd025d1d7f2",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 1000,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r2/fallback1000Small"
+    }
+  ]
+}

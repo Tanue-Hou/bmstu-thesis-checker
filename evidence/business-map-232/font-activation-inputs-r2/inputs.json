@@ -1,0 +1,167 @@
+{
+  "parent_sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+  "cases": [
+    {
+      "case": "beforeSmall",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/beforeSmall.docx",
+      "sha256": "b3609617d641d444dead08806b5e171a3a056bd6e9c9cad0becf6edd45e79161",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "before",
+      "filler_paragraphs": 0
+    },
+    {
+      "case": "beforeLarge",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/beforeLarge.docx",
+      "sha256": "682c14e7072419d12fb480929d959f8760936dc4f789a53eb919ea4affbdbd73",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "before",
+      "filler_paragraphs": 0
+    },
+    {
+      "case": "unactivatedSmall",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/unactivatedSmall.docx",
+      "sha256": "5197272be12f57bf5401b68f7c64bfa3a61cb2e6c1ad73539395b0235fdf54c0",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 0
+    },
+    {
+      "case": "fallback59Small",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/fallback59Small.docx",
+      "sha256": "0952e18fdeec5d67aeacd129d762236001282e37cd009f64d805ff365b191991",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 59
+    },
+    {
+      "case": "fallback60Small",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/fallback60Small.docx",
+      "sha256": "aff885738ef8266c356d249b5104ef6ee13bb00da2acec2411204182889ea5e3",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 60
+    },
+    {
+      "case": "fallback61Small",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/fallback61Small.docx",
+      "sha256": "22e216ecc683e7d85e9ac7e4590980d57090398fab62e34dd9a944c275d8610d",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 61
+    },
+    {
+      "case": "fallback60Large",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/fallback60Large.docx",
+      "sha256": "c70c3252347aa95713b0c6a80e66b33fb4eab28b6586cfa140173c037e8bf74b",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 60
+    },
+    {
+      "case": "fallback61Large",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/fallback61Large.docx",
+      "sha256": "a2103c7bfa44a8969fc0a434b085ca9c3699ec22c70e762c79ff2c1ef2fa568e",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 61
+    },
+    {
+      "case": "exactSmallMarker",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/exactSmallMarker.docx",
+      "sha256": "e5506a8f3461a3a3b4a7c20ea1e1bc3b369d9797fe2fbb2628899b1208521154",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "exact",
+      "filler_paragraphs": 0
+    },
+    {
+      "case": "prefixSmallMarker",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/prefixSmallMarker.docx",
+      "sha256": "4f5d4e7e6aedea626bb6a6d2f4902763996697ba6b3014a32a97cf44c4d2c1b0",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "prefix",
+      "filler_paragraphs": 0
+    },
+    {
+      "case": "tableBeforeSmall",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/tableBeforeSmall.docx",
+      "sha256": "76a90bc14c6ee9f7921215131e3d331788a7a11a4ad7e62cb62849a1006784ff",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "tableBefore",
+      "filler_paragraphs": 0
+    },
+    {
+      "case": "textboxBeforeSmall",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/textboxBeforeSmall.docx",
+      "sha256": "f54091fc91d3b9ece9c3603e09755a800b522941a4b6ff86ee5c4427cd89d0bb",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "textboxBefore",
+      "filler_paragraphs": 0
+    },
+    {
+      "case": "textboxBeforeLarge101",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/textboxBeforeLarge101.docx",
+      "sha256": "d7fb33d5972d74fce988e2a471e3b357266b9c9542c4bfa3368f3b2933394924",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "textbox101Before",
+      "filler_paragraphs": 0
+    },
+    {
+      "case": "fallback1000Small",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/fallback1000Small.docx",
+      "sha256": "7ae0e8a092fb68ff526a65c2c95ed58974cdc2152fbb2b40b31d8cd025d1d7f2",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 1000
+    },
+    {
+      "case": "beforeTiny",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/beforeTiny.docx",
+      "sha256": "84ef597b2311fa3c04c3d3f01ded157d5a7ea72f747ee1747fbf333b2d21549e",
+      "half_points": 8,
+      "text_utf16_units": 11,
+      "role": "before",
+      "filler_paragraphs": 0
+    },
+    {
+      "case": "fallback61Tiny",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/fallback61Tiny.docx",
+      "sha256": "632b339b4d665ff0bc4dacf7cd33a961ddd86ba51e84fb6dbed5353f101a8cba",
+      "half_points": 8,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 61
+    },
+    {
+      "case": "tableMarker",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/tableMarker.docx",
+      "sha256": "9bba3e3e0eae5470b38dbfb063b709b3798e58505e94bccf22e71bda4bf5c741",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "tableMarker",
+      "filler_paragraphs": 0
+    },
+    {
+      "case": "textboxMarker",
+      "input": "evidence/business-map-232/font-activation-inputs-r2/textboxMarker.docx",
+      "sha256": "a34886f7762a70e826a15c90294c044841cac1f37adf9e2ac8734d17350689a7",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "textboxMarker",
+      "filler_paragraphs": 0
+    }
+  ]
+}

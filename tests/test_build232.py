@@ -40,7 +40,13 @@ class Build232Tests(unittest.TestCase):
             from docx.shared import Pt
             path=Path(td)/'roles.docx';d=Document();d.add_paragraph('Министерство науки');d.add_paragraph('Длинный заголовок об исследовании систем '*3).runs[0].font.size=Pt(20);d.add_paragraph('ВВЕДЕНИЕ');d.add_paragraph('Основной текст исследования '*8).runs[0].font.size=Pt(20);d.save(path)
             report=check_file(path,args(232));f=next(f for f in report['findings'] if f['rule_id']=='Word.FontSizeTooLarge');roles={p['content_role'] for p in f['precise_locations']['occurrences']}
-            self.assertIn('front_matter_candidate_manual_review',roles);self.assertIn('body_or_special_content_unknown',roles)
+            self.assertNotIn('front_matter_candidate_manual_review',roles);self.assertIn('body_or_special_content_unknown',roles)
+            self.assertTrue(all(p['native_font_enabled'] for p in f['precise_locations']['occurrences']))
+            self.assertEqual({p['paragraph'] for p in f['precise_locations']['occurrences']},{4})
+            # The old generic build230 path still exposes front-matter review;
+            # native232 suppresses its font count until the exact marker.
+            older=next(f for f in check_file(path,args(230))['findings'] if f['rule_id']=='Word.FontSizeTooLarge')
+            self.assertIn('front_matter_candidate_manual_review',{p['content_role'] for p in older['precise_locations']['occurrences']})
     def test_native_numbering_ignores_quoted_excerpt_and_preserves_unknown(self):
         text='Файл: example.docx 1. В документе много символов, размер которых превышает 18 пт: "2. Заголовок". 2. Неизвестное сообщение.'
         rows=parse_diagnostics(text,'docx');self.assertEqual(len(rows),2);self.assertEqual(rows[0]['rule_id'],'Word.FontSizeTooLarge');self.assertIsNone(rows[1]['rule_id'])

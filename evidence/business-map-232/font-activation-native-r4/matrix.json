@@ -1,0 +1,86 @@
+{
+  "native_build": 232,
+  "work_type": "master",
+  "cases": [
+    {
+      "case": "fallback59Table",
+      "input": "evidence/business-map-232/font-activation-inputs-r3/fallback59Table.docx",
+      "sha256": "d1d5043b9e49f1121fc01e37617e47e2f50e94993231ce69716830a5fbcaac9e",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "lateTable",
+      "filler_paragraphs": 59,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r4/fallback59Table"
+    },
+    {
+      "case": "fallback60Table",
+      "input": "evidence/business-map-232/font-activation-inputs-r3/fallback60Table.docx",
+      "sha256": "17ef04271619721032fe233ded3a401eb77f7d5d032207a428334efd66051f3e",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "lateTable",
+      "filler_paragraphs": 60,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r4/fallback60Table"
+    },
+    {
+      "case": "fallback59Textbox",
+      "input": "evidence/business-map-232/font-activation-inputs-r3/fallback59Textbox.docx",
+      "sha256": "54eb8103d9f6c66d17e948a7cb414ff802d20f127622b8cc854fffcf95693732",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "lateTextbox",
+      "filler_paragraphs": 59,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r4/fallback59Textbox"
+    },
+    {
+      "case": "fallback60Textbox",
+      "input": "evidence/business-map-232/font-activation-inputs-r3/fallback60Textbox.docx",
+      "sha256": "55274fa86c69bfa9c670cbbe83b33a17880466ad0f634d28bb21acc70fe3531f",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "lateTextbox",
+      "filler_paragraphs": 60,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r4/fallback60Textbox"
+    }
+  ]
+}

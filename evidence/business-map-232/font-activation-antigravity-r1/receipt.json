@@ -1,0 +1,5 @@
+{
+  "model_requested": "gemini-3.8-flash-low",
+  "exit_code": 1,
+  "scope": "Public deidentified static facts only; independent model opinion is not execution evidence"
+}

@@ -1,0 +1,21 @@
+{
+  "parent_input": "evidence/business-map-232/font-inputs-r1/small10.docx",
+  "parent_sha256": "28b1e4e6f0c00e1b6cc9c91953feac0597a61506d478061aec55b673f8786eca",
+  "cases": [
+    {
+      "case": "titleChar50",
+      "input": "evidence/business-map-232/linked-font-inputs-r1/titleChar50.docx",
+      "sha256": "be19f3d615474fd7c70c23f9d350ae3eb598415199f193acd7638e3f37c650b6"
+    },
+    {
+      "case": "unlinkTitle",
+      "input": "evidence/business-map-232/linked-font-inputs-r1/unlinkTitle.docx",
+      "sha256": "814a6170f2852e136760feba48a095df159dcb9af9d5b4802a40ea5ff9c53192"
+    },
+    {
+      "case": "titleChar50Direct30",
+      "input": "evidence/business-map-232/linked-font-inputs-r1/titleChar50Direct30.docx",
+      "sha256": "17b0ebc9490d912ce0b889062f5f5ce5a45bd2b5f68964baed1276c9e7e84174"
+    }
+  ]
+}

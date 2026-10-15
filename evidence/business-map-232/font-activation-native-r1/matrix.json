@@ -1,0 +1,126 @@
+{
+  "native_build": 232,
+  "work_type": "master",
+  "cases": [
+    {
+      "case": "beforeSmall",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/beforeSmall.docx",
+      "sha256": "b3609617d641d444dead08806b5e171a3a056bd6e9c9cad0becf6edd45e79161",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "before",
+      "filler_paragraphs": 0,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r1/beforeSmall"
+    },
+    {
+      "case": "beforeLarge",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/beforeLarge.docx",
+      "sha256": "682c14e7072419d12fb480929d959f8760936dc4f789a53eb919ea4affbdbd73",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "before",
+      "filler_paragraphs": 0,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r1/beforeLarge"
+    },
+    {
+      "case": "unactivatedSmall",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/unactivatedSmall.docx",
+      "sha256": "5197272be12f57bf5401b68f7c64bfa3a61cb2e6c1ad73539395b0235fdf54c0",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 0,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r1/unactivatedSmall"
+    },
+    {
+      "case": "fallback60Small",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/fallback60Small.docx",
+      "sha256": "aff885738ef8266c356d249b5104ef6ee13bb00da2acec2411204182889ea5e3",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 60,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r1/fallback60Small"
+    },
+    {
+      "case": "fallback61Small",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/fallback61Small.docx",
+      "sha256": "22e216ecc683e7d85e9ac7e4590980d57090398fab62e34dd9a944c275d8610d",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "minimal",
+      "filler_paragraphs": 61,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r1/fallback61Small"
+    },
+    {
+      "case": "exactSmallMarker",
+      "input": "evidence/business-map-232/font-activation-inputs-r1/exactSmallMarker.docx",
+      "sha256": "e5506a8f3461a3a3b4a7c20ea1e1bc3b369d9797fe2fbb2628899b1208521154",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "exact",
+      "filler_paragraphs": 0,
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/font-activation-native-r1/exactSmallMarker"
+    }
+  ]
+}

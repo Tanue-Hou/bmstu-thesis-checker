@@ -1,0 +1,73 @@
+{
+  "processed_cases": 17,
+  "error_cases": 0,
+  "native_totals": {
+    "diagnostics": 80,
+    "unmapped": 0
+  },
+  "paragraph_diagnostics_v0218_total": 44,
+  "paragraph_diagnostics_v0219_total": 44,
+  "font_size_diagnostics_v0218_total": 16,
+  "font_size_diagnostics_v0219_total": 4,
+  "paragraph_changes_by_rule_vs_v0218": {
+    "Word.LeftIndentInvalid": {
+      "increased_cases": 0,
+      "decreased_cases": 0,
+      "unchanged_cases": 17,
+      "increased_instances": 0,
+      "decreased_instances": 0,
+      "changed_case_ids": []
+    },
+    "Word.RightIndentInvalid": {
+      "increased_cases": 0,
+      "decreased_cases": 0,
+      "unchanged_cases": 17,
+      "increased_instances": 0,
+      "decreased_instances": 0,
+      "changed_case_ids": []
+    },
+    "Word.LineSpacingInvalid": {
+      "increased_cases": 0,
+      "decreased_cases": 0,
+      "unchanged_cases": 17,
+      "increased_instances": 0,
+      "decreased_instances": 0,
+      "changed_case_ids": []
+    }
+  },
+  "font_size_changes_vs_v0218": {
+    "increased_cases": 0,
+    "decreased_cases": 12,
+    "unchanged_cases": 5,
+    "increased_instances": 0,
+    "decreased_instances": 12,
+    "changed_case_ids": [
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10",
+      "T12",
+      "T13",
+      "T14",
+      "T15",
+      "T16",
+      "T17"
+    ]
+  },
+  "implementation_sha256": {
+    "scripts/check_document.py": "2fc2a94fc82313568a5a2fa1a6d717faa3234d9788ff4054385684e6d678a9f1",
+    "scripts/compare_native_trial.py": "5469a8fd0753cb61e6860e5e925301bf8a9fd9add7730e2ced92d9ba46c51c7f",
+    "scripts/testvkr-service/checkers/native_paragraph_counts.py": "9ba6b16722277942601eb6a2d0dfd2f68733e42f558669ec27508511306efc2a",
+    "scripts/testvkr-service/checkers/native_font_counts.py": "f004b65856ba19c2c49a777e1ea271540b044b03cf7a592ec2c8abf76426010b",
+    "scripts/testvkr-service/checkers/word_format.py": "5d750de4414f2f75d3118151fc9181409403324de15bc1a92758400990b8f990",
+    "scripts/testvkr-service/parsers/style_resolver.py": "bbad6fd130679d5eca02006ad6ad25438f0b9305669ffbc66a5a45747e488e57",
+    "scripts/testvkr-service/parsers/docx_parser.py": "a725d034975f9232dace37ef6af0eba9ad1c8583f4f3b4bac3868e558082de6d",
+    "scripts/issue_locations.py": "898376c6b3b8f8ece9acc9d66032b1717c2f8c2c4dab63fbf551bf84f95df376",
+    "scripts/testvkr-service/rules/rules_verified.json": "28dca7e7537dd703225e658db18601b2630bf6b84f6744384bacef3c60538e17",
+    "scripts/testvkr-service/rules/rule_guidance_zh.json": "1a1f4b58cd0e2399248622ab1fd0dbddc55969e32f6eb01976e5b6d8015a5367"
+  },
+  "private_summary_sha256": "53d97b58e742199af7378c651c4f91e831d5ad2a480d3cb88e450a43de78fd98",
+  "limits": "Existing native captures reused; no native paper reruns or source changes. Counts are not real-paper accuracy. Private paths/text excluded."
+}

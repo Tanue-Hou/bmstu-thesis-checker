@@ -1,0 +1,61 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "317c8a68a6eb748b1dd2bf3cb371ba54a79d090cf362fa61d9cd08543593987e",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 9,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Не определена структура документа. Титульный лист не проверен."
+    },
+    {
+      "number": 2,
+      "message": "* В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок)."
+    },
+    {
+      "number": 3,
+      "message": "* Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании)."
+    },
+    {
+      "number": 4,
+      "message": "** Документ содержит плавающие графические фигуры. Встройте фигуры в текст: \"X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|ЖЖЖЖЖЖЖЖЖЖЖ|\"; ."
+    },
+    {
+      "number": 5,
+      "message": "** Документ содержит плавающие надписи. Встройте надписи в текст:\"X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|X|ЖЖЖЖЖЖЖЖЖЖЖ|\"; ."
+    },
+    {
+      "number": 6,
+      "message": "Документ содержит страницы, размеры полей на которых не соответствуют требованиям."
+    },
+    {
+      "number": 7,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\", \"ОГЛАВЛЕНИЕ\", \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 8,
+      "message": "** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\"."
+    },
+    {
+      "number": 9,
+      "message": "* В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/font-activation-phd-native-r1/fallback58Textbox",
+  "trace_sha256": "842d5efb8133311411f662621bb33d422108b959fa84dfef2e571a02ac77e1b6",
+  "native_text_sha256": "b56b47759496242fd8ebcdd669f7d25dd09f853484f716ef8a514f123679148b",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "3ff4d7fa6437618c8e913d309ee309ea1c944a68bf76109b27512dd6db457011",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}
