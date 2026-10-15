@@ -1,0 +1,177 @@
+{
+  "target": {
+    "path": "../runtime/TestVkr232.exe",
+    "sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0"
+  },
+  "slices": {
+    "scale_producer": {
+      "start_va": "0x409b84",
+      "end_va_exclusive": "0x409d00",
+      "instruction_count": 100
+    },
+    "ordinary_report_gate_emit": {
+      "start_va": "0x47bacd",
+      "end_va_exclusive": "0x47bbe0",
+      "instruction_count": 56
+    },
+    "size_report_gate_emit": {
+      "start_va": "0x47bbdd",
+      "end_va_exclusive": "0x47bcf8",
+      "instruction_count": 58
+    },
+    "w_parser_candidate": {
+      "start_va": "0x40cc64",
+      "end_va_exclusive": "0x40e738",
+      "instruction_count": 1534
+    }
+  },
+  "constant_values": {
+    "0x6e51c0": {
+      "raw_hex": "0a000000",
+      "signed_int32": 10
+    }
+  },
+  "native_xml_strings": {
+    "0x6c1de3": {
+      "file_offset": 2885603,
+      "raw_hex": "773a7700",
+      "utf8": "w:w"
+    },
+    "0x6c1de7": {
+      "file_offset": 2885607,
+      "raw_hex": "773a76616c00",
+      "utf8": "w:val"
+    },
+    "0x6c1dd3": {
+      "file_offset": 2885587,
+      "raw_hex": "773a73706163696e6700",
+      "utf8": "w:spacing"
+    },
+    "0x6c1ddd": {
+      "file_offset": 2885597,
+      "raw_hex": "773a76616c00",
+      "utf8": "w:val"
+    }
+  },
+  "breakpoint_candidates_static_only": {
+    "ordinary": {
+      "branch_cmp": "0x00409b9f",
+      "bucket_add": "0x00409ba8",
+      "producer_call_00402f08": "0x00409bc6"
+    },
+    "tiny": {
+      "branch_cmp": "0x00409bd0",
+      "bucket_add": "0x00409bdc",
+      "producer_call_00402f08": "0x00409bf7"
+    },
+    "large": {
+      "branch_cmp": "0x00409cc3",
+      "bucket_add": "0x00409cdb",
+      "producer_call_00402f08": "0x00409cf9"
+    },
+    "report": {
+      "ordinary_slot_0x10_gt_10_cmp": "0x0047bacd",
+      "ordinary_render_call_0047a298": "0x0047bb80",
+      "slot_0x12_vs_DAT_006e51c0_cmp": "0x0047bbe6",
+      "slot_0x12_render_call_0047a298": "0x0047bc9b"
+    }
+  },
+  "analyst_interpretation": {
+    "004098f8": "classifies a run style's size into ordinary-small, tiny, and large buckets",
+    "00402f08": "adds selected run text to the parser diagnostic bucket",
+    "0040cc64": "parses w:w to intermediate +0x9c and w:spacing to intermediate +0xa0",
+    "004263a4": "copies a style object field-for-field, including +0xa0 to +0xa0",
+    "0040f98c": "converts intermediate +0x9c to output style +0xa0 and intermediate +0xa0 to output +0xa4",
+    "0047a528": "constructs main report entries from counters"
+  },
+  "decompiler_cross_references": {
+    "scale_classifier": {
+      "function_entry": "0x004098f8",
+      "source_lines": "4105-4177"
+    },
+    "w_w_to_intermediate": {
+      "function_entry": "0x0040cc64",
+      "source_lines": "6350-6359",
+      "tag_va": "0x006c1de3",
+      "value_attribute_va": "0x006c1de7",
+      "destination_offset": "0x9c"
+    },
+    "w_spacing_to_intermediate": {
+      "function_entry": "0x0040cc64",
+      "source_lines": "6334-6346",
+      "tag_va": "0x006c1dd3",
+      "value_attribute_va": "0x006c1ddd",
+      "destination_offset": "0xa0"
+    },
+    "style_field_copy": {
+      "function_entry": "0x004263a4",
+      "source_line": 18045,
+      "field": "source +0xa0 to destination +0xa0; helper called by 0041c118 at line 13132"
+    },
+    "style_construction": {
+      "function_entry": "0x0040f98c",
+      "source_lines": "7081-7082",
+      "field_map": {
+        "intermediate +0x9c": "output +0xa0 (index 0x28)",
+        "intermediate +0xa0": "output +0xa4 (index 0x29)"
+      }
+    },
+    "run_property_parser_call": {
+      "caller": "0x0040e9a8",
+      "source_line": 6855,
+      "call": "FUN_0040cc64(param_1,param_2+0x54)"
+    },
+    "main_report_counter_tests": {
+      "function_entry": "0x0047a528",
+      "source_lines": "896-921"
+    }
+  },
+  "runtime_case_evidence": {
+    "case": "scale-native-r1/small69_11",
+    "trace_path": "evidence/business-map-232/scale-native-r1/small69_11/trace.json",
+    "trace_sha256": "3753bfd3b1ad6fbfbec067641dc9b79c8eba5a29d9d88d7838429edc689bfd38",
+    "report_path": "evidence/business-map-232/scale-native-r1/small69_11/report.json",
+    "report_sha256": "5de68d45a218b803c28ce43b69b63c3dca73f160cda9cbe3096d3dae8eea206f",
+    "report_binds_trace_sha256": "3753bfd3b1ad6fbfbec067641dc9b79c8eba5a29d9d88d7838429edc689bfd38",
+    "input": {
+      "w:w": 69,
+      "source_sha256": "48a3658200f4175474feabfc1610b84aaa00d9344962071eadea958833c95653"
+    },
+    "dynamic_observations_this_case_only": {
+      "font_run_state": {
+        "runtime_va": "0x97992a",
+        "preferred_va": "0x40992a",
+        "scale_pct": 69,
+        "enabled_flag": 1
+      },
+      "scale_small_add": {
+        "runtime_va": "0x979bc6",
+        "preferred_va": "0x409bc6",
+        "scale_pct": 69
+      },
+      "scale_small_report_gate": {
+        "runtime_va": "0x9ebacd",
+        "preferred_va": "0x47bacd",
+        "small_count": 11
+      },
+      "scale_small_report_emit": {
+        "runtime_va": "0x9ebad7",
+        "preferred_va": "0x47bad7",
+        "small_count": 11
+      },
+      "matching_report_diagnostic": "** \u0412 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0435 \u043c\u043d\u043e\u0433\u043e \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432, \u0443 \u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u043c\u0430\u0441\u0448\u0442\u0430\u0431 \u0448\u0440\u0438\u0444\u0442\u0430 \u043c\u0435\u043d\u044c\u0448\u0435 70%: \"\u0416\u0416\u0416\u0416\u0416\u0416\u0416\u0416\u0416\u0416\u0416\"."
+    },
+    "scope": "Only this small69_11 case dynamically confirms these observed states and gates; other mapped addresses remain static candidates."
+  },
+  "source_hashes": {
+    "evidence/agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "evidence/business-map-232/file-entry-decompilation-r1/function.c": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4",
+    "evidence/agent-v027/decompilation/provenance.json": "3608d1961f95f3ca6ce5c5f7e69d5a08e84b56b5dc2ab7b3531dfa608eae5733"
+  },
+  "limits": [
+    "Static disassembly and decompiler text remain candidates except the case-specific hits in runtime_case_evidence.",
+    "Function names and business labels are analyst interpretations.",
+    "Object fields are tracked with their owning structure and offsets; shared offsets across structures do not imply shared semantics.",
+    "Direct versus linked style resolution is not established by these copy helpers alone."
+  ]
+}

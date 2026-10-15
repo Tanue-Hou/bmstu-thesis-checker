@@ -1,0 +1,512 @@
+{
+  "status": "passed_actual_mcp_native_scale_smoke",
+  "server_version": "0.2.20",
+  "audit_path": "evidence/business-map-232/scale-audit-r1/audit.json",
+  "cases": [
+    {
+      "case": "emojiSmall",
+      "work_type": "master",
+      "source_sha256": "84de39766e73a9ffeafe5c61a714bd80eb42e8b92b2faad838706c5f5942efa4",
+      "native_capture": "evidence/business-map-232/scale-native-r1/emojiSmall",
+      "scale_pct": 69,
+      "text_utf16_units": 12,
+      "native_counters": {
+        "small_count": 12,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 12,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [
+        "Word.FontScaleTooSmall"
+      ],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 1,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "large130_11",
+      "work_type": "master",
+      "source_sha256": "a2b1c16555419fa1970849e5a36fa296715758d6f57985d3dafbdc72453319c1",
+      "native_capture": "evidence/business-map-232/scale-native-r1/large130_11",
+      "scale_pct": 130,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "large131_11",
+      "work_type": "master",
+      "source_sha256": "51099adf4cd0709db289566d48df808162ed6683ebb62f96159515d02d4d861b",
+      "native_capture": "evidence/business-map-232/scale-native-r1/large131_11",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "scale_findings_present": [
+        "Word.FontScaleTooLarge"
+      ],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 1
+      }
+    },
+    {
+      "case": "linkedDirect100",
+      "work_type": "master",
+      "source_sha256": "a497b84d7b87d220c01a83b2f0fc7025553d097fb0cae29a7a3dfe9805268221",
+      "native_capture": "evidence/business-map-232/scale-inheritance-native-r1/linkedDirect100",
+      "scale_pct": 100,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "linkedLarge",
+      "work_type": "master",
+      "source_sha256": "228fdae19ec11836bc9cb4adab183dc79416c057ac112335540391151712f1bf",
+      "native_capture": "evidence/business-map-232/scale-inheritance-native-r1/linkedLarge",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "scale_findings_present": [
+        "Word.FontScaleTooLarge"
+      ],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 1
+      }
+    },
+    {
+      "case": "small69_10",
+      "work_type": "master",
+      "source_sha256": "4aa422080a92f341ebad0cf099359d7733a5c42c5b4b016405e7d26bef27202b",
+      "native_capture": "evidence/business-map-232/scale-native-r1/small69_10",
+      "scale_pct": 69,
+      "text_utf16_units": 10,
+      "native_counters": {
+        "small_count": 10,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 10,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "small69_11",
+      "work_type": "master",
+      "source_sha256": "48a3658200f4175474feabfc1610b84aaa00d9344962071eadea958833c95653",
+      "native_capture": "evidence/business-map-232/scale-native-r1/small69_11",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [
+        "Word.FontScaleTooSmall"
+      ],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 1,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "small70_11",
+      "work_type": "master",
+      "source_sha256": "48582062ff1c7134e8a8f582789e10136d4bb86fff9ba3a43644202db97c059d",
+      "native_capture": "evidence/business-map-232/scale-native-r1/small70_11",
+      "scale_pct": 70,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "textboxLarge",
+      "work_type": "master",
+      "source_sha256": "eb27746d6658a04ce9f119559a6c22ddb018a0c27d988fb776c60d68fc32cba5",
+      "native_capture": "evidence/business-map-232/scale-native-r1/textboxLarge",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "scale_findings_present": [
+        "Word.FontScaleTooLarge"
+      ],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 1
+      }
+    },
+    {
+      "case": "tiny30_11",
+      "work_type": "master",
+      "source_sha256": "37a5ca14eebb67f886bdf1731664c6a91c88c616dd7839a57b2b4ff1e703891b",
+      "native_capture": "evidence/business-map-232/scale-native-r1/tiny30_11",
+      "scale_pct": 30,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 11,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 11,
+        "large": 0
+      },
+      "scale_findings_present": [],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "emojiSmall",
+      "work_type": "phd",
+      "source_sha256": "84de39766e73a9ffeafe5c61a714bd80eb42e8b92b2faad838706c5f5942efa4",
+      "native_capture": "evidence/business-map-232/scale-phd-native-r1/emojiSmall",
+      "scale_pct": 69,
+      "text_utf16_units": 12,
+      "native_counters": {
+        "small_count": 12,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 12,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [
+        "Word.FontScaleTooSmall"
+      ],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 1,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "large130_11",
+      "work_type": "phd",
+      "source_sha256": "a2b1c16555419fa1970849e5a36fa296715758d6f57985d3dafbdc72453319c1",
+      "native_capture": "evidence/business-map-232/scale-phd-native-r1/large130_11",
+      "scale_pct": 130,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "large131_11",
+      "work_type": "phd",
+      "source_sha256": "51099adf4cd0709db289566d48df808162ed6683ebb62f96159515d02d4d861b",
+      "native_capture": "evidence/business-map-232/scale-phd-native-r1/large131_11",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "scale_findings_present": [
+        "Word.FontScaleTooLarge"
+      ],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 1
+      }
+    },
+    {
+      "case": "linkedDirect100",
+      "work_type": "phd",
+      "source_sha256": "a497b84d7b87d220c01a83b2f0fc7025553d097fb0cae29a7a3dfe9805268221",
+      "native_capture": "evidence/business-map-232/scale-phd-native-r1/linkedDirect100",
+      "scale_pct": 100,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "linkedLarge",
+      "work_type": "phd",
+      "source_sha256": "228fdae19ec11836bc9cb4adab183dc79416c057ac112335540391151712f1bf",
+      "native_capture": "evidence/business-map-232/scale-phd-native-r1/linkedLarge",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "scale_findings_present": [
+        "Word.FontScaleTooLarge"
+      ],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 1
+      }
+    },
+    {
+      "case": "small69_10",
+      "work_type": "phd",
+      "source_sha256": "4aa422080a92f341ebad0cf099359d7733a5c42c5b4b016405e7d26bef27202b",
+      "native_capture": "evidence/business-map-232/scale-phd-native-r1/small69_10",
+      "scale_pct": 69,
+      "text_utf16_units": 10,
+      "native_counters": {
+        "small_count": 10,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 10,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "small69_11",
+      "work_type": "phd",
+      "source_sha256": "48a3658200f4175474feabfc1610b84aaa00d9344962071eadea958833c95653",
+      "native_capture": "evidence/business-map-232/scale-phd-native-r1/small69_11",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [
+        "Word.FontScaleTooSmall"
+      ],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 1,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "small70_11",
+      "work_type": "phd",
+      "source_sha256": "48582062ff1c7134e8a8f582789e10136d4bb86fff9ba3a43644202db97c059d",
+      "native_capture": "evidence/business-map-232/scale-phd-native-r1/small70_11",
+      "scale_pct": 70,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "scale_findings_present": [],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 0
+      }
+    },
+    {
+      "case": "textboxLarge",
+      "work_type": "phd",
+      "source_sha256": "eb27746d6658a04ce9f119559a6c22ddb018a0c27d988fb776c60d68fc32cba5",
+      "native_capture": "evidence/business-map-232/scale-phd-native-r1/textboxLarge",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "scale_findings_present": [
+        "Word.FontScaleTooLarge"
+      ],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 1
+      }
+    },
+    {
+      "case": "tiny30_11",
+      "work_type": "phd",
+      "source_sha256": "37a5ca14eebb67f886bdf1731664c6a91c88c616dd7839a57b2b4ff1e703891b",
+      "native_capture": "evidence/business-map-232/scale-phd-native-r1/tiny30_11",
+      "scale_pct": 30,
+      "text_utf16_units": 11,
+      "native_counters": {
+        "small_count": 0,
+        "tiny_count": 11,
+        "large_count": 0
+      },
+      "mcp_counters": {
+        "small": 0,
+        "tiny": 11,
+        "large": 0
+      },
+      "scale_findings_present": [],
+      "verified_precise_run_occurrences": {
+        "Word.FontScaleTooSmall": 0,
+        "Word.FontScaleTooLarge": 0
+      }
+    }
+  ],
+  "native_captures": [
+    "evidence/business-map-232/scale-native-r1/emojiSmall",
+    "evidence/business-map-232/scale-native-r1/large130_11",
+    "evidence/business-map-232/scale-native-r1/large131_11",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedDirect100",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedLarge",
+    "evidence/business-map-232/scale-native-r1/small69_10",
+    "evidence/business-map-232/scale-native-r1/small69_11",
+    "evidence/business-map-232/scale-native-r1/small70_11",
+    "evidence/business-map-232/scale-native-r1/textboxLarge",
+    "evidence/business-map-232/scale-native-r1/tiny30_11",
+    "evidence/business-map-232/scale-phd-native-r1/emojiSmall",
+    "evidence/business-map-232/scale-phd-native-r1/large130_11",
+    "evidence/business-map-232/scale-phd-native-r1/large131_11",
+    "evidence/business-map-232/scale-phd-native-r1/linkedDirect100",
+    "evidence/business-map-232/scale-phd-native-r1/linkedLarge",
+    "evidence/business-map-232/scale-phd-native-r1/small69_10",
+    "evidence/business-map-232/scale-phd-native-r1/small69_11",
+    "evidence/business-map-232/scale-phd-native-r1/small70_11",
+    "evidence/business-map-232/scale-phd-native-r1/textboxLarge",
+    "evidence/business-map-232/scale-phd-native-r1/tiny30_11"
+  ],
+  "raw_response_sha256": "5c20e899f073b6391d07b055197411129b8cea3cda093b92f816e9ba2fc59917",
+  "private_raw_response": "private_trials/scale-mcp-r1/responses.jsonl",
+  "limits": "Actual MCP stdio transport for the selected native232 scale cases only. Counter and positive-finding checks are bound to same-input native captures; positives require build/mode verification, exact run locations, scale actual value, UTF-16 total, and enabled/activation fields. This does not broaden the native scale profile or establish real-document accuracy."
+}

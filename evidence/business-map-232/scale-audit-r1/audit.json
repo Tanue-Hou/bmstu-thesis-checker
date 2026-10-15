@@ -1,0 +1,2000 @@
+{
+  "status": "passed_native232_scale_branch_counter_report_and_run_audit",
+  "native_executions": 52,
+  "unique_inputs": 26,
+  "native_modes": {
+    "master": 26,
+    "phd": 26
+  },
+  "cases": [
+    {
+      "case": "normal100",
+      "input": "evidence/business-map-232/scale-inputs-r1/normal100.docx",
+      "sha256": "4cd5c7633a686d5c8fa03986988561b62df07469b65d49fef84089b314c1d845",
+      "scale_pct": 100,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/normal100",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "small69_10",
+      "input": "evidence/business-map-232/scale-inputs-r1/small69_10.docx",
+      "sha256": "4aa422080a92f341ebad0cf099359d7733a5c42c5b4b016405e7d26bef27202b",
+      "scale_pct": 69,
+      "text_utf16_units": 10,
+      "placement": "body",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 10,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/small69_10",
+      "local_scale_counters": {
+        "small": 10,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "small69_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/small69_11.docx",
+      "sha256": "48a3658200f4175474feabfc1610b84aaa00d9344962071eadea958833c95653",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/small69_11",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "small70_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/small70_11.docx",
+      "sha256": "48582062ff1c7134e8a8f582789e10136d4bb86fff9ba3a43644202db97c059d",
+      "scale_pct": 70,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/small70_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "tiny30_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/tiny30_11.docx",
+      "sha256": "37a5ca14eebb67f886bdf1731664c6a91c88c616dd7839a57b2b4ff1e703891b",
+      "scale_pct": 30,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 11,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 1,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/tiny30_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 11,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "small31_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/small31_11.docx",
+      "sha256": "130883664cefd1fa590123acb6eff065f7e4180f4b765988ed8f45af317a6f37",
+      "scale_pct": 31,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/small31_11",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "large130_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/large130_11.docx",
+      "sha256": "a2b1c16555419fa1970849e5a36fa296715758d6f57985d3dafbdc72453319c1",
+      "scale_pct": 130,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/large130_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "large131_10",
+      "input": "evidence/business-map-232/scale-inputs-r1/large131_10.docx",
+      "sha256": "032ced3c40cc3b4cb4726bbc3dd41e89da936c408b758d2a4a96415a1019f346",
+      "scale_pct": 131,
+      "text_utf16_units": 10,
+      "placement": "body",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 10
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/large131_10",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 10
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "large131_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/large131_11.docx",
+      "sha256": "51099adf4cd0709db289566d48df808162ed6683ebb62f96159515d02d4d861b",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/large131_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "scale1_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/scale1_11.docx",
+      "sha256": "71821c80b47c60ee3f4edac3f59f62e687f0e1e305a3452b9a230276025aa5d2",
+      "scale_pct": 1,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/scale1_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "scale2_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/scale2_11.docx",
+      "sha256": "0596bb7feddcd1a30c1bedbf722a516279713d47697bf60d38ad77696589635f",
+      "scale_pct": 2,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 11,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 1,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/scale2_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 11,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "beforeSmall",
+      "input": "evidence/business-map-232/scale-inputs-r1/beforeSmall.docx",
+      "sha256": "0211eb0d54f97074cba825ee7968eccd2087b4593354f1f5de9c376aaab4f930",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "before",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/beforeSmall",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "beforeLarge",
+      "input": "evidence/business-map-232/scale-inputs-r1/beforeLarge.docx",
+      "sha256": "7a93afce8a979321afdad6b9424f87fda01f886a0d7107f011ac030fa257ae49",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "before",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/beforeLarge",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "fallback60Small",
+      "input": "evidence/business-map-232/scale-inputs-r1/fallback60Small.docx",
+      "sha256": "8893c399c50f9fe2f4734c332a2de3ced6dcf9e701f6ac1a6dc6b42e63b8087c",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "fallback60",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/fallback60Small",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "fallback61Small",
+      "input": "evidence/business-map-232/scale-inputs-r1/fallback61Small.docx",
+      "sha256": "e57f8ac7d39daf3d0edadf6b762c4e055e4776f6f80b8840472c0d7f926f2ae0",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "fallback61",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/fallback61Small",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "tableSmall",
+      "input": "evidence/business-map-232/scale-inputs-r1/tableSmall.docx",
+      "sha256": "c46a6e4799043d0fa16ed1151e8137899f0d4ed0d0ebfe9894eb72a0d700577f",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "table",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/tableSmall",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "tableLarge",
+      "input": "evidence/business-map-232/scale-inputs-r1/tableLarge.docx",
+      "sha256": "a24ffb590abc70375187a9d3f2a9c83d20d55ef80a7084e19bfa961cfb050075",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "table",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/tableLarge",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "textboxSmall",
+      "input": "evidence/business-map-232/scale-inputs-r1/textboxSmall.docx",
+      "sha256": "0142efbc9aceedccb2b795d4fbaf01d601c85301e664b36f6971667d92269702",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "textbox",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/textboxSmall",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "textboxLarge",
+      "input": "evidence/business-map-232/scale-inputs-r1/textboxLarge.docx",
+      "sha256": "eb27746d6658a04ce9f119559a6c22ddb018a0c27d988fb776c60d68fc32cba5",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "textbox",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 11,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/textboxLarge",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "emojiSmall",
+      "input": "evidence/business-map-232/scale-inputs-r1/emojiSmall.docx",
+      "sha256": "84de39766e73a9ffeafe5c61a714bd80eb42e8b92b2faad838706c5f5942efa4",
+      "scale_pct": 69,
+      "text_utf16_units": 12,
+      "placement": "emoji",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 12,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/emojiSmall",
+      "local_scale_counters": {
+        "small": 12,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "spacesSmall",
+      "input": "evidence/business-map-232/scale-inputs-r1/spacesSmall.docx",
+      "sha256": "ae152bf7a66f429d4c10feec69c6f6ef6596f63dcbbdfa7394c1acb9a41ecb8b",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "spaces",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-native-r1/spacesSmall",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "paragraphInheritedSmall",
+      "input": "evidence/business-map-232/scale-inputs-r2/paragraphInheritedSmall.docx",
+      "sha256": "d3e74f49dd7c93cd01bdf90eb6db9f529d6f3079707aba5ee7dc6c9a3102c4ef",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "paragraphStyle",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-inheritance-native-r1/paragraphInheritedSmall",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "characterInheritedLarge",
+      "input": "evidence/business-map-232/scale-inputs-r2/characterInheritedLarge.docx",
+      "sha256": "ffb808c7af9ce98e5423792c8cbeccd144d7d8bd62fcdcb16ed0682be13f1e94",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "characterStyle",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-inheritance-native-r1/characterInheritedLarge",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "linkedLarge",
+      "input": "evidence/business-map-232/scale-inputs-r2/linkedLarge.docx",
+      "sha256": "228fdae19ec11836bc9cb4adab183dc79416c057ac112335540391151712f1bf",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "linkedStyle",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-inheritance-native-r1/linkedLarge",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "linkedDirect100",
+      "input": "evidence/business-map-232/scale-inputs-r2/linkedDirect100.docx",
+      "sha256": "a497b84d7b87d220c01a83b2f0fc7025553d097fb0cae29a7a3dfe9805268221",
+      "scale_pct": 100,
+      "text_utf16_units": 11,
+      "placement": "linkedDirect",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-inheritance-native-r1/linkedDirect100",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "inheritedDirect100",
+      "input": "evidence/business-map-232/scale-inputs-r2/inheritedDirect100.docx",
+      "sha256": "0b40f406e88f23c2aa0742a63decea2e80e91e5b434eaa4fda7d31a26f791ca6",
+      "scale_pct": 100,
+      "text_utf16_units": 11,
+      "placement": "paragraphDirect",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-inheritance-native-r1/inheritedDirect100",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "normal100",
+      "input": "evidence/business-map-232/scale-inputs-r2/normal100.docx",
+      "sha256": "4cd5c7633a686d5c8fa03986988561b62df07469b65d49fef84089b314c1d845",
+      "scale_pct": 100,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/normal100",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "small69_10",
+      "input": "evidence/business-map-232/scale-inputs-r2/small69_10.docx",
+      "sha256": "4aa422080a92f341ebad0cf099359d7733a5c42c5b4b016405e7d26bef27202b",
+      "scale_pct": 69,
+      "text_utf16_units": 10,
+      "placement": "body",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 10,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/small69_10",
+      "local_scale_counters": {
+        "small": 10,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "small69_11",
+      "input": "evidence/business-map-232/scale-inputs-r2/small69_11.docx",
+      "sha256": "48a3658200f4175474feabfc1610b84aaa00d9344962071eadea958833c95653",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/small69_11",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "small70_11",
+      "input": "evidence/business-map-232/scale-inputs-r2/small70_11.docx",
+      "sha256": "48582062ff1c7134e8a8f582789e10136d4bb86fff9ba3a43644202db97c059d",
+      "scale_pct": 70,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/small70_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "tiny30_11",
+      "input": "evidence/business-map-232/scale-inputs-r2/tiny30_11.docx",
+      "sha256": "37a5ca14eebb67f886bdf1731664c6a91c88c616dd7839a57b2b4ff1e703891b",
+      "scale_pct": 30,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 11,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 1,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/tiny30_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 11,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "small31_11",
+      "input": "evidence/business-map-232/scale-inputs-r2/small31_11.docx",
+      "sha256": "130883664cefd1fa590123acb6eff065f7e4180f4b765988ed8f45af317a6f37",
+      "scale_pct": 31,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/small31_11",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "large130_11",
+      "input": "evidence/business-map-232/scale-inputs-r2/large130_11.docx",
+      "sha256": "a2b1c16555419fa1970849e5a36fa296715758d6f57985d3dafbdc72453319c1",
+      "scale_pct": 130,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/large130_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "large131_10",
+      "input": "evidence/business-map-232/scale-inputs-r2/large131_10.docx",
+      "sha256": "032ced3c40cc3b4cb4726bbc3dd41e89da936c408b758d2a4a96415a1019f346",
+      "scale_pct": 131,
+      "text_utf16_units": 10,
+      "placement": "body",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 10
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/large131_10",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 10
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "large131_11",
+      "input": "evidence/business-map-232/scale-inputs-r2/large131_11.docx",
+      "sha256": "51099adf4cd0709db289566d48df808162ed6683ebb62f96159515d02d4d861b",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/large131_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "scale1_11",
+      "input": "evidence/business-map-232/scale-inputs-r2/scale1_11.docx",
+      "sha256": "71821c80b47c60ee3f4edac3f59f62e687f0e1e305a3452b9a230276025aa5d2",
+      "scale_pct": 1,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/scale1_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "scale2_11",
+      "input": "evidence/business-map-232/scale-inputs-r2/scale2_11.docx",
+      "sha256": "0596bb7feddcd1a30c1bedbf722a516279713d47697bf60d38ad77696589635f",
+      "scale_pct": 2,
+      "text_utf16_units": 11,
+      "placement": "body",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 11,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 1,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/scale2_11",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 11,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "beforeSmall",
+      "input": "evidence/business-map-232/scale-inputs-r2/beforeSmall.docx",
+      "sha256": "0211eb0d54f97074cba825ee7968eccd2087b4593354f1f5de9c376aaab4f930",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "before",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/beforeSmall",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "beforeLarge",
+      "input": "evidence/business-map-232/scale-inputs-r2/beforeLarge.docx",
+      "sha256": "7a93afce8a979321afdad6b9424f87fda01f886a0d7107f011ac030fa257ae49",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "before",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/beforeLarge",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "fallback60Small",
+      "input": "evidence/business-map-232/scale-inputs-r2/fallback60Small.docx",
+      "sha256": "8893c399c50f9fe2f4734c332a2de3ced6dcf9e701f6ac1a6dc6b42e63b8087c",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "fallback60",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 7,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/fallback60Small",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "fallback61Small",
+      "input": "evidence/business-map-232/scale-inputs-r2/fallback61Small.docx",
+      "sha256": "e57f8ac7d39daf3d0edadf6b762c4e055e4776f6f80b8840472c0d7f926f2ae0",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "fallback61",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/fallback61Small",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "tableSmall",
+      "input": "evidence/business-map-232/scale-inputs-r2/tableSmall.docx",
+      "sha256": "c46a6e4799043d0fa16ed1151e8137899f0d4ed0d0ebfe9894eb72a0d700577f",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "table",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/tableSmall",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "tableLarge",
+      "input": "evidence/business-map-232/scale-inputs-r2/tableLarge.docx",
+      "sha256": "a24ffb590abc70375187a9d3f2a9c83d20d55ef80a7084e19bfa961cfb050075",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "table",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/tableLarge",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "textboxSmall",
+      "input": "evidence/business-map-232/scale-inputs-r2/textboxSmall.docx",
+      "sha256": "0142efbc9aceedccb2b795d4fbaf01d601c85301e664b36f6971667d92269702",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "textbox",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 12,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/textboxSmall",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "textboxLarge",
+      "input": "evidence/business-map-232/scale-inputs-r2/textboxLarge.docx",
+      "sha256": "eb27746d6658a04ce9f119559a6c22ddb018a0c27d988fb776c60d68fc32cba5",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "textbox",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 12,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/textboxLarge",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "emojiSmall",
+      "input": "evidence/business-map-232/scale-inputs-r2/emojiSmall.docx",
+      "sha256": "84de39766e73a9ffeafe5c61a714bd80eb42e8b92b2faad838706c5f5942efa4",
+      "scale_pct": 69,
+      "text_utf16_units": 12,
+      "placement": "emoji",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 12,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/emojiSmall",
+      "local_scale_counters": {
+        "small": 12,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "spacesSmall",
+      "input": "evidence/business-map-232/scale-inputs-r2/spacesSmall.docx",
+      "sha256": "ae152bf7a66f429d4c10feec69c6f6ef6596f63dcbbdfa7394c1acb9a41ecb8b",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "spaces",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/spacesSmall",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "paragraphInheritedSmall",
+      "input": "evidence/business-map-232/scale-inputs-r2/paragraphInheritedSmall.docx",
+      "sha256": "d3e74f49dd7c93cd01bdf90eb6db9f529d6f3079707aba5ee7dc6c9a3102c4ef",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "paragraphStyle",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/paragraphInheritedSmall",
+      "local_scale_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "characterInheritedLarge",
+      "input": "evidence/business-map-232/scale-inputs-r2/characterInheritedLarge.docx",
+      "sha256": "ffb808c7af9ce98e5423792c8cbeccd144d7d8bd62fcdcb16ed0682be13f1e94",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "characterStyle",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/characterInheritedLarge",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "linkedLarge",
+      "input": "evidence/business-map-232/scale-inputs-r2/linkedLarge.docx",
+      "sha256": "228fdae19ec11836bc9cb4adab183dc79416c057ac112335540391151712f1bf",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "linkedStyle",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/linkedLarge",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "linkedDirect100",
+      "input": "evidence/business-map-232/scale-inputs-r2/linkedDirect100.docx",
+      "sha256": "a497b84d7b87d220c01a83b2f0fc7025553d097fb0cae29a7a3dfe9805268221",
+      "scale_pct": 100,
+      "text_utf16_units": 11,
+      "placement": "linkedDirect",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/linkedDirect100",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    },
+    {
+      "case": "inheritedDirect100",
+      "input": "evidence/business-map-232/scale-inputs-r2/inheritedDirect100.docx",
+      "sha256": "0b40f406e88f23c2aa0742a63decea2e80e91e5b434eaa4fda7d31a26f791ca6",
+      "scale_pct": 100,
+      "text_utf16_units": 11,
+      "placement": "paragraphDirect",
+      "work_type": "phd",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/inheritedDirect100",
+      "local_scale_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "both_diagnostic_families_match": true,
+      "all_run_states_match": true
+    }
+  ],
+  "sources": {
+    "evidence/business-map-232/scale-native-r1/matrix.json": "bef25f474f5753782665ece6a9dfe67c3055e3bdb5d5e22c36ba33a25558da29",
+    "evidence/business-map-232/scale-inputs-r1/normal100.docx": "4cd5c7633a686d5c8fa03986988561b62df07469b65d49fef84089b314c1d845",
+    "evidence/business-map-232/scale-native-r1/normal100/collection-length.txt": "1c6160f71dba2a2b1834153950f60c579735f7e8cca2bdaf121f0f4f965eec06",
+    "evidence/business-map-232/scale-native-r1/normal100/native-result.txt": "f50b983e36655798d460bad37945ac4d5837216b70a3b4a7b5d1df136d2130c3",
+    "evidence/business-map-232/scale-native-r1/normal100/report.json": "4fc29244e1ca3e7da48ef8571473658ec1dcac501fbc7784bb43bcbef3bd9891",
+    "evidence/business-map-232/scale-native-r1/normal100/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/normal100/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/normal100/trace.json": "19588fc4f61ac9561aab34535af8f2dca3f256384b631cf9b1db61025166722e",
+    "evidence/business-map-232/scale-native-r1/normal100/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/small69_10.docx": "4aa422080a92f341ebad0cf099359d7733a5c42c5b4b016405e7d26bef27202b",
+    "evidence/business-map-232/scale-native-r1/small69_10/collection-length.txt": "1c6160f71dba2a2b1834153950f60c579735f7e8cca2bdaf121f0f4f965eec06",
+    "evidence/business-map-232/scale-native-r1/small69_10/native-result.txt": "a92c5d6c86a81ba1b7886804cb645c5c99f324eadf87fd7df584216a6e04ca19",
+    "evidence/business-map-232/scale-native-r1/small69_10/report.json": "280fd5cf6420d872a60d5f16614b1679beefa749a36e155770b4b81890440a58",
+    "evidence/business-map-232/scale-native-r1/small69_10/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/small69_10/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/small69_10/trace.json": "af788a4b4a7864be088b38f67ced2d3677557896174a29be05ac616cf77805af",
+    "evidence/business-map-232/scale-native-r1/small69_10/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/small69_11.docx": "48a3658200f4175474feabfc1610b84aaa00d9344962071eadea958833c95653",
+    "evidence/business-map-232/scale-native-r1/small69_11/collection-length.txt": "ca8c67cc60ffa73d528759cc717c0a73ac409d1af4f6a048f4cb4e8f888f9d71",
+    "evidence/business-map-232/scale-native-r1/small69_11/native-result.txt": "23ff316655fdc66631dbfee1e688a2e1129d775c6486625620cc5e2b9e725452",
+    "evidence/business-map-232/scale-native-r1/small69_11/report.json": "5de68d45a218b803c28ce43b69b63c3dca73f160cda9cbe3096d3dae8eea206f",
+    "evidence/business-map-232/scale-native-r1/small69_11/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/small69_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/small69_11/trace.json": "3753bfd3b1ad6fbfbec067641dc9b79c8eba5a29d9d88d7838429edc689bfd38",
+    "evidence/business-map-232/scale-native-r1/small69_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/small70_11.docx": "48582062ff1c7134e8a8f582789e10136d4bb86fff9ba3a43644202db97c059d",
+    "evidence/business-map-232/scale-native-r1/small70_11/collection-length.txt": "1c6160f71dba2a2b1834153950f60c579735f7e8cca2bdaf121f0f4f965eec06",
+    "evidence/business-map-232/scale-native-r1/small70_11/native-result.txt": "701b95bb4c7f7b9c7b656c0fe7b31168e2a3eeebecf443d485d1173a2836ac79",
+    "evidence/business-map-232/scale-native-r1/small70_11/report.json": "a8fa55f8549482cef8f712d940be740c0758ed2365d846f8b4d1388efdb44cb5",
+    "evidence/business-map-232/scale-native-r1/small70_11/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/small70_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/small70_11/trace.json": "3138394374fde4935e1a1badc94b7d96bb40bf3a8aab7e7a94c38f3d5f1bbebf",
+    "evidence/business-map-232/scale-native-r1/small70_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/tiny30_11.docx": "37a5ca14eebb67f886bdf1731664c6a91c88c616dd7839a57b2b4ff1e703891b",
+    "evidence/business-map-232/scale-native-r1/tiny30_11/collection-length.txt": "1c6160f71dba2a2b1834153950f60c579735f7e8cca2bdaf121f0f4f965eec06",
+    "evidence/business-map-232/scale-native-r1/tiny30_11/native-result.txt": "f23da8e5dd2492b71b373ddc8c745e9c9b9fa58477712c5e287efe2a1ffb3804",
+    "evidence/business-map-232/scale-native-r1/tiny30_11/report.json": "18ceedf1ce18419442bf79490e263faeb3da79d67fcf920067c041e8ab2d4c43",
+    "evidence/business-map-232/scale-native-r1/tiny30_11/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/tiny30_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/tiny30_11/trace.json": "dd05a6d168e25b68399c251e258d991c7f12f150f8e5348a12e01e5c74f352cc",
+    "evidence/business-map-232/scale-native-r1/tiny30_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/small31_11.docx": "130883664cefd1fa590123acb6eff065f7e4180f4b765988ed8f45af317a6f37",
+    "evidence/business-map-232/scale-native-r1/small31_11/collection-length.txt": "ca8c67cc60ffa73d528759cc717c0a73ac409d1af4f6a048f4cb4e8f888f9d71",
+    "evidence/business-map-232/scale-native-r1/small31_11/native-result.txt": "9c162ae0130a42020489d2b11b5403e9feb15a13debefed9d0265755bf0e8815",
+    "evidence/business-map-232/scale-native-r1/small31_11/report.json": "e250ec01969d24799834716f3cc845c9f58c8a5e4c0173260f048b9f30f26b10",
+    "evidence/business-map-232/scale-native-r1/small31_11/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/small31_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/small31_11/trace.json": "d6565620832ff734f2f8c2aa3a5f01d9c6fa30031b269f7f9c4487950bcd4158",
+    "evidence/business-map-232/scale-native-r1/small31_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/large130_11.docx": "a2b1c16555419fa1970849e5a36fa296715758d6f57985d3dafbdc72453319c1",
+    "evidence/business-map-232/scale-native-r1/large130_11/collection-length.txt": "1c6160f71dba2a2b1834153950f60c579735f7e8cca2bdaf121f0f4f965eec06",
+    "evidence/business-map-232/scale-native-r1/large130_11/native-result.txt": "d87ecbf26047508c851bfce073848a37bc54f150bab3e065e700246065ad455f",
+    "evidence/business-map-232/scale-native-r1/large130_11/report.json": "dee05cf880e20c012a09079242fb2acc0efb8e08cf7305d5508ab3a9dc087f85",
+    "evidence/business-map-232/scale-native-r1/large130_11/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/large130_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/large130_11/trace.json": "28b7b95c89e00e7077711f28c3d296c2532355da2099d4973d2e8be95ebfc8ac",
+    "evidence/business-map-232/scale-native-r1/large130_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/large131_10.docx": "032ced3c40cc3b4cb4726bbc3dd41e89da936c408b758d2a4a96415a1019f346",
+    "evidence/business-map-232/scale-native-r1/large131_10/collection-length.txt": "1c6160f71dba2a2b1834153950f60c579735f7e8cca2bdaf121f0f4f965eec06",
+    "evidence/business-map-232/scale-native-r1/large131_10/native-result.txt": "92759f22b60b35df2eb3b7b4f75c1e8235c5b99188bf951027eb83df80803458",
+    "evidence/business-map-232/scale-native-r1/large131_10/report.json": "2e9cbce0ab30cc59ed7830ad83eef0d340cce17136fcf140de9098600438d643",
+    "evidence/business-map-232/scale-native-r1/large131_10/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/large131_10/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/large131_10/trace.json": "fe2a292d8822892195036675effbbf5ee2a09310d5d786d8e8f93e20b0c84ae2",
+    "evidence/business-map-232/scale-native-r1/large131_10/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/large131_11.docx": "51099adf4cd0709db289566d48df808162ed6683ebb62f96159515d02d4d861b",
+    "evidence/business-map-232/scale-native-r1/large131_11/collection-length.txt": "39f4f5d84890f8d790a47148807bd48afaa9ea698b580f523e6fb5427b2c2234",
+    "evidence/business-map-232/scale-native-r1/large131_11/native-result.txt": "a68a2c207d90ee3443e5834057f09daa94f84b0e3c05c9f61b5ab5ea3f6a483a",
+    "evidence/business-map-232/scale-native-r1/large131_11/report.json": "53e77670bccab37f1fed520a4f65417da81b7d0d7e73b38584f6b293168f5464",
+    "evidence/business-map-232/scale-native-r1/large131_11/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/large131_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/large131_11/trace.json": "1b44b923f585c96a08537756f40a2efe13fea67de93f02b7b89b257eac1f92a1",
+    "evidence/business-map-232/scale-native-r1/large131_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/scale1_11.docx": "71821c80b47c60ee3f4edac3f59f62e687f0e1e305a3452b9a230276025aa5d2",
+    "evidence/business-map-232/scale-native-r1/scale1_11/collection-length.txt": "1c6160f71dba2a2b1834153950f60c579735f7e8cca2bdaf121f0f4f965eec06",
+    "evidence/business-map-232/scale-native-r1/scale1_11/native-result.txt": "14b82d5f95823d4f08a0d97e7344dff246b4d8cc60de7b03bd18039889a70d8b",
+    "evidence/business-map-232/scale-native-r1/scale1_11/report.json": "a846768310f85f63f0c236a450d33434b09582c67544bdb05aca98d6b3815f5a",
+    "evidence/business-map-232/scale-native-r1/scale1_11/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/scale1_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/scale1_11/trace.json": "4948fe4f0a357d734fef2683c62e8b563976d0eae4b6b83382fb5466826245c5",
+    "evidence/business-map-232/scale-native-r1/scale1_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/scale2_11.docx": "0596bb7feddcd1a30c1bedbf722a516279713d47697bf60d38ad77696589635f",
+    "evidence/business-map-232/scale-native-r1/scale2_11/collection-length.txt": "1c6160f71dba2a2b1834153950f60c579735f7e8cca2bdaf121f0f4f965eec06",
+    "evidence/business-map-232/scale-native-r1/scale2_11/native-result.txt": "230bddbaedf256c050748ea0e75ca3604b0ffb104d6d7a8549a7b043dd5f1505",
+    "evidence/business-map-232/scale-native-r1/scale2_11/report.json": "6b3611d840b108db4f5035a01a84c772b006b61d074b639127c6171ecd359dee",
+    "evidence/business-map-232/scale-native-r1/scale2_11/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/scale2_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/scale2_11/trace.json": "522d88ffae39cdbac8df1b6a4953abef31dfa6b6a90da817621ff14943f9bc32",
+    "evidence/business-map-232/scale-native-r1/scale2_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/beforeSmall.docx": "0211eb0d54f97074cba825ee7968eccd2087b4593354f1f5de9c376aaab4f930",
+    "evidence/business-map-232/scale-native-r1/beforeSmall/collection-length.txt": "34cbf3b314a7862d330fb85db35fba8d5fb7ae459f1f7c02e61959bf4d35fee8",
+    "evidence/business-map-232/scale-native-r1/beforeSmall/native-result.txt": "943117cb3c746817219c9009c3ad6e00a42c051783c0f21f3349727881ec71cb",
+    "evidence/business-map-232/scale-native-r1/beforeSmall/report.json": "8c86cdadcaa58af582fe93e04f9c6383ceadc6f5d828a1a307923a92d3b5e4fa",
+    "evidence/business-map-232/scale-native-r1/beforeSmall/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/beforeSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/beforeSmall/trace.json": "3c75f197e3ab5256cbb7b7e98282c720fa86069c33241630bf311864a4933f51",
+    "evidence/business-map-232/scale-native-r1/beforeSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/beforeLarge.docx": "7a93afce8a979321afdad6b9424f87fda01f886a0d7107f011ac030fa257ae49",
+    "evidence/business-map-232/scale-native-r1/beforeLarge/collection-length.txt": "34cbf3b314a7862d330fb85db35fba8d5fb7ae459f1f7c02e61959bf4d35fee8",
+    "evidence/business-map-232/scale-native-r1/beforeLarge/native-result.txt": "e27acf8bfe844f48b3abb640f36aa02946345238cc0ab0608ab6906f48c1a17e",
+    "evidence/business-map-232/scale-native-r1/beforeLarge/report.json": "04e39904a855bbd90aee4c0078de6a7c217ed206c092f62a5af784b016f84d9d",
+    "evidence/business-map-232/scale-native-r1/beforeLarge/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/beforeLarge/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/beforeLarge/trace.json": "c2696cd5bcb6b676a81e6590ad303a5ac49b124b9381c2194418c1ad03525f2d",
+    "evidence/business-map-232/scale-native-r1/beforeLarge/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/fallback60Small.docx": "8893c399c50f9fe2f4734c332a2de3ced6dcf9e701f6ac1a6dc6b42e63b8087c",
+    "evidence/business-map-232/scale-native-r1/fallback60Small/collection-length.txt": "34cbf3b314a7862d330fb85db35fba8d5fb7ae459f1f7c02e61959bf4d35fee8",
+    "evidence/business-map-232/scale-native-r1/fallback60Small/native-result.txt": "43907fa8c417fc367f023077cbef035339de0047f8b2db1fbe2c072da2338006",
+    "evidence/business-map-232/scale-native-r1/fallback60Small/report.json": "24ea128b154930e32c093944a867df0c17b2ec5fa25ad1806f2d7b5a42619433",
+    "evidence/business-map-232/scale-native-r1/fallback60Small/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/fallback60Small/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/fallback60Small/trace.json": "4e1f3abdb71aa40608a0e30876baa5932c0dc20d0313af7561dae70e2ec8a005",
+    "evidence/business-map-232/scale-native-r1/fallback60Small/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/fallback61Small.docx": "e57f8ac7d39daf3d0edadf6b762c4e055e4776f6f80b8840472c0d7f926f2ae0",
+    "evidence/business-map-232/scale-native-r1/fallback61Small/collection-length.txt": "58b696cf0d4418a5108c51c1645d509854b3b289b4b416710bba56dd43b5de05",
+    "evidence/business-map-232/scale-native-r1/fallback61Small/native-result.txt": "d37d30c1c35958b2a56d9d07808cbf49e05dffda0e643b001e406ff80a2aa1ae",
+    "evidence/business-map-232/scale-native-r1/fallback61Small/report.json": "5d5eae6f9955e73f8645fd50da34a38221dc7e80eff1f3628b7f5f5c8715c50f",
+    "evidence/business-map-232/scale-native-r1/fallback61Small/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/fallback61Small/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/fallback61Small/trace.json": "eba0a2fcd0b00dc9c94e37b53e37d8d423c2eff4fe361b20f8d1804bf93b7bb3",
+    "evidence/business-map-232/scale-native-r1/fallback61Small/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/tableSmall.docx": "c46a6e4799043d0fa16ed1151e8137899f0d4ed0d0ebfe9894eb72a0d700577f",
+    "evidence/business-map-232/scale-native-r1/tableSmall/collection-length.txt": "ca8c67cc60ffa73d528759cc717c0a73ac409d1af4f6a048f4cb4e8f888f9d71",
+    "evidence/business-map-232/scale-native-r1/tableSmall/native-result.txt": "2ccf2d427e6a827b1b6aa65d5757433cd3920380f8846b97d1fbc7c5c8a886c9",
+    "evidence/business-map-232/scale-native-r1/tableSmall/report.json": "b41d134ed93b1fb0d4615c5e184a0234a9d73f078b7634f545ed6ce3a7f55a2e",
+    "evidence/business-map-232/scale-native-r1/tableSmall/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/tableSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/tableSmall/trace.json": "344a36ec56496207a8d4d4c86027aee5453fa2720c46d51fd822c70824c5ef11",
+    "evidence/business-map-232/scale-native-r1/tableSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/tableLarge.docx": "a24ffb590abc70375187a9d3f2a9c83d20d55ef80a7084e19bfa961cfb050075",
+    "evidence/business-map-232/scale-native-r1/tableLarge/collection-length.txt": "39f4f5d84890f8d790a47148807bd48afaa9ea698b580f523e6fb5427b2c2234",
+    "evidence/business-map-232/scale-native-r1/tableLarge/native-result.txt": "0609824251ee60b689c45b55e6909af1900ec3e9454e5cf444f84303c8d4824e",
+    "evidence/business-map-232/scale-native-r1/tableLarge/report.json": "26b344901aec45caf1c46a9410a6a69b05d21215bdf8e547b744b9dfb819523d",
+    "evidence/business-map-232/scale-native-r1/tableLarge/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/tableLarge/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/tableLarge/trace.json": "2ca3e9c657c3991f6fec5b0a262d98925c400fcb362c93fefaada332ceb5a149",
+    "evidence/business-map-232/scale-native-r1/tableLarge/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/textboxSmall.docx": "0142efbc9aceedccb2b795d4fbaf01d601c85301e664b36f6971667d92269702",
+    "evidence/business-map-232/scale-native-r1/textboxSmall/collection-length.txt": "1fc9a36be097e63da7336e6c5994a344a980fbbe93fb8e561f7d250c11fff18d",
+    "evidence/business-map-232/scale-native-r1/textboxSmall/native-result.txt": "404e919678537a81f4ac6ddf97b687a5995496333f25ddfa218180f70df37538",
+    "evidence/business-map-232/scale-native-r1/textboxSmall/report.json": "1e809345049510e2661ebd22c41fe7163c8890d871fee9d4b86dc9f93524d320",
+    "evidence/business-map-232/scale-native-r1/textboxSmall/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/textboxSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/textboxSmall/trace.json": "00f19297b86e34a863cdc1f703f017045b70e67c8345b88bad748297d9233a59",
+    "evidence/business-map-232/scale-native-r1/textboxSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/textboxLarge.docx": "eb27746d6658a04ce9f119559a6c22ddb018a0c27d988fb776c60d68fc32cba5",
+    "evidence/business-map-232/scale-native-r1/textboxLarge/collection-length.txt": "95096fd16b0bf65bd99dafc29c2bf35995db85d107f50706ef4e2e02e68060b5",
+    "evidence/business-map-232/scale-native-r1/textboxLarge/native-result.txt": "6107a3f8bd25451cbd9345fd14e04fa052c0ba38c2416cf65ab9d97f83e161e1",
+    "evidence/business-map-232/scale-native-r1/textboxLarge/report.json": "89a3a69d972420967b94d8b05e4bf46e52d14150deff060f5f60e43e31002eda",
+    "evidence/business-map-232/scale-native-r1/textboxLarge/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/textboxLarge/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/textboxLarge/trace.json": "e039aedad7b25cbfef00ebb633a64730415948b084b43483836234223c5eb67a",
+    "evidence/business-map-232/scale-native-r1/textboxLarge/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/emojiSmall.docx": "84de39766e73a9ffeafe5c61a714bd80eb42e8b92b2faad838706c5f5942efa4",
+    "evidence/business-map-232/scale-native-r1/emojiSmall/collection-length.txt": "e5423d08c24bd70e07bf5503be7c864d55a5d19a6583083c5f82d076daa1b873",
+    "evidence/business-map-232/scale-native-r1/emojiSmall/native-result.txt": "efd5c45ed2cdd94ffa374c996dee62a7d39e886a2a5622c77d08b95f8230a1a5",
+    "evidence/business-map-232/scale-native-r1/emojiSmall/report.json": "10f912af808a598e5d60f7dbaabe56cac46b5b0d29d198342cdb805d5938051c",
+    "evidence/business-map-232/scale-native-r1/emojiSmall/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/emojiSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/emojiSmall/trace.json": "e839b7ae5cbda742216f5dacc1245ea67cd3d9f83e3598fbf022b40fd52bb163",
+    "evidence/business-map-232/scale-native-r1/emojiSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r1/spacesSmall.docx": "ae152bf7a66f429d4c10feec69c6f6ef6596f63dcbbdfa7394c1acb9a41ecb8b",
+    "evidence/business-map-232/scale-native-r1/spacesSmall/collection-length.txt": "ca8c67cc60ffa73d528759cc717c0a73ac409d1af4f6a048f4cb4e8f888f9d71",
+    "evidence/business-map-232/scale-native-r1/spacesSmall/native-result.txt": "d7f3b574d62b7b53672805cd6e6010ba06a35c23019a8f76acf68a2a509d83ff",
+    "evidence/business-map-232/scale-native-r1/spacesSmall/report.json": "0b63ac8322a0b96ade41667203b6279f262a5c8cbcc11a82e15d3edbee0c5b3e",
+    "evidence/business-map-232/scale-native-r1/spacesSmall/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-native-r1/spacesSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-native-r1/spacesSmall/trace.json": "9503aed581dca2b6f83c13684abf2cc0b3de0ccc2ad3088808cf9df433884f5c",
+    "evidence/business-map-232/scale-native-r1/spacesSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inheritance-native-r1/matrix.json": "4d23343a77f5b410b453f58d9f09b1db8353c3fddf885148739e71a2f937c393",
+    "evidence/business-map-232/scale-inputs-r2/paragraphInheritedSmall.docx": "d3e74f49dd7c93cd01bdf90eb6db9f529d6f3079707aba5ee7dc6c9a3102c4ef",
+    "evidence/business-map-232/scale-inheritance-native-r1/paragraphInheritedSmall/collection-length.txt": "ca8c67cc60ffa73d528759cc717c0a73ac409d1af4f6a048f4cb4e8f888f9d71",
+    "evidence/business-map-232/scale-inheritance-native-r1/paragraphInheritedSmall/native-result.txt": "b7c8e620f16cdf375f75cf456c80a3d00afc81451babe99a437a8a460c6d2c07",
+    "evidence/business-map-232/scale-inheritance-native-r1/paragraphInheritedSmall/report.json": "3303ab0a3f4af92b5cc05d4e2026fac0d1f8c61a2f65dd1f1f378b31cf593078",
+    "evidence/business-map-232/scale-inheritance-native-r1/paragraphInheritedSmall/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-inheritance-native-r1/paragraphInheritedSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-inheritance-native-r1/paragraphInheritedSmall/trace.json": "4c58781ef7833669c5f2d9d7923f859d9a1961c874429305f05738417de51e75",
+    "evidence/business-map-232/scale-inheritance-native-r1/paragraphInheritedSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/characterInheritedLarge.docx": "ffb808c7af9ce98e5423792c8cbeccd144d7d8bd62fcdcb16ed0682be13f1e94",
+    "evidence/business-map-232/scale-inheritance-native-r1/characterInheritedLarge/collection-length.txt": "39f4f5d84890f8d790a47148807bd48afaa9ea698b580f523e6fb5427b2c2234",
+    "evidence/business-map-232/scale-inheritance-native-r1/characterInheritedLarge/native-result.txt": "cbfa34bd0b616e0b136dea395c2b8cf9a93b90c4de4053645fd540c201cf0c4c",
+    "evidence/business-map-232/scale-inheritance-native-r1/characterInheritedLarge/report.json": "6ede8358627cf85e3e648b540c9f7a7044c46315a88e236371636d33b2f20313",
+    "evidence/business-map-232/scale-inheritance-native-r1/characterInheritedLarge/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-inheritance-native-r1/characterInheritedLarge/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-inheritance-native-r1/characterInheritedLarge/trace.json": "9762623ccabf79884e7b1d1d5c0d09f45b2b57c1de8aec8bc3c4043590274bcf",
+    "evidence/business-map-232/scale-inheritance-native-r1/characterInheritedLarge/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/linkedLarge.docx": "228fdae19ec11836bc9cb4adab183dc79416c057ac112335540391151712f1bf",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedLarge/collection-length.txt": "39f4f5d84890f8d790a47148807bd48afaa9ea698b580f523e6fb5427b2c2234",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedLarge/native-result.txt": "1c95d1fb66ffca8e04c302fc9f6849dc7c84d80797e46767f4d72ef7a98970f1",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedLarge/report.json": "ee5a939816bf70f758e06f5e70e97948e6db3e13693e50cf9523e8d435230739",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedLarge/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedLarge/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedLarge/trace.json": "fe89edd0ab25e9ff60e75691ca7d7970b3fce7f91cf26a124bc2ab2cdd649f1e",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedLarge/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/linkedDirect100.docx": "a497b84d7b87d220c01a83b2f0fc7025553d097fb0cae29a7a3dfe9805268221",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedDirect100/collection-length.txt": "1c6160f71dba2a2b1834153950f60c579735f7e8cca2bdaf121f0f4f965eec06",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedDirect100/native-result.txt": "c3ba491508a582e272c21c14dada9a12545e692c3aea531dfbbc23a4fe621512",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedDirect100/report.json": "818b10d94b1c0faf38a5aeff92c46be6df80d6bb7344e02533b8a2ff0e8814f7",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedDirect100/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedDirect100/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedDirect100/trace.json": "bc3352dbb93f26e762aa76c74e376ab05f35854ab2dd3219b18ec8fdae0612d6",
+    "evidence/business-map-232/scale-inheritance-native-r1/linkedDirect100/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/inheritedDirect100.docx": "0b40f406e88f23c2aa0742a63decea2e80e91e5b434eaa4fda7d31a26f791ca6",
+    "evidence/business-map-232/scale-inheritance-native-r1/inheritedDirect100/collection-length.txt": "1c6160f71dba2a2b1834153950f60c579735f7e8cca2bdaf121f0f4f965eec06",
+    "evidence/business-map-232/scale-inheritance-native-r1/inheritedDirect100/native-result.txt": "12b292e52f94d45a75ae4e16ddab55dfb2cad4c127c9559a8ae0cde0f84bf372",
+    "evidence/business-map-232/scale-inheritance-native-r1/inheritedDirect100/report.json": "6783575b689dea3e00f292aa890731f71271f2e8ba5a6c16b3bbae46c88fdf8f",
+    "evidence/business-map-232/scale-inheritance-native-r1/inheritedDirect100/selected-mode.txt": "ca91ad3ade3c5d1463b9872390d106b43c5714592b07e9d42b31fe386f341625",
+    "evidence/business-map-232/scale-inheritance-native-r1/inheritedDirect100/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-inheritance-native-r1/inheritedDirect100/trace.json": "81f96f56b3631245a152a9e3dcf05713790eedf91d5f31c3c22706b20ddcad62",
+    "evidence/business-map-232/scale-inheritance-native-r1/inheritedDirect100/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-phd-native-r1/matrix.json": "76132d6aecf2dc53d89b99170554fb8f948421fd64ec4573de4148a16c90ef21",
+    "evidence/business-map-232/scale-inputs-r2/normal100.docx": "4cd5c7633a686d5c8fa03986988561b62df07469b65d49fef84089b314c1d845",
+    "evidence/business-map-232/scale-phd-native-r1/normal100/collection-length.txt": "a67e5499735d212acefd49b2e7c7c92493a12873dc84e8c8e8c4aa7996de9ebe",
+    "evidence/business-map-232/scale-phd-native-r1/normal100/native-result.txt": "d82ecff530f8308aa304d04bd858e69a028b0ea1a50c0545f4cda741a44be162",
+    "evidence/business-map-232/scale-phd-native-r1/normal100/report.json": "562d5fc8b963015373b3a93f73aebb621776019abbdc60a661768794b572f6e6",
+    "evidence/business-map-232/scale-phd-native-r1/normal100/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/normal100/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/normal100/trace.json": "55d7eb30f84a10b25bc9cb91c5f04ddd2dc56a5ac32f4b5c0bfe6711794f6389",
+    "evidence/business-map-232/scale-phd-native-r1/normal100/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/small69_10.docx": "4aa422080a92f341ebad0cf099359d7733a5c42c5b4b016405e7d26bef27202b",
+    "evidence/business-map-232/scale-phd-native-r1/small69_10/collection-length.txt": "a67e5499735d212acefd49b2e7c7c92493a12873dc84e8c8e8c4aa7996de9ebe",
+    "evidence/business-map-232/scale-phd-native-r1/small69_10/native-result.txt": "fdbd2d4567093219fae54a8d82124dfae0217bb6e516a13f676d0a9525e968c3",
+    "evidence/business-map-232/scale-phd-native-r1/small69_10/report.json": "bc3bf1dbc3f3831353584c93f2039da6d271aa86bb4758473097ca01d54a0fe0",
+    "evidence/business-map-232/scale-phd-native-r1/small69_10/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/small69_10/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/small69_10/trace.json": "7131ce7e76bcf6b7d8aa1427887bca83ad20de9897568ecbd8ae78aafcaafaed",
+    "evidence/business-map-232/scale-phd-native-r1/small69_10/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/small69_11.docx": "48a3658200f4175474feabfc1610b84aaa00d9344962071eadea958833c95653",
+    "evidence/business-map-232/scale-phd-native-r1/small69_11/collection-length.txt": "02c5a3b5ae3343a8271cb6f859c3438a7b11fd49a4774c1015c771fe5789877d",
+    "evidence/business-map-232/scale-phd-native-r1/small69_11/native-result.txt": "0517b609361a1a36ee77f85fc87f20bec5aacd9b38e7fc34009698ab43eabac0",
+    "evidence/business-map-232/scale-phd-native-r1/small69_11/report.json": "9940df120c9c4433cd12852f5abaecaedae30edd2a11ddb587996634d82cfe06",
+    "evidence/business-map-232/scale-phd-native-r1/small69_11/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/small69_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/small69_11/trace.json": "6c7bf79e02b3f73090949a89bbb329c1face42546418559f840510f143fdb6ab",
+    "evidence/business-map-232/scale-phd-native-r1/small69_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/small70_11.docx": "48582062ff1c7134e8a8f582789e10136d4bb86fff9ba3a43644202db97c059d",
+    "evidence/business-map-232/scale-phd-native-r1/small70_11/collection-length.txt": "a67e5499735d212acefd49b2e7c7c92493a12873dc84e8c8e8c4aa7996de9ebe",
+    "evidence/business-map-232/scale-phd-native-r1/small70_11/native-result.txt": "b9129f1d93b07f4040297a0a1fda7a9b4248c6132102e56e3acc19fefa1df1bd",
+    "evidence/business-map-232/scale-phd-native-r1/small70_11/report.json": "cbade9d5b2811a25df796e3c099fc71a854a4a2c4d8a4b0aeaef4e84c5a6da66",
+    "evidence/business-map-232/scale-phd-native-r1/small70_11/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/small70_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/small70_11/trace.json": "858773c6340b83023ba98d9993e9d6f43718a338de9df281631ac55dd1de167b",
+    "evidence/business-map-232/scale-phd-native-r1/small70_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/tiny30_11.docx": "37a5ca14eebb67f886bdf1731664c6a91c88c616dd7839a57b2b4ff1e703891b",
+    "evidence/business-map-232/scale-phd-native-r1/tiny30_11/collection-length.txt": "a67e5499735d212acefd49b2e7c7c92493a12873dc84e8c8e8c4aa7996de9ebe",
+    "evidence/business-map-232/scale-phd-native-r1/tiny30_11/native-result.txt": "c6b221f50b8c446d83d89334e9a6297b49342cd35b3a8c3483ecb3b819b5dc57",
+    "evidence/business-map-232/scale-phd-native-r1/tiny30_11/report.json": "41f804bcf84c8cce8a2ae838c9fe0280b040efb04c1098d5facbf6aaf61d0432",
+    "evidence/business-map-232/scale-phd-native-r1/tiny30_11/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/tiny30_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/tiny30_11/trace.json": "84e7e53d715e610c358a94c453a2c71f6c1a4ba3caa883bb5d9fffe1584f5581",
+    "evidence/business-map-232/scale-phd-native-r1/tiny30_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/small31_11.docx": "130883664cefd1fa590123acb6eff065f7e4180f4b765988ed8f45af317a6f37",
+    "evidence/business-map-232/scale-phd-native-r1/small31_11/collection-length.txt": "02c5a3b5ae3343a8271cb6f859c3438a7b11fd49a4774c1015c771fe5789877d",
+    "evidence/business-map-232/scale-phd-native-r1/small31_11/native-result.txt": "1a3ebb4f3dc12afef2107c787b30d58e6b850781ff677a84f72b47636a9b0dfd",
+    "evidence/business-map-232/scale-phd-native-r1/small31_11/report.json": "52cee0a9652770fcec19497f5dc7c77588f078d037d5f1607c70860e90ef967e",
+    "evidence/business-map-232/scale-phd-native-r1/small31_11/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/small31_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/small31_11/trace.json": "f7ab784f3eb475c652a41f3507b6bdb186c56aca3f24f87e9ef217b6890eb189",
+    "evidence/business-map-232/scale-phd-native-r1/small31_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/large130_11.docx": "a2b1c16555419fa1970849e5a36fa296715758d6f57985d3dafbdc72453319c1",
+    "evidence/business-map-232/scale-phd-native-r1/large130_11/collection-length.txt": "a67e5499735d212acefd49b2e7c7c92493a12873dc84e8c8e8c4aa7996de9ebe",
+    "evidence/business-map-232/scale-phd-native-r1/large130_11/native-result.txt": "434117f157d2bb149eeb7c09f79bd9396adf8758da0bca66877ea63a0b8499cf",
+    "evidence/business-map-232/scale-phd-native-r1/large130_11/report.json": "2cbece5fba9affc4f0209cd1bd206e1c031da8cb97f4c07b6b2a7f1d67a2a0ea",
+    "evidence/business-map-232/scale-phd-native-r1/large130_11/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/large130_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/large130_11/trace.json": "cfb8010faabc0223a0416bb5e5ad10bcfd659fb7f979d4f2ee34ef9700535142",
+    "evidence/business-map-232/scale-phd-native-r1/large130_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/large131_10.docx": "032ced3c40cc3b4cb4726bbc3dd41e89da936c408b758d2a4a96415a1019f346",
+    "evidence/business-map-232/scale-phd-native-r1/large131_10/collection-length.txt": "a67e5499735d212acefd49b2e7c7c92493a12873dc84e8c8e8c4aa7996de9ebe",
+    "evidence/business-map-232/scale-phd-native-r1/large131_10/native-result.txt": "f089279d570d316ffea9cd9a023016cb65237bf3d4b44573198074e972d4bb1f",
+    "evidence/business-map-232/scale-phd-native-r1/large131_10/report.json": "11ac9c7adf87a7cb988388f98bbaf49dc4941b8171c38b40cd03ff1bf2cc2e49",
+    "evidence/business-map-232/scale-phd-native-r1/large131_10/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/large131_10/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/large131_10/trace.json": "2aa07d66e013eea0fa792df8f56fa0856b35079ed15a1d6cf638778a9504056b",
+    "evidence/business-map-232/scale-phd-native-r1/large131_10/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/large131_11.docx": "51099adf4cd0709db289566d48df808162ed6683ebb62f96159515d02d4d861b",
+    "evidence/business-map-232/scale-phd-native-r1/large131_11/collection-length.txt": "2e62f533ecd247138d6294202f4b189b48b8667f1120a8b4d8521c14690b0790",
+    "evidence/business-map-232/scale-phd-native-r1/large131_11/native-result.txt": "76cb31b8be84e305436d8fc7fa9918ed5cb8ce1d3de7e454dbf583ec0d74941f",
+    "evidence/business-map-232/scale-phd-native-r1/large131_11/report.json": "c7064f9c0a5aeb23deaee76db9ec448d6f1e212ceb8fd95934dba522a501dcc2",
+    "evidence/business-map-232/scale-phd-native-r1/large131_11/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/large131_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/large131_11/trace.json": "df3da45f4d7c41c77de8f93d90e9103d4e1833cb38f5ffee1586c3273be76eb2",
+    "evidence/business-map-232/scale-phd-native-r1/large131_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/scale1_11.docx": "71821c80b47c60ee3f4edac3f59f62e687f0e1e305a3452b9a230276025aa5d2",
+    "evidence/business-map-232/scale-phd-native-r1/scale1_11/collection-length.txt": "a67e5499735d212acefd49b2e7c7c92493a12873dc84e8c8e8c4aa7996de9ebe",
+    "evidence/business-map-232/scale-phd-native-r1/scale1_11/native-result.txt": "ae4a8c7e03f7746bafce071d0888f77334c3e2a4ababcee4575ea8d8dc81680d",
+    "evidence/business-map-232/scale-phd-native-r1/scale1_11/report.json": "cc95277031f15dcac2a9c55b6f7af21b290fd850c5adb3aee803616a29a7537f",
+    "evidence/business-map-232/scale-phd-native-r1/scale1_11/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/scale1_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/scale1_11/trace.json": "10d7722f6dad6979a2e00770232415b7e6d2c91ba071ac1603ab93d5f29bf616",
+    "evidence/business-map-232/scale-phd-native-r1/scale1_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/scale2_11.docx": "0596bb7feddcd1a30c1bedbf722a516279713d47697bf60d38ad77696589635f",
+    "evidence/business-map-232/scale-phd-native-r1/scale2_11/collection-length.txt": "a67e5499735d212acefd49b2e7c7c92493a12873dc84e8c8e8c4aa7996de9ebe",
+    "evidence/business-map-232/scale-phd-native-r1/scale2_11/native-result.txt": "3241479475c3905bf2ab97597dde2d81c9f823a0c7ba49638e58ca535f21b9be",
+    "evidence/business-map-232/scale-phd-native-r1/scale2_11/report.json": "8f10cc2b8ff12a663e0be8e340ddc336f3848a16af752327a4092807699f8bf8",
+    "evidence/business-map-232/scale-phd-native-r1/scale2_11/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/scale2_11/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/scale2_11/trace.json": "aecc7030e9ab76fb2b50c6f84e126c38e1efd94b032ae3f07c082c840f1f4683",
+    "evidence/business-map-232/scale-phd-native-r1/scale2_11/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/beforeSmall.docx": "0211eb0d54f97074cba825ee7968eccd2087b4593354f1f5de9c376aaab4f930",
+    "evidence/business-map-232/scale-phd-native-r1/beforeSmall/collection-length.txt": "0da43803159f31f07a76adb531220427ac82a2d54f6e6556263272aa50a9c4c6",
+    "evidence/business-map-232/scale-phd-native-r1/beforeSmall/native-result.txt": "0cd74b6de1bdd3a71ddc34aa7577d6cb731e0d4befd5eabf53450eec5ae954c5",
+    "evidence/business-map-232/scale-phd-native-r1/beforeSmall/report.json": "13f73a9b055301ff85fcac615086231a4d6cbf89cc28f336d1073f22b3c6cdee",
+    "evidence/business-map-232/scale-phd-native-r1/beforeSmall/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/beforeSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/beforeSmall/trace.json": "54f9e11af4c490e1a8eb49ea7bbae7c7ce1b2567fe86076843c33bdf6cbc6fbd",
+    "evidence/business-map-232/scale-phd-native-r1/beforeSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/beforeLarge.docx": "7a93afce8a979321afdad6b9424f87fda01f886a0d7107f011ac030fa257ae49",
+    "evidence/business-map-232/scale-phd-native-r1/beforeLarge/collection-length.txt": "0da43803159f31f07a76adb531220427ac82a2d54f6e6556263272aa50a9c4c6",
+    "evidence/business-map-232/scale-phd-native-r1/beforeLarge/native-result.txt": "2b8b1fff38a54db092ae2742ff64a4c030dceb0682a10a4df82db58b21b0bfae",
+    "evidence/business-map-232/scale-phd-native-r1/beforeLarge/report.json": "1ce4c8b9cb55b92ba574b6f16da16ac27c3c5eff9693f49b41bd4037a5a624e2",
+    "evidence/business-map-232/scale-phd-native-r1/beforeLarge/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/beforeLarge/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/beforeLarge/trace.json": "b3253fba00402ed6bc15494d0b22995adc251407e917313b06e225bd2cc8baea",
+    "evidence/business-map-232/scale-phd-native-r1/beforeLarge/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/fallback60Small.docx": "8893c399c50f9fe2f4734c332a2de3ced6dcf9e701f6ac1a6dc6b42e63b8087c",
+    "evidence/business-map-232/scale-phd-native-r1/fallback60Small/collection-length.txt": "0da43803159f31f07a76adb531220427ac82a2d54f6e6556263272aa50a9c4c6",
+    "evidence/business-map-232/scale-phd-native-r1/fallback60Small/native-result.txt": "bb5ad405e32750bc8f6314b637d437b2bcacae990da3e622df7161514795ddd2",
+    "evidence/business-map-232/scale-phd-native-r1/fallback60Small/report.json": "5b7ae575386d2c42c5da433031b2ecfb31db703e8c08152e8cab00ea3a0f2774",
+    "evidence/business-map-232/scale-phd-native-r1/fallback60Small/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/fallback60Small/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/fallback60Small/trace.json": "faedd10acf2d9cc13d7f5a13bc0f7a54db8380c285d322ab8d7f1824084e2718",
+    "evidence/business-map-232/scale-phd-native-r1/fallback60Small/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/fallback61Small.docx": "e57f8ac7d39daf3d0edadf6b762c4e055e4776f6f80b8840472c0d7f926f2ae0",
+    "evidence/business-map-232/scale-phd-native-r1/fallback61Small/collection-length.txt": "f1af6cca4dda74ca49da7c276716a191d5cd83da60fffc5a88ef054610b54f49",
+    "evidence/business-map-232/scale-phd-native-r1/fallback61Small/native-result.txt": "e1ae042674fb67cbddb9933b4b195f38c71394f0d89096869091e47512f89b7a",
+    "evidence/business-map-232/scale-phd-native-r1/fallback61Small/report.json": "b1373a5281a4809efd03a81d502b87539e1557f6986c769c07bb335c69a890eb",
+    "evidence/business-map-232/scale-phd-native-r1/fallback61Small/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/fallback61Small/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/fallback61Small/trace.json": "3439d50b84204cd0b5b3f95653f9d42093742d1c223668f58d8f216bfe4784d3",
+    "evidence/business-map-232/scale-phd-native-r1/fallback61Small/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/tableSmall.docx": "c46a6e4799043d0fa16ed1151e8137899f0d4ed0d0ebfe9894eb72a0d700577f",
+    "evidence/business-map-232/scale-phd-native-r1/tableSmall/collection-length.txt": "02c5a3b5ae3343a8271cb6f859c3438a7b11fd49a4774c1015c771fe5789877d",
+    "evidence/business-map-232/scale-phd-native-r1/tableSmall/native-result.txt": "1228e92ba46fe538b942d49226bc9eb9cbfbbe93ba171f1f1126856f1ce02fdd",
+    "evidence/business-map-232/scale-phd-native-r1/tableSmall/report.json": "e0190f8a2c564b4a29b7dda6e1f4432fbbf992d6bb4add37f04df0421d2a2269",
+    "evidence/business-map-232/scale-phd-native-r1/tableSmall/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/tableSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/tableSmall/trace.json": "a9629873b933f75ca886def06b0301a4018dde017db23b787541664d20e23aaa",
+    "evidence/business-map-232/scale-phd-native-r1/tableSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/tableLarge.docx": "a24ffb590abc70375187a9d3f2a9c83d20d55ef80a7084e19bfa961cfb050075",
+    "evidence/business-map-232/scale-phd-native-r1/tableLarge/collection-length.txt": "2e62f533ecd247138d6294202f4b189b48b8667f1120a8b4d8521c14690b0790",
+    "evidence/business-map-232/scale-phd-native-r1/tableLarge/native-result.txt": "db60527a74e649d298adb8123c3007428643fa07b942dbea38fbf5abecda4768",
+    "evidence/business-map-232/scale-phd-native-r1/tableLarge/report.json": "605fe8f6b09ab42a6877a5960535612ab74ca64213623f37e3db47c39b22edd2",
+    "evidence/business-map-232/scale-phd-native-r1/tableLarge/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/tableLarge/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/tableLarge/trace.json": "8408f68652739748b752853026aba199389143311960f6b5e547d958cb896fd3",
+    "evidence/business-map-232/scale-phd-native-r1/tableLarge/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/textboxSmall.docx": "0142efbc9aceedccb2b795d4fbaf01d601c85301e664b36f6971667d92269702",
+    "evidence/business-map-232/scale-phd-native-r1/textboxSmall/collection-length.txt": "c294293b3c7564a5c821c0a0e68ee27ec6a7777b4dce21db0c9498362c609d27",
+    "evidence/business-map-232/scale-phd-native-r1/textboxSmall/native-result.txt": "d702091865b7f20e977a3cfc939f634139649c2d395bf0ae29b1435093316e81",
+    "evidence/business-map-232/scale-phd-native-r1/textboxSmall/report.json": "391c825528438e8aa19f3327c8c89f692b0797d9c0785751e9d57cecb921c38f",
+    "evidence/business-map-232/scale-phd-native-r1/textboxSmall/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/textboxSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/textboxSmall/trace.json": "664a44ad80e070cbf391f1c82a6e3029fbf5b7a6c737a0f0b43a067d9b7c5b4d",
+    "evidence/business-map-232/scale-phd-native-r1/textboxSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/textboxLarge.docx": "eb27746d6658a04ce9f119559a6c22ddb018a0c27d988fb776c60d68fc32cba5",
+    "evidence/business-map-232/scale-phd-native-r1/textboxLarge/collection-length.txt": "6a27b56be146f5fd69b7b7f7775b5c7936286c866fa74a3e8749f2e786e29d90",
+    "evidence/business-map-232/scale-phd-native-r1/textboxLarge/native-result.txt": "3aeacfa55ea15c1fd1d39beaabe59eef68203fdda3f2437db9f59b83453505be",
+    "evidence/business-map-232/scale-phd-native-r1/textboxLarge/report.json": "327800b63f10f32e2723fb26bf1ef849160943d2adc35d449a6292bf8f0c91fb",
+    "evidence/business-map-232/scale-phd-native-r1/textboxLarge/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/textboxLarge/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/textboxLarge/trace.json": "33f4c20093b1d67b88cbed89584dd0874eb6929323460d2d450f31e1ca53b327",
+    "evidence/business-map-232/scale-phd-native-r1/textboxLarge/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/emojiSmall.docx": "84de39766e73a9ffeafe5c61a714bd80eb42e8b92b2faad838706c5f5942efa4",
+    "evidence/business-map-232/scale-phd-native-r1/emojiSmall/collection-length.txt": "8980f39f181ade51945c2209c15733d9fba877aa295dd36e6ab03a5ff4427756",
+    "evidence/business-map-232/scale-phd-native-r1/emojiSmall/native-result.txt": "ac59282a6ec3b4b19f740d1edabcf23a2e6a1aef87832a60a10fbf5c82358e3e",
+    "evidence/business-map-232/scale-phd-native-r1/emojiSmall/report.json": "2b2d1c9a5bbab8d3fae1bb9426c511e95f72e203c1fda9330b102dc92680bec0",
+    "evidence/business-map-232/scale-phd-native-r1/emojiSmall/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/emojiSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/emojiSmall/trace.json": "d7ec93e57be9199e6737e52db86130213331fb09656c2b967fbc0a8b282c4ee0",
+    "evidence/business-map-232/scale-phd-native-r1/emojiSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-inputs-r2/spacesSmall.docx": "ae152bf7a66f429d4c10feec69c6f6ef6596f63dcbbdfa7394c1acb9a41ecb8b",
+    "evidence/business-map-232/scale-phd-native-r1/spacesSmall/collection-length.txt": "02c5a3b5ae3343a8271cb6f859c3438a7b11fd49a4774c1015c771fe5789877d",
+    "evidence/business-map-232/scale-phd-native-r1/spacesSmall/native-result.txt": "2eb1210c9a5036f874efccf58a7be92c7b6384591943aabd1c61befb6c94b4eb",
+    "evidence/business-map-232/scale-phd-native-r1/spacesSmall/report.json": "0694560d336c08612a99ef5820bb12631b96b1e90fa8eebc3da7b535fa071331",
+    "evidence/business-map-232/scale-phd-native-r1/spacesSmall/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/spacesSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/spacesSmall/trace.json": "d5162a2ff4c2d09948a308c296417d31f79cd140008127696498221dfde50596",
+    "evidence/business-map-232/scale-phd-native-r1/spacesSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-phd-native-r1/paragraphInheritedSmall/collection-length.txt": "02c5a3b5ae3343a8271cb6f859c3438a7b11fd49a4774c1015c771fe5789877d",
+    "evidence/business-map-232/scale-phd-native-r1/paragraphInheritedSmall/native-result.txt": "dad5893f0078ebcc7aa9355565f74b137dc98f33576bddb908696a17490cb48e",
+    "evidence/business-map-232/scale-phd-native-r1/paragraphInheritedSmall/report.json": "45b6123d0d6f205cd668610ed978e717d0dc216d8dfc119f0fb758a5a34b9e15",
+    "evidence/business-map-232/scale-phd-native-r1/paragraphInheritedSmall/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/paragraphInheritedSmall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/paragraphInheritedSmall/trace.json": "69772880ab094203fb32cab3c336467cdffab155075ba3233e2c060c7de09d67",
+    "evidence/business-map-232/scale-phd-native-r1/paragraphInheritedSmall/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-phd-native-r1/characterInheritedLarge/collection-length.txt": "2e62f533ecd247138d6294202f4b189b48b8667f1120a8b4d8521c14690b0790",
+    "evidence/business-map-232/scale-phd-native-r1/characterInheritedLarge/native-result.txt": "4b1aae2faea298cdef6d6ef2e79e1c8af03c3254c6414f1dd38e0d8f833787f6",
+    "evidence/business-map-232/scale-phd-native-r1/characterInheritedLarge/report.json": "1ef1df2ac0711aea59990ec8c6a112166d258107ceaa4d03630fb6c5d9752e8a",
+    "evidence/business-map-232/scale-phd-native-r1/characterInheritedLarge/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/characterInheritedLarge/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/characterInheritedLarge/trace.json": "043c3b70a04202f6023a064e9c99f8fa36ac723a9eaa291de64851d073da7e19",
+    "evidence/business-map-232/scale-phd-native-r1/characterInheritedLarge/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-phd-native-r1/linkedLarge/collection-length.txt": "2e62f533ecd247138d6294202f4b189b48b8667f1120a8b4d8521c14690b0790",
+    "evidence/business-map-232/scale-phd-native-r1/linkedLarge/native-result.txt": "95e925a822751697be583042a5a651c02873358d13ad598668c7ab7035fc64de",
+    "evidence/business-map-232/scale-phd-native-r1/linkedLarge/report.json": "b5138d8ef5dd6009518b8df0a63cd4279ba893a09356322a13ef21e07a8f4f5e",
+    "evidence/business-map-232/scale-phd-native-r1/linkedLarge/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/linkedLarge/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/linkedLarge/trace.json": "4a2ac1908312651d58737ca0968e011a3a9f25cebd55797a778d7d527d36a4ae",
+    "evidence/business-map-232/scale-phd-native-r1/linkedLarge/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-phd-native-r1/linkedDirect100/collection-length.txt": "a67e5499735d212acefd49b2e7c7c92493a12873dc84e8c8e8c4aa7996de9ebe",
+    "evidence/business-map-232/scale-phd-native-r1/linkedDirect100/native-result.txt": "ed8f1e7e74f2ff2436dd2ceb99669b4c155a4d7931ae20cfcf3a4a8fd023e0c0",
+    "evidence/business-map-232/scale-phd-native-r1/linkedDirect100/report.json": "0451b41f560cb73f52c271763806896e6262f644a022f0644607064f544a346e",
+    "evidence/business-map-232/scale-phd-native-r1/linkedDirect100/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/linkedDirect100/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/linkedDirect100/trace.json": "a79a1d1f7add544066d804225e02b2c651a040c1436236439cd07758f72159aa",
+    "evidence/business-map-232/scale-phd-native-r1/linkedDirect100/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-phd-native-r1/inheritedDirect100/collection-length.txt": "a67e5499735d212acefd49b2e7c7c92493a12873dc84e8c8e8c4aa7996de9ebe",
+    "evidence/business-map-232/scale-phd-native-r1/inheritedDirect100/native-result.txt": "a9e2b09243c33fec704677f739558928297cd1bebdc7e5a40a26b62653135776",
+    "evidence/business-map-232/scale-phd-native-r1/inheritedDirect100/report.json": "75ba2dfdb23b208df75f1ba4bf6d75d7b279fb04fe1dcdb3b5ef8bf4c1cef7c4",
+    "evidence/business-map-232/scale-phd-native-r1/inheritedDirect100/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/scale-phd-native-r1/inheritedDirect100/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/scale-phd-native-r1/inheritedDirect100/trace.json": "62e7f1971eaf7ed7ecc9af52910afa0c24a57291b631c0872bd53a0c1ca287ec",
+    "evidence/business-map-232/scale-phd-native-r1/inheritedDirect100/tracer-source.py.txt": "4e194bd38915f413fc20a8e43a3430ed9e410882e1a4ecfc82792f6b31765ed6",
+    "evidence/business-map-232/scale-function-map-r1/map.json": "d9a14d668dd05642df87ad33a55014ca706e90abc6cc1b5a39fe8b3c4398ca71",
+    "evidence/business-map-232/scale-function-map-r1/ordinary_report_gate_emit.asm": "7fa6d75ad4a477339da47441c0fa5cf740850e045a27e2638f746dc8ccff1382",
+    "evidence/business-map-232/scale-function-map-r1/reconstruction.c": "96655fe9be1bdc697ac8f932523c6454627dd530004fe76977c41c6974f87f5d",
+    "evidence/business-map-232/scale-function-map-r1/scale_producer.asm": "bcb833c118ba1dda4399aa7b0ba4cb70a537c23206297b80bf8bc85d121e6227",
+    "evidence/business-map-232/scale-function-map-r1/size_report_gate_emit.asm": "f133e8e78fc7b210140197e4ca5f07b1c1d98e6b3fc585b870bbe4e5065a9dd6",
+    "evidence/business-map-232/scale-function-map-r1/w_parser_candidate.asm": "702c8c51fa1f558afbdbed56d891abaaf9a558a425b51ff1dcfad77fbd1f6433"
+  },
+  "repair_permission_expanded": false,
+  "limits": [
+    "Synthetic plain DOCX controls only; real-paper accuracy is not implied.",
+    "No PDF scale, complex stories, fields/math/conditional table styles or new repair permission.",
+    "Tiny2..30 and ignored<=1 observations are not ordinary small-scale reports.",
+    "First-line-indent producer is still unresolved; separate static search evidence is not proof of absence."
+  ]
+}

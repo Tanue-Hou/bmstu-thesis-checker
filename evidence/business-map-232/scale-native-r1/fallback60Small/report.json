@@ -1,0 +1,53 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "8893c399c50f9fe2f4734c332a2de3ced6dcf9e701f6ac1a6dc6b42e63b8087c",
+  "source_unchanged": true,
+  "work_type": "master",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 7,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Не определена структура документа. Титульный лист не проверен."
+    },
+    {
+      "number": 2,
+      "message": "* В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок)."
+    },
+    {
+      "number": 3,
+      "message": "* Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании)."
+    },
+    {
+      "number": 4,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\", \"СОДЕРЖАНИЕ\", \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\", \"ПРИЛОЖЕНИЕ А\"."
+    },
+    {
+      "number": 5,
+      "message": "** Обнаружены пустые структурные элементы: \"СОДЕРЖАНИЕ\"."
+    },
+    {
+      "number": 6,
+      "message": "* В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 7,
+      "message": "* Маленький объем ВКР: Не хватает 48 стр. (сначала исправьте остальные замечания, если они есть)."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/scale-native-r1/fallback60Small",
+  "trace_sha256": "4e1f3abdb71aa40608a0e30876baa5932c0dc20d0313af7561dae70e2ec8a005",
+  "native_text_sha256": "43907fa8c417fc367f023077cbef035339de0047f8b2db1fbe2c072da2338006",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "0d0594a1aef25fab2976c9635964d4ce769bd7ef4cc47d7894352dbc267a3c4b",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

@@ -33,7 +33,9 @@ class THREAD_ENTRY(C.Structure):
     _fields_=[('size',D),('usage',D),('tid',D),('pid',D),('base_priority',W.LONG),('delta_priority',W.LONG),('flags',D)]
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--drawing-trace',action='store_true');p.add_argument('--font-trace',action='store_true');p.add_argument('--paragraph-trace',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--drawing-trace',action='store_true');p.add_argument('--font-trace',action='store_true');p.add_argument('--scale-trace',action='store_true');p.add_argument('--paragraph-trace',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
+    # Additional business trace uses the same bounded, owned process.
+    if a.scale_trace:a.font_trace=True
     if a.direct_file_entry and not a.probe_document:raise ValueError('Direct entry requires a synthetic document probe')
     if a.probe_document and not a.direct_file_entry:raise ValueError('Only controlled direct-entry probes are supported; natural cross-process HDROP is not validated')
     if a.dictionary_cp1251:a.trace_codepage=True
@@ -209,6 +211,9 @@ def main():
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                             for va,label in [(0x0047eac2,'paragraph_left_report_gate'),(0x0047ebde,'paragraph_right_report_gate'),(0x0047ecfa,'paragraph_line_report_gate'),(0x0047ee16,'paragraph_first_report_gate'),(0x0047eacf,'paragraph_left_report_emit'),(0x0047ebeb,'paragraph_right_report_emit'),(0x0047ed07,'paragraph_line_report_emit'),(0x0047ee23,'paragraph_first_report_emit')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
+                        if a.scale_trace:
+                            for va,label in [(0x00409bc6,'scale_small_add'),(0x00409bf7,'scale_tiny_add'),(0x00409cf9,'scale_large_add'),(0x0047bacd,'scale_small_report_gate'),(0x0047bbe6,'scale_large_report_gate'),(0x0047bad7,'scale_small_report_emit'),(0x0047bbf2,'scale_large_report_emit')]:
+                                addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                         if drawing_trace:
                             for va,label in [(0x0047c8fe,'drawing_report_state'),(0x0047c939,'floating_image_emit'),(0x0047d051,'small_labels_report_gate'),(0x0047d05e,'small_labels_emit'),(0x0041d672,'small_label_geometry'),(0x00438805,'drawing_area_geometry'),(0x0041d581,'textbox_overflow_emit'),(0x0041d693,'textbox_small_width_emit'),(0x0041d7a6,'textbox_small_height_emit'),(0x0041d665,'textbox_exclusion_flag'),(0x0041d799,'textbox_autofit_flag'),(0x0041d537,'textbox_bounds_compare')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
@@ -250,9 +255,20 @@ def main():
                                     parser=unsigned(context.Ebp-0x34);style=unsigned(context.Ebp-0x3c);text_object=unsigned(context.Ebp-0x38)
                                     hit['font_state']={'size_half_points':signed(style+0x94),'vertical_align_flag':read(style+0xac,1)[0],'enabled_flag':read(parser+0x11d,1)[0],'table_gate_c8':signed(parser+0xc8),'textbox_gate_f0':signed(parser+0xf0),'textbox_count_110':signed(parser+0x110),'small_count_before':signed(parser+0x184),'tiny_count_before':signed(parser+0x188),'large_count_before':signed(parser+0x18c),'text':unicode_object(text_object) if unsigned(text_object) else {'length':0,'prefix':''}}
                                     hit['font_state']['role_gate_120']=signed(parser+0x120)
+                                    hit['font_state']['scale_pct']=signed(style+0xa0)
                                 pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
                                 if 'report_' not in label and pixel_hit_counts[label]<256:
                                     pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False
+                            if label.startswith('scale_'):
+                                if 'report_' in label:
+                                    state=unsigned(context.Ebp-0x5dc)
+                                    hit['scale_report_state']={name:signed(state+offset) for name,offset in [('small_count',0x40),('tiny_count',0x44),('large_count',0x48)]}
+                                else:
+                                    parser=unsigned(context.Ebp-0x34);style=unsigned(context.Ebp-0x3c);text_object=unsigned(context.Ebp-0x38)
+                                    hit['scale_state']={'scale_pct':signed(style+0xa0),'enabled_flag':read(parser+0x11d,1)[0],'role_gate_ac':read(style+0xac,1)[0],'textbox_gate_f0':signed(parser+0xf0),'textbox_count_110':signed(parser+0x110),'text':unicode_object(text_object) if unsigned(text_object) else {'length':0,'prefix':''}}
+                                    pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
+                                    if pixel_hit_counts[label]<256:
+                                        pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False
                             if label.startswith('paragraph_'):
                                 if label=='paragraph_bucket_add':
                                     hit['paragraph_bucket_state']={'index':context.Edx,'parser':hex(context.Eax),'return_preferred_va':hex(unsigned(context.Esp)-base+0x400000),'text':unicode_object(context.Ecx) if unsigned(context.Ecx) else {'length':0,'prefix':''}}

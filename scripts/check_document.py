@@ -209,6 +209,7 @@ def finding_to_dict(finding, rule_registry, rule_guidance, file_type=None, work_
                        (profile=='native232_simple_vml_bounds' and bool((doc_data or {}).get('native232_vml_bounds_profile_supported'))) or
                        (profile=='native232_simple_vml_shape_bounds' and bool((doc_data or {}).get('native232_vml_shape_bounds_profile_supported'))) or
                        (profile=='native232_plain_docx_fonts' and bool((doc_data or {}).get('native232_font_profile_supported'))) or
+                       (profile=='native232_plain_docx_scale' and bool((doc_data or {}).get('native232_scale_profile_supported'))) or
                        (profile=='native232_plain_docx_paragraphs' and bool((doc_data or {}).get('native232_paragraph_profile_supported'))) or
                        (profile=='native232_plain_floating_png' and bool((doc_data or {}).get('native232_floating_profile_supported'))) or
                        (profile=='native232_docx_image_zip_bytes' and bool((doc_data or {}).get('native232_image_bytes_profile_supported'))) or
@@ -391,6 +392,10 @@ def check_file(path: Path, args):
         "work_type": args.work_type,
         "verification_status": "local_policy_check_not_original_program_certification",
         "formatting_coverage": doc_data.get("formatting_coverage", {}),
+        "native_scale_observations": ({'counters':doc_data.get('native_scale_counters',{}),
+            'profile_supported':doc_data.get('native232_scale_profile_supported',False),
+            'measurement':'UTF16 code units including whitespace',
+            'limits':'Ordinary small bucket31..69, tiny observation2..30, large>130; tiny does not imply ordinary small-scale report. No new repair permission.'} if file_type=='docx' and doc_data.get('native_build')==232 else {}),
         "native_word_observations": ({'font_counters':doc_data.get('native_font_counters',{}),'profile_supported':doc_data.get('native232_font_profile_supported',False),'measurement':'UTF16 code units including whitespace','tiny_bucket_note':'Native <=half the minimum size uses a separate counter, not the ordinary small-font report. No school/repair permission is implied.'} if file_type=='docx' and doc_data.get('native_build')==232 else {}),
         "native_paragraph_observations": ({'counters':doc_data.get('native_paragraph_counters',{}),'profile_supported':doc_data.get('native232_paragraph_profile_supported',False),
             'native_paragraph_records':[{k:v for k,v in r.items() if k!='text'} for r in doc_data.get('native_paragraph_candidates',[]) if any(r['matches'].values())][:100],

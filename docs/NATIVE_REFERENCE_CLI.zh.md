@@ -2,6 +2,8 @@
 
 本地重建检查仍使用 `scripts/thesis_cli.py`。新增 `scripts/native_reference_cli.py` 调用用户提供的原 TestVkr232，返回其实际诊断 JSON，供定位重建引擎与原程序的差异。
 
+v0.2.20新增开发对照选项`--trace-scale`，在自有隐藏进程记录字符缩放run属性、累计分支及报告门；仍依赖原EXE，不是发现原程序自带CLI。普通检查无需此选项。
+
 目前支持64位 Windows、64位 Python、硕士 VKR / 博士研究资格论文 NKR、DOCX / PDF。`--work-type master` 为默认值，博士须显式传入 `--work-type phd`。这里的博士模式指原程序“НКР аспиранта”，不代表所有博士学位论文标准。需要 Python 3、Windows 自带 .NET Framework 编译器和对应原 EXE；仓库不附带原程序。
 
 ```powershell

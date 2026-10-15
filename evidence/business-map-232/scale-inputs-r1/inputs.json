@@ -1,0 +1,173 @@
+{
+  "parent_sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+  "cases": [
+    {
+      "case": "normal100",
+      "input": "evidence/business-map-232/scale-inputs-r1/normal100.docx",
+      "sha256": "4cd5c7633a686d5c8fa03986988561b62df07469b65d49fef84089b314c1d845",
+      "scale_pct": 100,
+      "text_utf16_units": 11,
+      "placement": "body"
+    },
+    {
+      "case": "small69_10",
+      "input": "evidence/business-map-232/scale-inputs-r1/small69_10.docx",
+      "sha256": "4aa422080a92f341ebad0cf099359d7733a5c42c5b4b016405e7d26bef27202b",
+      "scale_pct": 69,
+      "text_utf16_units": 10,
+      "placement": "body"
+    },
+    {
+      "case": "small69_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/small69_11.docx",
+      "sha256": "48a3658200f4175474feabfc1610b84aaa00d9344962071eadea958833c95653",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "body"
+    },
+    {
+      "case": "small70_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/small70_11.docx",
+      "sha256": "48582062ff1c7134e8a8f582789e10136d4bb86fff9ba3a43644202db97c059d",
+      "scale_pct": 70,
+      "text_utf16_units": 11,
+      "placement": "body"
+    },
+    {
+      "case": "tiny30_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/tiny30_11.docx",
+      "sha256": "37a5ca14eebb67f886bdf1731664c6a91c88c616dd7839a57b2b4ff1e703891b",
+      "scale_pct": 30,
+      "text_utf16_units": 11,
+      "placement": "body"
+    },
+    {
+      "case": "small31_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/small31_11.docx",
+      "sha256": "130883664cefd1fa590123acb6eff065f7e4180f4b765988ed8f45af317a6f37",
+      "scale_pct": 31,
+      "text_utf16_units": 11,
+      "placement": "body"
+    },
+    {
+      "case": "large130_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/large130_11.docx",
+      "sha256": "a2b1c16555419fa1970849e5a36fa296715758d6f57985d3dafbdc72453319c1",
+      "scale_pct": 130,
+      "text_utf16_units": 11,
+      "placement": "body"
+    },
+    {
+      "case": "large131_10",
+      "input": "evidence/business-map-232/scale-inputs-r1/large131_10.docx",
+      "sha256": "032ced3c40cc3b4cb4726bbc3dd41e89da936c408b758d2a4a96415a1019f346",
+      "scale_pct": 131,
+      "text_utf16_units": 10,
+      "placement": "body"
+    },
+    {
+      "case": "large131_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/large131_11.docx",
+      "sha256": "51099adf4cd0709db289566d48df808162ed6683ebb62f96159515d02d4d861b",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "body"
+    },
+    {
+      "case": "scale1_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/scale1_11.docx",
+      "sha256": "71821c80b47c60ee3f4edac3f59f62e687f0e1e305a3452b9a230276025aa5d2",
+      "scale_pct": 1,
+      "text_utf16_units": 11,
+      "placement": "body"
+    },
+    {
+      "case": "scale2_11",
+      "input": "evidence/business-map-232/scale-inputs-r1/scale2_11.docx",
+      "sha256": "0596bb7feddcd1a30c1bedbf722a516279713d47697bf60d38ad77696589635f",
+      "scale_pct": 2,
+      "text_utf16_units": 11,
+      "placement": "body"
+    },
+    {
+      "case": "beforeSmall",
+      "input": "evidence/business-map-232/scale-inputs-r1/beforeSmall.docx",
+      "sha256": "0211eb0d54f97074cba825ee7968eccd2087b4593354f1f5de9c376aaab4f930",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "before"
+    },
+    {
+      "case": "beforeLarge",
+      "input": "evidence/business-map-232/scale-inputs-r1/beforeLarge.docx",
+      "sha256": "7a93afce8a979321afdad6b9424f87fda01f886a0d7107f011ac030fa257ae49",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "before"
+    },
+    {
+      "case": "fallback60Small",
+      "input": "evidence/business-map-232/scale-inputs-r1/fallback60Small.docx",
+      "sha256": "8893c399c50f9fe2f4734c332a2de3ced6dcf9e701f6ac1a6dc6b42e63b8087c",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "fallback60"
+    },
+    {
+      "case": "fallback61Small",
+      "input": "evidence/business-map-232/scale-inputs-r1/fallback61Small.docx",
+      "sha256": "e57f8ac7d39daf3d0edadf6b762c4e055e4776f6f80b8840472c0d7f926f2ae0",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "fallback61"
+    },
+    {
+      "case": "tableSmall",
+      "input": "evidence/business-map-232/scale-inputs-r1/tableSmall.docx",
+      "sha256": "c46a6e4799043d0fa16ed1151e8137899f0d4ed0d0ebfe9894eb72a0d700577f",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "table"
+    },
+    {
+      "case": "tableLarge",
+      "input": "evidence/business-map-232/scale-inputs-r1/tableLarge.docx",
+      "sha256": "a24ffb590abc70375187a9d3f2a9c83d20d55ef80a7084e19bfa961cfb050075",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "table"
+    },
+    {
+      "case": "textboxSmall",
+      "input": "evidence/business-map-232/scale-inputs-r1/textboxSmall.docx",
+      "sha256": "0142efbc9aceedccb2b795d4fbaf01d601c85301e664b36f6971667d92269702",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "textbox"
+    },
+    {
+      "case": "textboxLarge",
+      "input": "evidence/business-map-232/scale-inputs-r1/textboxLarge.docx",
+      "sha256": "eb27746d6658a04ce9f119559a6c22ddb018a0c27d988fb776c60d68fc32cba5",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "textbox"
+    },
+    {
+      "case": "emojiSmall",
+      "input": "evidence/business-map-232/scale-inputs-r1/emojiSmall.docx",
+      "sha256": "84de39766e73a9ffeafe5c61a714bd80eb42e8b92b2faad838706c5f5942efa4",
+      "scale_pct": 69,
+      "text_utf16_units": 12,
+      "placement": "emoji"
+    },
+    {
+      "case": "spacesSmall",
+      "input": "evidence/business-map-232/scale-inputs-r1/spacesSmall.docx",
+      "sha256": "ae152bf7a66f429d4c10feec69c6f6ef6596f63dcbbdfa7394c1acb9a41ecb8b",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "spaces"
+    }
+  ]
+}

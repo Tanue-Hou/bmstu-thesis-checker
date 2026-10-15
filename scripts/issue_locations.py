@@ -24,6 +24,16 @@ def locate_finding(f,data,file_type,limit=100):
             total+=1
             if len(out)<limit:
                 loc=r['location'];out.append({**loc,'text_excerpt':r['text'][:140],'actual':r['font_size_pt'],'utf16_units':r['utf16_units'],'previous_textbox_utf16_units':r['previous_textbox_utf16_units'],'native_font_enabled':r['native_font_enabled'],'native_activation_ordinal':r['native_activation_ordinal'],'content_role':'textbox_text_manual_review' if r['role']=='textbox' else content_role(loc,data)})
+    elif 'native_scale_runs' in (f.get('location') or {}):
+        selected=set(f['location']['native_scale_runs'])
+        for r in data.get('native_scale_candidates',[]):
+            if r['index'] not in selected:continue
+            total+=1
+            if len(out)<limit:
+                loc=r['location'];out.append({**loc,'part':'word/document.xml','text_excerpt':r['text'][:140],
+                    'actual':r['scale_pct'],'utf16_units':r['utf16_units'],'property_source':r['property_source'],
+                    'native_font_enabled':r['native_font_enabled'],'native_activation_ordinal':r['native_activation_ordinal'],
+                    'content_role':'textbox_text_manual_review' if r['role']=='textbox' else content_role(loc,data)})
     elif 'native_paragraph_records' in (f.get('location') or {}):
         selected=set(f['location']['native_paragraph_records'])
         for r in data.get('native_paragraph_candidates',[]):

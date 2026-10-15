@@ -1,0 +1,121 @@
+{
+  "native_build": 232,
+  "cases": [
+    {
+      "case": "paragraphInheritedSmall",
+      "input": "evidence/business-map-232/scale-inputs-r2/paragraphInheritedSmall.docx",
+      "sha256": "d3e74f49dd7c93cd01bdf90eb6db9f529d6f3079707aba5ee7dc6c9a3102c4ef",
+      "scale_pct": 69,
+      "text_utf16_units": 11,
+      "placement": "paragraphStyle",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 1,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [
+        "scale_small_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-inheritance-native-r1/paragraphInheritedSmall"
+    },
+    {
+      "case": "characterInheritedLarge",
+      "input": "evidence/business-map-232/scale-inputs-r2/characterInheritedLarge.docx",
+      "sha256": "ffb808c7af9ce98e5423792c8cbeccd144d7d8bd62fcdcb16ed0682be13f1e94",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "characterStyle",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-inheritance-native-r1/characterInheritedLarge"
+    },
+    {
+      "case": "linkedLarge",
+      "input": "evidence/business-map-232/scale-inputs-r2/linkedLarge.docx",
+      "sha256": "228fdae19ec11836bc9cb4adab183dc79416c057ac112335540391151712f1bf",
+      "scale_pct": 131,
+      "text_utf16_units": 11,
+      "placement": "linkedStyle",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 1
+      },
+      "emit_labels": [
+        "scale_large_report_emit"
+      ],
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/scale-inheritance-native-r1/linkedLarge"
+    },
+    {
+      "case": "linkedDirect100",
+      "input": "evidence/business-map-232/scale-inputs-r2/linkedDirect100.docx",
+      "sha256": "a497b84d7b87d220c01a83b2f0fc7025553d097fb0cae29a7a3dfe9805268221",
+      "scale_pct": 100,
+      "text_utf16_units": 11,
+      "placement": "linkedDirect",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-inheritance-native-r1/linkedDirect100"
+    },
+    {
+      "case": "inheritedDirect100",
+      "input": "evidence/business-map-232/scale-inputs-r2/inheritedDirect100.docx",
+      "sha256": "0b40f406e88f23c2aa0742a63decea2e80e91e5b434eaa4fda7d31a26f791ca6",
+      "scale_pct": 100,
+      "text_utf16_units": 11,
+      "placement": "paragraphDirect",
+      "work_type": "master",
+      "scale_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "branch_hits": {
+        "small": 0,
+        "tiny": 0,
+        "large": 0
+      },
+      "emit_labels": [],
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/scale-inheritance-native-r1/inheritedDirect100"
+    }
+  ]
+}

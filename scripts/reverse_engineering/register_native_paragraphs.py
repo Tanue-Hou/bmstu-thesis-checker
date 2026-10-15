@@ -19,6 +19,8 @@ def main():
     implementations = ['scripts/check_document.py', 'scripts/issue_locations.py',
                        'scripts/testvkr-service/checkers/word_format.py',
                        'scripts/testvkr-service/checkers/native_paragraph_counts.py',
+                       'scripts/testvkr-service/checkers/native_font_counts.py',
+                       'scripts/testvkr-service/checkers/native_scale_counts.py',
                        'scripts/testvkr-service/parsers/docx_parser.py', 'scripts/testvkr-service/parsers/style_resolver.py',
                        'scripts/testvkr-service/config.py']
     impl = {name: sha(ROOT / name) for name in implementations}

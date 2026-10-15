@@ -1,0 +1,36 @@
+{
+  "processed_cases": 17,
+  "error_cases": 0,
+  "native_totals": {
+    "diagnostics": 80,
+    "unmapped": 0
+  },
+  "paragraph_diagnostics_v0219_total": 44,
+  "paragraph_diagnostics_v0220_total": 44,
+  "font_size_diagnostics_v0219_total": 4,
+  "font_size_diagnostics_v0220_total": 4,
+  "implementation_sha256": {
+    "scripts/check_document.py": "38ac4425a0734ae2a36bb026eae7325c30af939d0c58beb40c97452fbef15bd7",
+    "scripts/compare_native_trial.py": "5469a8fd0753cb61e6860e5e925301bf8a9fd9add7730e2ced92d9ba46c51c7f",
+    "scripts/testvkr-service/checkers/native_paragraph_counts.py": "9ba6b16722277942601eb6a2d0dfd2f68733e42f558669ec27508511306efc2a",
+    "scripts/testvkr-service/checkers/native_font_counts.py": "f004b65856ba19c2c49a777e1ea271540b044b03cf7a592ec2c8abf76426010b",
+    "scripts/testvkr-service/checkers/word_format.py": "eedaeadde2a3873ae1fc2670f79d090f9bacd936e026b90ea4c3dbd65304ea28",
+    "scripts/testvkr-service/parsers/style_resolver.py": "bbad6fd130679d5eca02006ad6ad25438f0b9305669ffbc66a5a45747e488e57",
+    "scripts/testvkr-service/parsers/docx_parser.py": "459444976e3dbdee78b32e7fc6644f6d7a2aa32def117e667295c6f279e10081",
+    "scripts/issue_locations.py": "f32f0eda6f0b84b8569799d8c583adb80033bcc9eb069d37b627cb02d8cf0875",
+    "scripts/testvkr-service/rules/rules_verified.json": "232059046902f3ff5f3c32e98a2fc7c219eabb248111507e5a3b7aa4dfc9ed36",
+    "scripts/testvkr-service/rules/rule_guidance_zh.json": "1a1f4b58cd0e2399248622ab1fd0dbddc55969e32f6eb01976e5b6d8015a5367"
+  },
+  "private_summary_sha256": "2fb6f8a5794177d205a0e7832c20f6fc684cb437811c167385c7a0c555693046",
+  "scale_diagnostics_current": {
+    "Word.FontScaleTooSmall": 0,
+    "Word.FontScaleTooLarge": 0
+  },
+  "scale_diagnostics_previous": {
+    "Word.FontScaleTooSmall": 0,
+    "Word.FontScaleTooLarge": 0
+  },
+  "scale_changed_cases": 0,
+  "additional_scale_dependency_sha256": "0b8a1f3c3629de5ec3c4cbe189dbdf611652ff22c3a1c581715171c9a475f9c8",
+  "limits": "Existing native captures reused; only local checker reran. Counts do not prove real-paper accuracy. Additional scale dependency is hashed at final freeze; runner records the existing ten-file dependency set. No private paths/text/EXE published."
+}

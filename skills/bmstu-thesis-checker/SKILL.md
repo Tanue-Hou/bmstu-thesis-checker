@@ -10,6 +10,8 @@ The plugin exposes `check_thesis_document`, `check_thesis_folder`, `list_rules`,
 
 ## Scope
 
+For native232 character scale, read [scale evidence](../../docs/NATIVE_SCALE_RULES_232.zh.md). Ordinary small-scale reports use31..69 percent, while2..30 is a separate observed bucket; large scale uses>130. Count UTF16 units including spaces after native activation; do not apply the font-size textbox prior100 gate to scale. Only registered ordinary DOCX master/NKR profiles are verified. No scale copy-repair permission is added.
+
 For v0.2.19 native232 font activation and linked character styles, read [activation evidence](../../docs/NATIVE_FONT_ACTIVATION_232.zh.md). Classify each run before enabling subsequent runs at paragraph end. Preserve measured table/textbox empty boundaries and native linked-character size separately from standard OOXML size. An inactive cover/preface does not contribute to native font counters. Complex structures remain pending. These detection changes grant no additional copy-repair actions.
 
 For native232 DOCX font diagnostics, read [font counter/role evidence](../../docs/NATIVE_FONT_RULES_232.zh.md). Count UTF16 units including whitespace. Ordinary small-font reporting is4<pt<8 with count>10;0<pt<=4 is a separate observed tiny bucket. Large text is>18pt/count>10 and a simple textbox requires prior processed count>100. Preserve source run ownership and style inheritance. Only registered master/NKR plain profiles are verified; do not transfer to PDF or complex content. Detection proof does not enlarge copy-repair scope.

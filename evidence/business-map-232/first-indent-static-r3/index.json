@@ -1,0 +1,42 @@
+{
+  "title": "Focused static review of FUN_00441c10 report-counter candidate",
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "scope": "Read-only review of the recovered helper, its direct callers, and existing first-indent report gate. No target execution or source changes.",
+  "sources": {
+    "agent-v027/decompilation/provenance.json": "3608d1961f95f3ca6ce5c5f7e69d5a08e84b56b5dc2ab7b3531dfa608eae5733",
+    "agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "agent-v027/decompilation/functions.tsv": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0",
+    "business-map-232/file-entry-decompilation-r1/function.c": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4",
+    "business-map-232/first-indent-static-r2/index.json": "aaf37e619682d2b9b2d43ea16c034f624b865d3a25f5af8f2719cb4f51d58930",
+    "runtime/TestVkr232.exe": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0"
+  },
+  "helper": {
+    "va": "0x00441c10",
+    "pseudocode_lines": "33017-33054",
+    "signature": "int FUN_00441c10(int *param_1, int param_2, undefined4 param_3, char param_4)",
+    "operation": "If *param_1 is nonzero, target_counter = *(int **)(*param_1 + 4*param_2). When param_4 is zero, add FUN_004032f4(param_3); otherwise add one.",
+    "guard": "Before the update, FUN_004032f4(*param_1 + 4*param_2 + 0x1d0) must be below 1000.",
+    "classification": "Generic indexed counter/update helper; consistent with a bucket helper, but the pseudocode does not establish that its array is the main report bucket array or that it handles paragraph diagnostics."
+  },
+  "direct_callers": [
+    {"caller": "0x0044aea0", "call_lines": [39545, 39556, 39576, 39587], "index_offsets_from_base": ["0x174", "0x178"], "indices": ["0x5d", "0x5e"]},
+    {"caller": "0x0044c9ec", "call_lines": [40423, 40532, 40543, 40554, 40570, 40581, 40592, 40608, 40619, 40630, 40646, 40657, 40668, 40696, 40703, 40721, 40732, 40756, 40767, 40889, 41010, 41015, 41025, 41030, 41038, 41043, 41263], "index_offsets_from_base": ["0x188", "0x17c", "0x180", "0x184", "0x194", "0x1b4", "0x1b8", "0x18c", "0x400", "0x198"], "indices": ["0x62", "0x5f", "0x60", "0x61", "0x65", "0x6d", "0x6e", "0x63", "0x100", "0x66"]},
+    {"caller": "0x00450970", "call_lines": [41756, 41834, 41896, 42132, 42143], "index_offsets_from_base": ["0x170", "0x1a8", "0x1a4", "0x1a0"], "indices": ["0x5c", "0x6a", "0x69", "0x68"]},
+    {"caller": "0x00451a48", "call_lines": [42252, 42259], "index_offsets_from_base": ["0x17c", "0x180"], "indices": ["0x5f", "0x60"]},
+    {"caller": "0x00451e54", "call_lines": [42490, 42540, 42551, 42607, 42629], "index_offsets_from_base": ["0x170", "0x17c", "0x180"], "indices": ["0x5c", "0x5f", "0x60"]}
+  ],
+  "slot_0x51_assessment": {
+    "main_gate": "Main entry FUN_0047a528 reads local_5e0[0x51] at function.c line 958 and emits at line 960; VA gate 0x0047ee16, emit 0x0047ee23 (first-indent-static-r1).",
+    "direct_callsite_check": "None of the five direct callers' recovered calls computes index 0x51 (byte offset 0x144) from the shown base. FUN_00451e54 calls this helper, but its visible offsets are +0x170/+0x17c/+0x180, giving 0x5c/0x5f/0x60.",
+    "conclusion": "It is not directly evidenced that this helper produces main slot 0x51. Static review cannot exclude indirect calls, aliasing, hidden writes, or a different producer."
+  },
+  "entry_breakpoint_sampling": {
+    "register_dataflow_evidence": "At entry, instructions 0x00441c16-0x00441c1c save ECX, EDX, EAX respectively to stack locals. The subsequent dereference at 0x00441c29-0x00441c2c uses the saved EAX value; the index arithmetic at 0x00441c42-0x00441c4d uses saved EDX. Correlating the function body's parameter/local dataflow gives param_1=EAX, param_2=EDX, param_3=ECX. Caller disassembly 0x0045225d-0x00452266 independently shows the index returned in EAX moved to EDX, the first argument loaded into EAX, ECX restored for the third argument, then CALL 0x00441c10. This records observed mapping only; no convention name is asserted.",
+    "stack_layout_at_entry_breakpoint_before_prologue": "[ESP]=return VA; [ESP+4]=fourth argument (param_4).",
+    "sample": ["EAX=param_1 (pointer to base pointer)", "EDX=param_2 (index)", "ECX=param_3 (value/text object)", "[ESP]=return VA", "[ESP+4]=param_4 at entry, expected byte/flag"],
+    "derive": ["base = DWORD[EAX]", "target address = base + 4*EDX", "guard metadata address = base + 4*EDX + 0x1d0", "record caller from [ESP]"],
+    "slot_test": "Only treat a hit as a possible producer for main slot 0x51 if EDX==0x51 and the derived base is proven to match the active parser/report counter base. Do not infer that from the index alone."
+  },
+  "limits": ["Caller list is based on recovered calls.tsv/direct pseudocode references; indirect dispatch and unresolved pointer aliases are not ruled out.", "The helper's name and generic array update establish mechanics, not semantic identity of any bucket.", "This is static candidate evidence, not proof of runtime execution or diagnostic trigger conditions."]
+}

@@ -1,0 +1,61 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "a2b1c16555419fa1970849e5a36fa296715758d6f57985d3dafbdc72453319c1",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 9,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Ошибка в наименовании работы."
+    },
+    {
+      "number": 2,
+      "message": "*** Допущены ошибки в названии университета на титульном листе."
+    },
+    {
+      "number": 3,
+      "message": "*** Отсутствует или неправильно введен титульный лист (много несоответствий)."
+    },
+    {
+      "number": 4,
+      "message": "* В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок)."
+    },
+    {
+      "number": 5,
+      "message": "* Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании)."
+    },
+    {
+      "number": 6,
+      "message": "Документ содержит страницы, размеры полей на которых не соответствуют требованиям."
+    },
+    {
+      "number": 7,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\", \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 8,
+      "message": "** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\"."
+    },
+    {
+      "number": 9,
+      "message": "* В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/large130_11",
+  "trace_sha256": "cfb8010faabc0223a0416bb5e5ad10bcfd659fb7f979d4f2ee34ef9700535142",
+  "native_text_sha256": "434117f157d2bb149eeb7c09f79bd9396adf8758da0bca66877ea63a0b8499cf",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "1beb050e4fa6575fac7b360835eade652cbd697f98e0a57a10afc0b9a984bd6e",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

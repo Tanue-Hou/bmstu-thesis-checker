@@ -1,0 +1,58 @@
+{
+  "title": "Focused static follow-up on native first-line-indent counter production",
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "status": "producer_not_identified_in_reviewed_direct_call_paths",
+  "scope": "Focused reread of the existing first-indent-static-r1 leads, DOCX paragraph producer, PDF branch and direct call graph. No target execution, GUI, broad binary scan, or code changes.",
+  "sources": {
+    "agent-v027/decompilation/provenance.json": "3608d1961f95f3ca6ce5c5f7e69d5a08e84b56b5dc2ab7b3531dfa608eae5733",
+    "agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "agent-v027/decompilation/functions.tsv": "5d42fef6e85af949e99c5fd0f22492da0506dd9002f9aa2d9a2a9e02833994d0",
+    "business-map-232/file-entry-decompilation-r1/function.c": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4",
+    "business-map-232/first-indent-static-r1/index.json": "4d38a6036a77fd83bcbbad2eb7e4ec4df253bd5bcb87f2960cb1f994208d3b72"
+  },
+  "docx_paragraph_producer": {
+    "function": "FUN_00437374",
+    "pseudocode_lines": "27695-28050",
+    "observed_counter_calls": [
+      {"line": 28008, "index_source": "local_8c + 0xa4", "helper": "FUN_00403318"},
+      {"line": 28020, "index_source": "local_8c + 0xa5", "helper": "FUN_00403318"},
+      {"line": 28033, "index_source": "local_8c + 0xa6", "helper": "FUN_00403318"}
+    ],
+    "observed_activation_field": {"offset": "parser + 0x11d", "lines": "27919, 27977-27986"},
+    "first_line_property_known_input": {"function": "FUN_0040b198", "lines": "4971-5013", "field_written": "param_2 + 0x1c", "caller": "FUN_0040e9a8 at lines 6795-6800"},
+    "focused_result": "In FUN_00437374 there is no explicit dereference of param_3 + 0x1c, no use of the known +0xa7 pointer/index source, and no counter index 0x51 call. The only generic-counter indices visible in this function resolve from +0xa4/+0xa5/+0xa6. The function does access other untyped paragraph fields; they are not mapped here to w:firstLine or w:jc.",
+    "interpretation_limit": "This is absence within the reviewed pseudocode path, not proof that no alias, indirect writer, or other caller produces slot 0x51. No semantic mapping of the untyped +0x38/+0x3c fields to alignment was established."
+  },
+  "report_gate_and_pdf_route": {
+    "main_function": "FUN_0047a528",
+    "report_gate": {"source_lines": "607-612 and 2055-2078", "slot": "local_5e0[0x51] > 0", "gate_va": "0x0047ee16", "emit_va": "0x0047ee23"},
+    "format_branch": {"source_lines": "583-612", "pdf_parser_base": "local_5e0 = local_78 + 0x149", "slot_0x51_effective_offset": "local_78 + 4*(0x149 + 0x51) = local_78 + 0x668", "docx_parser_base": "local_5e0 = local_74 + 0x158"},
+    "pdf_direct_call_path": [
+      {"caller": "FUN_0047a528", "callee": "FUN_0046ba90", "source_line": 597, "calls_tsv_line": 6067},
+      {"caller": "FUN_0046ba90", "callee": "FUN_004645bc", "pseudocode_line": 57267, "calls_tsv_line": 5072}
+    ],
+    "pdf_page_function": {
+      "function": "FUN_004645bc",
+      "pseudocode_lines": "53318 onward",
+      "counter_helper_reachability": "The reviewed direct-call graph has no path from FUN_004645bc or FUN_0046ba90 to FUN_00403318. FUN_004645bc does call FUN_00402ca8 (calls.tsv line 4700), an offset-to-index arithmetic helper; that call alone does not increment a report counter.",
+      "nearby_0x29c_fields": "At lines 53475-53509, FUN_00409454 parses four MediaBox coordinates into param_1+0x29c..+0x2a8 and FUN_00465f58 orders the rectangle. This is not a write to the main PDF report slot at param_1+0x668.",
+      "limit": "No alternate direct counter writer to PDF slot +0x668 was identified in this focused path. Indirect calls, unresolved callees, and writers outside the reviewed call graph remain open."
+    },
+    "shared_post_parse_candidate": {
+      "main_call": {"function": "FUN_00451e54", "source_line": 695, "runs_after_format_branch": true},
+      "alternate_counter_helper": {"function": "FUN_00441c10", "caller": "FUN_00451e54", "pseudocode_line": 42490, "calls_tsv_line": 3755, "write_expression": "(*param_1)[index] += text_length_or_one"},
+      "disposition": "A common post-parse route can reach this separate indexed-counter helper. Its passed base/index has not been linked to PDF parser +0x668 / main slot 0x51 or to firstLine semantics; it is a candidate for a focused dynamic check, not an identified producer."
+    }
+  },
+  "breakpoint_candidates": [
+    {"va": "0x00441c10", "reason": "alternate shared indexed-counter helper; capture base and index to test whether any call targets the report slot"},
+    {"va": "0x004645bc", "reason": "PDF per-page processing entry on the direct load path; inspect whether the parser object later receives writes at +0x668"},
+    {"va": "0x0047ee16", "reason": "final main slot-0x51 gate; inspect the active parser base and format branch before report emission"}
+  ],
+  "unresolved": [
+    "No producer threshold or role guard is established for the first-line-indent diagnostic.",
+    "The PDF slot +0x668 producer is not found in the reviewed direct call path.",
+    "Static absence does not show the producer does not exist; pointer aliases, indirect dispatch and undecoded code remain outside this focused check."
+  ]
+}

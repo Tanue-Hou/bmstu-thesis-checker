@@ -1,0 +1,65 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "228fdae19ec11836bc9cb4adab183dc79416c057ac112335540391151712f1bf",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 10,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Ошибка в наименовании работы."
+    },
+    {
+      "number": 2,
+      "message": "*** Допущены ошибки в названии университета на титульном листе."
+    },
+    {
+      "number": 3,
+      "message": "*** Отсутствует или неправильно введен титульный лист (много несоответствий)."
+    },
+    {
+      "number": 4,
+      "message": "* В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок)."
+    },
+    {
+      "number": 5,
+      "message": "* Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании)."
+    },
+    {
+      "number": 6,
+      "message": "В документе много символов, у которых масштаб шрифта больше 130%: \"ЖЖЖЖЖЖЖЖЖЖЖ\"."
+    },
+    {
+      "number": 7,
+      "message": "Документ содержит страницы, размеры полей на которых не соответствуют требованиям."
+    },
+    {
+      "number": 8,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\", \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 9,
+      "message": "** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\"."
+    },
+    {
+      "number": 10,
+      "message": "* В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/scale-phd-native-r1/linkedLarge",
+  "trace_sha256": "4a2ac1908312651d58737ca0968e011a3a9f25cebd55797a778d7d527d36a4ae",
+  "native_text_sha256": "95e925a822751697be583042a5a651c02873358d13ad598668c7ab7035fc64de",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "50e77c50acda517cbc074edc2ec5185c0ef1e9651773b5d6c469ea9552304581",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

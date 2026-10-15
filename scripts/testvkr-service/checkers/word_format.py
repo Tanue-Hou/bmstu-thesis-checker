@@ -5,6 +5,7 @@ from models.enums import Severity, ModuleType
 from config import settings
 from .native_font_counts import count_font_candidates
 from .native_paragraph_counts import count_paragraph_candidates
+from .native_scale_counts import count_scale_candidates
 
 class WordFormatChecker(BaseChecker):
     def check(self) -> List[Finding]:
@@ -247,6 +248,9 @@ class WordFormatChecker(BaseChecker):
             self.doc_data['native_font_candidates']=records;self.doc_data['native_font_counters']=counts
             self.doc_data['native232_font_profile_supported']=bool(self.doc_data.get('native232_font_profile_supported')) and all(r['font_size_pt'] is not None and r['font_size_pt']>0 for r in records if r['text'])
             sz_small_count=counts['small'];sz_large_count=counts['large'];table_small_count=counts['table_small'];table_large_count=counts['table_large']
+            scale_counts,scale_records=count_scale_candidates(self.doc_data)
+            self.doc_data['native_scale_candidates']=scale_records;self.doc_data['native_scale_counters']=scale_counts
+            scale_small_count=scale_counts['small'];scale_large_count=scale_counts['large']
         # Append findings if counters exceed 10 characters (threshold > 10)
         if sz_small_count > settings.FONT_VIOLATION_MIN_CHARS:
             findings.append(Finding(
@@ -277,6 +281,7 @@ class WordFormatChecker(BaseChecker):
                 severity=Severity.MAJOR,
                 message=f"В документе много символов, у которых масштаб шрифта меньше {settings.FONT_SCALE_MIN_PCT}%:",
                 threshold={"value": settings.FONT_SCALE_MIN_PCT, "unit": "%", "count_chars": scale_small_count},
+                location={'native_scale_runs':[r['index'] for r in scale_records if r['bucket']=='small']} if native_font_mode else None,
                 skip_switch="SkipTestWord"
             ))
 
@@ -287,6 +292,7 @@ class WordFormatChecker(BaseChecker):
                 severity=Severity.INFO,
                 message=f"В документе много символов, у которых масштаб шрифта больше {settings.FONT_SCALE_MAX_PCT}%:",
                 threshold={"value": settings.FONT_SCALE_MAX_PCT, "unit": "%", "count_chars": scale_large_count},
+                location={'native_scale_runs':[r['index'] for r in scale_records if r['bucket']=='large']} if native_font_mode else None,
                 skip_switch="SkipTestWord"
             ))
 

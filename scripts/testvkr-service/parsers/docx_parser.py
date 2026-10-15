@@ -140,6 +140,8 @@ class DocxParser:
             native_props, native_sources = self.style_resolver.properties(p_element, w_r, native_linked=True)
             native_sz = native_props.find(qn('w:sz'))
             native_size = float(native_sz.get(qn('w:val'))) / 2.0 if native_sz is not None else None
+            native_width = native_props.find(qn('w:w'))
+            native_scale = float(native_width.get(qn('w:val'))) if native_width is not None else 100.0
 
             # Default properties
             font_size = None
@@ -198,6 +200,8 @@ class DocxParser:
                 'font_size_pt': font_size,
                 'native_font_size_pt': native_size,
                 'native_font_size_source': native_sources.get('sz'),
+                'native_scale_pct': native_scale,
+                'native_scale_source': native_sources.get('w','default100'),
                 'font_name': font_name,
                 'color_hex': color_hex,
                 'bg_color_hex': bg_color_hex,
@@ -561,6 +565,7 @@ class DocxParser:
         return {
             'labels':labels,'native232_vml_label_profile_supported':labels_profile,'native232_vml_bounds_profile_supported':bounds_profile,'native232_vml_shape_bounds_profile_supported':shape_bounds_profile,'native232_floating_profile_supported':floating_profile,
             'native232_font_profile_supported':font_profile,
+            'native232_scale_profile_supported':bool(font_profile and not self.doc.element.xpath('.//w:tblStyle | .//w:tab | .//w:br | .//w:cr | .//w:sym')),
             'native_font_activation_events':font_events,
             'native_paragraph_properties':native_paragraphs,'native232_paragraph_profile_supported':native_paragraph_profile,
             'native232_image_bytes_profile_supported':bytes_profile,

@@ -6,7 +6,7 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
  proof=ROOT/'evidence/business-map-232/font-activation-audit-r3/audit.json';audit=json.loads(proof.read_text());assert audit['status']=='passed_native232_font_activation_and_prior_counter_audit' and len(audit['cases'])==76
  for p,d in audit['sources'].items():assert sha(ROOT/p)==d,p
- refs={proof.relative_to(ROOT).as_posix():sha(proof),**audit['sources']};impl={p:sha(ROOT/p) for p in ['scripts/check_document.py','scripts/issue_locations.py','scripts/testvkr-service/checkers/word_format.py','scripts/testvkr-service/checkers/native_font_counts.py','scripts/testvkr-service/checkers/native_paragraph_counts.py','scripts/testvkr-service/parsers/docx_parser.py','scripts/testvkr-service/parsers/style_resolver.py','scripts/testvkr-service/config.py']}
+ refs={proof.relative_to(ROOT).as_posix():sha(proof),**audit['sources']};impl={p:sha(ROOT/p) for p in ['scripts/check_document.py','scripts/issue_locations.py','scripts/testvkr-service/checkers/word_format.py','scripts/testvkr-service/checkers/native_font_counts.py','scripts/testvkr-service/checkers/native_scale_counts.py','scripts/testvkr-service/checkers/native_paragraph_counts.py','scripts/testvkr-service/parsers/docx_parser.py','scripts/testvkr-service/parsers/style_resolver.py','scripts/testvkr-service/config.py']}
  path=ROOT/'scripts/testvkr-service/rules/rules_verified.json';data=json.loads(path.read_text(encoding='utf-8'))
  for rule_id in ['Word.FontSizeTooSmall','Word.FontSizeTooLarge']:
   rule=next(r for r in data['rules'] if r['rule_id']==rule_id);contexts={}
