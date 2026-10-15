@@ -1,0 +1,26 @@
+{
+  "private_summary_sha256": "05bfdd0fe8624a75f05e44bab051762f9fb4ee94602a274cd7374b82af873d77",
+  "processed_cases": 17,
+  "error_cases": 0,
+  "native_totals": {
+    "diagnostics": 80,
+    "unmapped": 0
+  },
+  "font_size_diagnostics_current": 16,
+  "font_size_diagnostics_baseline": 16,
+  "source_identity_mismatches": 0,
+  "per_case_font_count_changes": 0,
+  "implementation_sha256": {
+    "scripts/check_document.py": "23c38b031227128b44cf53ad518481cb400e4124c6fadcea85f6d0edca14cfc4",
+    "scripts/compare_native_trial.py": "5469a8fd0753cb61e6860e5e925301bf8a9fd9add7730e2ced92d9ba46c51c7f",
+    "scripts/testvkr-service/checkers/pictures.py": "083baa76e7afe7944b0f16eec5fd94e6a370d79c68a922424b158c8d5b3f7b1a",
+    "scripts/testvkr-service/checkers/word_format.py": "d1fea8b1d94c611c09dd606a52112975e9934acc67f9bf2b1145a6a2acad9651",
+    "scripts/testvkr-service/checkers/native_font_counts.py": "17a954a16091d6796b49a2af0e486e6c98922873d2a0b6e373dc73e7c87f6ba4",
+    "scripts/testvkr-service/parsers/docx_parser.py": "7d157674345c851d3a22a29d26ebae2a2bb636411db488ac33d2e387e5ab2614",
+    "scripts/testvkr-service/parsers/drawing_geometry.py": "d915c914cfbea735f3e49ae7fb6e463a5e62a97349c2b6f092329b7f04cbdba8",
+    "scripts/testvkr-service/parsers/style_resolver.py": "c7e74303f35241821fed57398450cc20d3d45f17c32e3beed547a467b89199f6",
+    "scripts/testvkr-service/rules/rules_verified.json": "064e158aea4a73e47d753fc293270959ca5d71c79786237f4b081f9de2ab8015",
+    "scripts/testvkr-service/rules/rule_guidance_zh.json": "32f301d2a19d402e7e5b4720ad685eb25e4c415fedc396855e7f6d1efb260197"
+  },
+  "limits": "Retained native captures reused; no native rerun. Mapping and unchanged counts do not establish accuracy. Private source paths, content and diagnostics excluded."
+}

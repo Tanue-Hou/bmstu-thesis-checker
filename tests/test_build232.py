@@ -47,7 +47,8 @@ class Build232Tests(unittest.TestCase):
     def test_build230_proof_does_not_transfer(self):
         p=ROOT/'evidence/dynamic-master/font_7.docx';a=check_file(p,args(230));b=check_file(p,args(232))
         self.assertEqual(next(f for f in a['findings'] if f['rule_id']=='Word.FontSizeTooSmall')['verification_status'],'verified_against_original')
-        self.assertEqual(next(f for f in b['findings'] if f['rule_id']=='Word.FontSizeTooSmall')['verification_status'],'pending_original_program_comparison')
+        current=next(f for f in b['findings'] if f['rule_id']=='Word.FontSizeTooSmall');self.assertEqual(current['verification_status'],'verified_against_original');self.assertEqual(current['verification_scope']['build'],232)
+        unproven=args(232);unproven.work_type='bachelor';self.assertEqual(next(f for f in check_file(p,unproven)['findings'] if f['rule_id']=='Word.FontSizeTooSmall')['verification_status'],'pending_original_program_comparison')
         self.assertFalse(b['native_reference']['transfer_validated'])
         with self.assertRaises(ValueError):repair_copy(p,dry_run=True,native_build=232)
     def test_real_control_predicates_and_capture_identity(self):

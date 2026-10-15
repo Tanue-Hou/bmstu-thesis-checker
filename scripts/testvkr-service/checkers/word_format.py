@@ -3,6 +3,7 @@ from .base import BaseChecker
 from models.finding import Finding
 from models.enums import Severity, ModuleType
 from config import settings
+from .native_font_counts import count_font_candidates
 
 class WordFormatChecker(BaseChecker):
     def check(self) -> List[Finding]:
@@ -239,6 +240,12 @@ class WordFormatChecker(BaseChecker):
                             if size is not None and size<settings.FONT_SIZE_MIN_PT:table_small_count+=count
                             if size is not None and size>settings.FONT_SIZE_MAX_PT:table_large_count+=count
         sz_small_count+=table_small_count;sz_large_count+=table_large_count
+        native_font_mode=self.doc_data.get('native_build')==232
+        if native_font_mode:
+            counts,records=count_font_candidates(self.doc_data,settings.FONT_SIZE_MIN_PT,settings.FONT_SIZE_MAX_PT)
+            self.doc_data['native_font_candidates']=records;self.doc_data['native_font_counters']=counts
+            self.doc_data['native232_font_profile_supported']=bool(self.doc_data.get('native232_font_profile_supported')) and all(r['font_size_pt'] is not None and r['font_size_pt']>0 for r in records if r['text'])
+            sz_small_count=counts['small'];sz_large_count=counts['large'];table_small_count=counts['table_small'];table_large_count=counts['table_large']
         # Append findings if counters exceed 10 characters (threshold > 10)
         if sz_small_count > settings.FONT_VIOLATION_MIN_CHARS:
             findings.append(Finding(
@@ -246,7 +253,8 @@ class WordFormatChecker(BaseChecker):
                 module=ModuleType.WORD_FORMAT,
                 severity=Severity.MAJOR,
                 message=f"В документе много символов, размер которых меньше {settings.FONT_SIZE_MIN_PT} пт",
-                threshold={"value": settings.FONT_SIZE_MIN_PT, "unit": "pt", "count_chars": sz_small_count,'table_count_chars':table_small_count},
+                threshold={"value": settings.FONT_SIZE_MIN_PT, "unit": "pt", "count_chars": sz_small_count,'table_count_chars':table_small_count,**({'measurement':'UTF16 units including whitespace','minimum_exclusive_pt':settings.FONT_SIZE_MIN_PT/2,'maximum_exclusive_pt':settings.FONT_SIZE_MIN_PT,'minimum_count_exclusive':settings.FONT_VIOLATION_MIN_CHARS} if native_font_mode else {})},
+                location={'native_font_runs':[r['index'] for r in records if r['bucket']=='small']} if native_font_mode else None,
                 skip_switch="SkipTestWord"
             ))
 
@@ -256,7 +264,8 @@ class WordFormatChecker(BaseChecker):
                 module=ModuleType.WORD_FORMAT,
                 severity=Severity.INFO,
                 message="В документе много символов, размер которых превышает требования",
-                threshold={"value": settings.FONT_SIZE_MAX_PT, "unit": "pt", "count_chars": sz_large_count,'table_count_chars':table_large_count},
+                threshold={"value": settings.FONT_SIZE_MAX_PT, "unit": "pt", "count_chars": sz_large_count,'table_count_chars':table_large_count,**({'measurement':'UTF16 units including whitespace; textbox requires prior count >100','minimum_count_exclusive':settings.FONT_VIOLATION_MIN_CHARS} if native_font_mode else {})},
+                location={'native_font_runs':[r['index'] for r in records if r['bucket']=='large']} if native_font_mode else None,
                 skip_switch="SkipTestWord"
             ))
 

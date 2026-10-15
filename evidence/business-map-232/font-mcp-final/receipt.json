@@ -1,0 +1,78 @@
+{
+  "status": "passed_actual_font_mcp_with_retained_same_input_native",
+  "server_version": "0.2.17",
+  "cases": [
+    {
+      "case": "tinyEqual",
+      "work_type": "master",
+      "source_sha256": "204b5643382b1f63ae3d7249f3a4e1bdc8fd183479721c133b46ed7df94e7ea1",
+      "native_capture": "evidence/business-map-232/font-native-r1/tinyEqual",
+      "font_counters": {
+        "small": 0,
+        "tiny": 11,
+        "large": 0,
+        "table_small": 0,
+        "table_large": 0
+      },
+      "two_families_and_three_counters_agree": true
+    },
+    {
+      "case": "largeAfter101",
+      "work_type": "master",
+      "source_sha256": "5b5689c09ddfbe4a27e089945abe16c48a6dc1ec784b04acb87e0ec6160e56d5",
+      "native_capture": "evidence/business-map-232/font-native-r1/largeAfter101",
+      "font_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11,
+        "table_small": 0,
+        "table_large": 0
+      },
+      "two_families_and_three_counters_agree": true
+    },
+    {
+      "case": "smallSpacePad",
+      "work_type": "master",
+      "source_sha256": "678fbfbb873b17682ad2619119482c2d0478260e4ad40689d78fcb002d15424f",
+      "native_capture": "evidence/business-map-232/font-native-r2/smallSpacePad",
+      "font_counters": {
+        "small": 12,
+        "tiny": 0,
+        "large": 0,
+        "table_small": 0,
+        "table_large": 0
+      },
+      "two_families_and_three_counters_agree": true
+    },
+    {
+      "case": "small11",
+      "work_type": "phd",
+      "source_sha256": "8ebfce89111a41123ca69e48403ef38a8c67ae343ceafa295d9e0981ded5302e",
+      "native_capture": "evidence/business-map-232/font-phd-native-r1/small11",
+      "font_counters": {
+        "small": 11,
+        "tiny": 0,
+        "large": 0,
+        "table_small": 0,
+        "table_large": 0
+      },
+      "two_families_and_three_counters_agree": true
+    },
+    {
+      "case": "characterInheritedLarge",
+      "work_type": "phd",
+      "source_sha256": "e74d9b4192aa2da6998a6f83e0ed1707f7dc7390c20b0309f14cf2cc7e1b4258",
+      "native_capture": "evidence/business-map-232/font-phd-native-r1/characterInheritedLarge",
+      "font_counters": {
+        "small": 0,
+        "tiny": 0,
+        "large": 11,
+        "table_small": 0,
+        "table_large": 0
+      },
+      "two_families_and_three_counters_agree": true
+    }
+  ],
+  "raw_response_sha256": "836fb79b7ae170c77755985afbd2f0da1e67c6396aa550e8fbc63eb95d7e84c5",
+  "limits": "Actual MCP transport; original executions retained by source hash, not rerun here. Font families/counters only; no school or repair certification."
+}

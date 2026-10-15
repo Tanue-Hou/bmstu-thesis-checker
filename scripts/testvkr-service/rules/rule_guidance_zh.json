@@ -20,7 +20,7 @@
   "Word.FontSizeTooSmall": {
     "title_zh": "字号过小",
     "explanation_zh": "字符字号低于当前检查下限。程序的异常字号下限不等于学校要求的正文字号。",
-    "trigger_reason_zh": "字符字号低于规则下限并超过数量阈值。",
+    "trigger_reason_zh": "232 DOCX普通小字号判据为4<字号<8pt，UTF16代码单元（含空格）计数>10；≤4pt进入另一观察槽，不等于可读或合规。其他版本/配置以JSON验证范围为准。",
     "fix_suggestion_zh": "先核对学校模板及文字用途，再处理异常小字；不要把全文统一改成检查下限。",
     "word_path_zh": "开始 -> 字体 -> 字号。",
     "fix_priority": "must_fix",
@@ -29,7 +29,7 @@
   "Word.FontSizeTooLarge": {
     "title_zh": "字号过大",
     "explanation_zh": "文档中存在大量明显大于常规正文要求的字符。",
-    "trigger_reason_zh": "字符字号超过规则上限并超过数量阈值。",
+    "trigger_reason_zh": "232 DOCX为字号>18pt且UTF16计数>10；简单文本框还要求此前已处理字符数>100。样式先解析，其他格式或复杂内容仍待验证。",
     "fix_suggestion_zh": "检查标题、正文和表格字号，保留必要标题层级，其余恢复为规范字号。",
     "word_path_zh": "开始 -> 字体 -> 字号；必要时检查样式窗格。",
     "fix_priority": "should_fix",

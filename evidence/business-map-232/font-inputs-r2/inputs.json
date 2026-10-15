@@ -1,0 +1,173 @@
+{
+  "parent_sha256": "b31ccc551566fb4ff929ec90e7090a890a9060fd030ee2877066f54b1b65fed7",
+  "cases": [
+    {
+      "case": "small10",
+      "input": "evidence/business-map-232/font-inputs-r2/small10.docx",
+      "sha256": "28b1e4e6f0c00e1b6cc9c91953feac0597a61506d478061aec55b673f8786eca",
+      "half_points": 15,
+      "text_utf16_units": 10,
+      "role": "body"
+    },
+    {
+      "case": "small11",
+      "input": "evidence/business-map-232/font-inputs-r2/small11.docx",
+      "sha256": "8ebfce89111a41123ca69e48403ef38a8c67ae343ceafa295d9e0981ded5302e",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "body"
+    },
+    {
+      "case": "smallEqual",
+      "input": "evidence/business-map-232/font-inputs-r2/smallEqual.docx",
+      "sha256": "fff7f4e0cc2f3c1795f03ee8ed55c2fdc5d157d6c36f02f95da1579b589e138a",
+      "half_points": 16,
+      "text_utf16_units": 11,
+      "role": "body"
+    },
+    {
+      "case": "tinyEqual",
+      "input": "evidence/business-map-232/font-inputs-r2/tinyEqual.docx",
+      "sha256": "204b5643382b1f63ae3d7249f3a4e1bdc8fd183479721c133b46ed7df94e7ea1",
+      "half_points": 8,
+      "text_utf16_units": 11,
+      "role": "body"
+    },
+    {
+      "case": "tinyAbove",
+      "input": "evidence/business-map-232/font-inputs-r2/tinyAbove.docx",
+      "sha256": "1dbc0313b1d3862422e831d1a82734d641023d1c5c58b4da8e18499efbb8bd70",
+      "half_points": 9,
+      "text_utf16_units": 11,
+      "role": "body"
+    },
+    {
+      "case": "large10",
+      "input": "evidence/business-map-232/font-inputs-r2/large10.docx",
+      "sha256": "02a1edd0417eb27f774cb3d77fa1a69a6635820ad764f05736dea56a877777a3",
+      "half_points": 37,
+      "text_utf16_units": 10,
+      "role": "body"
+    },
+    {
+      "case": "large11",
+      "input": "evidence/business-map-232/font-inputs-r2/large11.docx",
+      "sha256": "1981866246ce396f53caa695002af73ace69b0220e3ad975675f944612bb41a7",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "body"
+    },
+    {
+      "case": "largeEqual",
+      "input": "evidence/business-map-232/font-inputs-r2/largeEqual.docx",
+      "sha256": "ec18aee8acc734b3a632b5197065de0dfdb0afe16963f85368eaeec2f3a92ab0",
+      "half_points": 36,
+      "text_utf16_units": 11,
+      "role": "body"
+    },
+    {
+      "case": "smallSpacePad",
+      "input": "evidence/business-map-232/font-inputs-r2/smallSpacePad.docx",
+      "sha256": "678fbfbb873b17682ad2619119482c2d0478260e4ad40689d78fcb002d15424f",
+      "half_points": 15,
+      "text_utf16_units": 12,
+      "role": "pad"
+    },
+    {
+      "case": "smallSpaces",
+      "input": "evidence/business-map-232/font-inputs-r2/smallSpaces.docx",
+      "sha256": "24118facec95c95edd4fc08d9a79031fe421a88d29acbb715330f07a2ac010be",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "spaces"
+    },
+    {
+      "case": "smallAscii",
+      "input": "evidence/business-map-232/font-inputs-r2/smallAscii.docx",
+      "sha256": "6f1faa83b7d2e6328ff8d086a53afeb17fc59ba639cb215b31be13003581923f",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "ascii"
+    },
+    {
+      "case": "smallEmoji",
+      "input": "evidence/business-map-232/font-inputs-r2/smallEmoji.docx",
+      "sha256": "c94178939f3d54eb800004516b59f43faa3def5a6fa97855f0b6591558f5f27c",
+      "half_points": 15,
+      "text_utf16_units": 12,
+      "role": "emoji"
+    },
+    {
+      "case": "smallSuper",
+      "input": "evidence/business-map-232/font-inputs-r2/smallSuper.docx",
+      "sha256": "eedea57748c11c273e9fc3cb20d1c25853b886142fc4f91e31ac4489b624c645",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "super"
+    },
+    {
+      "case": "largeTable",
+      "input": "evidence/business-map-232/font-inputs-r2/largeTable.docx",
+      "sha256": "e68fc358fb9dbb9483414204d2b84c30e6e2cc5d01ac6c5479b1deab5997005d",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "table"
+    },
+    {
+      "case": "smallTable",
+      "input": "evidence/business-map-232/font-inputs-r2/smallTable.docx",
+      "sha256": "6260aa37aaf56c1b002673685feb59a1b21720fb69fb6a3ee5d45b429eb4cc78",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "table"
+    },
+    {
+      "case": "largeTextbox",
+      "input": "evidence/business-map-232/font-inputs-r2/largeTextbox.docx",
+      "sha256": "b68ffdef30ecd735a2c270a7ba9a1c0f5633ce43c5f768b23598fc426d69c843",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "textbox"
+    },
+    {
+      "case": "largeTextbox101",
+      "input": "evidence/business-map-232/font-inputs-r2/largeTextbox101.docx",
+      "sha256": "74750e1520163482f8754850beed25845cb282f770fa0f49fccba107542d17a5",
+      "half_points": 37,
+      "text_utf16_units": 101,
+      "role": "textbox"
+    },
+    {
+      "case": "largeAfter100",
+      "input": "evidence/business-map-232/font-inputs-r2/largeAfter100.docx",
+      "sha256": "d6b2b6f729a8902f5b72789ea378bc911378b7bb6d77c6172bc12b3d4ce0d2f4",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "after100"
+    },
+    {
+      "case": "largeAfter101",
+      "input": "evidence/business-map-232/font-inputs-r2/largeAfter101.docx",
+      "sha256": "5b5689c09ddfbe4a27e089945abe16c48a6dc1ec784b04acb87e0ec6160e56d5",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "after101"
+    },
+    {
+      "case": "paragraphInheritedSmall",
+      "input": "evidence/business-map-232/font-inputs-r2/paragraphInheritedSmall.docx",
+      "sha256": "e331fc1a78c0cb14feb9af1b9c8a508e9a865e7a750f6391171bc258d68e6f0a",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "paragraphStyle"
+    },
+    {
+      "case": "characterInheritedLarge",
+      "input": "evidence/business-map-232/font-inputs-r2/characterInheritedLarge.docx",
+      "sha256": "e74d9b4192aa2da6998a6f83e0ed1707f7dc7390c20b0309f14cf2cc7e1b4258",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "characterStyle"
+    }
+  ]
+}

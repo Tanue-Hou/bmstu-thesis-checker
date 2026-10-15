@@ -130,7 +130,8 @@ class DocxParser:
         w_r_list = p_element.findall('.//w:r', NS)
 
         for w_r in w_r_list:
-            text_nodes = w_r.findall('.//w:t', NS)
+            if next(w_r.iterancestors(qn('w:p')),None) is not p_element:continue
+            text_nodes = [t for t in w_r.findall('.//w:t', NS) if next(t.iterancestors(qn('w:p')),None) is p_element]
             text = "".join([t.text for t in text_nodes if t.text])
             if not text:
                 continue
@@ -190,6 +191,7 @@ class DocxParser:
 
             runs_info.append({
                 'text': text,
+                'xml_path':w_r.getroottree().getpath(w_r),
                 'font_size_pt': font_size,
                 'font_name': font_name,
                 'color_hex': color_hex,
@@ -461,6 +463,22 @@ class DocxParser:
     def parse_all(self) -> Dict[str, Any]:
         images=self.parse_drawings_and_images()
         labels=vml_textboxes(self.doc.element.body)
+        shapes=[s for s in self.doc.element.body.findall('.//{urn:schemas-microsoft-com:vml}shape') if s.find('{urn:schemas-microsoft-com:vml}textbox') is not None]
+        for label,shape in zip(labels,shapes):label['font_paragraphs']=[{'xml_path':p.getroottree().getpath(p),'runs':self.extract_runs_formatting(p)} for p in shape.findall('.//w:p',NS)]
+        font_profile=not bool(self.doc.element.xpath('.//*[local-name()="oMath" or local-name()="oMathPara" or local-name()="instrText" or local-name()="fldChar" or local-name()="fldSimple" or local-name()="hyperlink" or local-name()="del" or local-name()="ins" or local-name()="AlternateContent" or local-name()="group" or local-name()="drawing" or local-name()="object" or local-name()="sdt" or local-name()="footnoteReference" or local-name()="endnoteReference"]'))
+        with zipfile.ZipFile(self.file_path) as z:
+            font_profile=font_profile and not any(n.startswith(('word/header','word/footer','word/footnotes','word/endnotes')) for n in z.namelist())
+        tables_for_font=self.doc.element.body.findall('.//w:tbl',NS)
+        font_profile=font_profile and len(tables_for_font)<=1 and all(len(t.findall('./w:tr',NS))==1 and len(t.findall('./w:tr/w:tc',NS))==1 and not bool(t.findall('.//w:gridSpan',NS)+t.findall('.//w:vMerge',NS)) for t in tables_for_font) and len(labels)<=1 and not bool(self.doc.element.xpath('.//*[local-name()="vanish" or local-name()="position" or local-name()="fitText"]'))
+        for label,shape in zip(labels,shapes):
+            font_profile=font_profile and shape.get('type')=='#_x0000_t202' and set(shape.attrib)<={'id','type','style'} and shape.get('style')=='position:absolute;width:50mm;height:50mm;margin-left:0;margin-top:0' and not shape.find('{urn:schemas-microsoft-com:vml}textbox').attrib and len(label['font_paragraphs'])==1 and len(label['font_paragraphs'][0]['runs'])<=2
+        for control in self.doc.element.xpath('.//w:tab | .//w:br | .//w:cr | .//w:sym'):
+            paragraph=next(control.iterancestors(qn('w:p')),None);run=next(control.iterancestors(qn('w:r')),None)
+            if paragraph is None or run is None:font_profile=False;continue
+            props,_=self.style_resolver.properties(paragraph,run);size=props.find(qn('w:sz'))
+            try:normal_size=size is not None and 16<=float(size.get(qn('w:val')))<=36
+            except (ValueError,TypeError):normal_size=False
+            if not normal_size or any(etree.QName(n).localname=='textbox' for n in control.iterancestors()):font_profile=False
         labels_profile=(len(labels)==len(self.doc.element.body.findall('.//{urn:schemas-microsoft-com:vml}shape')) and all(l['geometry_supported'] for l in labels) and not bool(self.doc.element.xpath('.//*[local-name()="txbx"] | .//*[local-name()="group"]')))
         bounds_profile=(len(labels)==len(self.doc.element.body.findall('.//{urn:schemas-microsoft-com:vml}shape')) and all(l['bounds_geometry_supported'] for l in labels) and not bool(self.doc.element.xpath('.//*[local-name()="txbx"] | .//*[local-name()="group"]')))
         shape_bounds_profile=(len(labels)==len(self.doc.element.body.findall('.//{urn:schemas-microsoft-com:vml}shape')) and all(l['shape_bounds_geometry_supported'] for l in labels) and not bool(self.doc.element.xpath('.//*[local-name()="txbx"] | .//*[local-name()="group"]')))
@@ -473,6 +491,7 @@ class DocxParser:
                        and not bool(self.doc.element.xpath('.//w:pict | .//w:txbxContent | .//w:object | .//*[local-name()="AlternateContent"]')))
         return {
             'labels':labels,'native232_vml_label_profile_supported':labels_profile,'native232_vml_bounds_profile_supported':bounds_profile,'native232_vml_shape_bounds_profile_supported':shape_bounds_profile,'native232_floating_profile_supported':floating_profile,
+            'native232_font_profile_supported':font_profile,
             'native232_image_bytes_profile_supported':bytes_profile,
             'native232_single_inline_png_profile_supported':pixel_profile,
             'native_graduate_scope_supported': not bool(self.doc.element.xpath('.//w:tbl | .//w:drawing | .//w:pict | .//w:txbxContent | .//w:fldSimple | .//w:instrText | .//w:del | .//w:ins | .//w:altChunk | .//w:sdt')),

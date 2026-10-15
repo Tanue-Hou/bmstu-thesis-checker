@@ -1,0 +1,44 @@
+{
+  "native_build": 232,
+  "work_type": "master",
+  "cases": [
+    {
+      "case": "paragraphInheritedSmall",
+      "input": "evidence/business-map-232/font-inputs-r2/paragraphInheritedSmall.docx",
+      "sha256": "e331fc1a78c0cb14feb9af1b9c8a508e9a865e7a750f6391171bc258d68e6f0a",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "paragraphStyle",
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/font-inheritance-native-r1/paragraphInheritedSmall"
+    },
+    {
+      "case": "characterInheritedLarge",
+      "input": "evidence/business-map-232/font-inputs-r2/characterInheritedLarge.docx",
+      "sha256": "e74d9b4192aa2da6998a6f83e0ed1707f7dc7390c20b0309f14cf2cc7e1b4258",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "characterStyle",
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 1,
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/font-inheritance-native-r1/characterInheritedLarge"
+    }
+  ]
+}

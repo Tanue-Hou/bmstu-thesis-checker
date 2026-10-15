@@ -24,7 +24,7 @@ from school_templates import BUILTINS, load_template
 
 
 SERVER_NAME = "BMSTU Thesis Checker"
-SERVER_VERSION = "0.2.16"
+SERVER_VERSION = "0.2.17"
 METHOD_NOT_FOUND = -32601
 INVALID_PARAMS = -32602
 INTERNAL_ERROR = -32603

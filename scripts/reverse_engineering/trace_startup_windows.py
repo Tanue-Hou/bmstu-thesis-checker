@@ -33,7 +33,7 @@ class THREAD_ENTRY(C.Structure):
     _fields_=[('size',D),('usage',D),('tid',D),('pid',D),('base_priority',W.LONG),('delta_priority',W.LONG),('flags',D)]
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--drawing-trace',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--drawing-trace',action='store_true');p.add_argument('--font-trace',action='store_true');p.add_argument('--image-bytes-trace',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
     if a.direct_file_entry and not a.probe_document:raise ValueError('Direct entry requires a synthetic document probe')
     if a.probe_document and not a.direct_file_entry:raise ValueError('Only controlled direct-entry probes are supported; natural cross-process HDROP is not validated')
     if a.dictionary_cp1251:a.trace_codepage=True
@@ -198,6 +198,10 @@ def main():
                         if drawing_trace:
                             for va,label in [(0x00438a32,'shape_bounds_compare'),(0x00438a99,'shape_bounds_emit')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
+                        if a.font_trace:
+                            for va,label in [(0x0040992a,'font_run_state'),(0x00409ad7,'font_small_add'),(0x00409afc,'font_tiny_add'),(0x00409b61,'font_large_add'),(0x0047b5e3,'font_small_report_gate'),(0x0047b7cd,'font_large_report_gate'),(0x0047b5ed,'font_small_report_emit'),(0x0047b7d7,'font_large_report_emit')]:
+                                addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
+                        if drawing_trace:
                             for va,label in [(0x0047c8fe,'drawing_report_state'),(0x0047c939,'floating_image_emit'),(0x0047d051,'small_labels_report_gate'),(0x0047d05e,'small_labels_emit'),(0x0041d672,'small_label_geometry'),(0x00438805,'drawing_area_geometry'),(0x0041d581,'textbox_overflow_emit'),(0x0041d693,'textbox_small_width_emit'),(0x0041d7a6,'textbox_small_height_emit'),(0x0041d665,'textbox_exclusion_flag'),(0x0041d799,'textbox_autofit_flag'),(0x0041d537,'textbox_bounds_compare')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                     if event.u.create.file:k.CloseHandle(event.u.create.file)
@@ -232,6 +236,14 @@ def main():
                             hit={'label':label,'address':hex(addr),'registers':{n:hex(getattr(context,n)) for n in ['Eip','Esp','Eax','Edx','Ecx']},'stack_dwords':list(struct.unpack('<4I',read(context.Esp,16))),'one_shot':label!='MultiByteToWideChar_thunk'};hits.append(hit);entry['hit']=label
                             if label=='drawing_report_state':hit['drawing_state']={'count_slot_26':signed(context.Ecx+0x98),'count_slot_27':signed(context.Ecx+0x9c),'count_slot_28':signed(context.Ecx+0xa0),'count_slot_29':signed(context.Ecx+0xa4),'count_slot_30':signed(context.Ecx+0xc0),'count_slot_32':signed(context.Ecx+0xc8),'floating_area_float':struct.unpack('<f',read(context.Ecx+0x1cc,4))[0],'small_label_count':signed(context.Ecx+0xb8),'overflow_label_count':signed(context.Ecx+0xbc)}
                             if label=='drawing_report_state':hit['drawing_state']['shape_bounds_count']=signed(context.Ecx+0xa8)
+                            if label.startswith('font_'):
+                                if 'report_' in label:hit['font_report_state']={'small_count':signed(context.Ecx+0x2c),'tiny_count':signed(context.Ecx+0x30),'large_count':signed(context.Ecx+0x34)}
+                                else:
+                                    parser=unsigned(context.Ebp-0x34);style=unsigned(context.Ebp-0x3c);text_object=unsigned(context.Ebp-0x38)
+                                    hit['font_state']={'size_half_points':signed(style+0x94),'vertical_align_flag':read(style+0xac,1)[0],'enabled_flag':read(parser+0x11d,1)[0],'table_gate_c8':signed(parser+0xc8),'textbox_gate_f0':signed(parser+0xf0),'textbox_count_110':signed(parser+0x110),'small_count_before':signed(parser+0x184),'tiny_count_before':signed(parser+0x188),'large_count_before':signed(parser+0x18c),'text':unicode_object(text_object) if unsigned(text_object) else {'length':0,'prefix':''}}
+                                pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
+                                if 'report_' not in label and pixel_hit_counts[label]<256:
+                                    pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False
                             if label.startswith('shape_bounds_'):
                                 state=unsigned(context.Ebp-0x74);hit['shape_bounds_state']={name:struct.unpack('<f',read(state+offset,4))[0] for name,offset in [('width',0x120),('height',0x124),('inset_138',0x138),('inset_13c',0x13c),('inset_140',0x140),('inset_144',0x144),('rotation',0x148)]}
                                 hit['shape_bounds_state'].update({name:struct.unpack('<f',read(context.Ebp-offset,4))[0] for name,offset in [('selected_width',0xa0),('selected_height',0xa4),('width_base',0x90),('height_base',0x94)]})

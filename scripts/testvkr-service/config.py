@@ -9,8 +9,8 @@ class Settings(BaseSettings):
     # Local policy defaults; original TestVkr comparisons are not dynamically verified.
     LINE_SPACING_BODY: float = 1.5       # lines
     LINE_SPACING_TABLE: float = 1.0      # lines
-    FONT_SIZE_MIN_PT: float = 8.0        # shipped default at VA 0x006ee118; dynamic comparison pending
-    FONT_SIZE_MAX_PT: float = 18.0       # shipped default at VA 0x006ee11c
+    FONT_SIZE_MIN_PT: float = 8.0        # native232 integer at 0x006e519c; ordinary small bucket is4<pt<8
+    FONT_SIZE_MAX_PT: float = 18.0       # native232 integer at 0x006e51a0; role-gated strict upper anomaly
     FONT_SCALE_MIN_PCT: float = 70.0     # %
     FONT_SCALE_MAX_PCT: float = 130.0    # %
     TABLE_ROW_HEIGHT_MIN_MM: float = 8.0 # mm

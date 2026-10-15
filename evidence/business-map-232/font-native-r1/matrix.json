@@ -1,0 +1,120 @@
+{
+  "native_build": 232,
+  "work_type": "master",
+  "cases": [
+    {
+      "case": "small10",
+      "input": "evidence/business-map-232/font-inputs-r1/small10.docx",
+      "sha256": "28b1e4e6f0c00e1b6cc9c91953feac0597a61506d478061aec55b673f8786eca",
+      "half_points": 15,
+      "text_utf16_units": 10,
+      "role": "body",
+      "work_type": "master",
+      "font_state": {
+        "small_count": 10,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/font-native-r1/small10"
+    },
+    {
+      "case": "small11",
+      "input": "evidence/business-map-232/font-inputs-r1/small11.docx",
+      "sha256": "8ebfce89111a41123ca69e48403ef38a8c67ae343ceafa295d9e0981ded5302e",
+      "half_points": 15,
+      "text_utf16_units": 11,
+      "role": "body",
+      "work_type": "master",
+      "font_state": {
+        "small_count": 11,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 1,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/font-native-r1/small11"
+    },
+    {
+      "case": "tinyEqual",
+      "input": "evidence/business-map-232/font-inputs-r1/tinyEqual.docx",
+      "sha256": "204b5643382b1f63ae3d7249f3a4e1bdc8fd183479721c133b46ed7df94e7ea1",
+      "half_points": 8,
+      "text_utf16_units": 11,
+      "role": "body",
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 11,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 1,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 8,
+      "evidence_directory": "evidence/business-map-232/font-native-r1/tinyEqual"
+    },
+    {
+      "case": "largeTable",
+      "input": "evidence/business-map-232/font-inputs-r1/largeTable.docx",
+      "sha256": "e68fc358fb9dbb9483414204d2b84c30e6e2cc5d01ac6c5479b1deab5997005d",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "table",
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 1,
+      "native_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/font-native-r1/largeTable"
+    },
+    {
+      "case": "largeTextbox",
+      "input": "evidence/business-map-232/font-inputs-r1/largeTextbox.docx",
+      "sha256": "b68ffdef30ecd735a2c270a7ba9a1c0f5633ce43c5f768b23598fc426d69c843",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "textbox",
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 0
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 0,
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/font-native-r1/largeTextbox"
+    },
+    {
+      "case": "largeAfter101",
+      "input": "evidence/business-map-232/font-inputs-r1/largeAfter101.docx",
+      "sha256": "5b5689c09ddfbe4a27e089945abe16c48a6dc1ec784b04acb87e0ec6160e56d5",
+      "half_points": 37,
+      "text_utf16_units": 11,
+      "role": "after101",
+      "work_type": "master",
+      "font_state": {
+        "small_count": 0,
+        "tiny_count": 0,
+        "large_count": 11
+      },
+      "small_branch_hits": 0,
+      "tiny_branch_hits": 0,
+      "large_branch_hits": 1,
+      "native_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/font-native-r1/largeAfter101"
+    }
+  ]
+}

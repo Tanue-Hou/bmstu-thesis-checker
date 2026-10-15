@@ -1,3 +1,10 @@
+# v0.2.17
+
+- Recover font producer branches, half-point comparisons, UTF16 counters and final >10 report gates using29 native master/NKR DOCX executions.
+- Correct ordinary-small versus tiny buckets, whitespace/surrogate counting, nested textbox run attribution and stateful textbox large-font gates.
+- Verify paragraph/character style inheritance and a single-cell table; add source-bound font-run locations and observation counters.
+- Add four exact version/mode/profile contexts. Keep PDF/complex content pending and existing repair permissions unchanged.
+
 # v0.2.16
 
 - Recover independent shape-bounds diagnostics using20 valid native cases with inclusive portrait/landscape boundaries and rotation-bin observations.

@@ -10,6 +10,8 @@ The plugin exposes `check_thesis_document`, `check_thesis_folder`, `list_rules`,
 
 ## Scope
 
+For native232 DOCX font diagnostics, read [font counter/role evidence](../../docs/NATIVE_FONT_RULES_232.zh.md). Count UTF16 units including whitespace. Ordinary small-font reporting is4<pt<8 with count>10;0<pt<=4 is a separate observed tiny bucket. Large text is>18pt/count>10 and a simple textbox requires prior processed count>100. Preserve source run ownership and style inheritance. Only registered master/NKR plain profiles are verified; do not transfer to PDF or complex content. Detection proof does not enlarge copy-repair scope.
+
 For `Pic.ShapesOutOfBounds`, read [independent shape-bounds evidence](../../docs/NATIVE_SHAPE_BOUNDS_232.zh.md). This inclusive native predicate differs from textbox strict bounds. Match the tested native rotation-bin selection, not a rendered bounding box. Only registered simple VML/angle/A4 configurations are verified; four raw adjustment fields have unknown full semantics. Invalid landscape batch r3/r1 is excluded from verification. No shape movement/deletion/resize repair is allowed.
 
 For `Pic.LabelsOutOfBounds`, read [dimension bounds evidence](../../docs/NATIVE_TEXTBOX_BOUNDS_232.zh.md). This native diagnostic uses dimension thresholds, not rendered-page overflow or actual school margins. Preserve overflow-before-small-label precedence and separate position exclusions. Only the registered simple single-section A4 DOCX/NKR profile is verified; general shape bounds remain separate coverage gaps. No drawing repair is allowed.
