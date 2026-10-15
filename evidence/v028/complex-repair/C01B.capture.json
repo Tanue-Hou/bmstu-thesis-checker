@@ -1,0 +1,17 @@
+{
+  "status": "captured",
+  "build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "input_sha256": "3edc36ef308d75ce505b3946bbbe3fa4e7a04092585e5bbe118926b4222acbb6",
+  "work_type": "master",
+  "text_path": "C01B.original.txt",
+  "text_sha256": "7a7a3309870fc9bdf5e8e619562a34c05c2872a8543e078e1247579fea04d75d",
+  "screenshots": [
+    {
+      "file": "C01B.screen-0.jpg",
+      "sha256": "8bef9a61ac0eabbb8c2070d5e867d2a958d51aae23a0227b5bda9c175f723e89"
+    }
+  ],
+  "captured_at_utc": "2026-10-15T12:27:12.010Z",
+  "limitations": "UIA normalized diagnostic text; screenshot retained. Synthetic ordinary body only."
+}

@@ -1,0 +1,12 @@
+{
+  "reviewed_distinct_pages": [
+    "C01A-page1",
+    "C01A-page2",
+    "C01A-page3",
+    "C01B-page2",
+    "C02B-page2"
+  ],
+  "page1_and_page3_pixel_identical_across_all_three_inputs": true,
+  "visual_result": "No added clipping/overlap or missing equation/image/table observed; intended body-size change only. Deliberately tiny protected equation context remains unchanged.",
+  "scope": "Finite 3-page synthetic fixtures; not a layout guarantee for arbitrary real theses"
+}

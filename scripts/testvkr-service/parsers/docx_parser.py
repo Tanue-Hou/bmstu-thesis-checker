@@ -316,8 +316,11 @@ class DocxParser:
 
                 rows_info.append({
                     'index': row_idx,
+                    'xml_path': r._tr.getroottree().getpath(r._tr),
                     'height_mm': height_val,
                     'height_rule': height_rule,
+                    'height_rule_explicit': trHeight.get(qn('w:hRule')) if trHeight is not None else None,
+                    'height_measurement': 'specified_xml_property_not_rendered_height',
                     'cells': cells_info
                 })
 

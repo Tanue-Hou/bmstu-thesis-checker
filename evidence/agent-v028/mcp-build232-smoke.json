@@ -1,0 +1,178 @@
+{
+  "exit_code": 0,
+  "replies": [
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "protocolVersion": "2025-11-25",
+        "capabilities": {
+          "tools": {}
+        },
+        "serverInfo": {
+          "name": "BMSTU Thesis Checker",
+          "version": "0.2.8"
+        },
+        "instructions": "Use these tools to check BMSTU VKR/thesis DOCX and PDF documents and return bilingual findings with Chinese fix guidance."
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Build-specific repair scope is independent from whole-rule detection proof."
+          }
+        ],
+        "structuredContent": {
+          "builds": {
+            "230": {
+              "file_version": "1.0.0.230",
+              "sha256": "0bb43cebc4c7ee196913d2ea2240f7bc53aaac1e6b8f6394e6201024a108b8cb"
+            },
+            "232": {
+              "file_version": "1.0.0.232",
+              "sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0"
+            }
+          },
+          "rule_evidence_build": 230,
+          "current_build": 232,
+          "repair_evidence_build": 230,
+          "build232_repair_capability": {
+            "enabled": true,
+            "actions": [
+              "font_size_anomalies"
+            ],
+            "work_types": [
+              "master"
+            ],
+            "target_font_pt": 14,
+            "acceptance_sha256": "407dce0ad36f5bee581d9744aeae27e67728576e91eeff85735f6951e1e14315"
+          }
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Planned 1 formatting changes; source unchanged: True."
+          }
+        ],
+        "structuredContent": {
+          "schema_version": 2,
+          "native_build": 232,
+          "work_type": "master",
+          "actions": [
+            "font_size_anomalies"
+          ],
+          "body_font_pt": 14,
+          "input_file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\v028\\complex-repair\\C01B.docx",
+          "input_sha256": "3edc36ef308d75ce505b3946bbbe3fa4e7a04092585e5bbe118926b4222acbb6",
+          "dry_run": true,
+          "changes": [
+            {
+              "paragraph": 9,
+              "run": 1,
+              "xml_path": "/w:document/w:body/w:p[9]/w:r",
+              "property": "font_size_pt",
+              "before_effective": 7.0,
+              "after": 14,
+              "rule_id": "Word.FontSizeTooSmall"
+            }
+          ],
+          "skipped": [
+            {
+              "paragraph": 1,
+              "reason": "Front matter/introduction anchor"
+            },
+            {
+              "paragraph": 2,
+              "reason": "Front matter/introduction anchor"
+            },
+            {
+              "paragraph": 3,
+              "reason": "Front matter/introduction anchor"
+            },
+            {
+              "paragraph": 4,
+              "reason": "Front matter/introduction anchor"
+            },
+            {
+              "paragraph": 5,
+              "reason": "Front matter/introduction anchor"
+            },
+            {
+              "paragraph": 6,
+              "reason": "Front matter/introduction anchor"
+            },
+            {
+              "paragraph": 7,
+              "reason": "Front matter/introduction anchor"
+            },
+            {
+              "paragraph": 8,
+              "reason": "Front matter/introduction anchor"
+            },
+            {
+              "paragraph": 10,
+              "reason": "Non-body style or short paragraph"
+            },
+            {
+              "paragraph": 11,
+              "reason": "Non-body style or short paragraph"
+            },
+            {
+              "paragraph": 12,
+              "reason": "Equation/field/drawing/hyperlink/control/revision/list paragraph"
+            },
+            {
+              "paragraph": 13,
+              "reason": "Non-body style or short paragraph"
+            },
+            {
+              "paragraph": 14,
+              "reason": "Non-body style or short paragraph"
+            },
+            {
+              "paragraph": 15,
+              "reason": "Non-body style or short paragraph"
+            },
+            {
+              "paragraph": 16,
+              "reason": "Non-body style or short paragraph"
+            },
+            {
+              "paragraph": 17,
+              "reason": "Non-body style or short paragraph"
+            },
+            {
+              "paragraph": 18,
+              "reason": "Non-body style or short paragraph"
+            },
+            {
+              "paragraph": 20,
+              "reason": "Non-body style or short paragraph"
+            },
+            {
+              "paragraph": 21,
+              "reason": "Non-body style or short paragraph"
+            },
+            {
+              "paragraph": 22,
+              "reason": "Non-body style or short paragraph"
+            }
+          ],
+          "source_unchanged": true,
+          "scope": "Ordinary Normal-style main-body runs after exact introduction; all special paragraphs and other ZIP parts preserved; no full-program/school pass guarantee",
+          "plan_id": "c7feec0484095e52e47be7193ecbfd04503e14457c549f8634eb04cbfa5dba9b"
+        }
+      }
+    }
+  ]
+}

@@ -4,3 +4,4 @@ evidence/** -text -whitespace
 *.pdf binary
 *.png binary
 evidence/**/recovered_pseudocode.c -diff
+scripts/repair_build232.py -text -whitespace

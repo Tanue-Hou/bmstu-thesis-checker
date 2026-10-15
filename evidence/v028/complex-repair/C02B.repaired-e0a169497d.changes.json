@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-15T12:24:40.633867+00:00",
+  "input_file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\v028\\complex-repair\\C02B.docx",
+  "input_sha256": "792f65e9e6f019ea74c35d7fb093704703f4eee8d98a095ec368df70265d739a",
+  "dry_run": false,
+  "native_build": 230,
+  "work_type": "master",
+  "actions": [
+    "font_size_anomalies"
+  ],
+  "body_font_pt": 14.0,
+  "changes": [
+    {
+      "rule_id": "Word.FontSizeTooLarge",
+      "paragraph": 9,
+      "run": 1,
+      "xml_path": "/w:document/w:body/w:p[9]/w:r",
+      "text_excerpt": "Контроль основного текста и точечного исправления размера символов. Контроль основного текста и точе",
+      "property": "sz",
+      "before_direct_xml": "<w:sz xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" w:val=\"37\"/>",
+      "before_effective": 18.5,
+      "after": 14.0
+    }
+  ],
+  "skipped": [
+    {
+      "paragraph": 1,
+      "reason": "Recognized cover/front matter; preserve intentional formatting"
+    },
+    {
+      "paragraph": 2,
+      "reason": "Recognized cover/front matter; preserve intentional formatting"
+    },
+    {
+      "paragraph": 3,
+      "reason": "Recognized cover/front matter; preserve intentional formatting"
+    },
+    {
+      "paragraph": 4,
+      "reason": "Recognized cover/front matter; preserve intentional formatting"
+    },
+    {
+      "paragraph": 5,
+      "reason": "Recognized cover/front matter; preserve intentional formatting"
+    },
+    {
+      "paragraph": 6,
+      "reason": "Recognized cover/front matter; preserve intentional formatting"
+    },
+    {
+      "paragraph": 7,
+      "reason": "Recognized cover/front matter; preserve intentional formatting"
+    },
+    {
+      "paragraph": 12,
+      "reason": "Field or equation paragraph"
+    },
+    {
+      "paragraph": 13,
+      "run": 1,
+      "reason": "Special text or no known body font; leave font size unchanged"
+    },
+    {
+      "paragraph": 14,
+      "run": 1,
+      "reason": "Hyperlink, drawing, text box, content control or tracked change"
+    },
+    {
+      "paragraph": 16,
+      "run": 1,
+      "reason": "Hyperlink, drawing, text box, content control or tracked change"
+    },
+    {
+      "paragraph": 17,
+      "reason": "Field or equation paragraph"
+    }
+  ],
+  "manual_only_rule_ids": [
+    "Graduate.AbstractTooShort",
+    "Graduate.ThesisSizeTooSmall",
+    "Graduate.TitlePageMismatch",
+    "Graduate.TocEmpty",
+    "Graduate.UniversityNameInvalid",
+    "Pic.SmallLabels",
+    "Struct.MissingCitations",
+    "Word.AlignmentNotJustified",
+    "Word.BottomMarginInvalid",
+    "Word.FirstLineIndentInvalid",
+    "Word.LeftMarginInvalid",
+    "Word.LineSpacingInvalid",
+    "Word.RightMarginInvalid",
+    "Word.TextColorNotBlack",
+    "Word.TopMarginInvalid"
+  ],
+  "scope": "Main document text and portrait sections only; no table/header/footer/image repair; original-program pass is not guaranteed.",
+  "plan_id": "869d8c39990fc37874666bb8b1dbdc4f73b4a1626ed877c98a87e82d1c383da5",
+  "output_file": "D:\\Codex项目\\analysis_TestVkr\\implementation\\evidence\\v028\\complex-repair\\C02B.repaired-e0a169497d.docx",
+  "output_sha256": "f48d643d723575d6dd0ad8b77e4f39a95303d1ab15de707c9e7fe2e7ecf64ef1",
+  "source_unchanged": true,
+  "before_rule_ids": [
+    "Graduate.TitlePageMismatch",
+    "Graduate.UniversityNameInvalid",
+    "Word.FontSizeTooSmall",
+    "Graduate.TocEmpty",
+    "Graduate.AbstractTooShort",
+    "Graduate.ThesisSizeTooSmall",
+    "Struct.MissingCitations",
+    "Word.FontSizeTooLarge",
+    "Word.TextColorNotBlack",
+    "Pic.SmallLabels",
+    "Word.AlignmentNotJustified",
+    "Word.BottomMarginInvalid",
+    "Word.FirstLineIndentInvalid",
+    "Word.LeftMarginInvalid",
+    "Word.LineSpacingInvalid",
+    "Word.RightMarginInvalid",
+    "Word.TopMarginInvalid"
+  ],
+  "after_rule_ids": [
+    "Graduate.TitlePageMismatch",
+    "Graduate.UniversityNameInvalid",
+    "Word.FontSizeTooSmall",
+    "Graduate.TocEmpty",
+    "Graduate.AbstractTooShort",
+    "Graduate.ThesisSizeTooSmall",
+    "Struct.MissingCitations",
+    "Word.FontSizeTooLarge",
+    "Word.TextColorNotBlack",
+    "Pic.SmallLabels",
+    "Word.AlignmentNotJustified",
+    "Word.BottomMarginInvalid",
+    "Word.FirstLineIndentInvalid",
+    "Word.LeftMarginInvalid",
+    "Word.LineSpacingInvalid",
+    "Word.RightMarginInvalid",
+    "Word.TopMarginInvalid"
+  ]
+}

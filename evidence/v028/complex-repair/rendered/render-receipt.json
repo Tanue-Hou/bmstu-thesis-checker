@@ -1,0 +1,114 @@
+{
+  "engine": "Installed Microsoft Word via separate COM instance, read-only open and no-save close",
+  "cases": [
+    {
+      "id": "C01B",
+      "input_sha256": "3edc36ef308d75ce505b3946bbbe3fa4e7a04092585e5bbe118926b4222acbb6",
+      "pdf": "C01B.pdf",
+      "pdf_sha256": "5ed62eead500c9d2316d44186c4895e7dbf7a14825c465672a01e55c253c794e",
+      "pages": [
+        {
+          "page": 1,
+          "image": "C01B-page1.png",
+          "sha256": "1798bb1a60a43402bd8c993ebc1a1df8d1686bab6ac743b76532f27e0a8a7929",
+          "text_characters": 766,
+          "image_count": 0,
+          "width_pt": 595.3200073242188,
+          "height_pt": 841.9199829101562
+        },
+        {
+          "page": 2,
+          "image": "C01B-page2.png",
+          "sha256": "e62f2493182616f27133f7df7bf4038e5e4e834dafdd7d1203826e03c6e24f27",
+          "text_characters": 392,
+          "image_count": 0,
+          "width_pt": 595.3200073242188,
+          "height_pt": 841.9199829101562
+        },
+        {
+          "page": 3,
+          "image": "C01B-page3.png",
+          "sha256": "5f6bee33725cc90ba467820e07e6eb201bf988c5aa5b755f5bd5ca1afaf0ce9c",
+          "text_characters": 1037,
+          "image_count": 1,
+          "width_pt": 595.3200073242188,
+          "height_pt": 841.9199829101562
+        }
+      ],
+      "source_unchanged": true
+    },
+    {
+      "id": "C02B",
+      "input_sha256": "792f65e9e6f019ea74c35d7fb093704703f4eee8d98a095ec368df70265d739a",
+      "pdf": "C02B.pdf",
+      "pdf_sha256": "7da14a5d38ef62acd64784b369b4da3e25e3a3aa9a79f2db3106d512724e4515",
+      "pages": [
+        {
+          "page": 1,
+          "image": "C02B-page1.png",
+          "sha256": "1798bb1a60a43402bd8c993ebc1a1df8d1686bab6ac743b76532f27e0a8a7929",
+          "text_characters": 766,
+          "image_count": 0,
+          "width_pt": 595.3200073242188,
+          "height_pt": 841.9199829101562
+        },
+        {
+          "page": 2,
+          "image": "C02B-page2.png",
+          "sha256": "a5c8d4f09047f2dab120108ecd2baeb24635259dae167a82e638b4cc454b7404",
+          "text_characters": 397,
+          "image_count": 0,
+          "width_pt": 595.3200073242188,
+          "height_pt": 841.9199829101562
+        },
+        {
+          "page": 3,
+          "image": "C02B-page3.png",
+          "sha256": "5f6bee33725cc90ba467820e07e6eb201bf988c5aa5b755f5bd5ca1afaf0ce9c",
+          "text_characters": 1037,
+          "image_count": 1,
+          "width_pt": 595.3200073242188,
+          "height_pt": 841.9199829101562
+        }
+      ],
+      "source_unchanged": true
+    },
+    {
+      "id": "C01A",
+      "input_sha256": "f48d643d723575d6dd0ad8b77e4f39a95303d1ab15de707c9e7fe2e7ecf64ef1",
+      "pdf": "C01A.pdf",
+      "pdf_sha256": "561a31b6ed3c3d26a207cbbf480d92124625dda806527bbb85f38f3bcec65256",
+      "pages": [
+        {
+          "page": 1,
+          "image": "C01A-page1.png",
+          "sha256": "1798bb1a60a43402bd8c993ebc1a1df8d1686bab6ac743b76532f27e0a8a7929",
+          "text_characters": 766,
+          "image_count": 0,
+          "width_pt": 595.3200073242188,
+          "height_pt": 841.9199829101562
+        },
+        {
+          "page": 2,
+          "image": "C01A-page2.png",
+          "sha256": "fb8c0414ce7347b34672ed0b701ee8b817bf2135f7a6480ee79416617c101ddd",
+          "text_characters": 395,
+          "image_count": 0,
+          "width_pt": 595.3200073242188,
+          "height_pt": 841.9199829101562
+        },
+        {
+          "page": 3,
+          "image": "C01A-page3.png",
+          "sha256": "5f6bee33725cc90ba467820e07e6eb201bf988c5aa5b755f5bd5ca1afaf0ce9c",
+          "text_characters": 1037,
+          "image_count": 1,
+          "width_pt": 595.3200073242188,
+          "height_pt": 841.9199829101562
+        }
+      ],
+      "source_unchanged": true
+    }
+  ],
+  "limits": "Actual Word PDF rendering; visual acceptance is recorded separately; no keyboard/mouse control"
+}

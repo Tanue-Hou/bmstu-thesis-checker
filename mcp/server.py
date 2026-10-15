@@ -23,7 +23,7 @@ from school_templates import BUILTINS, load_template
 
 
 SERVER_NAME = "BMSTU Thesis Checker"
-SERVER_VERSION = "0.2.7"
+SERVER_VERSION = "0.2.8"
 METHOD_NOT_FOUND = -32601
 INVALID_PARAMS = -32602
 INTERNAL_ERROR = -32603
@@ -142,7 +142,7 @@ def tool_list_result():
                     'file_path':{'type':'string'},
                     'actions':{'type':'array','items':{'type':'string','enum':['page_size_a4','font_size_anomalies','text_color_black']}},
                     'body_font_pt':{'type':'number'},
-                    'native_build':{'type':'integer','enum':[230],'default':230,'description':'Historical build230 repair evidence only; build232 execution remains unsupported'},
+                    'native_build':{'type':'integer','enum':[230,232],'default':230,'description':'230 historical;232 independently gated master ordinary-body font action to14pt only'},
                     'expected_input_sha256':{'type':'string','description':'Preview source hash; reject changed inputs'},
                     'work_type':{'type':'string','enum':['bachelor','master','phd'],'default':'bachelor'}},'required':['file_path']},
                 'annotations':{'readOnlyHint':True,'destructiveHint':False,'openWorldHint':False}
@@ -154,7 +154,7 @@ def tool_list_result():
                     'file_path':{'type':'string'},'output_dir':{'type':'string'},
                     'actions':{'type':'array','items':{'type':'string','enum':['page_size_a4','font_size_anomalies','text_color_black']}},
                     'body_font_pt':{'type':'number'},
-                    'native_build':{'type':'integer','enum':[230],'default':230,'description':'Historical build230 repair evidence only; build232 execution remains unsupported'},
+                    'native_build':{'type':'integer','enum':[230,232],'default':230,'description':'230 historical;232 independently gated master ordinary-body font action to14pt only'},
                     'expected_input_sha256':{'type':'string','description':'Preview source hash; reject changed inputs'},
                     'work_type':{'type':'string','enum':['bachelor','master','phd'],'default':'bachelor'}},'required':['file_path']},
                 'annotations':{'readOnlyHint':False,'destructiveHint':False,'idempotentHint':False,'openWorldHint':False}
@@ -232,7 +232,8 @@ def handle_tool_call(params):
     name = params.get("name")
     args = params.get("arguments") or {}
     if name == "list_native_builds":
-        return {"content":[{"type":"text","text":"Build232 real cases and finite font probes do not transfer build230 whole-rule or repair validation."}],"structuredContent":{"builds":BUILDS,"rule_evidence_build":230,"current_build":232,"repair_evidence_build":230}}
+        from repair_build232 import capability
+        return {"content":[{"type":"text","text":"Build-specific repair scope is independent from whole-rule detection proof."}],"structuredContent":{"builds":BUILDS,"rule_evidence_build":230,"current_build":232,"repair_evidence_build":230,"build232_repair_capability":capability()}}
     if name == "compare_thesis_results":
         local=json.loads(Path(require_string(args.get("local_report_path"),"local_report_path")).read_text(encoding="utf-8-sig"))
         result=compare(local,load_capture(require_string(args.get("native_capture_path"),"native_capture_path")))

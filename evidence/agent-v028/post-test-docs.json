@@ -1,0 +1,19 @@
+{
+  "tested_code_unchanged": true,
+  "post_test_documentation_changes": [
+    "docs\\AGENT_CLI.zh.md",
+    "docs\\RULE_CHAIN.zh.md",
+    "docs\\VERSION_HISTORY.zh.md"
+  ],
+  "current_documentation_hashes": {
+    "docs\\AGENT_CLI.zh.md": "1b30754c10025592aaa3db56992c22b938f7110281d345fb113e77dff0744db7",
+    "docs\\BUILD232_CROSS_CHECK.zh.md": "4fe2fc188c43c8b0fd825fe04e1ead3e538fd9082835aeac1fddf7beee5b35d0",
+    "docs\\BUILD232_REPAIR.zh.md": "1d05356413fad00abf010c61ed068237dea118a7a7c26ac039b2001214572d95",
+    "docs\\REAL_TRIAL_WORKFLOW.zh.md": "cfd20bc0867a8344b44cf41a86f9ad5206e962f6b8199e971192938c656e88a1",
+    "docs\\RECONSTRUCTED_ALGORITHM.zh.md": "5f4dedc7e715f32b3b51c444116fd6a46e9209e97492c2e2db037849210255a1",
+    "docs\\RULE_CHAIN.zh.md": "a8049280ca0f990dd8977ca395f84b2194acdd4e73692abccb42ca4b148418f3",
+    "docs\\SCHOOL_TEMPLATES.zh.md": "11e405aaa692899694064eb11c209a3667c39948f2ecfb1bbf59e94248459cd6",
+    "docs\\VERSION_HISTORY.zh.md": "e7518f7aa9091a0aece9e6e9182f09a3baad7e01c11db404a125173bead0ec5b"
+  },
+  "note": "Regression record preserved; only documentation was finalized after tests. Canonical Git source receipt covers all final sources."
+}

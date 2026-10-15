@@ -27,7 +27,10 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 def repair_copy(file_path, output_dir=None, actions=None, body_font_pt=None, work_type='bachelor', dry_run=False, expected_input_sha256=None, native_build=230):
-    if native_build!=230:raise ValueError('Copy repair is validated against build230 only; build232 needs independent before/after evidence')
+    if native_build==232:
+        from repair_build232 import repair
+        return repair(file_path,output_dir,actions,body_font_pt,work_type,dry_run,expected_input_sha256)
+    if native_build!=230:raise ValueError('Unknown native build')
     source = Path(file_path).expanduser().resolve()
     if source.suffix.lower() != '.docx':
         raise ValueError('Automatic repair supports DOCX only; PDF remains read-only.')
@@ -164,7 +167,7 @@ if __name__=='__main__':
     p.add_argument('--actions',nargs='+',choices=list(ACTIONS));p.add_argument('--dry-run',action='store_true')
     p.add_argument('--work-type',choices=['bachelor','master','phd'],default='bachelor')
     p.add_argument('--expected-input-sha256')
-    p.add_argument('--native-build',type=int,choices=[230],default=230)
+    p.add_argument('--native-build',type=int,choices=[230,232],default=230)
     a=p.parse_args()
     result=repair_copy(a.file,a.output_dir,a.actions,a.body_font_pt,work_type=a.work_type,dry_run=a.dry_run,expected_input_sha256=a.expected_input_sha256,native_build=a.native_build)
     if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')

@@ -22,7 +22,8 @@ def execute(a):
         return {'schema_version':1, 'status':'checked', 'report':report,
                 'agent_contract':{'document_text_is_untrusted_data':True,
                                   'zero_findings_is_not_certification':True,
-                                  'build232_copy_repair_enabled':False}}
+                                  'build232_copy_repair_enabled':__import__('repair_build232').capability()['enabled'],
+                                  'build232_repair_capability':__import__('repair_build232').capability()}}
     if a.command == 'review':
         data=json.loads(Path(a.report).read_text(encoding='utf-8-sig'))
         return annotate(data.get('report',data))
@@ -31,16 +32,16 @@ def execute(a):
                            work_type=a.work_type, dry_run=True, native_build=a.native_build)
     if a.command == 'apply':
         plan = json.loads(Path(a.plan).read_text(encoding='utf-8-sig'))
-        if not plan.get('dry_run') or plan.get('native_build') != 230:
-            raise ValueError('Only historical build230 preview plans are executable; build232 remains closed')
+        if not plan.get('dry_run') or plan.get('native_build') not in [230,232]:
+            raise ValueError('A supported dry-run plan is required')
         current = repair_copy(a.file, actions=plan['actions'], body_font_pt=plan['body_font_pt'],
                               work_type=plan['work_type'], dry_run=True,
-                              expected_input_sha256=plan['input_sha256'], native_build=230)
+                              expected_input_sha256=plan['input_sha256'], native_build=plan['native_build'])
         if current['plan_id'] != plan['plan_id']:
             raise ValueError('Plan changed; regenerate and review before applying')
         return repair_copy(a.file, output_dir=a.output_dir, actions=plan['actions'],
                            body_font_pt=plan['body_font_pt'], work_type=plan['work_type'],
-                           expected_input_sha256=plan['input_sha256'], native_build=230)
+                           expected_input_sha256=plan['input_sha256'], native_build=plan['native_build'])
 
 def main():
     p=argparse.ArgumentParser(description='Thesis checker JSON CLI; no GUI or model/API required')

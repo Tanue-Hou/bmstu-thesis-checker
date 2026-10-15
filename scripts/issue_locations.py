@@ -48,7 +48,17 @@ def locate_finding(f,data,file_type,limit=100):
             for i in indices:
                 if 1<=i<=len(data.get('paragraphs',[])):
                     p=data['paragraphs'][i-1];total+=1
-                    if len(out)<limit:out.append({'kind':'docx_paragraph','part':'word/document.xml','paragraph':i,'xml_path':p.get('xml_path'),'text_excerpt':p['text'][:140]})
+                    if len(out)<limit:out.append({'kind':'docx_paragraph','part':'word/document.xml','paragraph':i,'xml_path':p.get('xml_path'),'text_excerpt':p['text'][:140],'content_role':content_role({'xml_path':p.get('xml_path'),'style':p.get('style_name')},data),'special_content':p.get('special_content',False)})
+        elif file_type=='docx' and loc.get('table_rows'):
+            seen=set()
+            for row_location in loc['table_rows']:
+                ti=row_location.get('table',0)-1;ri=row_location.get('row',0)-1
+                if (ti,ri) in seen:continue
+                seen.add((ti,ri))
+                tables=data.get('tables',[])
+                if ti<0 or ti>=len(tables) or ri<0 or ri>=len(tables[ti].get('rows',[])):continue
+                row=tables[ti]['rows'][ri];total+=1
+                if len(out)<limit:out.append({'kind':'docx_table_row','part':'word/document.xml','table':ti+1,'row':ri+1,'xml_path':row.get('xml_path'),'specified_height_mm':row.get('height_mm'),'height_rule':row.get('height_rule'),'height_rule_explicit':row.get('height_rule_explicit'),'height_measurement':'specified_xml_property_not_rendered_height','content_role':'table_row_manual_review','text_excerpt':' '.join(p.get('text','') for c in row.get('cells',[]) for p in c.get('paragraphs',[]))[:140]})
         elif loc:out=[{'kind':'document_scope',**loc}];total=1
     for o in out:o['locator_id']=hashlib.sha256((rule+'|'+str(o)).encode()).hexdigest()[:16]
     return {'occurrences':out,'occurrence_count':total,'truncated':total>len(out),'limit':limit,'precision':'source_coordinate' if out and out[0].get('kind') not in ['document_scope','docx_section','pdf_page'] else 'document_scope_or_unavailable','docx_pages':'unknown_without_layout_engine' if file_type=='docx' else None}

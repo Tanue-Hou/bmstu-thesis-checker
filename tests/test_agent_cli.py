@@ -21,7 +21,7 @@ class AgentCliTests(unittest.TestCase):
         r['findings'][0]['precise_locations']['truncated']=True
         annotate(r)
         self.assertEqual(r['findings'][0]['action_eligibility']['status'],'evidence_required')
-    def test_cli_json_check_and_closed_new_build(self):
+    def test_cli_json_check_and_explicit_new_build_scope(self):
         cmd=[sys.executable,str(ROOT/'scripts/thesis_cli.py')]
         with tempfile.TemporaryDirectory() as td:
             p=Path(td)/'a.docx';d=Document();d.add_paragraph('ordinary content');d.save(p)
@@ -29,7 +29,8 @@ class AgentCliTests(unittest.TestCase):
             self.assertEqual(result.returncode,0,result.stderr)
             data=json.loads(result.stdout)
             self.assertEqual(data['report']['native_reference']['selected_build'],232)
-            self.assertFalse(data['agent_contract']['build232_copy_repair_enabled'])
+            self.assertTrue(data['agent_contract']['build232_copy_repair_enabled'])
+            self.assertEqual(data['agent_contract']['build232_repair_capability']['actions'],['font_size_anomalies'])
             result=subprocess.run(cmd+['plan',str(p)],capture_output=True,encoding='utf-8')
             self.assertEqual(result.returncode,2)
             self.assertEqual(json.loads(result.stdout)['status'],'error')

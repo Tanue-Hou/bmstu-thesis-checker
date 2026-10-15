@@ -1,0 +1,31 @@
+{
+  "rows": 164,
+  "dispositions": {
+    "confirmed_template_token_mismatch": 26,
+    "structure_semantics_requires_review": 11,
+    "confirmed_run_property_candidate": 5,
+    "confirmed_section_property_candidate": 8,
+    "mixed_role_format_candidate": 56,
+    "confirmed_text_threshold_candidate": 10,
+    "citation_semantics_requires_review": 3,
+    "special_role_format_advisory": 23,
+    "table_content_format_candidate": 6,
+    "confirmed_consecutive_heading_number_collision": 2,
+    "layout_property_advisory": 11,
+    "native_layout_policy_conflict": 3
+  },
+  "school_compliance_unresolved": 164,
+  "accuracy": null,
+  "source_facts_evaluated": 164,
+  "originals_unchanged": true,
+  "private_cases": 13,
+  "limits": "Source-property review, not school-compliance adjudication or false-positive rate. Cases/native program are not standards. Private content and source identities omitted.",
+  "methods": [
+    "Every prior evidence_required row processed with source identity checks",
+    "Native text and screenshots hashes reverified",
+    "Full referenced paragraphs, table-row XML, section properties and footer PAGE fields retained privately",
+    "University missing-token sets and abstract source counts recomputed",
+    "Chapter target neighbors and child-heading containers inspected",
+    "UTF16 message literals located in hash-bound build232 and cross-searched in retained decompiler export; missing function references explicitly preserved"
+  ]
+}

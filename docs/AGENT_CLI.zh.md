@@ -22,6 +22,6 @@ py scripts/thesis_cli.py --out plan.json plan thesis.docx --native-build 230 --w
 py scripts/thesis_cli.py --out receipt.json apply thesis.docx --plan plan.json --output-dir repaired
 ```
 
-执行前重新计算原文件哈希和修复计划 ID，不一致则拒绝。输出为新 DOCX 副本与修改日志，保留原件。上述历史功能不是新版验证；默认 build232 的 `plan` 明确拒绝执行，不能绕用230来宣称232修复已验证。
+执行前重新计算原文件哈希和修复计划 ID，不一致则拒绝。输出为新 DOCX 副本与修改日志，保留原件。上述历史功能不是新版验证；不能绕用230来宣称232修复已验证。232预览必须明确选择已开放的动作、硕士类型和14pt目标，不满足条件即拒绝。
 
-新版开放条件：每种动作分别保留新版原程序修复前/后结果、未触发对照、特殊内容保护对照及页面检查；只开放已经通过的动作和上下文。检查逻辑与修复能力的验证分开记录。
+v0.2.8现已按独立证据开放硕士普通正文字号一个动作，详见[新版修复范围](BUILD232_REPAIR.zh.md)。其他动作仍关闭。以`list_native_builds`返回的`build232_repair_capability`和预览实际拒绝/接受结果为准。检查逻辑与修复能力的验证分开记录。

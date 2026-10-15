@@ -1,0 +1,39 @@
+{
+  "build": 232,
+  "cases": [
+    {
+      "id": "C01",
+      "changes": 1,
+      "exact_output_matches_new_implementation": true,
+      "all_other_xml_and_zip_parts_unchanged": true,
+      "native_target_body_excerpt_removed": true,
+      "negative_control": false,
+      "after_capture_reused_from_identical_bytes": "C01A",
+      "layout_validation": "separate_required"
+    },
+    {
+      "id": "C02",
+      "changes": 1,
+      "exact_output_matches_new_implementation": true,
+      "all_other_xml_and_zip_parts_unchanged": true,
+      "native_target_body_excerpt_removed": true,
+      "negative_control": false,
+      "after_capture_reused_from_identical_bytes": "C01A",
+      "layout_validation": "separate_required"
+    },
+    {
+      "id": "C03",
+      "changes": 0,
+      "exact_output_matches_new_implementation": true,
+      "all_other_xml_and_zip_parts_unchanged": true,
+      "native_target_body_excerpt_removed": false,
+      "negative_control": true,
+      "after_capture_reused_from_identical_bytes": "C01A",
+      "layout_validation": "separate_required"
+    }
+  ],
+  "native_execution_count": 3,
+  "all_structural_and_native_checks_pass": true,
+  "layout_acceptance": false,
+  "limits": "Three distinct byte inputs executed natively; identical-byte aliases reuse captures explicitly. Formula warnings remain intentionally; no whole-program pass claim."
+}

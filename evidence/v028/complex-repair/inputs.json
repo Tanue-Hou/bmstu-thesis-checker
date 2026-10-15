@@ -1,0 +1,32 @@
+[
+  {
+    "id": "C01",
+    "before": "C01B.docx",
+    "after": "C01A.docx",
+    "before_sha256": "3edc36ef308d75ce505b3946bbbe3fa4e7a04092585e5bbe118926b4222acbb6",
+    "after_sha256": "f48d643d723575d6dd0ad8b77e4f39a95303d1ab15de707c9e7fe2e7ecf64ef1",
+    "changes": 1,
+    "negative_protected_only": false,
+    "experimental_generator_build": 230
+  },
+  {
+    "id": "C02",
+    "before": "C02B.docx",
+    "after": "C02A.docx",
+    "before_sha256": "792f65e9e6f019ea74c35d7fb093704703f4eee8d98a095ec368df70265d739a",
+    "after_sha256": "f48d643d723575d6dd0ad8b77e4f39a95303d1ab15de707c9e7fe2e7ecf64ef1",
+    "changes": 1,
+    "negative_protected_only": false,
+    "experimental_generator_build": 230
+  },
+  {
+    "id": "C03",
+    "before": "C03B.docx",
+    "after": "C03A.docx",
+    "before_sha256": "f48d643d723575d6dd0ad8b77e4f39a95303d1ab15de707c9e7fe2e7ecf64ef1",
+    "after_sha256": "f48d643d723575d6dd0ad8b77e4f39a95303d1ab15de707c9e7fe2e7ecf64ef1",
+    "changes": 0,
+    "negative_protected_only": true,
+    "experimental_generator_build": 230
+  }
+]

@@ -1,3 +1,11 @@
+# 0.2.8 - Source-level review and independently gated master font repair (2026-10-15)
+
+- Review164 remaining source-fact records individually; retain school-policy/semantic uncertainties instead of declaring compliance.
+- Separate name-template, special-role and table-height advice from edit eligibility; add row XML and paragraph role locations.
+- Independently accept only build232 master ordinary-body anomalous font repair to14pt; all other232 actions/modes remain closed.
+- Retain complex formula/table/figure/field controls, native diagnostic excerpt pairs, exact XML/ZIP preservation and9-page CLI Word rendering with protected-page pixel identity.
+- Expose scoped capability in CLI/MCP and bind repair to implementation/evidence hashes, input hash and plan ID; retain changes and local232 recheck.
+
 # 0.2.7 - Evidence dispositions, false-positive fix and agent CLI (2026-10-15)
 
 - Retain individual dispositions for all 298 original private review rows; school compliance remains unresolved where evidence is insufficient.

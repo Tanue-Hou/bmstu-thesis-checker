@@ -1,6 +1,8 @@
-# BMSTU 论文检查器 · v0.2.7
+# BMSTU 论文检查器 · v0.2.8
 
-当前版本：插件 **0.2.7+codex.20261015** / MCP **0.2.7**。
+当前版本：插件 **0.2.8+codex.20261015** / MCP **0.2.8**。
+
+v0.2.8：完成剩余164条逐项源事实复核；对特殊内容、校名模板和表格行高降低误导性修改建议；以原程序、XML逐字节及CLI Word渲染证据，开放[硕士普通正文字号一项新版修复](docs/BUILD232_REPAIR.zh.md)。学校合规仍需正式条款，不能把这些案例当标准答案。
 
 [版本迭代](docs/VERSION_HISTORY.zh.md) · [规则执行与证据链](docs/RULE_CHAIN.zh.md) · [v0.2.7发布说明](releases/v0.2.7.md) · [Skill入口](skills/bmstu-thesis-checker/SKILL.md)
 
