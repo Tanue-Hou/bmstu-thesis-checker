@@ -1,0 +1,36 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "5272656dcc7a90fb2eb487851d67e7a9a0e347b84b9cf259647b58d8abbd26d6",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "pdf",
+  "diagnostic_count": 3,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "В документе много символов, расположенных на полях страницы: Стр. 2 \"РЕФЕРАТ\", Стр. 3 \"ОГЛАВЛЕНИЕ\", Стр. 4 \"ВВЕДЕНИЕ\", Стр. 5 \"В работе рассматриваются методы обработки данных и\", Стр. 6 \"1 ОСНОВНАЯ ЧАСТЬ\", Стр. 7 \"В работе рассматриваются методы обработки данных и\", Стр. 8 \"Методы исследования позволяют получить результаты \", Стр. 9 \"позволяют получить результаты обработки данных и в\", Стр. 10 \"Методы исследования позволяют получить результаты \", Стр. 11 \"ЗАКЛЮЧЕНИЕ\", Стр. 12 \"В работе рассматриваются методы обработки данных и\", Стр. 13 \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\", Стр. 14 \"ПРИЛОЖЕНИЕ А\"."
+    },
+    {
+      "number": 2,
+      "message": "Документ содержит страницы, размеры верхнего поля на которых не соответствуют требованиям: Стр. 2, Стр. 3, Стр. 4, Стр. 5, Стр. 6, Стр. 7, Стр. 8, Стр. 9, Стр. 10, Стр. 11, Стр. 12, Стр. 13, Стр. 14."
+    },
+    {
+      "number": 3,
+      "message": "Номер страницы должен находиться внутри верхнего поля и располагаться по центру текста. На титульном листе номер страницы не ставится.Стр. 2, Стр. 3, Стр. 4, Стр. 5, Стр. 6, Стр. 7, Стр. 8, Стр. 9, Стр. 10, Стр. 11, Стр. 12, Стр. 13, Стр. 14."
+    }
+  ],
+  "evidence_directory": "evidence\\business-map-232\\native-modes-r1\\phd_pdf_structure",
+  "trace_sha256": "67c8ed65b5640c4818b8929858fdf471c122cbda9ef461f66668b25e785f0dd5",
+  "native_text_sha256": "73b5fdfa568e45c20caca261c3cb85028988943cb0ef1cb010fd7149e923c093",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "055615315861691873ee3834150a767fee46d9f6f14b2a3bd15b4f2457c5f4fc",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied."
+  ],
+  "source_fixture": "evidence/multipage-phd-repair/structure_clean.pdf"
+}

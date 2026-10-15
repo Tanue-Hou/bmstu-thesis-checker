@@ -1,0 +1,41 @@
+{
+  "native_build": 232,
+  "cases": [
+    {
+      "case": "phd_complex_clean",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+      "diagnostic_count": 0,
+      "report": "evidence\\business-map-232\\native-complex-phd-r1\\phd_complex_clean\\report.json"
+    },
+    {
+      "case": "phd_complex_table7",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "400b9eaee892031be4ec0c8595066a215bf426755727748b0ef330da70e7cb9e",
+      "diagnostic_count": 1,
+      "report": "evidence\\business-map-232\\native-complex-phd-r1\\phd_complex_table7\\report.json"
+    },
+    {
+      "case": "phd_complex_image",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "fbfd3d29faf4ac2b22abf41d2254ebe1364f828019f5acb8b59f3fc83193d4a7",
+      "diagnostic_count": 1,
+      "report": "evidence\\business-map-232\\native-complex-phd-r1\\phd_complex_image\\report.json"
+    },
+    {
+      "case": "phd_combined",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "24873a6b4bbe1f219f3d7cc7d9e9010bef369725c3153fb0c9b9ca2acea3df31",
+      "diagnostic_count": 4,
+      "report": "evidence\\business-map-232\\native-complex-phd-r1\\phd_combined\\report.json"
+    }
+  ],
+  "limits": [
+    "Instrumented original, not an independent replica.",
+    "Public synthetic fixtures only; no school-standard inference."
+  ]
+}

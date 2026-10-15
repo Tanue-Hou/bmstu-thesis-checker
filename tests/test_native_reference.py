@@ -43,7 +43,38 @@ class NativeReferenceTests(unittest.TestCase):
     def test_mcp_scope_prevents_unvalidated_native_modes(self):
         spec=importlib.util.spec_from_file_location('native_reference_test_server',ROOT/'mcp/server.py');server=importlib.util.module_from_spec(spec);spec.loader.exec_module(server)
         tool=next(t for t in server.tool_list_result()['tools'] if t['name']=='check_native_reference_experimental')
-        self.assertEqual(tool['inputSchema']['properties']['work_type']['enum'],['master'])
-        with self.assertRaises(ValueError):server.handle_tool_call({'name':'check_native_reference_experimental','arguments':{'work_type':'phd'}})
+        self.assertEqual(tool['inputSchema']['properties']['work_type']['enum'],['master','phd'])
+        with self.assertRaises(ValueError):server.handle_tool_call({'name':'check_native_reference_experimental','arguments':{'work_type':'bachelor'}})
+    def test_actual_native_modes_and_formats(self):
+        base=ROOT/'evidence/business-map-232/native-modes-r1'
+        matrix=json.loads((base/'matrix.json').read_text())
+        for row in matrix['cases']:
+            with self.subTest(case=row['case']):
+                trace=json.loads((base/row['case']/'trace.json').read_text())
+                text=(base/row['case']/'native-result.txt').read_bytes().decode('utf-8')
+                self.assertEqual(len(validate_native_run(trace,text,row['work_type'],row['file_type'])),row['diagnostic_count'])
+                with self.assertRaises(ValueError):validate_native_run(trace,text,'master' if row['work_type']=='phd' else 'phd',row['file_type'])
+                with self.assertRaises(ValueError):validate_native_run(trace,text,row['work_type'],'docx' if row['file_type']=='pdf' else 'pdf')
+    def test_forged_mode_and_threshold_rejected(self):
+        trace,text=self.run_record('native-volume-g_chars43200-r3')
+        selection=next(h['volume_state'] for h in trace['breakpoint_hits'] if h['label']=='volume_selected_threshold')
+        selection['minimum']=0
+        with self.assertRaises(ValueError):validate_native_run(trace,text)
+    def test_probe_hash_and_cleanup_failures_rejected(self):
+        trace,text=self.run_record('native-volume-g_chars43200-r3')
+        with self.assertRaises(ValueError):validate_native_run(trace,text,source_sha256='0'*64)
+        trace['cleanup_errors']=['owned process still running']
+        with self.assertRaises(ValueError):validate_native_run(trace,text)
+    def test_complex_phd_and_historical_difference_preserved(self):
+        base=ROOT/'evidence/business-map-232/native-complex-phd-r1'
+        matrix=json.loads((base/'matrix.json').read_text(encoding='utf-8'))
+        for row in matrix['cases']:
+            trace=json.loads((base/row['case']/'trace.json').read_text(encoding='utf-8'))
+            text=(base/row['case']/'native-result.txt').read_bytes().decode('utf-8')
+            self.assertEqual(len(validate_native_run(trace,text,'phd','docx')),row['diagnostic_count'])
+            self.assertNotIn('volume_insufficient_emit',{h['label'] for h in trace['breakpoint_hits']})
+        audit=json.loads((ROOT/'evidence/business-map-232/native-modes-audit-r1/audit.json').read_text(encoding='utf-8'))
+        differences=[r['case'] for r in audit['cases'] if r.get('historical_build230_comparison',{}).get('normalized_full_diagnostics_equal') is False]
+        self.assertEqual(differences,['phd_complex_image'])
 
 if __name__=='__main__':unittest.main()

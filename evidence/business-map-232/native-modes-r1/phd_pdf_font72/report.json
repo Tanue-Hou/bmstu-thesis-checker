@@ -1,0 +1,64 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "dc8ed5ab9499cf58f7eb8374d4368c6a0b706c0ff5cfb54ef3159f26a2cddfd7",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "pdf",
+  "diagnostic_count": 10,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Допущены ошибки в названии университета на титульном листе."
+    },
+    {
+      "number": 2,
+      "message": "*** Отсутствует или неправильно введен титульный лист (много несоответствий)."
+    },
+    {
+      "number": 3,
+      "message": "* В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок)."
+    },
+    {
+      "number": 4,
+      "message": "* Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании)."
+    },
+    {
+      "number": 5,
+      "message": "Нижние колонтитулы должны содержать один пустой абзац.Стр. 2, Стр. 3."
+    },
+    {
+      "number": 6,
+      "message": "Номер страницы должен находиться внутри верхнего поля и располагаться по центру текста. На титульном листе номер страницы не ставится.Стр. 2, Стр. 3."
+    },
+    {
+      "number": 7,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\"."
+    },
+    {
+      "number": 8,
+      "message": "** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\"."
+    },
+    {
+      "number": 9,
+      "message": "* В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 10,
+      "message": "* Разберитесь с источником (возможно, чего-то не хватает): \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\"."
+    }
+  ],
+  "evidence_directory": "evidence\\business-map-232\\native-modes-r1\\phd_pdf_font72",
+  "trace_sha256": "65e61115d90c8aabfb51325aad0d1fdb8d03399a5f4479a2d058f853e52f54a4",
+  "native_text_sha256": "0b2b906cc86d6b760fdd2dc9ca3acdcbdb46d17cd197241f556fb8d84ccae3b2",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "d5343c3a2aaeef823ee8e2f37f6565ebdc5c089151e17d38ef47f8c6f9fc6326",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied."
+  ],
+  "source_fixture": "evidence/multipage-phd-repair/mp_font72.pdf"
+}

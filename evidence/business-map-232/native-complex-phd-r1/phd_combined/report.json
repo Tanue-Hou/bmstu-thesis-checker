@@ -1,0 +1,40 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "24873a6b4bbe1f219f3d7cc7d9e9010bef369725c3153fb0c9b9ca2acea3df31",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "diagnostic_count": 4,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "** В документе много символов, размер которых меньше 8 пт: \"Методы обработки данных и анализа результатов иссл\"."
+    },
+    {
+      "number": 2,
+      "message": "В документе много символов, размер которых превышает 18 пт: \"Методы обработки данных и анализа результатов иссл\"."
+    },
+    {
+      "number": 3,
+      "message": "В документе много символов, цвет которых отличается от черного: \"ОГЛАВЛЕНИЕ\", \"Методы обработки данных и анализа результатов иссл\"."
+    },
+    {
+      "number": 4,
+      "message": "Документ содержит страницы, размеры которых не соответствуют формату А4."
+    }
+  ],
+  "evidence_directory": "evidence\\business-map-232\\native-complex-phd-r1\\phd_combined",
+  "trace_sha256": "c88ab0cf490172cde6778e3bdc495a15d5d4473aa3d9556e6e889c92cff80d09",
+  "native_text_sha256": "0411801c3e09682a8f8cd5525a7c487e5c777cf595ee7b2965ff6e8df9b785b1",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "080f3f8de8651d9a70946660553062e61669be9af77564cb2412910d366187c1",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied."
+  ],
+  "source_fixture": "evidence/multipage-phd-repair/phd_combined.docx"
+}

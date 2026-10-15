@@ -1,8 +1,8 @@
-# 原程序后台对照 CLI（实验功能，v0.2.9）
+# 原程序后台对照 CLI（实验功能，v0.2.10）
 
 本地重建检查仍使用 `scripts/thesis_cli.py`。新增 `scripts/native_reference_cli.py` 调用用户提供的原 TestVkr232，返回其实际诊断 JSON，供定位重建引擎与原程序的差异。
 
-目前支持64位 Windows、64位 Python、硕士 VKR、DOCX。需要 Python 3、Windows 自带 .NET Framework 编译器和对应原 EXE；不需要操作文件对话框、安装俄语系统或修改系统语言。仓库不附带原程序。
+目前支持64位 Windows、64位 Python、硕士 VKR / 博士研究资格论文 NKR、DOCX / PDF。`--work-type master` 为默认值，博士须显式传入 `--work-type phd`。这里的博士模式指原程序“НКР аспиранта”，不代表所有博士学位论文标准。需要 Python 3、Windows 自带 .NET Framework 编译器和对应原 EXE；仓库不附带原程序。
 
 ```powershell
 python scripts/native_reference_cli.py --input "D:\论文\硕士论文.docx" --native-exe "C:\Users\你的用户名\Downloads\TestVkr (2).exe"
@@ -26,6 +26,10 @@ MCP 对应工具为 `check_native_reference_experimental`，参数：
 
 这是带明确干预记录的原程序包装器，仍借用隐藏窗体和原始检查引擎。它不是发现了原程序自带命令行接口，也不是完全独立的开源复刻。无须用户操作桌面；运行期间不能把该进程当作日常交互窗口使用。用户已有 TestVkr、Word 或其他进程不会被附加或关闭。
 
-已验证硕士字符阈值 43199／43200、附录目录页码 47／48 的实际分支；复杂 DOCX 的 13 条诊断与保留的俄语环境结果逐条匹配。完整验证入口在 `evidence/business-map-232/`。这些有限样例不证明任意论文全规则等价，博士／PDF 尚未向此工具开放。原程序诊断也不等于学校标准答案。
+已验证硕士字符阈值 43199／43200、附录目录页码 47／48 的实际分支；复杂 DOCX 的 13 条诊断与保留的俄语环境结果逐条匹配。v0.2.10 增加12个原生232合成样例，含博士复杂 DOCX、多页图表 PDF、72pt PDF、14页结构与删除摘要的反例。实际模式码必须匹配 master=1、phd=5；对应选择分支必须出现48/0下限及900分母，且必须命中所选格式的加载器。模式或格式错配即失败。
+
+证据入口为 `evidence/business-map-232/native-modes-audit-r1/audit.json`。相同PDF在博士/硕士模式返回10/11条，硕士额外出现缺48页诊断；不能把博士的无篇幅提示套用硕士。数字不是排版实际页数。
+
+已知缺口：图片过大诊断中的俄语“像素”单位仍可能以中文代码页误解码，保留原文，不进行静默替换。有限样例不证明任意论文全规则等价；原程序诊断也不等于学校标准答案。
 
 输出必须标记 `experimental` 与 `completed_instrumented_native_reference`。不要将其伪装为未干预的原程序运行，不用它自动提升本地规则或允许修改论文。已有副本修复继续服从原来的独立验收门槛。

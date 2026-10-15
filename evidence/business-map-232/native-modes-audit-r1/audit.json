@@ -1,0 +1,322 @@
+{
+  "status": "passed_retained_native_mode_audit",
+  "cases": [
+    {
+      "case": "phd_heading",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "8fda3cfaa9eb55ec11206421334a1af52b4138d076eefc2bf5fc041f4d669f90",
+      "diagnostic_count": 1,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_heading\\report.json",
+      "native_state": {
+        "state_pointer": "0x491dc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "5"
+        },
+        "minimum": 0,
+        "divisor": 900,
+        "toc_page_candidate": 15,
+        "text_units_candidate": 19754,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "validated_report": true
+    },
+    {
+      "case": "phd_left25",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "7e6016fe36f8dac353fab0885fa65a948cd694106bd30ae976104f69e23738f9",
+      "diagnostic_count": 0,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_left25\\report.json",
+      "native_state": {
+        "state_pointer": "0x429dc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "5"
+        },
+        "minimum": 0,
+        "divisor": 900,
+        "toc_page_candidate": 15,
+        "text_units_candidate": 19754,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "validated_report": true
+    },
+    {
+      "case": "master_complex",
+      "work_type": "master",
+      "file_type": "docx",
+      "input_sha256": "f48d643d723575d6dd0ad8b77e4f39a95303d1ab15de707c9e7fe2e7ecf64ef1",
+      "diagnostic_count": 13,
+      "report": "evidence\\business-map-232\\native-modes-r1\\master_complex\\report.json",
+      "native_state": {
+        "state_pointer": "0x41cdc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "1"
+        },
+        "minimum": 48,
+        "divisor": 900,
+        "toc_page_candidate": 0,
+        "text_units_candidate": 1881,
+        "supplement_candidate": 5,
+        "candidate_after_sentinel": 2
+      },
+      "validated_report": true
+    },
+    {
+      "case": "phd_pdf_clean",
+      "work_type": "phd",
+      "file_type": "pdf",
+      "input_sha256": "a0815ebc8b37789c8982d037b6b8bbce929730122cc66e324a36c9289b713205",
+      "diagnostic_count": 10,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_pdf_clean\\report.json",
+      "native_state": {
+        "state_pointer": "0x451dc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "5"
+        },
+        "minimum": 0,
+        "divisor": 900,
+        "toc_page_candidate": 0,
+        "text_units_candidate": -1,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "validated_report": true,
+      "historical_build230_comparison": {
+        "same_input_and_mode": true,
+        "diagnostic_count": 10,
+        "normalized_full_diagnostics_equal": true,
+        "capture_sha256": "b52c833c84702a46c40f3887b1cb292e34583f32c4b66857cd8e448bc2c6b291"
+      }
+    },
+    {
+      "case": "phd_pdf_font72",
+      "work_type": "phd",
+      "file_type": "pdf",
+      "input_sha256": "dc8ed5ab9499cf58f7eb8374d4368c6a0b706c0ff5cfb54ef3159f26a2cddfd7",
+      "diagnostic_count": 10,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_pdf_font72\\report.json",
+      "native_state": {
+        "state_pointer": "0x48cdc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "5"
+        },
+        "minimum": 0,
+        "divisor": 900,
+        "toc_page_candidate": 0,
+        "text_units_candidate": -1,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "validated_report": true,
+      "historical_build230_comparison": {
+        "same_input_and_mode": true,
+        "diagnostic_count": 10,
+        "normalized_full_diagnostics_equal": true,
+        "capture_sha256": "049bdeffb06cc77d0989bced8227a5d3622cb8445d90c57a6c232d28a83b5f9f"
+      }
+    },
+    {
+      "case": "phd_pdf_structure",
+      "work_type": "phd",
+      "file_type": "pdf",
+      "input_sha256": "5272656dcc7a90fb2eb487851d67e7a9a0e347b84b9cf259647b58d8abbd26d6",
+      "diagnostic_count": 3,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_pdf_structure\\report.json",
+      "native_state": {
+        "state_pointer": "0x4aadc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "5"
+        },
+        "minimum": 0,
+        "divisor": 900,
+        "toc_page_candidate": 15,
+        "text_units_candidate": 19502,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "validated_report": true,
+      "historical_build230_comparison": {
+        "same_input_and_mode": true,
+        "diagnostic_count": 3,
+        "normalized_full_diagnostics_equal": true,
+        "capture_sha256": "3783ff41d6559a97f0b4a0509286ae08f05d19b4a92a91e40bca1c529e2d9421"
+      }
+    },
+    {
+      "case": "phd_pdf_no_abstract",
+      "work_type": "phd",
+      "file_type": "pdf",
+      "input_sha256": "58f7866cfe382e3dc5929e9827e5c2990ec7bd2a46d44a1694ffb0ee99452974",
+      "diagnostic_count": 4,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_pdf_no_abstract\\report.json",
+      "native_state": {
+        "state_pointer": "0x473dc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "5"
+        },
+        "minimum": 0,
+        "divisor": 900,
+        "toc_page_candidate": 15,
+        "text_units_candidate": -1,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "validated_report": true,
+      "historical_build230_comparison": {
+        "same_input_and_mode": true,
+        "diagnostic_count": 4,
+        "normalized_full_diagnostics_equal": true,
+        "capture_sha256": "47a5b2aec425e5749d72723617f39ad62fecaf61405d80705e667e1fac0e6c39"
+      }
+    },
+    {
+      "case": "master_pdf_clean",
+      "work_type": "master",
+      "file_type": "pdf",
+      "input_sha256": "a0815ebc8b37789c8982d037b6b8bbce929730122cc66e324a36c9289b713205",
+      "diagnostic_count": 11,
+      "report": "evidence\\business-map-232\\native-modes-r1\\master_pdf_clean\\report.json",
+      "native_state": {
+        "state_pointer": "0x4aedc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "1"
+        },
+        "minimum": 48,
+        "divisor": 900,
+        "toc_page_candidate": 0,
+        "text_units_candidate": -1,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": 0
+      },
+      "validated_report": true
+    },
+    {
+      "case": "phd_complex_clean",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+      "diagnostic_count": 0,
+      "report": "evidence\\business-map-232\\native-complex-phd-r1\\phd_complex_clean\\report.json",
+      "native_state": {
+        "state_pointer": "0x4d7dc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "5"
+        },
+        "minimum": 0,
+        "divisor": 900,
+        "toc_page_candidate": 15,
+        "text_units_candidate": 19754,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "validated_report": true,
+      "historical_build230_comparison": {
+        "same_input_and_mode": true,
+        "diagnostic_count": 0,
+        "normalized_full_diagnostics_equal": true,
+        "capture_sha256": "740720a698b54e99055d97347a3b38e4c8faf8e70b4df596e6b9944f400b3df7"
+      }
+    },
+    {
+      "case": "phd_complex_table7",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "400b9eaee892031be4ec0c8595066a215bf426755727748b0ef330da70e7cb9e",
+      "diagnostic_count": 1,
+      "report": "evidence\\business-map-232\\native-complex-phd-r1\\phd_complex_table7\\report.json",
+      "native_state": {
+        "state_pointer": "0x47bdc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "5"
+        },
+        "minimum": 0,
+        "divisor": 900,
+        "toc_page_candidate": 15,
+        "text_units_candidate": 19754,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "validated_report": true,
+      "historical_build230_comparison": {
+        "same_input_and_mode": true,
+        "diagnostic_count": 1,
+        "normalized_full_diagnostics_equal": true,
+        "capture_sha256": "32b2601843f363cedcd7d4516d4a1ccea73cbc3eca6d9ec4d2fe1323b126773b"
+      }
+    },
+    {
+      "case": "phd_complex_image",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "fbfd3d29faf4ac2b22abf41d2254ebe1364f828019f5acb8b59f3fc83193d4a7",
+      "diagnostic_count": 1,
+      "report": "evidence\\business-map-232\\native-complex-phd-r1\\phd_complex_image\\report.json",
+      "native_state": {
+        "state_pointer": "0x507dc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "5"
+        },
+        "minimum": 0,
+        "divisor": 900,
+        "toc_page_candidate": 15,
+        "text_units_candidate": 19754,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "validated_report": true,
+      "historical_build230_comparison": {
+        "same_input_and_mode": true,
+        "diagnostic_count": 1,
+        "normalized_full_diagnostics_equal": false,
+        "capture_sha256": "e5d6d949838828dc89bdb6e02b0853fb4b6cdc6e81d36533d00ec38796f4247e"
+      }
+    },
+    {
+      "case": "phd_combined",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "24873a6b4bbe1f219f3d7cc7d9e9010bef369725c3153fb0c9b9ca2acea3df31",
+      "diagnostic_count": 4,
+      "report": "evidence\\business-map-232\\native-complex-phd-r1\\phd_combined\\report.json",
+      "native_state": {
+        "state_pointer": "0x4d1dc60",
+        "work_code": {
+          "length": 1,
+          "prefix": "5"
+        },
+        "minimum": 0,
+        "divisor": 900,
+        "toc_page_candidate": 15,
+        "text_units_candidate": 19754,
+        "supplement_candidate": 0,
+        "candidate_after_sentinel": -1
+      },
+      "validated_report": true,
+      "historical_build230_comparison": {
+        "same_input_and_mode": true,
+        "diagnostic_count": 4,
+        "normalized_full_diagnostics_equal": true,
+        "capture_sha256": "3d18e8782778933e9ece988805677fc5c8a946503aa23a747ea404932feb5896"
+      }
+    }
+  ],
+  "limits": [
+    "Finite synthetic fixtures, instrumented native232 only.",
+    "Historical230 equality is per input; not full version equivalence.",
+    "No new repair permissions or school-standard claims."
+  ]
+}

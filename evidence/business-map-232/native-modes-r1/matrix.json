@@ -1,0 +1,73 @@
+{
+  "native_build": 232,
+  "cases": [
+    {
+      "case": "phd_heading",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "8fda3cfaa9eb55ec11206421334a1af52b4138d076eefc2bf5fc041f4d669f90",
+      "diagnostic_count": 1,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_heading\\report.json"
+    },
+    {
+      "case": "phd_left25",
+      "work_type": "phd",
+      "file_type": "docx",
+      "input_sha256": "7e6016fe36f8dac353fab0885fa65a948cd694106bd30ae976104f69e23738f9",
+      "diagnostic_count": 0,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_left25\\report.json"
+    },
+    {
+      "case": "master_complex",
+      "work_type": "master",
+      "file_type": "docx",
+      "input_sha256": "f48d643d723575d6dd0ad8b77e4f39a95303d1ab15de707c9e7fe2e7ecf64ef1",
+      "diagnostic_count": 13,
+      "report": "evidence\\business-map-232\\native-modes-r1\\master_complex\\report.json"
+    },
+    {
+      "case": "phd_pdf_clean",
+      "work_type": "phd",
+      "file_type": "pdf",
+      "input_sha256": "a0815ebc8b37789c8982d037b6b8bbce929730122cc66e324a36c9289b713205",
+      "diagnostic_count": 10,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_pdf_clean\\report.json"
+    },
+    {
+      "case": "phd_pdf_font72",
+      "work_type": "phd",
+      "file_type": "pdf",
+      "input_sha256": "dc8ed5ab9499cf58f7eb8374d4368c6a0b706c0ff5cfb54ef3159f26a2cddfd7",
+      "diagnostic_count": 10,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_pdf_font72\\report.json"
+    },
+    {
+      "case": "phd_pdf_structure",
+      "work_type": "phd",
+      "file_type": "pdf",
+      "input_sha256": "5272656dcc7a90fb2eb487851d67e7a9a0e347b84b9cf259647b58d8abbd26d6",
+      "diagnostic_count": 3,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_pdf_structure\\report.json"
+    },
+    {
+      "case": "phd_pdf_no_abstract",
+      "work_type": "phd",
+      "file_type": "pdf",
+      "input_sha256": "58f7866cfe382e3dc5929e9827e5c2990ec7bd2a46d44a1694ffb0ee99452974",
+      "diagnostic_count": 4,
+      "report": "evidence\\business-map-232\\native-modes-r1\\phd_pdf_no_abstract\\report.json"
+    },
+    {
+      "case": "master_pdf_clean",
+      "work_type": "master",
+      "file_type": "pdf",
+      "input_sha256": "a0815ebc8b37789c8982d037b6b8bbce929730122cc66e324a36c9289b713205",
+      "diagnostic_count": 11,
+      "report": "evidence\\business-map-232\\native-modes-r1\\master_pdf_clean\\report.json"
+    }
+  ],
+  "limits": [
+    "Instrumented original, not an independent replica.",
+    "Public synthetic fixtures only; no school-standard inference."
+  ]
+}

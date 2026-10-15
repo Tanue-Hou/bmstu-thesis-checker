@@ -1,3 +1,9 @@
+# v0.2.10
+
+- Extend experimental original232 CLI/MCP to master / NKR postgraduate DOCX and PDF; verify selected radio, actual mode code, threshold branch, format-specific loader and complete report.
+- Retain 12 public synthetic native runs, bounded historical comparisons and actual postgraduate PDF MCP smoke. Preserve a pixel-unit encoding difference rather than claiming complete text equivalence.
+- Keep independent-engine validation and all copy-repair permissions unchanged.
+
 # 0.2.8 - Source-level review and independently gated master font repair (2026-10-15)
 
 - Review164 remaining source-fact records individually; retain school-policy/semantic uncertainties instead of declaring compliance.

@@ -33,7 +33,7 @@ class THREAD_ENTRY(C.Structure):
     _fields_=[('size',D),('usage',D),('tid',D),('pid',D),('base_priority',W.LONG),('delta_priority',W.LONG),('flags',D)]
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
     if a.direct_file_entry and not a.probe_document:raise ValueError('Direct entry requires a synthetic document probe')
     if a.probe_document and not a.direct_file_entry:raise ValueError('Only controlled direct-entry probes are supported; natural cross-process HDROP is not validated')
     if a.dictionary_cp1251:a.trace_codepage=True
@@ -42,7 +42,7 @@ def main():
     probe_raw=None
     if a.probe_document:
         a.probe_document=a.probe_document.resolve()
-        if not a.dictionary_cp1251 or not any(a.probe_document.is_relative_to(root) for root in [ROOT/'evidence',ROOT.parent/'private_trials']) or a.probe_document.suffix.lower()!='.docx':raise ValueError('Probe requires dictionary intervention and a controlled evidence/private-trials DOCX')
+        if not a.dictionary_cp1251 or not any(a.probe_document.is_relative_to(root) for root in [ROOT/'evidence',ROOT.parent/'private_trials']) or a.probe_document.suffix.lower() not in {'.docx','.pdf'}:raise ValueError('Probe requires dictionary intervention and a controlled evidence/private-trials DOCX/PDF')
         probe_raw=a.probe_document.read_bytes()
     binary=a.binary.resolve();raw=binary.read_bytes()
     if hashlib.sha256(raw).hexdigest()!=IDENTITY:raise ValueError('Target identity mismatch')
@@ -140,7 +140,7 @@ def main():
             event=DEBUG_EVENT()
             if not k.WaitForDebugEvent(C.byref(event),200):
                 if a.probe_document and sender is None and form_pointer and int(form_pointer,16)>0:
-                    sender=subprocess.Popen([str(a.sender_executable),str(target_pid),str(binary),str(a.probe_document),str(out),'instrumented-entry-v1'],stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                    sender=subprocess.Popen([str(a.sender_executable),str(target_pid),str(binary),str(a.probe_document),str(out),'instrumented-entry-v2',a.work_type],stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
                     events.append({'event':'owned_file_drop_sender','pid':sender.pid,'target_pid':int(target_pid),'elapsed_ms':round((time.monotonic()-started)*1000)})
                 if sender and sender.poll() is not None:
                     sender_status=sender.returncode;stop_reason='drop_sender_finished';break
@@ -175,7 +175,7 @@ def main():
                     if a.trace_codepage:
                         addr=base+0x2bf90c;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,'MultiByteToWideChar_thunk')
                     if a.probe_document:
-                        for va,label in [(0x00481794,'single_file_drop_handler'),(0x0047a528,'file_check_entry'),(0x0043dd1c,'docx_load'),(0x00451e54,'structure_volume_check'),(0x00452ac5,'volume_selected_threshold'),(0x00452b94,'volume_decision'),(0x00452bb3,'volume_insufficient_emit')]:
+                        for va,label in [(0x00481794,'single_file_drop_handler'),(0x0047a528,'file_check_entry'),(0x0043dd1c,'docx_load'),(0x0046ba90,'pdf_load'),(0x00451e54,'structure_volume_check'),(0x00452ac5,'volume_selected_threshold'),(0x00452b94,'volume_decision'),(0x00452bb3,'volume_insufficient_emit')]:
                             addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                     if event.u.create.file:k.CloseHandle(event.u.create.file)
                 elif event.code==6:
@@ -216,7 +216,7 @@ def main():
                                 context.Eip=base+0x7a528;context.Edx=allocation+object_offset
                                 checked(k.Wow64SetThreadContext(thread,C.byref(context)))
                                 hit['direct_entry_intervention']={'function_preferred_va':'0047a528','eax_form':hex(context.Eax),'edx_unicode_string_object':hex(context.Edx),'unicode_string_data':hex(allocation+12),'utf16_units':length,'header_hex':static_string[:12].hex(),'stack_return_preserved':True,'scope':'Owned main thread: replace drop-handler entry with the shared native file-processing entry; no disk patch'}
-                            if label in ['startup_bucket_candidate','file_check_entry','docx_load']:
+                            if label in ['startup_bucket_candidate','file_check_entry','docx_load','pdf_load']:
                                 try:
                                     pointer=int.from_bytes(read(context.Edx,4),'little');length=int.from_bytes(read(pointer-4,4),'little',signed=True)
                                     hit['candidate_input_string_length']=length
@@ -272,8 +272,19 @@ def main():
         if len(events)>=event_limit:stop_reason='event_limit'
     except Exception as e:error=repr(e)
     finally:
-        for handle in owned.values():
-            try:k.TerminateProcess(handle,0xdead)
+        for handle in set(owned.values()):
+            try:
+                if k.WaitForSingleObject(handle,0)!=0:checked(k.TerminateProcess(handle,0xdead))
+                # A debuggee cannot finish termination until its pending debug
+                # events are continued. Drain only this owned debugging session.
+                deadline=time.monotonic()+2
+                while k.WaitForSingleObject(handle,0)!=0 and time.monotonic()<deadline:
+                    cleanup_event=DEBUG_EVENT()
+                    if k.WaitForDebugEvent(C.byref(cleanup_event),100):
+                        if cleanup_event.code==6 and cleanup_event.u.load.file:k.CloseHandle(cleanup_event.u.load.file)
+                        events.append({'event':'cleanup_debug_event','code':int(cleanup_event.code),'pid':int(cleanup_event.pid)})
+                        checked(k.ContinueDebugEvent(cleanup_event.pid,cleanup_event.tid,0x10002))
+                if k.WaitForSingleObject(handle,0)!=0:raise OSError('Owned process did not signal exit after cleanup')
             except OSError as exc:cleanup_errors.append(str(exc))
         for handle in set(owned.values()):
             if handle!=pi.hProcess:
@@ -293,11 +304,13 @@ def main():
     result['target_pid']=int(target_pid) if target_pid else None
     result['owned_pids']=list(owned)
     result['cleanup_errors']=cleanup_errors
+    result['cleanup_verified']=not cleanup_errors
+    if a.probe_document:result['limits']='Actual owned Windows process execution with hash-matched resource codepage and explicit shared file-entry redirection. One-shot entry/branch observations, not full call counts. Raw report retained; this is instrumented native reference evidence, not an unmodified run or independent replica.'
     result['codepage_api_calls_observed']=api_calls
     result['large_buffer_codepage_calls']=codepage_calls
     result['intervention_mode']='Hash-matched dictionary conversion calls only: CP_ACP to CP1251 in owned process stack; no disk patch' if a.dictionary_cp1251 else 'none'
     if a.probe_document:
-        result['probe_document']={'path':str(a.probe_document),'sha256':hashlib.sha256(probe_raw).hexdigest(),'unchanged':a.probe_document.read_bytes()==probe_raw,'sender_exit_code':sender_status,'sender_source_sha256':hashlib.sha256((Path(__file__).parent/'SendOwnedDrop.cs').read_bytes()).hexdigest()}
+        result['probe_document']={'path':str(a.probe_document),'requested_work_type':a.work_type,'file_type':a.probe_document.suffix.lower()[1:],'sha256':hashlib.sha256(probe_raw).hexdigest(),'unchanged':a.probe_document.read_bytes()==probe_raw,'sender_exit_code':sender_status,'sender_source_sha256':hashlib.sha256((Path(__file__).parent/'SendOwnedDrop.cs').read_bytes()).hexdigest()}
         length_path=out/'collection-length.txt'
         if length_path.exists():
             expected,actual=map(int,length_path.read_text().splitlines())

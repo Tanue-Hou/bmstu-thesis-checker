@@ -1,0 +1,23 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "7e6016fe36f8dac353fab0885fa65a948cd694106bd30ae976104f69e23738f9",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "diagnostic_count": 0,
+  "diagnostics": [],
+  "evidence_directory": "evidence\\business-map-232\\native-modes-r1\\phd_left25",
+  "trace_sha256": "f7cf782e7111aad4f0d007dd1c30c9a10dec65cea4c638095af6913794834ef0",
+  "native_text_sha256": "96d96f7967cfbb13bf81d85f03d24a2748745199b6ed972b78cd27b1a5b9e740",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "aa8c11d7631a67af45f396820f99647b5d69f684846df2b728e01347ea577c20",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied."
+  ],
+  "source_fixture": "evidence/graduate-structure/g_phd_left25.docx"
+}

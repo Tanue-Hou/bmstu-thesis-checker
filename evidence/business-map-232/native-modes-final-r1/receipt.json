@@ -1,0 +1,26 @@
+{
+  "status": "final_native_hardening_pass",
+  "runs": [
+    {
+      "case": "master_complex",
+      "source_fixture": "evidence/v028/complex-repair/C01A.docx",
+      "source_sha256": "f48d643d723575d6dd0ad8b77e4f39a95303d1ab15de707c9e7fe2e7ecf64ef1",
+      "work_type": "master",
+      "file_type": "docx",
+      "diagnostic_count": 13,
+      "cleanup_verified": true,
+      "source_unchanged": true
+    },
+    {
+      "case": "phd_pdf",
+      "source_fixture": "evidence/multipage-phd-repair/structure_no_abstract.pdf",
+      "source_sha256": "58f7866cfe382e3dc5929e9827e5c2990ec7bd2a46d44a1694ffb0ee99452974",
+      "work_type": "phd",
+      "file_type": "pdf",
+      "diagnostic_count": 4,
+      "cleanup_verified": true,
+      "source_unchanged": true
+    }
+  ],
+  "supersedes": "Earlier traces contain a stale generic no-forced-invocation limitation; explicit intervention records remain authoritative. These final traces correct the limitation and verify owned-process exit."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "actual_native_mcp_pass",
+  "server_version": "0.2.10",
+  "tool_count": 10,
+  "work_type": "phd",
+  "file_type": "pdf",
+  "native_build": 232,
+  "input_sha256": "58f7866cfe382e3dc5929e9827e5c2990ec7bd2a46d44a1694ffb0ee99452974",
+  "diagnostic_count": 4,
+  "source_unchanged": true,
+  "native_text_sha256": "8ca738cedb5dce98da1d3b6f5bc5d2adfb2d712087d8168b5e86eb2fc411db30",
+  "raw_mcp_response_sha256": "234bb173d9b89d8420889af1405760303a4139286f63719702083fcc661846bb",
+  "limits": "Raw response retained privately. Instrumented native reference only, not independent clone or new repair permission."
+}

@@ -22,7 +22,7 @@ class SendOwnedDrop {
   [DllImport("kernel32.dll")] static extern IntPtr GlobalFree(IntPtr handle);
   static string ClassName(IntPtr hwnd){var s=new StringBuilder(256);GetClassName(hwnd,s,s.Capacity);return s.ToString();}
   static int Main(string[] args){
-    if(args.Length!=5 || args[4]!="instrumented-entry-v1")return 2;
+    if(args.Length!=6 || args[4]!="instrumented-entry-v2" || (args[5]!="master" && args[5]!="phd"))return 2;
     string outDir=args[3];
     try {
       uint pid=uint.Parse(args[0]);var process=Process.GetProcessById((int)pid);
@@ -32,13 +32,17 @@ class SendOwnedDrop {
         if(hash!="5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0")throw new Exception("Target hash mismatch");
       }
       IntPtr main=IntPtr.Zero,master=IntPtr.Zero,memo=IntPtr.Zero;
+      string wanted=args[5]=="master" ? "ВКР магистра" : "НКР аспиранта";
+      int modeMatches=0;
       EnumWindows((h,d)=>{uint found;GetWindowThreadProcessId(h,out found);if(found==pid && ClassName(h)=="TTstWndMain")main=h;return true;},IntPtr.Zero);
       if(main==IntPtr.Zero)throw new Exception("Owned main window missing");
       ShowWindow(main,0);
-      EnumChildWindows(main,(h,d)=>{uint found;GetWindowThreadProcessId(h,out found);if(found!=pid)return true;string c=ClassName(h);var text=new StringBuilder(512);GetWindowText(h,text,text.Capacity);if(c=="TRadioButton" && text.ToString().ToLowerInvariant().Contains("магистр"))master=h;if(c=="TMemo")memo=h;return true;},IntPtr.Zero);
-      if(master==IntPtr.Zero || memo==IntPtr.Zero)throw new Exception("Expected master radio / memo missing");
+      EnumChildWindows(main,(h,d)=>{uint found;GetWindowThreadProcessId(h,out found);if(found!=pid)return true;string c=ClassName(h);var text=new StringBuilder(512);GetWindowText(h,text,text.Capacity);if(c=="TRadioButton" && text.ToString()==wanted){master=h;modeMatches++;}if(c=="TMemo")memo=h;return true;},IntPtr.Zero);
+      if(modeMatches!=1 || memo==IntPtr.Zero)throw new Exception("Expected unique mode radio / memo missing");
       IntPtr modeResult;
       if(SendMessageTimeout(master,0x00f5,IntPtr.Zero,IntPtr.Zero,2,3000,out modeResult)==IntPtr.Zero)throw new Exception("Mode selection message failed");
+      if(SendMessageTimeout(master,0x00f0,IntPtr.Zero,IntPtr.Zero,2,3000,out modeResult)==IntPtr.Zero || modeResult.ToInt32()!=1)throw new Exception("Requested mode was not checked");
+      File.WriteAllText(Path.Combine(outDir,"selected-mode.txt"),args[5]+"\n"+wanted+"\n",new UTF8Encoding(false));
       // Signal only. The attached owned-process debugger redirects this handler
       // before it consumes HDROP, passing the native UTF-16 path object instead.
       // No cross-process global-memory ownership or DragFinish contract is used.
