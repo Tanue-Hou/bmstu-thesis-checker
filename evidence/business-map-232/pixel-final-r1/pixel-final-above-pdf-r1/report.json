@@ -1,0 +1,65 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "d707bb8c8c4fcf6f3e6f5d70b55e005cbb985348bf1c791a0108531972c0bb52",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "pdf",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 10,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Допущены ошибки в названии университета на титульном листе."
+    },
+    {
+      "number": 2,
+      "message": "*** Отсутствует или неправильно введен титульный лист (много несоответствий)."
+    },
+    {
+      "number": 3,
+      "message": "* В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок)."
+    },
+    {
+      "number": 4,
+      "message": "* Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании)."
+    },
+    {
+      "number": 5,
+      "message": "*** Документ содержит рисунки большого размера (больше 40 Mb): Стр. 1 \"а данных|Метод анализа данных Метод анализа данных\"."
+    },
+    {
+      "number": 6,
+      "message": "*** Документ содержит рисунки большого размера (больше 16000000 пикселей): Стр. 1 \"а данных|Метод анализа данных Метод анализа данных\"."
+    },
+    {
+      "number": 7,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\"."
+    },
+    {
+      "number": 8,
+      "message": "** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\"."
+    },
+    {
+      "number": 9,
+      "message": "* В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 10,
+      "message": "* Разберитесь с источником (возможно, чего-то не хватает): \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\"."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/pixel-final-r1/pixel-final-above-pdf-r1",
+  "trace_sha256": "559da13f066040dbce8dc3e47998c6e61496c559df686579de419705b7938ccd",
+  "native_text_sha256": "fcef731a4d01f84e4422680ad5e09103320be0f09ab567930aa422225f444318",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "6cbd1db298e0914671d84141478ffe782083a170a2509ef0c9e1d5659489723c",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

@@ -1,3 +1,10 @@
+# v0.2.11
+
+- Map image predicates through native getters, signed32 comparison, flag, counter and report; retain six real PNG boundary runs and same-input codepage control/treatment.
+- Fix the exact ANSI pixel-unit conversion in the owned native process, without rewriting the report.
+- Deduplicate PDF resource aliases while preserving placement coordinates.
+- Add source/evidence-bound build232 image contexts for the tested postgraduate DOCX/PDF profiles; keep other contexts and all repair gates independent.
+
 # v0.2.10
 
 - Extend experimental original232 CLI/MCP to master / NKR postgraduate DOCX and PDF; verify selected radio, actual mode code, threshold branch, format-specific loader and complete report.

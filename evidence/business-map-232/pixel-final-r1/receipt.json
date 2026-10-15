@@ -1,0 +1,33 @@
+{
+  "status": "passed_final_default_pixel_wrapper",
+  "cases": [
+    {
+      "case": "pixel-final-equal-r1",
+      "file_type": "docx",
+      "source_sha256": "35f1e8bc16d2f642b3223e48d681f3bbf7fb8f680d2bf3a1da8457b18ce8413c",
+      "counter": 0,
+      "native_diagnostic_count": 0,
+      "cleanup_verified": true,
+      "pixel_fix_default_enabled": true
+    },
+    {
+      "case": "pixel-final-above-docx-r1",
+      "file_type": "docx",
+      "source_sha256": "d57a216adeb4fc46e0eb29f95162a62f70b02bdb65e4fdf756b3d5a94561ae59",
+      "counter": 1,
+      "native_diagnostic_count": 1,
+      "cleanup_verified": true,
+      "pixel_fix_default_enabled": true
+    },
+    {
+      "case": "pixel-final-above-pdf-r1",
+      "file_type": "pdf",
+      "source_sha256": "d707bb8c8c4fcf6f3e6f5d70b55e005cbb985348bf1c791a0108531972c0bb52",
+      "counter": 1,
+      "native_diagnostic_count": 10,
+      "cleanup_verified": true,
+      "pixel_fix_default_enabled": true
+    }
+  ],
+  "limits": "Only these default-wrapper cases and explicit process-local conversion interventions."
+}

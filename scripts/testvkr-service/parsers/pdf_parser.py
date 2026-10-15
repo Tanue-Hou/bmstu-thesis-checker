@@ -65,8 +65,13 @@ class PdfParser:
         cache={}
         for page_idx, page in enumerate(self.doc):
             image_list = page.get_images(full=True)
+            seen_xrefs=set()
             for img_idx, img in enumerate(image_list):
                 xref = img[0]
+                # Multiple resource names can refer to the same XObject. They
+                # are not additional images; actual placements remain in bboxes.
+                if xref in seen_xrefs:continue
+                seen_xrefs.add(xref)
                 if xref not in cache:cache[xref]=self.doc.extract_image(xref)
                 base_image = cache[xref]
                 image_bytes = base_image["image"]
@@ -78,11 +83,14 @@ class PdfParser:
                 images_info.append({
                     'page_index': page_idx,
                     'xref': xref,
+                    'soft_mask_xref':img[1],
+                    'has_color_mask':self.doc.xref_get_key(xref,'Mask')[0]!='null',
                     'bboxes':[tuple(r) for r in page.get_image_rects(xref)],
                     'width_px': float(width),
                     'height_px': float(height),
                     'byte_size_mb': byte_size / (1024 * 1024),
-                    'extension': image_ext
+                    'extension': image_ext,
+                    'bits_per_component':base_image.get('bpc'),'colorspace_components':base_image.get('colorspace')
                 })
         return images_info
 
@@ -91,7 +99,7 @@ class PdfParser:
         images=self.parse_images()
         page_images={i:[im for im in images if im['page_index']==i] for i in range(len(self.doc))}
         text_profile=(bool(fonts) and all('TimesNewRoman' in f[3].replace(' ','') and self.doc.xref_get_key(f[0],'ToUnicode')[0]=='xref' for f in fonts)
-                 and all(page.rotation==0 and len(page_images[page.number])<=1 and all(im['extension']=='png' for im in page_images[page.number]) for page in self.doc))
+                 and all(page.rotation==0 and len(page_images[page.number])<=1 and all(im['extension']=='png' and len(im['bboxes'])==1 for im in page_images[page.number]) for page in self.doc))
         return {
             'pdf_text_profile_supported':text_profile,
             'pdf_verification_profile_supported':text_profile and 1<=len(self.doc)<=3,

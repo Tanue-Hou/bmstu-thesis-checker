@@ -1,0 +1,22 @@
+{
+  "status": "actual_native_and_independent_pixel_mcp_pass",
+  "server_version": "0.2.11",
+  "native_build": 232,
+  "work_type": "phd",
+  "file_type": "pdf",
+  "input_sha256": "d707bb8c8c4fcf6f3e6f5d70b55e005cbb985348bf1c791a0108531972c0bb52",
+  "native_diagnostics": 10,
+  "local_pixel_count": 1,
+  "local_pixel_verification_scope": {
+    "build": 232,
+    "format": "pdf",
+    "work_type": "phd",
+    "profile": "native232_single_page_png_pdf",
+    "limits": "RGB8 PNG only, one ordinary inline DOCX image or one-page unrotated embedded-TNR PDF with one image. Strict signed32 area comparison at tested boundary; no overflow, vectors, alpha images, reused objects or repair permission."
+  },
+  "native_pixel_unit_corrected_in_process": true,
+  "native_cleanup_verified": true,
+  "automatic_image_repair_allowed": false,
+  "raw_response_sha256": "175c3a24ba0c94bab411bbf15839716c6757c418f009a334fbf478d533953550",
+  "limits": "Raw MCP response stays private. Only same-input scoped detection and original-wrapper proof."
+}

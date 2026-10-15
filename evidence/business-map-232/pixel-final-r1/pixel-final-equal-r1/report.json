@@ -1,0 +1,24 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "35f1e8bc16d2f642b3223e48d681f3bbf7fb8f680d2bf3a1da8457b18ce8413c",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 0,
+  "diagnostics": [],
+  "evidence_directory": "evidence/business-map-232/pixel-final-r1/pixel-final-equal-r1",
+  "trace_sha256": "35d4ad3c31a2d1cde984ba37ea2e6c01a1be65ac5cc61d3686b686f538288811",
+  "native_text_sha256": "756b70354227218ef882013f07853ac66b41d8c9b8a2acd1f09ce4a5b1ba6726",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "a6b104d0bb1a6d656a2b9300b286f3bddfa59aba910bb089a3a1c0917fcaed9d",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

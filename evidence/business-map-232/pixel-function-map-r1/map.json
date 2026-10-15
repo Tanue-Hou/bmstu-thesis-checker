@@ -1,0 +1,365 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "analyst_names_only": true,
+  "functions": [
+    {
+      "va": "00401e4c",
+      "analyst_name": "collect_docx_image_diagnostics",
+      "original_symbol": "FUN_00401e4c",
+      "meaning": "Static image iteration passes an output flag to0042a6b0, then selects+0x1ec counter slot and calls00403318.",
+      "evidence_level": "static_and_bounded_runtime",
+      "pseudocode": "evidence/agent-v027/decompilation/recovered_pseudocode.c",
+      "reference_lines": [
+        256,
+        258
+      ],
+      "direct_callers_in_bulk_index": [
+        "0047a528"
+      ],
+      "caller_index_limits": "Bulk caller index omits the formerly timed-out0047a528; supplementary entry pseudocode is authoritative for its direct calls."
+    },
+    {
+      "va": "0042a6b0",
+      "analyst_name": "decode_docx_graphic_and_mark_area_limit",
+      "original_symbol": "FUN_0042a6b0",
+      "meaning": "Observed getters +0x24=height and+0x30=width for asymmetric RGB PNG fixtures; signed32 imul then strict jle skip.",
+      "evidence_level": "static_and_bounded_runtime",
+      "pseudocode": "evidence/agent-v027/decompilation/recovered_pseudocode.c",
+      "reference_lines": [
+        445,
+        20633,
+        20637
+      ],
+      "direct_callers_in_bulk_index": [
+        "00401e4c"
+      ],
+      "caller_index_limits": "Bulk caller index omits the formerly timed-out0047a528; supplementary entry pseudocode is authoritative for its direct calls."
+    },
+    {
+      "va": "00403318",
+      "analyst_name": "append_image_context_and_increment_selected_slot",
+      "original_symbol": "FUN_00403318",
+      "meaning": "Static selected counter/context accumulator; exact inferred object layout is incomplete.",
+      "evidence_level": "static_only_candidate",
+      "pseudocode": "evidence/agent-v027/decompilation/recovered_pseudocode.c",
+      "reference_lines": [
+        453,
+        462,
+        983,
+        985,
+        8106,
+        9421,
+        9813,
+        10130,
+        10143,
+        10155,
+        10175,
+        13042,
+        13643,
+        13655,
+        13670,
+        13709,
+        13733,
+        13753,
+        13777,
+        13784,
+        13804,
+        15148,
+        15185,
+        15204,
+        15243,
+        15272,
+        15323,
+        28009,
+        28021,
+        28034
+      ],
+      "direct_callers_in_bulk_index": [
+        "00401e4c",
+        "004120b8",
+        "00414df8",
+        "00415824",
+        "0041614c",
+        "0041b954",
+        "0041c6ac",
+        "004206bc",
+        "00437374",
+        "00438304"
+      ],
+      "caller_index_limits": "Bulk caller index omits the formerly timed-out0047a528; supplementary entry pseudocode is authoritative for its direct calls."
+    },
+    {
+      "va": "00472b90",
+      "analyst_name": "decode_pdf_image_and_check_area_limit",
+      "original_symbol": "FUN_00472b90",
+      "meaning": "Observed descriptor+0x1bc/+0x1c0 and signed32 product at00472be7; emit branch00472bef.",
+      "evidence_level": "static_and_bounded_runtime",
+      "pseudocode": "evidence/agent-v027/decompilation/recovered_pseudocode.c",
+      "reference_lines": [
+        61013,
+        61626,
+        61630,
+        61930
+      ],
+      "direct_callers_in_bulk_index": [
+        "00471948",
+        "00473464"
+      ],
+      "caller_index_limits": "Bulk caller index omits the formerly timed-out0047a528; supplementary entry pseudocode is authoritative for its direct calls."
+    },
+    {
+      "va": "0047a528",
+      "analyst_name": "check_selected_file_and_compose_diagnostics",
+      "original_symbol": "FUN_0047a528",
+      "meaning": "Recovered entry; observed native parse, report counter+0x94, pixel ANSI conversion and normal return.",
+      "evidence_level": "static_and_bounded_runtime",
+      "pseudocode": "evidence/business-map-232/file-entry-decompilation-r1/function.c",
+      "reference_lines": [
+        1,
+        5
+      ],
+      "direct_callers_in_bulk_index": [
+        "00481794",
+        "00481b40"
+      ],
+      "caller_index_limits": "Bulk caller index omits the formerly timed-out0047a528; supplementary entry pseudocode is authoritative for its direct calls."
+    },
+    {
+      "va": "006bef94",
+      "analyst_name": "construct_unicode_from_ansi_c_string",
+      "original_symbol": "FUN_006bef94",
+      "meaning": "Observed input pointer points to NUL-terminated CP1251 pixel-unit bytes, not a length-prefixed ShortString.",
+      "evidence_level": "static_and_bounded_runtime",
+      "pseudocode": "evidence/agent-v027/decompilation/recovered_pseudocode.c",
+      "reference_lines": [
+        23672,
+        23675,
+        23866,
+        23869,
+        24329,
+        24353,
+        27587,
+        43450,
+        44233,
+        44448,
+        44977,
+        45092,
+        45214,
+        45329,
+        45432,
+        45952,
+        46342,
+        46401,
+        46442,
+        46556,
+        46596,
+        46636,
+        46809,
+        46849,
+        46923,
+        46950,
+        46975,
+        47047,
+        47101,
+        47435
+      ],
+      "direct_callers_in_bulk_index": [
+        "0042ff24",
+        "0043040c",
+        "004312e6",
+        "00437014",
+        "00454340",
+        "00455550",
+        "00455980",
+        "004564cc",
+        "00456730",
+        "00456a74",
+        "00456df0",
+        "00457098",
+        "00457b84",
+        "00457ec8",
+        "0045a97c",
+        "0045b8a0",
+        "0045c4a8",
+        "0045cbd8",
+        "0045dd0c",
+        "0045e454",
+        "0045f0cc",
+        "0045f90c",
+        "004605dc",
+        "00461e68",
+        "004645bc",
+        "00469f7c",
+        "0046b4dc",
+        "0046f718",
+        "0046f818",
+        "0046ff6c",
+        "00470810",
+        "0047092c",
+        "00470a5c",
+        "00470b78",
+        "00470c94",
+        "00470d8c",
+        "00470ec4",
+        "004716a0",
+        "00472b90",
+        "00473464",
+        "0047558c",
+        "004759b0",
+        "004768ac",
+        "00476ecc",
+        "00477cd0",
+        "00478ce0",
+        "0047956c",
+        "0047a528",
+        "00485274",
+        "0048538c",
+        "00487e50",
+        "00487f80",
+        "00488b3c",
+        "00489010",
+        "004895e8",
+        "00489740",
+        "00489c1c",
+        "00489e54",
+        "004aa544",
+        "004aaac8",
+        "004aae04",
+        "0050f99c",
+        "0050fe64",
+        "00510404",
+        "00510a8c",
+        "00510f70",
+        "00511494",
+        "00511fe0",
+        "00512904",
+        "006beb5c"
+      ],
+      "caller_index_limits": "Bulk caller index omits the formerly timed-out0047a528; supplementary entry pseudocode is authoritative for its direct calls."
+    },
+    {
+      "va": "005754a4",
+      "analyst_name": "convert_ansi_c_string_using_default_encoding",
+      "original_symbol": "FUN_005754a4",
+      "meaning": "Static helper under006bef94; actual MBTWC return005746f5 passes explicit936 on this system.",
+      "evidence_level": "static_and_bounded_runtime",
+      "pseudocode": "evidence/agent-v027/decompilation/recovered_pseudocode.c",
+      "reference_lines": [
+        168037,
+        212085,
+        224138,
+        224140,
+        226740,
+        298339,
+        347709,
+        347828,
+        347909,
+        348221,
+        348235,
+        358670
+      ],
+      "direct_callers_in_bulk_index": [
+        "0052bfd4",
+        "0056a0c0",
+        "00577348",
+        "00604cc4",
+        "00650dca",
+        "00650fbc",
+        "006514a8",
+        "0066dca4"
+      ],
+      "caller_index_limits": "Bulk caller index omits the formerly timed-out0047a528; supplementary entry pseudocode is authoritative for its direct calls."
+    },
+    {
+      "va": "00438304",
+      "analyst_name": "inspect_docx_zip_image_entries",
+      "original_symbol": "FUN_00438304",
+      "meaning": "Static entry-size comparison30000000, counter+0x1e8; requires dynamic validation.",
+      "evidence_level": "static_only_candidate",
+      "pseudocode": "evidence/agent-v027/decompilation/recovered_pseudocode.c",
+      "reference_lines": [
+        27347,
+        28151,
+        28155
+      ],
+      "direct_callers_in_bulk_index": [
+        "00436888"
+      ],
+      "caller_index_limits": "Bulk caller index omits the formerly timed-out0047a528; supplementary entry pseudocode is authoritative for its direct calls."
+    },
+    {
+      "va": "00443fb8",
+      "analyst_name": "read_zip_local_header_declared_uncompressed_size",
+      "original_symbol": "FUN_00443fb8",
+      "meaning": "Static validates signature04034b50 and reads field+0x16; error sentinelffffffff. Runtime gate/exclusions unresolved.",
+      "evidence_level": "static_only_candidate",
+      "pseudocode": "evidence/agent-v027/decompilation/recovered_pseudocode.c",
+      "reference_lines": [
+        397,
+        28483,
+        30363,
+        34559,
+        34561
+      ],
+      "direct_callers_in_bulk_index": [
+        "00401e4c",
+        "00438304",
+        "0043c408"
+      ],
+      "caller_index_limits": "Bulk caller index omits the formerly timed-out0047a528; supplementary entry pseudocode is authoritative for its direct calls."
+    }
+  ],
+  "pixel_chain": {
+    "docx": [
+      "0047a528",
+      "00401e4c",
+      "0042a6b0",
+      "00403318",
+      "0047a528"
+    ],
+    "pdf": [
+      "0047a528",
+      "00472b90",
+      "0047a528"
+    ],
+    "counter_mapping": {
+      "object_state_base": "object+0x158",
+      "object_pixel_counter": "object+0x1ec",
+      "report_pixel_counter": "state+0x94",
+      "relation": "0x1ec-0x158=0x94=4*0x25"
+    },
+    "runtime_points": {
+      "docx_compare": "0042ae4e",
+      "docx_flag_write_branch": "0042ae56",
+      "docx_result_flag": "0042ae5c",
+      "pdf_compare": "00472be7",
+      "pdf_emit_branch": "00472bef",
+      "report_counter_gate": "0047c709",
+      "pixel_ansi_constructor_call": "0047c795",
+      "pixel_unicode_result": "0047c79a",
+      "MBTWC_return": "005746f5"
+    },
+    "exclusions_static": [
+      "DOCX .wmf/.emf/.wmz/.emz enter another decoder path; do not transfer raster predicate proof to vector images."
+    ],
+    "overflow_limit": "Machine imul and jle use signed32; overflow behavior not dynamically validated."
+  },
+  "pending_next_investigation": {
+    "rule": "Pic.FileSizeTooLarge",
+    "local_behavior": "Sums image payload bytes and compares40MiB.",
+    "native_static_candidate": "Per ZIP local-header uncompressed entry size >30000000, despite report text40Mb.",
+    "status": "Unvalidated difference; do not promote or silently change this rule yet."
+  },
+  "source_hashes": {
+    "evidence/agent-v027/decompilation/recovered_pseudocode.c": "53c8b92235aac40f5ffdbf9e0288ac2001cbf31e26f7cc2e5615b863ef70611d",
+    "evidence/agent-v027/decompilation/calls.tsv": "fb8393bbd78790a42a2938aefdd19e72e20ff8f785b703091e1ea99e3d9e1bbd",
+    "evidence/business-map-232/file-entry-decompilation-r1/function.c": "54afa227a143557b753ddf84408eebc3b10c561241c14cff7c454127c7708ff4",
+    "evidence/business-map-232/pixel-audit-r2/audit.json": "0171a36e2947c24d3ebce8d835b813a8a8c320ea1731d1611ce49ec486f72717",
+    "evidence/business-map-232/pixel-final-r1/receipt.json": "6eeb9cfc19a18a9238f83a453e60ee9a17ed113b06e1dc03ea69f5771d8dd37a"
+  },
+  "limits": [
+    "Names are evidence-supported analyst aliases, not original author symbols.",
+    "Only this diagnostic family is mapped; other business predicates remain incomplete.",
+    "Static candidates are not runtime or school-compliance proof."
+  ]
+}

@@ -33,19 +33,28 @@ class THREAD_ENTRY(C.Structure):
     _fields_=[('size',D),('usage',D),('tid',D),('pid',D),('base_priority',W.LONG),('delta_priority',W.LONG),('flags',D)]
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--binary',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--out',type=Path,required=True);p.add_argument('--seconds',type=float,default=8);p.add_argument('--argument',default='--help');p.add_argument('--russian',action='store_true');p.add_argument('--russian-suspended',action='store_true');p.add_argument('--trace-codepage',action='store_true');p.add_argument('--dictionary-cp1251',action='store_true');p.add_argument('--probe-document',type=Path);p.add_argument('--direct-file-entry',action='store_true');p.add_argument('--pixel-trace',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--sender-executable',type=Path,default=ROOT.parent/'runtime/SendOwnedDrop.exe');a=p.parse_args()
     if a.direct_file_entry and not a.probe_document:raise ValueError('Direct entry requires a synthetic document probe')
     if a.probe_document and not a.direct_file_entry:raise ValueError('Only controlled direct-entry probes are supported; natural cross-process HDROP is not validated')
     if a.dictionary_cp1251:a.trace_codepage=True
     if a.russian_suspended:a.russian=True
     if not 0<a.seconds<=30:raise ValueError('Trace duration must be <=30 seconds')
     probe_raw=None
+    # Opt-in business tracing is kept separate from the default wrapper.
+    pixel_trace=a.pixel_trace
+    pixel_cp1251=a.pixel_cp1251
+    if pixel_cp1251 and not pixel_trace:raise ValueError('Pixel intervention requires pixel tracing')
+    pixel_literal=raw_pixel_literal=None
     if a.probe_document:
         a.probe_document=a.probe_document.resolve()
         if not a.dictionary_cp1251 or not any(a.probe_document.is_relative_to(root) for root in [ROOT/'evidence',ROOT.parent/'private_trials']) or a.probe_document.suffix.lower() not in {'.docx','.pdf'}:raise ValueError('Probe requires dictionary intervention and a controlled evidence/private-trials DOCX/PDF')
         probe_raw=a.probe_document.read_bytes()
     binary=a.binary.resolve();raw=binary.read_bytes()
     if hashlib.sha256(raw).hexdigest()!=IDENTITY:raise ValueError('Target identity mismatch')
+    if pixel_trace:
+        raw_pixel_literal=raw[3033452:3033464]
+        if raw_pixel_literal!=bytes.fromhex('20efe8eaf1e5ebe5e9293a20'):raise ValueError('Pixel literal identity mismatch')
+        pixel_literal=raw_pixel_literal
     dictionary_buffers={}
     if a.trace_codepage:
         inventory=json.loads((ROOT/'evidence/business-map-232/pe-resources-REA.json').read_text(encoding='utf-8'))
@@ -98,6 +107,7 @@ def main():
         if not 0<=length<=1000000:raise ValueError('String budget')
         return {'length':length,'prefix':read(pointer,min(length,256)*2).decode('utf-16le',errors='replace')}
     events=[];hits=[];breakpoints={};base=None;exited=False;error=None;started=time.monotonic();form_pointer=None;fault_count=0;stop_reason='duration_limit';cleanup_errors=[];pending_steps={};codepage_calls=[];api_calls=0;sender=None;sender_status=None
+    pixel_api_active=False;pixel_api_calls=0;pixel_output_object=None;pixel_dimensions={};pixel_hit_counts={}
     event_limit=4096 if a.trace_codepage else 512
     try:
         if a.russian_suspended:
@@ -177,6 +187,9 @@ def main():
                     if a.probe_document:
                         for va,label in [(0x00481794,'single_file_drop_handler'),(0x0047a528,'file_check_entry'),(0x0043dd1c,'docx_load'),(0x0046ba90,'pdf_load'),(0x00451e54,'structure_volume_check'),(0x00452ac5,'volume_selected_threshold'),(0x00452b94,'volume_decision'),(0x00452bb3,'volume_insufficient_emit')]:
                             addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
+                        if pixel_trace:
+                            for va,label in [(0x0042ae4b,'docx_image_dimensions'),(0x0042ae4e,'docx_image_area_compare'),(0x0042ae56,'docx_large_image_flag'),(0x0042ae5c,'docx_image_flag_result'),(0x00472be7,'pdf_image_area_compare'),(0x00472bef,'pdf_large_image_emit'),(0x0047c709,'image_counter_report_gate'),(0x0047c795,'pixel_literal_conversion'),(0x0047c79a,'pixel_literal_return')]:
+                                addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                     if event.u.create.file:k.CloseHandle(event.u.create.file)
                 elif event.code==6:
                     if event.u.load.file:k.CloseHandle(event.u.load.file)
@@ -189,20 +202,46 @@ def main():
                             original,label=breakpoints.pop(addr);write(addr,original);context.Eip=addr;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
                             if label=='MultiByteToWideChar_thunk':
                                 api_calls+=1
+                                if pixel_api_active:pixel_api_calls+=1
                                 values=struct.unpack('<7I',read(context.Esp,28));ret,cp,flags,source,length,destination,capacity=values
                                 if 0<length<=16*1024*1024:
                                     prefix=read(source,min(length,64))
-                                    if length>5000 or any(key[0]==length for key in dictionary_buffers):
+                                    if length>5000 or any(key[0]==length for key in dictionary_buffers) or pixel_api_active:
                                         input_sha=hashlib.sha256(read(source,length)).hexdigest()
                                         resource_name=dictionary_buffers.get((length,input_sha))
                                         call={'call_number':api_calls,'return_address':hex(ret),'return_preferred_va':hex(ret-base+0x400000),'codepage':cp,'flags':flags,'input_length':length,'input_prefix_hex':prefix.hex(),'input_sha256':input_sha,'matched_resource':resource_name,'output_pointer':hex(destination),'output_capacity':capacity}
                                         if a.dictionary_cp1251 and resource_name and cp==0:
                                             write(context.Esp+4,struct.pack('<I',1251));call['intervention_codepage']=1251
+                                        if pixel_api_active and length==len(pixel_literal) and input_sha==hashlib.sha256(pixel_literal).hexdigest():
+                                            call['matched_literal']='pixel_unit_006e5f6c'
+                                            if pixel_cp1251 and cp in {0,936} and ret-base+0x400000==0x5746f5:write(context.Esp+4,struct.pack('<I',1251));call['intervention_codepage']=1251
                                         codepage_calls.append(call)
-                                if api_calls<1000:
+                                if api_calls<1000 or (pixel_api_active and pixel_api_calls<4):
                                     pending_steps[int(event.tid)]=(addr,original,label)
                                     context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
                             hit={'label':label,'address':hex(addr),'registers':{n:hex(getattr(context,n)) for n in ['Eip','Esp','Eax','Edx','Ecx']},'stack_dwords':list(struct.unpack('<4I',read(context.Esp,16))),'one_shot':label!='MultiByteToWideChar_thunk'};hits.append(hit);entry['hit']=label
+                            if label=='image_counter_report_gate':hit['pixel_counter_state']={'state_pointer':hex(context.Ecx),'slot_offset':'0x94','count':signed(context.Ecx+0x94)}
+                            if label in ['docx_image_dimensions','docx_image_area_compare','docx_large_image_flag','docx_image_flag_result','pdf_image_area_compare','pdf_large_image_emit']:
+                                pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
+                                if label=='docx_image_dimensions':pixel_dimensions[int(event.tid)]=(C.c_int32(context.Ebx).value,C.c_int32(context.Eax).value)
+                                if label=='docx_image_area_compare':
+                                    width,height=pixel_dimensions[int(event.tid)];hit['pixel_state']={'getter24_value':width,'getter30_value':height,'width_px':height,'height_px':width,'area_signed32':C.c_int32(context.Ebx).value,'threshold':16000000}
+                                if label=='docx_image_flag_result':hit['pixel_output_flag']=read(unsigned(context.Ebp+8),1)[0]
+                                if label=='pdf_image_area_compare':hit['pixel_state']={'dimension_1bc':signed(context.Edx+0x1bc),'dimension_1c0':signed(context.Edx+0x1c0),'area_signed32':C.c_int32(context.Ecx).value,'threshold':16000000}
+                                if pixel_hit_counts[label]<64:
+                                    pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False
+                            if label=='pixel_literal_conversion':
+                                literal_bytes=read(context.Edx,len(pixel_literal))
+                                if literal_bytes!=pixel_literal:raise ValueError('Actual pixel literal differs from static input')
+                                hit['literal_hex']=literal_bytes.hex();pixel_output_object=context.Eax;pixel_api_active=True;pixel_api_calls=0
+                                thunk=base+0x2bf90c
+                                if thunk not in breakpoints:
+                                    thunk_byte=read(thunk,1);write(thunk,b'\xcc');breakpoints[thunk]=(thunk_byte,'MultiByteToWideChar_thunk')
+                            if label=='pixel_literal_return':
+                                hit['converted_literal']=unicode_object(pixel_output_object);pixel_api_active=False
+                                thunk=base+0x2bf90c
+                                if thunk in breakpoints:
+                                    thunk_byte,_=breakpoints.pop(thunk);write(thunk,thunk_byte)
                             if label=='file_check_entry':
                                 ret=hit['stack_dwords'][0]
                                 if ret not in breakpoints:
@@ -305,9 +344,11 @@ def main():
     result['owned_pids']=list(owned)
     result['cleanup_errors']=cleanup_errors
     result['cleanup_verified']=not cleanup_errors
-    if a.probe_document:result['limits']='Actual owned Windows process execution with hash-matched resource codepage and explicit shared file-entry redirection. One-shot entry/branch observations, not full call counts. Raw report retained; this is instrumented native reference evidence, not an unmodified run or independent replica.'
+    if a.probe_document:result['limits']='Actual owned Windows process execution with hash-matched resource codepage and explicit shared file-entry redirection. Bounded entry/branch observations, image points limited to64 hits each, not full call counts. Raw report retained; this is instrumented native reference evidence, not an unmodified run or independent replica.'
     result['codepage_api_calls_observed']=api_calls
     result['large_buffer_codepage_calls']=codepage_calls
+    if pixel_cp1251:result['pixel_literal_intervention_scope']='Exact CP1251 pixel-unit input hash and native conversion call; only CP_ACP/936 argument becomes1251, no report rewriting'
+    result['pixel_trace']={'enabled':pixel_trace,'literal_cp1251_intervention':pixel_cp1251,'hit_counts':pixel_hit_counts}
     result['intervention_mode']='Hash-matched dictionary conversion calls only: CP_ACP to CP1251 in owned process stack; no disk patch' if a.dictionary_cp1251 else 'none'
     if a.probe_document:
         result['probe_document']={'path':str(a.probe_document),'requested_work_type':a.work_type,'file_type':a.probe_document.suffix.lower()[1:],'sha256':hashlib.sha256(probe_raw).hexdigest(),'unchanged':a.probe_document.read_bytes()==probe_raw,'sender_exit_code':sender_status,'sender_source_sha256':hashlib.sha256((Path(__file__).parent/'SendOwnedDrop.cs').read_bytes()).hexdigest()}

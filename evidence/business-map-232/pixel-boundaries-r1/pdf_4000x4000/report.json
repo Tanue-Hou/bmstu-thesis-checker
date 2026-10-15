@@ -1,0 +1,60 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "d85f85d5a38268add142601ad453aae9100d59a61556dc39c1cb2bdd6a6a9892",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "pdf",
+  "diagnostic_count": 9,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Допущены ошибки в названии университета на титульном листе."
+    },
+    {
+      "number": 2,
+      "message": "*** Отсутствует или неправильно введен титульный лист (много несоответствий)."
+    },
+    {
+      "number": 3,
+      "message": "* В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок)."
+    },
+    {
+      "number": 4,
+      "message": "* Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании)."
+    },
+    {
+      "number": 5,
+      "message": "*** Документ содержит рисунки большого размера (больше 40 Mb): Стр. 1 \"а данных|Метод анализа данных Метод анализа данных\"."
+    },
+    {
+      "number": 6,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\"."
+    },
+    {
+      "number": 7,
+      "message": "** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\"."
+    },
+    {
+      "number": 8,
+      "message": "* В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 9,
+      "message": "* Разберитесь с источником (возможно, чего-то не хватает): \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\"."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/pixel-boundaries-r1/pdf_4000x4000",
+  "trace_sha256": "0a6ae279b580a1ef4eaa8fdd220dbc6aa15b49132de65d624726e445eb3a24ef",
+  "native_text_sha256": "13ab5eafe76495ee996c9e04c5eaa12066604e678dc5fb2c9aedd70acb135f59",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "e5eaa7ed48c142666c416a8945d3f9df24e724d27b2979d777d0a63a8e704371",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Known residual codepage defect: the pixel unit in oversized-image diagnostics may be garbled; raw native text is preserved."
+  ]
+}

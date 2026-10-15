@@ -1,4 +1,4 @@
-# 原程序后台对照 CLI（实验功能，v0.2.10）
+# 原程序后台对照 CLI（实验功能，v0.2.11）
 
 本地重建检查仍使用 `scripts/thesis_cli.py`。新增 `scripts/native_reference_cli.py` 调用用户提供的原 TestVkr232，返回其实际诊断 JSON，供定位重建引擎与原程序的差异。
 
@@ -30,6 +30,6 @@ MCP 对应工具为 `check_native_reference_experimental`，参数：
 
 证据入口为 `evidence/business-map-232/native-modes-audit-r1/audit.json`。相同PDF在博士/硕士模式返回10/11条，硕士额外出现缺48页诊断；不能把博士的无篇幅提示套用硕士。数字不是排版实际页数。
 
-已知缺口：图片过大诊断中的俄语“像素”单位仍可能以中文代码页误解码，保留原文，不进行静默替换。有限样例不证明任意论文全规则等价；原程序诊断也不等于学校标准答案。
+v0.2.11 修正了图片过大诊断中“像素”单位的独立ANSI转换：默认在精确输入哈希和调用点匹配时将0/936改为1251，并记录转换前后；不事后替换诊断文本。`--preserve-pixel-codepage --trace-images` 可取得未修正控制组。详情及版本隔离见 [图片判据](NATIVE_IMAGE_RULE_232.zh.md)。其他ANSI字面量尚无完整覆盖证明；有限样例不证明任意论文全规则等价，原程序诊断也不等于学校标准答案。
 
 输出必须标记 `experimental` 与 `completed_instrumented_native_reference`。不要将其伪装为未干预的原程序运行，不用它自动提升本地规则或允许修改论文。已有副本修复继续服从原来的独立验收门槛。

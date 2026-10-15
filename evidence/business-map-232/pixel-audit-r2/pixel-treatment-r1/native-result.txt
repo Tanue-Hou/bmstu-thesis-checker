@@ -1,0 +1,2 @@
+Файл: D:\Codex项目\analysis_TestVkr\private_trials\native-reference\pixel-treatment-r1\input.docx
+1. *** Документ содержит рисунки большого размера (больше 16000000 пикселей): "ультаты обработки данных и анализа исследования.||".

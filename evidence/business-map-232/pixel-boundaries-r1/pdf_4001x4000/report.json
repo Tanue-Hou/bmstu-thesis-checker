@@ -1,0 +1,64 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "d707bb8c8c4fcf6f3e6f5d70b55e005cbb985348bf1c791a0108531972c0bb52",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "pdf",
+  "diagnostic_count": 10,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Допущены ошибки в названии университета на титульном листе."
+    },
+    {
+      "number": 2,
+      "message": "*** Отсутствует или неправильно введен титульный лист (много несоответствий)."
+    },
+    {
+      "number": 3,
+      "message": "* В содержании отсутствуют номера страниц (возможно после содержания идет непонятный для программы заголовок)."
+    },
+    {
+      "number": 4,
+      "message": "* Не определено начало основной части (возможно нужно обновить содержание). После введения должен идти первый раздел (глава) основной части (в том числе и в содержании)."
+    },
+    {
+      "number": 5,
+      "message": "*** Документ содержит рисунки большого размера (больше 40 Mb): Стр. 1 \"а данных|Метод анализа данных Метод анализа данных\"."
+    },
+    {
+      "number": 6,
+      "message": "*** Документ содержит рисунки большого размера (больше 16000000 пикселей): Стр. 1 \"а данных|Метод анализа данных Метод анализа данных\"."
+    },
+    {
+      "number": 7,
+      "message": "Отсутствуют или неправильно оформлены заголовки структурных элементов: \"РЕФЕРАТ (АННОТАЦИЯ)\"."
+    },
+    {
+      "number": 8,
+      "message": "** Обнаружены пустые структурные элементы: \"ОГЛАВЛЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\"."
+    },
+    {
+      "number": 9,
+      "message": "* В содержании отсутствуют структурные заголовки: \"ВВЕДЕНИЕ\", \"ЗАКЛЮЧЕНИЕ\", \"СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\"."
+    },
+    {
+      "number": 10,
+      "message": "* Разберитесь с источником (возможно, чего-то не хватает): \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\", \"метод анализа данных\"."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/pixel-boundaries-r1/pdf_4001x4000",
+  "trace_sha256": "95856e3026b7b3ed85df8a375cca776810caa413b9a0f08761db3a0e9b413da2",
+  "native_text_sha256": "b72cdf054e4565714db8179004732fef5e09fce59f864596b1c6a7f3c948e4dc",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "02aa8b13c4d7302b6744bbd148162b00d792ba42d9780a201c7bf6386b196a28",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Known residual codepage defect: the pixel unit in oversized-image diagnostics may be garbled; raw native text is preserved."
+  ]
+}

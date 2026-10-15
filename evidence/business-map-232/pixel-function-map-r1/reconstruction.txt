@@ -1,0 +1,21 @@
+ANALYSIS PSEUDOCODE, NOT ORIGINAL SOURCE
+
+DOCX raster path:
+  height = virtual_getter_24(graphic)
+  width = virtual_getter_30(graphic)
+  product = signed32(machine_imul(height, width))
+  large_flag = product > 16000000
+  if large_flag: increment_selected_context_counter(object+0x1ec)
+
+PDF raster path:
+  product = signed32(machine_imul(descriptor[0x1bc], descriptor[0x1c0]))
+  if product >16000000: append_native_image_diagnostic_context()
+
+Shared report:
+  if state_counter[0x25] >0:
+    concatenate_unicode_prefix_and_16000000()
+    convert_exact_pixel_unit_ANSI_CP1251_literal()
+    append_collected_image_contexts()
+    emit_numbered_diagnostic()
+
+Scope: tested RGB PNGs; vector paths and signed-overflow inputs remain unverified.

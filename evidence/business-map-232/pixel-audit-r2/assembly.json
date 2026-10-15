@@ -1,0 +1,55 @@
+{
+  "target_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "instructions": [
+    {
+      "va": "0x472bce",
+      "bytes": "8b952cffffff",
+      "instruction": "mov edx, dword ptr [ebp - 0xd4]"
+    },
+    {
+      "va": "0x472bd4",
+      "bytes": "8b8ac0010000",
+      "instruction": "mov ecx, dword ptr [edx + 0x1c0]"
+    },
+    {
+      "va": "0x472bda",
+      "bytes": "8b9d2cffffff",
+      "instruction": "mov ebx, dword ptr [ebp - 0xd4]"
+    },
+    {
+      "va": "0x472be0",
+      "bytes": "0faf8bbc010000",
+      "instruction": "imul ecx, dword ptr [ebx + 0x1bc]"
+    },
+    {
+      "va": "0x472be7",
+      "bytes": "81f90024f400",
+      "instruction": "cmp ecx, 0xf42400"
+    },
+    {
+      "va": "0x472bed",
+      "bytes": "7e68",
+      "instruction": "jle 0x472c57"
+    },
+    {
+      "va": "0x472bef",
+      "bytes": "6a01",
+      "instruction": "push 1"
+    },
+    {
+      "va": "0x47c78a",
+      "bytes": "ba6c5f6e00",
+      "instruction": "mov edx, 0x6e5f6c"
+    },
+    {
+      "va": "0x47c78f",
+      "bytes": "8d8528feffff",
+      "instruction": "lea eax, [ebp - 0x1d8]"
+    },
+    {
+      "va": "0x47c795",
+      "bytes": "e8fa272400",
+      "instruction": "call 0x6bef94"
+    }
+  ]
+}

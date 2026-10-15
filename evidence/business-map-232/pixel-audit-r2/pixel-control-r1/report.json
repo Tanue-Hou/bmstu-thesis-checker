@@ -1,0 +1,28 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "fbfd3d29faf4ac2b22abf41d2254ebe1364f828019f5acb8b59f3fc83193d4a7",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "diagnostic_count": 1,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "*** Документ содержит рисунки большого размера (больше 16000000 镨犟咫彘): \"ультаты обработки данных и анализа исследования.||\"."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/pixel-audit-r2/pixel-control-r1",
+  "trace_sha256": "80d055beae8d957e7aed59338d38702641e94a385f900d6ab17749ea2cad71f2",
+  "native_text_sha256": "5e9f73bd2937a9f836f19446009d8ed0744f472d0805d612145eedaf72c1f56a",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "03c87389c0f2ef3e058373441130785f3f9f6f5e0c1cdca84be9a2a6923db684",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Known residual codepage defect: the pixel unit in oversized-image diagnostics may be garbled; raw native text is preserved."
+  ]
+}

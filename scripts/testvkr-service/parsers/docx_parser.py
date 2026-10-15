@@ -368,6 +368,9 @@ class DocxParser:
                     height_px = float(cy) / 9525.0
 
             byte_size_mb = 0.0
+            image_extension = None
+            png_bit_depth = png_color_type = None
+            png_structure_verified = False
             display_width_px, display_height_px = width_px, height_px
             # Rendered extent at 96dpi is not the image's native pixel count.
             width_px, height_px = None, None
@@ -380,6 +383,15 @@ class DocxParser:
                     try:
                         rel = rels[embed_rid]
                         blob = rel.target_part.blob
+                        image_extension = 'png' if blob.startswith(b'\x89PNG\r\n\x1a\n') else 'other'
+                        if image_extension=='png' and len(blob)>=26:png_bit_depth,png_color_type=blob[24],blob[25]
+                        if image_extension=='png':
+                            try:
+                                from io import BytesIO
+                                from PIL import Image
+                                with Image.open(BytesIO(blob)) as probe:probe.verify()
+                                png_structure_verified=True
+                            except Exception:pass
                         byte_size_mb = len(blob) / (1024.0 * 1024.0)
                         real_size = get_image_dimensions(blob)
                         if real_size:
@@ -392,6 +404,10 @@ class DocxParser:
                 'xml_path':d.getroottree().getpath(d),
                 'relationship_id':blip.get(qn('r:embed')) if blip is not None else None,
                 'placement': placement,
+                'extension': image_extension,
+                'png_bit_depth':png_bit_depth,'png_color_type':png_color_type,
+                'png_structure_verified':png_structure_verified,
+                'blip_count':len(d.findall('.//a:blip',NS)),
                 'width_px': width_px,
                 'height_px': height_px,
                 'display_width_px': display_width_px,
@@ -415,7 +431,13 @@ class DocxParser:
         return records
 
     def parse_all(self) -> Dict[str, Any]:
+        images=self.parse_drawings_and_images()
+        pixel_profile=(len(images)==1 and images[0]['placement']=='inline' and images[0]['extension']=='png' and images[0]['png_bit_depth']==8 and images[0]['png_color_type']==2 and images[0]['png_structure_verified'] and images[0]['blip_count']==1
+                       and all(isinstance(images[0].get(k),(int,float)) and images[0][k]>0 for k in ['width_px','height_px'])
+                       and images[0]['width_px']*images[0]['height_px']<2**31
+                       and not bool(self.doc.element.xpath('.//w:pict | .//w:txbxContent | .//w:object | .//*[local-name()="AlternateContent"]')))
         return {
+            'native232_single_inline_png_profile_supported':pixel_profile,
             'native_graduate_scope_supported': not bool(self.doc.element.xpath('.//w:tbl | .//w:drawing | .//w:pict | .//w:txbxContent | .//w:fldSimple | .//w:instrText | .//w:del | .//w:ins | .//w:altChunk | .//w:sdt')),
             'formatting_coverage': {'resolved': ['docDefaults', 'paragraph_basedOn', 'character_basedOn', 'direct'], 'unresolved': ['conditional_table_styles', 'numbering_properties', 'theme_font_and_color']},
             'file_size_mb': self.metadata['file_size_mb'],
@@ -423,5 +445,5 @@ class DocxParser:
             'paragraphs': self.parse_paragraphs(),
             'structure_paragraphs': self.parse_structure_paragraphs(),
             'tables': self.parse_tables(),
-            'images': self.parse_drawings_and_images()
+            'images': images
         }

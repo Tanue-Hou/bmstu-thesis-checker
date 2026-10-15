@@ -14,6 +14,7 @@ class GraduateTests(unittest.TestCase):
         import subprocess
         out=ROOT/'evidence/graduate-structure'
         requests=[{'jsonrpc':'2.0','id':i,'method':'tools/call','params':{'name':'check_thesis_document','arguments':{'file_path':str(out/name),'work_type':mode}}} for i,(name,mode) in enumerate([('g_chars43199.docx','master'),('g_phd_structure.docx','phd')],1)]
+        historical=json.loads(json.dumps(requests[1]));historical['id']=3;historical['params']['arguments']['native_build']=230;requests.append(historical)
         run=subprocess.run([sys.executable,str(ROOT/'mcp/server.py')],input='\n'.join(json.dumps(x) for x in requests)+'\n',capture_output=True,text=True,encoding='utf-8',timeout=20)
         self.assertEqual(run.returncode,0,run.stderr)
         replies=[json.loads(s) for s in run.stdout.splitlines()]
@@ -22,7 +23,12 @@ class GraduateTests(unittest.TestCase):
         self.assertIn('Graduate.ThesisSizeTooSmall',{f['rule_id'] for f in master['findings']})
         self.assertEqual(phd['work_type_policy']['toc_heading'],'ОГЛАВЛЕНИЕ')
         finding=next(f for f in phd['findings'] if f['rule_id']=='Graduate.RequiredHeadingsMissing')
-        self.assertEqual(finding['verification_scope']['work_type'],'phd')
+        self.assertEqual(phd['native_reference']['selected_build'],232)
+        self.assertEqual(finding['verification_status'],'pending_original_program_comparison')
+        self.assertEqual(finding['verification_scope'],{})
+        historical_finding=next(f for f in replies[2]['result']['structuredContent']['findings'] if f['rule_id']=='Graduate.RequiredHeadingsMissing')
+        self.assertEqual(historical_finding['verification_scope']['work_type'],'phd')
+        self.assertEqual(historical_finding['verification_scope']['build'],230)
 
     def test_master_native_boundary_fixtures(self):
         out=ROOT/'evidence/graduate-structure'

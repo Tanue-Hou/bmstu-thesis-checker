@@ -12,7 +12,7 @@ REVERSE=ROOT/'scripts/reverse_engineering'
 IDENTITY='5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0'
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def resolved(path):return Path(os.path.abspath(path)).resolve()
-def validate_native_run(trace,text,work_type="master",file_type="docx",source_sha256=None):
+def validate_native_run(trace,text,work_type="master",file_type="docx",source_sha256=None,pixel_cp1251=False):
     if work_type not in {"master","phd"} or file_type not in {"docx","pdf"}:raise ValueError("Unsupported native mode or format")
     if trace.get('target_sha256')!=IDENTITY or trace.get('error') or not trace.get('binary_unchanged'):raise ValueError('Native target / trace integrity failed')
     probe=trace.get('probe_document',{})
@@ -29,7 +29,13 @@ def validate_native_run(trace,text,work_type="master",file_type="docx",source_sh
     if len(selections)!=1 or selections[0].get('work_code',{}).get('prefix')!=expected_code:raise ValueError('Actual native mode was not observed or differs from request')
     if selections[0].get('minimum')!={'master':48,'phd':0}[work_type] or selections[0].get('divisor')!=900:raise ValueError('Native mode threshold differs from validated branch')
     if any(e.get('exception_code')=='0xc0000005' for e in trace['events']):raise ValueError('Native access violation observed')
-    changes=[c for c in trace['large_buffer_codepage_calls'] if 'intervention_codepage' in c]
+    changes=[c for c in trace['large_buffer_codepage_calls'] if 'intervention_codepage' in c and c.get('matched_resource')]
+    literals=[c for c in trace['large_buffer_codepage_calls'] if 'intervention_codepage' in c and not c.get('matched_resource')]
+    if literals and (not pixel_cp1251 or len(literals)>2 or any(c.get('matched_literal')!='pixel_unit_006e5f6c' or c.get('codepage') not in {0,936} or c.get('intervention_codepage')!=1251 or c.get('return_preferred_va')!='0x5746f5' or c.get('input_sha256')!=hashlib.sha256(bytes.fromhex('20efe8eaf1e5ebe5e9293a20')).hexdigest() for c in literals)):raise ValueError('Unvalidated additional codepage intervention')
+    if pixel_cp1251 and 'pixel_literal_conversion' in labels:
+        observed=[c for c in trace['large_buffer_codepage_calls'] if c.get('matched_literal')=='pixel_unit_006e5f6c']
+        converted=[h.get('converted_literal',{}).get('prefix') for h in trace['breakpoint_hits'] if h['label']=='pixel_literal_return']
+        if len(observed)!=1 or observed[0].get('return_preferred_va')!='0x5746f5' or observed[0].get('intervention_codepage',observed[0].get('codepage'))!=1251 or converted!=[bytes.fromhex('20efe8eaf1e5ebe5e9293a20').decode('cp1251')]:raise ValueError('Requested pixel literal correction was not observed completely')
     if len(changes)!=8 or {c.get('matched_resource') for c in changes}!={'RU_FORMS','RU_PREFS','RU_ENDS','TITUL'} or any(c.get('codepage')!=0 or c.get('intervention_codepage')!=1251 for c in changes):raise ValueError('Native resource intervention set differs')
     if not text.lstrip().startswith('Файл:'):raise ValueError('Not a completed native report')
     matches=list(re.finditer(r'(?m)^(\d+)\.\s+',text));diagnostics=[]
@@ -41,7 +47,7 @@ def validate_native_run(trace,text,work_type="master",file_type="docx",source_sh
     if not diagnostics and 'Замечаний нет.' not in text:raise ValueError('Missing diagnostics and native no-remarks completion text')
     return diagnostics
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,required=True);p.add_argument('--native-exe',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--out',type=Path);p.add_argument('--timeout',type=float,default=25);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,required=True);p.add_argument('--native-exe',type=Path,default=ROOT.parent/'runtime/TestVkr232.exe');p.add_argument('--preserve-pixel-codepage',action='store_true');p.add_argument('--trace-images',action='store_true');p.add_argument('--pixel-cp1251',action='store_true');p.add_argument('--work-type',choices=['master','phd'],default='master');p.add_argument('--out',type=Path);p.add_argument('--timeout',type=float,default=25);a=p.parse_args()
     if os.name!='nt':raise RuntimeError('This native reference harness requires Windows')
     if struct.calcsize('P')!=8:raise RuntimeError('Native reference requires 64-bit Python on 64-bit Windows')
     source=resolved(a.input);binary=resolved(a.native_exe)
@@ -64,16 +70,19 @@ def main():
     (out/'sender-build.log').write_bytes(build.stdout+build.stderr)
     if build.returncode:raise RuntimeError('Sender compiler failed; see private build log')
     native=out/'native';command=[sys.executable,str(REVERSE/'trace_startup_windows.py'),'--binary',str(isolated_binary),'--dictionary-cp1251','--probe-document',str(copy),'--direct-file-entry','--work-type',a.work_type,'--out',str(native),'--seconds',str(a.timeout),'--sender-executable',str(sender)]
+    pixel_fix=not a.preserve_pixel_codepage or a.pixel_cp1251
+    if a.trace_images or pixel_fix:command.append('--pixel-trace')
+    if pixel_fix:command.append('--pixel-cp1251')
     execution=subprocess.run(command,capture_output=True,timeout=a.timeout+15)
     (out/'execution.log').write_bytes(execution.stdout+execution.stderr)
     if execution.returncode:raise RuntimeError('Native trace failed; see private execution log')
     trace=json.loads((native/'trace.json').read_text(encoding='utf-8'));text_path=native/'native-result.txt';text=text_path.read_bytes().decode('utf-8')
-    diagnostics=validate_native_run(trace,text,a.work_type,file_type,original_hash)
+    diagnostics=validate_native_run(trace,text,a.work_type,file_type,original_hash,pixel_fix)
     if sha(copy)!=original_hash:raise ValueError('Native input copy changed or differs from source')
     if not trace.get('cleanup_verified'):raise ValueError('Owned process exit was not verified')
     if sha(source)!=original_hash:raise ValueError('Original input changed during native run')
     if sha(binary)!=IDENTITY:raise ValueError('Original native executable changed during run')
-    report={'status':'completed_instrumented_native_reference','experimental':True,'native_build':232,'executable_sha256':IDENTITY,'source_sha256':original_hash,'source_unchanged':True,'work_type':a.work_type,'file_type':file_type,'diagnostic_count':len(diagnostics),'diagnostics':diagnostics,'evidence_directory':str(out),'trace_sha256':sha(native/'trace.json'),'native_text_sha256':sha(text_path),'sender_source_sha256':sha(sender_source),'sender_binary_sha256':sha(sender),'limits':['Requires the original executable and Windows; not a standalone open-source replacement.','Uses process-local resource codepage and controlled file-entry interventions.','Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.','Known residual codepage defect: the pixel unit in oversized-image diagnostics may be garbled; raw native text is preserved.']}
+    report={'status':'completed_instrumented_native_reference','experimental':True,'native_build':232,'executable_sha256':IDENTITY,'source_sha256':original_hash,'source_unchanged':True,'work_type':a.work_type,'file_type':file_type,'pixel_unit_codepage_fix_enabled':pixel_fix,'diagnostic_count':len(diagnostics),'diagnostics':diagnostics,'evidence_directory':str(out),'trace_sha256':sha(native/'trace.json'),'native_text_sha256':sha(text_path),'sender_source_sha256':sha(sender_source),'sender_binary_sha256':sha(sender),'limits':['Requires the original executable and Windows; not a standalone open-source replacement.','Uses process-local resource codepage and controlled file-entry interventions.','Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.','Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof.']}
     (out/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(report,ensure_ascii=True))
 if __name__=='__main__':
     try:main()

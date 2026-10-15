@@ -178,7 +178,9 @@ def location_group_key(location):
     return "其他位置"
 
 
-def verification_context(rule,file_type,work_type):
+def verification_context(rule,file_type,work_type,native_build=230):
+    if native_build!=230:
+        return rule.get('verification_by_build',{}).get(str(native_build),{}).get(file_type+':'+work_type) if file_type and work_type else None
     if 'verification_by_context' in rule:
         return rule['verification_by_context'].get(file_type+':'+work_type) if file_type and work_type else None
     if file_type not in rule.get('verified_formats',[]) or work_type not in rule.get('verified_work_types',[]):return None
@@ -191,16 +193,24 @@ def context_evidence_valid(context):
     try:
         root=Path(__file__).resolve().parents[1]
         if hashlib.sha256((root/refs[0]).read_bytes()).hexdigest()!=context.get('verification_evidence_sha256'):return False
-        return all(hashlib.sha256((root/ref).read_bytes()).hexdigest()==context.get('evidence_hashes',{}).get(ref,context.get('verification_evidence_sha256')) for ref in refs)
+        return (all(hashlib.sha256((root/ref).read_bytes()).hexdigest()==context.get('evidence_hashes',{}).get(ref,context.get('verification_evidence_sha256')) for ref in refs)
+                and all(hashlib.sha256((root/ref).read_bytes()).hexdigest()==digest for ref,digest in context.get('implementation_hashes',{}).items()))
     except OSError:return False
 
 
 def finding_to_dict(finding, rule_registry, rule_guidance, file_type=None, work_type=None, doc_data=None):
     rule = rule_registry.get(finding.code, {})
-    selected_context=verification_context(rule,file_type,work_type)
+    native_build=(doc_data or {}).get('native_build',230)
+    selected_context=verification_context(rule,file_type,work_type,native_build)
     context = selected_context or {}
+    profile=context.get('scope',{}).get('profile')
+    profile_supported=(profile is None or
+                       (profile=='native232_single_inline_png' and bool((doc_data or {}).get('native232_single_inline_png_profile_supported'))) or
+                       (profile=='native232_single_page_png_pdf' and (doc_data or {}).get('page_count')==1 and len((doc_data or {}).get('images',[]))==1
+                        and all(im.get('extension')=='png' and im.get('bits_per_component')==8 and im.get('colorspace_components')==3 and im.get('soft_mask_xref')==0 and not im.get('has_color_mask',True) and 0<im.get('width_px',0)*im.get('height_px',0)<2**31 for im in (doc_data or {}).get('images',[]))))
     verified = (rule.get('verification_status') == 'verified_against_original'
-                and (doc_data or {}).get('native_build',230)==230
+                and context.get('scope',rule.get('verification_scope',{})).get('build',230)==native_build
+                and profile_supported
                 and selected_context is not None
                 and (doc_data or {}).get("document_kind")!="dissertation"
                 and context_evidence_valid(selected_context)

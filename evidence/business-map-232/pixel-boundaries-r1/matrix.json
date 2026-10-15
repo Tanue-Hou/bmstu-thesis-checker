@@ -1,0 +1,166 @@
+{
+  "status": "passed_native_pixel_boundary_experiments",
+  "cases": [
+    {
+      "case": "docx_3999x4000",
+      "input": "evidence/business-map-232/pixel-boundaries-r1/inputs/docx_3999x4000.docx",
+      "input_sha256": "cafc2cd6f3ee4286a86d1e1e16cae6d2475e015ab8b019eed27559e575df9b80",
+      "parent_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+      "format": "docx",
+      "work_type": "phd",
+      "native_build": 232,
+      "dimensions": [
+        3999,
+        4000
+      ],
+      "pixel_state": {
+        "getter24_value": 4000,
+        "getter30_value": 3999,
+        "width_px": 3999,
+        "height_px": 4000,
+        "area_signed32": 15996000,
+        "threshold": 16000000
+      },
+      "large_branch_observed": false,
+      "native_image_diagnostic_count": 0,
+      "native_total_diagnostic_count": 0,
+      "evidence_directory": "evidence/business-map-232/pixel-boundaries-r1/docx_3999x4000",
+      "trace_sha256": "07c13bb50cd79a629cdd75c9d282216acb9c1f064cb015174e526e12b97a0c6a",
+      "native_text_sha256": "45bda5528be76d34dd2b9a0bb3eaa848b2a6a408f0febf388dc9a384e1c3dcee"
+    },
+    {
+      "case": "pdf_3999x4000",
+      "input": "evidence/business-map-232/pixel-boundaries-r1/inputs/pdf_3999x4000.pdf",
+      "input_sha256": "af2ba58b968aa2795b9d446759b4dcc679b240ec6bc6e1f0eca5727f39e8960d",
+      "parent_sha256": "29e324be397565051efa305ee794df67d0dcdd1dd34a981670af75df592a031c",
+      "format": "pdf",
+      "work_type": "phd",
+      "native_build": 232,
+      "dimensions": [
+        3999,
+        4000
+      ],
+      "pixel_state": {
+        "dimension_1bc": 3999,
+        "dimension_1c0": 4000,
+        "area_signed32": 15996000,
+        "threshold": 16000000
+      },
+      "large_branch_observed": false,
+      "native_image_diagnostic_count": 0,
+      "native_total_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/pixel-boundaries-r1/pdf_3999x4000",
+      "trace_sha256": "d02ed375b87bd7f994eead9a2588bb5f5fc3b2121aaf908b6f40ea310fe8c998",
+      "native_text_sha256": "89229677c807af5c886af935185bba43c517805763fb9b3f40b5b64c88258d39"
+    },
+    {
+      "case": "docx_4000x4000",
+      "input": "evidence/business-map-232/pixel-boundaries-r1/inputs/docx_4000x4000.docx",
+      "input_sha256": "35f1e8bc16d2f642b3223e48d681f3bbf7fb8f680d2bf3a1da8457b18ce8413c",
+      "parent_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+      "format": "docx",
+      "work_type": "phd",
+      "native_build": 232,
+      "dimensions": [
+        4000,
+        4000
+      ],
+      "pixel_state": {
+        "getter24_value": 4000,
+        "getter30_value": 4000,
+        "width_px": 4000,
+        "height_px": 4000,
+        "area_signed32": 16000000,
+        "threshold": 16000000
+      },
+      "large_branch_observed": false,
+      "native_image_diagnostic_count": 0,
+      "native_total_diagnostic_count": 0,
+      "evidence_directory": "evidence/business-map-232/pixel-boundaries-r1/docx_4000x4000",
+      "trace_sha256": "e7394712afd9fff1e198be1a3e07bf35d41da0a518c6489c9de2de79c1d324a6",
+      "native_text_sha256": "b426488fd2e0cade60ac57427a201337c44fc826baa560dc8af991056a61bb9f"
+    },
+    {
+      "case": "pdf_4000x4000",
+      "input": "evidence/business-map-232/pixel-boundaries-r1/inputs/pdf_4000x4000.pdf",
+      "input_sha256": "d85f85d5a38268add142601ad453aae9100d59a61556dc39c1cb2bdd6a6a9892",
+      "parent_sha256": "29e324be397565051efa305ee794df67d0dcdd1dd34a981670af75df592a031c",
+      "format": "pdf",
+      "work_type": "phd",
+      "native_build": 232,
+      "dimensions": [
+        4000,
+        4000
+      ],
+      "pixel_state": {
+        "dimension_1bc": 4000,
+        "dimension_1c0": 4000,
+        "area_signed32": 16000000,
+        "threshold": 16000000
+      },
+      "large_branch_observed": false,
+      "native_image_diagnostic_count": 0,
+      "native_total_diagnostic_count": 9,
+      "evidence_directory": "evidence/business-map-232/pixel-boundaries-r1/pdf_4000x4000",
+      "trace_sha256": "0a6ae279b580a1ef4eaa8fdd220dbc6aa15b49132de65d624726e445eb3a24ef",
+      "native_text_sha256": "13ab5eafe76495ee996c9e04c5eaa12066604e678dc5fb2c9aedd70acb135f59"
+    },
+    {
+      "case": "docx_4001x4000",
+      "input": "evidence/business-map-232/pixel-boundaries-r1/inputs/docx_4001x4000.docx",
+      "input_sha256": "d57a216adeb4fc46e0eb29f95162a62f70b02bdb65e4fdf756b3d5a94561ae59",
+      "parent_sha256": "0a6573019e430fcc7303ba979d27025be165a3a3e96995fdff7d58d202e9f11c",
+      "format": "docx",
+      "work_type": "phd",
+      "native_build": 232,
+      "dimensions": [
+        4001,
+        4000
+      ],
+      "pixel_state": {
+        "getter24_value": 4000,
+        "getter30_value": 4001,
+        "width_px": 4001,
+        "height_px": 4000,
+        "area_signed32": 16004000,
+        "threshold": 16000000
+      },
+      "large_branch_observed": true,
+      "native_image_diagnostic_count": 1,
+      "native_total_diagnostic_count": 1,
+      "evidence_directory": "evidence/business-map-232/pixel-boundaries-r1/docx_4001x4000",
+      "trace_sha256": "ba228d4d2a012f94bbb2808f886f316facdd1f59825854865940ba2acaebb55b",
+      "native_text_sha256": "d8ea47c78d3cd5250ff992ed8452d45974a870c3d5a1b5b7afd4aedc7bf1c595"
+    },
+    {
+      "case": "pdf_4001x4000",
+      "input": "evidence/business-map-232/pixel-boundaries-r1/inputs/pdf_4001x4000.pdf",
+      "input_sha256": "d707bb8c8c4fcf6f3e6f5d70b55e005cbb985348bf1c791a0108531972c0bb52",
+      "parent_sha256": "29e324be397565051efa305ee794df67d0dcdd1dd34a981670af75df592a031c",
+      "format": "pdf",
+      "work_type": "phd",
+      "native_build": 232,
+      "dimensions": [
+        4001,
+        4000
+      ],
+      "pixel_state": {
+        "dimension_1bc": 4001,
+        "dimension_1c0": 4000,
+        "area_signed32": 16004000,
+        "threshold": 16000000
+      },
+      "large_branch_observed": true,
+      "native_image_diagnostic_count": 1,
+      "native_total_diagnostic_count": 10,
+      "evidence_directory": "evidence/business-map-232/pixel-boundaries-r1/pdf_4001x4000",
+      "trace_sha256": "95856e3026b7b3ed85df8a375cca776810caa413b9a0f08761db3a0e9b413da2",
+      "native_text_sha256": "b72cdf054e4565714db8179004732fef5e09fce59f864596b1c6a7f3c948e4dc"
+    }
+  ],
+  "limits": [
+    "Finite RGB PNG fixtures; signed32 multiplication observed, no overflow input executed.",
+    "DOCX virtual getter +0x24 is height and +0x30 width on these asymmetric PNGs.",
+    "Native232 reference is instrumented; no image repair permission."
+  ]
+}
