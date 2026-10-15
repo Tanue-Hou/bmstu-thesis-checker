@@ -1,3 +1,10 @@
+# v0.2.14
+
+- Add32 actual native textbox inputs covering unit boundaries, layer-specific fit, insets, empty/long text and larger rectangles.
+- Recover native unit multipliers from instructions; match float32 dimensions and width/height branches. Keep px/pc verification pending.
+- Correct shape-autofit height false positives while preserving small-width diagnostics; extend bounded VML profiles and exact locations.
+- Preserve original output, flags, branches, source hashes and static function map; no new repair permission.
+
 # v0.2.13
 
 - Recover four drawing families using15 actual native synthetic inputs, geometry/counter observations and report branches.

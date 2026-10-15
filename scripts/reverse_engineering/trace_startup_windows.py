@@ -196,7 +196,7 @@ def main():
                             for va,label in [(0x00438dd3,'image_bytes_zip_lookup'),(0x0044405a,'image_bytes_zip_header_read'),(0x00438dd8,'image_bytes_compare'),(0x00438ddf,'image_bytes_emit'),(0x0047c5e7,'image_bytes_report_gate')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                         if drawing_trace:
-                            for va,label in [(0x0047c8fe,'drawing_report_state'),(0x0047c939,'floating_image_emit'),(0x0047d051,'small_labels_report_gate'),(0x0047d05e,'small_labels_emit'),(0x0041d672,'small_label_geometry'),(0x00438805,'drawing_area_geometry')]:
+                            for va,label in [(0x0047c8fe,'drawing_report_state'),(0x0047c939,'floating_image_emit'),(0x0047d051,'small_labels_report_gate'),(0x0047d05e,'small_labels_emit'),(0x0041d672,'small_label_geometry'),(0x00438805,'drawing_area_geometry'),(0x0041d581,'textbox_overflow_emit'),(0x0041d693,'textbox_small_width_emit'),(0x0041d7a6,'textbox_small_height_emit'),(0x0041d665,'textbox_exclusion_flag'),(0x0041d799,'textbox_autofit_flag')]:
                                 addr=base+va-0x400000;original=read(addr,1);write(addr,b'\xcc');breakpoints[addr]=(original,label)
                     if event.u.create.file:k.CloseHandle(event.u.create.file)
                 elif event.code==6:
@@ -228,7 +228,13 @@ def main():
                                     pending_steps[int(event.tid)]=(addr,original,label)
                                     context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)))
                             hit={'label':label,'address':hex(addr),'registers':{n:hex(getattr(context,n)) for n in ['Eip','Esp','Eax','Edx','Ecx']},'stack_dwords':list(struct.unpack('<4I',read(context.Esp,16))),'one_shot':label!='MultiByteToWideChar_thunk'};hits.append(hit);entry['hit']=label
-                            if label=='drawing_report_state':hit['drawing_state']={'count_slot_26':signed(context.Ecx+0x98),'count_slot_27':signed(context.Ecx+0x9c),'count_slot_28':signed(context.Ecx+0xa0),'count_slot_29':signed(context.Ecx+0xa4),'count_slot_30':signed(context.Ecx+0xc0),'count_slot_32':signed(context.Ecx+0xc8),'floating_area_float':struct.unpack('<f',read(context.Ecx+0x1cc,4))[0],'small_label_count':signed(context.Ecx+0xb8)}
+                            if label=='drawing_report_state':hit['drawing_state']={'count_slot_26':signed(context.Ecx+0x98),'count_slot_27':signed(context.Ecx+0x9c),'count_slot_28':signed(context.Ecx+0xa0),'count_slot_29':signed(context.Ecx+0xa4),'count_slot_30':signed(context.Ecx+0xc0),'count_slot_32':signed(context.Ecx+0xc8),'floating_area_float':struct.unpack('<f',read(context.Ecx+0x1cc,4))[0],'small_label_count':signed(context.Ecx+0xb8),'overflow_label_count':signed(context.Ecx+0xbc)}
+                            if label.startswith('textbox_'):
+                                state=unsigned(context.Ebp-0xbc);hit['textbox_branch_state']={'width_mm':struct.unpack('<f',read(state+0x100,4))[0],'height_mm':struct.unpack('<f',read(state+0x104,4))[0],'small_count_before':signed(state+0x210),'overflow_count_before':signed(state+0x214)}
+                                if label in ['textbox_exclusion_flag','textbox_autofit_flag']:hit['textbox_flags']={'fc':read(context.Eax+0xfc,1)[0],'fe':read(context.Eax+0xfe,1)[0]}
+                                pixel_hit_counts[label]=pixel_hit_counts.get(label,0)+1
+                                if pixel_hit_counts[label]<128:
+                                    pending_steps[int(event.tid)]=(addr,original,label);context.EFlags|=0x100;checked(k.Wow64SetThreadContext(thread,C.byref(context)));hit['one_shot']=False
                             if label=='small_labels_report_gate':hit['small_label_count']=signed(context.Ecx+0xb8)
                             if label in ['small_label_geometry','drawing_area_geometry']:
                                 if label=='small_label_geometry':

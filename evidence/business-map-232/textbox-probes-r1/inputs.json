@@ -1,0 +1,89 @@
+{
+  "parent_sha256": "ac064b607bc0b15bed620e9a5ecfb9de527f4b4af0433ef515ee0774f39f0c40",
+  "cases": [
+    {
+      "case": "cm",
+      "input": "evidence/business-map-232/textbox-probes-r1/cm.docx",
+      "sha256": "96ce0b70316dd6d7a216983b12ef916d4d56017f7ce33700e118d117e8ea4eb0",
+      "variable": "cm"
+    },
+    {
+      "case": "pt",
+      "input": "evidence/business-map-232/textbox-probes-r1/pt.docx",
+      "sha256": "d9682c314819267ef4ff0eb5dfe0798d289f9b92cf3cf2d28e6f735f3a5a0ede",
+      "variable": "pt"
+    },
+    {
+      "case": "in",
+      "input": "evidence/business-map-232/textbox-probes-r1/in.docx",
+      "sha256": "415e0aa9aac1450aeefa560018b6538e4d9dbcf504ad7b45ba12dea166ef42c3",
+      "variable": "in"
+    },
+    {
+      "case": "px",
+      "input": "evidence/business-map-232/textbox-probes-r1/px.docx",
+      "sha256": "1009f0c168a9ce161fad5c49591635ad6b6ca4babc1b86ca774b54f47c7aa8f1",
+      "variable": "px"
+    },
+    {
+      "case": "unitless",
+      "input": "evidence/business-map-232/textbox-probes-r1/unitless.docx",
+      "sha256": "2fe0a6a943e03bacf0a577d9d61108a0eb5f635359321ad77bfe1450d3edaa72",
+      "variable": "unitless"
+    },
+    {
+      "case": "tall",
+      "input": "evidence/business-map-232/textbox-probes-r1/tall.docx",
+      "sha256": "a3637cf5e5a986a422053dd67adc391c61235216f59eeba6d1d6d6f64d79d745",
+      "variable": "tall"
+    },
+    {
+      "case": "wide",
+      "input": "evidence/business-map-232/textbox-probes-r1/wide.docx",
+      "sha256": "1da34d00bc44d0414034f968c52f15b9ce41e77c8b60a6fa7e145975f9d5efe5",
+      "variable": "wide"
+    },
+    {
+      "case": "fitWidth",
+      "input": "evidence/business-map-232/textbox-probes-r1/fitWidth.docx",
+      "sha256": "bb66b8ed3836518f761efa55587d7657a6406fd93f4c9ea35d5e058a1a8c437c",
+      "variable": "fitWidth"
+    },
+    {
+      "case": "fitHeight",
+      "input": "evidence/business-map-232/textbox-probes-r1/fitHeight.docx",
+      "sha256": "53efacbf0aee2b9faddc26931fa890a569d392a52dedc7ec8f6d92a721b11b8d",
+      "variable": "fitHeight"
+    },
+    {
+      "case": "fitFalse",
+      "input": "evidence/business-map-232/textbox-probes-r1/fitFalse.docx",
+      "sha256": "0cad4201c075e1fb6ec6eb270cede6f1417df27a0ceab4e2ee1e580c7262ae40",
+      "variable": "fitFalse"
+    },
+    {
+      "case": "insetZero",
+      "input": "evidence/business-map-232/textbox-probes-r1/insetZero.docx",
+      "sha256": "ee9410162b347f58e99f2a7404fa0f3a70fc41d35da5c68bdfcdb710bc66b8a4",
+      "variable": "insetZero"
+    },
+    {
+      "case": "insetLarge",
+      "input": "evidence/business-map-232/textbox-probes-r1/insetLarge.docx",
+      "sha256": "c95572d670f7e4aedbe2b3e784b17faac640146e3df4797e599c2b3412098c72",
+      "variable": "insetLarge"
+    },
+    {
+      "case": "empty",
+      "input": "evidence/business-map-232/textbox-probes-r1/empty.docx",
+      "sha256": "ad9788b0355e7c9596ec7923dcee8a648a7462a78807fbd8abb301000be38245",
+      "variable": "empty"
+    },
+    {
+      "case": "longText",
+      "input": "evidence/business-map-232/textbox-probes-r1/longText.docx",
+      "sha256": "a8f151423c6029d6331e791ded882ecd43dfcee829bf807eadbf0c66e84b60b0",
+      "variable": "longText"
+    }
+  ]
+}

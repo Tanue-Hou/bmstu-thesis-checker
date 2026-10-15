@@ -1,0 +1,33 @@
+{
+  "status": "completed_instrumented_native_reference",
+  "experimental": true,
+  "native_build": 232,
+  "executable_sha256": "5c04b57acdbda79073604d6e3cacc2994bc87c5ed316e3b8706555ca92b6a8f0",
+  "source_sha256": "9c67f54e84a12430194621e32a7cd89e044cf6b7c00e3a4c924f0f7083c247ce",
+  "source_unchanged": true,
+  "work_type": "phd",
+  "file_type": "docx",
+  "pixel_unit_codepage_fix_enabled": true,
+  "diagnostic_count": 2,
+  "diagnostics": [
+    {
+      "number": 1,
+      "message": "** Документ содержит плавающие графические фигуры. Встройте фигуры в текст: \"за исследования.|||Рисунок 1 — Результаты анализа|\", \"а исследования.|||Рисунок 1 — Результаты анализа||\", \" исследования.|||Рисунок 1 — Результаты анализа|||\", \"исследования.|||Рисунок 1 — Результаты анализа||||\", \"сследования.|||Рисунок 1 — Результаты анализа|||||\", \"следования.|||Рисунок 1 — Результаты анализа||||||\", \"ледования.|||Рисунок 1 — Результаты анализа|||||||\", \"едования.|||Рисунок 1 — Результаты анализа||||||||\", \"дования.|||Рисунок 1 — Результаты анализа|||||||||\", \"ования.|||Рисунок 1 — Результаты анализа||||||||||\", \"вания.|||Рисунок 1 — Результаты анализа|||||||||||\"; ."
+    },
+    {
+      "number": 2,
+      "message": "** Документ содержит плавающие надписи. Встройте надписи в текст:\"за исследования.|||Рисунок 1 — Результаты анализа|\", \"а исследования.|||Рисунок 1 — Результаты анализа||\", \" исследования.|||Рисунок 1 — Результаты анализа|||\", \"исследования.|||Рисунок 1 — Результаты анализа||||\", \"сследования.|||Рисунок 1 — Результаты анализа|||||\", \"следования.|||Рисунок 1 — Результаты анализа||||||\", \"ледования.|||Рисунок 1 — Результаты анализа|||||||\", \"едования.|||Рисунок 1 — Результаты анализа||||||||\", \"дования.|||Рисунок 1 — Результаты анализа|||||||||\", \"ования.|||Рисунок 1 — Результаты анализа||||||||||\", \"вания.|||Рисунок 1 — Результаты анализа|||||||||||\"; ."
+    }
+  ],
+  "evidence_directory": "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightTrue",
+  "trace_sha256": "e1822a081b86363bccb639d51ad889498d30a52587e84d0d5ede8f0e54bfcfe5",
+  "native_text_sha256": "435cf51576734b5939722268224191e3691fba88ef95aa085181f7096384fbb8",
+  "sender_source_sha256": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+  "sender_binary_sha256": "c4009fd39a297a751d8948db8728f6538d1f12ebe7e14e93c989c30346378d2c",
+  "limits": [
+    "Requires the original executable and Windows; not a standalone open-source replacement.",
+    "Uses process-local resource codepage and controlled file-entry interventions.",
+    "Only instrumented master / NKR postgraduate DOCX/PDF references; no rule or repair promotion implied.",
+    "Pixel-unit ANSI conversion is hash/call-site matched and corrected in process when needed; unrelated ANSI literals remain outside this proof."
+  ]
+}

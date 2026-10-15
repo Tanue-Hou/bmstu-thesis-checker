@@ -41,7 +41,7 @@ def locate_finding(f,data,file_type,limit=100):
         for label in data.get('labels',[]):
             if label['index']+1 not in selected:continue
             total+=1
-            if len(out)<limit:out.append({'kind':'docx_textbox','shape_id':label.get('shape_id'),'xml_path':label.get('xml_path'),'width_mm':label.get('width_mm'),'height_mm':label.get('height_mm'),'position':label.get('position'),'text_excerpt':label.get('text','')[:140]})
+            if len(out)<limit:out.append({'kind':'docx_textbox','shape_id':label.get('shape_id'),'xml_path':label.get('xml_path'),'width_mm':label.get('width_mm'),'height_mm':label.get('height_mm'),'native_effective_height_mm':label.get('native_effective_height_mm'),'native_shape_autofit':label.get('native_shape_autofit'),'dimension_measurement':label.get('dimension_measurement'),'position':label.get('position'),'text_excerpt':label.get('text','')[:140]})
     elif rule=='Pic.FloatingImages' and (f.get('location') or {}).get('images'):
         selected=set(f['location']['images'])
         for index,image in enumerate(data.get('images',[]),1):

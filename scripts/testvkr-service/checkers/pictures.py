@@ -97,7 +97,7 @@ class PicturesChecker(BaseChecker):
                 severity=Severity.INFO,
                 message=self.MSG_SMALL_LABELS,
                 location={'labels':[l['index']+1 for l in self.doc_data.get('labels',[]) if l.get('small_geometry_candidate')]} if native232_docx else None,
-                threshold=({'count_labels':small_labels_count,'minimum_count_exclusive':10,'dimension_threshold_mm':2,'measurement':'textbox width or height strictly below2mm'} if native232_docx else {"count_chars": small_labels_count}),
+                threshold=({'count_labels':small_labels_count,'minimum_count_exclusive':10,'dimension_threshold_mm':2,'measurement':'native converted width below2mm or height below2mm with shape autofit unset; supported profile only'} if native232_docx else {"count_chars": small_labels_count}),
                 skip_switch="SkipTestPic",
             ))
 

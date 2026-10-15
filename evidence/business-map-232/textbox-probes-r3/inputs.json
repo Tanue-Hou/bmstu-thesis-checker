@@ -1,0 +1,197 @@
+{
+  "parent_sha256": "ac064b607bc0b15bed620e9a5ecfb9de527f4b4af0433ef515ee0774f39f0c40",
+  "cases": [
+    {
+      "case": "cm",
+      "input": "evidence/business-map-232/textbox-probes-r3/cm.docx",
+      "sha256": "96ce0b70316dd6d7a216983b12ef916d4d56017f7ce33700e118d117e8ea4eb0",
+      "variable": "cm"
+    },
+    {
+      "case": "pt",
+      "input": "evidence/business-map-232/textbox-probes-r3/pt.docx",
+      "sha256": "d9682c314819267ef4ff0eb5dfe0798d289f9b92cf3cf2d28e6f735f3a5a0ede",
+      "variable": "pt"
+    },
+    {
+      "case": "in",
+      "input": "evidence/business-map-232/textbox-probes-r3/in.docx",
+      "sha256": "415e0aa9aac1450aeefa560018b6538e4d9dbcf504ad7b45ba12dea166ef42c3",
+      "variable": "in"
+    },
+    {
+      "case": "px",
+      "input": "evidence/business-map-232/textbox-probes-r3/px.docx",
+      "sha256": "1009f0c168a9ce161fad5c49591635ad6b6ca4babc1b86ca774b54f47c7aa8f1",
+      "variable": "px"
+    },
+    {
+      "case": "unitless",
+      "input": "evidence/business-map-232/textbox-probes-r3/unitless.docx",
+      "sha256": "2fe0a6a943e03bacf0a577d9d61108a0eb5f635359321ad77bfe1450d3edaa72",
+      "variable": "unitless"
+    },
+    {
+      "case": "tall",
+      "input": "evidence/business-map-232/textbox-probes-r3/tall.docx",
+      "sha256": "a3637cf5e5a986a422053dd67adc391c61235216f59eeba6d1d6d6f64d79d745",
+      "variable": "tall"
+    },
+    {
+      "case": "wide",
+      "input": "evidence/business-map-232/textbox-probes-r3/wide.docx",
+      "sha256": "1da34d00bc44d0414034f968c52f15b9ce41e77c8b60a6fa7e145975f9d5efe5",
+      "variable": "wide"
+    },
+    {
+      "case": "fitWidth",
+      "input": "evidence/business-map-232/textbox-probes-r3/fitWidth.docx",
+      "sha256": "bb66b8ed3836518f761efa55587d7657a6406fd93f4c9ea35d5e058a1a8c437c",
+      "variable": "fitWidth"
+    },
+    {
+      "case": "fitHeight",
+      "input": "evidence/business-map-232/textbox-probes-r3/fitHeight.docx",
+      "sha256": "53efacbf0aee2b9faddc26931fa890a569d392a52dedc7ec8f6d92a721b11b8d",
+      "variable": "fitHeight"
+    },
+    {
+      "case": "fitFalse",
+      "input": "evidence/business-map-232/textbox-probes-r3/fitFalse.docx",
+      "sha256": "0cad4201c075e1fb6ec6eb270cede6f1417df27a0ceab4e2ee1e580c7262ae40",
+      "variable": "fitFalse"
+    },
+    {
+      "case": "insetZero",
+      "input": "evidence/business-map-232/textbox-probes-r3/insetZero.docx",
+      "sha256": "ee9410162b347f58e99f2a7404fa0f3a70fc41d35da5c68bdfcdb710bc66b8a4",
+      "variable": "insetZero"
+    },
+    {
+      "case": "insetLarge",
+      "input": "evidence/business-map-232/textbox-probes-r3/insetLarge.docx",
+      "sha256": "c95572d670f7e4aedbe2b3e784b17faac640146e3df4797e599c2b3412098c72",
+      "variable": "insetLarge"
+    },
+    {
+      "case": "empty",
+      "input": "evidence/business-map-232/textbox-probes-r3/empty.docx",
+      "sha256": "ad9788b0355e7c9596ec7923dcee8a648a7462a78807fbd8abb301000be38245",
+      "variable": "empty"
+    },
+    {
+      "case": "longText",
+      "input": "evidence/business-map-232/textbox-probes-r3/longText.docx",
+      "sha256": "a8f151423c6029d6331e791ded882ecd43dfcee829bf807eadbf0c66e84b60b0",
+      "variable": "longText"
+    },
+    {
+      "case": "fitHeightTrue",
+      "input": "evidence/business-map-232/textbox-probes-r3/fitHeightTrue.docx",
+      "sha256": "06194b9c30e61613472ab111563e2edb6973269722e2ed3cd1381898ddb7b962",
+      "variable": "fitHeightTrue"
+    },
+    {
+      "case": "fitHeightFalse",
+      "input": "evidence/business-map-232/textbox-probes-r3/fitHeightFalse.docx",
+      "sha256": "29aa5345a364bf237ddb69783361b07ffb0954a4e1a97b23423fc4bd208803b1",
+      "variable": "fitHeightFalse"
+    },
+    {
+      "case": "shapeFitHeightTrue",
+      "input": "evidence/business-map-232/textbox-probes-r3/shapeFitHeightTrue.docx",
+      "sha256": "9c67f54e84a12430194621e32a7cd89e044cf6b7c00e3a4c924f0f7083c247ce",
+      "variable": "shapeFitHeightTrue"
+    },
+    {
+      "case": "shapeFitHeightT",
+      "input": "evidence/business-map-232/textbox-probes-r3/shapeFitHeightT.docx",
+      "sha256": "b8c30839d4d5b7d9976be45284fd3cf101cab2b8a85e91ade660447f4c91d7ff",
+      "variable": "shapeFitHeightT"
+    },
+    {
+      "case": "shapeFitWidthT",
+      "input": "evidence/business-map-232/textbox-probes-r3/shapeFitWidthT.docx",
+      "sha256": "6fb765b74b941a6bab2bff0e8cc58fe789690121a8eae94e62b82bd69262e24a",
+      "variable": "shapeFitWidthT"
+    },
+    {
+      "case": "shapeFitHeightFalse",
+      "input": "evidence/business-map-232/textbox-probes-r3/shapeFitHeightFalse.docx",
+      "sha256": "113df70b29f373c47a6a867755a803fdf7e35d8653869f94db0a71b292e22b41",
+      "variable": "shapeFitHeightFalse"
+    },
+    {
+      "case": "boundarycm0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarycm0.docx",
+      "sha256": "fb23ce3f9ec663be0ac164f7406d0382295bc1ca46ecbb2b3133fbad046248cc",
+      "variable": "boundarycm0"
+    },
+    {
+      "case": "boundarycm1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarycm1.docx",
+      "sha256": "2f17d37a58a57626a55e52454d550d4e4e669f08c015bbdb165d73da6405a5d9",
+      "variable": "boundarycm1"
+    },
+    {
+      "case": "boundarycm2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarycm2.docx",
+      "sha256": "67955d955d0a3123010f686baa58bf724c08a2bb7d2b02fdf634db3ad7006ecf",
+      "variable": "boundarycm2"
+    },
+    {
+      "case": "boundarypt0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarypt0.docx",
+      "sha256": "0994986626abc34e96fc80729deadebed5e7eed51e3fcf83b06ea1b69c389c2c",
+      "variable": "boundarypt0"
+    },
+    {
+      "case": "boundarypt1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarypt1.docx",
+      "sha256": "9891a494706ba056a7b3fbf02f22f318aeeeeb37991ff9ed327b1d3cb0e88dfc",
+      "variable": "boundarypt1"
+    },
+    {
+      "case": "boundarypt2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarypt2.docx",
+      "sha256": "649ec5ddaf204537d838519759047b87c9bdce718bc6f08b30b43cf5ce0a7b2f",
+      "variable": "boundarypt2"
+    },
+    {
+      "case": "boundaryin0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryin0.docx",
+      "sha256": "4d366823bcb3c12f1b1d3992b5f677484cb45a03fd58c51117267e9dc4dc383e",
+      "variable": "boundaryin0"
+    },
+    {
+      "case": "boundaryin1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryin1.docx",
+      "sha256": "3fd26318c5d8fccb78951117d23951e0a7ff09ed70a6a23a0b4117f83575f6c6",
+      "variable": "boundaryin1"
+    },
+    {
+      "case": "boundaryin2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryin2.docx",
+      "sha256": "e6356f89d2806b111d9db2ad321a3340badd20dd5b41c0d8e6f4e03be820e7f2",
+      "variable": "boundaryin2"
+    },
+    {
+      "case": "boundaryunitless0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryunitless0.docx",
+      "sha256": "e68c8fd66374a41c19e2b9f1e46861c07af5991a4d9e6ad78d218ed334a6abe2",
+      "variable": "boundaryunitless0"
+    },
+    {
+      "case": "boundaryunitless1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryunitless1.docx",
+      "sha256": "aa35564ba90885c2d7fda305368e8f1ad5a26976913311cf9c1d909dd0088caf",
+      "variable": "boundaryunitless1"
+    },
+    {
+      "case": "boundaryunitless2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryunitless2.docx",
+      "sha256": "594009fd68788e28f220c265a5708cb9d374a9ba3c0fc7b3323366a865acdd81",
+      "variable": "boundaryunitless2"
+    }
+  ]
+}

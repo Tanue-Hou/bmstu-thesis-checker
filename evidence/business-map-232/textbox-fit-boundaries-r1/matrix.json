@@ -1,0 +1,93 @@
+{
+  "native_build": 232,
+  "work_type": "phd",
+  "cases": [
+    {
+      "case": "fitHeightTrue",
+      "input": "evidence/business-map-232/textbox-probes-r2/fitHeightTrue.docx",
+      "sha256": "06194b9c30e61613472ab111563e2edb6973269722e2ed3cd1381898ddb7b962",
+      "variable": "fitHeightTrue",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightTrue"
+    },
+    {
+      "case": "fitHeightFalse",
+      "input": "evidence/business-map-232/textbox-probes-r2/fitHeightFalse.docx",
+      "sha256": "29aa5345a364bf237ddb69783361b07ffb0954a4e1a97b23423fc4bd208803b1",
+      "variable": "fitHeightFalse",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightFalse"
+    },
+    {
+      "case": "shapeFitHeightTrue",
+      "input": "evidence/business-map-232/textbox-probes-r2/shapeFitHeightTrue.docx",
+      "sha256": "9c67f54e84a12430194621e32a7cd89e044cf6b7c00e3a4c924f0f7083c247ce",
+      "variable": "shapeFitHeightTrue",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightTrue"
+    },
+    {
+      "case": "shapeFitHeightT",
+      "input": "evidence/business-map-232/textbox-probes-r2/shapeFitHeightT.docx",
+      "sha256": "b8c30839d4d5b7d9976be45284fd3cf101cab2b8a85e91ade660447f4c91d7ff",
+      "variable": "shapeFitHeightT",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightT"
+    }
+  ],
+  "limits": [
+    "Synthetic VML label and DrawingML anchor cases; no general-shape or PDF equivalence claim."
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "native_build": 232,
+  "work_type": "phd",
+  "cases": [
+    {
+      "case": "shapeFitWidthT",
+      "input": "evidence/business-map-232/textbox-probes-r3/shapeFitWidthT.docx",
+      "sha256": "6fb765b74b941a6bab2bff0e8cc58fe789690121a8eae94e62b82bd69262e24a",
+      "variable": "shapeFitWidthT",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/shapeFitWidthT"
+    },
+    {
+      "case": "shapeFitHeightFalse",
+      "input": "evidence/business-map-232/textbox-probes-r3/shapeFitHeightFalse.docx",
+      "sha256": "113df70b29f373c47a6a867755a803fdf7e35d8653869f94db0a71b292e22b41",
+      "variable": "shapeFitHeightFalse",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/shapeFitHeightFalse"
+    },
+    {
+      "case": "boundarycm0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarycm0.docx",
+      "sha256": "fb23ce3f9ec663be0ac164f7406d0382295bc1ca46ecbb2b3133fbad046248cc",
+      "variable": "boundarycm0",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarycm0"
+    },
+    {
+      "case": "boundarycm1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarycm1.docx",
+      "sha256": "2f17d37a58a57626a55e52454d550d4e4e669f08c015bbdb165d73da6405a5d9",
+      "variable": "boundarycm1",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarycm1"
+    },
+    {
+      "case": "boundarycm2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarycm2.docx",
+      "sha256": "67955d955d0a3123010f686baa58bf724c08a2bb7d2b02fdf634db3ad7006ecf",
+      "variable": "boundarycm2",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarycm2"
+    },
+    {
+      "case": "boundarypt0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarypt0.docx",
+      "sha256": "0994986626abc34e96fc80729deadebed5e7eed51e3fcf83b06ea1b69c389c2c",
+      "variable": "boundarypt0",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarypt0"
+    },
+    {
+      "case": "boundarypt1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarypt1.docx",
+      "sha256": "9891a494706ba056a7b3fbf02f22f318aeeeeb37991ff9ed327b1d3cb0e88dfc",
+      "variable": "boundarypt1",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarypt1"
+    },
+    {
+      "case": "boundarypt2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarypt2.docx",
+      "sha256": "649ec5ddaf204537d838519759047b87c9bdce718bc6f08b30b43cf5ce0a7b2f",
+      "variable": "boundarypt2",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarypt2"
+    },
+    {
+      "case": "boundaryin0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryin0.docx",
+      "sha256": "4d366823bcb3c12f1b1d3992b5f677484cb45a03fd58c51117267e9dc4dc383e",
+      "variable": "boundaryin0",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryin0"
+    },
+    {
+      "case": "boundaryin1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryin1.docx",
+      "sha256": "3fd26318c5d8fccb78951117d23951e0a7ff09ed70a6a23a0b4117f83575f6c6",
+      "variable": "boundaryin1",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryin1"
+    },
+    {
+      "case": "boundaryin2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryin2.docx",
+      "sha256": "e6356f89d2806b111d9db2ad321a3340badd20dd5b41c0d8e6f4e03be820e7f2",
+      "variable": "boundaryin2",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryin2"
+    },
+    {
+      "case": "boundaryunitless0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryunitless0.docx",
+      "sha256": "e68c8fd66374a41c19e2b9f1e46861c07af5991a4d9e6ad78d218ed334a6abe2",
+      "variable": "boundaryunitless0",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless0"
+    },
+    {
+      "case": "boundaryunitless1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryunitless1.docx",
+      "sha256": "aa35564ba90885c2d7fda305368e8f1ad5a26976913311cf9c1d909dd0088caf",
+      "variable": "boundaryunitless1",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless1"
+    },
+    {
+      "case": "boundaryunitless2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryunitless2.docx",
+      "sha256": "594009fd68788e28f220c265a5708cb9d374a9ba3c0fc7b3323366a865acdd81",
+      "variable": "boundaryunitless2",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless2"
+    }
+  ],
+  "limits": [
+    "Synthetic VML label and DrawingML anchor cases; no general-shape or PDF equivalence claim."
+  ]
+}

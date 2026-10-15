@@ -49,8 +49,8 @@ class NativeDrawingTests(unittest.TestCase):
       payload=src.read(info.filename)
       if info.filename=='word/document.xml':
        root=etree.fromstring(payload);shape=root.find('.//{'+V+'}shape')
-       if variant=='inset':shape.find('{'+V+'}textbox').set('inset','0,0,0,0')
-       elif variant=='unit':shape.set('style',shape.get('style').replace('1mm','1pt'))
+       if variant=='inset':shape.find('{'+V+'}textbox').set('inset','1mm,1mm,1mm,1mm')
+       elif variant=='unit':shape.set('style',shape.get('style').replace('1mm','1ex'))
        elif variant=='extra':shape.set('filled','f')
        else:
         parent=shape.getparent();parent.remove(shape);etree.SubElement(parent,'{'+V+'}group').append(shape)

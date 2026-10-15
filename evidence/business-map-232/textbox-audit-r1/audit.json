@@ -1,0 +1,1488 @@
+{
+  "status": "passed_native232_textbox_units_fit_and_branch_audit",
+  "cases": [
+    {
+      "case": "cm",
+      "input": "evidence/business-map-232/textbox-probes-r1/cm.docx",
+      "sha256": "96ce0b70316dd6d7a216983b12ef916d4d56017f7ce33700e118d117e8ea4eb0",
+      "variable": "cm",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r1/cm",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "fitWidth",
+      "input": "evidence/business-map-232/textbox-probes-r1/fitWidth.docx",
+      "sha256": "bb66b8ed3836518f761efa55587d7657a6406fd93f4c9ea35d5e058a1a8c437c",
+      "variable": "fitWidth",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r1/fitWidth",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "fitHeight",
+      "input": "evidence/business-map-232/textbox-probes-r1/fitHeight.docx",
+      "sha256": "53efacbf0aee2b9faddc26931fa890a569d392a52dedc7ec8f6d92a721b11b8d",
+      "variable": "fitHeight",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r1/fitHeight",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 11,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 5.0,
+        "height_candidate": 1.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "longText",
+      "input": "evidence/business-map-232/textbox-probes-r1/longText.docx",
+      "sha256": "a8f151423c6029d6331e791ded882ecd43dfcee829bf807eadbf0c66e84b60b0",
+      "variable": "longText",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r1/longText",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "pt",
+      "input": "evidence/business-map-232/textbox-probes-r1/pt.docx",
+      "sha256": "d9682c314819267ef4ff0eb5dfe0798d289f9b92cf3cf2d28e6f735f3a5a0ede",
+      "variable": "pt",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r2/pt",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "in",
+      "input": "evidence/business-map-232/textbox-probes-r1/in.docx",
+      "sha256": "415e0aa9aac1450aeefa560018b6538e4d9dbcf504ad7b45ba12dea166ef42c3",
+      "variable": "in",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r2/in",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "px",
+      "input": "evidence/business-map-232/textbox-probes-r1/px.docx",
+      "sha256": "1009f0c168a9ce161fad5c49591635ad6b6ca4babc1b86ca774b54f47c7aa8f1",
+      "variable": "px",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r2/px",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": false,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 0.010431496426463127,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "unitless",
+      "input": "evidence/business-map-232/textbox-probes-r1/unitless.docx",
+      "sha256": "2fe0a6a943e03bacf0a577d9d61108a0eb5f635359321ad77bfe1450d3edaa72",
+      "variable": "unitless",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r2/unitless",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "tall",
+      "input": "evidence/business-map-232/textbox-probes-r1/tall.docx",
+      "sha256": "a3637cf5e5a986a422053dd67adc391c61235216f59eeba6d1d6d6f64d79d745",
+      "variable": "tall",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r2/tall",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 50.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "wide",
+      "input": "evidence/business-map-232/textbox-probes-r1/wide.docx",
+      "sha256": "1da34d00bc44d0414034f968c52f15b9ce41e77c8b60a6fa7e145975f9d5efe5",
+      "variable": "wide",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r2/wide",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 11,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 50.0,
+        "height_candidate": 1.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "fitFalse",
+      "input": "evidence/business-map-232/textbox-probes-r1/fitFalse.docx",
+      "sha256": "0cad4201c075e1fb6ec6eb270cede6f1417df27a0ceab4e2ee1e580c7262ae40",
+      "variable": "fitFalse",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r2/fitFalse",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "insetZero",
+      "input": "evidence/business-map-232/textbox-probes-r1/insetZero.docx",
+      "sha256": "ee9410162b347f58e99f2a7404fa0f3a70fc41d35da5c68bdfcdb710bc66b8a4",
+      "variable": "insetZero",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r2/insetZero",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "insetLarge",
+      "input": "evidence/business-map-232/textbox-probes-r1/insetLarge.docx",
+      "sha256": "c95572d670f7e4aedbe2b3e784b17faac640146e3df4797e599c2b3412098c72",
+      "variable": "insetLarge",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r2/insetLarge",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "empty",
+      "input": "evidence/business-map-232/textbox-probes-r1/empty.docx",
+      "sha256": "ad9788b0355e7c9596ec7923dcee8a648a7462a78807fbd8abb301000be38245",
+      "variable": "empty",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r2/empty",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "fitHeightTrue",
+      "input": "evidence/business-map-232/textbox-probes-r2/fitHeightTrue.docx",
+      "sha256": "06194b9c30e61613472ab111563e2edb6973269722e2ed3cd1381898ddb7b962",
+      "variable": "fitHeightTrue",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightTrue",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 11,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 5.0,
+        "height_candidate": 1.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "fitHeightFalse",
+      "input": "evidence/business-map-232/textbox-probes-r2/fitHeightFalse.docx",
+      "sha256": "29aa5345a364bf237ddb69783361b07ffb0954a4e1a97b23423fc4bd208803b1",
+      "variable": "fitHeightFalse",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightFalse",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 11,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 5.0,
+        "height_candidate": 1.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "shapeFitHeightTrue",
+      "input": "evidence/business-map-232/textbox-probes-r2/shapeFitHeightTrue.docx",
+      "sha256": "9c67f54e84a12430194621e32a7cd89e044cf6b7c00e3a4c924f0f7083c247ce",
+      "variable": "shapeFitHeightTrue",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightTrue",
+      "local_small_count": 0,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 5.0,
+        "height_candidate": 10.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 1
+        }
+      ]
+    },
+    {
+      "case": "shapeFitHeightT",
+      "input": "evidence/business-map-232/textbox-probes-r2/shapeFitHeightT.docx",
+      "sha256": "b8c30839d4d5b7d9976be45284fd3cf101cab2b8a85e91ade660447f4c91d7ff",
+      "variable": "shapeFitHeightT",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightT",
+      "local_small_count": 0,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 5.0,
+        "height_candidate": 10.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 1
+        }
+      ]
+    },
+    {
+      "case": "shapeFitWidthT",
+      "input": "evidence/business-map-232/textbox-probes-r3/shapeFitWidthT.docx",
+      "sha256": "6fb765b74b941a6bab2bff0e8cc58fe789690121a8eae94e62b82bd69262e24a",
+      "variable": "shapeFitWidthT",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/shapeFitWidthT",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.0,
+        "height_candidate": 10.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 1
+        }
+      ]
+    },
+    {
+      "case": "shapeFitHeightFalse",
+      "input": "evidence/business-map-232/textbox-probes-r3/shapeFitHeightFalse.docx",
+      "sha256": "113df70b29f373c47a6a867755a803fdf7e35d8653869f94db0a71b292e22b41",
+      "variable": "shapeFitHeightFalse",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/shapeFitHeightFalse",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 11,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 5.0,
+        "height_candidate": 1.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundarycm0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarycm0.docx",
+      "sha256": "fb23ce3f9ec663be0ac164f7406d0382295bc1ca46ecbb2b3133fbad046248cc",
+      "variable": "boundarycm0",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarycm0",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.9900000095367432,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundarycm1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarycm1.docx",
+      "sha256": "2f17d37a58a57626a55e52454d550d4e4e669f08c015bbdb165d73da6405a5d9",
+      "variable": "boundarycm1",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarycm1",
+      "local_small_count": 0,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 2.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundarycm2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarycm2.docx",
+      "sha256": "67955d955d0a3123010f686baa58bf724c08a2bb7d2b02fdf634db3ad7006ecf",
+      "variable": "boundarycm2",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarycm2",
+      "local_small_count": 0,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 2.009999990463257,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundarypt0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarypt0.docx",
+      "sha256": "0994986626abc34e96fc80729deadebed5e7eed51e3fcf83b06ea1b69c389c2c",
+      "variable": "boundarypt0",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarypt0",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.9931944608688354,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundarypt1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarypt1.docx",
+      "sha256": "9891a494706ba056a7b3fbf02f22f318aeeeeb37991ff9ed327b1d3cb0e88dfc",
+      "variable": "boundarypt1",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarypt1",
+      "local_small_count": 0,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 2.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundarypt2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundarypt2.docx",
+      "sha256": "649ec5ddaf204537d838519759047b87c9bdce718bc6f08b30b43cf5ce0a7b2f",
+      "variable": "boundarypt2",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundarypt2",
+      "local_small_count": 0,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 2.00730562210083,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundaryin0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryin0.docx",
+      "sha256": "4d366823bcb3c12f1b1d3992b5f677484cb45a03fd58c51117267e9dc4dc383e",
+      "variable": "boundaryin0",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryin0",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.98881995677948,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundaryin1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryin1.docx",
+      "sha256": "3fd26318c5d8fccb78951117d23951e0a7ff09ed70a6a23a0b4117f83575f6c6",
+      "variable": "boundaryin1",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryin1",
+      "local_small_count": 0,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 2.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundaryin2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryin2.docx",
+      "sha256": "e6356f89d2806b111d9db2ad321a3340badd20dd5b41c0d8e6f4e03be820e7f2",
+      "variable": "boundaryin2",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryin2",
+      "local_small_count": 0,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 2.0116798877716064,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundaryunitless0",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryunitless0.docx",
+      "sha256": "e68c8fd66374a41c19e2b9f1e46861c07af5991a4d9e6ad78d218ed334a6abe2",
+      "variable": "boundaryunitless0",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 11,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": true,
+      "native_diagnostic_count": 3,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless0",
+      "local_small_count": 11,
+      "geometry_hits": 11,
+      "width_branch_hits": 11,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 1.9900000095367432,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundaryunitless1",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryunitless1.docx",
+      "sha256": "aa35564ba90885c2d7fda305368e8f1ad5a26976913311cf9c1d909dd0088caf",
+      "variable": "boundaryunitless1",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless1",
+      "local_small_count": 0,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 2.0,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    },
+    {
+      "case": "boundaryunitless2",
+      "input": "evidence/business-map-232/textbox-probes-r3/boundaryunitless2.docx",
+      "sha256": "594009fd68788e28f220c265a5708cb9d374a9ba3c0fc7b3323366a865acdd81",
+      "variable": "boundaryunitless2",
+      "drawing_state": {
+        "count_slot_26": 0,
+        "count_slot_27": 0,
+        "count_slot_28": 11,
+        "count_slot_29": 0,
+        "count_slot_30": 11,
+        "count_slot_32": 0,
+        "floating_area_float": 0.0,
+        "small_label_count": 0,
+        "overflow_label_count": 0
+      },
+      "floating_image_emit": false,
+      "small_labels_emit": false,
+      "native_diagnostic_count": 2,
+      "evidence_directory": "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless2",
+      "local_small_count": 0,
+      "geometry_hits": 11,
+      "width_branch_hits": 0,
+      "height_branch_hits": 0,
+      "profile_supported": true,
+      "all_three_families_agree": true,
+      "first_geometry": {
+        "width_candidate": 2.009999990463257,
+        "height_candidate": 5.0,
+        "counter_before": 0
+      },
+      "flags_observed": [
+        {
+          "fc": 0,
+          "fe": 0
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "evidence/business-map-232/textbox-boundaries-r1/matrix.json": "1e9ca41d66d50ba0cc1266534cde35c9d7844e4858d1bdba462f3ab74dde38cf",
+    "evidence/business-map-232/textbox-probes-r1/cm.docx": "96ce0b70316dd6d7a216983b12ef916d4d56017f7ce33700e118d117e8ea4eb0",
+    "evidence/business-map-232/textbox-boundaries-r1/cm/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r1/cm/native-result.txt": "788786e2221023a88eef64460e9740334c8c80f4e1992b559c9935bb3ae9931c",
+    "evidence/business-map-232/textbox-boundaries-r1/cm/report.json": "0a7a3f6184cad569aba1c6e42e94fbfee604cf0db3caee87e4aa356cf89122e7",
+    "evidence/business-map-232/textbox-boundaries-r1/cm/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r1/cm/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r1/cm/trace.json": "db6c120b7075bd88d3e69153e13527480d31881dee2ce56ab80b0de463778ea3",
+    "evidence/business-map-232/textbox-boundaries-r1/cm/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/fitWidth.docx": "bb66b8ed3836518f761efa55587d7657a6406fd93f4c9ea35d5e058a1a8c437c",
+    "evidence/business-map-232/textbox-boundaries-r1/fitWidth/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r1/fitWidth/native-result.txt": "e5a738b6befa7989005e7bc62fa452d80e0d660751bcd695dfbc9eef95331bab",
+    "evidence/business-map-232/textbox-boundaries-r1/fitWidth/report.json": "590dfa6289ecf98b0468cee93dee330a131df19322077330bf4637779a38e1d3",
+    "evidence/business-map-232/textbox-boundaries-r1/fitWidth/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r1/fitWidth/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r1/fitWidth/trace.json": "bae005f16a8bcbe2377224873a1f0a04604b2fd0b0bda9db85a84727e3ffdaaa",
+    "evidence/business-map-232/textbox-boundaries-r1/fitWidth/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/fitHeight.docx": "53efacbf0aee2b9faddc26931fa890a569d392a52dedc7ec8f6d92a721b11b8d",
+    "evidence/business-map-232/textbox-boundaries-r1/fitHeight/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r1/fitHeight/native-result.txt": "1400674b686d9d986078f56c0f5d5845d499b2ed4a70dd28b2ab946578f0744d",
+    "evidence/business-map-232/textbox-boundaries-r1/fitHeight/report.json": "bdd4be41b7caeed145691ce4601f138ce3852fadb20722c330be95a2465ce20e",
+    "evidence/business-map-232/textbox-boundaries-r1/fitHeight/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r1/fitHeight/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r1/fitHeight/trace.json": "eb1fec8c5ebbfdc6369aa1e8ff1ac79b055e04cff320fbae2b35725efb567ec6",
+    "evidence/business-map-232/textbox-boundaries-r1/fitHeight/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/longText.docx": "a8f151423c6029d6331e791ded882ecd43dfcee829bf807eadbf0c66e84b60b0",
+    "evidence/business-map-232/textbox-boundaries-r1/longText/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r1/longText/native-result.txt": "774194cd8d63e3154dcab28ce320f78268356880de738f6c674f98f623c2b65e",
+    "evidence/business-map-232/textbox-boundaries-r1/longText/report.json": "2bb2ea8a7e1461fbbb342272dc1b6ccd66a40bdbcc8a29a9d14634c05dc1a1cd",
+    "evidence/business-map-232/textbox-boundaries-r1/longText/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r1/longText/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r1/longText/trace.json": "0e23594cd1677928652bd7b7a056b0a4520c6f591e2728f9065961cb0c22b779",
+    "evidence/business-map-232/textbox-boundaries-r1/longText/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-boundaries-r2/matrix.json": "c57aef79627adf5f0183152f4f298d4c0f5087922c79ed880d46e171938afbdc",
+    "evidence/business-map-232/textbox-probes-r1/pt.docx": "d9682c314819267ef4ff0eb5dfe0798d289f9b92cf3cf2d28e6f735f3a5a0ede",
+    "evidence/business-map-232/textbox-boundaries-r2/pt/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r2/pt/native-result.txt": "946f90e910b4885b3495bda095f644786e33bd7b1715fc767246d0b338fae303",
+    "evidence/business-map-232/textbox-boundaries-r2/pt/report.json": "2534887c1263f95493c34af5fb8b171548cef91996a7a2d8d84842db77f3986a",
+    "evidence/business-map-232/textbox-boundaries-r2/pt/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r2/pt/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r2/pt/trace.json": "dce8c0f609e98374a8011cefef7aa002893ca31e0646ecccd41253e8640edad3",
+    "evidence/business-map-232/textbox-boundaries-r2/pt/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/in.docx": "415e0aa9aac1450aeefa560018b6538e4d9dbcf504ad7b45ba12dea166ef42c3",
+    "evidence/business-map-232/textbox-boundaries-r2/in/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r2/in/native-result.txt": "d43aa804c4a1e67a48acb2adedb1a96f957085551996c93b04563a7331bcba58",
+    "evidence/business-map-232/textbox-boundaries-r2/in/report.json": "8b3bacf0f479ecc267d26df0ae6b1780d692465f313b704816b3fd268d9b5f72",
+    "evidence/business-map-232/textbox-boundaries-r2/in/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r2/in/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r2/in/trace.json": "09d14ed18ce202063664353975a6338b4283cdc53587ce2a338d71455b1b0b80",
+    "evidence/business-map-232/textbox-boundaries-r2/in/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/px.docx": "1009f0c168a9ce161fad5c49591635ad6b6ca4babc1b86ca774b54f47c7aa8f1",
+    "evidence/business-map-232/textbox-boundaries-r2/px/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r2/px/native-result.txt": "b324b04fe2326ba9187469c13c70701caa166bcf4e60c5bea909380a8976feff",
+    "evidence/business-map-232/textbox-boundaries-r2/px/report.json": "24eb20b07dd13697b2bbb29cdce300290d602a6de6f641a1273fad880921cb9f",
+    "evidence/business-map-232/textbox-boundaries-r2/px/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r2/px/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r2/px/trace.json": "605ce79483f867340ec3af98ec145290ce76d7c78d2e891eba214fdeec0cb85b",
+    "evidence/business-map-232/textbox-boundaries-r2/px/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/unitless.docx": "2fe0a6a943e03bacf0a577d9d61108a0eb5f635359321ad77bfe1450d3edaa72",
+    "evidence/business-map-232/textbox-boundaries-r2/unitless/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r2/unitless/native-result.txt": "96855793253d92c4999a2d75baf96c50e4a533a4ff69ec181406144ceb9c9913",
+    "evidence/business-map-232/textbox-boundaries-r2/unitless/report.json": "b812877fd2d64f63ef3ac3c55692c80c72a91706b00b91be664380a0370b858a",
+    "evidence/business-map-232/textbox-boundaries-r2/unitless/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r2/unitless/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r2/unitless/trace.json": "a9e09b936784d2c5f30860b9c692527f22e8292a58255b3b1008af07bdf4452f",
+    "evidence/business-map-232/textbox-boundaries-r2/unitless/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/tall.docx": "a3637cf5e5a986a422053dd67adc391c61235216f59eeba6d1d6d6f64d79d745",
+    "evidence/business-map-232/textbox-boundaries-r2/tall/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r2/tall/native-result.txt": "6003347863479370a596f3dfdb6cdcd05a1882a938915a749bbdfc2b83ad5270",
+    "evidence/business-map-232/textbox-boundaries-r2/tall/report.json": "07542b70e89853c63751dc5d6bca9259e0be1f30c133e3cc6b6b0a4de718a102",
+    "evidence/business-map-232/textbox-boundaries-r2/tall/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r2/tall/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r2/tall/trace.json": "3a8c28ebda2ecf9bf85c377dc85294781288d625c5977b8f78d1584f12cb23ff",
+    "evidence/business-map-232/textbox-boundaries-r2/tall/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/wide.docx": "1da34d00bc44d0414034f968c52f15b9ce41e77c8b60a6fa7e145975f9d5efe5",
+    "evidence/business-map-232/textbox-boundaries-r2/wide/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r2/wide/native-result.txt": "4ca897332a73e8007ee10f37f562697f14a29f5b59e448fc24e496c035a8ad39",
+    "evidence/business-map-232/textbox-boundaries-r2/wide/report.json": "033fbe6ababca7661b08ed2f63374ebc9b8d5d9942fef57e50b11ba9c969ad26",
+    "evidence/business-map-232/textbox-boundaries-r2/wide/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r2/wide/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r2/wide/trace.json": "ae6d8cbc866996745874373f8fa94131932d2c360dade1a619fe15b50699fcd5",
+    "evidence/business-map-232/textbox-boundaries-r2/wide/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/fitFalse.docx": "0cad4201c075e1fb6ec6eb270cede6f1417df27a0ceab4e2ee1e580c7262ae40",
+    "evidence/business-map-232/textbox-boundaries-r2/fitFalse/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r2/fitFalse/native-result.txt": "96f1288cda81b0caaf7e9eb2715a08a773f8cf146c0bc5127c4fc7b03d1eae19",
+    "evidence/business-map-232/textbox-boundaries-r2/fitFalse/report.json": "cc3841f455fbdce61089714705f932b773e2f9f25bdaf60326e28f974345e554",
+    "evidence/business-map-232/textbox-boundaries-r2/fitFalse/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r2/fitFalse/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r2/fitFalse/trace.json": "5ec6224919d4b09193f5066586ca56d34757eb53c794fcb4e7e09832b37b460f",
+    "evidence/business-map-232/textbox-boundaries-r2/fitFalse/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/insetZero.docx": "ee9410162b347f58e99f2a7404fa0f3a70fc41d35da5c68bdfcdb710bc66b8a4",
+    "evidence/business-map-232/textbox-boundaries-r2/insetZero/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r2/insetZero/native-result.txt": "6d1829643a575af200acbefc1e2d4c04e056f4caa523b468df99da38571fe50b",
+    "evidence/business-map-232/textbox-boundaries-r2/insetZero/report.json": "944d2ca8c8a2646b96de07596a90b53aeae997cafbec6520178a743f3a970f99",
+    "evidence/business-map-232/textbox-boundaries-r2/insetZero/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r2/insetZero/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r2/insetZero/trace.json": "8bdc688f3108157b343c642b4dd3fd116e5539edd95765c579f6b5adf869e00e",
+    "evidence/business-map-232/textbox-boundaries-r2/insetZero/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/insetLarge.docx": "c95572d670f7e4aedbe2b3e784b17faac640146e3df4797e599c2b3412098c72",
+    "evidence/business-map-232/textbox-boundaries-r2/insetLarge/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r2/insetLarge/native-result.txt": "09fecf19a9a88cd76db2a6a78bada8c1f94e51b568a8f42f963af7b7fd728ac5",
+    "evidence/business-map-232/textbox-boundaries-r2/insetLarge/report.json": "f6c0137ad8b004e37ada15df87042343bb85049bfe69ccf6104858be48430200",
+    "evidence/business-map-232/textbox-boundaries-r2/insetLarge/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r2/insetLarge/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r2/insetLarge/trace.json": "36277f145c760937556a5365568c7cbd30c59475a569ff7293c1c3a2d7ebbdf0",
+    "evidence/business-map-232/textbox-boundaries-r2/insetLarge/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r1/empty.docx": "ad9788b0355e7c9596ec7923dcee8a648a7462a78807fbd8abb301000be38245",
+    "evidence/business-map-232/textbox-boundaries-r2/empty/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r2/empty/native-result.txt": "5097273d785ab4dd8b9aadabb8872e7e6b0c54dd2090516781230b94b58cf7d4",
+    "evidence/business-map-232/textbox-boundaries-r2/empty/report.json": "d2cbe56e79e645c6783d41d7c2799eecacb7728e2f5034537a7bada46d230e77",
+    "evidence/business-map-232/textbox-boundaries-r2/empty/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r2/empty/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r2/empty/trace.json": "5f455d627e3a56f64264d6b90f272a5fef94e1a771358436fb68fe2d90ec067d",
+    "evidence/business-map-232/textbox-boundaries-r2/empty/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/matrix.json": "318d115eccc252c955c65d9ea53def9d284ec65612138b2ad19ac7b32b4260a0",
+    "evidence/business-map-232/textbox-probes-r2/fitHeightTrue.docx": "06194b9c30e61613472ab111563e2edb6973269722e2ed3cd1381898ddb7b962",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightTrue/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightTrue/native-result.txt": "5ce0e9ef1cb22bca4f61bd1bab3753b5fd93ffa6ea61dc39aff0acdc68eb8ead",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightTrue/report.json": "62235410141eeebf9d5f96e7d7394507a714b053c6a83d176f702b68b933c546",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightTrue/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightTrue/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightTrue/trace.json": "4e79c8e5098e76c8996e390c15f0787cba652ef27c7bbe7f7cbf0462e6df24bd",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightTrue/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r2/fitHeightFalse.docx": "29aa5345a364bf237ddb69783361b07ffb0954a4e1a97b23423fc4bd208803b1",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightFalse/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightFalse/native-result.txt": "832a6fe59cd3280447e126a3d9087ce7b552820ea6ea0f4eda83940d2c599e20",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightFalse/report.json": "dfd0f87d15d2a2d19735752c6b65ef8a778da10e59683c2309aa9640bf9c2f8d",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightFalse/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightFalse/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightFalse/trace.json": "3180895b8251f0936c6f58af3b02f2d417139bf87c0da8af74a60606f114c0db",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/fitHeightFalse/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r2/shapeFitHeightTrue.docx": "9c67f54e84a12430194621e32a7cd89e044cf6b7c00e3a4c924f0f7083c247ce",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightTrue/collection-length.txt": "a9c317382f4fde64f96db12e627ffa981f8e24f5386253210067035baa13fa5c",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightTrue/native-result.txt": "435cf51576734b5939722268224191e3691fba88ef95aa085181f7096384fbb8",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightTrue/report.json": "5a10e8a84ee73e95c9c5f848a0f65c6ba8a309ad0d3ce2c21c3a80c20c39a6d5",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightTrue/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightTrue/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightTrue/trace.json": "e1822a081b86363bccb639d51ad889498d30a52587e84d0d5ede8f0e54bfcfe5",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightTrue/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r2/shapeFitHeightT.docx": "b8c30839d4d5b7d9976be45284fd3cf101cab2b8a85e91ade660447f4c91d7ff",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightT/collection-length.txt": "a9c317382f4fde64f96db12e627ffa981f8e24f5386253210067035baa13fa5c",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightT/native-result.txt": "e239c580c03eaaa7505632fe75eca316bbd9150c1c829375eee85c34277d55a9",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightT/report.json": "f3f3a0d48827f8fb92f473c074a0f0a583ad2c05ad4cf660a4df5f6bc1416b19",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightT/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightT/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightT/trace.json": "bbf7a58d37db06b68b7116a1b78932f1b72acec0ca5bcf9ea4308f1d9fe2676b",
+    "evidence/business-map-232/textbox-fit-boundaries-r1/shapeFitHeightT/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-boundaries-r3/matrix.json": "0995e07d161b091a2327ab58b458561777ca3be624a53a393e9d39bfe8416d21",
+    "evidence/business-map-232/textbox-probes-r3/shapeFitWidthT.docx": "6fb765b74b941a6bab2bff0e8cc58fe789690121a8eae94e62b82bd69262e24a",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitWidthT/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitWidthT/native-result.txt": "1b48c32739d08aac9fb77bb90f588750354f18ef3e4758e158ecdf9330b91449",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitWidthT/report.json": "367a59b5e497b913a957a7c32b9a6737b915044abcabd8208ccfe9e89993a9e3",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitWidthT/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitWidthT/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitWidthT/trace.json": "75ff277dee181e883bf677a905774f55a831a841720d8b063017fc55a9dbe356",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitWidthT/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/shapeFitHeightFalse.docx": "113df70b29f373c47a6a867755a803fdf7e35d8653869f94db0a71b292e22b41",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitHeightFalse/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitHeightFalse/native-result.txt": "b0d03ba13cbc196eb5428243945b64de4775a7cce90b54aa5cbcacf23ac7f454",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitHeightFalse/report.json": "dc7d457a023b52fbff4f5580051639002ae1659510062cb3a00d40611a71a54d",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitHeightFalse/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitHeightFalse/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitHeightFalse/trace.json": "c9609a1e77befe691a11eefc21e924f292d1a2ef699cfd36d0fdb100fa2bfecf",
+    "evidence/business-map-232/textbox-boundaries-r3/shapeFitHeightFalse/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundarycm0.docx": "fb23ce3f9ec663be0ac164f7406d0382295bc1ca46ecbb2b3133fbad046248cc",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm0/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm0/native-result.txt": "16dc6248002374da7d2628ebceeae2743574de9ed0bf4cfe8cf12fc686534455",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm0/report.json": "dac323ab5f66e10db4249302785874eee4eb4941259db7752afe3ff48d04071d",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm0/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm0/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm0/trace.json": "456d471e5fc32abfcf078cfb11741fde21553c2764c86facf192d903cc7bee7c",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm0/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundarycm1.docx": "2f17d37a58a57626a55e52454d550d4e4e669f08c015bbdb165d73da6405a5d9",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm1/collection-length.txt": "a9c317382f4fde64f96db12e627ffa981f8e24f5386253210067035baa13fa5c",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm1/native-result.txt": "b421e1abb8865c5f84125bad2a3c73910c67fc3dd85286b23564d1a762727a72",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm1/report.json": "a3a83acf5cb32805d23eba216aa328f90952935130ad092fac6a2a5ed6183525",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm1/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm1/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm1/trace.json": "cfd5ad4b76b8912409d8f133d018d9280e28d84592f850df75b9c86fba552ccc",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm1/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundarycm2.docx": "67955d955d0a3123010f686baa58bf724c08a2bb7d2b02fdf634db3ad7006ecf",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm2/collection-length.txt": "a9c317382f4fde64f96db12e627ffa981f8e24f5386253210067035baa13fa5c",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm2/native-result.txt": "3cf3d73f8611de6b0063e1a543e329bf4cc5a2defa41b07d683109efd98a8258",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm2/report.json": "bc180d54cfc9bb2393ef9da20e3b9ba68c363f4d441d803fe0fd4fa9ebae6d91",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm2/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm2/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm2/trace.json": "8f295ed602414fe9c753baa4fb305b6bd329d71bef040888dbe9296164880fa1",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarycm2/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundarypt0.docx": "0994986626abc34e96fc80729deadebed5e7eed51e3fcf83b06ea1b69c389c2c",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt0/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt0/native-result.txt": "8cab9ef5b390c3a87f3def67637086e12bcd2f1395dcdb64e99e16d92489e2ff",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt0/report.json": "cf9a9f1d8553d1379e5efaef0b2fb64d42b78a378b7911c21e703a0263d55c09",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt0/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt0/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt0/trace.json": "3e333af1b8ca68f760bf3576de05cba3d3c9d639e20732fca4a95c49d8cba653",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt0/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundarypt1.docx": "9891a494706ba056a7b3fbf02f22f318aeeeeb37991ff9ed327b1d3cb0e88dfc",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt1/collection-length.txt": "a9c317382f4fde64f96db12e627ffa981f8e24f5386253210067035baa13fa5c",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt1/native-result.txt": "ac51051b6a7e33c5b4fb301c1285bf42b0e585762763e93b9dbb7af901c3b044",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt1/report.json": "17f62b4d26e0ae80ceb1dd45f51222878bd1eca473042f0d8f3430ede56c1c71",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt1/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt1/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt1/trace.json": "b174e4b8cfd1e330c8967c04250d1e57b390ed5fdfb3252544b81c8f4363092a",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt1/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundarypt2.docx": "649ec5ddaf204537d838519759047b87c9bdce718bc6f08b30b43cf5ce0a7b2f",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt2/collection-length.txt": "a9c317382f4fde64f96db12e627ffa981f8e24f5386253210067035baa13fa5c",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt2/native-result.txt": "6cda1269b5326e3a6124d67919123b8a037ba5d5f22a55877c10357d5dda18a8",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt2/report.json": "d48085f28d79c29adea20ef12c2dc71f45aa97da3fa0f283fb772e84175181e7",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt2/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt2/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt2/trace.json": "bc46fd860e6616a4bd732279fbdb32b9bf293e0ed2cd3c74bbc9485e574c2545",
+    "evidence/business-map-232/textbox-boundaries-r3/boundarypt2/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundaryin0.docx": "4d366823bcb3c12f1b1d3992b5f677484cb45a03fd58c51117267e9dc4dc383e",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin0/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin0/native-result.txt": "a013178880b4d96ba7abb05357d5d1533c5bbdfae2f85532217886dd7d8e9e67",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin0/report.json": "d8753dfab571090785420de39941a69b520c5ceb259bb231f74ea687e67ede2a",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin0/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin0/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin0/trace.json": "680bbcde2449cfb7f00d2194687d8114e5e01efe832c6275325d0fe3d3fb037b",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin0/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundaryin1.docx": "3fd26318c5d8fccb78951117d23951e0a7ff09ed70a6a23a0b4117f83575f6c6",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin1/collection-length.txt": "a9c317382f4fde64f96db12e627ffa981f8e24f5386253210067035baa13fa5c",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin1/native-result.txt": "0a64cc62c59093ffec90c5b991604431c9c8a44a2b0da060955211e435f12c7e",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin1/report.json": "265a1bb595226026db6b814222572c689f5dfdcc5ccdd3b9befd1062830e681b",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin1/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin1/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin1/trace.json": "dff070747bd98204ac2c33ee5ef25cfc96fd03a7a3b92d949f79d23740d84675",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin1/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundaryin2.docx": "e6356f89d2806b111d9db2ad321a3340badd20dd5b41c0d8e6f4e03be820e7f2",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin2/collection-length.txt": "a9c317382f4fde64f96db12e627ffa981f8e24f5386253210067035baa13fa5c",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin2/native-result.txt": "121ef1439738d5df2c50eacef9b9c3c5ee8acc3513d011b411f49d6d0e3d1213",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin2/report.json": "a59cc04423f484750c9854a8e026c32b61bd357be34d92f13ad70d37f16cb78d",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin2/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin2/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin2/trace.json": "0e76e342ed1260e8c5db98fb1788aa62f66f263beb443538846fa78d36356933",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryin2/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundaryunitless0.docx": "e68c8fd66374a41c19e2b9f1e46861c07af5991a4d9e6ad78d218ed334a6abe2",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless0/collection-length.txt": "f3249c1ddf5fba561ac2ffcb22bc3cf415ad9429aa418869229bb3d440e16ec8",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless0/native-result.txt": "044fc5a6aeb333bd118c5ee61fd8497afe292af199def0151f656e8fcc7a73eb",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless0/report.json": "9da36ded9969d2a28872de759b6d482a668a6fe7c582c85a0167468b9f5d0855",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless0/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless0/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless0/trace.json": "55f6d2500ac3984386b3e90922ae895563569ed096f3afaf18a8b4e6251c37dc",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless0/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundaryunitless1.docx": "aa35564ba90885c2d7fda305368e8f1ad5a26976913311cf9c1d909dd0088caf",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless1/collection-length.txt": "a9c317382f4fde64f96db12e627ffa981f8e24f5386253210067035baa13fa5c",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless1/native-result.txt": "2d4022858db38090c873fec9e761415d45b0d3d6cf3241eb62b749c9111b0414",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless1/report.json": "975b93842d02efc1acd2bed4661ff90b38eae5c1d60d64fb590d52c154cd40d1",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless1/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless1/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless1/trace.json": "b686f807445a92418eeaf927bdcf047145b3a10252e5af911051b167c3d2757d",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless1/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105",
+    "evidence/business-map-232/textbox-probes-r3/boundaryunitless2.docx": "594009fd68788e28f220c265a5708cb9d374a9ba3c0fc7b3323366a865acdd81",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless2/collection-length.txt": "a9c317382f4fde64f96db12e627ffa981f8e24f5386253210067035baa13fa5c",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless2/native-result.txt": "45c34d2e215a81aa7c217b7dcca23096e22fe3fdff8025db5d839b298a0c3625",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless2/report.json": "405e210ef2c9d51a9876ac9ed203e51564141f85eb2c3e3e192e466931c70ca5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless2/selected-mode.txt": "948da279a98ca9e1e1c470f82014372741b3048a4ea9966f45cacca24df904d5",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless2/sender-source.cs.txt": "9496efc713c322af24007422c69b4f0ad1098cc6e5bf5395a6834fce0464ff55",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless2/trace.json": "a00699cc6e8df5689eda9840fd0ac2221f65eda87c51178472691c6eeadfaed2",
+    "evidence/business-map-232/textbox-boundaries-r3/boundaryunitless2/tracer-source.py.txt": "e263f291b49093ab483b6606c225a77eb0f1da71e9e48c288490d8d999ac4105"
+  },
+  "limits": [
+    "32 public synthetic DOCX/NKR inputs; finite geometry/branch evidence, not school or layout certification.",
+    "px observed and reconstructed but remains pending without negative/equal-boundary native tests; pc static only.",
+    "Overflow path statically found but not triggered; unknown flags/groups/rotations remain unverified."
+  ]
+}
