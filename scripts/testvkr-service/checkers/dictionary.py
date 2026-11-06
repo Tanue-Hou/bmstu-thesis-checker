@@ -19,7 +19,20 @@ class DictionaryChecker(BaseChecker):
         if self.file_type == 'docx':
             paragraphs = [p.get('text', '') for p in self.doc_data.get('paragraphs', [])]
         elif self.file_type == 'pdf':
-            paragraphs = [s.get('text', '') for s in self.doc_data.get('spans', [])]
+            # PDF fonts can split a word across spans. The parser supplies the
+            # full line on each span, so process that line once, not once per font.
+            seen_lines = set()
+            for span in self.doc_data.get('spans', []):
+                line_text = span.get('line_text')
+                line_key = tuple(span.get(k) for k in ('page_index', 'block_index', 'line_index'))
+                if line_text is not None and all(k is not None for k in line_key):
+                    if line_key in seen_lines:
+                        continue
+                    seen_lines.add(line_key)
+                    paragraphs.append(line_text)
+                else:
+                    # Keep compatibility with older or externally supplied spans.
+                    paragraphs.append(span.get('text', ''))
 
         full_text = " ".join(paragraphs)
         if not full_text.strip():
