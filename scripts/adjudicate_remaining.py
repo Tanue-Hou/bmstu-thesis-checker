@@ -44,8 +44,12 @@ def structural_facts(rule, data, message=''):
         return {'heading':record(start) if start is not None else None,'content_records':[record(i) for i in content], 'nonempty_paragraphs':len(content),'cyrillic_characters':sum(sum('\u0410'<=c<='\u044f' or c in 'Ёё' for c in re.sub(' +',' ',records[i].get('text','').strip())[:-1]) for i in content),'native_like_limits':{'nonempty_paragraphs':3,'cyrillic_characters':350}}
     if rule in ['Struct.MissingCitations','Native.CitationsToAbsentSources']:
         cites=[]
-        for i,t in enumerate(texts):
-            for m in re.finditer(r'\[\s*\d+(?:\s*[,;–—-]\s*\d+)*\s*(?:[,;]\s*с\.?\s*\d+)?\s*\]',t):cites.append({'record':record(i),'citation':m.group(),'character_start':m.start()})
+        # Preserve source characters and offsets: normalized text is suitable for
+        # heading comparison, but not for indexing the attached original text.
+        for i, row in enumerate(records):
+            original = row.get('text', '')
+            for m in re.finditer(r'\[\s*\d+(?:\s*[,;–—-]\s*\d+)*\s*(?:[,;]\s*с\.?\s*\d+)?\s*\]', original, flags=re.IGNORECASE):
+                cites.append({'record':record(i),'citation':m.group(),'character_start':m.start()})
         bibliography=next((i for i,t in reversed(list(enumerate(texts))) if t in ['список использованных источников','список литературы','список использованной литературы']),None)
         return {'citation_candidates':cites,'bibliography_heading':record(bibliography) if bibliography is not None else None,'bibliography_records':[record(i) for i in range(bibliography+1,min(len(records),bibliography+101)) if texts[i]] if bibliography is not None else [],'limits':'Automatic numbering, cross-reference fields and non-bracket citation conventions require semantic reconciliation; no bibliography deletion.'}
     targets=re.findall(r'"([^"]+)"',message)
